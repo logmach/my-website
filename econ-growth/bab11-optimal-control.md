@@ -6,9 +6,7 @@ Bab 11 adalah Tools II — teori *optimal control*, fondasi teknis untuk RCK dan
 
 *Bab 11 adalah Tools II — analog dengan Tools I (Bab 3-8 untuk ODE), tapi untuk optimisasi dinamis.*
 
-**Sifat Bab 11 vs Bab sebelumnya**
-
-Tools I (ODE). Setup ODE, solusi, steady state,
+**Sifat Bab 11 vs Bab sebelumnya** — Tools I (ODE). Setup ODE, solusi, steady state,
 
 **Bab 3-8** — qualitative analysis.
 
@@ -51,18 +49,14 @@ Keduanya adalah produk era Perang Dingin — lahir independen, awalnya untuk apl
 
 **Komponen OCP**
 
-**Persamaan (11.1) — Controllable dynamical system**
-
-ẋ(t) = f(t, x(t), u(t)),x(0) = x0,x(T) = xT
+**Persamaan (11.1) — Controllable dynamical system** — ẋ(t) = f(t, x(t), u(t)),x(0) = x0,x(T) = xT
 
 - x(t) — state variable
 - u(t) — control variable
 - f — transition map
 - x0, xT — boundary values
 
-**Persamaan (11.2) — Total payoff**
-
-J(u) =t0Th(t, x(t), u(t)) dt∫
+**Persamaan (11.2) — Total payoff** — J(u) =t0Th(t, x(t), u(t)) dt∫
 
 J adalah functional — fungsi dari fungsi u. Inilah yang membuat masalah infinite- dimensional.
 
@@ -98,9 +92,7 @@ Pertanyaan yang sering muncul: "apa beda state dan control secara konkret di mod
 
 **Control $c$** — Konsumsi. Dipilih bebas tiap saat. Tidak ada ODE untuk $c$ sendiri.
 
-**Mengapa OCP sulit**
-
-Satu peringatan penting:
+**Mengapa OCP sulit** — Satu peringatan penting:
 
 "This is an infinite-dimensional problem... there are uncountably and infinitely many such conditions."
 
@@ -121,29 +113,25 @@ Atau lebih pendek: optimal plan tetap optimal di setiap titik sepanjang path.
 ```
 **Tiga analogi untuk grasp BPO**
 
-**Analogi 1 — Perjalanan**
+**Analogi 1.** Perjalanan
 
 Kalau sudah berada di KL, rute optimal dari sana
 
-**Analogi 2 — Lips and Hips**
+**Analogi 2.** Lips and Hips
 
 Optimal diet: jangan makan kue. Setelah 10 hari berhasil, optimal plan untuk 20 hari sisa tetap: jangan makan kue.
 
-**Analogi 3 — Catur**
+**Analogi 3.** Catur
 
 Optimal strategy menang dalam T move. Setelah 5 move, continuation tetap optimal strategy dari posisi sekarang.
 
-**Bukti BPO via kontradiksi**
-
-Misalkan plan u∗ optimal dari (t0, x0). Andaikan continuation dari (t′, x(t′))bukan optimal — ada u′ lebih baik.
+**Bukti BPO via kontradiksi** — Misalkan plan u∗ optimal dari (t0, x0). Andaikan continuation dari (t′, x(t′))bukan optimal — ada u′ lebih baik.
 
 Maka plan baru "u∗ sampai t′, lalu u′ setelah t′" memberi total payoff lebih besar dari u∗. Kontradiksi dengan u∗ optimal.
 
 Kesimpulan: continuation harus optimal. QED.
 
-**Persamaan Bellman**
-
-Untuk sembarang t′∈[t, T]:
+**Persamaan Bellman** — Untuk sembarang t′∈[t, T]:
 
 $$
 V(t,x)=\max_{u}\left\{\int_{t}^{t'}h\,d\tau+V\bigl(t',x(t')\bigr)\right\}
@@ -157,7 +145,7 @@ $$
 
 **Tiga pelajaran BPO**
 
-**Pelajaran 1 — Backward induction**
+**Pelajaran 1.** Backward induction
 
 OCP bisa di-solve dari akhir ke awal:
 
@@ -167,17 +155,15 @@ OCP bisa di-solve dari akhir ke awal:
 
 Inilah dynamic programming.
 
-**Pelajaran 2 — Markov property**
+**Pelajaran 2.** Markov property
 
 Decision optimal di t hanya tergantung pada (t, x(t)) — bukan history. State x(t) sudah encapsulate semua info relevan.
 
-**Pelajaran 3 — State feedback rule**
+**Pelajaran 3.** State feedback rule
 
 Optimal control adalah fungsi dari state: u∗(t) = μ(t, x(t)). Bukan fungsi waktu saja.
 
-**Limit infinitesimal → HJB**
-
-Ambil t′= t + dt:
+**Limit infinitesimal → HJB** — Ambil t′= t + dt:
 
 $$
 V(t,x)\approx\max_{u}\bigl\{h\cdot dt+V(t+dt,\;x+dx)\bigr\}
@@ -191,9 +177,7 @@ Setelah manipulasi → HJB equation. Inilah continuous-time version BPO.
 
 *Bagian paling teknis Bab 11. Derive HJB equation dari intuisi cost- benefit.*
 
-**Intuisi cost-benefit**
-
-Analogi yang membantu — "lips and hips":
+**Intuisi cost-benefit** — Analogi yang membantu — "lips and hips":
 
 - Optimal plan: jangan makan kue
 - Marginal benefit deviasi: h (kepuasan instant)
@@ -214,34 +198,34 @@ Jawaban: pada optimal path, V menurun karena horizon mengecil. Maka V ˙ ≤0, d
 ```
 **Chain rule untuk V ˙**
 
-**Step 1 — V (t, x(t)) tergantung pada t lewat dua channel**
+**Step 1.** V (t, x(t)) tergantung pada t lewat dua channel
 
 - Langsung lewat t
 - Lewat x(t)
 
-**Step 2 — Chain rule multivariate**
+**Step 2.** Chain rule multivariate
 
 dtdV= Vt + Vx ⋅ẋ
 
-**Step 3 — Substitusi ODE constraint ẋ = f**
+**Step 3.** Substitusi ODE constraint ẋ = f
 
 V ˙ = Vt + Vx ⋅f(t, x, u)
 
 **Dari (11.4) ke (11.5) ke (11.8)**
 
-**Step 1 — Substitusi chain rule ke (11.4)**
+**Step 1.** Substitusi chain rule ke (11.4)
 
 h ≤−V ˙ = −Vt −Vxf. Pindahkan:
 
 h + Vt + ⟨Vx, f⟩≤0(11.5)
 
-**Step 2 — Pada optimal, inequality binding**
+**Step 2.** Pada optimal, inequality binding
 
 Tidak ada deviasi yang menguntungkan → inequality binding sebagai equality:
 
 h(t, x, u∗) + Vt + ⟨Vx, f(t, x, u∗)⟩= 0
 
-**Step 3 — Optimal u∗ adalah maximizer**
+**Step 3.** Optimal u∗ adalah maximizer
 
 Karena (11.5) berlaku untuk semua u dan binding di u∗:
 
@@ -251,7 +235,7 @@ $$
 
 Inilah HJB equation.
 
-**Step 4 — Optimal control rule**
+**Step 4.** Optimal control rule
 
 $$
 \mu(t,x)\in\arg\max_{u}\bigl\{h+\langle V_{x},f\rangle\bigr\}\qquad(11.9)
@@ -293,9 +277,7 @@ Istilah untuk $V_{x}f$: "marginal lifetime benefit"
 
 Lebih akurat: "indirect effect via state transition".
 ```
-**HJB sebagai PDE**
-
-HJB equation adalah PDE (partial differential equation) karena V (t, x) punya dua argumen:
+**HJB sebagai PDE** — HJB equation adalah PDE (partial differential equation) karena V (t, x) punya dua argumen:
 
 - Vt: turunan parsial terhadap t
 - Vx: turunan parsial terhadap x
@@ -340,9 +322,7 @@ Sebagian tepat, tapi perlu klarifikasi.
 2. Komputasi mahal — perlu V untuk semua (t, x), mahal untuk state multi-dimensi
 3. Local analysis cukup — kadang hanya butuh karakterisasi optimal path, bukan global V
 
-**Envelope Theorem sebagai trick**
-
-Statement informal: kalau V (x) = maxk F(x, k) dengan k∗(x) = arg max, maka:
+**Envelope Theorem sebagai trick** — Statement informal: kalau V (x) = maxk F(x, k) dengan k∗(x) = arg max, maka:
 
 dxdV= Fx(x, k∗(x))
 
@@ -350,31 +330,29 @@ Tidak perlu memperhitungkan dk∗/dx. Hanya turunan parsial F terhadap x. Mengap
 
 **Derivation persamaan (11.12)**
 
-**Step 1 — Turunkan HJB terhadap x**
+**Step 1.** Turunkan HJB terhadap x
 
 Sisi kanan: maxk{h + Vxf}. Pakai Envelope Theorem.
 
-**Step 2 — Hasilnya**
+**Step 2.** Hasilnya
 
 0 = hx + Vtx + Vxxf+ Vxfx
 
-**Step 3 — Pakai chain rule untuk V ˙x**
+**Step 3.** Pakai chain rule untuk V ˙x
 
 V ˙x= Vtx + Vxxẋ = Vtx + Vxxf
 
-**Step 4 — Substitusi → persamaan (11.12)**
+**Step 4.** Substitusi → persamaan (11.12)
 
 0 = hx + V ˙x + Vxfx
 
-**Persamaan (11.13) — analog untuk waktu**
-
-Sama tapi turunkan terhadap t:
+**Persamaan (11.13) — analog untuk waktu** — Sama tapi turunkan terhadap t:
 
 $$
 0=h_{t}+\dot{V}_{t}+V_{x}f_{t}\qquad(11.13)
 $$
 
-**Tabel suku-suku necessary conditions**
+*Tabel suku-suku necessary conditions.*
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -455,9 +433,7 @@ Jangan paham tiap suku terpisah — itu sumber kebingungan. Paham sebagai paket 
 
 *Reformulasi necessary conditions sebagai Hamiltonian system. Workhorse ekonomi makro dinamis.*
 
-**Adjoint variables**
-
-Diperkenalkan dua adjoint variables:
+**Adjoint variables** — Diperkenalkan dua adjoint variables:
 
 ψ(t):= Vx(t, x∗(t)) — shadow price dari state x.
 
@@ -467,9 +443,7 @@ Biasa dipakai.
 
 ψ0(t):= Vt(t, x∗(t)) — shadow price dari waktu.
 
-**$\psi_{0}(T)$**
-
-Jarang dibahas eksplisit.
+**$\psi_{0}(T)$** — Jarang dibahas eksplisit.
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -478,9 +452,7 @@ Pertanyaan yang sering muncul: "ψ0(t) ini apa?"
 
 ψ0 adalah notasi untuk Vt sepanjang optimal path. Untuk autonomous problems (kasus RCK), ψ0 tidak berperan aktif karena (11.13) trivial. Kebanyakan textbook hanya menulis ψ.
 ```
-**Hamiltonian**
-
-Definisi (11.14):
+**Hamiltonian** — Definisi (11.14):
 
 $$
 H(t,x,u,\psi):=h(t,x,u)+\langle\psi,\;f(t,x,u)\rangle\qquad(11.14)
@@ -519,15 +491,15 @@ Pertanyaan yang sering muncul: "darimana (11.18) dan (11.19)?"
 
 Persamaan (11.18): H∗= −Vt. Diturunkan dari HJB equation langsung dengan substitusi Vx= ψ.
 ```
-**Step 1 — Mulai dari HJB**
+**Step 1.** Mulai dari HJB
 
 −Vt= kmax{h + Vxf}
 
-**Step 2 — Substitusi Vx= ψ sepanjang optimal path**
+**Step 2.** Substitusi Vx= ψ sepanjang optimal path
 
 −Vt= kmax{h + ψf} = kmax H
 
-**Step 3 — Pada u∗ (maximizer)**
+**Step 3.** Pada u∗ (maximizer)
 
 $$
 H^{*}(t):=H(t,x^{*},u^{*},\psi)=-V_{t}\qquad(11.18)
@@ -537,17 +509,17 @@ Persamaan (11.19): $$
 \dot{H}^{*}=H_{t}\qquad(11.19)
 $$. Diturunkan dari (11.18) + (11.13).
 
-**Step 1 — Turunkan (11.18) terhadap t**
+**Step 1.** Turunkan (11.18) terhadap t
 
 $\dot{H}^{*}=-\dot{V}_{t}$
 
-**Step 2 — Pakai (11.13) untuk solve V ˙t**
+**Step 2.** Pakai (11.13) untuk solve V ˙t
 
 $\dot{V}_{t}=-h_{t}-V_{x}f_{t}$
 
-**Step 3 — Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$**
+**Step 3.** Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$
 
-**Step 4 — Kenali sebagai Ht (turunan parsial Hamiltonian)**
+**Step 4.** Kenali sebagai Ht (turunan parsial Hamiltonian)
 
 Ḣ∗= Ht
 
@@ -580,9 +552,7 @@ Untuk resource: ψ= marginal value of resource stock.
 
 Untuk pollution: ψ< 0 = marginal cost of pollution.
 ```
-**PMP sebagai ODE system**
-
-Dari Kondisi 1 dan 2:
+**PMP sebagai ODE system** — Dari Kondisi 1 dan 2:
 
 ẋ = f(state)ψ˙ = −Hx(adjoint)
 
@@ -684,9 +654,7 @@ Justifikasinya:
 
 Finite horizon menghasilkan end-of-horizon effect aneh — misalnya: optimal fishing menghabiskan semua stok ikan di T. Tidak realistis.
 
-**Persamaan (11.24) — IH-OCP**
-
-V (x0) = umax {J(u)ẋ = f(x, u),x(0) = x0,u ∈Γ}
+**Persamaan (11.24) — IH-OCP** — V (x0) = umax {J(u)ẋ = f(x, u),x(0) = x0,u ∈Γ}
 
 dengan J(u) =0∞e−rth(x, u) dt.∫
 
@@ -707,9 +675,7 @@ Bukan derivation matematis — ini definisi IH-OCP, generalisasi dari finite (11
 
 **Dependence $V$ pada $t$** — Finite: ada. Infinite: hilang.
 
-**Mengapa $V$ jadi $V(x)$ saja**
-
-Untuk finite horizon: V (t, x) berbeda di tiap t karena horizon tersisa T−t berbeda.
+**Mengapa $V$ jadi $V(x)$ saja** — Untuk finite horizon: V (t, x) berbeda di tiap t karena horizon tersisa T−t berbeda.
 
 Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t — hanya tergantung x.
 
@@ -720,13 +686,13 @@ Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t —
 
 Pertanyaan yang sering muncul: "darimana (11.25) diturunkan?"
 ```
-**Step 1 — Mulai dari HJB finite (11.8) dengan discount**
+**Step 1.** Mulai dari HJB finite (11.8) dengan discount
 
 $$
 -V_{t}=\max_{u}\bigl\{e^{-rt}h+V_{x}f\bigr\}
 $$
 
-**Step 2 — Konversi ke current-value**
+**Step 2.** Konversi ke current-value
 
 Definisikan $\tilde{V}:=e^{rt}V$. Maka:
 
@@ -734,17 +700,17 @@ $$
 V_{t}=e^{-rt}\bigl(-r\tilde{V}+\tilde{V}_{t}\bigr),\qquad V_{x}=e^{-rt}\tilde{V}_{x}
 $$
 
-**Step 3 — Substitusi dan bagi dengan e−rt**
+**Step 3.** Substitusi dan bagi dengan e−rt
 
 $$
 r\tilde{V}-\tilde{V}_{t}=\max_{u}\bigl\{h+\tilde{V}_{x}f\bigr\}
 $$
 
-**Step 4 — Ambil limit T→∞ → V ~ time-invariant**
+**Step 4.** Ambil limit T→∞ → V ~ time-invariant
 
 $\tilde{V}_{t}=0$
 
-**Step 5 — Drop tilda → persamaan (11.25)**
+**Step 5.** Drop tilda → persamaan (11.25)
 
 $$
 rV(x)=\max_{u}\bigl\{h(x,u)+V_{x}f(x,u)\bigr\}\qquad(11.25)
@@ -761,9 +727,7 @@ Required return (rV) = Dividend (h) + Capital gain (Vxf)
 
 Inilah mengapa HJB infinite-horizon sering disebut "Bellman equation as asset pricing".
 ```
-**Transversality Condition (TVC)**
-
-Dua varian utama:
+**Transversality Condition (TVC)** — Dua varian utama:
 
 **Varian 1 — Natural TVC (11.26)**
 
@@ -771,9 +735,7 @@ T→∞lim ψ(T) = 0
 
 Shadow price state menuju nol di masa jauh.
 
-**Varian 2 — Value TVC (11.27)**
-
-T→∞lim ψ(T) ⋅x(T) = 0
+**Varian 2 — Value TVC (11.27)** — T→∞lim ψ(T) ⋅x(T) = 0
 
 Value of state menuju nol di masa jauh.
 
@@ -847,9 +809,7 @@ e−rt0J(u) =t0Te−rt[−Rx2 −Su2]dt∫
 
 dengan R > 0 dan S> R(β/α)2.
 
-**Strategi solve**
-
-Linear-Quadratic structure → tebak quadratic value function → HJB jadi tractable.
+**Strategi solve** — Linear-Quadratic structure → tebak quadratic value function → HJB jadi tractable.
 
 **Game plan**
 
@@ -860,13 +820,13 @@ Linear-Quadratic structure → tebak quadratic value function → HJB jadi tract
 5. Linearisasi pakai Q = Z/Y → linear system
 6. Eigenvalues → solve Q(t)
 
-**Part 1 — Current-value HJB**
+**Part 1.** Current-value HJB
 
 Konversi present-value ke current-value (dijelaskan di Section 11.7):
 
 rV−Vt= ymax{−Rx2 −Sy2 + Vx(αx + βy)}
 
-**Part 1 — Quadratic guess**
+**Part 1.** Quadratic guess
 
 Tebak V (t, x) = −Q(t)x2 dengan Q(t) ≥0.
 
@@ -876,7 +836,7 @@ Turunan parsial:
 
 Vt= −Q̇(t)x2,Vx= −2Q(t)x
 
-**Part 3 — FOC (sebelum Part 2)**
+**Part 3.** FOC (sebelum Part 2)
 
 Turunkan sisi kanan HJB terhadap y:
 
@@ -893,7 +853,7 @@ Optimal control linear dalam state: $u^{*}=-K(t)\,x$ dengan gain $K(t)=\dfrac{\b
 
 Inilah state feedback rule klasik di engineering control.
 ```
-**Part 2 — Riccati ODE**
+**Part 2.** Riccati ODE
 
 Substitusi y∗ balik ke HJB, semua suku proporsional dengan x2:
 
@@ -906,48 +866,42 @@ dengan:
 
 Ini nonlinear ODE (karena suku bQ2).
 
-**Part 2 — Linearisasi via Q = Z/Y**
+**Part 2.** Linearisasi via Q = Z/Y
 
 ```{admonition} 💡 Insight
 :class: tip
 
 Bagian ini paling sering membuat macet. Triknya:
 ```
-**Mengapa trick Q = Z/Y bekerja**
+**Mengapa trick Q = Z/Y bekerja** — Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.
 
-Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.
-
-**Step 1 — Substitusi Q = Z/Y**
+**Step 1.** Substitusi Q = Z/Y
 
 Q̇ = Y Ż −Y 2ZY ˙
 
-**Step 2 — Substitusi ke Riccati**
+**Step 2.** Substitusi ke Riccati
 
 Y Ż −Y 2ZY ˙ + 2a ⋅Y Z + b ⋅Y 2Z2= −R
 
-**Step 3 — Kalikan dengan Y**
+**Step 3.** Kalikan dengan Y
 
 Ż −Y ZY ˙ + 2aZ + Y bZ2= −RY
 
-**Step 4 — Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms**
+**Step 4.** Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms
 
 Suku −Y ZY ˙ + Y bZ2= −aZ −Y bZ2 + Y bZ2= −aZ — nonlinear terms
 
 hilang!
 
-**Step 5 — Sisa sistem linear**
+**Step 5.** Sisa sistem linear
 
 Y ˙ = aY+ bZŻ = −RY−aZ
 
-**Sistem matriks**
-
-(Y ˙Ż) = (a−Rb−a) (Y Z)
+**Sistem matriks** — (Y ˙Ż) = (a−Rb−a) (Y Z)
 
 dengan boundary Y (T) = 1, Z(T) = 0 (sehingga Q(T) = Z/Y= 0).
 
-**Eigenvalue analysis**
-
-Characteristic equation: det(A −λI) = 0.
+**Eigenvalue analysis** — Characteristic equation: det(A −λI) = 0.
 
 λ2 −(a2 −Rb) = 0
 
@@ -957,7 +911,7 @@ Kondisi S> R(β/α)2 menjamin a2 −Rb > 0 (real eigenvalues).
 
 Tulis λ:=a2 −Rb
 
-**Part 4 — Optimal state trajectory**
+**Part 4.** Optimal state trajectory
 
 Substitusi u∗= −(β/S)Q(t)x∗ ke ODE:
 
@@ -969,13 +923,11 @@ ODE linear time-varying ẋ∗= a^(t)x∗ punya solusi:
 
 x∗(t) = x0 exp {t0t a^(τ) dτ}x∗(t) = x0 exp {α(t −t0) −Sβ2t0t Q(τ) dτ}∫∫
 
-**Part 5 — Optimal control path**
+**Part 5.** Optimal control path
 
 u∗(t) = −SβQ(t) ⋅x∗(t)
 
-**Contoh numerik — Kontrol inflasi**
-
-Parameter: a = 0.5, b = −1, q= 1, r= 1, qT= 5, T= 10, x0= 3. Steady state Riccati: P∗= (1 +5
+**Contoh numerik — Kontrol inflasi** — Parameter: a = 0.5, b = −1, q= 1, r= 1, qT= 5, T= 10, x0= 3. Steady state Riccati: P∗= (1 +5
 
 2 ≈1.618 (golden ratio!).
 
@@ -1022,7 +974,7 @@ Objective dengan discount:
 
 J(c) =0Te−ρth(c) dt∫
 
-Asumsi: hc> 0, hcc< 0, φ′> 0, φ′′< 0, φ(0) = 0.
+Asumsi: $h_{c}>0$, $h_{cc}<0$, $f'>0$, $f''<0$, $f(0)=0$.
 
 Inada conditions: limk→∞φ′(k) < ρ + d < limk→0 φ′(k).
 
@@ -1039,15 +991,15 @@ Konsekuensi: ft= 0. Maka persamaan (11.13) trivial terpenuhi.
 
 Ini petunjuk simplifikasi
 ```
-**Part 1 — OCP**
+**Part 1.** OCP
 
 V (0, k0) = c≥0max {0Te−ρth(c(t))dtk̇ = φ(k) −dk −c,k(0) = k0}∫
 
-**Part 2 — HJB-R (current-value)**
+**Part 2.** HJB-R (current-value)
 
 ρV (t, k) −Vt(t, k) = c≥0max{h(c) + Vk[φ(k) −dk −c]}
 
-**Part 3 — Necessary Conditions (HJB approach)**
+**Part 3.** Necessary Conditions (HJB approach)
 
 **FOC**
 
@@ -1067,7 +1019,7 @@ Marginal utility consumption = marginal value of capital.
 
 Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 ```
-**Step 1 — Turunkan HJB-R terhadap k**
+**Step 1.** Turunkan HJB-R terhadap k
 
 ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]
 
@@ -1075,43 +1027,41 @@ Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 
 ρVk−Vtk= Vkk[φ(k) −dk −c] + Vk[φ′(k) −d]
 
-**Step 3 — Pakai chain rule untuk V ˙k**
+**Step 3.** Pakai chain rule untuk V ˙k
 
 V ˙k= Vtk+ Vkk⋅k̇ = Vtk+ Vkk[φ(k) −dk −c]
 
-**Step 4 — Substitusi**
+**Step 4.** Substitusi
 
 ρVk= V ˙k+ Vk[φ′(k) −d]
 
-**Step 5 — Solve untuk V ˙k — envelope condition**
+**Step 5.** Solve untuk V ˙k — envelope condition
 
 V ˙k= −Vk[φ′(k) −d −ρ]
 
 **Euler equation**
 
-**Step 1 — Turunkan FOC terhadap t**
+**Step 1.** Turunkan FOC terhadap t
 
-hcc(c)ċ = V ˙k
+$$ h_{cc}(c)\,\dot{c} = \dot{V}_{k} $$
 
-**Step 2 — Substitusi envelope condition**
+**Step 2.** Substitusi envelope condition
 
-hcc(c)ċ = −Vk[φ′(k) −d −ρ]
+$$ h_{cc}(c)\,\dot{c} = -V_{k}\,\bigl[\,f'(k)-\delta-\rho\,\bigr] $$
 
-**Step 3 — Substitusi Vk= hc**
+**Step 3.** Substitusi Vk= hc
 
-hcc(c)ċ = −hc[φ′(k) −d −ρ]
+$$ h_{cc}(c)\,\dot{c} = -h_{c}(c)\,\bigl[\,f'(k)-\delta-\rho\,\bigr] $$
 
-**Step 4 — Bagi dengan hc ⋅c dan rearrange**
+**Step 4.** Bagi dengan hc ⋅c dan rearrange
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
-dengan σ(c):= −hcc(c) ⋅c/hc(c) > 0 (Arrow-Pratt).
+dengan $\sigma(c) := -\,h_{cc}(c)\,c/h_{c}(c) > 0$ (Arrow-Pratt).
 
-**Part 4 — PMP approach**
+**Part 4.** PMP approach
 
-**Hamiltonian (present-value)**
-
-H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]
+**Hamiltonian (present-value)** — H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]
 
 **PMP conditions**
 
@@ -1122,34 +1072,34 @@ H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]
 
 **From PMP to Euler equation**
 
-**Step 1 — Turunkan Maximality terhadap t**
+**Step 1.** Turunkan Maximality terhadap t
 
-ψ˙ = e−ρt[−ρhc(c) + hcc(c)ċ]
+$$ \dot{\psi} = e^{-\rho t}\,\bigl[\,-\rho\,h_{c}(c) + h_{cc}(c)\,\dot{c}\,\bigr] $$
 
-**Step 2 — Bagi dengan ψ= e−ρthc(c)**
+**Step 2.** Bagi dengan ψ= e−ρthc(c)
 
-ψψ˙ = −ρ + hc(c)hcc(c)ċ
+$$ \dot{\psi}/\psi = -\rho + \dfrac{h_{cc}(c)}{h_{c}(c)}\,\dot{c} $$
 
-**Step 3 — Dari Adjoint: ψ˙/ψ= −[φ′(k) −d]**
+**Step 3.** Dari Adjoint: $\dot{\psi}/\psi = -[\,f'(k)-\delta\,]$
 
-**Step 4 — Set kedua sama**
+**Step 4.** Set kedua sama
 
-−[φ′(k) −d] = −ρ + hc(c)hcc(c)ċ
+$$ -\bigl[\,f'(k)-\delta\,\bigr] = -\rho + \dfrac{h_{cc}(c)}{h_{c}(c)}\,\dot{c} $$
 
-**Step 5 — Solve untuk ċ/c — sama dengan HJB approach**
+**Step 5.** Solve untuk ċ/c — sama dengan HJB approach
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
-**Part 5 — HJB = PMP via Mangasarian**
+**Part 5.** HJB = PMP via Mangasarian
 
-H jointly concave dalam (c, k) karena hcc< 0 dan φ′′< 0. Mangasarian Sufficiency → PMP = HJB.
+$H$ jointly concave dalam $(c,k)$ karena $h_{cc}<0$ dan $f''<0$. Mangasarian Sufficiency → PMP = HJB.
 
 ```{admonition} Koneksi
 :class: important
 
 Inilah mengapa di Exercise 11.3, kedua approach (HJB dan PMP) memberi Euler equation yang sama. Bukan kebetulan — konsekuensi convexity.
 ```
-**Bedakan envelope condition (HJB) vs turunan FOC (PMP)**
+*Bedakan envelope condition (HJB) vs turunan FOC (PMP).*
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -1164,7 +1114,7 @@ Keduanya berbeda tapi memberi hasil sama. Envelope condition di PMP (Ḣ∗= Ht)
 ```
 **Arrow-Pratt, EIS, Euler — Tabel sintesis**
 
-**Arrow-pratt** — σ(c) = −hcc(c) ⋅c/hc(c). Curvature utility. Risk aversion / aversi substitution.
+**Arrow-Pratt** — $\sigma(c) = -\,h_{cc}(c)\,c/h_{c}(c)$: curvature utility — risk aversion / aversi substitusi.
 
 1/σ(c). Kebalikan Arrow-Pratt. Sensitivitas
 
@@ -1174,9 +1124,7 @@ Keduanya berbeda tapi memberi hasil sama. Envelope condition di PMP (Ḣ∗= Ht)
 
 **Komponen Euler equation**
 
-**Ċ/c**
-
-Growth rate konsumsi (persen perubahan per waktu)
+**Ċ/c** — Growth rate konsumsi (persen perubahan per waktu)
 
 **$r(k)=f'(k)-\delta$** — Net marginal product of capital (return)
 
@@ -1186,7 +1134,7 @@ Growth rate konsumsi (persen perubahan per waktu)
 
 **$1/\sigma$** — EIS sebagai sensitivitas
 
-**Part 6 — Interpretasi Keynes-Ramsey**
+**Part 6.** Interpretasi Keynes-Ramsey
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -1205,9 +1153,7 @@ Planner menyeimbangkan benefit defer konsumsi (earn return r) dengan impatience 
 
 **EIS Tinggi** — Konsumsi lebih responsif terhadap gap r −ρ
 
-**CRRA utility special case**
-
-h(c) = (c1−σ−1)/(1 −σ) → σ konstan.
+**CRRA utility special case** — h(c) = (c1−σ−1)/(1 −σ) → σ konstan.
 
 cċ = σ1[φ′(k) −d −ρ]
 
@@ -1301,8 +1247,6 @@ Inilah persamaan kunci RCK. Bab 12 akan analisis lengkap dengan phase plane.
 
 ✦ ✦ ✦
 
-**Review Bab 11 — Optimal Control Theory**
-
-Economic Growth Personal Study Notes · Tools II Foundation
+**Review Bab 11 — Optimal Control Theory** — Economic Growth Personal Study Notes · Tools II Foundation
 
 Bridge ke RCK (Bab 12) dan Endogenous Growth (Bab 14-15)

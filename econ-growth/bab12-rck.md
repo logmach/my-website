@@ -6,9 +6,7 @@ Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving ra
 
 *RCK mengendogenkan saving — perbedaan fundamental dari Solow.*
 
-**Bedanya dari Solow-Swan**
-
-$\dot{k} = sf(k) - \delta k$ dengan $s$ konstan (eksogen,
+**Bedanya dari Solow-Swan** — $\dot{k} = sf(k) - \delta k$ dengan $s$ konstan (eksogen,
 
 **Solow-Swan** — $\dot{k}=sf(k)-\delta k$ dengan $s$ konstan (arbitrer). Tidak ada optimisasi household.
 
@@ -59,9 +57,7 @@ dengan ρ > 0 subjective rate of time preference.
 - ucc< 0 (strictly concave)
 - Inada: limc→0 uc= ∞ dan limc→∞uc= 0
 
-**Resource constraint (12.2)**
-
-$\dot{k} = f(k) - \delta k - c$, $k(0)=k_{0}$
+**Resource constraint (12.2)** — $\dot{k} = f(k) - \delta k - c$, $k(0)=k_{0}$
 
 **Identifikasi state vs control**
 
@@ -111,19 +107,19 @@ $$
 
 **Derivation envelope condition (12.9)**
 
-**Step 1 — Turunkan maximality (12.6) terhadap t**
+**Step 1.** Turunkan maximality (12.6) terhadap t
 
 $$
 \dot{\lambda}=e^{-\rho t}\bigl[-\rho\,u_{c}+u_{cc}\,\dot{c}\bigr]
 $$
 
-**Step 2 — Bagi dengan λ = e−ρtuc**
+**Step 2.** Bagi dengan λ = e−ρtuc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-**Step 3 — Substitusi Arrow-Pratt σ= −uccc/uc**
+**Step 3.** Substitusi Arrow-Pratt σ= −uccc/uc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho-\sigma(c)\,\frac{\dot{c}}{c}
@@ -131,17 +127,17 @@ $$
 
 **Derivation Keynes-Ramsey (12.10)**
 
-**Step 1 — Dari adjoint (12.5)**
+**Step 1.** Dari adjoint (12.5)
 
 λλ˙ = −[f′(k) −δ]
 
-**Step 2 — Set sama dengan envelope (12.9)**
+**Step 2.** Set sama dengan envelope (12.9)
 
 $$
 -\rho-\sigma\,\frac{\dot{c}}{c}=-\bigl[f\'(k)-\delta\bigr]
 $$
 
-**Step 3 — Solve → Keynes-Ramsey rule**
+**Step 3.** Solve → Keynes-Ramsey rule
 
 $$
 \rho+\sigma(c)\,\frac{\dot{c}}{c}=r,\qquad r=f\'(k)-\delta
@@ -156,13 +152,9 @@ Dua observasi lanjutan yang layak dielaborasi:
 
 Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus of variations (Euler-Lagrange abad 18, bukan "Bab 18"). Ramsey 1928 pakai ini sebelum PMP/HJB ada.
 ```
-**Sisi kiri = MRS antarwaktu**
+**Sisi kiri = MRS antarwaktu** — $\rho + \sigma\,\dot{c}/c$ adalah marginal rate of substitution konsumsi antarwaktu (discounted).
 
-$\rho + \sigma\,\dot{c}/c$ adalah marginal rate of substitution konsumsi antarwaktu (discounted).
-
-**Sisi kanan = opportunity cost**
-
-$r = f'(k) - \delta$ adalah net return on capital — opportunity cost konsumsi sekarang.
+**Sisi kanan = opportunity cost** — $r = f'(k) - \delta$ adalah net return on capital — opportunity cost konsumsi sekarang.
 
 ```{admonition} Hasil kunci
 :class: important
@@ -182,35 +174,29 @@ Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner bala
 
 Ada pepatah yang pas: "先苦後甜" — pahit sesaat, manis sehayat ("#YOLO, not"). Keynes-Ramsey adalah formalisasi disiplin intertemporal itu.
 ```
-**c sebagai jump variable**
-
-Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0) harus disesuaikan (jump) ke saddle path: c∗(0) = g(k0).
+**c sebagai jump variable** — Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0) harus disesuaikan (jump) ke saddle path: c∗(0) = g(k0).
 
 ## Konsep 4 — Exercise 12.2 — Phase Plane (Paling Penting)
 
 *Inti analisis RCK.*
 
-**Part 1 — Nullclines**
+**Part 1.** Nullclines
 
-**Nullcline $\dot{c}=0$**
-
-Dari Keynes-Ramsey, $\dot{c}=0$ butuh $f'(\bar{k}) = \delta+\rho$. Karena $f''<0$, solusinya unik.
+**Nullcline $\dot{c}=0$** — Dari Keynes-Ramsey, $\dot{c}=0$ butuh $f'(\bar{k}) = \delta+\rho$. Karena $f''<0$, solusinya unik.
 
 Garis vertikal $k=\bar{k}$.
 
-**Nullcline $\dot{k}=0$**
-
-Dari resource constraint: c = f(k) −δk.
+**Nullcline $\dot{k}=0$** — Dari resource constraint: c = f(k) −δk.
 
 Kurva hump-shape, puncak di kGR where f′(kGR) = δ.
 
 **Bukti modified golden rule k̄ < kGR**
 
-**Step 1 — Bandingkan FOC**
+**Step 1.** Bandingkan FOC
 
 f′(k̄) = δ + ρ > δ= f′(kGR)
 
-**Step 2 — f′ strictly decreasing (dari f′′< 0)**
+**Step 2.** F′ strictly decreasing (dari f′′< 0)
 
 **Step 3** — Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
 
@@ -225,7 +211,7 @@ $$
 
 Mengapa planner tidak pilih golden rule: planner impatient (ρ > 0). Tidak mau accumulate sampai max consumption steady state — korban konsumsi short- run tidak worth it. Limit ρ →0: k̄ →kGR.
 ```
-**Part 2 — Steady State**
+**Part 2.** Steady State
 
 $$
 f'(\bar{k})=\delta+\rho,\qquad \bar{c}=f(\bar{k})-\delta\bar{k}
@@ -233,34 +219,26 @@ $$
 
 Untuk Cobb-Douglas: k̄ = (α/(δ + ρ))1/(1−α).
 
-**Part 3 — Vector Field**
+**Part 3.** Vector Field
 
 ```{admonition} 💡 Insight
 :class: tip
 
 Pertanyaan yang sering muncul: mengapa arah vektornya demikian?
 ```
-**Arah $\dot{k}$ (bukti)**
-
-Dari $\partial\dot{k}/\partial c=-1<0$: $\dot{k}$ menurun dalam $c$.
+**Arah $\dot{k}$ (bukti)** — Dari $\partial\dot{k}/\partial c=-1<0$: $\dot{k}$ menurun dalam $c$.
 
 **Bawah $\dot{k}=0$** — $c<f(k)-\delta k$ → $\dot{k}>0$ → $k$ tumbuh (panah kanan): konsumsi kurang dari output bersih → modal terakumulasi.
 
 **Atas $\dot{k}=0$** — $c>f(k)-\delta k$ → $\dot{k}<0$ → $k$ menurun (panah kiri).
 
-**Atas $\dot{k}=0$**
+**Atas $\dot{k}=0$** — Konsumsi melebihi output bersih.
 
-Konsumsi melebihi output bersih.
-
-**Arah $\dot{c}$ (bukti)**
-
-Dari Keynes-Ramsey, $\mathrm{sign}(\dot{c}) = \mathrm{sign}[f'(k) - \delta - \rho]$. Karena $f''<0$:
+**Arah $\dot{c}$ (bukti)** — Dari Keynes-Ramsey, $\mathrm{sign}(\dot{c}) = \mathrm{sign}[f'(k) - \delta - \rho]$. Karena $f''<0$:
 
 $k<\bar{k}$ → $f'(k) > \delta+\rho$ → $\dot{c}>0$ → $c$ tumbuh (kuadran atas).
 
-**Kiri $\dot{c}=0$**
-
-Return > impatience → defer.
+**Kiri $\dot{c}=0$** — Return > impatience → defer.
 
 **Kanan $\dot{c}=0$**
 
@@ -274,19 +252,17 @@ Return > impatience → defer.
 
 **IV (kanan-atas)** — $\dot{k}<0,\ \dot{c}<0$ → panah ↙
 
-**Bukti saddle point (Jacobian)**
-
-Linearisasi di (k̄, c̄):
+**Bukti saddle point (Jacobian)** — Linearisasi di (k̄, c̄):
 
 $$
 J=\begin{pmatrix}\rho & -1\\ \bar{c}\,f''(\bar{k})/\sigma & 0\end{pmatrix}
 $$
 
-**Step 1 — Entry $\partial\dot{k}/\partial k = f'(\bar{k}) - \delta = \rho$ (karena $f'(\bar{k})=\delta+\rho$)**
+**Step 1.** Entry $\partial\dot{k}/\partial k = f'(\bar{k}) - \delta = \rho$ (karena $f'(\bar{k})=\delta+\rho$)
 
 **Step 2** — Entry $\partial\dot{c}/\partial c = 0$ (bracket Keynes-Ramsey = 0 di steady state)
 
-**Step 3 — Determinant**
+**Step 3.** Determinant
 
 det J= σc̄f′′(k̄) < 0
 
@@ -294,7 +270,7 @@ det J= σc̄f′′(k̄) < 0
 
 **Step 4** — det J< 0 → eigenvalues berlawanan tanda → saddle point
 
-**Part 4 — Stable Arm (Kualitatif)**
+**Part 4.** Stable Arm (Kualitatif)
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -322,15 +298,13 @@ Stable arm adalah kurva 1D → ditulis c = g(k), state feedback rule. Sifat: g(k
 
 Untuk soal yang minta kualitatif: cukup vector field + kontinuitas. Eigenvalue memberi slope eksak (bonus), tapi tidak perlu untuk deduce eksistensi stable arm.
 ```
-**Numerik (parameter konkret)**
-
-Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43), c̄ = 1.40, eigenvalues +0.111/ −0.071 (saddle confirmed). Shooting method: k0= 2 →c0∗≈0.901.
+**Numerik (parameter konkret)** — Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43), c̄ = 1.40, eigenvalues +0.111/ −0.071 (saddle confirmed). Shooting method: k0= 2 →c0∗≈0.901.
 
 ## Konsep 5 — Exercise 12.3 — Comparative Dynamics (ρ ↑)
 
 *Shock permanen: household jadi lebih impatient.*
 
-**Part 1 — Perubahan nullclines**
+**Part 1.** Perubahan nullclines
 
 **$\dot{c}=0$** — f′(k̄) = δ + ρ. ρ ↑ → k̄ ↓ → nullcline geser KIRI.
 
@@ -344,7 +318,7 @@ Steady state baru (k̄′, c̄′) di kiri-bawah dari lama.
 - c jump variable → jump naik (lebih impatient, konsumsi sekarang)
 - Setelah jump: c, k turun gradual ke steady state baru
 
-**Part 4 — Marginal propensity to save**
+**Part 4.** Marginal propensity to save
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -370,7 +344,7 @@ $$
 
 (atau 1/θ).
 ```
-**Part 5 — Endogenisasi saving**
+**Part 5.** Endogenisasi saving
 
 **Solow** — s konstan, arbitrer, mekanis
 
@@ -380,9 +354,7 @@ $$
 
 *Decentralized economy: household + firm + market clearing.*
 
-**Ownership structure**
-
-Household own assets a, sewakan modal ke firm. Modigliani-Miller: tiga struktur ownership ekuivalen di pasar frictionless.
+**Ownership structure** — Household own assets a, sewakan modal ke firm. Modigliani-Miller: tiga struktur ownership ekuivalen di pasar frictionless.
 
 ### Exercise 12.4 — Household OCP
 
@@ -402,13 +374,13 @@ $$
 
 **Euler equation (12.15)**
 
-**Step 1 — Turunkan maximality terhadap t, bagi dengan μ**
+**Step 1.** Turunkan maximality terhadap t, bagi dengan μ
 
 $$
 \frac{\dot{\mu}}{\mu}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-**Step 2 — Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt**
+**Step 2.** Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r(t)-\rho\bigr]
@@ -427,21 +399,15 @@ $\dot{p}/p = -r(t)$
 
 ($\dot{p}/p$ = growth rate harga = turunan logaritma). NPG (12.14): $\lim_{T\to\infty} p(T)\,a(T) \ge 0$ — present value assets tidak boleh negatif tak terbatas.
 ```
-**Firm FOC**
+**Firm FOC** — $r = f'(k) - \delta$ (12.17), $\quad w = f(k) - k\,f'(k)$ (12.18)
 
-$r = f'(k) - \delta$ (12.17), $\quad w = f(k) - k\,f'(k)$ (12.18)
-
-**Market clearing**
-
-$a=k$, $f(k) = c + \dot{k} + \delta k$
+**Market clearing** — $a=k$, $f(k) = c + \dot{k} + \delta k$
 
 ## Konsep 7 — Section 12.4 — First Welfare Theorem
 
 *Planner = competitive equilibrium.*
 
-**Equivalence (Exercise 12.5)**
-
-Substitusi firm FOC r= f′(k) −δ ke household Euler:
+**Equivalence (Exercise 12.5)** — Substitusi firm FOC r= f′(k) −δ ke household Euler:
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r-\rho\bigr]=\frac{1}{\sigma}\bigl[f'(k)-\delta-\rho\bigr]
@@ -454,9 +420,7 @@ $$
 
 Plus resource constraint (market clearing) dan TVC/NPG sama. Maka competitive equilibrium = planner's allocation. First Welfare Theorem.
 ```
-**Mengapa berlaku**
-
-Convexity terpenuhi: u concave, f concave → Mangasarian Sufficiency → PMP = HJB.
+**Mengapa berlaku** — Convexity terpenuhi: u concave, f concave → Mangasarian Sufficiency → PMP = HJB.
 
 ```{admonition} Koneksi
 :class: important
@@ -467,21 +431,19 @@ Implikasi: di RCK (pasar sempurna, convex), tidak ada room untuk policy. Di Bab 
 
 *Extension ke Balanced Growth Path (BGP).*
 
-**Redefinisi per efficient unit**
-
-L(t) = ent, A(t) = egt. Variabel per efficient unit: c = C/(AL), k= K/(AL).
+**Redefinisi per efficient unit** — L(t) = ent, A(t) = egt. Variabel per efficient unit: c = C/(AL), k= K/(AL).
 
 ### Exercise 12.6 — Resource constraint
 
-**Step 1 — Aggregate: $\dot{K} = F(K,AL) - \delta K - C$**
+**Step 1.** Aggregate: $\dot{K} = F(K,AL) - \delta K - C$
 
-**Step 2 — Log-differentiate $k = K/(AL)$**
+**Step 2.** Log-differentiate $k = K/(AL)$
 
 $\dot{k}/k = \dot{K}/K - g - n$
 
-**Step 3 — CRS: $F(K,AL)/(AL) = f(k)$ (pilih $\lambda = 1/(AL)$)**
+**Step 3.** CRS: $F(K,AL)/(AL) = f(k)$ (pilih $\lambda = 1/(AL)$)
 
-**Step 4 — Substitusi dan kumpulkan → hasil**
+**Step 4.** Substitusi dan kumpulkan → hasil
 
 $$
 \dot{k} = f(k) - (n+g+\delta)k - c
@@ -507,7 +469,7 @@ Objective punya L(t) = ent (planner peduli total welfare). e−ρt ⋅ent= e−(
 ```
 ### Exercise 12.8 — Euler dengan growth
 
-**Step 1 — Log maximality, turunkan**
+**Step 1.** Log maximality, turunkan
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-(\rho-n)+g+\frac{d}{dt}\ln u'(Ac)
@@ -517,7 +479,7 @@ $$
 
 **g + ċ/c**
 
-**Step 3 — Set sama adjoint, cancel n, g, solve**
+**Step 3.** Set sama adjoint, cancel n, g, solve
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[f'(k)-(\delta+\rho+\sigma g)\bigr]
@@ -553,19 +515,17 @@ unique → BGP exists.
 ```
 ### Exercise 12.10 — CRRA patience restriction
 
-**Step 1 — CRRA + BGP: integrand objective**
+**Step 1.** CRRA + BGP: integrand objective
 
 ∼e[−ρ+(1−σ)g+n]t
 
-**Step 2 — Konvergen iff eksponen < 0**
+**Step 2.** Konvergen iff eksponen < 0
 
 ρ > n + (1 −σ)g
 
 (1 −σ)g< 0 → restriction lebih longgar dari ρ > n.
 
-**$\sigma>1$**
-
-Utility bounded.
+**$\sigma>1$** — Utility bounded.
 
 **$\sigma=1$** — Restriction sama dengan ρ > n (log utility).
 
@@ -629,8 +589,6 @@ Jebakan aljabar eksponen: (a/b)p= apb−p. Eksponen penyebut jadi −p, bukan ek
 
 ✦ ✦ ✦
 
-**Review Bab 12 — Ramsey-Cass-Koopmans**
-
-Economic Growth Personal Study Notes · Neoclassical Growth
+**Review Bab 12 — Ramsey-Cass-Koopmans** — Economic Growth Personal Study Notes · Neoclassical Growth
 
 Aplikasi PMP/HJB · Jembatan ke Endogenous Growth (Bab 14-15)

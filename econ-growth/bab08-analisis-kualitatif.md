@@ -31,21 +31,13 @@ Untuk ODE skalar $\dot{x}=g(x)$:
 
 Sumbu horizontal: (state variable) $x$ Sumbu vertikal: $\dot{x}=g(x)$ Plot kurva $y= g(x)$
 
-**Cara baca**
+**Cara baca** — Di mana $g(x) > 0$: $\dot{x}>0$, jadi naik $x$ Di mana $g(x) < 0$: $\dot{x}<0$, jadi turun $x$ Di mana $g(x) = 0$: $\dot{x}=0$, jadi steady (steady state) $x$
 
-Di mana $g(x) > 0$: $\dot{x}>0$, jadi naik $x$ Di mana $g(x) < 0$: $\dot{x}<0$, jadi turun $x$ Di mana $g(x) = 0$: $\dot{x}=0$, jadi steady (steady state) $x$
-
-**Gambar tipikal**
-
-**ẋ = g(x)**
-
-**g(x)**
+*Sketsa (PDF): grafik $g(x)$ terhadap $x$ — perpotongan dengan sumbu = steady state; tanda $g$ menentukan arah panah.*
 
 *Phase line untuk ODE skalar $\dot{x}=g(x)$ dengan dua steady state ($\bar{x}_{1}=0$ dan $\bar{x}_{2}$): di daerah $g(x)>0$, $x$ naik (panah kanan); di daerah $g(x)<0$, $x$ turun (panah kiri).*
 
-**Stabilitas 1D dari grafik**
-
-$g'(\bar{x})<0$ (slope negatif): stable — lintasan dari kedua sisi menuju $\bar{x}$. $g'(\bar{x})>0$ (slope positif): unstable — lintasan menjauh.
+**Stabilitas 1D dari grafik** — $g'(\bar{x})<0$ (slope negatif): stable — lintasan dari kedua sisi menuju $\bar{x}$. $g'(\bar{x})>0$ (slope positif): unstable — lintasan menjauh.
 
 ## Konsep 3 — Phase Diagram 2D — Vector Field
 
@@ -57,9 +49,7 @@ Untuk sistem 2D $\dot{x}=G(x)$:
 
 Sumbu horizontal: $x_{1}$ (beberapa referensi menomori dari $x_{0}$). Sumbu vertikal: $x_{2}$. Phase plane = $R^{2}$, semua kemungkinan $(x_{1}, x_{2})$.
 
-**Vector field**
-
-Di tiap titik $(x_{1}, x_{2})$ di phase plane, ODE memberi vektor:
+**Vector field** — Di tiap titik $(x_{1}, x_{2})$ di phase plane, ODE memberi vektor:
 
 $$ \dot{x}=(\dot{x}^{1}\dot{x}_{2}^{)}=G((^{x}x_{2}^{))1} $$
 
@@ -71,9 +61,7 @@ Magnitude: seberapa cepat
 
 Kumpulan semua vektor di seluruh phase plane = vector field.
 
-**Stream lines (solution curves)**
-
-Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksikan ke state space (tanpa waktu eksplisit).
+**Stream lines (solution curves)** — Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksikan ke state space (tanpa waktu eksplisit).
 
 ```{admonition} Hasil kunci
 :class: important
@@ -95,13 +83,9 @@ Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksik
 
 *$\dot{x}_{1}$ -nullcline = kurva di mana $\dot{x}_{1} =0$ $\dot{x}_{2}$ -nullcline = kurva di mana $\dot{x}_{2} =0$*
 ```
-**Apa artinya geometris**
+**Apa artinya geometris** — Di $\dot{x}_{1}$ -nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak → lintasan vertikal Di $\dot{x}_{2}$ -nullcline: $x_{2}$ tidak berubah, tapi $x_{1}$ bergerak → lintasan horizontal
 
-Di $\dot{x}_{1}$ -nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak → lintasan vertikal Di $\dot{x}_{2}$ -nullcline: $x_{2}$ tidak berubah, tapi $x_{1}$ bergerak → lintasan horizontal
-
-**Steady state = perpotongan KEDUA nullcline**
-
-Steady state adalah titik di mana kedua $\dot{x}_{1} =0$ dan $\dot{x}_{2} =0$. Yaitu, titik yang simultaneously ada di kedua nullcline.
+**Steady state = perpotongan KEDUA nullcline** — Steady state adalah titik di mana kedua $\dot{x}_{1} =0$ dan $\dot{x}_{2} =0$. Yaitu, titik yang simultaneously ada di kedua nullcline.
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -131,107 +115,67 @@ $\dot{x}_{1}$ -nullcline: $x_{2} =x_{1}$ (garis 45°) $\dot{x}_{2}$ -nullcline: 
 
 Perpotongan: solve $x_{1} =2 -x_{1}$ → $x_{1} =1$, $x_{2} =1$. Steady state $(1, 1)$.
 
-**x₂**
+*Sketsa (PDF): bidang $(x_{1},x_{2})$ dengan nullcline $\dot{x}_{1}=0$ dan $\dot{x}_{2}=0$ berpotongan di steady state $(1,1)$.*
 
-**ẋ₂ = 0 nullclineẋ₁ = 0 nullcline**
-
-**(1, 1)**
-
-**steady state**
-
-**x₁**
-
-Dua nullcline berpotongan di steady state $(1,1)$.
+**x₁** — Dua nullcline berpotongan di steady state $(1,1)$.
 
 ## Konsep 5 — Lima Klasifikasi Phase Diagram 2D
 
 *Visualisasi tiap kasus eigenvalue. Pelajari gambarnya — itulah yang dipakai berulang.*
 
-**Klasifikasi 1 — Stable Node (Sink)**
-
-Eigenvalues: kedua real, kedua negatif, distinct ($\lambda _{1} <\lambda _{2} <0$).
+**Klasifikasi 1 — Stable Node (Sink)** — Eigenvalues: kedua real, kedua negatif, distinct ($\lambda _{1} <\lambda _{2} <0$).
 
 Cara baca: semua lintasan konvergen ke origin. Dekat origin, lintasan tangensial dengan eigenvektor lambat ($\lambda _{2}$, magnitude lebih kecil).
 
-**x₂**
+**x₁** — Stable node: semua lintasan menuju origin.
 
-**x₁**
-
-Stable node: semua lintasan menuju origin.
-
-**Klasifikasi 2 — Unstable Node (Source)**
-
-Eigenvalues: kedua real, kedua positif, distinct ($0 < \lambda _{1} <\lambda _{2}$).
+**Klasifikasi 2 — Unstable Node (Source)** — Eigenvalues: kedua real, kedua positif, distinct ($0 < \lambda _{1} <\lambda _{2}$).
 
 Cara baca: semua lintasan menjauh dari origin. Lintasan keluar tangensial dengan eigenvektor lambat, lalu sejajar eigenvektor cepat.
 
-**x₂**
+**x₁** — Unstable node: semua lintasan menjauh dari origin.
 
-**x₁**
-
-Unstable node: semua lintasan menjauh dari origin.
-
-**Klasifikasi 3 — Saddle Point (paling penting untuk RCK)**
-
-Eigenvalues: kedua real, tanda berlawanan ($\lambda _{1} <0 < \lambda _{2}$).
+**Klasifikasi 3 — Saddle Point (paling penting untuk RCK)** — Eigenvalues: kedua real, tanda berlawanan ($\lambda _{1} <0 < \lambda _{2}$).
 
 Cara baca: dua "manifold" istimewa lewat origin. Stable manifold (sepanjang eigenvektor dengan $\lambda < 0$) → lintasan menuju origin. Unstable manifold (sepanjang eigenvektor dengan $\lambda > 0$) → lintasan menjauh.
 
 Lintasan generik: datang dari arah stable manifold, curve dekat origin, terbang sepanjang unstable manifold.
 
-**x₂**
+**x₁** — Saddle point: stable manifold (hijau, menuju origin) dan unstable manifold (merah, menjauh). Lintasan biru: datang dari stable, terbang sepanjang unstable.
 
-**unstable manifoldstable manifold**
-
-**x₁**
-
-Saddle point: stable manifold (hijau, menuju origin) dan unstable manifold (merah, menjauh). Lintasan biru: datang dari stable, terbang sepanjang unstable.
-
-**Klasifikasi 4 — Stable Spiral (Focus)**
-
-Eigenvalues: complex conjugate dengan real part negatif ($\lambda = \alpha \pm i\beta \alpha < 0$,).
+**Klasifikasi 4 — Stable Spiral (Focus)** — Eigenvalues: complex conjugate dengan real part negatif ($\lambda = \alpha \pm i\beta \alpha < 0$,).
 
 Cara baca: lintasan spiral inward ke origin.
 
-**x₂**
+**x₁** — Stable spiral: lintasan spiral inward ke origin.
 
-**x₁**
-
-Stable spiral: lintasan spiral inward ke origin.
-
-**Klasifikasi 5 — Center**
-
-Eigenvalues: pure imaginary ($\lambda = \pm i\beta \alpha = 0$,).
+**Klasifikasi 5 — Center** — Eigenvalues: pure imaginary ($\lambda = \pm i\beta \alpha = 0$,).
 
 Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Marginal stable (Lyapunov stable tapi tidak asymptotic stable).
 
-**x₂**
-
-**x₁**
-
-Center: lintasan adalah orbit konsentris di sekitar origin. Tidak konvergen, tidak diverge.
+**x₁** — Center: lintasan adalah orbit konsentris di sekitar origin. Tidak konvergen, tidak diverge.
 
 ## Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram
 
 *Prosedur konkret yang dipakai berulang. Hafalkan urutannya.*
 
-****Step 1** Hitung eigenvalues**
+**Step 1.** Hitung eigenvalues
 
 Pakai formula 2D: $\lambda -^{2}tr(A)\lambda + det(A) = 0$. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).
 
-****Step 2** Klasifikasi dari eigenvalues**
+**Step 2.** Klasifikasi dari eigenvalues
 
 Trick cepat: kalau $det(A) < 0$ → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.
 
-****Step 3** Cari eigenvektor (kalau real eigenvalues)**
+**Step 3.** Cari eigenvektor (kalau real eigenvalues)
 
 Solve $(A -\lambda I)v= 0$ untuk tiap eigenvalue. Identifikasi stable (eigenvalue negatif) dan unstable (eigenvalue positif) directions.
 
-****Step 4** Plot sumbu dan steady state**
+**Step 4.** Plot sumbu dan steady state
 
 Sumbu horizontal $x_{1}$, vertikal $x_{2}$. Tandai steady state (biasanya origin untuk sistem homogen) dengan titik.
 
-****Step 5** Gambar eigenvektor sebagai garis lurus**
+**Step 5.** Gambar eigenvektor sebagai garis lurus
 
 Untuk node atau saddle: gambar garis lewat origin sepanjang tiap eigenvektor. Tambahkan panah:
 
@@ -241,7 +185,7 @@ Eigenvalue positif: panah menjauh dari origin
 
 Untuk spiral: skip langkah ini (eigenvektor kompleks).
 
-****Step 6** Gambar lintasan tipikal**
+**Step 6.** Gambar lintasan tipikal
 
 Pilih 4-8 kondisi awal yang tersebar di phase plane. Gambar lintasan sesuai klasifikasi:
 
@@ -251,7 +195,7 @@ Unstable node: semua menjauh, keluar tangensial eigenvektor lambat Saddle: datan
 
 Stable spiral: spiral inward
 
-****Step 7** Cek dengan vector field**
+**Step 7.** Cek dengan vector field
 
 Evaluasi $\dot{x}=Ax$ di beberapa titik untuk verifikasi:
 
@@ -259,9 +203,7 @@ Di $(1, 0)\dot{x}$: = kolom pertama $A$ Di $(0, 1)\dot{x}$: = kolom kedua $A$
 
 Panah di tiap titik harus konsisten dengan klasifikasi.
 
-**Tabel klasifikasi dari $det$ dan $tr$**
-
-Saddle point (tidak peduli trace) — langsung jelas, $det(A) =$
+**Tabel klasifikasi dari $det$ dan $tr$** — Saddle point (tidak peduli trace) — langsung jelas, $det(A) =$
 
 $$ DET<0 $$
 
@@ -279,33 +221,18 @@ $DET>0, TR=0$ Center (kalau diskriminan $< 0$)
 
 *Inilah tempat semua tools Bab 8 bertemu di growth theory.*
 
-**Setup RCK**
-
-Sistem 2D dengan $(k, c)$:
+**Setup RCK** — Sistem 2D dengan $(k, c)$:
 
 $$
 \begin{aligned}\dot{k}&=f(k)-(n+\delta)k-c \\ \dot{c}&=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
 $$
 
-**Nullcline RCK**
+**Nullcline RCK** — $\dot{k}=0$ nullcline: $c = f(k) -(n + \delta)k$ — kurva concav (karena concav) $f$ $\dot{c}=0$ nullcline: $f(k) =^{'}\rho + n$ — garis vertikal di $k = \bar{k}$ (independent dari) $c$
 
-$\dot{k}=0$ nullcline: $c = f(k) -(n + \delta)k$ — kurva concav (karena concav) $f$ $\dot{c}=0$ nullcline: $f(k) =^{'}\rho + n$ — garis vertikal di $k = \bar{k}$ (independent dari) $c$
+*Sketsa (PDF): phase diagram RCK di bidang $(k,c)$ — nullcline $\dot{c}=0$ vertikal dan $\dot{k}=0$ melengkung berpotongan di $(\bar{k},\bar{c})$; saddle path mengarah tepat ke titik itu.*
 
-**Phase diagram RCK c**
 
-**ċ = 0**
-
-**(k̄, c̄)**
-
-**k̇ = 0**
-
-**saddle path**
-
-trajectories terbang
-
-**k**
-
-Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah putus-putus) terbang menjauh.
+*Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah putus-putus) terbang menjauh.*
 
 **Implikasi ekonomi**
 
@@ -320,9 +247,7 @@ Untuk tiap $k_{0}$, ada satu nilai $c_{0}$ yang benar — yang persis di saddle 
 
 transversality condition (dibahas di Bab 11)
 ```
-**Mengapa eigenvalue dan eigenvektor penting**
-
-Eigenvalue negatif → arah konvergen → saddle path
+**Mengapa eigenvalue dan eigenvektor penting** — Eigenvalue negatif → arah konvergen → saddle path
 
 Eigenvektor untuk eigenvalue negatif → arah saddle path dekat steady state Slope eigenvektor → slope policy function $c = c(k)$ dekat steady state
 
@@ -330,7 +255,6 @@ Magnitude eigenvalue → rate of convergence sepanjang saddle path
 
 Tanpa eigenvalue analysis, kita tidak bisa karakterisasi saddle path. Inilah inti analisis RCK.
 
-**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 8
 
@@ -377,9 +301,7 @@ Kini lengkap sudah lima alat utama
 
 *Bab 3: ODE notation dan struktur Bab 4: Picard-Lindelöf — eksistensi dan keunikan solusi Bab 5: Steady state dan klasifikasi stabilitas Bab 6: Integrating factor untuk linear ODE Bab 7: Eigenvalue analysis untuk sistem linear Bab 8: Phase diagram visualisasi qualitative*
 ```
-**Yang menanti**
-
-Bab 9 — Solow-Swan: aplikasi pertama growth theory dengan tools yang sudah dikuasai
+**Yang menanti** — Bab 9 — Solow-Swan: aplikasi pertama growth theory dengan tools yang sudah dikuasai
 
 Bab 10 — Theory and Measurement: empirics Solow-Swan
 

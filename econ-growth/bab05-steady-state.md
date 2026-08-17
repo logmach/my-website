@@ -90,9 +90,7 @@ Setiap level menambah syarat: *stable* (tetap dekat) + konvergen → *asymptotic
 
 *Pertanyaan tajam — dan jawabannya menjelaskan inti mengapa Bab 5 penting untuk ekonomi.*
 
-**Steady state ≠ otomatis stable**
-
-Pertanyaan yang sering muncul: kalau sudah berada di steady state, mengapa masih perlu cek stabilitas?
+**Steady state ≠ otomatis stable** — Pertanyaan yang sering muncul: kalau sudah berada di steady state, mengapa masih perlu cek stabilitas?
 
 Jawaban: steady state hanya berarti "kalau tepat di sini, tidak bergerak". Tapi dunia nyata penuh gangguan. Pertanyaan yang penting:
 
@@ -101,17 +99,13 @@ Jawaban: steady state hanya berarti "kalau tepat di sini, tidak bergerak". Tapi 
 
 *"Kalau ekonomi sedikit tergeser dari, apakah dia kembali (stable) atau terbang jauh $\bar{x}$ (unstable)?"*
 ```
-**Kontras: bola di mangkuk vs bola di puncak**
-
-Dasar mangkuk: bola "diam" di sana. Dorong sedikit → kembali. Stable steady state.
+**Kontras: bola di mangkuk vs bola di puncak** — Dasar mangkuk: bola "diam" di sana. Dorong sedikit → kembali. Stable steady state.
 
 Puncak bukit: bola juga "diam" di sana. Tapi dorong sedikit → menggelinding jauh. Unstable steady state.
 
 Kedua-duanya adalah steady state — tapi perilakunya sangat berbeda saat ada gangguan.
 
-**Mengapa ini penting untuk ekonomi**
-
-Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansial, perang, pandemi, perubahan teknologi, bencana alam.
+**Mengapa ini penting untuk ekonomi** — Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansial, perang, pandemi, perubahan teknologi, bencana alam.
 
 ```{admonition} Koneksi
 :class: important
@@ -124,18 +118,14 @@ Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansi
 
 *Alat utama untuk mengecek stabilitas sistem linear. Mengubah pertanyaan dinamika menjadi pertanyaan aljabar.*
 
-**Statement**
-
-Untuk sistem linear $\dot{x}=Ax + b$ dengan steady state $\bar{x}=-A^{-1}b$:
+**Statement** — Untuk sistem linear $\dot{x}=Ax + b$ dengan steady state $\bar{x}=-A^{-1}b$:
 
 ```{admonition} Hasil kunci
 :class: important
 
 *Jika semua eigenvalue $A$ memiliki real part negatif, maka adalah globally $\bar{x}$ asymptotically stable.*
 ```
-**Mengapa eigenvalues?**
-
-Solusi sistem linear bisa ditulis sebagai kombinasi "mode":
+**Mengapa eigenvalues?** Solusi sistem linear bisa ditulis sebagai kombinasi "mode":
 
 $$ x(t) = C_{1}e^{\lambda1t}v_{1} +C_{2}e^{\lambda2t}v_{2} +⋯ $$
 
@@ -154,9 +144,7 @@ $$ e\lambda t=eat[cos(bt) + i sin(bt)]\cdot $$
 
 Bagian $cos +i sin$ memberi oscillation (spiral). Bagian $e^{at}$ memberi magnitude growth/decay. Hanya real part yang menentukan apakah lintasan mengecil atau membesar. $a$
 ```
-**Peran $b$**
-
-Pertanyaan yang sering muncul: "Apakah $b$ matriks $k \times 1$?"
+**Peran $b$** — Pertanyaan yang sering muncul: "Apakah $b$ matriks $k \times 1$?"
 
 Ya, $b$ adalah vektor kolom $k \times 1$. Perannya: Menentukan lokasi steady state: $\bar{x}=-A^{-1}b$ Tidak mempengaruhi stabilitas — stabilitas hanya tergantung eigenvalues $A$
 
@@ -166,9 +154,7 @@ Kalau $b= 0$, steady state di origin. Kalau $b= \ne 0$, steady state pindah, tap
 
 *Generalisasi Teorema 5.1 untuk sistem nonlinear — yang paling sering dipakai di seluruh materi.*
 
-**Apa itu "nonlinear"?**
-
-Pertanyaan yang sering muncul: "Apakah nonlinear berarti pangkat ≠ 1?"
+**Apa itu "nonlinear"?** Pertanyaan yang sering muncul: "Apakah nonlinear berarti pangkat ≠ 1?"
 
 Tidak cukup spesifik. Nonlinear berarti apa saja yang bukan bentuk $Ax + b$:
 
@@ -181,11 +167,9 @@ Pangkat ≠ 1: $x^{2}$, $x^{\alpha}$. Fungsi transendental: $e^{x}$, $\ln x$, $\
 
 *Cobb-Douglas $f(k)= k^{\alpha }$ — nonlinear (pangkat $\alpha = \ne 1$) CRRA $u(c)= c^{1-\sigma }/(1 -\sigma)$ — nonlinear Solow-Swan ODE $\dot{k}=sk-^{\alpha }(n + \delta)k$ — nonlinear karena $k^{\alpha }$*
 ```
-**Itulah mengapa Teorema 5.2 yang paling sering dipakai**
+*Itulah mengapa Teorema 5.2 yang paling sering dipakai.*
 
-**Statement**
-
-Untuk sistem $\dot{x}=G(x)$ dengan steady state, definisikan Jacobian di: $\bar{x}\bar{x}$
+**Statement** — Untuk sistem $\dot{x}=G(x)$ dengan steady state, definisikan Jacobian di: $\bar{x}\bar{x}$
 
 $$
 J(\bar{x}) = \begin{pmatrix} \dfrac{\partial G_{1}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{1}(\bar{x})}{\partial x_{k}} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial G_{k}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{k}(\bar{x})}{\partial x_{k}} \end{pmatrix}
@@ -196,9 +180,7 @@ $$
 
 *Jika semua eigenvalue $J(\bar{x})$ memiliki real part negatif, maka $\bar{x}$ locally asymptotically stable.*
 ```
-**Idenya: linearisasi**
-
-Dekat $\bar{x}$, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $J(\bar{x})$.
+**Idenya: linearisasi** — Dekat $\bar{x}$, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $J(\bar{x})$.
 
 Generalisasi Taylor expansion (di 1D):
 
@@ -217,9 +199,7 @@ Optimisasi: FOC ($∇f= 0$) → Hessian negative definite (max) Stabilitas: $G(\
 
 Di multi-dimensi, "tanda turunan kedua" digantikan oleh "eigenvalues matriks turunan". Hessian untuk optimisasi, Jacobian untuk dinamika.
 ```
-**Mengapa hanya "local"?**
-
-Linearisasi adalah aproksimasi yang baik hanya di sekitar. Untuk titik yang jauh, dinamika nonlinear bisa sangat $\bar{x}$ berbeda dari linear.
+**Mengapa hanya "local"?** Linearisasi adalah aproksimasi yang baik hanya di sekitar. Untuk titik yang jauh, dinamika nonlinear bisa sangat $\bar{x}$ berbeda dari linear.
 
 Konsekuensi:
 
@@ -244,9 +224,7 @@ $= \ne 0$), maka dinamika nonlinear di sekitar $\bar{x}$ secara topologis ekuiva
 
 *Loncatan logis yang wajar dipertanyakan: kenapa di 1D cukup melihat tanda $G'(\bar{x})$?*
 
-**1D sebagai kasus khusus dari Teorema 5.2**
-
-Untuk ODE skalar $\dot{x}=G(x)$ (yaitu $k = 1$):
+**1D sebagai kasus khusus dari Teorema 5.2** — Untuk ODE skalar $\dot{x}=G(x)$ (yaitu $k = 1$):
 
 1. Jacobian 1D: matriks $1 \times 1$ dengan satu entri:
 
@@ -320,7 +298,7 @@ $$
 
 $$ G'(k) = \alpha s k^{\alpha-1} - (n+g+\delta) $$
 
-****Step 3** Substitusi cerdas di $\bar{k}$**
+**Step 3.** Substitusi cerdas di $\bar{k}$
 
 Daripada substitusi langsung (ekspresi rumit), gunakan $s\bar{k}^{\alpha-1}=n+g+\delta$ dari persamaan steady state:
 
@@ -360,9 +338,7 @@ Sebaliknya, Solow-Swan disebut *exogenous growth*: konvergensi ke $\bar{k}$ adal
 
 *Fenomena multi-D yang akan menjadi inti dari analisis RCK (Bab 12).*
 
-**Apa itu saddle point?**
-
-Steady state dengan eigenvalues yang tanda real part-nya berbeda. Contoh sederhana:
+**Apa itu saddle point?** Steady state dengan eigenvalues yang tanda real part-nya berbeda. Contoh sederhana:
 
 $$ J(\bar{x}) = \begin{pmatrix} -2 & 0 \\ 0 & 3 \end{pmatrix} $$
 
@@ -406,11 +382,10 @@ $$
 - **$\lambda$ berlawanan tanda** — Saddle point: stable di satu arah, unstable di arah lain. Contoh: RCK.
 - **Pure imaginary** — Center: orbit periodik, marginal stable.
 
-**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 5
 
-**Siap untuk Bab 6 dan setelahnya jika bisa menjawab**
+*Siap untuk Bab 6 dan setelahnya jika bisa menjawab.*
 
 **Definisi**
 

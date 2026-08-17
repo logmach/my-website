@@ -116,9 +116,7 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 Jika (1) $G$ kontinu di compact cube $D$ yang memuat $(x_{0}, t_{0})$, dan (2) $G$ Lipschitz
 ```
-**dalam (bisa dijamin lewat continuously differentiable), $x$**
-
-maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
+**dalam (bisa dijamin lewat continuously differentiable), $x$** — maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -127,9 +125,7 @@ Pemahamanmu sendiri (dari catatan): "Kalau $G$ dan turunannya kontinu di $D$, pl
 
 Intuisi yang tepat. Yang harus diluruskan: bukan "IVP/BVP ada di D" tapi titik kondisi awal $(x_{0}, t_{0})$ ada di dalam $D$.
 ```
-**Mengapa kondisi-kondisi ini tepat**
-
-Bukan asumsi sembarangan — setiap kondisi punya peran spesifik dalam bukti formal:
+**Mengapa kondisi-kondisi ini tepat** — Bukan asumsi sembarangan — setiap kondisi punya peran spesifik dalam bukti formal:
 
 $G$ kontinu: memastikan integral terdefinisi, memberi bound $∥G∥\le K$ via Extreme Value Theorem
 
@@ -143,9 +139,7 @@ $D$ kompak: tertutup dan terbatas, sehingga max/min tercapai
 
 **Bagian ini yang paling dalam menggali pemahaman — di sinilah terlihat**
 
-**Dua kasus untuk dibandingkan**
-
-Kasus A: $\dot{x}=x$ dengan $x(0) = 0$ — well-behaved
+**Dua kasus untuk dibandingkan** — Kasus A: $\dot{x}=x$ dengan $x(0) = 0$ — well-behaved
 
 Kasus B: $\dot{x}=\sqrt{x}$ dengan $x(0) = 0$ — problematic
 
@@ -158,9 +152,7 @@ Kasus B: $\dot{x}=\sqrt{x}$ dengan $x(0) = 0$ — problematic
 | Waktu kabur dari $0$ | $\infty$ (tidak bisa kabur) | berhingga (bisa kabur kapan saja) |
 | Jumlah solusi | 1 (unik: $x \equiv 0$) | tak hingga |
 
-**Trik "potong-tempel" untuk konstruksi solusi non-unik**
-
-Untuk Kasus B, kamu bisa konstruksi tak hingga solusi parametrized oleh $\tau \ge 0$ ("kapan kabur dari nol"):
+**Trik "potong-tempel" untuk konstruksi solusi non-unik** — Untuk Kasus B, kamu bisa konstruksi tak hingga solusi parametrized oleh $\tau \ge 0$ ("kapan kabur dari nol"):
 
 $$
 x_{\tau}(t)=\begin{cases} 0 & \text{kalau } 0 \le t \le \tau \\[4pt] \dfrac{(t-\tau)^{2}}{4} & \text{kalau } t > \tau \end{cases}
@@ -196,7 +188,7 @@ Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "ka
 ```
 ## Konsep 6 — Hubungan ke Growth Theory
 
-**Setelah pemahaman teknis, pertanyaan yang paling penting**
+*Setelah pemahaman teknis, pertanyaan yang paling penting.*
 
 **Apakah model growth well-behaved?**
 
@@ -207,9 +199,7 @@ Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "ka
 
 *Picard-Lindelöf berlaku, solusi unik dijamin. Tidak ada kasus seperti $x$ yang punya tak hingga solusi.*
 ```
-**Mengapa**
-
-Tiga alasan struktural:
+**Mengapa** — Tiga alasan struktural:
 
 1. Fungsi produksi smooth. Cobb-Douglas $f(k) = k^{\alpha }$ continuously differentiable di $k > 0$. Inada conditions menjamin smoothness di wilayah ekonomi yang masuk akal.
 2. Inada sebagai asuransi. Asumsi $f(0) =^{'}\infty$ dan $f(\infty) =^{'}0$ memastikan dinamika "tertahan" di wilayah hingga.
@@ -222,9 +212,7 @@ Pemahamanmu sendiri: "dalam Solow model, kalau kita potong waktu, solusi tidak a
 
 Tepat. Ini adalah rumusan intuitif uniqueness. Trajektori deterministik: dari $k_{0}$ given, $k(t)$ untuk semua $t> 0$ adalah unik. Tidak ada "cabang" alternatif.
 ```
-**Tapi memahami non-uniqueness tetap penting**
-
-Meskipun growth well-behaved, konsep ini tetap dibutuhkan
+**Tapi memahami non-uniqueness tetap penting** — Meskipun growth well-behaved, konsep ini tetap dibutuhkan
 
 1. Saddle path di RCK: ODE well-behaved tapi kondisi awal partial ($k(0)$ given, $c(0)$ free). Ada keluarga trajektori — TVC memilih satu unik.
 2. Memahami "mengapa teorema dibutuhkan": bukan asumsi sembarangan. Kondisi-kondisi punya peran spesifik.
@@ -264,7 +252,6 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 **RENDERING CHECK** — Kalau formula terlihat aneh, minta format alternatif (subscript, plain text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
 ```
-**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 4
 

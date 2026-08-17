@@ -6,13 +6,9 @@ Bab ini membahas dua teknik inti untuk menyelesaikan ODE linear secara eksplisit
 
 *Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.*
 
-**ODE asli**
+**ODE asli** — $\dot{x}+ax = b(Equation 6.1, a, b konstan)$
 
-$\dot{x}+ax = b(Equation 6.1, a, b konstan)$
-
-**Trik integrating factor**
-
-Kalikan kedua sisi dengan $e^{at}$ — disebut integrating factor:
+**Trik integrating factor** — Kalikan kedua sisi dengan $e^{at}$ — disebut integrating factor:
 
 $[+\dot{x}ax]e^{at}=be^{at}(Equation 6.2)$
 
@@ -53,9 +49,7 @@ Sekilas RHS terlihat berbeda dari $be^{at}$, padahal sama (karena $\frac{d(e^{at
 
 Mengapa ditulis seperti itu? Strategi penulisan: agar
 ```
-**Pertanyaan tajam: "Mengapa eksponensial?"**
-
-Catatan kuliah menyatakan: kalau "instantaneous rate of change locally constant", maka anti-derivative-nya eksponensial. Mari bedah pelan-pelan.
+**Pertanyaan tajam: "Mengapa eksponensial?"** — Catatan kuliah menyatakan: kalau "instantaneous rate of change locally constant", maka anti-derivative-nya eksponensial. Mari bedah pelan-pelan.
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -114,9 +108,7 @@ Parafrase yang tepat (saat membahas Corollary 6.1):
 
 Rumusan ini akan dipakai di Bab 9
 ```
-**Stabilitas dari struktur**
-
-Saat $t\to \infty$:
+**Stabilitas dari struktur** — Saat $t\to \infty$:
 
 Kalau $a> 0$: $e^{-at}\to 0$ → movement menghilang → $x \to \bar{x}=b/a$ (stable) Kalau $a< 0$: $e^{-at}\to \infty$ → movement meledak → unstable
 
@@ -162,11 +154,9 @@ Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-va
 ```
 ## Konsep 4 — 6.1.3 — Time-Varying Parameters
 
-**Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$**
+*Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$.*
 
-**ODE bentuk umum**
-
-$\dot{x}+a(t)x = b(t)(Equation 6.8)$
+**ODE bentuk umum** — $\dot{x}+a(t)x = b(t)(Equation 6.8)$
 
 **Integrating factor (Exercise 6.3)**
 
@@ -174,9 +164,7 @@ $$ I(t) = e^{\inta(t)dt} $$
 
 Verifikasi: multiply ODE
 
-**General solution (Exercise 6.4)**
-
-$x(t) =*\int I(t)b(t) dt +C(Equation 6.9)$
+**General solution (Exercise 6.4)** — $x(t) =*\int I(t)b(t) dt +C(Equation 6.9)$
 
 $$ I(t)I(t) $$
 
@@ -194,9 +182,7 @@ $$ x \cdot I=\int b(t)I(t)\, dt +C $$
 
 Hasil: Equation 6.9.
 
-**6.1.1 sebagai kasus khusus**
-
-Kalau $a(t) = a$ (konstan), maka $\int a dt=at$ dan $I(t) = e^{at}$ — sama dengan 6.1.1. Yaitu, 6.1.3 menggeneralisasi 6.1.1.
+**6.1.1 sebagai kasus khusus** — Kalau $a(t) = a$ (konstan), maka $\int a dt=at$ dan $I(t) = e^{at}$ — sama dengan 6.1.1. Yaitu, 6.1.3 menggeneralisasi 6.1.1.
 
 ## Konsep 5 — 6.2 — Multiple-Variable Case
 
@@ -221,9 +207,7 @@ Bukti (Exercise 6.5):
 
 $$ dtd[c_{1}x^{*}_{1} +c_{2}x^{*}_{2}] =c_{1}^{\dot{x}}_{1}^{*} +c_{2}^{\dot{x}}_{2}^{*} =c_{1}Ax^{*}_{1} +c_{2}Ax^{*}_{2} =A(c_{1}x^{*}_{1} +c_{2}x^{*}_{2})✓ $$
 ```
-**Corollary 6.1 — Kunci strategi solving**
-
-Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x(t)^{*}_{2}$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
+**Corollary 6.1 — Kunci strategi solving** — Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x(t)^{*}_{2}$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
 
 Konsekuensi praktis: kita fokus solve sistem homogen saja, lalu "tambah kembali" particular solution.
 
@@ -254,9 +238,7 @@ Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:
 
 **Point 3** — Setiap solusi 6.12 bisa dikonstruksi sebagai: satu particular solusi 6.12 + solusi homogen 6.13. Inilah strategi standar solving.
 
-**Point 2 — arah logika yang sering terbalik**
-
-Pertanyaan yang wajar: jika $x_{1}$ menyelesaikan 6.11 dan $x_{2}$ menyelesaikan 6.10, bagaimana?
+**Point 2 — arah logika yang sering terbalik** — Pertanyaan yang wajar: jika $x_{1}$ menyelesaikan 6.11 dan $x_{2}$ menyelesaikan 6.10, bagaimana?
 
 Perhatikan baik-baik: Theorem 6.1 Point 2 justru mengatakan arah sebaliknya:
 
@@ -310,9 +292,7 @@ Tiga contoh klasik sign-flip error:
 
 Polanya: auto-apply formula $Ce^{-at}$ tanpa memeriksa tanda ketika ODE tidak dalam bentuk standar.
 ```
-**Diagnosis**
-
-Formula $Ce^{-at}$ berlaku untuk ODE bentuk $\dot{x}+ax = b$. Tapi kalau ODE-nya $\dot{x}=kx$ (yaitu $\dot{x}-kx = 0$), maka $a= -k$, dan solusi $Ce^{-(-k)t}=Ce^{+kt}$.
+**Diagnosis** — Formula $Ce^{-at}$ berlaku untuk ODE bentuk $\dot{x}+ax = b$. Tapi kalau ODE-nya $\dot{x}=kx$ (yaitu $\dot{x}-kx = 0$), maka $a= -k$, dan solusi $Ce^{-(-k)t}=Ce^{+kt}$.
 
 Trap: melihat angka di ODE dan langsung menempatkannya
 
@@ -327,9 +307,7 @@ Trap: melihat angka di ODE dan langsung menempatkannya
 ```
 **Toolkit Sanity Check**
 
-**Sanity Check Toolkit**
-
-Metode utama — substitusi ke ODE asli:
+**Sanity Check Toolkit** — Metode utama — substitusi ke ODE asli:
 
 Setelah dapat solusi $x(t)$, substitusi ke kedua sisi ODE. Kalau cocok, konsisten. Kalau tidak, salah.
 
@@ -385,11 +363,10 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 
 $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$ (stable) $\dot{x}=0.05x$, $x_{0} =100$ — solusi $100e^{0.05t}x(10) \approx 164.9$, $\dot{N}=nN$ — population growth (eksponensial) $\dot{x}=-2x + 6$, $x_{0} =5$ — solusi $3 + 2e^{-2t}$, konvergen ke $\bar{x}=3$ $\dot{x}+(1/t)x = 0x(1) = 5$, — solusi $5/t$ $\dot{x}=-5x + 10$, $x_{0} =3$ — solusi $e^{-5t}+2$ ✓ (kerja mandiri)
 
-**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 6
 
-**Siap untuk Bab 7 jika bisa menjawab**
+*Siap untuk Bab 7 jika bisa menjawab.*
 
 **Mekanik solving**
 
@@ -430,9 +407,7 @@ Kebiasaan sanity check yang dibangun di sini akan dipakai di seluruh sisa materi
 
 *Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.*
 ```
-**Tools yang akan dipakai di Bab 7**
-
-Eigenvalue dan eigenvektor (dari aljabar linear)
+**Tools yang akan dipakai di Bab 7** — Eigenvalue dan eigenvektor (dari aljabar linear)
 
 Principle of Superposition (Bab 6)
 
@@ -444,7 +419,7 @@ Semua tools sudah di tangan. Bab 7 hanya menggabungkannya.
 
 1. Solusi $\dot{x}=kx$ adalah $Ce^{kt}$ (bukan $Ce^{-kt}$)
 
-**2. General non-homog = general homog + particular**
+*2. General non-homog = general homog + particular.*
 
 3. Sanity check selalu: substitusi solusi ke ODE asli
 4. Strategy solving: focus on homog, add particular at end

@@ -6,9 +6,7 @@ Bab ini menggeneralisasi teknik Bab 6 dari persamaan skalar ke *sistem* ODE mult
 
 *Generalisasi tools Bab 6 dari skalar ke sistem multi-variabel.*
 
-**Masalah baru di multi-D**
-
-Untuk sistem $\dot{x}=Ax$ dengan $A$ matriks $k \times k$:
+**Masalah baru di multi-D** — Untuk sistem $\dot{x}=Ax$ dengan $A$ matriks $k \times k$:
 
 Kalau $A$ diagonal: persamaan terpisah, solve sebagai ODE skalar independen. Tools Bab 6 langsung berlaku. $k$ Kalau $A$ tidak diagonal: persamaan interdependent — $\dot{x}_{1}$ tergantung $x_{2}$ dan sebaliknya. Tools Bab 6 tidak cukup.
 
@@ -52,9 +50,7 @@ Eigenvalue: skalar yang membuat persamaan di atas berlaku $\lambda$
 
 Intuisi geometris: $A$ "memetakan" ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. $v$
 
-**Cara mencari eigenvalue**
-
-Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
+**Cara mencari eigenvalue** — Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
 
 Untuk solusi non-trivial ($v= \ne 0$), matriks $(A -\lambda I)$ harus singular:
 
@@ -86,9 +82,7 @@ Trace = $-1 + (-1) = -2$, bukan. Kesalahan ini menyebar ke seluruh perhitungan d
 
 Habit yang harus dibangun: sebelum lanjut, double-check entri diagonal. Trace = $a + d$ (kiri atas + kanan bawah), bukan $b + c$.
 ```
-**Mengapa "real part" penting**
-
-Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung
+**Mengapa "real part" penting** — Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung
 
 Untuk $\lambda = \alpha + i\beta$ (kompleks):
 
@@ -135,9 +129,7 @@ Yang benar: multiplicity dihitung *per eigenvalue*. Reflex yang harus terbangun:
 
 *Kalau ada satu saja eigenvalue dengan GM < AM, matriks tidak diagonalisasi-able.*
 ```
-**Empat kasus utama**
-
-Kasus 1 — Distinct eigenvalues: `A = [ -2 1 ]` `[ 0 -3 ]`
+**Empat kasus utama** — Kasus 1 — Distinct eigenvalues: `A = [ -2 1 ]` `[ 0 -3 ]`
 
 Eigenvalues: $-2, -3$. AM = GM = 1 untuk masing-masing. Diagonalisasi-able.
 
@@ -177,9 +169,7 @@ Karena untuk $\lambda = 4$, AM ≠ GM → tidak diagonalisasi-able.
 
 *Berdasarkan jenis eigenvalues, ada tiga "wajah" yang berbeda untuk sistem 2D.*
 
-**Cara membedakan**
-
-Diskriminan persamaan karakteristik 2D:
+**Cara membedakan** — Diskriminan persamaan karakteristik 2D:
 
 $$ \Delta = tr(A)-^{2}4 det(A) $$
 
@@ -257,9 +247,8 @@ Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay mena
 
 `A = [ 2 2 ]` `[ 1 3 ]`
 
-**Step-by-step**
 
-****Step 1** Eigenvalues**
+**Step 1.** Eigenvalues
 
 $tr(A) = 5, det(A) = 4$. Persamaan: $\lambda -^{2}5\lambda + 4 = 0$ → $(\lambda -4)(\lambda -1) = 0$.
 
@@ -273,7 +262,7 @@ $(A -4I)v_{1} =0$ menghasilkan $v_{2} =v_{1}$. Pilih $v_{1} =(1, 1)$.
 
 $(A -I)v_{2} =0$ menghasilkan $v_{1} =-2v_{2}$. Pilih $v_{2} =(-2, 1)$.
 
-****Step 4** General solution**
+**Step 4.** General solution
 
 $$ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} $$
 
@@ -294,25 +283,24 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 ```
 **Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues**
 
-**Contoh kasus: matriks dengan trace**
+*Contoh kasus: matriks dengan trace.*
 
 **Setup**
 
 `A = [ -1 2 ]` `[ -2 -1 ]`
 
-**Step-by-step**
 
-****Step 1** Trace dan determinant**
+**Step 1.** Trace dan determinant
 
 $tr(A) = -1 + (-1) = -2$ (hati-hati: bukan) $0$
 
 $$ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 $$
 
-****Step 2** Diskriminan**
+**Step 2.** Diskriminan
 
 $\Delta = 4 -20 = -16 < 0$ → complex eigenvalues ✓
 
-****Step 3** Eigenvalues**
+**Step 3.** Eigenvalues
 
 $$
 \lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
@@ -324,17 +312,15 @@ $$
 \lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
 $$
 
-****Step 4** Identifikasi**
+**Step 4.** Identifikasi
 
 $\alpha = -1$ (real part), $\beta = 2$ (imaginary part)
 
-****Step 5** Klasifikasi**
+**Step 5.** Klasifikasi
 
 $\alpha < 0$ dan $\beta = \ne 0$ → stable spiral
 
-**Interpretasi qualitative**
-
-Lintasan spiral inward ke origin Magnitude decay dengan rate $∣\alpha ∣= 1$ Periode rotasi $T= 2\pi /\beta = \pi \approx 3.14$
+**Interpretasi qualitative** — Lintasan spiral inward ke origin Magnitude decay dengan rate $∣\alpha ∣= 1$ Periode rotasi $T= 2\pi /\beta = \pi \approx 3.14$
 
 Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
@@ -342,7 +328,7 @@ Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
 *Pertanyaan yang membuka mata: mengapa kita belajar semua ini untuk Solow- Swan dan RCK?*
 
-**Hubungan tools dengan pertanyaan ekonomi**
+*Hubungan tools dengan pertanyaan ekonomi.*
 
 **Pertanyaan Ekonomi** — Tool matematis
 
@@ -358,11 +344,8 @@ Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
 **Pilihan Trajectory** — Pilih komponen dengan eigenvalue negatif (transversality)
 
-**Optimal?**
 
-**Aplikasi ke Solow-Swan**
-
-Sudah diturunkan di Bab 5:
+**Aplikasi ke Solow-Swan** — Sudah diturunkan di Bab 5:
 
 Untuk parameter realistik ($\alpha = 0.33, n + g + \delta = 0.06$):
 
@@ -375,9 +358,7 @@ Inilah prediksi konkrit: ekonomi yang tergeser dari steady state (misal pasca-pe
 
 *butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.*
 ```
-**Aplikasi ke RCK**
-
-Sistem 2D nonlinear dengan $(k, c)$:
+**Aplikasi ke RCK** — Sistem 2D nonlinear dengan $(k, c)$:
 
 $$
 \begin{aligned}\dot{k}&=f(k)-(n+\delta)k-c \\ \dot{c}&=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
@@ -407,17 +388,13 @@ Implikasi mendalam:
 
 *Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.*
 ```
-**Picard-Lindelöf menjamin eksistensi**
-
-Untuk Solow-Swan $\dot{k}=sk-^{\alpha }\delta k$ dengan $k > 0$:
+**Picard-Lindelöf menjamin eksistensi** — Untuk Solow-Swan $\dot{k}=sk-^{\alpha }\delta k$ dengan $k > 0$:
 
 $G(k) = sk-^{\alpha }\delta k$ kontinu untuk $k > 0$ ✓ $\partial G/\partial k = \alpha sk^{\alpha-1}-\delta$ kontinu untuk $k > 0$ ✓
 
 Picard-Lindelöf menjamin: untuk sembarang $k_{0} >0$, ada solusi $k(t)$ yang eksis dan unik untuk $t\ge t_{0}$.
 
-**Tapi solusi tidak bisa ditulis**
-
-Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progress, Romer), tidak ada formula closed-form dalam fungsi elementer.
+**Tapi solusi tidak bisa ditulis** — Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progress, Romer), tidak ada formula closed-form dalam fungsi elementer.
 
 **Tiga jenis "tidak bisa di-solve"**
 
@@ -427,7 +404,7 @@ Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progr
 
 **Skenario 3** — Solusi eksplisit eksis tapi terlalu rumit untuk memberi insight. Jarang; biasanya melibatkan fungsi spesial.
 
-**Mengapa "linearisasi + eigenvalue" jadi alat utama**
+*Mengapa "linearisasi + eigenvalue" jadi alat utama.*
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -451,11 +428,10 @@ Pertanyaanmu menyentuh hal fundamental dalam matematika applied:
 
 Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah yang melibatkan struktur aljabar fungsi $G$. Inilah mengapa numerik, qualitative, dan linearisasi menjadi alat penting — bukan karena malas, tapi karena formula eksplisit memang sering tidak ada.
 ```
-**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 7
 
-**Siap untuk Bab 8 dan setelahnya jika bisa menjawab**
+*Siap untuk Bab 8 dan setelahnya jika bisa menjawab.*
 
 **Mekanik**
 
@@ -497,9 +473,7 @@ Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.
 
 *Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus*
 ```
-**Yang menanti**
-
-Bab 8 — Qualitative Analyses: phase diagrams, nullclines, klasifikasi geometris tanpa solve eksplisit
+**Yang menanti** — Bab 8 — Qualitative Analyses: phase diagrams, nullclines, klasifikasi geometris tanpa solve eksplisit
 
 Bab 9 — Solow-Swan: aplikasi pertama growth theory
 
