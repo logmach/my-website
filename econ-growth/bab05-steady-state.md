@@ -30,19 +30,13 @@ Sebelum definisi formal, pakai analogi klasik: bola pingpong
 
 **STABLE** — Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.
 
-Bola di dasar mangkuk dalam. Dorong sedikit, akhirnya kembali
-
-`ASYMPTOTIC STABLE`
-
-persis ke dasar. Tetap dekat DAN konvergen.
+**Asymptotic Stable** — Bola di dasar mangkuk dalam. Dorong sedikit, akhirnya kembali persis ke dasar. Tetap dekat DAN konvergen.
 
 **GLOBAL ASYMP STABLE** — Bola di mangkuk tanpa pinggiran. Tidak peduli seberapa keras goyangkan, akhirnya bola kembali ke dasar. Konvergen dari MANAPUN.
 
 Bola di puncak bukit. Dorong sedikit, bola menggelinding jauh.
 
-`UNSTABLE`
-
-Tidak tetap dekat — terbang keluar.
+**Unstable** — Tidak tetap dekat — terbang keluar.
 
 ## Definisi formal dan visualisasinya
 
@@ -288,13 +282,13 @@ Pelajaran: selalu evaluasi $G^{'}$ tepat di, bukan generalisasi untuk semua. Lin
 
 Pola yang sama, tapi lebih kaya:
 
-`SEMUA` $RE(\Lambda)<_{I}0$ Stable node/spiral. Lintasan konvergen ke dari semua arah lokal. $\bar{x}$
+**Semua** — $RE(\Lambda)<_{I}0$ Stable node/spiral. Lintasan konvergen ke dari semua arah lokal. $\bar{x}$
 
-`SEMUA` $RE(\Lambda)>_{I}0$ Unstable node/spiral. Lintasan menjauh dari di semua arah. $\bar{x}$
+**Semua** — $RE(\Lambda)>_{I}0$ Unstable node/spiral. Lintasan menjauh dari di semua arah. $\bar{x}$
 
 **CAMPURAN TANDA** — Saddle point. Stable di arah eigenvector dengan eigenvalue negatif, unstable di arah eigenvector dengan eigenvalue positif. Fenomena multi-D yang tidak ada di 1D.
 
-`ADA` $RE(\Lambda _{I})=0$ Non-hyperbolic. Linearisasi tidak konklusif — butuh analisis lain.
+**Ada** — $RE(\Lambda _{I})=0$ Non-hyperbolic. Linearisasi tidak konklusif — butuh analisis lain.
 
 ## Konsep 7 — Aplikasi Langsung — Solow-Swan
 
@@ -402,13 +396,13 @@ $$
 
 ## Empat klasifikasi steady state 2D
 
-`KEDUA` $\Lambda$ `NEGATIF (REAL)` Stable node. Monotonic convergence. Contoh: Solow-Swan.
+**Kedua** — $\Lambda$ `NEGATIF (REAL)` Stable node. Monotonic convergence. Contoh: Solow-Swan.
 
 $\Lambda$ `COMPLEX DENGAN RE < 0` Stable spiral (focus). Spiral inward convergence.
 
 Unstable node. Lintasan menjauh. Contoh: AK model (di luar steady
 
-`KEDUA` $\Lambda$ `POSITIF (REAL)`
+**Kedua** — $\Lambda$ `POSITIF (REAL)`
 
 state).
 

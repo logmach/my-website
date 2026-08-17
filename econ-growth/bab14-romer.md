@@ -10,17 +10,11 @@ Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berka
 
 *Fondasi filosofis mengapa firm menghasilkan ide baru.*
 
-Ide non-rival (dipakai berkali-kali tanpa `1. NON-RIVAL` berkurang), tapi partially excludable (paten) — beda dari public good murni.
+**1. Non-rival** — Ide dipakai berkali-kali tanpa berkurang, tapi partially excludable (paten) — beda dari public good murni.
 
-CRS pada input privat, tapi increasing returns
+**2. IRS Agregat** — CRS pada input privat, tapi increasing returns agregat karena penciptaan ide.
 
-`2. IRS AGREGAT`
-
-agregat karena penciptaan ide.
-
-Butuh monopoli rent untuk menutup fixed cost
-
-`3. MARKET POWER`
+**3. Market power** — Butuh monopoli rent untuk menutup fixed cost R&D.
 
 R&D. Tidak bisa perfect competition.
 
@@ -28,15 +22,11 @@ R&D. Tidak bisa perfect competition.
 
 Expanding variety — lebih banyak jenis produk.
 
-`HORIZONTAL (BAB 14)`
-
-Romer 1990.
+**Horizontal (bab 14)** — Romer 1990.
 
 Quality ladder — produk lebih baik.
 
-`VERTICAL (BAB 15)`
-
-Schumpeterian.
+**Vertical (bab 15)** — Schumpeterian.
 
 ## Konsep 2 — Lima Micro Building Blocks
 
@@ -78,11 +68,11 @@ adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at M
 
 ### BB3 — Surplus Ordering
 
-`(PLANNER)` Price at MC, no DWL, surplus maksimal
+**(planner)** — Price at MC, no DWL, surplus maksimal
 
-`(DRASTIC)` Price rendah, DWL kecil
+**(drastic)** — Price rendah, DWL kecil
 
-`(LIMIT)` Price tinggi, DWL besar Dua sumber gap: deadweight loss (pricing) + consumer surplus bocor (appropriability). Dua sumber ini → dua margin inefisiensi → dua instrumen kebijakan.
+**(limit)** — Price tinggi, DWL besar Dua sumber gap: deadweight loss (pricing) + consumer surplus bocor (appropriability). Dua sumber ini → dua margin inefisiensi → dua instrumen kebijakan.
 
 ### BB4 — Replacement Effect (Arrow)
 
@@ -96,9 +86,9 @@ Romer (Bab 14) TIDAK punya replacement effect — varietas baru tidak gantikan l
 
 Bisa over-investment: entrant ignore loss incumbent (profit transfer bukan nilai baru).
 
-`APPROPRIABILITY` Under-investment (CS bocor)
+**Appropriability** — Under-investment (CS bocor)
 
-`BUSINESS-STEALING` Over-investment (ignore loss incumbent)
+**Business-stealing** — Over-investment (ignore loss incumbent)
 
 Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- investment.
 
@@ -112,23 +102,11 @@ Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- 
 
 Klarifikasi: HP adalah final good, bukan intermediate. Komponen HP (chip, layar, sensor) adalah intermediate goods yang bervariasi.
 
-HP jadi (dikonsumsi). Diproduksi firm kompetitif
+**Final Good** — HP jadi (dikonsumsi). Diproduksi firm kompetitif dari labor + basket intermediate.
 
-`FINAL GOOD`
+**Intermediate** — Komponen (chip, layar). Tiap jenis monopoli (paten). R&D horizontal = jenis komponen baru.
 
-dari labor + basket intermediate.
-
-Komponen (chip, layar). Tiap jenis monopoli
-
-`INTERMEDIATE`
-
-(paten). R&D horizontal = jenis komponen baru.
-
-Pakai final good untuk ciptakan blueprint
-
-`R&D`
-
-baru → naik.
+**R&D** — Pakai final good untuk ciptakan blueprint baru → naik.
 
 ### Mengapa tidak ada modal fisik
 
@@ -138,9 +116,7 @@ Untuk isolasi efek R&D. Growth murni dari penambahan varietas, bukan akumulasi m
 
 Final good serbaguna (numeraire): konsumsi, input intermediate, input R&D (lab equipment).
 
-`14.3.1.1`
-
-## Representative Household
+## 14.3.1.1 · Representative Household
 
 *OCP identik dengan RCK — Euler equation sama.*
 
@@ -154,7 +130,7 @@ Pengingat: CRRA punya Arrow-Pratt konstan (dipakai agar BGP exist). Stochastic =
 
 ### Exercise 14.1-14.2 — Hamiltonian & Euler
 
-`Step 1` Maximality:
+**Step 1** — Maximality:
 
 #### `Step 2` Log + turunkan, substitusi adjoint
 
@@ -166,9 +142,7 @@ Pertanyaan yang sering muncul: bagaimana membuktikan TVC (14.2) terpenuhi?
 
 TVC bukan diturunkan dari nol — ia necessary condition PMP infinite- horizon. Dari adjoint, substitusi ke TVC umum → (14.2). Di BGP: integrand jika.
 
-`14.3.1.2`
-
-## Final Good Firm
+## 14.3.1.2 · Final Good Firm
 
 *Kompetitif, dua tahap (two-stage budgeting).*
 
@@ -190,7 +164,7 @@ Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero p
 
 ### Exercise 14.4 — Demand curve & price index
 
-`Step 1` Lagrangian cost min, multiplier = shadow price (= cost marginal
+**Step 1** — Lagrangian cost min, multiplier = shadow price (= cost marginal
 
 #### basket) `Step 2` FOC + chain rule lewat
 
@@ -206,17 +180,11 @@ Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 *Tiga situasi penting di Bab 14. Functional `A — ELEMEN` derivative — seperti penjumlahan, hanya titik relevan. (Exercise 14.4); batas bawah. (HJB*
 
-`B — BATAS`
+**B — Batas** — Exercise 14.7). Turunan masuk integral.
 
-Exercise 14.7). Turunan masuk integral.
+**C — Parameter** — (HJB faktor diskon)
 
-`C — PARAMETER`
-
-(HJB faktor diskon)
-
-`14.3.1.3`
-
-## Intermediate Goods Firms
+## 14.3.1.3 · Intermediate Goods Firms
 
 *Monopoli per varietas. Markup pricing.*
 
@@ -246,7 +214,7 @@ Firm value = present value aliran profit, didiskon dengan market rate (bukan sub
 
 Asset pricing: required return = dividend + capital gain.
 
-`14.3.1.4-5`
+**14.3.1.4-5**
 
 ## R&D Investment & Free Entry
 
@@ -268,9 +236,7 @@ konstan, inversely proportional.
 
 Free entry memaksa private value. Tapi social value lebih tinggi (appropriability) → entry kurang dari optimal (extensive margin).
 
-`14.3.1.6`
-
-## Competitive Equilibrium
+## 14.3.1.6 · Competitive Equilibrium
 
 ### Exercise 14.8-14.10. CRS privat, IRS agregat.
 
@@ -278,13 +244,11 @@ Free entry memaksa private value. Tapi social value lebih tinggi (appropriabilit
 
 Dengan normalisasi,:
 
-`DEMAND` (konstan, proporsional populasi)
+**Demand** — (konstan, proporsional populasi)
 
-`PROFIT (14.21)` (konstan)
+**Profit (14.21)** — (konstan)
 
-`BASKET`
-
-`OUTPUT` (AN-style)
+**Basket** — `OUTPUT` (AN-style)
 
 ### CRS privat vs IRS agregat
 
@@ -304,7 +268,7 @@ Private CRS: firm individual, given, CRS dalam — gandakan input firm → outpu
 
 Kritik tajam: pertanyaan yang tepat adalah "mengapa marginal product tidak menuju nol", dan analisis kurvanya saat $A$ tumbuh harus dituntaskan.
 
-`Step 1`
+**Step 1**
 
 Tiap varietas proporsi lebih kecil saat naik. TAPI tetap — naik via varietas baru, bukan menumpuk lama.
 
@@ -320,9 +284,7 @@ Marginal product dan turun dengan rate sama → FOC selalu match.
 
 Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru), bukan menumpuk varietas lama. Analogi: tambah jenis bumbu baru, bukan menumpuk garam. Net: naik linear → sustained growth. Variety expansion mengalahkan diminishing returns.
 
-`14.3.1.7`
-
-## Balanced-Growth Path
+## 14.3.1.7 · Balanced-Growth Path
 
 ### Exercise 14.11-14.14. No transition dynamics.
 
@@ -352,9 +314,7 @@ Growth butuh. Jika: no entry, konstan, living standard stagnan:
 
 Threshold. Policy bisa picu growth (naikkan, jaga).
 
-`14.3.1.8`
-
-## Model Implications
+## 14.3.1.8 · Model Implications
 
 ### Exercise 14.15. Scale effects & no transition.
 
@@ -372,7 +332,7 @@ Strong scale effect TIDAK didukung data: negara kecil (Singapura, HK, Korea) tum
 
 konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empiris (kelemahan AK-style).
 
-`14.3.1.9-10`
+**14.3.1.9-10**
 
 ## Planner & Policy
 
@@ -380,17 +340,11 @@ konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empir
 
 ### Exercise 14.16 — Dua margin inefisiensi
 
-Monopoly pricing → per varietas terlalu
-
-`INTENSIVE MARGIN`
-
-rendah. (BB1, BB3)
+**Intensive Margin** — Monopoly pricing → per varietas terlalu rendah. (BB1, BB3)
 
 Appropriability → varietas terlalu sedikit.
 
-`EXTENSIVE MARGIN`
-
-(BB2)
+**Extensive Margin** — (BB2)
 
 Planner: pakai intermediate lebih banyak (price at MC) + menilai R&D lebih tinggi (internalize CS) → tumbuh lebih cepat.
 
@@ -402,29 +356,21 @@ First Welfare gagal karena aggregate IRS + monopoli + appropriability. Beda RCK 
 
 Dua distorsi → dua instrumen:
 
-Subsidi intermediate inputs → naik ke
+**Intensive** — Subsidi intermediate inputs → naik ke optimal
 
-`INTENSIVE`
-
-optimal
-
-`EXTENSIVE` Subsidi R&D → naik ke optimal
+**Extensive** — Subsidi R&D → naik ke optimal
 
 Satu instrumen tidak cukup — butuh keduanya (prinsip Tinbergen).
 
-`14.3.2`
-
-## Knowledge Spillovers (Romer 1990)
+## 14.3.2 · Knowledge Spillovers (Romer 1990)
 
 *Ide diproduksi dengan human capital langka.*
 
-`LAB EQUIPMENT` R&D pakai final good (reproducible):
+**Lab Equipment** — R&D pakai final good (reproducible):
 
 R&D pakai human capital langka + spillover:
 
-`ROMER 1990`
-
-Spillover eksplisit (di RHS): stok ide membuat R&D lebih produktif ("standing on shoulders"). Trade-off alokasi. Scale effect tetap ada. Kesamaan: horizontal, monopoli, First Welfare gagal, appropriability.
+**Romer 1990** — Spillover eksplisit (di RHS): stok ide membuat R&D lebih produktif ("standing on shoulders"). Trade-off alokasi. Scale effect tetap ada. Kesamaan: horizontal, monopoli, First Welfare gagal, appropriability.
 
 **Catatan Nuansa**
 
@@ -436,23 +382,13 @@ Catatan untuk 14.3.2 memang ringkas — porsi utama bab ini adalah model Lab Equ
 
 *Evolusi pemikiran growth.*
 
-Growth eksogen, saving konstan, ada transition
+**Solow** — Growth eksogen, saving konstan, ada transition (konvergensi). Black box.
 
-`SOLOW`
-
-(konvergensi). Black box.
-
-Growth eksogen, saving optimal, ada transition
-
-`RCK`
-
-(saddle path). First Welfare berlaku.
+**RCK** — Growth eksogen, saving optimal, ada transition (saddle path). First Welfare berlaku.
 
 Growth endogen, no transition (langsung BGP).
 
-`ENDOGENOUS`
-
-First Welfare gagal. Policy → growth rate.
+**Endogenous** — First Welfare gagal. Policy → growth rate.
 
 **Ringkasan Besar**
 

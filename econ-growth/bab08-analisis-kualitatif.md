@@ -8,23 +8,15 @@ Bab paling visual di Tools I: menerjemahkan hasil analisis eigenvalue menjadi ga
 
 ## Tiga pendekatan untuk analisis ODE
 
-Solve secara eksplisit. Hanya bekerja untuk ODE linear atau kasus
-
-`ANALYTICAL (BAB 6-7)`
-
-khusus nonlinear.
+**Analytical (bab 6-7)** — Solve secara eksplisit. Hanya bekerja untuk ODE linear atau kasus khusus nonlinear.
 
 Eigenvalue analysis di steady state. Memberi klasifikasi (stable, unstable,
 
-`STABILITY (BAB 5)`
-
-saddle) dan rate of convergence.
+**Stability (bab 5)** — saddle) dan rate of convergence.
 
 Visualisasi geometris dinamika di phase plane. Bekerja untuk ODE
 
-`QUALITATIVE (BAB 8)`
-
-nonlinear apapun — bahkan yang tidak bisa di-solve.
+**Qualitative (bab 8)** — nonlinear apapun — bahkan yang tidak bisa di-solve.
 
 **Ringkasan Besar**
 
@@ -289,9 +281,7 @@ $DET>0, TR=0$ Center (kalau diskriminan $< 0$)
 
 $\Delta = tr-^{2}4 det\Delta > 0$. → node (real distinct), $\Delta < 0$ → spiral
 
-`DISKRIMINAN`
-
-atau center (complex), $\Delta = 0$ → repeated (improper node)
+**Diskriminan** — atau center (complex), $\Delta = 0$ → repeated (improper node)
 
 ## Konsep 7 — Preview Aplikasi — RCK Saddle Path
 

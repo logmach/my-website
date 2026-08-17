@@ -105,11 +105,7 @@ Hanya $\alpha$ yang menentukan apakah magnitude tumbuh atau mengecil. hanya memb
 
 **ALGEBRAIC MULT (AM)** — Berapa kali eigenvalue tertentu muncul sebagai akar persamaan karakteristik. Yaitu, pangkat faktor $(\lambda -\lambda _{i})$ di persamaan karakteristik.
 
-Jumlah eigenvektor independent untuk eigenvalue tertentu. Sama
-
-`GEOMETRIC MULT (GM)`
-
-dengan dimensi eigenspace.
+**Geometric Mult (gm)** — Jumlah eigenvektor independent untuk eigenvalue tertentu. Sama dengan dimensi eigenspace.
 
 **⚠️ Jebakan umum**
 
@@ -335,21 +331,21 @@ Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
 ## Hubungan tools dengan pertanyaan ekonomi
 
-`PERTANYAAN EKONOMI` Tool matematis
+**Pertanyaan Ekonomi** — Tool matematis
 
-`STABLE ATAU TIDAK?` Tanda eigenvalue (real part untuk complex)
+**Stable Atau Tidak?** — Tanda eigenvalue (real part untuk complex)
 
-`SEBERAPA CEPAT` Magnitude eigenvalue → rate of convergence
+**Seberapa Cepat** — Magnitude eigenvalue → rate of convergence
 
-`KONVERGEN?`
+**Konvergen?**
 
-`ARAH KONVERGENSI?` Eigenvektor → saddle path direction
+**Arah Konvergensi?** — Eigenvektor → saddle path direction
 
-`BENTUK SOLUSI LOKAL?` Equation 7.11 — kombinasi linear eksponensial
+**Bentuk Solusi Lokal?** — Equation 7.11 — kombinasi linear eksponensial
 
-`PILIHAN TRAJECTORY` Pilih komponen dengan eigenvalue negatif (transversality)
+**Pilihan Trajectory** — Pilih komponen dengan eigenvalue negatif (transversality)
 
-`OPTIMAL?`
+**Optimal?**
 
 ## Aplikasi ke Solow-Swan
 
@@ -413,9 +409,7 @@ Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progr
 
 **SKENARIO 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x2}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
 
-`SKENARIO 3`
-
-memberi insight. Jarang, biasanya melibatkan fungsi spesial.
+**Skenario 3** — memberi insight. Jarang, biasanya melibatkan fungsi spesial.
 
 ## Mengapa "linearisasi + eigenvalue" jadi alat utama
 

@@ -6,109 +6,70 @@ Bab terkompleks secara konseptual: model Schumpeterian Peters (2020, *Econometri
 Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berkas sumber tidak menyimpan lapisan teks untuk formula-formulanya. Persamaan kunci telah dipulihkan; beberapa detail turunan disajikan secara naratif.
 ```
 
-**Glosarium**
-
 ## Kamus Notasi Lengkap
 
-Setiap simbol yang dipakai di Bab 15, dengan maknanya. Rujuk kembali ke sini kapan pun bingung.
+*Setiap simbol yang dipakai di bab ini, dengan maknanya. Rujuk kembali ke sini kapan pun bingung.*
 
-`Indeks & Himpunan`
+**Indeks & himpunan**
 
-Indeks produk/market (varietas), (continuum)
+| Simbol | Arti |
+|---|---|
+| $j \in [0,1]$ | Indeks produk/market (varietas), continuum |
+| $f$ | Indeks firm |
+| $t$ | Waktu |
+| $\mathcal{F}_{j}$ | Himpunan firm yang berkompetisi di market $j$ |
+| $\mathcal{J}_{f}$ | Himpunan produk yang firm $f$ produksi |
+| $n_{f}$ | Jumlah produk firm $f$ |
 
-Indeks firm
+**Kuantitas & harga**
 
-Waktu
+| Simbol | Arti |
+|---|---|
+| $Y$ | Output final good agregat (numeraire) |
+| $C$ | Konsumsi composite good |
+| $y_{j}$ | Kuantitas produk $j$ |
+| $q_{fj}$ | Produktivitas/kualitas firm $f$ untuk produk $j$ |
+| $q_{j}$ | Kualitas firm paling efisien (pemenang) di market $j$ |
+| $q_{j}^{F}$ | Kualitas follower (terbaik kedua) |
+| $p_{j}$ | Harga produk $j$ (limit pricing: $p_{j}=w/q_{j}^{F}$) |
+| $w$ | Upah |
+| $l_{j}$ | Labor produksi di market $j$; $L_{P}=\int_{0}^{1} l_{j}\,dj$ |
+| $\pi_{j}$ | Profit di market $j$ |
 
-Himpunan firm yang berkompetisi di market pada waktu
+**Agregat & distribusi**
 
-Himpunan produk yang firm produksi
+| Simbol | Arti |
+|---|---|
+| $\Delta_{j}$ | Quality gap pemenang vs follower (jumlah anak tangga) |
+| $\lambda > 1$ | Ukuran satu anak tangga kualitas |
+| $\mu_{j} = \lambda^{\Delta_{j}}$ | Markup di market $j$ |
+| $m(\Delta)$ | Measure produk dengan gap $\Delta$ (distribusinya Pareto) |
+| $Q$ | Indeks kualitas/produktivitas agregat |
+| $\mathcal{M}$ | Efisiensi alokasi dari distribusi markup; TFP $= Q\times\mathcal{M}$ |
 
-Jumlah produk firm 
+**Dinamis (pilihan & rate)**
 
-`Kuantitas & Harga`
+| Simbol | Arti |
+|---|---|
+| $I$ | Intensitas own-innovation (memperlebar gap sendiri) |
+| $x$ | Intensitas expansion (merebut produk firm lain) |
+| $z$ | Rate entry (firm baru) |
+| $\tau$ | Rate creative destruction total yang dihadapi tiap produk |
+| $V$ | Nilai firm (present value profit) |
+| $r$ | Discount rate pasar |
 
-Output final good agregat (numeraire)
+**Parameter**
 
-Konsumsi composite good
+| Simbol | Arti |
+|---|---|
+| $\rho$ | Discount rate household |
+| $\sigma = 1$ | Log utility (menjamin BGP) |
+| $\bar{L}$ | Total tenaga kerja |
+| $\chi_{I}, \chi_{x}$ | Cost shifter own-innovation / expansion |
+| $\chi_{z}$ | Produktivitas teknologi entry |
+| $\psi > 1$ | Eksponen cost convex — biaya naik tajam dengan intensitas inovasi |
 
-Kuantitas produk dari firm
-
-Produktivitas/kualitas firm untuk produk
-
-Produktivitas firm paling efisien (pemenang) di market
-
-Produktivitas firm terefisien kedua (Follower) di market
-
-Harga (limit price) di market
-
-Labor yang dipekerjakan
-
-Upah riil (real wage)
-
-`M ARKUP, GAP & PROFIT`
-
-Markup di market 
-
-Markup firm (harmonic mean dari)
-
-Quality gap di market 
-
-Anak tangga (rung) pada quality ladder
-
-Faktor lompatan kualitas tiap inovasi 
-
-Profit di market
-
-`Agregat & Distribusi`
-
-Total labor di sektor produksi
-
-Total labor di sektor riset/R&D
-
-CDF (distribusi) markup across produk
-
-CDF distribusi produktivitas across produk
-
-Indeks produktivitas agregat:
-
-Wedge misallocation 
-
-Labor share of income
-
-Measure produk dengan quality gap
-
-`Dinamis (PILIHAN & RATE)`
-
-Rate own-innovation firm di market
-
-Rate expansion ke market baru
-
-Rate entry firm baru
-
-Rate creative destruction total 
-
-Churning intensity Shape parameter Pareto 
-
-Value function firm
-
-Cost function inovasi (dalam unit labor)
-
-`Parameter`
-
-Discount rate (subjective time preference)
-
-Cost shifter own-innovation
-
-Cost shifter expansion
-
-Produktivitas teknologi entry
-
-Eksponen cost convex 
-
-`1 5. 1`
-
-## Latar Belakang: Misteri TFP
+## 15.1 · Latar Belakang: Misteri TFP
 
 Mengapa standar hidup antar negara berbeda jauh? Hsieh-Klenow punya jawaban mengejutkan.
 
@@ -146,7 +107,7 @@ Hsieh-Klenow menunjukkan dispersi TFPR di China dan India jauh lebih besar dari 
 
 Pertanyaan yang ditinggalkan Hsieh-Klenow, dan yang dijawab Peters: dari mana wedge ini berasal? Apa kaitan kausal antara kompetisi industri, dinamika entry-exit firm, distribusi markup, dengan growth dan TFP? Inilah misi Bab 15.
 
-`15.2 & 15.2.1`
+**15.2 & 15.2.1**
 
 ## Bird's-Eye View: Dua Kekuatan
 
@@ -154,17 +115,11 @@ Survei helikopter atas logika Peters sebelum menyelam ke detail.
 
 ### Garis keturunan model
 
-`Aghion-Howitt / Grossman-Helpman` — Creative destruction, quality ladder (inovasi vertikal stokastik)
+**Aghion-Howitt (1992) / Grossman-Helpman (1991)** — Creative destruction, quality ladder (inovasi vertikal stokastik).
 
-`(1992)(1991)`
+**Klette-Kortum (2004)** — Multi-product firm: expansion + entry.
 
-`Klette-Kortum (2004)` Multi-product firm, expansion + entry
-
-Tambah Bertrand pricing + own-innovation
-
-`Peters (2020) ← BAB 15`
-
-→ markup heterogen endogen
+**Peters (2020) — Bab ini** — Tambah Bertrand pricing + own-innovation → markup heterogen endogen.
 
 ### Twist baru Peters: dua kekuatan berlawanan
 
@@ -193,15 +148,13 @@ Bagian dinamis: pilihan dinamis firm (rate dan) tidak bergantung eksplisit pada 
 - Life-cycle: markup naik dengan umur firm (own-innovation dominan)
 - Kalibrasi Indonesia: 15% dispersi TFPR dari markup → kerugian 1% TFP agregat
 
-`15.3.1`
-
-## Preferences (Household)
+## 15.3.1 · Preferences (Household)
 
 Konsumen homogen, log utility. Sederhana — tidak ada trade-off dinamis di sisi household.
 
 ### Lifetime utility (15.1)
 
-`Notasi Persamaan Ini`
+**Notasi Persamaan Ini**
 
 Lifetime utility household
 
@@ -215,7 +168,7 @@ Log utility adalah kasus khusus CRRA dengan $\sigma=1$. Ini menjamin BGP exist (
 
 ### Final good demand (15.2)
 
-`Notasi Persamaan Ini`
+**Notasi Persamaan Ini**
 
 Total final good (numeraire)
 
@@ -225,8 +178,6 @@ Kuantitas produk dari firm
 
 Exercise 15.1 — Labor supply
 
-`EXERCISE 15.1 — Easy as, mate`
-
 Soal: Berapa labor yang disupply household secara optimal?
 
 Jawab: (seluruh endowment).
@@ -234,8 +185,6 @@ Jawab: (seluruh endowment).
 Household tidak menghargai leisure (tidak ada disutility labor), dan wage di equilibrium. Maka tidak ada alasan menahan labor — supply seluruh endowment = 1.
 
 Exercise 15.2 — Substitusi dalam vs antar market
-
-`EXERCISE 15.2 — Substitutability`
 
 Soal: Pecah (15.2) jadi dua komponen. Mengapa varietas imperfect substitutes? Mengapa firm di market sama perfect substitutes?
 
@@ -257,15 +206,13 @@ Dalam market: dua merek paku yang identik — kamu beli dari yang termurah, tak 
 
 Dua sifat ini bukan kebetulan: perfect substitution dalam market → Bertrand → limit pricing (15.3.3.1). Cobb-Douglas antar market → expenditure share konstan → sales tiap market sama (Exercise 15.5).
 
-`15.3.2`
-
-## Production
+## 15.3.2 · Production
 
 Firm bisa produksi banyak varietas. Teknologi linear dalam labor.
 
 ### Production function (15.3)
 
-`Notasi Persamaan Ini`
+**Notasi Persamaan Ini**
 
 Output produk dari firm
 
@@ -277,15 +224,11 @@ Linear dalam labor — konstan returns to scale (CRS) di level firm.
 
 Exercise 15.3 — Demand structure
 
-`EXERCISE 15.3 — Demand structure`
-
 Soal: Mengapa Peters asumsi demand antar firm (di market sama) perfect substitutes? Kenyamanan modelling apa yang diberikan?
 
 Jawab: Perfect substitution → konsumen beli dari termurah → firm MC terendah captures seluruh pasar → strategi harga jelas (limit pricing). Ini memberi closed-form pricing equilibrium dan memungkinkan analisis markup heterogen (markup = gap kualitas dengan pesaing terdekat). Tanpa asumsi ini, tiap firm punya market share positif dan pricing jadi rumit (tidak ada closed- form).
 
 Exercise 15.4 — Marginal cost
-
-`EXERCISE 15.4 — Micro 101`
 
 Soal: Jelaskan dengan kata-kata mengapa MC firm di market $j$ adalah $w/q_{j}$.
 
@@ -297,15 +240,13 @@ Untuk produksi unit, dari (15.3) butuh labor. Cost labor. Marginal cost (turunan
 
 $w$ = harga sejam tenaga kerja; $1/q$ = berapa jam kerja untuk membuat satu unit (kebalikan produktivitas). Kalikan: biaya membuat satu unit $=w/q$ =. Firm yang lebih produktif (tinggi) punya biaya per unit lebih rendah — bisa "membanting harga" pesaing.
 
-`15.3.3.1`
-
-## Bertrand Pricing Equilibrium
+## 15.3.3.1 · Bertrand Pricing Equilibrium
 
 Twist baru Peters. Limit pricing menghasilkan markup = gap kualitas.
 
 ### Setup: pemenang dan follower
 
-`Notasi Baru`
+**Notasi Baru**
 
 Produktivitas firm paling efisien (pemenang) di market
 
@@ -336,8 +277,6 @@ Markup (15.5)
 bergantung pada seberapa jauh pemenang unggul, bukan kualitas absolut. Gap besar → markup besar (monopoli kuat). Gap kecil → markup kecil (kompetisi ketat).
 
 ### Exercise 15.5 — Sales, Employment, Profit
-
-`Exercise 15.5`
 
 Tunjukkan untuk tiap market: (1) sales; (2) employment (15.6); (3) profit (15.7).
 
@@ -381,13 +320,11 @@ Bagian 3 — Profit (15.7)
 
 Profit margin. Cek ekstrem: (kompetitif) → profit 0; (monopoli) → profit. Markup tinggi → profit tinggi.
 
-`15.3.3.2`
-
-## Firm -level Allocations
+## 15.3.3.2 · Firm -level Allocations
 
 Satu firm bisa punya banyak produk. Agregasi dari market ke firm.
 
-`Notasi Baru`
+**Notasi Baru**
 
 Set produk firm
 
@@ -396,8 +333,6 @@ Jumlah produk firm
 Markup firm (harmonic mean)
 
 ### Exercise 15.6 — Total employment firm
-
-`Exercise 15.6`
 
 Tunjukkan total employment firm adalah (15.8), dengan harmonic mean.
 
@@ -417,13 +352,11 @@ Markup firm "condong" ke produk dengan markup rendah, karena produk markup renda
 
 ### Exercise 15.7 — Variety, markups, firm size
 
-`Exercise 15.7`
-
 Firm size bergantung dua faktor: (1) jumlah produk — bagaimana? (2) markup (conditional) — bagaimana?
 
 Linear positif.
 
-`Efek`
+**Efek**
 
 Lebih banyak produk → firm lebih besar.
 
@@ -437,13 +370,11 @@ Firm bisa besar karena dua alasan berbeda: (Tipe 1) punya banyak produk meski ti
 
 Life-cycle: firm muda (kecil, markup rendah, baru entry) → firm tua (besar via expansion, markup tinggi via own-innovation). Firm tua lebih besar dari dua kanal: extensive (naik) + intensive (naik). Sales firm selalu naik dengan.
 
-`15.3.3.3`
-
-## Aggregate Allocations & Misallocation
+## 15.3.3.3 · Aggregate Allocations & Misallocation
 
 Naik ke level ekonomi. Inti bab: dari mana wedge misallocation berasal.
 
-`Notasi Baru`
+**Notasi Baru**
 
 CDF distribusi markup across produk
 
@@ -461,17 +392,15 @@ Total labor di produksi
 
 #### `Step 1` Integrate across firm
 
-`Step 2` Tiap produk dimiliki tepat satu firm → integrate across produk: $L_{P}=\int_{0}^{1} l_{j}\,dj$
+**Step 2** — Tiap produk dimiliki tepat satu firm → integrate across produk: $L_{P}=\int_{0}^{1} l_{j}\,dj$
 
 #### distribusi
 
 ### Exercise 15.8 — Equilibrium wage (15.10)
 
-`Exercise 15.8`
-
 Tunjukkan equilibrium wage adalah (15.10): upah berbanding lurus dengan output agregat dan berbanding terbalik dengan markup agregat.
 
-`Step 1` Mulai dari (15.2), Bertrand:
+**Step 1** — Mulai dari (15.2), Bertrand:
 
 #### `Step 2` Suku pertama = (definisi)
 
@@ -493,11 +422,9 @@ Upah = produktivitas dikali "wedge markup". Kalau markup tinggi di mana-mana, se
 
 **Gambaran Besar**
 
-Aggregate TFP $=Q\times\mathcal{A}$. Dua komponen: $Q$ (produktivitas teknis) dan $\mathcal{A}$ (efisiensi alokasi). Cross-country TFP differences bisa dari $Q$ (teknologi) atau (misallocation). Hsieh-Klenow: sebagian besar dari.
+Aggregate TFP $=Q\times\mathcal{M}$. Dua komponen: $Q$ (produktivitas teknis) dan $\mathcal{M}$ (efisiensi alokasi). Cross-country TFP differences bisa dari $Q$ (teknologi) atau (misallocation). Hsieh-Klenow: sebagian besar dari.
 
 ### Exercise 15.9 — Mengapa
-
-`Exercise 15.9`
 
 Mengapa? Apa arti vs?
 
@@ -523,9 +450,7 @@ Macro takeaway: markup tinggi → labor share rendah. Markup menaikkan profit fi
 
 Karena aggregator final good di sini Cobb-Douglas, hanya bergantung pada distribusi markup — bukan joint distribution. Dengan CES umum, bisa bergantung joint distribution (lebih rumit; Section 2.7 Peters).
 
-`15.3.4`
-
-## Dynamic Parts: Pengantar
+## 15.3.4 · Dynamic Parts: Pengantar
 
 Transisi besar: dari snapshot statis ke evolusi distribusi. Akhirnya HJB muncul.
 
@@ -535,7 +460,7 @@ Sebelumnya (15.3.3) kita ambil distribusi sebagai given — snapshot pada satu w
 
 ### Dua pilihan dinamis firm
 
-`Notasi Pilihan Dinamis`
+**Notasi Pilihan Dinamis**
 
 Rate own-innovation di market (Poisson)
 
@@ -559,15 +484,13 @@ Total rate creative destruction adalah jumlah dari rate entrant baru dan total r
 
 "Kanibalisme" = saling memakan sesama. Firm existing yang memperluas wilayah memakan incumbent di market tujuan. Entrant baru juga memakan incumbent. Jadi ancaman datang dari dua arah: pendatang baru dan ekspansi firm lama. Setiap firm hidup di bawah bayang-bayang bahwa suatu saat ia bisa dikanibal — dan ia memasukkan risiko itu ke dalam perhitungannya.
 
-`15.3.4.1`
-
-## Firm HJB Equation
+## 15.3.4.1 · Firm HJB Equation
 
 Jantung bagian dinamis. Asset pricing dengan banyak Poisson jumps.
 
 ### Quality ladder (15.13)
 
-`Notasi Tangga Kualitas`
+**Notasi Tangga Kualitas**
 
 Anak tangga (rung) — level kualitas
 
@@ -579,13 +502,11 @@ Kualitas membentuk barisan geometrik. Naik anak tangga → kualitas.
 
 ### Exercise 15.10 — Markup agregat
 
-`EXERCISE 15.10 — Markup and quality gap`
-
 Verifikasi konsistensinya dengan definisi markup agregat.
 
 #### `Step 1` Markup dari Bertrand (15.5)
 
-`Step 2` Tulis kualitas dalam anak tangga,
+**Step 2** — Tulis kualitas dalam anak tangga,
 
 #### `Step 3` Definisi gap
 
@@ -603,8 +524,6 @@ Markup sepenuhnya ditentukan oleh "berapa anak tangga si juara unggul dari pesai
 
 ### Exercise 15.11 — Mengapa tanpa indeks
 
-`EXERCISE 15.11 — Think`
-
 Mengapa kita tidak pakai indeks di? Apakah identitas firm penting?
 
 Jawab: Identitas firm tidak relevan untuk outcome market. Markup hanya bergantung pada gap antara pemenang dan follower di market — bukan siapa pemenangnya. Analogi: margin kemenangan lomba lari ditentukan selisih waktu, bukan nama pelari. Identitas firm baru relevan di level firm dynamics (, portofolio).
@@ -619,11 +538,7 @@ Gap naik. Markup naik faktor
 
 `Own-innovation `. Contra-competition.
 
-`Expansion) / Entry` Gap reset ke 1. Markup turun ke.
-
-`)`
-
-`((` Pro-competition (creative destruction).
+**Expansion / Entry** — Gap reset ke 1; markup turun ke $\lambda$. Pro-competition (creative destruction).
 
 **Penjelasan Intuitif**
 
@@ -637,13 +552,11 @@ Firm menghadapi dilema. Own-innovation: investasi memperlebar gap di market yang
 
 ### Exercise 15.12 — Payoff-relevant states
 
-`Exercise 15.12`
-
-Verifikasi vektor state yang cukup untuk firm: (jumlah produk) dan (daftar quality gap).
+Verifikasi vektor state yang cukup untuk firm: $n_{f}$ (jumlah produk) dan $\{\Delta_{j}\}$ (daftar quality gap).
 
 **Penjelasan Formal**
 
-Payoff: total profit — hanya bergantung (dan implisit). Dynamics: own-innovation, creative destruction (kehilangan produk), expansion (, tambah) — semua hanya butuh. Tidak butuh kualitas absolut, identitas, atau distribusi agregat (hanya given).
+Payoff: total profit — hanya bergantung $n_{f}$ dan $\{\Delta_{j}\}$ ($t$ implisit). Dynamics: own-innovation, creative destruction (kehilangan produk), expansion (, tambah) — semua hanya butuh. Tidak butuh kualitas absolut, identitas, atau distribusi agregat (hanya given).
 
 **Penjelasan Intuitif**
 
@@ -651,47 +564,32 @@ Untuk tahu nilai sebuah firm, kamu hanya perlu tahu: berapa banyak produk yang i
 
 ### HJB Equation (15.14)
 
-Inti Section 15.3.4.1. Enam term:
+Inti Section 15.3.4.1. Ruas kiri $rV$ = required return; ruas kanan terdiri dari enam term:
 
-`Kiri:`
-
-Total profit semua produk (dividend).
-
-`(1) Flow profits`
-
-`(2) Capital gain` Perubahan nilai firm seiring waktu
-
-`(3) Creative` Expected loss (negatif): tiap produk hilang `destruction` dengan rate. Risk.
-
-`(4) Own innovation` Gain dari gap naik (rate, pilihan)
-
-`(5) Expansion` Gain dari produk baru gap 1 (rate, pilihan)
-
-`(6) Cost` Cost inovasi (dalam labor) × wage
+1. **Flow profits** — total profit semua produk (dividend).
+2. **Capital gain** — perubahan nilai firm seiring waktu.
+3. **Creative destruction** — expected loss (negatif): tiap produk hilang dengan rate $\tau$. Inilah risk-nya.
+4. **Own innovation** — gain dari gap yang naik (rate $I$, variabel pilihan).
+5. **Expansion** — gain dari produk baru ber-gap 1 (rate $x$, variabel pilihan).
+6. **Cost** — biaya inovasi (diukur dalam labor) × wage $w$.
 
 **Koneksi**
 
-Bandingkan Bab 14: di Romer HJB hanya (asset pricing sederhana). Di Peters jauh lebih kaya: ada creative destruction (risk), own-innovation & expansion (option value), multi- product. Tetap asset pricing, tapi dengan banyak Poisson jumps.
+Bandingkan Bab 14: di Romer HJB hanya $rV=\pi+\dot{V}$ (asset pricing sederhana). Di Peters jauh lebih kaya: ada creative destruction (risk), own-innovation & expansion (option value), multi- product. Tetap asset pricing, tapi dengan banyak Poisson jumps.
 
 ### Exercise 15.13 — Cost units
 
-`EXERCISE 15.13 — Trivia`
-
 True/False: Cost function mengembalikan cost dalam unit numeraire good?
 
-Jawab: FALSE. diukur dalam unit labor. Baru setelah dikali (lihat term (6):) ia menjadi unit numeraire. sendiri = jumlah labor untuk inovasi.
+Jawab: FALSE. Cost function diukur dalam unit labor. Baru setelah dikali $w$ (lihat term 6) ia menjadi unit numeraire; fungsi cost sendiri = jumlah labor untuk inovasi.
 
 ### Convex innovation cost (15.15)
 
-`Notasi Parameter Cost`
+**Notasi Parameter Cost**
 
 Cost shifter own-innovation Cost shifter expansion
 
-Eksponen convex 
-
-**Penjelasan Formal**
-
-membuat cost convex dalam rate → marginal cost naik → firm tak pilih rate tak terbatas → solusi interior unik. Karena payoff (gain) linear dalam dan cost convex, max (linear − convex) → FOC interior unik → closed-form.
+**Penjelasan Formal** — Eksponen convex membuat cost convex dalam rate → marginal cost naik → firm tak pilih rate tak terbatas → solusi interior unik. Karena payoff (gain) linear dalam dan cost convex, max (linear − convex) → FOC interior unik → closed-form.
 
 Faktor: firm dengan gap lebih besar menghadapi cost own- innovation lebih rendah.
 
@@ -699,13 +597,11 @@ Faktor: firm dengan gap lebih besar menghadapi cost own- innovation lebih rendah
 
 Faktor menangkap "success breeds success" — pemimpin teknologi (gap besar) lebih mudah berinovasi lagi karena sudah punya know-how dan infrastruktur riset. Akibatnya pemimpin terus menjauh → ekor distribusi markup menebal (ini kanal own- innovation yang menebalkan tail).
 
-`15.3.4.2`
-
-## Free Entry
+## 15.3.4.2 · Free Entry
 
 Menentukan rate entry firm baru secara endogen.
 
-`Notasi Baru`
+**Notasi Baru**
 
 Produktivitas teknologi entry (labor → ide)
 
@@ -735,8 +631,6 @@ Total rate incumbent kehilangan market = entry baru + total expansion firm exist
 
 ### Exercise 15.14 — Labor market clearing
 
-`Exercise 15.14`
-
 Jelaskan dengan kata-kata accounting condition labor market clearing.
 
 **Penjelasan Formal**
@@ -747,9 +641,7 @@ Sisi kiri: total supply labor = 1 (Exercise 15.1, measure-one household). Sisi k
 
 Seluruh tenaga kerja ekonomi (= 1) dibagi dua: membuat barang hari ini atau berinovasi untuk masa depan. Lebih banyak ke riset → growth lebih cepat, tapi output sekarang lebih sedikit. Ini trade-off konsumsi-vs-pertumbuhan di level seluruh ekonomi.
 
-`15.3.5`
-
-## Balanced-Growth Equilibrium
+## 15.3.5 · Balanced-Growth Equilibrium
 
 Merangkai semua. Proposition 15.2: equilibrium stasioner unik dengan closed-form.
 
@@ -775,8 +667,6 @@ Additive separable: nilai firm = kali nilai baseline per produk + jumlah premium
 
 ### Exercise 15.16 — Interpretasi dan
 
-`Exercise 15.16`
-
 Interpretasikan dan.
 
 Nilai "memiliki satu produk" baseline (gap 1). `(Product value)` Profit baseline + bonus opsi expansion. Discount.
@@ -792,8 +682,6 @@ Discount efektif: firm mendiskon future dengan impatience PLUS hazard kanibalism
 = "harga dasar" punya satu produk (di level pemula, gap 1). = "premium" karena unggul jauh — semakin besar lead, semakin besar premium. Total nilai firm = (banyaknya produk × harga dasar) + (jumlah premium dari tiap lead). Persis dua dimensi firm size: extensive (berapa produk) + intensive (seberapa unggul).
 
 ### Exercise 15.15 — Derive value function (guess-and- verify)
-
-`EXERCISE 15.15 — For the keen student`
 
 Derive value function lewat guess-and-verify.
 
@@ -837,17 +725,11 @@ Implicit (di kedua sisi). Tergantung (kondisi agregat) — beda dari. Faktor = i
 
 ### Exercise 15.17 — Interpretasi, dan
 
-`Exercise 15.17`
-
-Interpretasikan behavior dan. Apa artinya untuk?
+Interpretasikan behavior kebijakan optimal $I^{*}$ dan $x^{*}$. Apa artinya untuk dinamika firm?
 
 Konstan, parameter saja. Tergantung rasio `(expansion)`: expand vs entry. Stabil, tak terpengaruh agregat.
 
-Tergantung agregat dan. Profit
-
-`(own-innovation)`
-
-tinggi → naik; impatient/risky → turun.
+**Own-innovation** — Tergantung kondisi agregat dan gap kualitas: profit tinggi → intensitas naik; impatient/risky → turun.
 
 TIDAK masuk (own-innovation tidak gusur firm lain). Hanya dan.
 
@@ -865,11 +747,11 @@ Produktivitas agregat naik setiap kali ada inovasi dari salah satu dari tiga kan
 
 ## Distribusi Markup Pareto
 
-Klimaks bab. Dari flow accounting ke Pareto. Tipe soal ini sering muncul di final.
+Klimaks bab: dari flow accounting ke distribusi Pareto.
 
-`Notasi Baru`
+**Notasi Baru**
 
-Measure produk dengan quality gap
+$m(\Delta)$ — measure produk dengan quality gap $\Delta$
 
 Churning intensity
 
@@ -878,8 +760,6 @@ Shape parameter Pareto
 ### Sistem ODE distribusi gap
 
 ### Exercise 15.18 — Flow accounting
-
-`EXERCISE 15.18 — Expliquez`
 
 Jelaskan accounting process yang menghasilkan sistem ODE.
 
@@ -895,7 +775,7 @@ Gap: Inflow = produk gap naik via own- innovation. Outflow = naik via own-innova
 
 ### Derivasi distribusi stasioner (langkah Exercise 15.20)
 
-`Step 1` Impose stationarity:
+**Step 1** — Impose stationarity:
 
 #### `Step 2` Solve
 
@@ -909,10 +789,9 @@ Definisi. Maka.
 
 #### `Step 5` CDF atas gap
 
-`Step 6` Change of variable ke markup,
+**Step 6** — Change of variable ke markup,
 
-`Step 7` Sederhanakan,
-
+**Step 7** — Sederhanakan,
 
 #### `Step 8` Distribusi Pareto
 
@@ -941,8 +820,6 @@ Density Pareto,.
 
 ### Exercise 15.19 — Comparative statics
 
-`Exercise 15.19`
-
 Bagaimana lebih tinggi mempengaruhi (1) Pareto tail, (2) misallocation?
 
 #### `Step 1` naik → naik
@@ -965,9 +842,8 @@ Ekonomi yang "churning" tinggi (banyak pendatang baru menggusur incumbent) menja
 
 ### Exercise 15.20 — Langkah derivasi (flow → distribution)
 
-`EXERCISE 15.20 — Deriving the markups distribution`
 
-Jelaskan langkah logis dari flow accounting ke.
+Jelaskan langkah logis dari flow accounting menuju distribusi stasioner markup.
 
 **Penjelasan Formal**
 
@@ -999,25 +875,25 @@ Bagaimana semua bagian terhubung.
 
 ### Peters vs Romer (Bab 14)
 
-`Inovasi`
+**Inovasi**
 
 Romer: identik, markup konstan. Peters:
 
-`Firm`
+**Firm**
 
 heterogen, markup Pareto.
 
 KEDUANYA: private CRS, aggregate IRS.
 
-`Returns to scale`
+**Returns to scale**
 
 Sumber IRS: (Romer) vs (Peters).
 
-`Replacement/business-` Romer: tidak relevan. Peters: AKTIF (creative `stealing` destruction).
+**Replacement/business-** — Romer: tidak relevan. Peters: AKTIF (creative `stealing` destruction).
 
 Romer: tidak ada (markup homogen). Peters:
 
-`Misallocation`
+**Misallocation**
 
 dari markup heterogen.
 

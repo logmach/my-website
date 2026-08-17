@@ -8,13 +8,11 @@ Bab 9 adalah pertunjukan perdana Tools I: seluruh matematika abstrak Bab 3–8 b
 
 ## Posisi Bab 9 dalam kursus
 
-`LEVEL 1: TOOLS (BAB` ODE, eigenvalue, phase diagram, Picard-Lindelöf. Murni matematika.
+**Level 1: Tools (Bab 3–8)** — ODE, eigenvalue, phase diagram, Picard-Lindelöf. Murni matematika.
 
-`3-8)`
+**Level 2: Aplikasi (Bab 9–10)** — Solow-Swan: aplikasi pertama tools ke pertanyaan ekonomi. Single ODE, exogenous parameters.
 
-`LEVEL 2: APLIKASI` Solow-Swan: aplikasi pertama tools ke pertanyaan ekonomi. Single `(BAB 9-10)` ODE, exogenous parameters.
-
-`LEVEL 3: LANJUT (BAB` RCK, Romer: model 2D+, optimisasi, endogenous tech. Build di atas `11-15)` Solow-Swan.
+**Level 3: Lanjut (Bab 11–15)** — RCK, Romer: model 2D+, optimisasi, endogenous tech. Dibangun di atas Solow-Swan.
 
 ## Karakter "Keynesian" Solow-Swan
 
@@ -1099,7 +1097,7 @@ Di BGP baru: growth rate kembali ke, tapi level lebih rendah. $g$
 
 ## Ringkasan tiga shock
 
-`SHOCK` $\bar{k}$ | Level di BGP | Growth rate di BGP $\tilde{y}\tilde{y}$
+**Shock** — $\bar{k}$ | Level di BGP | Growth rate di BGP $\tilde{y}\tilde{y}$
 
 $G$ `NAIK` turun | kompleks (selama transisi turun, lalu tumbuh cepat) | naik
 
@@ -1147,21 +1145,15 @@ Inilah mengapa Solow menyebut tech progress sebagai "manna from heaven" — di m
 
 $g$ "manna from heaven" — model tidak menjelaskan dari mana tech
 
-`TECH EXOGENOUS`
-
-progress datang.
+**Tech Exogenous** — progress datang.
 
 $s$ assumed constant — tidak ada optimisasi household. Model tidak bisa
 
-`SAVING EXOGENOUS`
-
-jawab pertanyaan welfare.
+**Saving Exogenous** — jawab pertanyaan welfare.
 
 Mengapa beberapa negara konvergen, yang lain tidak? Mengapa $A$ dan $s$
 
-`CROSS-COUNTRY`
-
-berbeda antar negara?
+**Cross-country** — berbeda antar negara?
 
 ## Roadmap ke depan
 

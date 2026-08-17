@@ -10,31 +10,21 @@ Bab ini mempertemukan model dengan data: growth accounting, persamaan konvergens
 
 Teori murni. Setup, ODE, steady state, comparative statics, Uzawa BGP.
 
-`BAB 9`
+**Bab 9** — Pertanyaan: "Bagaimana model bekerja?"
 
-Pertanyaan: "Bagaimana model bekerja?"
-
-Empirics. Growth accounting, regresi convergence, MRW. Pertanyaan:
-
-`Bab 10`
-
-"Apa yang data katakan tentang model?"
+**Bab 10** — Empirics: growth accounting, regresi convergence, MRW. Pertanyaannya: "Apa yang data katakan tentang model?"
 
 ## Lima section dan apa yang masing-masing pelajari
 
-`10.1 GROWTH` Dekomposisi $g_{Y}$ ke kontribusi modal, labor, dan tech. Solow residual.
+**10.1 Growth Accounting** — Dekomposisi $g_{Y}$ ke kontribusi modal, labor, dan tech. Solow residual.
 
-`ACCOUNTING`
+**10.2 Convergence Regression** — Linearisasi Solow-Swan untuk menguji apakah negara miskin tumbuh lebih cepat (beta-konvergensi).
 
-`10.2 CONVERGENCE` Linearisasi Solow-Swan untuk menguji apakah negara miskin tumbuh `REGRESSION` lebih cepat. Barro regression.
+**10.3 Human Capital Extension** — Sistem ODE 2D dengan modal fisik dan human capital. Nullcline analysis.
 
-`10.3 HUMAN CAPITAL` Sistem ODE 2D dengan modal fisik dan human capital. Nullcline `EXTENSION` analysis.
+**10.4 Cross-Country MRW** — Aplikasi cross-country dari Section 10.3 ke data. Mankiw-Romer-Weil.
 
-`10.4 CROSS-COUNTRY` Aplikasi cross-country dari Section 10.3 ke data. Mankiw-Romer-Weil.
-
-`MRW`
-
-`10.5 DISCUSSION` Diskusi terbuka tentang batas MRW dan transisi ke endogenous growth.
+**10.5 Discussion** — Diskusi terbuka tentang batas MRW dan transisi ke endogenous growth.
 
 **Ringkasan Besar**
 
@@ -398,13 +388,11 @@ Konsisten dengan growth Jepang ~7-10% per tahun selama 1950-1970.
 
 ### Steady state level berbeda antar negara
 
-`AMERIKA` $D\approx 0$ (sudah di steady state). $y^{~*}$ tinggi. Growth ≈ (slow). $g$ $D(0)$ besar negatif. $y^{~*}$ tinggi (institusi baik). Growth ≈ $g + ∣\beta D(0)∣$
+**Amerika** — $D\approx 0$ (sudah di steady state). $y^{~*}$ tinggi. Growth ≈ (slow). $g$ $D(0)$ besar negatif. $y^{~*}$ tinggi (institusi baik). Growth ≈ $g + ∣\beta D(0)∣$
 
-`JEPANG POST-1945`
+**Jepang Post-1945** — (cepat).
 
-(cepat).
-
-`ZIMBABWE` $D\approx 0$ atau positive. $y^{~*}$ rendah (institusi buruk). Growth ≈ (stuck). $g$
+**Zimbabwe** — $D\approx 0$ atau positive. $y^{~*}$ rendah (institusi buruk). Growth ≈ (stuck). $g$
 
 **Ringkasan Besar**
 
@@ -596,7 +584,7 @@ $_{K}$ `-NULLCLINE` $_{NK}$ Set titik $(k,h)$ di mana $\dot{k}=0$ (modal per eff
 
 Set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker $^{H}$ `-NULLCLINE` $^{NH}$ tidak berubah). $N_{h} ={(k,h): T_{h}(k,h) =0}$.
 
-`STEADY STATE` Perpotongan dua nullcline. Di mana $\dot{k}=\dot{h}=0$ simultan.
+**Steady State** — Perpotongan dua nullcline. Di mana $\dot{k}=\dot{h}=0$ simultan.
 
 ## Cara derive $N_{k}$ — step-by-step
 
@@ -652,9 +640,7 @@ $N_{H}$ `SLOPE` $\beta /(1 -\alpha)$ — fungsi meningkat dalam, lewat origin $k
 
 $(1 -\beta)/\alpha > \beta /(1 -\alpha)$ karena $1 -\alpha -\beta > 0N$. $_{k}$ lebih
 
-`PERBANDINGAN`
-
-curam dari $N_{h}$.
+**Perbandingan** — curam dari $N_{h}$.
 
 ### Bukti $N_{k}$ lebih curam
 
@@ -722,13 +708,13 @@ Pada $N_{h}\partial T$: $_{h}/\partial h =(\alpha -1)(\delta _{h} +g + n) < 0$ (
 
 ### Tabel empat region
 
-`REGION I` Atas $N_{k}$ dan atas $N_{h}$: $\dot{k}>0,\dot{h}<0$. Vector kanan-bawah.
+**Region I** — Atas $N_{k}$ dan atas $N_{h}$: $\dot{k}>0,\dot{h}<0$. Vector kanan-bawah.
 
-`REGION II` Atas $N_{k}$ tapi bawah $N_{h}$: $\dot{k}>0,\dot{h}>0$. Vector kanan-atas.
+**Region II** — Atas $N_{k}$ tapi bawah $N_{h}$: $\dot{k}>0,\dot{h}>0$. Vector kanan-atas.
 
-`REGION III` Bawah $N_{k}$ tapi atas $N_{h}$: $\dot{k}<0,\dot{h}<0$. Vector kiri-bawah.
+**Region Iii** — Bawah $N_{k}$ tapi atas $N_{h}$: $\dot{k}<0,\dot{h}<0$. Vector kiri-bawah.
 
-`REGION IV` Bawah $N_{k}$ dan bawah $N_{h}$: $\dot{k}<0,\dot{h}>0$. Vector kiri-atas.
+**Region IV** — Bawah $N_{k}$ dan bawah $N_{h}$: $\dot{k}<0,\dot{h}>0$. Vector kiri-atas.
 
 ## Vector field di nullcline
 
@@ -849,11 +835,11 @@ MRW asumsi: $\bar{A}_{j} =A \cdot \varepsilon _{j}$ dengan $\varepsilon _{j}$ or
 
 ## Hasil estimasi MRW
 
-`ADJ` $R^{2}$ 0.78 — 78% variasi income antar negara dijelaskan oleh $s_{k},s_{h},n$
+**Adj** — $R^{2}$ 0.78 — 78% variasi income antar negara dijelaskan oleh $s_{k},s_{h},n$
 
-`IMPLIED` Β0.30 — capital share di income, konsisten dengan data
+**Implied** — Β0.30 — capital share di income, konsisten dengan data
 
-`IMPLIED` Α0.28 — human capital share di income
+**Implied** — Α0.28 — human capital share di income
 
 **Hasil Kunci**
 
@@ -869,33 +855,21 @@ Tanpa human capital (Solow standar): $R\approx ^{2}0.59$. Dengan human capital: 
 
 ## Dua deficiency Solow
 
-`DEFICIENCY 1` $s$ exogenous — saving rate diasumsikan konstan, tidak ada optimisasi
+**Deficiency 1** — $s$ exogenous — saving rate diasumsikan konstan, tidak ada optimisasi
 
 $A$ black box — tech "manna from heaven", tidak ada penjelasan asal-
 
-`DEFICIENCY 2`
-
-usul
+**Deficiency 2** — usul
 
 ## Bagaimana setiap model memecahkan
 
-Tambah faktor baru (human capital) ke production function. Pecahkan
-
-`MRW (BAB 10.4)`
-
-deficiency 2 partial (residu turun ke 22%). Keep exogenous. $s$
+**MRW (bab 10.4)** — Tambah faktor baru (human capital) ke production function. Pecahkan deficiency 2 partial (residu turun ke 22%). Keep exogenous. $s$
 
 Optimisasi household. Pecahkan deficiency 1: jadi endogenous. Keep $s$
 
-`RCK (BAB 12)`
+**RCK (bab 12)** — $A$ black box. Tidak pakai human capital.
 
-$A$ black box. Tidak pakai human capital.
-
-R&D investment sebagai engine. Pecahkan deficiency 2 full: $A$ jadi
-
-`ROMER (BAB 14)`
-
-endogenous. Keep relatif simple. $s$
+**Romer (bab 14)** — R&D investment sebagai engine. Pecahkan deficiency 2 full: $A$ jadi endogenous. Keep relatif simple. $s$
 
 **PETERS (BAB 15)** — Heterogeneous firms, markup variation. Pecahkan deficiency 2 dari angle berbeda: gap TFP dari misallocation, bukan tech rendah. Tidak fokus human capital.
 
@@ -927,23 +901,21 @@ Lucas (1988) menggabungkan RCK + human capital, tapi ini di luar kurikulum Econo
 
 ## Issues measurement MRW (8 issues)
 
-`1. PROXY HUMAN` Enrollment rate tidak hitung quality, tertiary education, on-the-job `CAPITAL` training
+**1. Proxy human capital** — Enrollment rate tidak menghitung quality, tertiary education, on-the-job training.
 
-`2. ASUMSI` $\Delta, G$ `KONSTAN` Variasi real antar negara diserap ke variasi $A_{j}$
+**2. Asumsi $\delta, g$ konstan** — Variasi real antar negara diserap ke variasi $A_{j}$.
 
-`3. ORTHOGONALITY` $_{A}^{ˉ}_{J}$ Asumsi paling kontroversial. Institusi, geografi, history correlate dengan
+**3. Orthogonality $\bar{A}_{j}$** — Asumsi paling kontroversial: institusi, geografi, dan history berkorelasi dengan $s, n$.
 
-$$ s,n $$
+**4. Steady State** — China, Africa SS, post-war Japan tidak di steady state
 
-`4. STEADY STATE` China, Africa SS, post-war Japan tidak di steady state
+**5. Constant Returns** — Endogenous growth models argue increasing returns
 
-`5. CONSTANT RETURNS` Endogenous growth models argue increasing returns
+**6. Reverse Causality** — Income tinggi → saving tinggi, bukan sebaliknya
 
-`6. REVERSE CAUSALITY` Income tinggi → saving tinggi, bukan sebaliknya
+**7. Aggregation** — Cross-country agregat menyembunyikan variasi internal
 
-`7. AGGREGATION` Cross-country agregat menyembunyikan variasi internal
-
-`8. AUTARKY` Trade, FDI, migration tidak dipertimbangkan
+**8. Autarky** — Trade, FDI, migration tidak dipertimbangkan
 
 ## Cara relax asumsi
 

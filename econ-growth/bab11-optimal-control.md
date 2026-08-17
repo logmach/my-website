@@ -10,23 +10,13 @@ Bab 11 adalah Tools II — teori *optimal control*, fondasi teknis untuk RCK dan
 
 Tools I (ODE). Setup ODE, solusi, steady state,
 
-`BAB 3-8`
+**Bab 3-8** — qualitative analysis.
 
-qualitative analysis.
-
-Aplikasi Solow-Swan. Model deskriptif tanpa
-
-`BAB 9-10`
-
-optimisasi household. s konstan.
+**Bab 9-10** — Aplikasi Solow-Swan. Model deskriptif tanpa optimisasi household. s konstan.
 
 **Bab 11** — Tools II (Optimal Control). Tools matematis untuk optimisasi atas path. Foundation untuk RCK.
 
-Model dengan optimisasi. RCK, endogenous
-
-`BAB 12-15`
-
-growth — semua pakai PMP/HJB dari Bab 11.
+**Bab 12-15** — Model dengan optimisasi. RCK, endogenous growth — semua pakai PMP/HJB dari Bab 11.
 
 ### Tiga pertanyaan utama Bab 11
 
@@ -156,15 +146,11 @@ $$
 V(t,x)=\max_{u}\left\{\int_{t}^{t'}h\,d\tau+V\bigl(t',x(t')\bigr)\right\}
 $$
 
-`V(T, X)` Total value optimal dari (t, x)
+**V(t, X)** — Total value optimal dari (t, x)
 
-`INTEGRAL PERTAMA` Payoff dari segmen [t, t′]
+**Integral Pertama** — Payoff dari segmen [t, t′]
 
-Value optimal sisa dari t′ (BPO menjamin ini
-
-`V(T′, X(T′))`
-
-optimal)
+**V(t′, X(t′))** — Value optimal sisa dari t′ (BPO menjamin ini optimal)
 
 ### Tiga pelajaran BPO
 
@@ -273,43 +259,25 @@ $$
 
 Pertanyaan yang sering muncul: "apakah Vt dan Vxf semuanya negatif?"
 
-`VT`
+**VT** — **VX** — Positif biasanya. Marginal value state. Lebih banyak modal = welfare lebih.
 
-Positif biasanya. Marginal value state. Lebih
-
-`VX`
-
-banyak modal = welfare lebih.
-
-Bervariasi. Bisa positif (state tumbuh) atau
-
-`F`
-
-negatif (state menurun). Tergantung u.
+**F** — Bervariasi. Bisa positif (state tumbuh) atau negatif (state menurun). Tergantung u.
 
 Tidak punya tanda universal. Bisa + atau −
 
-`VX F`
+**VX F** — tergantung tanda f.
 
-tergantung tanda f.
-
-Negatif pada optimal path. Vt negatif
-
-`V̇`
-
-mendominasi Vxf.
+**V̇** — Negatif pada optimal path. Vt negatif mendominasi Vxf.
 
 ### Interpretasi persamaan (11.7)
 
-−Vt≥h(t, x, u) + Vxf(t, x, u)
+$$
+-V_{t}\ \ge\ h(t,x,u)+V_{x}f(t,x,u)
+$$
 
-Rate value hilang karena waktu berlalu.
+**$-V_{t}$** — Rate value hilang karena waktu berlalu. Independen dari $u$.
 
-`−VT`
-
-Independen u.
-
-`H` Direct effect kontrol u pada payoff.
+**$h$** — Direct effect kontrol $u$ pada payoff.
 
 **VX F** — Indirect effect kontrol u via state transition. Bukan inherent "marginal benefit" — bisa + atau −.
 
@@ -354,11 +322,7 @@ Sintesisnya: "Kalau sufficient, kita tahu V solve HJB lalu tentukan kontrol opti
 
 Sebagian tepat, tapi perlu klarifikasi.
 
-V memenuhi HJB di semua (t, x) → optimal
-
-`SUFFICIENT`
-
-control. Strategy: solve PDE global.
+**Sufficient** — V memenuhi HJB di semua (t, x) → optimal control. Strategy: solve PDE global.
 
 **NECESSARY** — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.
 
@@ -414,33 +378,29 @@ Rate of marginal value change over time. `V̇X` Bagaimana Vx (shadow price state
 
 #### Rate at which time-effects accumulate along
 
-`V̇T` optimum. Bagaimana Vt (rate value hilang) berubah sepanjang optimal path.
+**$\dot{V}_{t}$** — Bagaimana $V_{t}$ (rate value hilang) berubah sepanjang optimal path.
 
 #### Continuation marginal value through
 
-`VX FX` transition law of state. Efek tidak langsung state pada future value lewat dinamika.
+**VX FX** — transition law of state. Efek tidak langsung state pada future value lewat dinamika.
 
 #### Indirect effect through time-variation in
 
-transition law, valued by Vx. Efek tidak
-
-`VX FT`
-
-langsung waktu pada future value lewat dinamika.
+**VX FT** — transition law, valued by Vx. Efek tidak langsung waktu pada future value lewat dinamika.
 
 ### Tabel cost-benefit framework
 
-`TWEAKX` Persamaan (11.12): 0 = hx + V ˙x + Vxfx
+**Tweakx** — Persamaan (11.12): 0 = hx + V ˙x + Vxfx
 
-`TWEAKT` Persamaan (11.13): 0 = ht + V ˙t + Vxft
+**Tweakt** — Persamaan (11.13): 0 = ht + V ˙t + Vxft
 
-`DIRECT EFFECT PADAH` hx (state) atau ht (waktu)
+**Direct Effect Padah** — hx (state) atau ht (waktu)
 
-`EFFECT VIA DINAMIKA` Vxfx (state) atau Vxft (waktu)
+**Effect Via Dinamika** — Vxfx (state) atau Vxft (waktu)
 
-`AKUMULASI RATE` V ˙x (state) atau V ˙t (waktu)
+**Akumulasi Rate** — V ˙x (state) atau V ˙t (waktu)
 
-`BALANCE OPTIMAL` Semua suku berjumlah nol
+**Balance Optimal** — Semua suku berjumlah nol
 
 ### Hubungan BPO ↔ HJB ↔ Necessary conditions
 
@@ -494,13 +454,13 @@ Diperkenalkan dua adjoint variables:
 
 ψ(t):= Vx(t, x∗(t)) — shadow price dari state x.
 
-`Ψ (T)`
+**$\psi(T)$**
 
 Biasa dipakai.
 
 ψ0(t):= Vt(t, x∗(t)) — shadow price dari waktu.
 
-`Ψ 0 (T)`
+**$\psi_{0}(T)$**
 
 Jarang dibahas eksplisit.
 
@@ -518,15 +478,9 @@ $$
 H(t,x,u,\psi):=h(t,x,u)+\langle\psi,\;f(t,x,u)\rangle\qquad(11.14)
 $$
 
-`H` Direct payoff dari u
+**$h$** — Direct payoff dari $u$.
 
-Indirect value lewat state evolution. Shadow price
-
-`Ψ⋅F`
-
-× transition rate
-
-`H`
+**$\psi \cdot f$** — Indirect value lewat state evolution: shadow price × transition rate.
 
 ### Empat kondisi PMP
 
@@ -590,21 +544,19 @@ Ḣ∗= Ht
 
 ### Lagrangian vs Hamiltonian — tabel paralel
 
-`STATIS` L = f+ λg (Lagrangian)
+**Statis** — L = f+ λg (Lagrangian)
 
-`DINAMIS` H= h + ψf (Hamiltonian)
+**Dinamis** — H= h + ψf (Hamiltonian)
 
-`MULTIPLIER STATIS` λ (konstanta)
+**Multiplier Statis** — λ (konstanta)
 
-`MULTIPLIER DINAMIS` ψ(t) (fungsi waktu, "shadow price")
+**Multiplier Dinamis** — ψ(t) (fungsi waktu, "shadow price")
 
-`FOC STATIS` Lx= 0
+**FOC Statis** — Lx= 0
 
-`FOC DINAMIS` Hu= 0 (maximality)
+**FOC Dinamis** — Hu= 0 (maximality)
 
-`KKT/COMPLEMENTARY`
-
-### Adjoint sebagai shadow price
+**Kkt/complementary** — ### Adjoint sebagai shadow price
 
 **Hasil Kunci**
 
@@ -628,9 +580,9 @@ Inilah Hamiltonian system — workhorse ekonomi makro dinamis.
 
 ### Mengapa lebih mudah dari HJB
 
-`HJB` PDE untuk V (t, x) — fungsi 2 argumen
+**HJB** — PDE untuk V (t, x) — fungsi 2 argumen
 
-`PMP` 2 ODE untuk x(t) dan ψ(t) — fungsi 1 argumen
+**PMP** — 2 ODE untuk x(t) dan ψ(t) — fungsi 1 argumen
 
 ODE jauh lebih mudah dari PDE. Inilah keuntungan PMP.
 
@@ -657,27 +609,15 @@ Diberi nama dari Léon Walras — pendiri general equilibrium theory.
 
 ### Kontras dengan social planner
 
-Decentralized. Banyak agen, koordinasi lewat
-
-`WALRASIAN`
-
-harga.
+**Walrasian** — Decentralized. Banyak agen, koordinasi lewat harga.
 
 Centralized. Satu pengambil keputusan,
 
-`PLANNER`
-
-optimisasi langsung.
+**Planner** — optimisasi langsung.
 
 ### Welfare Theorems
 
-`FIRST WELFARE`
-
-Pareto optimum → bisa diraih sebagai competitive
-
-`SECOND WELFARE`
-
-equilibrium (butuh convexity)
+**First Welfare** — **Second Welfare** — Pareto optimum → bisa diraih sebagai competitive equilibrium (butuh convexity)
 
 ### Analogi PMP/HJB ↔ Welfare Theorems
 
@@ -685,27 +625,15 @@ equilibrium (butuh convexity)
 
 Insight kuncinya: PMP dan HJB adalah dual
 
-≈ Social planner / Pareto. Centralized
+**HJB Approach** — ≈ Social planner / Pareto. Centralized optimisasi.
 
-`HJB APPROACH`
+**PMP Approach** — ≈ Competitive equilibrium. Decentralized via shadow prices.
 
-optimisasi.
+**$\psi(t)$ di PMP** — ≈ Harga pasar (interest rate, asset price)
 
-≈ Competitive equilibrium. Decentralized via
+**HJB → PMP Otomatis** — ≈ First Welfare: Pareto otomatis equilibrium dengan harga yang tepat
 
-`PMP APPROACH`
-
-shadow prices.
-
-`Ψ (T)PMP` ≈ Harga pasar (interest rate, asset price)
-
-≈ First Welfare: Pareto otomatis equilibrium
-
-`HJB → PMP OTOMATIS`
-
-dengan harga yang tepat
-
-`PMP → HJB BUTUH` ≈ Second Welfare: equilibrium → Pareto hanya `CONVEXITY` dengan convexity
+**PMP → HJB butuh convexity** — ≈ Second Welfare: equilibrium → Pareto hanya dengan convexity
 
 ### Mangasarian Sufficiency Theorem
 
@@ -754,15 +682,13 @@ Bukan derivation matematis — ini definisi IH-OCP, generalisasi dari finite (11
 
 ### Bedanya dengan finite horizon
 
-`HORIZON` Finite: T tertentu. Infinite: T→∞.
+**Horizon** — Finite: T tertentu. Infinite: T→∞.
 
-`BOUNDARY TERMINAL` Finite: x(T) = xT. Infinite: tidak ada.
+**Boundary Terminal** — Finite: x(T) = xT. Infinite: tidak ada.
 
-`DISCOUNT` Finite: tidak eksplisit. Infinite: e−rt.
+**Discount** — Finite: tidak eksplisit. Infinite: e−rt.
 
-`DEPENDENCEVPADAT`
-
-### Mengapa V jadi V (x) saja
+**Dependencevpadat** — ### Mengapa V jadi V (x) saja
 
 Untuk finite horizon: V (t, x) berbeda di tiap t karena horizon tersisa T−t berbeda.
 
@@ -838,13 +764,11 @@ Untuk (11.27): yang mendekati nol adalah produk, bukan hanya x. Bisa terjadi via
 
 ### Tiga skenario ψx →0
 
-`SKENARIO A` ψ(T) →0 dan x(T) terbatas → produk nol `SKENARIO B` ψ(T) terbatas tapi x(T) →0 → produk nol
+**Skenario A** — ψ(T) →0 dan x(T) terbatas → produk nol `SKENARIO B` ψ(T) terbatas tapi x(T) →0 → produk nol
 
 Keduanya tumbuh, tapi ψ turun lebih cepat →
 
-`SKENARIO C`
-
-produk nol. Paling penting di RCK.
+**Skenario C** — produk nol. Paling penting di RCK.
 
 ### Bedanya finite vs infinite TVC
 
@@ -852,15 +776,13 @@ produk nol. Paling penting di RCK.
 
 Pertanyaan yang sering muncul: "bukankah saat T finite juga ψ(T) = 0?"
 
-`FINITE TVC` ψ(T) = 0tepat di titik akhir T. Plan berakhir.
+**Finite TVC** — ψ(T) = 0tepat di titik akhir T. Plan berakhir.
 
 $$
 \lim_{T\to\infty}\psi(T)=0 \quad\text{atau}\quad \lim_{T\to\infty}\psi(T)\,x(T)=0
 $$
 
-`INFINITE TVC`
-
-sebagai limit. Plan tidak pernah berakhir.
+**Infinite TVC** — sebagai limit. Plan tidak pernah berakhir.
 
 ### Tidak ada "definitive" TVC
 
@@ -1036,19 +958,17 @@ Gain K= (b/r)P⋅.
 
 ### Sensitivitas parameter
 
-`BESAR (CONTROL` P∗ besar tapi ∣K∣= ∣b∣P/r kecil → control hemat →
+**Besar (control** — P∗ besar tapi ∣K∣= ∣b∣P/r kecil → control hemat →
 
-`R`
+**$r$**
 
-`MAHAL)` konvergensi lambat
+**Mahal)** — konvergensi lambat
 
-`Q BESAR (PENALTY` P∗ besar dan ∣K∣ besar → control agresif → `INFLASI)` konvergensi cepat
+**Q Besar (penalty** — P∗ besar dan ∣K∣ besar → control agresif → `INFLASI)` konvergensi cepat
 
-`ABESAR (INFLASI` P∗ besar → harus control sangat aktif
+**Abesar (inflasi** — P∗ besar → harus control sangat aktif
 
-`PERSISTENT)`
-
-**Hasil Kunci**
+**Persistent)** — **Hasil Kunci**
 
 Insight kunci: bukan P yang menentukan magnitude control, tapi gain K= (b/r)P.
 
@@ -1125,7 +1045,7 @@ Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 
 ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]
 
-`Step 2` Pakai Envelope Theorem — suku ∂G/∂c ⋅dc∗/dk= 0 karena FOC.
+**Step 2** — Pakai Envelope Theorem — suku ∂G/∂c ⋅dc∗/dk= 0 karena FOC.
 
 ρVk−Vtk= Vkk[φ(k) −dk −c] + Vk[φ′(k) −d]
 
@@ -1210,43 +1130,33 @@ Pertanyaan yang sering muncul: "mengapa untuk envelope condition di PMP, persama
 
 **HJB APPROACH** — Pakai envelope condition: turunkan HJB-R terhadap k. Envelope Theorem cancel suku dc∗/ dk.
 
-Pakai turunan FOC terhadap t + adjoint
-
-`PMP APPROACH`
-
-equation. Tidak ada envelope theorem di sini.
+**PMP Approach** — Pakai turunan FOC terhadap t + adjoint equation. Tidak ada envelope theorem di sini.
 
 Keduanya berbeda tapi memberi hasil sama. Envelope condition di PMP (Ḣ∗= Ht) adalah persamaan lain, tidak dipakai untuk derive Euler.
 
 ### Arrow-Pratt, EIS, Euler — Tabel sintesis
 
-σ(c) = −hcc(c) ⋅c/hc(c). Curvature utility. Risk
-
-`ARROW-PRATT`
-
-aversion / aversi substitution.
+**Arrow-pratt** — σ(c) = −hcc(c) ⋅c/hc(c). Curvature utility. Risk aversion / aversi substitution.
 
 1/σ(c). Kebalikan Arrow-Pratt. Sensitivitas
 
-`EIS`
+**EIS** — substitution antarwaktu.
 
-substitution antarwaktu.
-
-`EULER EQUATION` ċ/c = (1/σ)[r −ρ]. Growth rate konsumsi optimal.
+**Euler Equation** — ċ/c = (1/σ)[r −ρ]. Growth rate konsumsi optimal.
 
 ### Komponen Euler equation
 
-`Ċ/C`
+**Ċ/c**
 
 Growth rate konsumsi (persen perubahan per waktu)
 
-`R(K)=Φ′ (K)−D` Net marginal product of capital (return)
+**$r(k)=f'(k)-\delta$** — Net marginal product of capital (return)
 
-`Ρ` Discount rate (impatience)
+**$\rho$** — Discount rate (impatience)
 
-`R−Ρ` Gap return vs impatience
+**$r-\rho$** — Gap return vs impatience
 
-`1/Σ` EIS sebagai sensitivitas
+**$1/\sigma$** — EIS sebagai sensitivitas
 
 ### Part 6 — Interpretasi Keynes-Ramsey
 
@@ -1258,21 +1168,13 @@ Planner menyeimbangkan benefit defer konsumsi (earn return r) dengan impatience 
 
 ### Cases
 
-Return exceed impatience → ċ > 0 (konsumsi
+**R>ρ** — Return exceed impatience → ċ > 0 (konsumsi tumbuh)
 
-`R>Ρ`
+**$r<\rho$** — Impatience dominates → ċ < 0 (konsumsi turun)
 
-tumbuh)
+**R=ρ** — Konsumsi konstan (steady state, modified golden rule)
 
-`R<Ρ` Impatience dominates → ċ < 0 (konsumsi turun)
-
-Konsumsi konstan (steady state, modified golden
-
-`R=Ρ`
-
-rule)
-
-`EIS TINGGI` Konsumsi lebih responsif terhadap gap r −ρ
+**EIS Tinggi** — Konsumsi lebih responsif terhadap gap r −ρ
 
 ### CRRA utility special case
 

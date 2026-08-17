@@ -10,15 +10,9 @@ Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving ra
 
 \dot{k} = sf(k) −δk dengan s konstan (eksogen,
 
-`SOLOW-SWAN`
+**Solow-swan** — arbitrer). Tidak ada optimisasi household.
 
-arbitrer). Tidak ada optimisasi household.
-
-\dot{k} = f(k) −δk −c dengan c dipilih optimal. Saving
-
-`RCK`
-
-endogen dari maksimisasi utility.
+**RCK** — \dot{k} = f(k) −δk −c dengan c dipilih optimal. Saving endogen dari maksimisasi utility.
 
 ### Tiga pendekatan Bab 12
 
@@ -32,13 +26,13 @@ Bab 12 punya tiga representasi:
 
 ### Switch notasi dari Bab 11
 
-`H→U` Momentary payoff jadi utility
+**$h \to u$** — Momentary payoff jadi utility
 
-`F→PRODUCTION` f direpurpose jadi production function
+**$f \to$ production** — f direpurpose jadi production function
 
-`CONTROL→C` Control variable jadi konsumsi
+**control $\to c$** — Control variable jadi konsumsi
 
-`Ψ→Λ` Adjoint jadi λ
+**$\psi \to \lambda$** — Adjoint jadi λ
 
 ### Sejarah
 
@@ -104,13 +98,13 @@ $$
 
 ### PMP conditions
 
-`ADJOINT (12.5)` −λ˙ = λ[f′(k) −δ]
+**Adjoint (12.5)** — −λ˙ = λ[f′(k) −δ]
 
-`MAXIMALITY C (12.6)` e−ρtuc(c) = λ
+**Maximality C (12.6)** — e−ρtuc(c) = λ
 
-`STATE (12.7)` \dot{k} = f(k) −c −δk
+**State (12.7)** — \dot{k} = f(k) −c −δk
 
-`TVC (12.8)` limT→∞λ(T)k(T) = 0
+**TVC (12.8)** — limT→∞λ(T)k(T) = 0
 
 ### Derivation envelope condition (12.9)
 
@@ -172,15 +166,11 @@ Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner bala
 
 ### Cases (Proposition 12.1)
 
-`R>Ρ` Patience pays — \dot{c} > 0, konsumsi tumbuh
+**$r>\rho$** — Patience pays — \dot{c} > 0, konsumsi tumbuh
 
-`R<Ρ` Impatience dominates — \dot{c} < 0, konsumsi turun
+**$r<\rho$** — Impatience dominates — \dot{c} < 0, konsumsi turun
 
-Smoothing — \dot{c} = 0, konsumsi konstan (steady
-
-`R=Ρ`
-
-state)
+**R=ρ** — Smoothing — \dot{c} = 0, konsumsi konstan (steady state)
 
 **Catatan Nuansa**
 
@@ -216,7 +206,7 @@ f′(k̄) = δ + ρ > δ= f′(kGR)
 
 #### `Step 2` f′ strictly decreasing (dari f′′< 0)
 
-`Step 3` Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
+**Step 3** — Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
 
 ### Cobb-Douglas verifikasi
 
@@ -250,7 +240,7 @@ c < f(k) −δk → \dot{k} > 0 → k tumbuh (kanan). `BAWAHK ˙=0` Konsumsi kur
 
 c > f(k) −δk → \dot{k} < 0 → k menurun (kiri).
 
-`ATASK ˙=0`
+**Atas $\dot{k}=0$**
 
 Konsumsi melebihi output bersih.
 
@@ -260,21 +250,21 @@ Dari Keynes-Ramsey, sign(\dot{c}) = sign[f′(k) −δ −ρ]. Karena f′′< 0
 
 k< k̄ → f′(k) > δ + ρ → \dot{c} > 0 → c tumbuh (atas).
 
-`KIRI\dot{C}=0`
+**Kiri $\dot{c}=0$**
 
 Return > impatience → defer.
 
-`KANAN\dot{C}=0`
+**Kanan $\dot{c}=0$**
 
 ### Empat region
 
-`I KIRI-BAWAH` \dot{k} > 0, \dot{c} > 0 → panah ↗
+**I Kiri-bawah** — \dot{k} > 0, \dot{c} > 0 → panah ↗
 
-`II KANAN-BAWAH` \dot{k} > 0, \dot{c} < 0 → panah ↘
+**II Kanan-bawah** — \dot{k} > 0, \dot{c} < 0 → panah ↘
 
-`III KIRI-ATAS` \dot{k} < 0, \dot{c} > 0 → panah ↖
+**Iii Kiri-atas** — \dot{k} < 0, \dot{c} > 0 → panah ↖
 
-`IV KANAN-ATAS` \dot{k} < 0, \dot{c} < 0 → panah ↙
+**IV Kanan-atas** — \dot{k} < 0, \dot{c} < 0 → panah ↙
 
 ### Bukti saddle point (Jacobian)
 
@@ -286,7 +276,7 @@ $$
 
 #### `Step 1` Entry ∂\dot{k}/∂k= f′(k̄) −δ= ρ (karena f′(k̄) = δ + ρ)
 
-`Step 2` Entry ∂\dot{c}/∂c = 0 (bracket Keynes-Ramsey = 0 di steady state)
+**Step 2** — Entry ∂\dot{c}/∂c = 0 (bracket Keynes-Ramsey = 0 di steady state)
 
 #### `Step 3` Determinant
 
@@ -294,7 +284,7 @@ det J= σc̄f′′(k̄) < 0
 
 (karena f′′< 0, c̄, σ> 0)
 
-`Step 4` det J< 0 → eigenvalues berlawanan tanda → saddle point
+**Step 4** — det J< 0 → eigenvalues berlawanan tanda → saddle point
 
 ### Part 4 — Stable Arm (Kualitatif)
 
@@ -304,23 +294,11 @@ Pertanyaan yang sering muncul: bagaimana menjawab analisis kualitatif *tanpa* ei
 
 Dari vector field saja (tanpa eigenvalue), pakai argumen kontinuitas:
 
-Mulai region III, \dot{k} < 0 → k crash ke 0. Tidak
+**C0 Terlalu Tinggi** — Mulai region III, \dot{k} < 0 → k crash ke 0. Tidak feasible.
 
-`C0 TERLALU TINGGI`
+**C0 Terlalu Rendah** — Mulai region I → menyeberang ke region II → k explode ke ∞. Melanggar TVC.
 
-feasible.
-
-Mulai region I → menyeberang ke region II → k
-
-`C0 TERLALU RENDAH`
-
-explode ke ∞. Melanggar TVC.
-
-Threshold c0∗= g(k0) → konvergen ke steady
-
-`C0 TEPAT`
-
-state. Stable arm.
+**C0 Tepat** — Threshold c0∗= g(k0) → konvergen ke steady state. Stable arm.
 
 **Hasil Kunci**
 
@@ -344,9 +322,9 @@ Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43)
 
 ### Part 1 — Perubahan nullclines
 
-`\dot{C}=0` f′(k̄) = δ + ρ. ρ ↑ → k̄ ↓ → nullcline geser KIRI.
+**$\dot{c}=0$** — f′(k̄) = δ + ρ. ρ ↑ → k̄ ↓ → nullcline geser KIRI.
 
-`K ˙=0` c = f(k) −δk. Tidak tergantung ρ → TETAP.
+**$\dot{k}=0$** — c = f(k) −δk. Tidak tergantung ρ → TETAP.
 
 Steady state baru (k̄′, c̄′) di kiri-bawah dari lama.
 
@@ -382,13 +360,9 @@ s̄ TURUN saat ρ naik. Verifikasi: ρ 0.04→0.06 memberi s̄ 16.7%→13.6%. Ma
 
 ### Part 5 — Endogenisasi saving
 
-`SOLOW` s konstan, arbitrer, mekanis
+**Solow** — s konstan, arbitrer, mekanis
 
-s(k) endogen dari optimisasi, adjust optimal
-
-`RCK`
-
-terhadap shock
+**RCK** — s(k) endogen dari optimisasi, adjust optimal terhadap shock
 
 ## Konsep 6 — Section 12.3 — Competitive Equilibrium
 
@@ -408,11 +382,11 @@ $$
 
 ### PMP conditions
 
-`MAXIMALITY` e−ρtuc(c) = μ
+**Maximality** — e−ρtuc(c) = μ
 
-`ADJOINT` μ˙/μ = −r(t)
+**Adjoint** — μ˙/μ = −r(t)
 
-`BUDGET (12.16)` \dot{a} = ra + w −c
+**Budget (12.16)** — \dot{a} = ra + w −c
 
 ### Euler equation (12.15)
 
@@ -494,7 +468,9 @@ k\dot{k} = K\dot{K} −g −n
 
 #### `Step 4` Substitusi dan kumpulkan → hasil
 
-\dot{k} = f(k) −(n + g + δ)k −c
+$$
+\dot{k} = f(k) - (n+g+\delta)k - c
+$$
 
 **💡 Insight**
 
@@ -520,7 +496,7 @@ $$
 \frac{\dot{\lambda}}{\lambda}=-(\rho-n)+g+\frac{d}{dt}\ln u'(Ac)
 $$
 
-`Step 2` Kunci: dtd ln u′(Ac) = −σ(g + ċ/c) karena growth rate Ac adalah
+**Step 2** — Kunci: $\frac{d}{dt}\ln u'(Ac) = -\sigma\,(g+\dot{c}/c)$, karena growth rate $Ac$ adalah $g+\dot{c}/c$.
 
 #### g + ċ/c
 
@@ -568,17 +544,13 @@ unique → BGP exists.
 
 (1 −σ)g< 0 → restriction lebih longgar dari ρ > n.
 
-`Σ>1`
+**$\sigma>1$**
 
 Utility bounded.
 
-`Σ=1` Restriction sama dengan ρ > n (log utility).
+**$\sigma=1$** — Restriction sama dengan ρ > n (log utility).
 
-(1 −σ)g> 0 → restriction lebih ketat. Utility
-
-`Σ<1`
-
-unbounded, butuh discount besar.
+**Σ<1** — (1 −σ)g> 0 → restriction lebih ketat. Utility unbounded, butuh discount besar.
 
 **Jebakan Umum**
 

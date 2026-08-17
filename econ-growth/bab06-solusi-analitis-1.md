@@ -86,7 +86,7 @@ $\dot{y} =b -ax$.
 
 **Step 4** Ganti $x = y + b/a$.
 
-$$ \dot{y} =b -a(y + b/a) = b -ay -b = -ay$. $$
+$$ \dot{y} =b -a(y + b/a) = b -ay -b = -ay $$
 
 **Step 5** Hasil: $\dot{y} =-ay$. ODE "bersih" — proporsionalitas murni. Solusinya $y(t) = Ce^{-at}$. Kembalikan: $x(t) = Ce^{-at}+$ $b/a$.
 
@@ -190,7 +190,7 @@ Sisi kiri jadi $_{dt}^{d}[x \cdot I]$. Sisi kanan: $b(t)I(t)$.
 
 **Step 2** Integrasi kedua sisi.
 
-$$ x \cdot I=\int b(t)I(t) dt +C$. $$
+$$ x \cdot I=\int b(t)I(t)\, dt +C $$
 
 **Step 3** Bagi dengan $I(t)$.
 
@@ -250,15 +250,13 @@ Pembagian kerja yang elegan: particular handle forcing term $b$; homogen handle 
 
 Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:
 
-`POINT 1` Kalau $x^{*}_{1},x^{*}_{2}$ keduanya solusi 6.13 (homog), maka $c_{1}x^{*}_{1} +c_{2}x^{*}_{2}$ juga solusi 6.13. Superposition standar.
+**Point 1** — Kalau $x^{*}_{1},x^{*}_{2}$ keduanya solusi 6.13 (homog), maka $c_{1}x^{*}_{1} +c_{2}x^{*}_{2}$ juga solusi 6.13. Superposition standar.
 
 .
 
 Setiap solusi 6.12 bisa di-konstruksi sebagai particular solusi 6.12 +
 
-`POINT 3`
-
-solusi 6.13. Strategi standar solving.
+**Point 3** — solusi 6.13. Strategi standar solving.
 
 ## Point 2 — arah logika yang sering terbalik
 
@@ -307,9 +305,9 @@ Selisih dua titik di affine space = vektor di subspace. Itulah Point 2.
 
 Tiga contoh klasik sign-flip error:
 
-$: tergoda menulis $Ce^{-3t}$, padahal seharusnya $Ce^{+3t}$.
-$: tergoda menulis $100e^{-0.05t}$, padahal seharusnya $100e^{+0.05t}$.
-$: tergoda menulis $5t$, padahal seharusnya $5/t$.
+1. $\dot{x}=3x$ — tergoda menulis $Ce^{-3t}$, padahal seharusnya $Ce^{+3t}$.
+2. $\dot{x}=0.05x$ — tergoda menulis $100e^{-0.05t}$, padahal seharusnya $100e^{+0.05t}$.
+3. $\dot{x}+x/t=0$ — tergoda menulis $x=5t$, padahal seharusnya $x=5/t$.
 
 Polanya: auto-apply formula $Ce^{-at}$ tanpa memeriksa tanda ketika ODE tidak dalam bentuk standar.
 
@@ -367,43 +365,23 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 
 *Daftar latihan inti Bab 6.*
 
-Steady state & stability untuk $\dot{x}+ax = b$. Tidak dikerjakan
+**Exercise 6.1** — Steady state & stability untuk $\dot{x}+ax = b$. Tidak dikerjakan formal, tapi konsepnya sudah masuk lewat Bab 5.
 
-`EXERCISE 6.1`
+**Exercise 6.2** — Verify general solution homog. Konsep "kelipatan solusi juga solusi" sudah dibahas.
 
-formal, tapi konsepnya sudah masuk lewat Bab 5.
-
-Verify general solution homog. Konsep "kelipatan solusi juga
-
-`EXERCISE 6.2`
-
-solusi" sudah dibahas.
-
-`EXERCISE 6.3` Show integrating factor $I(t) = e^{\inta(t)dt}$. ✓ Dikerjakan dengan verify-based approach.
+**Exercise 6.3** — Show integrating factor $I(t) = e^{\inta(t)dt}$. ✓ Dikerjakan dengan verify-based approach.
 
 Derive general solution (6.9). ✓ Dikerjakan dengan multiply $I(t)$,
 
-`EXERCISE 6.4`
+**Exercise 6.4** — integrasi, bagi.
 
-integrasi, bagi.
+**Exercise 6.5** — Prove Proposition 6.1. ✓ Dibahas konseptual lewat linearitas turunan dan multiplikasi matriks.
 
-Prove Proposition 6.1. ✓ Dibahas konseptual lewat linearitas
-
-`EXERCISE 6.5`
-
-turunan dan multiplikasi matriks.
-
-General homog + particular = general non-homog. ✓ Dibahas
-
-`EXERCISE 6.6`
-
-dengan parafrase intuitif.
+**Exercise 6.6** — General homog + particular = general non-homog. ✓ Dibahas dengan parafrase intuitif.
 
 Prove Theorem 6.1. Dibahas konseptual, bukti Point 2
 
-`EXERCISE 6.7`
-
-didemonstrasikan.
+**Exercise 6.7** — didemonstrasikan.
 
 ## Latihan tambahan
 

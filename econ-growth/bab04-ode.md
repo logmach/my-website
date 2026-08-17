@@ -25,17 +25,9 @@ Plus: parameter adalah dimensi output, bukan jumlah fungsi. Misal $kk = 2$ artin
 
 Saat ditanya "apakah $y(t) = t^{2}$ adalah solusi dari $\dot{y} =2t$?", ada dua cara mengecek:
 
-Integrasikan $\dot{y} =2t$ → dapat $y(t) = t+^{2}C$ → pakai initial
+**Solve (lebih Lambat)** — Integrasikan $\dot{y} =2t$ → dapat $y(t) = t^{2}+C$ → pakai initial condition → konfirmasi cocok.
 
-`SOLVE (LEBIH LAMBAT)`
-
-condition → konfirmasi cocok.
-
-Turunkan $y = t^{2}$ → dapat $\dot{y} =2t$ → cocokkan dengan sisi kanan
-
-`VERIFY (LEBIH CEPAT)`
-
-ODE. Selesai dalam 3 step.
+**Verify (lebih Cepat)** — Turunkan $y = t^{2}$ → dapat $\dot{y} =2t$ → cocokkan dengan sisi kanan ODE. Selesai dalam 3 langkah.
 
 **💡 Insight**
 
@@ -148,19 +140,19 @@ Kasus A: $\dot{x}=x$ dengan $x(0) = 0$ — well-behaved
 
 Kasus B: $\dot{x}=x$ dengan $x(0) = 0$ — problematic
 
-`PROPERTI` Kasus A () vs Kasus B ($xx$)
+**Properti** — Kasus A () vs Kasus B ($xx$)
 
 $G(0)=0$ `?` Ya (di keduanya) → $x(t) = 0$ trivial solution
 
 $G_{X}$ `DI` $X=0$ A: $G_{x} =1$, kontinu ✓ | B: $G_{x} =_{2}^{1}_{x}$, meledak ✗
 
-`LIPSCHITZ?` A: Ya | B: Tidak (di sekitar $x = 0$)
+**Lipschitz?** — A: Ya | B: Tidak (di sekitar $x = 0$)
 
-`PICARD-LINDELÖF` A: Berlaku | B: Gagal
+**Picard-lindelöf** — A: Berlaku | B: Gagal
 
-`WAKTU KABUR DARI 0` A: $\infty$ (tidak bisa kabur) | B: $2\varepsilon$ (kabur dalam waktu hingga)
+**Waktu Kabur Dari 0** — A: $\infty$ (tidak bisa kabur) | B: $2\varepsilon$ (kabur dalam waktu hingga)
 
-`JUMLAH SOLUSI` A: 1 (unik: $x \equiv 0$) | B: tak hingga
+**Jumlah Solusi** — A: 1 (unik: $x \equiv 0$) | B: tak hingga
 
 ## Trik "potong-tempel" untuk konstruksi solusi non-unik
 
@@ -250,15 +242,13 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 **Tulis Goal di Awal** — Sebelum mulai derivasi, tulis "Saya cari: ____". Mencegah over-engineering seperti pakai $e^{lnc}$ alih-alih $1/c$.
 
-`VERIFY LEBIH CEPAT DARI` Saat ditanya "apakah ini solusi?", verify langsung. Saat ditanya "cari `SOLVE` solusi", baru solve. Dua aktivitas berbeda.
+**Verify Lebih Cepat Dari** — Saat ditanya "apakah ini solusi?", verify langsung. Saat ditanya "cari `SOLVE` solusi", baru solve. Dua aktivitas berbeda.
 
 10-20 menit per topik. Stuck → berhenti, tanya. Tidak masuk mode
 
-`TIME-BOX`
+**Time-box** — "tenggelam dalam derivasi".
 
-"tenggelam dalam derivasi".
-
-`SOLUSI TRIVIAL SERING` Cek $G(x_{0}) =0$ dulu — kalau ya, $x(t) = x_{0}$ konstan adalah `TERLEWAT` solusi. Tangkapan mudah yang banyak orang skip.
+**Solusi Trivial Sering** — Cek $G(x_{0}) =0$ dulu — kalau ya, $x(t) = x_{0}$ konstan adalah `TERLEWAT` solusi. Tangkapan mudah yang banyak orang skip.
 
 **Bukti Formal Bukan Prioritas** — Dalam praktik, fokuslah pada statement dan aplikasinya; bukti formal opsional.
 
