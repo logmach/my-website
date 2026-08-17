@@ -13,7 +13,8 @@ Sebuah solusi $y^{*}$ untuk ODE adalah satu fungsi $y:^{*}T\to R^{k}$ yang memen
 1. $y^{*}$ differentiable cukup (sampai orde $m$)
 2. Ketika kita substitusi $y^{*}$ dan turunan-turunannya ke ODE, persamaannya benar untuk semua $t\in T$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Jebakan umum: mengira solusi adalah "set fungsi" karena notasi $C^{m}$. Yang tepat:
 
@@ -21,20 +22,21 @@ $C^{m}$ adalah set dari semua fungsi differentiable $y^{*}$ adalah satu fungsi y
 
 Plus: parameter adalah dimensi output, bukan jumlah fungsi. Misal $kk = 2$ artinya satu fungsi vektor dengan dua komponen — seperti $(k(t), c(t))$ di RCK nanti.
 
-## Verify vs Solve — perbedaan yang menyelamatkan waktu
+**Verify vs Solve — perbedaan yang menyelamatkan waktu**
 
 Saat ditanya "apakah $y(t) = t^{2}$ adalah solusi dari $\dot{y} =2t$?", ada dua cara mengecek:
 
 **Solve (lebih Lambat)** — Integrasikan $\dot{y} =2t$ → dapat $y(t) = t^{2}+C$ → pakai initial condition → konfirmasi cocok.
 
 **Verify (lebih Cepat)** — Turunkan $y = t^{2}$ → dapat $\dot{y} =2t$ → cocokkan dengan sisi kanan ODE. Selesai dalam 3 langkah.
-
-**💡 Insight**
+```
+```{admonition} 💡 Insight
+:class: tip
 
 Definisi solusi verification-based, bukan derivation-based. Kamu tidak perlu menurunkan solusi dari awal — cukup tunjukkan kandidat memenuhi ODE.
 
 Ini akan dipakai berulang di kursus: di Bellman equation (guess and verify value function), di optimal control (verify policy memenuhi FOC), di equilibrium (verify market clearing). Saat lihat kandidat solusi, verify dulu — jangan langsung mode "solve".
-
+```
 ## Konsep 2 — General Solution vs Particular Solution
 
 *Kerangka untuk memahami "keluarga solusi" dan bagaimana kondisi tambahan memilih satu solusi spesifik.*
@@ -68,17 +70,18 @@ $$
 
 Butuh 4 initial conditions untuk pin down semuanya.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk $\dot{y}=2t$, langsung integrasikan → $y(t) = t^{2}+C$. Lalu pakai $y(0) = 0$ →
 
 Inilah pola dasar: general → tambah kondisi → particular.
-
+```
 ## Konsep 3 — IVP vs BVP — Beda yang Penting untuk RCK
 
 *Dua cara memberi kondisi untuk pin down solusi. Bedanya halus tapi konsekuensinya besar.*
 
-**IVP — INITIAL VALUE** — Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk ODE orde- $my(t$: $_{0}),\dot{y}(t_{0}),y¨(t_{0}),\dots$ semua di $t_{0}$. Mudah diselesaikan dengan integrasi forward.
+**IVP — INITIAL VALUE** — Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk ODE orde- $my($: $t_{0}),\dot{y}(t_{0}),y¨(t_{0}),\dots$ semua di $t_{0}$. Mudah diselesaikan dengan integrasi forward.
 
 **BVP — BOUNDARY VALUE** — Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: $y(0) = 1y(2) = 5$,. Lebih sulit — butuh metode khusus seperti shooting.
 
@@ -88,36 +91,39 @@ Hati-hati: BVP bukan sekadar "kondisi pada interval waktu" — IVP dan BVP sama-
 
 Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP. Lebih dari satu = BVP.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
-### Di RCK (Bab 12) akan muncul BVP yang tidak biasa:
+**Di RCK (Bab 12) akan muncul BVP yang tidak biasa**
 
 *Capital: initial condition di $kt = 0$ — $k(0)= k_{0}$ Consumption: transversality condition di $ct \to \infty$*
 
 *Kondisi di dua titik waktu berbeda → BVP. Inilah mengapa Bab 13 mengajarkan shooting method — algoritma khusus untuk mengubah BVP menjadi IVP yang bisa diselesaikan komputer.*
-
+```
 ## Konsep 4 — Existence and Uniqueness (Picard-Lindelöf)
 
 *Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.*
 
 ## Statement Teorema 4.1 (versi intuitif)
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Untuk IVP $\dot{x}=G(x, t)$ dengan $x(t_{0})=x_{0}$:
+**Untuk IVP $\dot{x}=G(x, t)$ dengan $x(t_{0})=x_{0}$**
 
 Jika (1) $G$ kontinu di compact cube $D$ yang memuat $(x_{0}, t_{0})$, dan (2) $G$ Lipschitz
-
+```
 ### dalam (bisa dijamin lewat continuously differentiable), $x$
 
 maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pemahamanmu sendiri (dari catatan): "Kalau $G$ dan turunannya kontinu di $D$, plus kondisi awal di $D$, ada solusi unik untuk $G$. Karena kontinu maka solusi terdefinisi dengan baik di semua titik, dan unik karena prinsip kontinuitas."
 
 Intuisi yang tepat. Yang harus diluruskan: bukan "IVP/BVP ada di D" tapi titik kondisi awal $(x_{0}, t_{0})$ ada di dalam $D$.
-
+```
 ## Mengapa kondisi-kondisi ini tepat
 
 Bukan asumsi sembarangan — setiap kondisi punya peran spesifik dalam bukti formal:
@@ -138,43 +144,42 @@ $D$ kompak: tertutup dan terbatas, sehingga max/min tercapai
 
 Kasus A: $\dot{x}=x$ dengan $x(0) = 0$ — well-behaved
 
-Kasus B: $\dot{x}=x$ dengan $x(0) = 0$ — problematic
+Kasus B: $\dot{x}=\sqrt{x}$ dengan $x(0) = 0$ — problematic
 
-**Properti** — Kasus A () vs Kasus B ($xx$)
+| Properti | Kasus A: $\dot{x}=x$ | Kasus B: $\dot{x}=\sqrt{x}$ |
+|---|---|---|
+| $G(0)=0$? | Ya → $x(t)=0$ trivial | Ya → $x(t)=0$ trivial |
+| $G_{x}$ di $x=0$ | $G_{x}=1$, kontinu ✓ | $G_{x}=\dfrac{1}{2\sqrt{x}} \to \infty$, meledak ✗ |
+| Lipschitz? | Ya | Tidak (di sekitar $x=0$) |
+| Picard-Lindelöf | Berlaku | Gagal |
+| Waktu kabur dari $0$ | $\infty$ (tidak bisa kabur) | berhingga (bisa kabur kapan saja) |
+| Jumlah solusi | 1 (unik: $x \equiv 0$) | tak hingga |
 
-$G(0)=0$ `?` Ya (di keduanya) → $x(t) = 0$ trivial solution
-
-$G_{X}$ `DI` $X=0$ A: $G_{x} =1$, kontinu ✓ | B: $G_{x} =_{2}^{1}_{x}$, meledak ✗
-
-**Lipschitz?** — A: Ya | B: Tidak (di sekitar $x = 0$)
-
-**Picard-lindelöf** — A: Berlaku | B: Gagal
-
-**Waktu Kabur Dari 0** — A: $\infty$ (tidak bisa kabur) | B: $2\varepsilon$ (kabur dalam waktu hingga)
-
-**Jumlah Solusi** — A: 1 (unik: $x \equiv 0$) | B: tak hingga
-
-## Trik "potong-tempel" untuk konstruksi solusi non-unik
+**Trik "potong-tempel" untuk konstruksi solusi non-unik**
 
 Untuk Kasus B, kamu bisa konstruksi tak hingga solusi parametrized oleh $\tau \ge 0$ ("kapan kabur dari nol"):
 
-$$ x_{\tau }(t) ={^{0}_{(t-\tau)}^{2}_{4}kalau 0 \le t\le \tau kalau t> \tau $$
+$$
+x_{\tau}(t)=\begin{cases} 0 & \text{kalau } 0 \le t \le \tau \\[4pt] \dfrac{(t-\tau)^{2}}{4} & \text{kalau } t > \tau \end{cases}
+$$
 
 Mekanisme: "diam di nol" sah karena $\dot{x}=0 =0 =G(0)$. "Kabur kapan saja" sah karena kurva parabola yang digeser tetap memenuhi ODE.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Intuisinya: menggeser kurva ($t \mapsto t-\tau$) menghasilkan solusi baru. Setiap pilihan $\tau$ memberi graf
 
-## Mengapa $\dot{x}=x$ tidak bisa "potong-tempel"
+**Mengapa $\dot{x}=x$ tidak bisa "potong-tempel"**
 
 Untuk Kasus A, solusi non-trivial $x(t) = Ae^{t}$. Dari $x(0) = 0A= 0$: → satu-satunya solusi adalah $x \equiv 0$.
 
 Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
-
+```
 ## Generalisasi: $\dot{x}=x^{\alpha }$ dengan $x(0) = 0$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *$\alpha \ge 1$ (linear, kuadratik,...): solusi unik ($x\equiv 0$) $0 < \alpha < 1$ (akar kuadrat, akar kubik,...): tak hingga solusi*
 
@@ -185,19 +190,20 @@ Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
 Jebakan umum: mengira Kasus B hanya punya dua solusi. Sebenarnya tak hingga banyak — setiap $\tau \ge 0$ memberi solusi berbeda.
 
 Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "kapan mulai bergerak". Pemahaman ini membedakan "ada multiple solutions" dari "memahami struktur multiple solutions".
-
+```
 ## Konsep 6 — Hubungan ke Growth Theory
 
 ### Setelah pemahaman teknis, pertanyaan yang paling penting
 
 ## Apakah model growth well-behaved?
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Ya, semua model growth di kursus ini well-behaved di wilayah yang relevan.*
 
 *Picard-Lindelöf berlaku, solusi unik dijamin. Tidak ada kasus seperti $x$ yang punya tak hingga solusi.*
-
+```
 ## Mengapa
 
 Tiga alasan struktural:
@@ -206,12 +212,13 @@ Tiga alasan struktural:
 2. Inada sebagai asuransi. Asumsi $f(0) =^{'}\infty$ dan $f(\infty) =^{'}0$ memastikan dinamika "tertahan" di wilayah hingga.
 3. Ekonomi tidak mulai dari nol. $k_{0} >0$ selalu diasumsikan. Kita kerja di wilayah $k > 0$ di mana fungsi-fungsi well-behaved.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pemahamanmu sendiri: "dalam Solow model, kalau kita potong waktu, solusi tidak akan lompat tapi tetap pada trajectory."
 
 Tepat. Ini adalah rumusan intuitif uniqueness. Trajektori deterministik: dari $k_{0}$ given, $k(t)$ untuk semua $t> 0$ adalah unik. Tidak ada "cabang" alternatif.
-
+```
 ## Tapi memahami non-uniqueness tetap penting
 
 Meskipun growth well-behaved, konsep ini tetap dibutuhkan
@@ -242,13 +249,11 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 **Tulis Goal di Awal** — Sebelum mulai derivasi, tulis "Saya cari: ____". Mencegah over-engineering seperti pakai $e^{lnc}$ alih-alih $1/c$.
 
-**Verify Lebih Cepat Dari** — Saat ditanya "apakah ini solusi?", verify langsung. Saat ditanya "cari `SOLVE` solusi", baru solve. Dua aktivitas berbeda.
+**Verify lebih cepat dari solve** — Saat ditanya "apakah ini solusi?", verify langsung. Saat ditanya "cari solusi", baru solve. Dua aktivitas berbeda.
 
-10-20 menit per topik. Stuck → berhenti, tanya. Tidak masuk mode
+**Time-box** — 10–20 menit per topik. Stuck → berhenti, tanya. Tidak masuk mode "tenggelam dalam derivasi".
 
-**Time-box** — "tenggelam dalam derivasi".
-
-**Solusi Trivial Sering** — Cek $G(x_{0}) =0$ dulu — kalau ya, $x(t) = x_{0}$ konstan adalah `TERLEWAT` solusi. Tangkapan mudah yang banyak orang skip.
+**Solusi trivial sering terlewat** — Cek $G(x_{0})=0$ dulu — kalau ya, $x(t)=x_{0}$ konstan adalah solusi. Tangkapan mudah yang banyak orang lewatkan.
 
 **Bukti Formal Bukan Prioritas** — Dalam praktik, fokuslah pada statement dan aplikasinya; bukti formal opsional.
 
@@ -277,7 +282,7 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 1. ☐ Bisa menyatakan kondisi teorema (kontinuitas $G$ + Lipschitz dalam) $x$
 2. ☐ Bisa cek apakah ODE konkret memenuhi kondisi
-3. ☐ Bisa membuat counter-example seperti $\dot{x}=x$
+3. ☐ Bisa membuat counter-example seperti $\dot{x}=\sqrt{x}$
 4. ☐ Bisa konstruksi multiple solutions menggunakan trick "potong-tempel"
 
 ## Hubungan ke growth
@@ -313,11 +318,12 @@ Punya intuisi geometris (trajektori, "kabur dari nol", dll)
 
 ...Bab 5 hanya menambahkan satu pertanyaan baru: kalau kita mulai di sekitar steady state, ke mana kita pergi?
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Bab 5 akan jadi jembatan antara tools matematis (Bab 3-4) dan model ekonomi (Bab 9 dan setelahnya). Setiap konsep di Bab 5 akan dipakai berulang di:*
 
 *Solow-Swan: konvergensi monoton ke $k^{*}$ RCK: saddle path dynamics di sekitar steady state Romer R&D: balanced growth path sebagai steady state efficiency units*
 
 *Selamat melanjutkan.*
-
+```

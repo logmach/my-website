@@ -26,7 +26,8 @@ Tools I (ODE). Setup ODE, solusi, steady state,
 
 ### Dua pendekatan utama
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Bab 11 menyajikan dua pendekatan untuk solve OCP:
 
@@ -34,7 +35,7 @@ Bab 11 menyajikan dua pendekatan untuk solve OCP:
 2. PMP approach (necessary): solve ODE system dengan Hamiltonian
 
 Mereka adalah dual — analog dengan Welfare Theorems di general equilibrium. Kapan keduanya equivalen ditentukan oleh Mangasarian Sufficiency.
-
+```
 ### Konteks sejarah
 
 - Calculus of variations (Euler, Lagrange, abad 18): asal mula, motivasi fluid mechanics
@@ -75,12 +76,13 @@ V (t0, x0) — value function, indirect utility dari OCP.
 
 ### State vs Control — Distinction Fundamental
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "apa beda state dan control secara konkret di model ekonomi?"
 
 **STATEX** — Distinction yang krusial untuk paham semua model dinamis. Punya ODE sendiri (ẋ = f), tidak dipilih langsung, history-dependent, encapsulate masa lalu. Contoh: modal, wealth, stok ikan.
-
+```
 **Control $u$** — Dipilih bebas tiap saat, tidak punya ODE, bisa berubah seketika. Contoh: konsumsi, investasi, harga.
 
 ### Tes diagnostik untuk identifikasi
@@ -110,12 +112,13 @@ Tidak bisa pakai Lagrangian biasa. Butuh trick matematis baru — itulah BPO, HJ
 
 ### Pernyataan BPO
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 BPO: Optimal plan punya properti bahwa continuation dari plan itu (sisa setelah titik manapun) juga plan optimal dari titik tersebut.
 
 Atau lebih pendek: optimal plan tetap optimal di setiap titik sepanjang path.
-
+```
 ### Tiga analogi untuk grasp BPO
 
 ### Analogi 1 — Perjalanan
@@ -202,12 +205,13 @@ $$
 h(t,x,u)\;\le\;-\dot{V}(t,x)\qquad(11.4)
 $$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "mengapa h ≤−V ˙? Jika V ˙ positif itu berarti h negatif?"
 
 Jawaban: pada optimal path, V menurun karena horizon mengecil. Maka V ˙ ≤0, dan −V ˙ ≥0. Inequality konsisten dengan h ≥0. Untuk kontrol sub- optimal, inequality mungkin dilanggar — itu justru tanda kontrol bukan optimal.
-
+```
 ### Chain rule untuk V ˙
 
 #### `Step 1` V (t, x(t)) tergantung pada t lewat dua channel
@@ -255,7 +259,8 @@ $$
 
 ### Tanda Vt, Vx, Vxf
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "apakah Vt dan Vxf semuanya negatif?"
 
@@ -268,7 +273,7 @@ Tidak punya tanda universal. Bisa + atau −
 **VX F** — tergantung tanda f.
 
 **V̇** — Negatif pada optimal path. Vt negatif mendominasi Vxf.
-
+```
 ### Interpretasi persamaan (11.7)
 
 $$
@@ -281,12 +286,13 @@ $$
 
 **VX F** — Indirect effect kontrol u via state transition. Bukan inherent "marginal benefit" — bisa + atau −.
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Istilah untuk $V_{x}f$: "marginal lifetime benefit"
 
 Lebih akurat: "indirect effect via state transition".
-
+```
 ### HJB sebagai PDE
 
 HJB equation adalah PDE (partial differential equation) karena V (t, x) punya dua argumen:
@@ -298,7 +304,8 @@ Sifat PDE umumnya sulit di-solve. Closed-form hanya untuk kasus khusus (LQR).
 
 ### Theorem 11.1 — HJB Sufficiency
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Statement: kalau V memenuhi HJB equation dengan boundary V (T, x) = 0, maka μ(t, x) = arg max di kanan HJB adalah optimal
 
@@ -309,14 +316,15 @@ Implikasi: solve HJB → optimal control gratis.
 **Jebakan Umum**
 
 Common mistake: lupa boundary V (T, x) = 0. Tanpa boundary, HJB punya banyak solusi. Boundary mem-pin-down solusi unique.
-
+```
 ## Konsep 5 — Section 11.4 — Necessary Conditions
 
 *Mengapa kita butuh necessary conditions selain HJB? Karena PDE sulit.*
 
 ### Sufficient vs Necessary
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Sintesisnya: "Kalau sufficient, kita tahu V solve HJB lalu tentukan kontrol optimal. Kalau necessary, kita cari μ yang memenuhi 11.12 dan 11.13."
 
@@ -325,7 +333,7 @@ Sebagian tepat, tapi perlu klarifikasi.
 **Sufficient** — V memenuhi HJB di semua (t, x) → optimal control. Strategy: solve PDE global.
 
 **NECESSARY** — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.
-
+```
 ### Mengapa butuh necessary conditions
 
 1. PDE sulit — closed-form jarang ada
@@ -368,14 +376,15 @@ $$
 
 ### Tabel suku-suku necessary conditions
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Interpretasi tiap suku — satu per satu.
 
 **HT** — Direct effect of time on momentary payoff. Bagaimana payoff berubah saat waktu maju, holding x, u konstan. Direct effect of state on momentary payoff. `HX` Bagaimana payoff berubah saat state naik, holding t, u konstan.
 
 Rate of marginal value change over time. `V̇X` Bagaimana Vx (shadow price state) berubah sepanjang optimal path.
-
+```
 #### Rate at which time-effects accumulate along
 
 **$\dot{V}_{t}$** — Bagaimana $V_{t}$ (rate value hilang) berubah sepanjang optimal path.
@@ -404,11 +413,13 @@ Rate of marginal value change over time. `V̇X` Bagaimana Vx (shadow price state
 
 ### Hubungan BPO ↔ HJB ↔ Necessary conditions
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "apa hubungan BPO dengan necessary conditions?"
-
-**Ringkasan Besar**
+```
+```{admonition} Ringkasan besar
+:class: important
 
 Rantai logika:
 
@@ -418,7 +429,7 @@ Rantai logika:
 4. → Necessary conditions (11.12) dan (11.13)
 
 BPO adalah filosofi. Necessary conditions adalah konsekuensi matematis local dari BPO.
-
+```
 ### Kasus autonomous
 
 Untuk growth models, h dan f biasanya tidak tergantung pada t explisit. Maka:
@@ -430,10 +441,11 @@ Untuk growth models, h dan f biasanya tidak tergantung pada t explisit. Maka:
 
 Persamaan (11.13) trivial terpenuhi. Hanya (11.12) relevan.
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Inilah mengapa di RCK kita hanya pakai satu adjoint equation (yang akan jadi ψ˙ = −Hk di PMP).
-
+```
 ### Visualisasi mental — kapten kapal
 
 - (11.12): kalau kapal didorong ke kanan sedikit, apa optimal masih tunjuk arah yang sama?
@@ -464,12 +476,13 @@ Biasa dipakai.
 
 Jarang dibahas eksplisit.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "ψ0(t) ini apa?"
 
 ψ0 adalah notasi untuk Vt sepanjang optimal path. Untuk autonomous problems (kasus RCK), ψ0 tidak berperan aktif karena (11.13) trivial. Kebanyakan textbook hanya menulis ψ.
-
+```
 ### Hamiltonian
 
 Definisi (11.14):
@@ -504,12 +517,13 @@ Konsekuensi dari (11.9) — optimal control rule.
 
 ### Kondisi 4 — Maximized Hamiltonian (11.18) dan envelope (11.19)
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "darimana (11.18) dan (11.19)?"
 
 Persamaan (11.18): H∗= −Vt. Diturunkan dari HJB equation langsung dengan substitusi Vx= ψ.
-
+```
 #### `Step 1` Mulai dari HJB
 
 −Vt= kmax{h + Vxf}
@@ -558,7 +572,8 @@ Ḣ∗= Ht
 
 **Kkt/complementary** — ### Adjoint sebagai shadow price
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 ψ(t) = nilai marginal punya satu unit state ekstra pada waktu t.
 
@@ -567,7 +582,7 @@ Untuk RCK: ψ= marginal utility of capital.
 Untuk resource: ψ= marginal value of resource stock.
 
 Untuk pollution: ψ< 0 = marginal cost of pollution.
-
+```
 ### PMP sebagai ODE system
 
 Dari Kondisi 1 dan 2:
@@ -592,14 +607,15 @@ ODE jauh lebih mudah dari PDE. Inilah keuntungan PMP.
 
 ### Walrasian Pricing Mechanism
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "apa yang dimaksud Walrasian pricing mechanism?"
 
 Walrasian pricing mechanism = mekanisme di mana harga menyeimbangkan supply dan demand di semua pasar secara simultan.
 
 Diberi nama dari Léon Walras — pendiri general equilibrium theory.
-
+```
 ### Komponen
 
 - Banyak agen optimisasi sendiri
@@ -621,11 +637,10 @@ Centralized. Satu pengambil keputusan,
 
 ### Analogi PMP/HJB ↔ Welfare Theorems
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
-Insight kuncinya: PMP dan HJB adalah dual
-
-**HJB Approach** — ≈ Social planner / Pareto. Centralized optimisasi.
+**HJB Approach** — Insight kuncinya: PMP dan HJB adalah dual ≈ Social planner / Pareto. Centralized optimisasi.
 
 **PMP Approach** — ≈ Competitive equilibrium. Decentralized via shadow prices.
 
@@ -634,10 +649,11 @@ Insight kuncinya: PMP dan HJB adalah dual
 **HJB → PMP Otomatis** — ≈ First Welfare: Pareto otomatis equilibrium dengan harga yang tepat
 
 **PMP → HJB butuh convexity** — ≈ Second Welfare: equilibrium → Pareto hanya dengan convexity
-
+```
 ### Mangasarian Sufficiency Theorem
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Statement: Jika H(t, x, u, ψ)concave dalam (x, u), dan PMP
 
@@ -646,16 +662,17 @@ conditions terpenuhi (adjoint, TVC, maximality), maka path (x(t), u(t)) adalah o
 Strictly concave → path unique.
 
 Implikasi praktis: kalau h dan f concave dalam (x, u), H otomatis concave. Maka PMP saja cukup untuk optimal.
-
+```
 ### Aplikasi ke Economic Growth
 
 - RCK (Bab 12): utility concave, technology concave → Mangasarian terpenuhi → PMP = HJB
 - Endogenous growth (Bab 14-15): ada increasing returns → Mangasarian gagal → equilibrium tidak optimal → ada room untuk policy
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Pesan filosofis: equilibrium pasar tidak otomatis optimal. Convexity adalah jembatan. Kalau convexity gagal, intervensi kebijakan bisa improve welfare.
-
+```
 ## Konsep 8 — Section 11.7 — Infinite Horizon
 
 *Generalisasi ke T→∞. Pondasi untuk RCK dan endogenous growth.*
@@ -674,12 +691,13 @@ V (x0) = umax {J(u)ẋ = f(x, u),x(0) = x0,u ∈Γ}
 
 dengan J(u) =0∞e−rth(x, u) dt.∫
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "darimana (11.24) diturunkan?"
 
 Bukan derivation matematis — ini definisi IH-OCP, generalisasi dari finite (11.3).
-
+```
 ### Bedanya dengan finite horizon
 
 **Horizon** — Finite: T tertentu. Infinite: T→∞.
@@ -696,10 +714,11 @@ Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t —
 
 ### Derivation persamaan (11.25)
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "darimana (11.25) diturunkan?"
-
+```
 #### `Step 1` Mulai dari HJB finite (11.8) dengan discount
 
 $$
@@ -732,14 +751,15 @@ $$
 
 ### Interpretasi (11.25) — Asset pricing
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Persamaan (11.25) adalah asset pricing equation:
 
 Required return (rV) = Dividend (h) + Capital gain (Vxf)
 
 Inilah mengapa HJB infinite-horizon sering disebut "Bellman equation as asset pricing".
-
+```
 ### Transversality Condition (TVC)
 
 Dua varian utama:
@@ -756,15 +776,16 @@ T→∞lim ψ(T) ⋅x(T) = 0
 
 Value of state menuju nol di masa jauh.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Sintesisnya: "shadow price akan mendekati 0 di masa jauh, ga ada harganya lagi". Tepat untuk (11.26).
 
 Untuk (11.27): yang mendekati nol adalah produk, bukan hanya x. Bisa terjadi via tiga skenario.
-
+```
 ### Tiga skenario ψx →0
 
-**Skenario A** — ψ(T) →0 dan x(T) terbatas → produk nol `SKENARIO B` ψ(T) terbatas tapi x(T) →0 → produk nol
+**Skenario A skenario b** — ψ(T) →0 dan x(T) terbatas → produk nol ψ(T) terbatas tapi x(T) →0 → produk nol
 
 Keduanya tumbuh, tapi ψ turun lebih cepat →
 
@@ -772,7 +793,8 @@ Keduanya tumbuh, tapi ψ turun lebih cepat →
 
 ### Bedanya finite vs infinite TVC
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "bukankah saat T finite juga ψ(T) = 0?"
 
@@ -783,10 +805,11 @@ $$
 $$
 
 **Infinite TVC** — sebagai limit. Plan tidak pernah berakhir.
-
+```
 ### Tidak ada "definitive" TVC
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "adakah definitive TVC?"
 
@@ -799,13 +822,14 @@ TVC tergantung problem:
 - Resource exhaustion (Hotelling): bentuk berbeda
 
 Pikirkan struktur problem, lalu pilih TVC yang tepat.
-
-**Koneksi**
+```
+```{admonition} Koneksi
+:class: important
 
 Untuk RCK (Bab 12), TVC standar: $\lim_{t\to\infty}e^{-\rho t}\hat{\psi}(t)\,k(t)=0$
 
 dengan ψ^ current-value adjoint.
-
+```
 ## Konsep 9 — Exercise 11.1 — Linear Quadratic Regulator
 
 *Contoh closed-form OCP. State dynamics linear, payoff quadratic.*
@@ -861,14 +885,15 @@ Substitusi Vx= −2Qx:
 
 −2Sy −2Q(t)βx = 0 ⇒y∗= −SβQ(t)x
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Optimal control linear dalam state: u∗= −K(t)x dengan gain
 
 K(t) = (β/S)Q(t).
 
 Inilah state feedback rule klasik di engineering control.
-
+```
 ### Part 2 — Riccati ODE
 
 Substitusi y∗ balik ke HJB, semua suku proporsional dengan x2:
@@ -884,10 +909,11 @@ Ini nonlinear ODE (karena suku bQ2).
 
 ### Part 2 — Linearisasi via Q = Z/Y
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Bagian ini paling sering membuat macet. Triknya:
-
+```
 ### Mengapa trick Q = Z/Y bekerja
 
 Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.
@@ -976,7 +1002,8 @@ Insight kunci: bukan P yang menentukan magnitude control, tapi gain K= (b/r)P.
 
 HJB + quadratic guess →FOC →linear feedback rule →Riccati ODE →Q = Z/Y→linear ODE →eigenvalues →Q(t) →x∗, u∗
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 LQR adalah workhorse macroeconomic policy:
 
@@ -984,7 +1011,7 @@ LQR adalah workhorse macroeconomic policy:
 - Lucas-Stokey optimal taxation
 - Linear-quadratic approximation di DSGE
 - RCK lokal (linearisasi sekitar steady state)
-
+```
 ## Konsep 10 — Exercise 11.3 — Finite-Horizon Ramsey
 
 *Bridge ke Bab 12. Latihan paling penting di Bab 11.*
@@ -1005,7 +1032,8 @@ Inada conditions: limk→∞φ′(k) < ρ + d < limk→0 φ′(k).
 
 ### "f time-invariant"
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "mengapa di soal disebutkan f a time-invariant function?"
 
@@ -1014,7 +1042,7 @@ f(k, c) = φ(k) −dk −c — secara formal punya argumen t, tapi sebenarnya ti
 Konsekuensi: ft= 0. Maka persamaan (11.13) trivial terpenuhi.
 
 Ini petunjuk simplifikasi
-
+```
 ### Part 1 — OCP
 
 V (0, k0) = c≥0max {0Te−ρth(c(t))dtk̇ = φ(k) −dk −c,k(0) = k0}∫
@@ -1031,16 +1059,18 @@ Turunkan kanan terhadap c:
 
 hc(c) −Vk= 0 ⇒hc(c) = Vk
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Marginal utility consumption = marginal value of capital.
-
+```
 ### Envelope condition
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
-
+```
 #### `Step 1` Turunkan HJB-R terhadap k
 
 ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]
@@ -1118,13 +1148,15 @@ cċ = σ(c)1[φ′(k) −d −ρ]
 
 H jointly concave dalam (c, k) karena hcc< 0 dan φ′′< 0. Mangasarian Sufficiency → PMP = HJB.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Inilah mengapa di Exercise 11.3, kedua approach (HJB dan PMP) memberi Euler equation yang sama. Bukan kebetulan — konsekuensi convexity.
-
+```
 ### Bedakan envelope condition (HJB) vs turunan FOC (PMP)
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "mengapa untuk envelope condition di PMP, persamaan ψ= e−ρth′ didiferensiasikan dengan t?"
 
@@ -1133,7 +1165,7 @@ Pertanyaan yang sering muncul: "mengapa untuk envelope condition di PMP, persama
 **PMP Approach** — Pakai turunan FOC terhadap t + adjoint equation. Tidak ada envelope theorem di sini.
 
 Keduanya berbeda tapi memberi hasil sama. Envelope condition di PMP (Ḣ∗= Ht) adalah persamaan lain, tidak dipakai untuk derive Euler.
-
+```
 ### Arrow-Pratt, EIS, Euler — Tabel sintesis
 
 **Arrow-pratt** — σ(c) = −hcc(c) ⋅c/hc(c). Curvature utility. Risk aversion / aversi substitution.
@@ -1160,12 +1192,13 @@ Growth rate konsumsi (persen perubahan per waktu)
 
 ### Part 6 — Interpretasi Keynes-Ramsey
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Keynes-Ramsey rule: pertumbuhan konsumsi = (return - impatience) × EIS
 
 Planner menyeimbangkan benefit defer konsumsi (earn return r) dengan impatience (ρ), di-scale oleh willingness to substitute (1/σ).
-
+```
 ### Cases
 
 **R>ρ** — Return exceed impatience → ċ > 0 (konsumsi tumbuh)
@@ -1184,12 +1217,13 @@ cċ = σ1[φ′(k) −d −ρ]
 
 Log utility (σ= 1): ċ/c = φ′(k) −d −ρ.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Inilah persamaan kunci RCK. Bab 12 akan analisis lengkap dengan phase plane.
 
 **Checklist**
-
+```
 ## Self-Assessment Bab 11
 
 *Cek pemahaman.*

@@ -18,12 +18,13 @@ Visualisasi geometris dinamika di phase plane. Bekerja untuk ODE
 
 **Qualitative (bab 8)** — nonlinear apapun — bahkan yang tidak bisa di-solve.
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Untuk model growth (Solow, RCK, Romer) yang nonlinear dan tidak bisa di-solve eksplisit, qualitative approach adalah alat utama untuk dapat insight visual.*
 
 *Pertanyaan yang sama muncul lagi: "Mengapa tidak bisa solve ODE eksplisit?" Jawabannya melibatkan Picard-Lindelöf vs ekspresibilitas. Sekarang di Bab 8, kita pakai tools tanpa butuh formula eksplisit.*
-
+```
 ## Konsep 2 — Phase Diagram 1D (Section 8.1)
 
 *Versi paling sederhana — untuk ODE skalar.*
@@ -84,24 +85,26 @@ Kumpulan semua vektor di seluruh phase plane = vector field.
 
 Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksikan ke state space (tanpa waktu eksplisit).
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Konsekuensi Picard-Lindelöf: stream lines tidak pernah berpotongan.*
 
 *Mengapa? Karena di tiap titik, arah aliran unik (dari ODE). Kalau dua lintasan berpotongan di satu titik, mereka harus pergi ke arah berbeda dari titik itu — mustahil.*
-
+```
 ## Konsep 4 — Nullcline — Alat Visual Paling Powerful
 
 *Konsep yang dipakai berulang dari Bab 9 sampai akhir.*
 
 ## Definisi
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Nullcline = kurva di phase plane di mana salah satu $\dot{x}_{i} =0$.*
 
 *$\dot{x}_{1}$ -nullcline = kurva di mana $\dot{x}_{1} =0$ $\dot{x}_{2}$ -nullcline = kurva di mana $\dot{x}_{2} =0$*
-
+```
 ## Apa artinya geometris
 
 Di $\dot{x}_{1}$ -nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak → lintasan vertikal Di $\dot{x}_{2}$ -nullcline: $x_{2}$ tidak berubah, tapi $x_{1}$ bergerak → lintasan horizontal
@@ -110,14 +113,15 @@ Di $\dot{x}_{1}$ -nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak 
 
 Steady state adalah titik di mana kedua $\dot{x}_{1} =0$ dan $\dot{x}_{2} =0$. Yaitu, titik yang simultaneously ada di kedua nullcline.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan tajam: bagaimana kalau sebuah titik hanya berada di salah satu nullcline?
 
 Itu bukan steady state. Sistem masih bergerak — hanya salah satu komponen yang "diam". Lintasan akan punya bentuk khusus (vertikal di $\dot{x}_{1}$ -nullcline, horizontal di $\dot{x}_{2}$ -nullcline).
 
 Pelajaran: "perpotongan" di sini berarti titik yang simultaneously di kedua kurva. Bukan dua kurva yang melintas tanpa berbagi titik.
-
+```
 ## Empat alasan nullcline berguna
 
 1. Mencari steady state secara visual: gambar dua nullcline, lihat titik perpotongan
@@ -135,7 +139,7 @@ Nullcline:
 
 $\dot{x}_{1}$ -nullcline: $x_{2} =x_{1}$ (garis 45°) $\dot{x}_{2}$ -nullcline: $x_{2} =2 -x_{1}$ (slope -1, intercept 2)
 
-Perpotongan: solve $x_{1} =2 -x_{1}$ → $x_{1} =1x$, $_{2} =1$. Steady state $(1, 1)$.
+Perpotongan: solve $x_{1} =2 -x_{1}$ → $x_{1} =1$, $x_{2} =1$. Steady state $(1, 1)$.
 
 ## x₂
 
@@ -187,7 +191,7 @@ Lintasan generik: datang dari arah stable manifold, curve dekat origin, terbang 
 
 ## x₂
 
-## unstable manifoldstable manifold
+**unstable manifoldstable manifold**
 
 ## x₁
 
@@ -317,7 +321,8 @@ Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah pu
 
 ## Implikasi ekonomi
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Modal adalah state predetermined ($kk_{0}$ diberikan). Konsumsi adalah control $c$ (pilihan).*
 
@@ -326,7 +331,7 @@ Untuk tiap $k_{0}$, ada satu nilai $c_{0}$ yang benar — yang persis di saddle 
 *menyebabkan trajectory meledak.*
 
 transversality condition (dibahas di Bab 11)
-
+```
 ## Mengapa eigenvalue dan eigenvektor penting
 
 Eigenvalue negatif → arah konvergen → saddle path
@@ -378,10 +383,11 @@ Tanpa eigenvalue analysis, kita tidak bisa karakterisasi saddle path. Inilah int
 
 Kini lengkap sudah lima alat utama
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Bab 3: ODE notation dan struktur Bab 4: Picard-Lindelöf — eksistensi dan keunikan solusi Bab 5: Steady state dan klasifikasi stabilitas Bab 6: Integrating factor untuk linear ODE Bab 7: Eigenvalue analysis untuk sistem linear Bab 8: Phase diagram visualisasi qualitative*
-
+```
 ## Yang menanti
 
 Bab 9 — Solow-Swan: aplikasi pertama growth theory dengan tools yang sudah dikuasai

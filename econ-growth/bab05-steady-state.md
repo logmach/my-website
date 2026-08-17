@@ -14,21 +14,20 @@ $$ 0 = G()\bar{x} $$
 
 Yaitu, titik di mana sistem tidak berubah: sekali berada di $\bar{x}$, sistem tinggal di sana selamanya.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Intuisinya sudah muncul di akhir Bab 4: untuk ODE $\dot{x}=x-x^{2}$, $x = 0$ adalah solusi karena $G(0) = 0$, dan kemudian ditemukan $x =
 
 Catatan terminologi: di matematika "equilibrium", di ekonomi "steady state" — keduanya lazim dipakai bergantian, sebuah "happy halfway house".
-
+```
 ## Konsep 2 — Hierarki Stabilitas
 
 *Empat jenis stabilitas, masing-masing lebih kuat dari sebelumnya. Hierarki yang harus jelas di kepala.*
 
 ## Analogi "bola di permukaan"
 
-Sebelum definisi formal, pakai analogi klasik: bola pingpong
-
-**STABLE** — Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.
+**STABLE** — Sebelum definisi formal, pakai analogi klasik: bola pingpong Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.
 
 **Asymptotic Stable** — Bola di dasar mangkuk dalam. Dorong sedikit, akhirnya kembali persis ke dasar. Tetap dekat DAN konvergen.
 
@@ -64,7 +63,8 @@ Definisi 5.4 (Global Asymptotic Stable):
 
 Asymptotic stable DAN konvergensi dari manapun di $R^{k}$.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Rumusan yang tepat: yang membedakan 5.4 dari 5.3 adalah titik awalnya — 5.3 mengharuskan mulai dari neighborhood, sedangkan 5.4 boleh mulai dari mana saja.
 
@@ -75,18 +75,15 @@ Definisi 5.5 (Unstable):
 Bukan stable. Yaitu: untuk kecil apapun, ada $\delta x_{0}$ di dalam lingkaran yang lintasannya keluar dari lingkaran $\delta \varepsilon$ apapun.
 
 Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari. $\bar{x}$
+```
+```{admonition} Hasil kunci — hierarki yang ketat
+:class: important
+Dari paling lemah ke paling kuat:
 
-## Hierarki yang ketat
+**Stable ⊂ Asymptotic Stable ⊂ Global Asymptotic Stable**
 
-**Hasil Kunci**
-
-### Hierarki dari paling lemah ke paling kuat:
-
-### $Stable \subset Asymptotic Stable \subset Global Asymp Stable$
-
-### Setiap level menambah syarat:
-
-*Stable: tetap dekat + Konvergen → Asymptotic Stable + Konvergen dari manapun → Global Asymptotic Stable*
+Setiap level menambah syarat: *stable* (tetap dekat) + konvergen → *asymptotic stable*; + konvergen dari titik awal mana pun → *global asymptotic stable*.
+```
 
 ## Konsep 3 — Mengapa Cek Stabilitas?
 
@@ -98,10 +95,11 @@ Pertanyaan yang sering muncul: kalau sudah berada di steady state, mengapa masih
 
 Jawaban: steady state hanya berarti "kalau tepat di sini, tidak bergerak". Tapi dunia nyata penuh gangguan. Pertanyaan yang penting:
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *"Kalau ekonomi sedikit tergeser dari, apakah dia kembali (stable) atau terbang jauh $\bar{x}$ (unstable)?"*
-
+```
 ## Kontras: bola di mangkuk vs bola di puncak
 
 Dasar mangkuk: bola "diam" di sana. Dorong sedikit → kembali. Stable steady state.
@@ -114,12 +112,13 @@ Kedua-duanya adalah steady state — tapi perilakunya sangat berbeda saat ada ga
 
 Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansial, perang, pandemi, perubahan teknologi, bencana alam.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 *Pertanyaan kebijakan: kalau ekonomi tergeser, apakah dia akan pulih sendiri?*
 
 *Stable: tidak perlu intervensi besar — ekonomi pulih sendiri. Contoh: Solow-Swan untuk negara pasca-perang. Unstable: butuh kebijakan untuk mengembalikan ke trajectory yang benar. Saddle: hanya satu trajectory yang konvergen — butuh "memilih" konsumsi awal yang tepat. Inilah RCK.*
-
+```
 ## Konsep 4 — Teorema 5.1 — Linear Stability via Eigenvalues
 
 *Alat utama untuk mengecek stabilitas sistem linear. Mengubah pertanyaan dinamika menjadi pertanyaan aljabar.*
@@ -128,10 +127,11 @@ Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansi
 
 Untuk sistem linear $\dot{x}=Ax + b$ dengan steady state $\bar{x}=-A^{-1}b$:
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Jika semua eigenvalue $A$ memiliki real part negatif, maka adalah globally $\bar{x}$ asymptotically stable.*
-
+```
 ## Mengapa eigenvalues?
 
 Solusi sistem linear bisa ditulis sebagai kombinasi "mode":
@@ -144,14 +144,15 @@ Mengecil ke 0 kalau $Re(\lambda _{i}) <0$ Membesar tak hingga kalau $Re(\lambda 
 
 Untuk konvergensi: semua mode harus mengecil → semua eigenvalue real part negatif.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Mengapa "real part"? Karena eigenvalues bisa kompleks: $\lambda = a + bi$. Maka:
 
 $$ e\lambda t=eat[cos(bt) + i sin(bt)]\cdot $$
 
 Bagian $cos +i sin$ memberi oscillation (spiral). Bagian $e^{at}$ memberi magnitude growth/decay. Hanya real part yang menentukan apakah lintasan mengecil atau membesar. $a$
-
+```
 ## Peran $b$
 
 Pertanyaan yang sering muncul: "Apakah $b$ matriks $k \times 1$?"
@@ -170,14 +171,15 @@ Pertanyaan yang sering muncul: "Apakah nonlinear berarti pangkat ≠ 1?"
 
 Tidak cukup spesifik. Nonlinear berarti apa saja yang bukan bentuk $Ax + b$:
 
-Pangkat ≠ 1: $x^{2}$, $xx^{\alpha }$, Fungsi transendental: $e^{x}ln(x)sin(x)$,, Perkalian variabel: $xyx$, $_{1}x_{2}$ Kombinasi yang di atas
+Pangkat ≠ 1: $x^{2}$, $xx^{\alpha }$, Fungsi transendental: $e^{x}ln(x)sin(x)$,, Perkalian variabel: $xy$, $x_{1}x_{2}$ Kombinasi yang di atas
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
-### Hampir semua fungsi di growth theory adalah nonlinear:
+**Hampir semua fungsi di growth theory adalah nonlinear**
 
 *Cobb-Douglas $f(k)= k^{\alpha }$ — nonlinear (pangkat $\alpha =1$) CRRA $u(c)= c^{1-\sigma }/(1 -\sigma)$ — nonlinear Solow-Swan ODE $\dot{k}=sk-^{\alpha }(n + \delta)k$ — nonlinear karena $k^{\alpha }$*
-
+```
 ### Itulah mengapa Teorema 5.2 yang paling sering dipakai
 
 ## Statement
@@ -188,10 +190,11 @@ $$
 J(\bar{x}) = \begin{pmatrix} \dfrac{\partial G_{1}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{1}(\bar{x})}{\partial x_{k}} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial G_{k}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{k}(\bar{x})}{\partial x_{k}} \end{pmatrix}
 $$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Jika semua eigenvalue $J()\bar{x}$ memiliki real part negatif, maka adalah locally $\bar{x}$ asymptotically stable.*
-
+```
 ## Idenya: linearisasi
 
 Dekat, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $\bar{x}J()\bar{x}$.
@@ -204,14 +207,15 @@ $$
 
 Untuk multivariate, $G ()^{'}\bar{x}$ digantikan oleh matriks Jacobian.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Analogi yang pas: "dalam optimisasi kita lihat SOC". Sangat tepat. Pola yang sama:
 
 Optimisasi: FOC ($∇f= 0$) → Hessian negative definite (max) Stabilitas: $G() =\bar{x}0$ → Jacobian eigenvalues negative real part (stable)
 
 Di multi-dimensi, "tanda turunan kedua" digantikan oleh "eigenvalues matriks turunan". Hessian untuk optimisasi, Jacobian untuk dinamika.
-
+```
 ## Mengapa hanya "local"?
 
 Linearisasi adalah aproksimasi yang baik hanya di sekitar. Untuk titik yang jauh, dinamika nonlinear bisa sangat $\bar{x}$ berbeda dari linear.
@@ -224,7 +228,8 @@ Teorema 5.2 (nonlinear via linearisasi): local asymptotic stable
 
 ## Hartman-Grobman: justifikasi formal
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 *Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue real part*
 
@@ -233,7 +238,7 @@ $=0$), maka dinamika nonlinear di sekitar secara topologis equivalen dengan d
 *linearisasinya. Yaitu, dekat, sistem nonlinear "kelihatan seperti" $\bar{x}\dot{y} =J()y\bar{x}$. Inilah justifikasi Teorema 5.2.*
 
 *Untuk steady state non-hyperbolic (ada eigenvalue real part = 0), linearisasi tidak konklusif — butuh metode lain.*
-
+```
 ## Konsep 6 — Aturan 1D dan Generalisasi ke Multi-D
 
 ### Loncatan logis yang wajar dipertanyakan: kenapa di 1D
@@ -346,14 +351,15 @@ $$ G(k) = sAk -(n + g + \delta)k = [sA -(n + g + \delta)]k $$
 
 $G (k) =^{'}sA -(n + g + \delta)$ — konstan, tidak tergantung $k$ Kalau $sA> (n + g + \delta)$: pertumbuhan eksponensial, tidak konvergen
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 *Inilah mengapa AK disebut endogenous growth — tidak konvergen ke steady state, tumbuh selamanya. Akan dipelajari di Bab 14-15.*
 
 Sebaliknya, Solow-Swan disebut exogenous growth karena konvergensi ke adalah fitur $\bar{k}$
 
 *kunci — pertumbuhan jangka panjang hanya datang dari pertumbuhan teknologi eksogen ( $g$).*
-
+```
 ## Konsep 8 — Saddle Point — Preview RCK
 
 *Fenomena multi-D yang akan menjadi inti dari analisis RCK (Bab 12).*
@@ -368,19 +374,21 @@ Eigenvalues $-2$ dan $+3$. Rumusanmu: "satu menuju, satu menjauh — satu stable
 
 ## Struktur saddle point
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Untuk saddle point dengan eigenvalues $\lambda _{1} <0 < \lambda _{2}$:
+**Untuk saddle point dengan eigenvalues $\lambda _{1} <0 < \lambda _{2}$**
 
 *Arah eigenvector $v_{1}$ (eigenvalue $-2$) → stable manifold. Lintasan di arah ini konvergen ke. $\bar{x}$ Arah eigenvector $v_{2}$ (eigenvalue $+3$) → unstable manifold. Lintasan di arah ini menjauh dari. $\bar{x}$*
 
 *Steady state bukan stable secara keseluruhan (karena ada arah unstable), tapi juga bukan unstable sempurna (karena ada arah stable).*
-
+```
 ## Mengapa saddle penting untuk RCK
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
-### Di RCK, sistem 2D dengan state $(k, c)$:
+**Di RCK, sistem 2D dengan state $(k, c)$**
 
 $$
 \begin{aligned}\dot{k}&=f(k)-(n+\delta)k-c \\ \dot{c}&=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
@@ -393,22 +401,14 @@ $$
 *Konsumsi terlalu tinggi → modal habis → ekonomi crash Konsumsi terlalu rendah → over-saving → tidak optimal Konsumsi tepat di saddle path → konvergen optimal*
 
 *Pertanyaan: bagaimana memilih $c_{0}$ yang tepat? Jawaban: transversality condition (TVC) — dibahas*
-
+```
 ## Empat klasifikasi steady state 2D
 
-**Kedua** — $\Lambda$ `NEGATIF (REAL)` Stable node. Monotonic convergence. Contoh: Solow-Swan.
-
-$\Lambda$ `COMPLEX DENGAN RE < 0` Stable spiral (focus). Spiral inward convergence.
-
-Unstable node. Lintasan menjauh. Contoh: AK model (di luar steady
-
-**Kedua** — $\Lambda$ `POSITIF (REAL)`
-
-state).
-
-$\Lambda$ `TANDA CAMPURAN` Saddle point. Stable di satu arah, unstable di arah lain. Contoh: RCK.
-
-$\Lambda$ `PURE IMAGINARY` Center. Orbit periodic. Marginal stable.
+- **Kedua $\lambda$ negatif (real)** — Stable node: konvergensi monoton. Contoh: Solow-Swan.
+- **Kompleks dengan $\mathrm{Re}(\lambda) < 0$** — Stable spiral (focus): konvergensi spiral ke dalam.
+- **Kedua $\lambda$ positif (real)** — Unstable node: lintasan menjauh. Contoh: model AK (di luar steady state).
+- **$\lambda$ berlawanan tanda** — Saddle point: stable di satu arah, unstable di arah lain. Contoh: RCK.
+- **Pure imaginary** — Center: orbit periodik, marginal stable.
 
 **SELF-CHECK**
 
@@ -452,7 +452,8 @@ $\Lambda$ `PURE IMAGINARY` Center. Orbit periodic. Marginal stable.
 
 Bab 5 adalah jembatan antara tools matematis (Bab 3-5) dan model ekonomi (Bab 9 dan setelahnya). Setiap konsep di Bab 5 akan dipakai berulang:
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Di Solow-Swan (Bab 9): konvergensi monoton ke adalah aplikasi Teorema 5.2 dengan $\bar{k}$
 
@@ -471,4 +472,5 @@ Bab 6-7: Solusi analitis ODE (cara menyelesaikan ODE, bukan hanya menganalisis s
 Bab 8: Phase diagram analysis (visualisasi dinamika di 2D)
 
 Fondasi sudah kuat: tiga bab pertama tools (3, 4, 5) selesai. Selamat melanjutkan.
+```
 

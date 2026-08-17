@@ -20,10 +20,11 @@ Solow dan Swan punya pendekatan Keynesian: perilaku agen di-"hardwired" (tidak a
 
 Production function untuk barang akhir: $Y= F (A, K, L)$ Capital accumulation technology: $\dot{K}=I-\delta K$ Saving rate konstan: $s \in (0, 1)$
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Konsekuensi: model tidak menjelaskan mengapa households save fraction tertentu — diasumsikan. RCK (Bab 12) akan memperbaiki ini dengan optimisasi household.*
-
+```
 ## Konsep 2 — Production Function dan Property-Property
 
 *Foundation ekonomi Solow-Swan.*
@@ -56,16 +57,17 @@ $$ F (A, K, L) = K(AL)^{\alpha1-\alpha },0 <\alpha < 1 $$
 
 Bentuk "labor-augmenting" (Harrod-neutral) — $A$ menggandakan $L$.
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Mengapa $0 < \alpha < 1$ wajib:
+**Mengapa $0 < \alpha < 1$ wajib**
 
-$\alpha > 1F$: $_{KK} >0$ (increasing returns dalam $K$) → modal meledak, tidak ada steady
+$\alpha > 1$: $F_{KK} >0$ (increasing returns dalam $K$) → modal meledak, tidak ada steady
 
-*state $\alpha = 1$: linear dalam $K$ (AK model) → growth eksponensial, capital share = 100% (tidak realistis) $\alpha < 0F$: $_{K} <0$ (modal mengurangi output) → tidak masuk akal ekonomi*
+*state $\alpha = 1$: linear dalam $K$ (AK model) → growth eksponensial, capital share = 100% (tidak realistis) $\alpha < 0$: $F_{K} <0$ (modal mengurangi output) → tidak masuk akal ekonomi*
 
 *Hanya $\alpha \in (0, 1)$ yang menghasilkan dinamika Solow-Swan realistik.*
-
+```
 ## Konsep 3 — Exercise 9.1 dan 9.2 — Properti Teknis Production
 
 *Bukti formal yang mendukung Property 9.1.*
@@ -92,7 +94,7 @@ Karena $F$ concave dalam $Kf(k) = F (k, 1)$, juga concave dalam. $k$
 
 #### **Step 4** Definisikan berat efektif $\mu$
 
-Misalkan $K_{\lambda } =\lambda K_{1} +(1 -\lambda)K_{2}L$, $_{\lambda } =\lambda L_{1} +(1 -\lambda)L_{2}$.
+Misalkan $K_{\lambda } =\lambda K_{1} +(1 -\lambda)K_{2}$, $L_{\lambda } =\lambda L_{1} +(1 -\lambda)L_{2}$.
 
 Definisikan $\mu = \lambda L_{1}/L_{\lambda }$. Cek: $K_{\lambda }/L_{\lambda } =\mu (K_{1}/L_{1}) +(1 -\mu)(K_{2}/L_{2})$.
 
@@ -158,12 +160,13 @@ $F_{K} =\alpha K^{\alpha-1}(AL)^{1-\alpha }$, jadi $F_{K}^{K=\alpha K(AL)} \cdot
 
 Jumlah: $F_{K}K +F_{L}L =\alpha F+ (1 -\alpha)F= F$ ✓
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 *Implikasi ekonomi: total output sama dengan jumlah pembayaran ke faktor produksi. Tidak ada "extra profit" — perfect competition dengan CRS membuat firms zero economic profit.*
 
 *Inilah mengapa ownership structure tidak penting di Solow-Swan: tidak ada surplus untuk dibagi.*
-
+```
 ## Konsep 4 — Competitive Equilibrium dan Market Clearing
 
 *Definition 9.2, Exercise 9.5, dan mengapa market clearing penting.*
@@ -174,12 +177,13 @@ Lintasan $(K, L)(t)$ dan $(w, R)(t)$ yang memenuhi:
 
 1. Capital market clear: $K(t) =\bar{K}(t)$ (Eq 9.7)
 2. Labor market clear: $L(t) =\bar{L}(t)$ (Eq 9.8)
-3. Harga = marginal product: $R= F_{K}^{w=F}$, $_{L}$ (Eq 9.5-9.6)
+3. Harga = marginal product: $R=F_{K}$, $w=F_{L}$ (Eq 9.5-9.6)
 4. Akumulasi: $K^{ˉ˙}=I-\delta \bar{K}$ (Eq 9.2)
 
 ## Mengapa market clearing penting?
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan kritismu: "Mengapa memang kalau market tidak clear, apa dampaknya di Solow-Swan?"
 
@@ -193,11 +197,12 @@ Pengangguran (excess supply labor): labor produktif tidak dipakai. Output di baw
 
 Solow-Swan asumsi market clearing sebagai bagian definisi equilibrium. Kita tidak mempelajari disequilibrium — model hanya bicara tentang equilibrium path.
 
-## Walras' Law — pasar barang akhir clear "for free"
+**Walras' Law — pasar barang akhir clear "for free"**
 
 Setelah modal dan labor clear, pasar barang akhir otomatis clear:
 
 $$ Y= C+ I= (1 -s)Y+ sY= Y ✓ $$
+```
 
 Inilah Walras' Law: kalau $n -1$ pasar clear, pasar terakhir otomatis clear.
 
@@ -223,14 +228,15 @@ $$ \dot{K}=sF (A, K, L) -\delta K $$
 
 Plus labor market clearing $L = \bar{L}$ (Eq 9.8). Selesai.
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Mengapa "sufficient"? Karena semua variabel lain bisa diturunkan dari $(K, L)$:*
 
 *$Y= F(A, K, L)$ — substitusi langsung $w= F_{L}, R=F_{K}$ — substitusi langsung $C= (1 -s)YI= sY$, — dari savings rule*
 
 *Dimensionalitas efektif Solow-Swan: 1. Inilah kenapa tractable.*
-
+```
 ## Konsep 5 — Exercise 9.6 — Derivation ODE Per-Worker
 
 *Dari ODE level ke ODE per-worker dengan population growth.*
@@ -339,16 +345,17 @@ Pakai rule untuk fungsi $\bar{k}(s, A, n, \delta) =(sA/(n + \delta))^{1/(1-\alph
 
 $\partial \bar{K}/\partial S> 0$. Saving naik → modal lebih banyak di steady state.
 
-$_{\partialK}^{ˉ}_{/\partialA}> 0$. Tech lebih tinggi → modal lebih produktif → akumulasi lebih banyak.
+$\partial\bar{k}/\partial A > 0$. Tech lebih tinggi → modal lebih produktif → akumulasi lebih banyak.
 
-$_{\partialK}^{ˉ}_{/\partialN}< 0$. Populasi tumbuh lebih cepat → dilusi lebih kuat → modal per worker turun.
+$\partial\bar{k}/\partial n < 0$. Populasi tumbuh lebih cepat → dilusi lebih kuat → modal per worker turun.
 
-$_{\partialK}^{ˉ}_{/\partial\Delta }< 0$. Depreciation lebih cepat → modal lebih cepat hancur → steady state lebih rendah.
+$\partial\bar{k}/\partial\delta < 0$. Depreciation lebih cepat → modal lebih cepat hancur → steady state lebih rendah.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Latihan yang baik: derive keempat partial derivatives dan pastikan tandanya konsisten
-
+```
 ## Konsep 7 — Transitional Dynamics dan Rate of Convergence
 
 *Inti Section 9.4 — dengan mekanik rate of convergence step-by-step (sesuai permintaanmu).*
@@ -385,10 +392,11 @@ Phase line Solow-Swan dalam $(k,)\dot{k}$ space. Kurva hijau adalah $G(k)$. Stea
 
 ## Rate of convergence — mekanik step-by-step
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Pertanyaan utama: seberapa cepat konvergen ke? $k\bar{k}$ Strategi: linearisasi ODE di → ODE linear → solve eksplisit → half-life. $\bar{k}$*
-
+```
 ### Linearisasi
 
 **Step 1** Taylor expansion $G(k)$ di $\bar{k}$
@@ -475,16 +483,18 @@ $$ ∣G ()∣=^{'}\bar{k}(2/3)(0.08) \approx 0.053 $$
 
 $t_{1/2} =0.693/0.053 \approx 13$ tahun
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Interpretasi: deviation dari steady state berkurang separuh setiap ~13 tahun. Untuk OECD parameter ($\alpha = 0.33, n + g + \delta = 0.06$): half-life ~17 tahun. Konsisten dengan pemulihan pasca-perang Jerman/Jepang.*
-
+```
 ## Insight metakognitif
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Titik bingung yang umum: perhitungan rate of convergence. Kuncinya: $\tilde{k}$ (tilde) adalah nama variabel baru untuk deviasi dari steady state, bukan $k$ yang lama.
-
+```
 ## Konsep 8 — Perpetual Growth — Section 9.5
 
 ### Bagaimana mendapat pertumbuhan permanen?
@@ -533,10 +543,11 @@ Asumsi BGP: semua growth rate konstan (yaitu $g_{K}, g_{Y}, g_{C}$ tidak berubah
 
 ## Fakta matematis kunci
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Fakta: kalau $X/Y$ konstan, maka $g_{X} =g_{Y}$.*
-
+```
 ### Bukti step-by-step:
 
 *1. Asumsi: $X/Y= c$ (konstan). Tulis: $X= cY$. 2. Turunkan: $\dot{X}=c\dot{Y}$. 3. Bagi dengan $X$: $\dot{X}/X=c\dot{Y}/X$. 4. Substitusi $X= cY$: $\dot{X}/X=c\dot{Y}/(cY)=\dot{Y}/Y$. 5. Yaitu $g_{X} =g_{Y}$. QED.*
@@ -621,14 +632,15 @@ Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
 ## Mengapa hanya $A_{L}$?
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Argumen inti: $K/Y$ sudah konstan dalam BGP (dari resource constraint). Yang bermasalah adalah $L/Y$ — karena $L$ tumbuh dengan tapi $nY$ tumbuh dengan $g_{Y} >$ $n$.*
 
 *Tech harus memperbaiki sisi yang bermasalah, yaitu sisi $L$. Itulah mengapa hanya labor-augmenting (Harrod-neutral) yang bekerja.*
 
 *Asimetri ekonomi: $K$ adalah variabel endogenous (menyesuaikan lewat investment), $L$ adalah variabel exogenous (tetap di rate). Tech harus menyentuh sisi yang tidak bisa $n$ menyesuaikan.*
-
+```
 ## Konsep 10 — Exercise 9.14 — Verifikasi CES
 
 *Cek tiga jenis tech untuk CES production function.*
@@ -741,14 +753,15 @@ Tech maju. Realistis. ✓
 
 Capital share = $\gamma /[\gamma + (1 -\gamma)(A_{L}L/K)]^{\sigma }$. Karena $A_{L}L/K$ konstan, capital share konstan ✓
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Untuk CES non-Cobb-Douglas:
+**Untuk CES non-Cobb-Douglas**
 
 *Hicks-neutral: gagal (capital share non-konstan) Solow-neutral: gagal (butuh negative tech growth) Harrod-neutral: berhasil✓*
 
 *Uzawa BGP terverifikasi untuk CES.*
-
+```
 ## Konsep 11 — Exercise 9.15 — Cobb-Douglas Equivalence
 
 *Mengapa Cobb-Douglas "menyembunyikan" distinction antara Hicks/Solow/Harrod.*
@@ -795,20 +808,22 @@ Aljabra: Cobb-Douglas multiplicatively separable. Tech apa pun yang masuk hanya 
 
 Elasticity: Cobb-Douglas punya elasticity of substitution = 1 (unit elasticity). Tidak ada bias terhadap input mana yang "diperkuat". Maka ketiga tech equivalent.
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 *Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk $\sigma =0$ generic, ketiga jenis tech tidak equivalent.*
-
+```
 ## Konsep 12 — Tension: Uzawa vs Cobb-Douglas vs Data
 
 *Pertanyaan kritismu — mengapa Uzawa tetap penting meski data konsisten dengan Cobb-Douglas.*
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaanmu: "Tapi data yang ada menunjukkan hubungan fungsi produksi Cobb-Douglas kan?"
 
 Iya, data kompatibel dengan Cobb-Douglas (capital share ~30-40% relatif konstan, elasticity $\approx 1$). Tapi ini tidak membuat Uzawa BGP irrelevant.
-
+```
 ## Tiga resolusi tension
 
 ### Resolusi 1 — Cobb-Douglas adalah idealisasi knife-edge
@@ -843,12 +858,13 @@ Aproksimasi yang cukup baik untuk pelajaran dasar
 
 Memudahkan pemahaman konsep tanpa kompleksitas functional form
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Pelajaran metodologis: model adalah simplifikasi yang berguna, bukan deskripsi reality.*
 
 *Cobb-Douglas berguna tapi bukan final answer. Ekonom yang baik selalu sadar batas model.*
-
+```
 ## Implikasi praktis
 
 Pertanyaan yang mungkin muncul:
@@ -953,10 +969,11 @@ Strukturnya sama, hanya $n + \delta$ jadi $n + g + \delta$.
 
 $Y /L = Af(k)$. Di BGP, $f()\bar{k}$ konstan, jadi $Y /L$ tumbuh dengan rate. $g$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Inilah sumber perpetual growth di Solow-Swan modern: per capita income tumbuh dengan rate tech progress. Tanpa tech, ekonomi stuck di steady state level. $g$*
-
+```
 ## Konsep 14 — Exercise 9.17 — Comparative Dynamics
 
 *Exercise paling penting di Bab 9. Pijakan untuk memahami phase plot dan dampak parameter shock.*
@@ -973,19 +990,20 @@ $$
 
 ### Mengapa $(k,/k)\dot{k}$ lebih informatif
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 $\dot{k}/k$ adalah growth rate modal per effective worker — lebih intuitif secara ekonomi.
 
-### Phase plot ini menunjukkan dua kekuatan secara terpisah:
+**Phase plot ini menunjukkan dua kekuatan secara terpisah**
 
 *$sf(k)/k$: kekuatan akumulasi (kurva menurun, dari Inada) $(n + g + \delta)$: kekuatan pelarutan (garis horizontal konstan)*
-
+```
 ### Bentuk $sf(k)/k$ untuk Cobb-Douglas
 
 $f(k) = k^{\alpha }$, jadi $sf(k)/k = sk^{\alpha-1}$.
 
-Saat $k \to 0sk$: $^{\alpha-1}\to \infty$ (dari Inada, $\alpha -1 < 0$) Saat $k \to \infty sk$: $^{\alpha-1}\to 0$
+Saat $k \to 0s$: $k^{\alpha-1}\to \infty$ (dari Inada, $\alpha -1 < 0$) Saat $k \to \infty s$: $k^{\alpha-1}\to 0$
 
 Fungsi menurun monoton
 
@@ -1037,10 +1055,11 @@ k k̄'k̄
 
 Shock naik: garis horizontal naik dari $gn + g + \delta$ ke $n + g+^{'}\delta$. Steady state bergeser dari ke $\bar{k}$ $\bar{k}^{'}<\bar{k}$.
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Hasil paradoksal Shock 1: naik → turun, tapi growth rate per capita income naik. $g\bar{k}$ Pelajaran: rendah bukan berarti ekonomi buruk. Yang penting adalah growth rate, $\bar{k}\tilde{y}$
-
+```
 ### bukan level. $\bar{k}$
 
 ### Shock 2: menurun permanen $n$
@@ -1097,19 +1116,17 @@ Di BGP baru: growth rate kembali ke, tapi level lebih rendah. $g$
 
 ## Ringkasan tiga shock
 
-**Shock** — $\bar{k}$ | Level di BGP | Growth rate di BGP $\tilde{y}\tilde{y}$
-
-$G$ `NAIK` turun | kompleks (selama transisi turun, lalu tumbuh cepat) | naik
-
-$N$ `TURUN` naik | naik | tetap (=) $g$
-
-$\Delta$ `NAIK` turun | turun | tetap (=) $g$
+| Shock | $\bar{k}$ | Level $\tilde{y}$ di BGP | Growth rate per kapita di BGP |
+|---|---|---|---|
+| $g$ naik | turun | kompleks (selama transisi turun, lalu tumbuh lebih cepat) | **naik** |
+| $n$ turun | naik | naik | tetap ($=g$) |
+| $\delta$ naik | turun | turun | tetap ($=g$) |
 
 ## Insight ekonomi besar
 
 **Ringkasan Besar**
 
-### Level effects vs Growth effects:
+**Level effects vs Growth effects**
 
 *Perubahan $s, n, \delta$: hanya level effects — level steady state berubah, growth rate jangka panjang tidak Perubahan: growth effects — growth rate jangka panjang berubah $g$*
 
@@ -1133,14 +1150,15 @@ Inilah mengapa Solow menyebut tech progress sebagai "manna from heaven" — di m
 
 ## Tiga hasil paling penting
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Hasil 1 — Solow-Swan konvergen: dari sembarang $k_{0} >0$, ekonomi konvergen secara monoton ke $\bar{k}>0$. Half-life ~13-17 tahun untuk parameter realistik.*
 
 *Hasil 2 — Hanya tech yang mempertahankan long-run growth: per capita income tumbuh dengan rate di BGP. Tanpa tech ($gg= 0$), tidak ada long-run growth.*
 
 *Hasil 3 — Uzawa BGP restriction: untuk konsisten dengan Kaldor facts, tech harus labor-augmenting (Harrod-neutral).*
-
+```
 ## Tiga deficiency Solow-Swan
 
 $g$ "manna from heaven" — model tidak menjelaskan dari mana tech
@@ -1208,13 +1226,15 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 
 ✦✦✦
 
-**Penutup**
+```{admonition} Penutup
+:class: important
 
 Bab 9 adalah foundation untuk seluruh sisa kursus. Hampir setiap bab setelah ini (10, 12, 14, 15) build di atas Solow- Swan.
-
-**Ringkasan Besar**
+```
+```{admonition} Ringkasan besar
+:class: important
 
 *1. Derivation step-by-step: bisa derive ODE per-worker dengan population growth dan dengan tech 2. Steady state analysis: hitung, comparative statics $\bar{k}$ 3. Phase plot dan transitional dynamics: gambar dan jelaskan dampak shock parameter 4. Uzawa BGP intuition: mengapa labor-augmenting, asimetri $K$ vs $L$ 5. Connection ke empirics: rate of convergence ~13-17 tahun, half-life*
 
 Aturan yang sudah ditetapkan: derivation matematis selalu step-by-step, tidak lompat notasi. Ini akan dipakai konsisten untuk seterusnya.
-
+```

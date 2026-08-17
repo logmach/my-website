@@ -14,7 +14,7 @@ Teori murni. Setup, ODE, steady state, comparative statics, Uzawa BGP.
 
 **Bab 10** — Empirics: growth accounting, regresi convergence, MRW. Pertanyaannya: "Apa yang data katakan tentang model?"
 
-## Lima section dan apa yang masing-masing pelajari
+**Lima section dan apa yang masing-masing pelajari**
 
 **10.1 Growth Accounting** — Dekomposisi $g_{Y}$ ke kontribusi modal, labor, dan tech. Solow residual.
 
@@ -28,7 +28,7 @@ Teori murni. Setup, ODE, steady state, comparative statics, Uzawa BGP.
 
 **Ringkasan Besar**
 
-### Bab 10 menjawab dua pertanyaan besar:
+**Bab 10 menjawab dua pertanyaan besar**
 
 *1. Apa yang menjelaskan ketimpangan income antar negara? 2. Apakah Solow-Swan menjelaskan dinamika growth dengan baik?*
 
@@ -78,7 +78,7 @@ $$
 
 Inilah persamaan (10.1).
 
-## Mengapa $\alpha _{K}, \alpha _{L}$ disebut "income shares"?
+**Mengapa $\alpha _{K}, \alpha _{L}$ disebut "income shares"?**
 
 Di competitive equilibrium: $R= F_{K}, W=F_{L}$. Maka:
 
@@ -86,10 +86,11 @@ $F_{K}^{K=R\cdotK=} \cdot$ total capital income $F_{L}^{L=W\cdotL=} \cdot$ total
 
 Fraksi dari $Y$ yang ke modal = $\alpha _{K}$. Inilah interpretation "income share".
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 *Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, $R=F_{K}$, dan formula bisa misleading. Plus dengan Euler's Theorem (Exercise 9.2): $\alpha _{K} +\alpha _{L} =1$.*
-
+```
 ## Solow residual — TFP measurement
 
 Rearrange untuk solve $x(t)$:
@@ -100,10 +101,11 @@ Inilah persamaan (10.2) — Solow's growth accounting formula.
 
 Semua sisi kanan observable. Maka $x(t)$ — kontribusi TFP terhadap output growth — bisa di-back-out dari data.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Catatan Moses Abramovitz: Solow residual adalah "measure of our ignorance". Yang kita sebut "tech" sebenarnya bisa apa saja yang tidak masuk hitungan modal dan labor: innovation real, efficiency gains, mismeasurement, externalities, institutional change.
-
+```
 ## Exercise 10.1 — TFP growth untuk Cobb-Douglas
 
 Setup: $Y= K(AL)^{\alpha1-\alpha }$.
@@ -132,14 +134,15 @@ $$
 \frac{\dot{A}}{A}=\frac{1}{\alpha_{L}}\left[g_{Y}-\alpha_{K}\,g_{K}-\alpha_{L}\,g_{L}\right]
 $$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Untuk Cobb-Douglas labor-augmenting, TFP growth $\dot{A}/A$ adalah Solow residual dibagi*
 
 $\alpha _{L}$. Implikasi: kalau $\alpha _{L} =0.65$, TFP growth $= x(t)/0.65 \approx 1.54 \cdot x(t)$. Lebih
 
 *besar dari Solow residual.*
-
+```
 ## Exercise 10.2 — Measurement issues
 
 ### Issue 1: Time aggregation
@@ -148,10 +151,11 @@ Formula adalah continuous-time, tapi data discrete-time (annual). Tiga workaroun
 
 Asumsi Cobb-Douglas: $\alpha _{K}$ konstan, masalah time-varying share hilang Tornqvist index: pakai rata-rata income share $[\alpha _{K}(t) +\alpha _{K}(t +1)]/2$ Log approximation: $ln X_{t+1} -ln X_{t} \approx g_{X} \cdot \Delta t$
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Tornqvist tidak pakai dari Cobb-Douglas. Income share dihitung dari data observasi: $\alpha$ capital income / GDP. Untuk tiap tahun, hitung $\alpha _{K}(t)$ baru. Lebih fleksibel dari Cobb-
-
+```
 ### Douglas yang asumsi konstan. $\alpha$
 
 ### Issue 2: Mismeasurement input
@@ -174,7 +178,8 @@ Capital utilization fluktuasi
 
 ### Arah bias mismeasurement
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: "bagaimana mismeasurement bias estimasi TFP?"
 
@@ -189,7 +194,7 @@ $x^{measured}=3 -0.3(4) -0.7(1) = 1.1\%$
 Solow residual overestimate $∼0.7$ percentage points.
 
 Implikasi: tech "dapat credit" untuk labor quality improvement yang tersembunyi. Ini motivasi MRW (Section 10.4) — pisahkan human capital dari TFP.
-
+```
 ## Konsep 3 — Section 10.2 — Convergence Regression
 
 *Linearisasi ODE Solow-Swan untuk uji empiris konvergensi.*
@@ -206,16 +211,17 @@ $y:= Y /(AL) = f(k)$. Per effective worker. Konstan di BGP. Tidak
 
 $Y$ `(EFFECTIVE WORKER)`
 
-observable karena butuh $A$.
+observable karena butuh $$.
 
-$_{Y}^{~}$ `(PHYSICAL WORKER)` $\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y$. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). $g$
+$A_{Y}^{~}$ `(PHYSICAL WORKER)` $\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y$. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). $g$
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective $\cdot ^{~}$
 
 *worker (model). Bedanya: $\tilde{y} =A \cdot y$. Saat $A$ tumbuh, tumbuh meskipun konstan. $\tilde{y}y$*
-
+```
 ## Step 1 — Hubungkan growth ke growth $\tilde{y}k$
 
 **Step 1** Mulai dari $\tilde{y} =Af(k)$
@@ -268,7 +274,7 @@ Konstan, sama dengan capital share.
 
 ### Exercise 10.5 — Turunan $f(k)/k$
 
-Tunjukkan $_{dk}^{d}[^{f(k)}]_{k}=^{f(k)}_{k}^{2}[\varepsilon _{f}(k) -1]$.
+Tunjukkan $\frac{d}{dk}\left[\frac{f(k)}{k}\right]=\frac{f(k)}{k^{2}}\left[\varepsilon_{f}(k)-1\right]$.
 
 #### **Step 1** Quotient rule
 
@@ -284,7 +290,7 @@ $$ dkd[f(k)]k=f(k)[\varepsilon ^{f}k^{2}(k) -1] $$
 
 ### Exercise 10.6 — Differentiation trick
 
-Tunjukkan $_{dlnx}^{dy}=x \cdot _{dx}^{dy}$. Bukti via chain rule: misalkan $u = ln x$, jadi $x = e^{u}$. Maka $dx/du = e=^{u}x$. Pakai chain rule:
+Tunjukkan $\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}$. Bukti via chain rule: misalkan $u = ln x$, jadi $x = e^{u}$. Maka $dx/du = e=^{u}x$. Pakai chain rule:
 
 $$ dy=dy \cdot dx=x \cdot dy $$
 
@@ -294,7 +300,7 @@ $dudxdudx$
 
 Definisikan $G(k):=\dot{k}/k =sf(k)/k -(\delta + g + n)$.
 
-Di $k^{*}G(k) =$: $^{*}0$.
+Di $k^{*}$: $G(k^{*})=0$.
 
 Taylor expansion dalam $ln k$:
 
@@ -362,20 +368,21 @@ $\partial \beta /\partial (\delta + g + n) = (1 -\varepsilon _{f}) >0$: kalau $\
 
 ### Limit cases
 
-Ε $_{F} \to 1$ `(AK)` $\beta \to 0$. Tidak konvergen. Konsisten dengan Exercise 9.11.
+**$\varepsilon_{f} \to 1$ (kasus AK)** — $\beta \to 0$: tidak konvergen. Konsisten dengan Exercise 9.11.
 
-Ε $_{F} \to 0\beta \to (\delta + g + n)$. Konvergensi paling cepat.
+**$\varepsilon_{f} \to 0$** — $\beta \to (\delta+g+n)$: konvergensi paling cepat.
 
 $\Delta + G+ N\to 0\beta \to 0$. Tidak konvergen.
 
 ## Intuisi konvergensi
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: bagaimana mungkin depresiasi yang lebih cepat justru mempercepat konvergensi, dan capital share yang lebih besar justru memperlambatnya?
 
 Lebih dalam: "Jepang vs Amerika vs Zimbabwe — kenapa Jepang tumbuh cepat kalau Jepang tidak tinggi?" $\delta$
-
+```
 ### Pesan kunci — distinction $D(0)$ vs $\beta$
 
 Yang membuat Jepang tumbuh cepat pasca-perang BUKAN tinggi. Yang membuat Jepang tumbuh cepat adalah: $\beta$
@@ -394,14 +401,15 @@ Konsisten dengan growth Jepang ~7-10% per tahun selama 1950-1970.
 
 **Zimbabwe** — $D\approx 0$ atau positive. $y^{~*}$ rendah (institusi buruk). Growth ≈ (stuck). $g$
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
-### $\delta$ memainkan dua peran sekaligus:
+**$\delta$ memainkan dua peran sekaligus**
 
 *1. Menentukan steady state level: tinggi → $\delta k^{*}$ rendah 2. Menentukan convergence rate: tinggi → tinggi → konvergensi cepat $\delta \beta$*
 
 Untuk menjelaskan variasi cross-country growth, peran 1 ($y^{~*}$) dan posisi $D(0)$ lebih
-
+```
 ### dominan dari peran 2 (). $\beta$
 
 ## Reduced-form regression
@@ -486,10 +494,11 @@ $$ \dot{k}=s_{k}f(k, h) -(\delta _{k} +g + n)k $$
 
 Analog untuk. $\dot{h}$
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 *Awas: persamaan (10.11) di sebagian catatan mengandung typo — $k$ dan $h$ hilang di suku terakhir. Versi yang benar (konsisten secara dimensi) harus memuat keduanya.*
-
+```
 ## Exercise 10.13 — Steady state Cobb-Douglas
 
 Production function spesifik:
@@ -537,19 +546,12 @@ $$ y= \Lambda ^{*\alpha/(1-\alpha-\beta)}_{h} \cdot \Lambda ^{\beta/(1-\alpha-\b
 
 ### Comparative statics
 
-$_{SH}$ `NAIK` $y^{*}$ naik. Lebih banyak akumulasi human capital.
+- **$s_{h}$ naik** — $y^{*}$ naik: lebih banyak akumulasi human capital.
+- **$s_{k}$ naik** — $y^{*}$ naik: lebih banyak akumulasi physical capital.
+- **$g$ naik** — $\tilde{y}^{*}$ turun (per effective worker), tapi growth rate per kapita naik (analog Exercise 9.17).
+- **$\delta_{k}$ naik** — $y^{*}$ turun: physical capital cepat aus.
 
-$_{SK}$ `NAIK` $y^{*}$ naik. Lebih banyak akumulasi physical capital.
-
-$y^{*}$ turun (per effective worker). Tapi growth rate naik (analog $\tilde{y}$
-
-$G$ `NAIK`
-
-Exercise 9.17).
-
-$_{\DeltaK}$ `NAIK` $y^{*}$ turun. Physical capital cepat aus.
-
-$_{\DeltaH}$ `NAIK` $y^{*}$ turun. Human capital cepat memudar.
+- **$\delta_{h}$ naik** — $y^{*}$ turun: human capital cepat memudar.
 
 ## Konsep 5 — Exercise 10.14 — Nullcline Analysis Lengkap
 
@@ -557,14 +559,15 @@ $_{\DeltaH}$ `NAIK` $y^{*}$ turun. Human capital cepat memudar.
 
 ## Mengapa Exercise 10.14 sangat penting
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
-### Exercise 10.14 adalah template untuk semua analisis sistem 2D di kursus:
+**Exercise 10.14 adalah template untuk semua analisis sistem 2D di kursus**
 
 *Bab 12 (RCK): sistem $(k, c)$ Bab 14 (Romer): sistem $(k, A)$ Bab 15 (Schumpeterian): sistem $(k, n)$*
 
 Master nullcline analysis sekarang = master phase plane analysis untuk seluruh sisa kursus.
-
+```
 ## Setup — ODE map $T= (T_{k}, T_{h})$
 
 Sistem ODE dengan Cobb-Douglas $f(k, h) = kh^{\beta\alpha }$:
@@ -580,9 +583,9 @@ Notasi vector: $x = (k, h), T (x) =^{T}(T_{k}, T_{h}^{T})$, sistem $\dot{x}=T (x
 
 ## Definisi nullcline
 
-$_{K}$ `-NULLCLINE` $_{NK}$ Set titik $(k,h)$ di mana $\dot{k}=0$ (modal per effective worker tidak berubah). $N_{k} ={(k,h): T_{k}(k,h) =0}$.
+**$\dot{k}$-nullcline $N_{k}$** — Set titik $(k,h)$ di mana $\dot{k}=0$ (modal per effective worker tidak berubah). $N_{k} ={(k,h): T_{k}(k,h) =0}$.
 
-Set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker $^{H}$ `-NULLCLINE` $^{NH}$ tidak berubah). $N_{h} ={(k,h): T_{h}(k,h) =0}$.
+Set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker ($h = H/AL$) ($\dot{h}$-nullcline $N_{h}$) tidak berubah). $N_{h} ={(k,h): T_{h}(k,h) =0}$.
 
 **Steady State** — Perpotongan dua nullcline. Di mana $\dot{k}=\dot{h}=0$ simultan.
 
@@ -634,11 +637,11 @@ $$ h_{Nh}(k) =(\delta _{h} + g + ns^{h})^{1/(1-\alpha)}\cdot k^{\beta/(1-\alpha)
 
 ## Karakteristik kedua nullcline
 
-$N_{K}$ `SLOPE` $(1 -\beta)/\alpha$ — fungsi meningkat dalam, lewat origin $k$
+**Slope** — $N_{K}$ $(1 -\beta)/\alpha$ — fungsi meningkat dalam, lewat origin $k$
 
-$N_{H}$ `SLOPE` $\beta /(1 -\alpha)$ — fungsi meningkat dalam, lewat origin $k$
+**Slope** — $N_{H}$ $\beta /(1 -\alpha)$ — fungsi meningkat dalam, lewat origin $k$
 
-$(1 -\beta)/\alpha > \beta /(1 -\alpha)$ karena $1 -\alpha -\beta > 0N$. $_{k}$ lebih
+$(1 -\beta)/\alpha > \beta /(1 -\alpha)$ karena $1 -\alpha -\beta > 0$. $N_{k}$ lebih
 
 **Perbandingan** — curam dari $N_{h}$.
 
@@ -700,11 +703,11 @@ Phase plane Solow-Swan dengan human capital. $N_{k}$ (biru, curam) dan $N_{h}$ (
 
 $T_{k}$ adalah fungsi naik dalam (turunan $h\partial T_{k}/\partial h =s_{k}k\alpha h^{\beta\alpha-1}>0$):
 
-Di atas $N_{k}T$: $_{k} >0,\dot{k}>0, k$ naik Di bawah $N_{k}T$: $_{k} <0,\dot{k}<0, k$ turun
+Di atas $N_{k}$: $T_{k} >0,\dot{k}>0, k$ naik Di bawah $N_{k}$: $T_{k} <0,\dot{k}<0, k$ turun
 
 ### Tanda $\dot{h}$
 
-Pada $N_{h}\partial T$: $_{h}/\partial h =(\alpha -1)(\delta _{h} +g + n) < 0$ (karena $\alpha < 1$). Di atas $N_{h}T$: $_{h} <0,\dot{h}<0, h$ turun Di bawah $N_{h}T$: $_{h} >0,\dot{h}>0, h$ naik
+Pada $N_{h}\partial $: $T_{h}/\partial h =(\alpha -1)(\delta _{h} +g + n) < 0$ (karena $\alpha < 1$). Di atas $N_{h}$: $T_{h} <0,\dot{h}<0, h$ turun Di bawah $N_{h}$: $T_{h} >0,\dot{h}>0, h$ naik
 
 ### Tabel empat region
 
@@ -732,12 +735,13 @@ Lintasan tidak pernah memotong nullcline kecuali di steady state.
 
 ## Prosedur: menggambar phase plot
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Tugas tipikal: "draw the phase plot for Solow-Swan with human capital":
+**Tugas tipikal: "draw the phase plot for Solow-Swan with human capital"**
 
 *1. Tulis sistem ODE $\dot{k}\dot{h},$ 2. Derive nullcline $N_{k}$ dan $N_{h}$ secara eksplisit 3. Tentukan slope masing-masing dan verifikasi $N_{k}$ lebih curam 4. Gambar kedua nullcline mulai dari origin, berpotongan di $(k, h)^{**}$ 5. Tentukan tanda $\dot{k}\dot{h},$ di setiap dari 4 region 6. Gambar arrow di setiap region 7. Tunjukkan lintasan IVP dari initial condition konvergen ke steady state*
-
+```
 ## Proposition 10.2 — Global stability
 
 Untuk sembarang $(k_{0}, h_{0}) \in R^{2}_{++}$, lintasan konvergen ke $(k, h)^{**}$. Dari analisis empat region, semua vector mengarah ke steady state.
@@ -799,11 +803,12 @@ $$ ln\tilde{y}_{j}^{*}(t) =ln\bar{A}_{j} +gt +1 -\alpha -\beta \beta ln(n_{j} + 
 
 ## Sumber data untuk regresi MRW
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: dari mana data human capital — termasuk saving dan depresiasinya — bisa diperoleh?
 
-$_{Y}^{~}_{J}$ Penn World Tables (PWT) — GDP per worker
+$\tilde{y}_{j}$ Penn World Tables (PWT) — GDP per worker
 
 $S_{K,J}$ Investment-to-GDP ratio rata-rata (dari PWT atau national accounts)
 
@@ -812,7 +817,7 @@ $S_{H,J}$ Secondary school enrollment rate (UNESCO atau World Bank WDI)
 $N_{J}$ Population growth rate (World Bank, PWT)
 
 $\Delta _{K}, \Delta _{H}, G$ Asumsi konstan: $\delta _{k} =\delta _{h} =3\%g= 2\%$, untuk semua negara
-
+```
 ### Modern human capital index
 
 PWT 10.0 punya human capital index $hc$ dikonstruksi dari years of schooling lewat Mincerian return:
@@ -841,14 +846,15 @@ MRW asumsi: $\bar{A}_{j} =A \cdot \varepsilon _{j}$ dengan $\varepsilon _{j}$ or
 
 **Implied** — Α0.28 — human capital share di income
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Tanpa human capital (Solow standar): $R\approx ^{2}0.59$. Dengan human capital: $R=^{2}0.78$.
 
 *Penambahan human capital menambah ~20 percentage points explanatory power.*
 
 *Implikasi: TFP residual yang sebelumnya 41% berkurang ke 22%. Banyak "tech" sebelumnya ternyata adalah human capital tersembunyi.*
-
+```
 ## Konsep 7 — Hubungan ke Model-Model Lain
 
 *Bagaimana MRW, RCK, dan Peters memecahkan deficiency Solow secara berbeda.*
@@ -875,26 +881,28 @@ Optimisasi household. Pecahkan deficiency 1: jadi endogenous. Keep $s$
 
 ## Insight metakognitif
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: apakah RCK dan Peters memakai human capital?
 
 Jawaban: tidak. RCK fokus optimisasi saving, Peters fokus misallocation. Mereka memecahkan deficiency berbeda dari MRW.
 
 Lucas (1988) menggabungkan RCK + human capital, tapi ini di luar kurikulum Economic Growth. Setiap model adalah aspek parsial dari research program besar — membongkar black box $A$ dari berbagai angle.
-
+```
 ## Pelajaran filosofis untuk research
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Pertanyaan lanjutan yang wajar: untuk analisis atau penelitian, apakah kita harus mencari data yang tidak bias?*
 
-### Jawaban: tidak mungkin. Semua data ekonomi punya bias. Yang penting:
+**Jawaban: tidak mungkin. Semua data ekonomi punya bias. Yang penting**
 
 *Tahu sumber bias (mismeasurement, selection, time aggregation) Tahu arah bias (overstate atau understate) Sensitivity analysis: estimasi dengan multiple proxy Triangulation: pakai multiple methods untuk cross-check Transparency: eksplisit sebutkan limitations di paper*
 
 *Model dan data saling memperbaiki, tapi tidak ada yang sempurna. Inilah iterative research program.*
-
+```
 ## Konsep 8 — Section 10.5 — Discussion (Exercise 10.17)
 
 *Pertanyaan terbuka tentang batas MRW dan transisi ke endogenous growth.*
@@ -996,7 +1004,8 @@ Bab 14-15: Endogenous growth — buka black box tech
 
 ✦✦✦
 
-**Penutup**
+```{admonition} Penutup
+:class: important
 
 Bab 10 memperkenalkan empat tools kunci yang akan dipakai sepanjang sisa kursus:
 
@@ -1004,10 +1013,11 @@ Bab 10 memperkenalkan empat tools kunci yang akan dipakai sepanjang sisa kursus:
 2. Linearisasi di steady state — convergence equation
 3. Nullcline analysis — phase plane 2D (template untuk RCK, Romer, Schumpeterian)
 4. Cross-country regression — empirics framework
-
-**Ringkasan Besar**
+```
+```{admonition} Ringkasan besar
+:class: important
 
 *1. Derivation: konvergensi (10.8), nullcline (Exercise 10.14), MRW formula (Exercise 10.15) 2. Gambar phase plane: template 7-step di atas (Exercise 10.14) 3. Intuisi rate of convergence: distinction $D(0)$ vs $\beta$ 4. Empirics: sumber data MRW dan issues measurement 5. Diskusi konseptual: 8 issues + 6 cara relax (Exercise 10.17)*
 
 Aturan yang sudah ditetapkan: derivasi matematis selalu step-by-step, tidak lompat notasi. Ini akan dipakai konsisten untuk seterusnya.
-
+```

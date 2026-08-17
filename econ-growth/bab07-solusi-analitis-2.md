@@ -31,12 +31,13 @@ $\dot{x}_{1}$ tergantung $x_{2}$, $\dot{x}_{2}$ tergantung $x_{1}$. Tidak bisa s
 
 ## Strategi Bab 7 — decoupling lewat diagonalisasi
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Idenya: ubah ke koordinat di mana sistem menjadi diagonal (independent). Solve di koordinat baru, lalu kembalikan ke koordinat asli.*
 
 *Tools yang membuat ini bekerja: eigenvalue dan eigenvektor.*
-
+```
 ## Konsep 2 — Eigenvalue dan Eigenvektor
 
 *Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.*
@@ -63,26 +64,28 @@ Ini disebut persamaan karakteristik.
 
 ## Formula 2D yang sering dipakai
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Untuk matriks $2 \times 2$:
+**Untuk matriks $2 \times 2$**
 
 $$ \lambda -^{2}tr(A) \cdot \lambda + det(A)= 0 $$
-
+```
 ### di mana:
 
 ### $tr(A)= a_{11} +a_{22}$ (jumlah diagonal)
 
 $$ det(A)= a_{11}a_{22} -a_{12}a_{21} $$
 
-**⚠️ Jebakan umum**
+```{admonition} ⚠️ Jebakan umum
+:class: warning
 
 Jebakan umum: salah menghitung trace untuk matriks:
 
 Trace = $-1 + (-1) = -2$, bukan. Kesalahan ini menyebar ke seluruh perhitungan dan menghasilkan $0$ klasifikasi "center" padahal seharusnya "stable spiral".
 
 Habit yang harus dibangun: sebelum lanjut, double-check entri diagonal. Trace = $a + d$ (kiri atas + kanan bawah), bukan $b + c$.
-
+```
 ## Mengapa "real part" penting
 
 Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung
@@ -93,10 +96,11 @@ $$ e\lambda t=e\alpha t[cos(\beta t) + i sin(\beta t)]\cdot $$
 
 $e^{\alpha t}$: magnitude — eksponensial growth/decay $cos(\beta t) + i sin(\beta t)$: rotation — osilasi periodik dengan amplitudo 1
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Hanya $\alpha$ yang menentukan apakah magnitude tumbuh atau mengecil. hanya memberi oscillation. Maka $\beta$ stability tergantung tanda $\alpha$ (real part), bukan eigenvalue penuh.
-
+```
 ## Konsep 3 — Multiplicity — Per Eigenvalue, Bukan Total
 
 *Konsep yang sering disalahpahami — mari luruskan. Sangat penting untuk Bab 7.*
@@ -107,7 +111,8 @@ Hanya $\alpha$ yang menentukan apakah magnitude tumbuh atau mengecil. hanya memb
 
 **Geometric Mult (gm)** — Jumlah eigenvektor independent untuk eigenvalue tertentu. Sama dengan dimensi eigenspace.
 
-**⚠️ Jebakan umum**
+```{admonition} ⚠️ Jebakan umum
+:class: warning
 
 Jebakan umum: mengira multiplicity dihitung secara total:
 
@@ -118,17 +123,18 @@ Jebakan umum: mengira multiplicity dihitung secara total:
 Ini salah. Multiplicity adalah per eigenvalue. Setiap eigenvalue punya AM dan GM sendiri-sendiri.
 
 Yang benar: multiplicity dihitung *per eigenvalue*. Reflex yang harus terbangun: cek tiap eigenvalue secara terpisah.
-
+```
 ## Aturan diagonalisasi-able
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### $A$ diagonalisasi-able jika dan hanya jika:
+**$A$ diagonalisasi-able jika dan hanya jika**
 
 *Untuk SETIAP eigenvalue, AM = GM.*
 
 *Kalau ada satu saja eigenvalue dengan GM < AM, matriks tidak diagonalisasi-able.*
-
+```
 ## Empat kasus utama
 
 Kasus 1 — Distinct eigenvalues: `A = [ -2 1 ]` `[ 0 -3 ]`
@@ -141,7 +147,8 @@ Kasus 2 — Repeated dengan eigenvektor cukup:
 
 Eigenvalue: (AM = 2). $3(A -3I)$ adalah matriks nol → semua vektor adalah eigenvektor → GM = 2. Diagonalisasi-able.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Jebakan umum untuk matriks ini: menyimpulkan "tidak ada eigenvektor". Yang benar: matriks nol
 
@@ -160,6 +167,7 @@ Kasus 4 — Contoh soal $3 \times 3$:
 `A = [ 4 1 0 ]` `[ 0 4 0 ]` `[ 0 0 2 ]`
 
 Hasil:
+```
 
 $\lambda = 4$: AM = 2, GM = 1 (karena entri 1 di posisi (1,2)) $\lambda = 2$: AM = 1, GM = 1
 
@@ -197,46 +205,50 @@ dengan suku $te^{\lambda t}$.
 
 Untuk eigenvalues $\lambda _{1}, \lambda _{2}$ dengan eigenvektor $v_{1}, v_{2}$:
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### General solution (Equation 7.11):
+**General solution (Equation 7.11)**
 
 $$ x(t)= c_{1}e^{\lambda1t}v_{1} +c_{2}e^{\lambda2t}v_{2} $$
 
 Interpretasi: kombinasi linear dari "straight-line solutions". Setiap suku $c_{i}^{\lambda }ei^{t}v_{i}$ adalah lintasan sepanjang arah eigenvektor $v_{i}$ dengan magnitude tumbuh/decay secara eksponensial.
-
+```
 ## Kasus 2 — Complex (Section 7.1.3)
 
 Untuk eigenvalues $\lambda = \alpha \pm i\beta$:
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $cos(\beta t), sin(\beta t)$ (rotation). Hasilnya:
 
 *$\alpha < 0, \beta =0$: stable spiral (focus) $\alpha > 0, \beta =0$: unstable spiral $\alpha = 0, \beta =0$: center (orbit periodic)*
 
 Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
-
+```
 ## Kasus 3 — Repeated (Section 7.1.4)
 
 Untuk eigenvalue dengan AM = 2 tapi GM = 1: $\lambda$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### General solution (Equation 7.14):
+**General solution (Equation 7.14)**
 
 $$ x(t)= e(c^{\lambda t}_{1}v +c_{2}w) +te(c^{\lambda t}_{2}v) $$
 
 *dengan eigenvektor, $vw$ generalized eigenvector ($w$ memenuhi $(A -\lambda I)w = v$).*
 
 Yang baru: suku $te^{\lambda t}$ — polynomial growth karena kekurangan eigenvektor independent.
-
-**💡 Insight**
+```
+```{admonition} 💡 Insight
+:class: tip
 
 Mengapa muncul faktor? Karena sistem dalam koordinat baru adalah recursive: $t\dot{y}_{1} =\lambda y_{1} +y_{2}$ dengan $y_{2} =c_{2}^{\lambda t}e$. Forcing-nya resonan dengan solusi homogen → particular solution berbentuk $te^{\lambda t}$.
 
 Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay menang atas polynomial growth ($te^{\lambda t}\to 0$).
-
+```
 ## Kasus Konkret 1 — Example 7.4 — Distinct Real Eigenvalues
 
 *Aplikasi penuh formula Equation 7.11 ke contoh nyata.*
@@ -273,12 +285,13 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 
 ## Insight
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 *Kondisi awal $(0.1, 0.1)$ kebetulan sejajar dengan eigenvektor $v_{1}$. Maka lintasannya straight-line — hanya mode pertama yang aktif.*
 
 *Untuk kondisi awal lain (misal $(1, 0)$), kedua mode akan aktif dan lintasan bukan garis lurus.*
-
+```
 ## Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues
 
 ### Contoh kasus: matriks dengan trace
@@ -355,12 +368,13 @@ Untuk parameter realistik ($\alpha = 0.33, n + g + \delta = 0.06$):
 
 $∣G ()∣=^{'}\bar{k}0.67 \times 0.06 = 0.04$ per tahun Half-life: $ln 2/0.04 \approx 17$ tahun
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Inilah prediksi konkrit: ekonomi yang tergeser dari steady state (misal pasca-perang) akan
 
 *butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.*
-
+```
 ## Aplikasi ke RCK
 
 Sistem 2D nonlinear dengan $(k, c)$:
@@ -375,22 +389,24 @@ Implikasi mendalam:
 
 Komponen $c_{2}^{\lambda }e^{2t}v_{2}$ dengan $\lambda _{2} >0$ meledak → harus pilih $c_{2} =0$ (transversality) Solusi efektif: hanya komponen sepanjang $v_{1}$ — saddle path Untuk tiap $k_{0}$, ada satu $c_{0}$ yang benar (di saddle path) Eigenvektor $v_{1}$ memberi slope policy function $c = c(k)$ dekat steady state
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Tanpa eigenvektor analysis, kita tidak bisa karakterisasi saddle path. Ekonomi tidak bisa di-solve dengan benar.*
 
 *Eigenvalue + eigenvektor = inti analisis dinamika di growth theory.*
-
+```
 ## Konsep 6 — Eksistensi vs Ekspresibilitas Solusi
 
 *Pertanyaan tajam: mengapa tidak bisa solve ODE-nya secara eksplisit? Apakah karena $C$ tidak bisa ditemukan?*
 
 ## Jawaban: bukan karena C
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.*
-
+```
 ## Picard-Lindelöf menjamin eksistensi
 
 Untuk Solow-Swan $\dot{k}=sk-^{\alpha }\delta k$ dengan $k > 0$:
@@ -411,28 +427,30 @@ Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progr
 
 **Skenario 3** — memberi insight. Jarang, biasanya melibatkan fungsi spesial.
 
-## Mengapa "linearisasi + eigenvalue" jadi alat utama
+**Mengapa "linearisasi + eigenvalue" jadi alat utama**
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
-### Karena ODE growth theory tidak bisa di-solve eksplisit, kita pakai:
+**Karena ODE growth theory tidak bisa di-solve eksplisit, kita pakai**
 
 *1. Linearisasi di steady state (lewat Jacobian) — Bab 5 2. Eigenvalue + eigenvektor dari Jacobian — Bab 7 3. Hartman-Grobman membenarkan ini secara formal — Bab 5*
 
 Hasilnya: insight kuantitatif lokal (rate of convergence, saddle path, klasifikasi) tanpa perlu
 
 *formula eksplisit.*
-
+```
 ## Insight metakognitif
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaanmu menyentuh hal fundamental dalam matematika applied:
 
 "Eksistensi solusi ≠ ekspresibilitas dalam fungsi elementer."
 
 Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah yang melibatkan struktur aljabar fungsi $G$. Inilah mengapa numerik, qualitative, dan linearisasi menjadi alat penting — bukan karena malas, tapi karena formula eksplisit memang sering tidak ada.
-
+```
 **SELF-CHECK**
 
 ## Checklist Pemahaman Bab 7
@@ -471,12 +489,13 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 
 Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
-### Yang sudah dikuasai dari bab ini:
+**Yang sudah dikuasai dari bab ini**
 
 *Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus*
-
+```
 ## Yang menanti
 
 Bab 8 — Qualitative Analyses: phase diagrams, nullclines, klasifikasi geometris tanpa solve eksplisit

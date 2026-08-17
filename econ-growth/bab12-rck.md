@@ -16,14 +16,15 @@ Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving ra
 
 ### Tiga pendekatan Bab 12
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Bab 12 punya tiga representasi:
 
 1. Planner's problem (12.2): Pareto optimum, centralized
 2. Competitive equilibrium (12.3): market solution, decentralized
 3. Welfare theorems (12.4): planner = competitive equilibrium
-
+```
 ### Switch notasi dari Bab 11
 
 **$h \to u$** — Momentary payoff jadi utility
@@ -68,12 +69,13 @@ dengan ρ > 0 subjective rate of time preference.
 
 **Control $c$** — Konsumsi. Dipilih bebas tiap saat, jump variable.
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Setup minimal: hanya empat objek menentukan model — u(c), f(k),
 
 ρ, δ. Itulah keindahan RCK.
-
+```
 ## Konsep 3 — Section 12.2 — Planner's Problem
 
 *Benevolent planner sebagai benchmark Pareto optimum.*
@@ -84,12 +86,13 @@ $$
 \rho V(k)=\max_{c}\bigl\{u(c)+V_{k}\bigl[f(k)-\delta k-c\bigr]\bigr\}
 $$
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Interpretasi asset pricing: required return (ρV) = dividend (u(c)) +
 
 capital gain (Vk\dot{k}).
-
+```
 ### Present-value Hamiltonian (12.4)
 
 $$
@@ -146,12 +149,13 @@ $$
 
 ### Keynes-Ramsey = Euler-Lagrange
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Dua observasi lanjutan yang layak dielaborasi:
 
 Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus of variations (Euler-Lagrange abad 18, bukan "Bab 18"). Ramsey 1928 pakai ini sebelum PMP/HJB ada.
-
+```
 ### Sisi kiri = MRS antarwaktu
 
 ρ + σ\dot{c}/c adalah marginal rate of substitution konsumsi antarwaktu (discounted).
@@ -160,10 +164,11 @@ Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus
 
 r= f′(k) −δ adalah net return on capital — opportunity cost konsumsi sekarang.
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner balance benefit defer vs impatience, di-scale oleh 1/σ.
-
+```
 ### Cases (Proposition 12.1)
 
 **$r>\rho$** — Patience pays — \dot{c} > 0, konsumsi tumbuh
@@ -172,10 +177,11 @@ Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner bala
 
 **R=ρ** — Smoothing — \dot{c} = 0, konsumsi konstan (steady state)
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Ada pepatah yang pas: "先苦後甜" — pahit sesaat, manis sehayat ("#YOLO, not"). Keynes-Ramsey adalah formalisasi disiplin intertemporal itu.
-
+```
 ### c sebagai jump variable
 
 Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0) harus disesuaikan (jump) ke saddle path: c∗(0) = g(k0).
@@ -214,10 +220,11 @@ $$
 \frac{\bar{k}}{k_{GR}}=\left(\frac{\delta}{\delta+\rho}\right)^{1/(1-\alpha)}<1
 $$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Mengapa planner tidak pilih golden rule: planner impatient (ρ > 0). Tidak mau accumulate sampai max consumption steady state — korban konsumsi short- run tidak worth it. Limit ρ →0: k̄ →kGR.
-
+```
 ### Part 2 — Steady State
 
 $$
@@ -228,10 +235,11 @@ Untuk Cobb-Douglas: k̄ = (α/(δ + ρ))1/(1−α).
 
 ### Part 3 — Vector Field
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: mengapa arah vektornya demikian?
-
+```
 ### Arah \dot{k} (bukti)
 
 Dari ∂\dot{k}/∂c = −1 < 0: \dot{k} menurun dalam c.
@@ -288,7 +296,8 @@ det J= σc̄f′′(k̄) < 0
 
 ### Part 4 — Stable Arm (Kualitatif)
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: bagaimana menjawab analisis kualitatif *tanpa* eigenvalue (Part 4)?
 
@@ -299,8 +308,9 @@ Dari vector field saja (tanpa eigenvalue), pakai argumen kontinuitas:
 **C0 Terlalu Rendah** — Mulai region I → menyeberang ke region II → k explode ke ∞. Melanggar TVC.
 
 **C0 Tepat** — Threshold c0∗= g(k0) → konvergen ke steady state. Stable arm.
-
-**Hasil Kunci**
+```
+```{admonition} Hasil kunci
+:class: important
 
 Argumen kontinuitas: outcome berubah kontinu dari "crash" (high c0) ke "explode" (low c0). Pasti ada threshold c0∗ yang konvergen.
 
@@ -311,7 +321,7 @@ Stable arm adalah kurva 1D → ditulis c = g(k), state feedback rule. Sifat: g(k
 **Jebakan Umum**
 
 Untuk soal yang minta kualitatif: cukup vector field + kontinuitas. Eigenvalue memberi slope eksak (bonus), tapi tidak perlu untuk deduce eksistensi stable arm.
-
+```
 ### Numerik (parameter konkret)
 
 Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43), c̄ = 1.40, eigenvalues +0.111/ −0.071 (saddle confirmed). Shooting method: k0= 2 →c0∗≈0.901.
@@ -336,7 +346,8 @@ Steady state baru (k̄′, c̄′) di kiri-bawah dari lama.
 
 ### Part 4 — Marginal propensity to save
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Soal time path $s$ vs $\theta$: parameter $\theta$ adalah notasi alternatif untuk $\sigma$ (Acemoglu/Barro memakai $\theta$).
 
@@ -351,13 +362,14 @@ Efek shock:
 $$
 \frac{\partial\bar{s}}{\partial\rho}=-\frac{\alpha\,\delta}{(\delta+\rho)^{2}}<0
 $$
-
-**Hasil Kunci**
+```
+```{admonition} Hasil kunci
+:class: important
 
 s̄ TURUN saat ρ naik. Verifikasi: ρ 0.04→0.06 memberi s̄ 16.7%→13.6%. Magnitude/kecepatan adjustment tergantung EIS 1/σ
 
 (atau 1/θ).
-
+```
 ### Part 5 — Endogenisasi saving
 
 **Solow** — s konstan, arbitrer, mekanis
@@ -404,7 +416,8 @@ $$
 
 ### No-Ponzi-Game
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Tentang NPG dan notasi $\dot{p}/p$:
 
@@ -413,7 +426,7 @@ NPG mencegah household pinjam tanpa batas (Ponzi strategy). No-arbitrage: harga 
 p\dot{p} = −r(t)
 
 (\dot{p}/p = growth rate harga = turunan logaritma). NPG (12.14): limT→∞p(T)a(T) ≥0 — present value assets tidak boleh negatif tak terbatas.
-
+```
 ### Firm FOC
 
 r= f′(k) −δ(12.17),w= f(k) −kf′(k)(12.18)
@@ -436,18 +449,20 @@ $$
 
 #### Sama dengan planner Keynes-Ramsey!
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 Plus resource constraint (market clearing) dan TVC/NPG sama. Maka competitive equilibrium = planner's allocation. First Welfare Theorem.
-
+```
 ### Mengapa berlaku
 
 Convexity terpenuhi: u concave, f concave → Mangasarian Sufficiency → PMP = HJB.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Implikasi: di RCK (pasar sempurna, convex), tidak ada room untuk policy. Di Bab 14-15 (increasing returns dari R&D), convexity gagal → First Welfare gagal → policy matters.
-
+```
 ## Konsep 8 — Section 12.5 — TFP & Population Growth
 
 *Extension ke Balanced Growth Path (BGP).*
@@ -472,22 +487,24 @@ $$
 \dot{k} = f(k) - (n+g+\delta)k - c
 $$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Titik buntu yang umum ada di Hint 4 — kuncinya
-
+```
 ### Exercise 12.7 — Hamiltonian dengan growth
 
 $$
 H=e^{-(\rho-n)t}\,u(Ac)+\lambda\bigl[f(k)-(n+g+\delta)k-c\bigr]
 $$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Pertanyaan yang sering muncul: kenapa discount rate menjadi $(\rho - n)$?
 
 Objective punya L(t) = ent (planner peduli total welfare). e−ρt ⋅ent= e−(ρ−n)t. Effective discount = impatience minus population growth. Asumsi ρ > n untuk konvergensi. Argumen utility Ac = konsumsi per pekerja.
-
+```
 ### Exercise 12.8 — Euler dengan growth
 
 #### `Step 1` Log maximality, turunkan
@@ -506,12 +523,13 @@ $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[f'(k)-(\delta+\rho+\sigma g)\bigr]
 $$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Suku baru σg = effective impatience tambahan karena konsumsi per pekerja tumbuh g. BGP: f′(k̄) = δ + ρ + σg. Verifikasi: dengan
 
 growth k̄ lebih rendah; limit g= 0 kembali ke no-growth.
-
+```
 ### Exercise 12.9 — BGP preference restriction
 
 Euler umum (tanpa asumsi σ konstan):
@@ -526,12 +544,13 @@ $$
 \sigma(cA)=\frac{f'(\bar{k})-\delta-\rho}{g}=\text{konstanta}
 $$
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Karena cA = c̄ ⋅egt→∞, σ harus asymptotically constant. Sufficiency: jika σ→σ∗, maka f′(k̄) = δ + ρ + σ∗g punya solusi
 
 unique → BGP exists.
-
+```
 ### Exercise 12.10 — CRRA patience restriction
 
 #### `Step 1` CRRA + BGP: integrand objective

@@ -38,7 +38,8 @@ $$ x(t) =*b + Ce-at $$
 
 $a$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Titik yang sering membingungkan pada Equation 6.3:
 
@@ -48,19 +49,20 @@ $=$
 
 $$ dtadt $$
 
-Sekilas RHS terlihat berbeda dari $be^{at}$, padahal sama (karena $^{d(e)}_{dt}^{at}=ae^{at}$, jadi $_{a}^{b} \cdot ae^{at}=be^{at}$).
+Sekilas RHS terlihat berbeda dari $be^{at}$, padahal sama (karena $\frac{d(e^{at})}{dt}=ae^{at}$, jadi $\frac{b}{a} \cdot ae^{at}=be^{at}$).
 
 Mengapa ditulis seperti itu? Strategi penulisan: agar
-
+```
 ## Pertanyaan tajam: "Mengapa eksponensial?"
 
 Catatan kuliah menyatakan: kalau "instantaneous rate of change locally constant", maka anti-derivative-nya eksponensial. Mari bedah pelan-pelan.
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Inti penjelasan: Setelah geser variabel $y= x -b/a$, ODE asli berubah jadi $\dot{y} =-ay$ . Inilah "proporsionalitas murni" — turunan proporsional dengan fungsi itu sendiri.*
 
-### Properti unik fungsi eksponensial:
+**Properti unik fungsi eksponensial**
 
 $$
 \frac{d\,e^{at}}{dt}=a\cdot e^{at}
@@ -68,13 +70,14 @@ $$
 
 *Yaitu, turunan eksponensial proporsional dengan fungsi itu sendiri. Hanya fungsi eksponensial yang punya properti ini. Maka solusi $\dot{y} =-ay$ harus dalam bentuk eksponensial.*
 
-## Penurunan eksplisit: dari $\dot{x}+ax = b$ ke $\dot{y} =-ay$
+**Penurunan eksplisit: dari $\dot{x}+ax = b$ ke $\dot{y} =-ay$**
 
 Langkah demi langkah, tanpa lompatan:
 
 **Step 1** Definisikan $y:= x -b/a$.
 
 Geser variabel — adalah " relatif terhadap steady state". $yx$
+```
 
 **Step 2** Hitung. $\dot{y}$
 
@@ -110,19 +113,20 @@ $CE^{-AT}$ `— MOVEMENT`
 
 dari ODE homogen.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Parafrase yang tepat (saat membahas Corollary 6.1):
 
 "Pergerakannya ditentukan dari solusi general homogen, solusi particular non-homogen hanya menentukan solusi punya posisi yang benar. Solusi particular non-homogen ini memberikan suatu guidance untuk mengarahkan state di posisi steady state yang benar tetapi kecepatan pergerakannya ditentukan oleh solusi general homogen yang varies dengan waktu."
 
 Rumusan ini akan dipakai di Bab 9
-
+```
 ## Stabilitas dari struktur
 
 Saat $t\to \infty$:
 
-Kalau $a> 0e$: $^{-at}\to 0$ → movement menghilang → $x \to \bar{x}=b/a$ (stable) Kalau $a< 0e$: $^{-at}\to \infty$ → movement meledak → unstable
+Kalau $a> 0$: $e^{-at}\to 0$ → movement menghilang → $x \to \bar{x}=b/a$ (stable) Kalau $a< 0$: $e^{-at}\to \infty$ → movement meledak → unstable
 
 Inilah hasil Exercise 6.1 — koneksi langsung ke Teorema 5.1 dari Bab 5.
 
@@ -138,17 +142,19 @@ $$ x(t) =^{*}Ce^{-at} $$
 
 ## Aplikasi: pertumbuhan/decay murni
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
-### Persis bentuk yang muncul di growth theory:
+**Persis bentuk yang muncul di growth theory**
 
 *Population: $\dot{L}=nL$ → $L(t)= L_{0}^{nt}e$ Technology: $\dot{A}=gA$ → $A(t)= A_{0}^{gt}e$*
 
 *Bentuk eksponensial untuk $L(t)$ dan $A(t)$ bukan asumsi sembarangan — sekarang jelas mengapa*
-
+```
 ## Trik: $I(t) \cdot x(t) = C$
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Observasi tajam saat mengerjakan latihan: untuk ODE homogen, setelah multiply dengan integrating factor:
 
@@ -161,7 +167,7 @@ $$
 Maka langsung $x(t) = C/I(t)$ — tidak perlu separation of variables, tidak ada risiko sign error.
 
 Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-varying).
-
+```
 ## Konsep 4 — 6.1.3 — Time-Varying Parameters
 
 ### Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$
@@ -186,7 +192,7 @@ Derivasinya:
 
 **Step 1** Multiply ODE dengan $I(t)$.
 
-Sisi kiri jadi $_{dt}^{d}[x \cdot I]$. Sisi kanan: $b(t)I(t)$.
+Sisi kiri jadi $\frac{d}{dt}[x \cdot I]$. Sisi kanan: $b(t)I(t)$.
 
 **Step 2** Integrasi kedua sisi.
 
@@ -212,7 +218,8 @@ Equation 6.10: $\dot{x}=Ax + b$ (non-homogen, autonomous) Equation 6.11: $\dot{x
 
 ## Proposition 6.1 — Principle of Superposition
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Jika $x^{*}_{1}(t)$ dan $x^{*}_{2}(t)$ keduanya solusi 6.11, maka $c_{1}x^{*}_{1} +c_{2}x^{*}_{2}$ juga solusi 6.11, untuk
 
@@ -221,7 +228,7 @@ Jika $x^{*}_{1}(t)$ dan $x^{*}_{2}(t)$ keduanya solusi 6.11, maka $c_{1}x^{*}_{1
 Bukti (Exercise 6.5):
 
 $$ dtd[c_{1}x^{*}_{1} +c_{2}x^{*}_{2}] =c_{1}^{\dot{x}}_{1}^{*} +c_{2}^{\dot{x}}_{2}^{*} =c_{1}Ax^{*}_{1} +c_{2}Ax^{*}_{2} =A(c_{1}x^{*}_{1} +c_{2}x^{*}_{2})✓ $$
-
+```
 ## Corollary 6.1 — Kunci strategi solving
 
 Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x(t)^{*}_{2}$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
@@ -238,12 +245,13 @@ $$
 
 Cocok. Plus, free constants di $x^{*}$ (k buah untuk sistem k-dim) memberikan derajat kebebasan untuk match sembarang kondisi awal.
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Parafrase yang menangkap inti algebra: " menyerap konstanta. Sisanya bisa diserahkan ke homogen." $\bar{x}b$
 
 Pembagian kerja yang elegan: particular handle forcing term $b$; homogen handle perpindahan dari kondisi awal.
-
+```
 ## Konsep 6 — Theorem 6.1 — Superposition Reloaded
 
 *Versi paling kuat untuk kasus non-autonomous. Tiga poin yang harus dipahami.*
@@ -264,7 +272,8 @@ Pertanyaan yang wajar: jika $x_{1}$ menyelesaikan 6.11 dan $x_{2}$ menyelesaikan
 
 Perhatikan baik-baik: Theorem 6.1 Point 2 justru mengatakan arah sebaliknya:
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Kalau keduanya solusi 6.10 (non-homog), maka SELISIH mereka solusi 6.11 (homog).*
 
@@ -282,10 +291,11 @@ Kurangkan:
 $$
 \dot{x}_{1}-\dot{x}_{2}=A(x_{1}-x_{2})+\underbrace{b-b}_{=0}=A(x_{1}-x_{2})
 $$
-
+```
 Yaitu $x_{1} -x_{2}$ memenuhi 6.11 (homog). ✓
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Implikasi struktural: set solusi 6.10 adalah affine space (translasi dari subspace).
 
@@ -296,12 +306,13 @@ Set solusi 6.10 (non-homog) = subspace + 1 titik anchor = affine space
 Selisih dua titik di affine space = vektor di subspace. Itulah Point 2.
 
 **Pelajaran Penting**
-
+```
 ## Sign-Flip — Jebakan Berulang
 
 *Jebakan yang paling sering terjadi. Diagnosis dan solusi.*
 
-**⚠️ Jebakan umum**
+```{admonition} ⚠️ Jebakan umum
+:class: warning
 
 Tiga contoh klasik sign-flip error:
 
@@ -310,7 +321,7 @@ Tiga contoh klasik sign-flip error:
 3. $\dot{x}+x/t=0$ — tergoda menulis $x=5t$, padahal seharusnya $x=5/t$.
 
 Polanya: auto-apply formula $Ce^{-at}$ tanpa memeriksa tanda ketika ODE tidak dalam bentuk standar.
-
+```
 ## Diagnosis
 
 Formula $Ce^{-at}$ berlaku untuk ODE bentuk $\dot{x}+ax = b$. Tapi kalau ODE-nya $\dot{x}=kx$ (yaitu $\dot{x}-kx = 0$), maka $a= -k$, dan solusi $Ce^{-(-k)t}=Ce^{+kt}$.
@@ -319,12 +330,13 @@ Trap: melihat angka di ODE dan langsung menempatkannya
 
 ## Aturan praktis baru — lebih mudah
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 *Untuk ODE $\dot{x}=kx$ (bentuk yang langsung): solusinya $x(t)= Ce^{kt}$ — eksponen punya tanda yang sama dengan koefisien di ODE.*
 
 *$\dot{x}=+3x$ → $x(t)= Ce^{+3t}$ (growth, unstable) $\dot{x}=-3x$ → $x(t)= Ce^{-3t}$ (decay, stable) $\dot{x}=+0.05x$ → $x(t)= Ce^{+0.05t}$ (growth)*
-
+```
 ## Toolkit Sanity Check
 
 **Sanity Check Toolkit**
@@ -343,15 +355,17 @@ Untuk solusi benar $x(t) = 100e^{+0.05t}$:
 
 LHS: $\dot{x}=5e^{+0.05t}$ RHS: $0.05 \cdot 100e^{+0.05t}=5e^{+0.05t}$ LHS = RHS → benar ✓
 
-**💡 Insight**
+```{admonition} 💡 Insight
+:class: tip
 
 Prinsip sanity check: konfirmasi bahwa solusi yang dihasilkan benar-benar memenuhi persamaan aslinya ketika disubstitusikan kembali.
 
 Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek validitas kandidat solusi, sekarang untuk menangkap kesalahan tanda.
-
+```
 ## Metakognitif insight
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Pelajaran pentingnya: biasakan sanity check — tertukar tanda adalah bahaya yang nyata.*
 
@@ -360,7 +374,7 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 *Sepuluh detik sanity check per soal adalah investasi kecil yang menyelamatkan banyak kesalahan.*
 
 **Latihan**
-
+```
 ## Latihan-Latihan Bab Ini
 
 *Daftar latihan inti Bab 6.*
@@ -379,13 +393,11 @@ Derive general solution (6.9). ✓ Dikerjakan dengan multiply $I(t)$,
 
 **Exercise 6.6** — General homog + particular = general non-homog. ✓ Dibahas dengan parafrase intuitif.
 
-Prove Theorem 6.1. Dibahas konseptual, bukti Point 2
-
-**Exercise 6.7** — didemonstrasikan.
+**Exercise 6.7** — Prove Theorem 6.1. Dibahas konseptual, bukti Point 2 didemonstrasikan.
 
 ## Latihan tambahan
 
-$\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$ (stable) $\dot{x}=0.05xx$, $_{0} =100$ — solusi $100e^{0.05t}x(10) \approx 164.9$, $\dot{N}=nN$ — population growth (eksponensial) $\dot{x}=-2x + 6x$, $_{0} =5$ — solusi $3 + 2e^{-2t}$, konvergen ke $\bar{x}=3$ $\dot{x}+(1/t)x = 0x(1) = 5$, — solusi $5/t$ $\dot{x}=-5x + 10x$, $_{0} =3$ — solusi $e^{-5t}+2$ ✓ (kerja mandiri)
+$\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$ (stable) $\dot{x}=0.05x$, $x_{0} =100$ — solusi $100e^{0.05t}x(10) \approx 164.9$, $\dot{N}=nN$ — population growth (eksponensial) $\dot{x}=-2x + 6$, $x_{0} =5$ — solusi $3 + 2e^{-2t}$, konvergen ke $\bar{x}=3$ $\dot{x}+(1/t)x = 0x(1) = 5$, — solusi $5/t$ $\dot{x}=-5x + 10$, $x_{0} =3$ — solusi $e^{-5t}+2$ ✓ (kerja mandiri)
 
 **SELF-CHECK**
 
@@ -424,12 +436,13 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 
 Kebiasaan sanity check yang dibangun di sini akan dipakai
 
-**Ringkasan Besar**
+```{admonition} Ringkasan besar
+:class: important
 
 *Bab 7 — Analytical Solutions II: aplikasi Principle of Superposition untuk sistem 2D dan beyond. Eigenvalue analysis akan jadi alat utama.*
 
 *Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.*
-
+```
 ## Tools yang akan dipakai di Bab 7
 
 Eigenvalue dan eigenvektor (dari aljabar linear)

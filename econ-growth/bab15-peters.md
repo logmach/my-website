@@ -77,10 +77,11 @@ Mengapa standar hidup antar negara berbeda jauh? Hsieh-Klenow punya jawaban meng
 
 Ingat dari growth accounting Solow (Bab 10): sebagian besar ketimpangan standar hidup antar negara dijelaskan oleh perbedaan TFP (Total Factor Productivity), bukan modal atau labor.
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 TFP itu seperti "resep" — seberapa banyak output yang bisa dihasilkan dari input yang sama. Negara kaya seolah punya resep lebih baik. Tapi mengapa resepnya berbeda? Itu pertanyaan yang lama tak terjawab.
-
+```
 ### Jawaban tradisional vs Hsieh-Klenow
 
 **Tradisional** — TFP beda karena friksi difusi teknologi — negara miskin lambat mengadopsi teknologi baru.
@@ -89,16 +90,18 @@ TFP itu seperti "resep" — seberapa banyak output yang bisa dihasilkan dari inp
 
 ### Bagaimana mengukur misallocation: TFPR
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 TFPR = Total Factor Revenue Productivity = TFP firm × harga produknya. Di pasar kompetitif sempurna, firm yang lebih produktif menetapkan harga proporsional lebih rendah, sehingga TFPR konstan antar firm — meski TFP fisik bervariasi.
 
 Dengan distorsi (misallocation), TFPR menjadi terdispersi antar firm. Maka dispersi TFPR = ukuran misallocation.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Bayangkan dua pabrik. Pabrik A sangat produktif, pabrik B biasa saja. Di pasar sehat, A menjual murah (karena efisien) dan B menjual mahal — pendapatan per unit input (TFPR) mereka sama. Tapi kalau ada distorsi (misal B dapat subsidi, A kena pajak), TFPR mereka melenceng. Semakin lebar selisihnya, semakin "salah alokasi" sumber daya ekonomi itu.
-
+```
 ### Temuan empiris
 
 Hsieh-Klenow menunjukkan dispersi TFPR di China dan India jauh lebih besar dari US. Misallocation ini menjelaskan sekitar setengah perbedaan TFP agregat. Mereka memperlakukan wedge (distorsi) sebagai eksogen.
@@ -123,23 +126,25 @@ Survei helikopter atas logika Peters sebelum menyelam ke detail.
 
 ### Twist baru Peters: dua kekuatan berlawanan
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 1. Creative destruction: entry firm baru + limit pricing berarti incumbent (awalnya) tidak bisa menetapkan markup tinggi. Firm baru berkualitas lebih tinggi menggantikan incumbent lama. Efek: mengkompres distribusi markup.
 2. Own-innovation: dengan investasi mahal menurunkan marginal cost, incumbent bisa menahan masuknya pesaing dan memperlebar gap. Efek: menebalkan ekor (tail) distribusi markup. **Penjelasan Intuitif**
 
 Bayangkan persaingan lari maraton yang tak pernah selesai. Creative destruction = pelari baru yang lebih cepat terus bermunculan, menyalip yang di depan — menjaga agar tak ada yang terlalu jauh memimpin. Own-innovation = pelari yang di depan berlatih keras untuk memperlebar jarak. Bentuk akhir "sebaran jarak antar pelari" ditentukan oleh tarik-menarik kedua gaya ini.
-
+```
 ### Mengapa model ini tractable: block-recursive
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Model block-recursive: bisa dipecah jadi blok yang diselesaikan berurutan.
 
 Bagian statis: diberikan jumlah firm dan distribusi produktivitas pada satu waktu, kita turunkan limit-pricing, lalu employment, markup, profit tiap produk. Diberikan distribusi marginal, kita konstruksi agregat dan identifikasi wedge.
 
 Bagian dinamis: pilihan dinamis firm (rate dan) tidak bergantung eksplisit pada distribusi agregat — hanya pada jumlah produk yang dimiliki dan daftar quality gap. HJB punya solusi closed-form. Rate creative destruction bergantung pada entry dan total expansion.
-
+```
 ### Hasil utama yang akan dicapai
 
 - Distribusi markup Pareto unik dengan tail endogen
@@ -162,10 +167,11 @@ Discount rate (impatience)
 
 Konsumsi composite good pada waktu
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Log utility adalah kasus khusus CRRA dengan $\sigma=1$. Ini menjamin BGP exist (preferensi homothetic dengan elastisitas substitusi intertemporal konstan = 1).
-
+```
 ### Final good demand (15.2)
 
 **Notasi Persamaan Ini**
@@ -190,22 +196,25 @@ Soal: Pecah (15.2) jadi dua komponen. Mengapa varietas imperfect substitutes? Me
 
 Dekomposisi (15.2):
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Antar market (imperfect): agregasi Cobb-Douglas (lewat). Sifat Cobb-Douglas: tidak bisa (karena → utility ). Konsumen butuh konsumsi positif dari setiap market. Elastisitas substitusi = 1 (terbatas) → imperfect substitutes.
 
 Dalam market (perfect): penjumlahan linear. Output firm berbeda di market sama bersifat identik bagi konsumen. Elastisitas substitusi = → perfect substitutes.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Antar market: roti dan obat tidak bisa saling gantikan — kamu butuh keduanya. Itu sebabnya Cobb-Douglas "memaksa" kamu beli sedikit dari semua kategori.
 
 Dalam market: dua merek paku yang identik — kamu beli dari yang termurah, tak peduli mereknya. Karena itu firm berkompetisi habis-habisan pada harga (Bertrand).
-
-**Koneksi**
+```
+```{admonition} Koneksi
+:class: important
 
 Dua sifat ini bukan kebetulan: perfect substitution dalam market → Bertrand → limit pricing (15.3.3.1). Cobb-Douglas antar market → expenditure share konstan → sales tiap market sama (Exercise 15.5).
-
+```
 ## 15.3.2 · Production
 
 Firm bisa produksi banyak varietas. Teknologi linear dalam labor.
@@ -232,14 +241,16 @@ Exercise 15.4 — Marginal cost
 
 Soal: Jelaskan dengan kata-kata mengapa MC firm di market $j$ adalah $w/q_{j}$.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Untuk produksi unit, dari (15.3) butuh labor. Cost labor. Marginal cost (turunan total cost terhadap).
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 $w$ = harga sejam tenaga kerja; $1/q$ = berapa jam kerja untuk membuat satu unit (kebalikan produktivitas). Kalikan: biaya membuat satu unit $=w/q$ =. Firm yang lebih produktif (tinggi) punya biaya per unit lebih rendah — bisa "membanting harga" pesaing.
-
+```
 ## 15.3.3.1 · Bertrand Pricing Equilibrium
 
 Twist baru Peters. Limit pricing menghasilkan markup = gap kualitas.
@@ -256,11 +267,13 @@ Karena MC, firm dengan tertinggi punya MC terendah. Firm ini akan memenangkan ko
 
 ### Proposition 15.1 — Bertrand Pricing Equilibrium
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Firm paling efisien (MC terendah) melayani seluruh market dan menetapkan limit price sama dengan MC firm terefisien kedua.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Si juara tidak perlu menetapkan harga setinggi-tingginya. Ia cukup menetapkan harga sedikit di bawah biaya pesaing terdekat (follower). Pada harga itu, follower tak bisa untung kalau ikut bermain, jadi mundur — dan si juara mengambil seluruh pasar. Menetapkan harga lebih tinggi berisiko follower masuk; lebih rendah membuang profit percuma.
 
@@ -269,7 +282,7 @@ Limit price (15.4)
 Harga = MC follower ($w/q^{F}$). Perhatikan ini lebih tinggi dari MC pemenang ($w/q^{L}$), karena $q^{L} > q^{F}$. Selisih inilah sumber markup.
 
 Markup (15.5)
-
+```
 **Hasil Kunci**
 
 #### Markup = rasio kualitas pemenang terhadap follower. Hanya
@@ -280,12 +293,13 @@ bergantung pada seberapa jauh pemenang unggul, bukan kualitas absolut. Gap besar
 
 Tunjukkan untuk tiap market: (1) sales; (2) employment (15.6); (3) profit (15.7).
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
 Ini masalah STATIS. Bagian 1 pakai Lagrangian statis (household pilih di satu titik waktu). Bagian 2-3 hanya aljabar substitusi. Tidak ada Hamiltonian — itu hanya untuk masalah dinamis (HJB muncul nanti di 15.3.4).
 
 Bagian 1 — Sales equalized
-
+```
 #### `Step 1` Household pilih untuk max s.t. budget `Step 2` Lagrangian statis (multiplier = shadow price budget)
 
 #### `Step 3` FOC terhadap
@@ -296,30 +310,33 @@ Bagian 1 — Sales equalized
 
 #### `Step 5` Hasil
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Cobb-Douglas membuat konsumen membelanjakan porsi yang sama di tiap kategori. Karena ada kontinum kategori dan total belanja, tiap market menerima pendapatan total yang sama, yaitu — terlepas dari kualitas atau markup market itu.
 
 Bagian 2 — Employment (15.6)
-
+```
 #### `Step 1` Dari production
 
 #### `Step 2` Substitusi (sales) dan (limit price) `Step 3` Kenali
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 adalah labor yang dibutuhkan kalau pasar kompetitif (markup = 1). Faktor adalah "rem": markup tinggi → harga tinggi → konsumen beli lebih sedikit → lebih sedikit tenaga kerja dipakai. Monopoli menekan employment.
 
 Bagian 3 — Profit (15.7)
-
+```
 #### `Step 1` Profit = revenue − cost
 
 #### `Step 2` Substitusi dan
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Profit margin. Cek ekstrem: (kompetitif) → profit 0; (monopoli) → profit. Markup tinggi → profit tinggi.
-
+```
 ## 15.3.3.2 · Firm -level Allocations
 
 Satu firm bisa punya banyak produk. Agregasi dari market ke firm.
@@ -342,14 +359,16 @@ Tunjukkan total employment firm adalah (15.8), dengan harmonic mean.
 
 #### `Step 3` Definisi (harmonic mean) → hasil (15.8)
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 adalah harmonic mean dari markup produk. Sifat. Karena (employment inversely proportional ke markup), agregasi yang natural lewat.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Markup firm "condong" ke produk dengan markup rendah, karena produk markup rendah menyerap lebih banyak tenaga kerja (lebih banyak diproduksi). Produk yang mendominasi employment-lah yang paling menentukan markup rata-rata firm — itulah yang ditangkap harmonic mean.
-
+```
 ### Exercise 15.7 — Variety, markups, firm size
 
 Firm size bergantung dua faktor: (1) jumlah produk — bagaimana? (2) markup (conditional) — bagaimana?
@@ -362,14 +381,16 @@ Lebih banyak produk → firm lebih besar.
 
 **Efek** — Inversely proportional:. Markup tinggi → firm lebih kecil (per produk).
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Firm bisa besar karena dua alasan berbeda: (Tipe 1) punya banyak produk meski tiap produk kompetitif (markup rendah); atau (Tipe 2) punya sedikit produk tapi dengan monopoli kuat (markup tinggi). Firm besar tidak selalu bermarkup tinggi — tergantung strukturnya.
-
-**Koneksi**
+```
+```{admonition} Koneksi
+:class: important
 
 Life-cycle: firm muda (kecil, markup rendah, baru entry) → firm tua (besar via expansion, markup tinggi via own-innovation). Firm tua lebih besar dari dua kanal: extensive (naik) + intensive (naik). Sales firm selalu naik dengan.
-
+```
 ## 15.3.3.3 · Aggregate Allocations & Misallocation
 
 Naik ke level ekonomi. Inti bab: dari mana wedge misallocation berasal.
@@ -410,10 +431,11 @@ Tunjukkan equilibrium wage adalah (15.10): upah berbanding lurus dengan output a
 
 #### `Step 5` Eksponen → hasil (15.10)
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Upah = produktivitas dikali "wedge markup". Kalau markup tinggi di mana-mana, sebagian nilai yang seharusnya jadi upah malah "diambil" sebagai profit firm — sehingga upah turun.
-
+```
 ### Output ekonomi (15.11)
 
 #### `Step 1` Substitusi (15.10) ke (15.9), solve
@@ -428,36 +450,41 @@ Aggregate TFP $=Q\times\mathcal{M}$. Dua komponen: $Q$ (produktivitas teknis) da
 
 Mengapa? Apa arti vs?
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Bukti via AM-GM inequality. Untuk variabel random positif: (geometric mean ≤ arithmetic mean), dengan equality iff konstan. Set:
 
 Markup homogen (sama semua). Tidak ada misallocation. (efisien).
 
 Markup heterogen. Ada misallocation. (di bawah frontier).
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Di pasar sehat, semua produk dihargai dekat biaya marginal → sumber daya mengalir ke tempat paling produktif. Kalau markup heterogen, produk bermarkup tinggi "terlalu mahal" → konsumen beli sedikit → tenaga kerja kurang di sana, tapi terlalu banyak di sektor markup rendah. Sumber daya salah tempat — itulah misallocation. Kuncinya bukan markup tinggi, tapi markup heterogen.
-
+```
 ### Labor share (15.12)
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 Macro takeaway: markup tinggi → labor share rendah. Markup menaikkan profit firm (15.7) dan menekan upah (15.10). Konsisten dengan tren empiris global: labor share menurun seiring konsentrasi pasar naik.
-
-**Catatan Nuansa**
+```
+```{admonition} Catatan
+:class: note
 
 Karena aggregator final good di sini Cobb-Douglas, hanya bergantung pada distribusi markup — bukan joint distribution. Dengan CES umum, bisa bergantung joint distribution (lebih rumit; Section 2.7 Peters).
-
+```
 ## 15.3.4 · Dynamic Parts: Pengantar
 
 Transisi besar: dari snapshot statis ke evolusi distribusi. Akhirnya HJB muncul.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Sebelumnya (15.3.3) kita ambil distribusi sebagai given — snapshot pada satu waktu. Tugas sekarang: jelaskan bagaimana distribusi itu terbentuk dari pilihan dinamis firm. Karena limit pricing sudah ditentukan per-periode, firm dynamic problem hanya soal investasi (pricing otomatis dari Bertrand).
-
+```
 ### Dua pilihan dinamis firm
 
 **Notasi Pilihan Dinamis**
@@ -470,20 +497,23 @@ Rate entry firm baru
 
 Rate creative destruction total
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 "Flow rate" Poisson = seberapa sering keberhasilan muncul per satuan waktu. Tiap percobaan inovasi acak (kadang berhasil, kadang tidak), tapi dengan banyak percobaan, rate rata-ratanya pasti (law of large numbers).
-
+```
 ### Catatan: Cannibalism (dua arah)
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Total rate creative destruction adalah jumlah dari rate entrant baru dan total rate expansion semua firm existing. Firm yang sedang memimpin harus memperhitungkan ancaman ini dalam optimal control-nya.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 "Kanibalisme" = saling memakan sesama. Firm existing yang memperluas wilayah memakan incumbent di market tujuan. Entrant baru juga memakan incumbent. Jadi ancaman datang dari dua arah: pendatang baru dan ekspansi firm lama. Setiap firm hidup di bawah bayang-bayang bahwa suatu saat ia bisa dikanibal — dan ia memasukkan risiko itu ke dalam perhitungannya.
-
+```
 ## 15.3.4.1 · Firm HJB Equation
 
 Jantung bagian dinamis. Asset pricing dengan banyak Poisson jumps.
@@ -514,14 +544,16 @@ Verifikasi konsistensinya dengan definisi markup agregat.
 
 Markup minimum.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 One-to-one mapping antara gap dan markup. Profit (15.7): — hanya bergantung. Karena itu adalah payoff-relevant statistic.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Markup sepenuhnya ditentukan oleh "berapa anak tangga si juara unggul dari pesaing terdekat". Tidak peduli nilai kualitas absolutnya — hanya jaraknya yang penting. Ini menyederhanakan segalanya: kita cukup melacak gap (bilangan bulat), bukan kualitas absolut.
-
+```
 ### Exercise 15.11 — Mengapa tanpa indeks
 
 Mengapa kita tidak pakai indeks di? Apakah identitas firm penting?
@@ -530,7 +562,8 @@ Jawab: Identitas firm tidak relevan untuk outcome market. Markup hanya bergantun
 
 ### Catatan: Birth-Death Process
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Tiga kanal pertumbuhan, semua menaikkan satu langkah ke, tapi efek berbeda pada markup:
 
@@ -539,29 +572,33 @@ Gap naik. Markup naik faktor
 `Own-innovation `. Contra-competition.
 
 **Expansion / Entry** — Gap reset ke 1; markup turun ke $\lambda$. Pro-competition (creative destruction).
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Mengapa creative destruction mereset gap ke 1? Karena entrant masuk dengan kualitas tepat satu anak tangga di atas incumbent lama. Incumbent lama (yang tadinya jauh memimpin) kini jadi follower, dan gap pemenang-baru ke follower hanya 1 langkah. Markup "kembali ke nol" (baseline).
-
+```
 ### Catatan: Dynamic Trade-off
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Firm menghadapi dilema. Own-innovation: investasi memperlebar gap di market yang sudah dikuasai → markup naik, "stay ahead". Expansion: masuk market baru → tapi mulai dari markup rendah, dengan harapan profit masa depan kalau bertahan. Tarik- menarik: perdalam kekuasaan di kandang sendiri, atau perluas wilayah baru?
-
+```
 ### Exercise 15.12 — Payoff-relevant states
 
 Verifikasi vektor state yang cukup untuk firm: $n_{f}$ (jumlah produk) dan $\{\Delta_{j}\}$ (daftar quality gap).
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Payoff: total profit — hanya bergantung $n_{f}$ dan $\{\Delta_{j}\}$ ($t$ implisit). Dynamics: own-innovation, creative destruction (kehilangan produk), expansion (, tambah) — semua hanya butuh. Tidak butuh kualitas absolut, identitas, atau distribusi agregat (hanya given).
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Untuk tahu nilai sebuah firm, kamu hanya perlu tahu: berapa banyak produk yang ia kuasai, dan seberapa jauh ia memimpin di tiap produk. Tidak perlu tahu nama firm, tidak perlu tahu kualitas absolut, tidak perlu tahu seluruh peta ekonomi. Itu sebabnya masalahnya bisa diselesaikan closed-form.
-
+```
 ### HJB Equation (15.14)
 
 Inti Section 15.3.4.1. Ruas kiri $rV$ = required return; ruas kanan terdiri dari enam term:
@@ -573,10 +610,11 @@ Inti Section 15.3.4.1. Ruas kiri $rV$ = required return; ruas kanan terdiri dari
 5. **Expansion** — gain dari produk baru ber-gap 1 (rate $x$, variabel pilihan).
 6. **Cost** — biaya inovasi (diukur dalam labor) × wage $w$.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Bandingkan Bab 14: di Romer HJB hanya $rV=\pi+\dot{V}$ (asset pricing sederhana). Di Peters jauh lebih kaya: ada creative destruction (risk), own-innovation & expansion (option value), multi- product. Tetap asset pricing, tapi dengan banyak Poisson jumps.
-
+```
 ### Exercise 15.13 — Cost units
 
 True/False: Cost function mengembalikan cost dalam unit numeraire good?
@@ -587,16 +625,18 @@ Jawab: FALSE. Cost function diukur dalam unit labor. Baru setelah dikali $w$ (li
 
 **Notasi Parameter Cost**
 
-Cost shifter own-innovation Cost shifter expansion
-
-**Penjelasan Formal** — Eksponen convex membuat cost convex dalam rate → marginal cost naik → firm tak pilih rate tak terbatas → solusi interior unik. Karena payoff (gain) linear dalam dan cost convex, max (linear − convex) → FOC interior unik → closed-form.
+```{admonition} Penjelasan formal
+:class: note
+Cost shifter own-innovation Cost shifter expansion Eksponen convex membuat cost convex dalam rate → marginal cost naik → firm tak pilih rate tak terbatas → solusi interior unik. Karena payoff (gain) linear dalam dan cost convex, max (linear − convex) → FOC interior unik → closed-form.
+```
 
 Faktor: firm dengan gap lebih besar menghadapi cost own- innovation lebih rendah.
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Faktor menangkap "success breeds success" — pemimpin teknologi (gap besar) lebih mudah berinovasi lagi karena sudah punya know-how dan infrastruktur riset. Akibatnya pemimpin terus menjauh → ekor distribusi markup menebal (ini kanal own- innovation yang menebalkan tail).
-
+```
 ## 15.3.4.2 · Free Entry
 
 Menentukan rate entry firm baru secara endogen.
@@ -609,62 +649,71 @@ Nilai firm entrant baru
 
 ### State entrant & teknologi
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 State entrant baru: (satu produk), (gap satu langkah, karena masuk dengan kualitas incumbent lama). Teknologi entry linear: 1 unit labor → ide. Untuk 1 unit rate entry butuh labor; cost (numeraire).
-
+```
 ### Free entry condition (15.16)
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Complementary slackness: jika → tidak ada entry; jika → benefit = cost. Asumsi kasus menarik → binding.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Orang akan terus membuka firm baru selama nilai firm melebihi biaya membukanya. Entry berlanjut sampai keuntungan habis — nilai = biaya. Ini "zero excess profit" dari pintu masuk.
-
+```
 ### Creative destruction rate (15.17)
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Total rate incumbent kehilangan market = entry baru + total expansion firm existing. Kedua sumber menggusur incumbent. Catatan: muncul di HJB tiap firm, tapi sendiri terdiri dari keputusan agregat — ini fixed point yang konsisten di BGP.
-
+```
 ### Exercise 15.14 — Labor market clearing
 
 Jelaskan dengan kata-kata accounting condition labor market clearing.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Sisi kiri: total supply labor = 1 (Exercise 15.1, measure-one household). Sisi kanan: demand = produksi + riset. tiga komponen: entry (linear), expansion (convex), own-innovation (convex + diskon leader).
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Seluruh tenaga kerja ekonomi (= 1) dibagi dua: membuat barang hari ini atau berinovasi untuk masa depan. Lebih banyak ke riset → growth lebih cepat, tapi output sekarang lebih sedikit. Ini trade-off konsumsi-vs-pertumbuhan di level seluruh ekonomi.
-
+```
 ## 15.3.5 · Balanced-Growth Equilibrium
 
 Merangkai semua. Proposition 15.2: equilibrium stasioner unik dengan closed-form.
 
 ### Apa itu stationary equilibrium
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Di BGP: rate inovasi konstan, distribusi markup stasioner, wedge konstan, semua variabel agregat tumbuh rate sama.
-
+```
 ### Proposition 15.2 — Unique Stationary Equilibrium
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Asumsi parameter.
 
 Asumsi ini (cukup besar) menjamin nilai firm finite — kalau terlalu kecil, firm bisa expand tanpa batas dengan return tinggi sehingga nilai meledak. Analog syarat di RCK.
 
 Properti 1 — Value function (15.18)
-
-**Penjelasan Formal**
+```
+```{admonition} Penjelasan formal
+:class: note
 
 Additive separable: nilai firm = kali nilai baseline per produk + jumlah premium markup tiap produk. Inilah yang membuat closed-form.
-
+```
 ### Exercise 15.16 — Interpretasi dan
 
 Interpretasikan dan.
@@ -673,14 +722,16 @@ Nilai "memiliki satu produk" baseline (gap 1). `(Product value)` Profit baseline
 
 Nilai tambahan dari gap. Extra profit `(Markup value)` + bonus opsi own-innovation. Naik seiring lebar gap kualitas.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Discount efektif: firm mendiskon future dengan impatience PLUS hazard kanibalisme. Seperti asset pricing dengan default risk: discount = rate + hazard.
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 = "harga dasar" punya satu produk (di level pemula, gap 1). = "premium" karena unggul jauh — semakin besar lead, semakin besar premium. Total nilai firm = (banyaknya produk × harga dasar) + (jumlah premium dari tiap lead). Persis dua dimensi firm size: extensive (berapa produk) + intensive (seberapa unggul).
-
+```
 ### Exercise 15.15 — Derive value function (guess-and- verify)
 
 Derive value function lewat guess-and-verify.
@@ -713,16 +764,18 @@ Expansion rate (15.19):
 
 #### `Step 3` Samakan, solve
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
 konstan, ditentukan parameter saja! Karena expand ke market baru memberi produk gap 1 — persis sama dengan yang didapat entrant — free entry menyamakan nilainya ke, membuat FOC expansion independen dari kondisi agregat.
 
 Own-innovation rate (15.20):
-
-**Penjelasan Formal**
+```
+```{admonition} Penjelasan formal
+:class: note
 
 Implicit (di kedua sisi). Tergantung (kondisi agregat) — beda dari. Faktor = incremental gain naik satu gap.
-
+```
 ### Exercise 15.17 — Interpretasi, dan
 
 Interpretasikan behavior kebijakan optimal $I^{*}$ dan $x^{*}$. Apa artinya untuk dinamika firm?
@@ -733,18 +786,20 @@ Konstan, parameter saja. Tergantung rasio `(expansion)`: expand vs entry. Stabil
 
 TIDAK masuk (own-innovation tidak gusur firm lain). Hanya dan.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
 Churning intensity menangkap dua kekuatan: creative destruction (, kompres) vs own-innovation (, fatten). Rasio ini menentukan bentuk distribusi markup (Proposition 15.3).
 
 Properti 4 — Growth rate (15.21)
-
-**Penjelasan Intuitif**
+```
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Produktivitas agregat naik setiap kali ada inovasi dari salah satu dari tiga kanal. Tiap inovasi mengalikan kualitas dengan faktor $\lambda>1$ → menyumbang ke pertumbuhan. Total rate inovasi =. Maka growth = (total inovasi).
 
 **15.3.5.1 — Hasil penting**
-
+```
 ## Distribusi Markup Pareto
 
 Klimaks bab: dari flow accounting ke distribusi Pareto.
@@ -763,16 +818,18 @@ Shape parameter Pareto
 
 Jelaskan accounting process yang menghasilkan sistem ODE.
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Bayangkan tiap gap sebagai "kotak". Produk mengalir masuk dan keluar. Laju perubahan isi kotak = inflow − outflow. Dua gerakan: own-innovation menaikkan gap satu tingkat; creative destruction mereset gap ke 1.
-
-**Penjelasan Formal**
+```
+```{admonition} Penjelasan formal
+:class: note
 
 Gap: Inflow = semua produk di gap yang dikanibal (reset ke 1). Outflow = produk gap 1 yang naik via own-innovation. (Creative destruction pada gap-1 tetap di gap 1, bukan flow.)
 
 Gap: Inflow = produk gap naik via own- innovation. Outflow = naik via own-innovation ATAU reset via creative destruction.
-
+```
 ### Derivasi distribusi stasioner (langkah Exercise 15.20)
 
 **Step 1** — Impose stationarity:
@@ -795,19 +852,21 @@ Definisi. Maka.
 
 #### `Step 8` Distribusi Pareto
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Mengapa geometrik menjadi Pareto? Karena markup adalah transformasi eksponensial dari gap. Distribusi geometrik (exponential decay dalam) + transformasi log = Pareto (power law dalam). Hubungan matematis fundamental: exponential of geometric = power law.
-
+```
 ### Proposition 15.3
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Definisikan,. Maka:
 
 1. Distribusi markup stasioner: (Pareto).
 2. Misallocation & labor share,.
-
+```
 ### Derivasi dan (sering di final)
 
 Density Pareto,.
@@ -836,16 +895,17 @@ Tail turun lebih cepat → sedikit firm markup tinggi.
 
 share tinggi. Banyak creative destruction relatif own-innovation → markup terkompres (homogen) → less heterogeneity → less misallocation.
 
-**Penjelasan Intuitif**
+```{admonition} Penjelasan intuitif
+:class: tip
 
 Ekonomi yang "churning" tinggi (banyak pendatang baru menggusur incumbent) menjaga agar tak ada firm yang terlalu lama menikmati monopoli besar. Markup tetap seragam dan rendah → sumber daya teralokasi efisien. Sebaliknya, ekonomi dengan incumbent yang mengakar (own-innovation dominan, sedikit gangguan) membiarkan markup tumbuh heterogen → misallocation besar.
-
+```
 ### Exercise 15.20 — Langkah derivasi (flow → distribution)
-
 
 Jelaskan langkah logis dari flow accounting menuju distribusi stasioner markup.
 
-**Penjelasan Formal**
+```{admonition} Penjelasan formal
+:class: note
 
 Enam langkah: (1) flow accounting ODE untuk; (2) impose stationarity; (3) solve; (4) solve recursive → geometrik; (5) CDF gap; (6) change of variable + definisi → Pareto.
 
@@ -856,7 +916,7 @@ Jawaban atas misteri Hsieh-Klenow: misallocation TIDAK perlu diasumsikan eksogen
 ✦ ✦ ✦
 
 **Sintesis**
-
+```
 ## Benang Merah Bab 15
 
 Bagaimana semua bagian terhubung.
