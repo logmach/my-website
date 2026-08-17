@@ -27,11 +27,11 @@ Catatan terminologi: di matematika "equilibrium", di ekonomi "steady state" — 
 
 **Analogi "bola di permukaan"**
 
-**STABLE** — Sebelum definisi formal, pakai analogi klasik: bola pingpong Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.
+**Stable** — Sebelum definisi formal, pakai analogi klasik: bola pingpong Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.
 
 **Asymptotic Stable** — Bola di dasar mangkuk dalam. Dorong sedikit, akhirnya kembali persis ke dasar. Tetap dekat DAN konvergen.
 
-**GLOBAL ASYMP STABLE** — Bola di mangkuk tanpa pinggiran. Tidak peduli seberapa keras goyangkan, akhirnya bola kembali ke dasar. Konvergen dari MANAPUN.
+**Global asymptotic stable** — Bola di mangkuk tanpa pinggiran. Tidak peduli seberapa keras goyangkan, akhirnya bola kembali ke dasar. Konvergen dari MANAPUN.
 
 Bola di puncak bukit. Dorong sedikit, bola menggelinding jauh.
 
@@ -388,32 +388,28 @@ $$
 *Siap untuk Bab 6 dan setelahnya jika bisa menjawab.*
 
 **Definisi**
-
-1. ☐ Bisa mendefinisikan steady state sebagai $G(\bar{x})=0$
-2. ☐ Bisa membedakan stable, asymptotic stable, dan global asymptotic stable
-3. ☐ Bisa menggambar phase plane illustration untuk masing-masing (Exercise 5.1-5.3)
-4. ☐ Bisa mendefinisikan unstable
+- ☐ Bisa mendefinisikan steady state sebagai $G(\bar{x})=0$
+- ☐ Bisa membedakan stable, asymptotic stable, dan global asymptotic stable
+- ☐ Bisa menggambar phase plane illustration untuk masing-masing (Exercise 5.1-5.3)
+- ☐ Bisa mendefinisikan unstable
 
 **Teorema**
-
-1. ☐ Bisa menyatakan Teorema 5.1 (linear, semua eigenvalue real part negatif → global asymptotic stable)
-2. ☐ Bisa menyatakan Teorema 5.2 (nonlinear, Jacobian eigenvalue real part negatif → local asymptotic stable)
-3. ☐ Bisa menjelaskan mengapa "real part" yang penting (bukan eigenvalue mentah)
-4. ☐ Bisa menjelaskan mengapa Teorema 5.2 hanya "local"
+- ☐ Bisa menyatakan Teorema 5.1 (linear, semua eigenvalue real part negatif → global asymptotic stable)
+- ☐ Bisa menyatakan Teorema 5.2 (nonlinear, Jacobian eigenvalue real part negatif → local asymptotic stable)
+- ☐ Bisa menjelaskan mengapa "real part" yang penting (bukan eigenvalue mentah)
+- ☐ Bisa menjelaskan mengapa Teorema 5.2 hanya "local"
 
 **Aplikasi**
-
-1. ☐ Bisa menghitung Jacobian untuk sistem 2D
-2. ☐ Bisa menemukan eigenvalues matriks $2 \times 2$ (lewat persamaan karakteristik)
-3. ☐ Bisa mengklasifikasikan steady state: stable node, stable spiral, saddle, unstable
-4. ☐ Bisa derive $G'(\bar{k}) =(\alpha -1)(n + g + \delta)$ untuk Solow-Swan
+- ☐ Bisa menghitung Jacobian untuk sistem 2D
+- ☐ Bisa menemukan eigenvalues matriks $2 \times 2$ (lewat persamaan karakteristik)
+- ☐ Bisa mengklasifikasikan steady state: stable node, stable spiral, saddle, unstable
+- ☐ Bisa derive $G'(\bar{k}) =(\alpha -1)(n + g + \delta)$ untuk Solow-Swan
 
 **Konsep konseptual**
-
-1. ☐ Bisa menjelaskan mengapa steady state $= \ne $ otomatis stable
-2. ☐ Bisa menjelaskan analogi "bola di permukaan"
-3. ☐ Memahami kasus borderline ($G'(\bar{x})=0$) dan apa yang harus dilakukan
-4. ☐ Memahami saddle point dan signifikansinya untuk RCK
+- ☐ Bisa menjelaskan mengapa steady state $= \ne $ otomatis stable
+- ☐ Bisa menjelaskan analogi "bola di permukaan"
+- ☐ Memahami kasus borderline ($G'(\bar{x})=0$) dan apa yang harus dilakukan
+- ☐ Memahami saddle point dan signifikansinya untuk RCK
 
 ✦✦✦
 

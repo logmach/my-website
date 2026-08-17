@@ -259,35 +259,31 @@ Tanpa eigenvalue analysis, kita tidak bisa karakterisasi saddle path. Inilah int
 ## Checklist Pemahaman Bab 8
 
 **Konsep**
-
-1. ☐ Paham filosofi qualitative vs analytical approach
-2. ☐ Bisa baca phase diagram 1D dari grafik $g(x)$
-3. ☐ Paham vector field di phase plane 2D
-4. ☐ Paham stream lines tidak pernah berpotongan (Picard-Lindelöf)
-5. ☐ Paham definisi nullcline dan apa artinya geometris
-6. ☐ Paham steady state = perpotongan KEDUA nullcline
+- ☐ Paham filosofi qualitative vs analytical approach
+- ☐ Bisa baca phase diagram 1D dari grafik $g(x)$
+- ☐ Paham vector field di phase plane 2D
+- ☐ Paham stream lines tidak pernah berpotongan (Picard-Lindelöf)
+- ☐ Paham definisi nullcline dan apa artinya geometris
+- ☐ Paham steady state = perpotongan KEDUA nullcline
 
 **Klasifikasi (lima jenis)**
-
-1. ☐ Bisa identifikasi stable node dari eigenvalue
-2. ☐ Bisa identifikasi unstable node
-3. ☐ Bisa identifikasi saddle point (paling penting!)
-4. ☐ Bisa identifikasi stable spiral
-5. ☐ Bisa identifikasi center
-6. ☐ Bisa gunakan trick $det < 0$ → saddle untuk klasifikasi cepat
+- ☐ Bisa identifikasi stable node dari eigenvalue
+- ☐ Bisa identifikasi unstable node
+- ☐ Bisa identifikasi saddle point (paling penting!)
+- ☐ Bisa identifikasi stable spiral
+- ☐ Bisa identifikasi center
+- ☐ Bisa gunakan trick $det < 0$ → saddle untuk klasifikasi cepat
 
 **Skill menggambar**
-
-1. ☐ Bisa gambar sumbu dan steady state
-2. ☐ Bisa gambar eigenvektor sebagai garis lurus dengan panah yang benar
-3. ☐ Bisa gambar lintasan tipikal untuk tiap klasifikasi
-4. ☐ Bisa cek konsistensi dengan vector field di beberapa titik
+- ☐ Bisa gambar sumbu dan steady state
+- ☐ Bisa gambar eigenvektor sebagai garis lurus dengan panah yang benar
+- ☐ Bisa gambar lintasan tipikal untuk tiap klasifikasi
+- ☐ Bisa cek konsistensi dengan vector field di beberapa titik
 
 **Aplikasi**
-
-1. ☐ Paham nullcline RCK ($\dot{k}=0$ kurva, $\dot{c}=0$ vertikal)
-2. ☐ Paham saddle path = stable manifold di RCK
-3. ☐ Paham mengapa hanya satu trajectory yang konvergen di RCK ✦✦✦
+- ☐ Paham nullcline RCK ($\dot{k}=0$ kurva, $\dot{c}=0$ vertikal)
+- ☐ Paham saddle path = stable manifold di RCK
+- ☐ Paham mengapa hanya satu trajectory yang konvergen di RCK ✦✦✦
 
 ```{admonition} Penutup
 :class: important

@@ -114,9 +114,8 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 **Untuk IVP $\dot{x}=G(x, t)$ dengan $x(t_{0})=x_{0}$**
 
-Jika (1) $G$ kontinu di compact cube $D$ yang memuat $(x_{0}, t_{0})$, dan (2) $G$ Lipschitz
+Jika (1) $G$ kontinu di compact cube $D$ yang memuat $(x_{0}, t_{0})$, dan (2) $G$ Lipschitz dalam $x$ (bisa dijamin lewat continuously differentiable) — maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
 ```
-**dalam (bisa dijamin lewat continuously differentiable), $x$** — maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -129,11 +128,9 @@ Intuisi yang tepat. Yang harus diluruskan: bukan "IVP/BVP ada di D" tapi titik k
 
 $G$ kontinu: memastikan integral terdefinisi, memberi bound $∥G∥\le K$ via Extreme Value Theorem
 
-$G$ Lipschitz dalam: kritis untuk membuat operator integrasi menjadi contraction, sehingga ada fixed point unik $x$ (Banach)
+$G$ Lipschitz dalam $x$: kritis untuk membuat operator integrasi menjadi contraction, sehingga ada fixed point unik (Banach)
 
 $D$ kompak: tertutup dan terbatas, sehingga max/min tercapai
-
-**Catatan Nuansa**
 
 ## Konsep 5 — Saat Picard-Lindelöf Gagal — Eksplorasi Mendalam
 
@@ -167,7 +164,7 @@ Intuisinya: menggeser kurva ($t \mapsto t-\tau$) menghasilkan solusi baru. Setia
 
 **Mengapa $\dot{x}=x$ tidak bisa "potong-tempel"**
 
-Untuk Kasus A, solusi non-trivial $x(t) = Ae^{t}$. Dari $x(0) = 0A= 0$: → satu-satunya solusi adalah $x \equiv 0$.
+Untuk Kasus A, solusi non-trivial $x(t) = Ae^{t}$. Dari $x(0)=0 \Rightarrow A=0$: satu-satunya solusi adalah $x \equiv 0$.
 
 Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
 ```
@@ -176,7 +173,7 @@ Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
 ```{admonition} Hasil kunci
 :class: important
 
-*$\alpha \ge 1$ (linear, kuadratik,...): solusi unik ($x\equiv 0$) $0 < \alpha < 1$ (akar kuadrat, akar kubik,...): tak hingga solusi*
+*$\alpha \ge 1$ (linear, kuadratik, …): solusi unik ($x\equiv 0$). $\;0<\alpha<1$ (akar kuadrat, akar kubik, …): tak hingga solusi*
 
 *Aturan praktis: pangkat $\ge 1$ adalah well-behaved di titik asal. Pangkat pecahan $< 1$ menghasilkan turunan yang meledak → non-uniqueness.*
 
@@ -250,7 +247,7 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 **Bukti Formal Bukan Prioritas** — Dalam praktik, fokuslah pada statement dan aplikasinya; bukti formal opsional.
 
-**RENDERING CHECK** — Kalau formula terlihat aneh, minta format alternatif (subscript, plain text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
+**Rendering Check** — Kalau formula terlihat aneh, minta format alternatif (subscript, plain text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
 ```
 
 ## Checklist Pemahaman Bab 4
@@ -258,31 +255,27 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 *Siap untuk Bab 5 jika semua pertanyaan ini bisa dijawab dengan yakin.*
 
 **Konsep dasar**
-
-1. ☐ Bisa menjelaskan beda "menulis ODE" vs "menyelesaikan ODE"
-2. ☐ Bisa menjelaskan beda "general solution" vs "particular solution"
-3. ☐ Bisa menghitung jumlah konstanta arbitrer untuk ODE orde- $m$ dengan variabel $k$
-4. ☐ Bisa membedakan IVP dari BVP berdasarkan letak kondisinya
+- ☐ Bisa menjelaskan beda "menulis ODE" vs "menyelesaikan ODE"
+- ☐ Bisa menjelaskan beda "general solution" vs "particular solution"
+- ☐ Bisa menghitung jumlah konstanta arbitrer untuk ODE orde- $m$ dengan variabel $k$
+- ☐ Bisa membedakan IVP dari BVP berdasarkan letak kondisinya
 
 **Verifikasi solusi**
-
-1. ☐ Bisa verify apakah kandidat fungsi adalah solusi ODE (dengan turunan + substitusi)
-2. ☐ Tahu kapan menggunakan verify vs solve
-3. ☐ Bisa identifikasi solusi trivial $x(t) = x_{0}$ kalau $G(x_{0}) =0$
+- ☐ Bisa verify apakah kandidat fungsi adalah solusi ODE (dengan turunan + substitusi)
+- ☐ Tahu kapan menggunakan verify vs solve
+- ☐ Bisa identifikasi solusi trivial $x(t) = x_{0}$ kalau $G(x_{0}) =0$
 
 **Picard-Lindelöf**
-
-1. ☐ Bisa menyatakan kondisi teorema (kontinuitas $G$ + Lipschitz dalam) $x$
-2. ☐ Bisa cek apakah ODE konkret memenuhi kondisi
-3. ☐ Bisa membuat counter-example seperti $\dot{x}=\sqrt{x}$
-4. ☐ Bisa konstruksi multiple solutions menggunakan trick "potong-tempel"
+- ☐ Bisa menyatakan kondisi teorema (kontinuitas $G$ + Lipschitz dalam $x$)
+- ☐ Bisa cek apakah ODE konkret memenuhi kondisi
+- ☐ Bisa membuat counter-example seperti $\dot{x}=\sqrt{x}$
+- ☐ Bisa konstruksi multiple solutions menggunakan trick "potong-tempel"
 
 **Hubungan ke growth**
-
-1. ☐ Bisa menjelaskan mengapa model growth standar well-behaved
-2. ☐ Tahu peran Inada conditions dalam well-behavedness
-3. ☐ Tahu trajektori Solow-Swan adalah deterministik dari $k_{0}$
-4. ☐ Punya intuisi tentang saddle path di RCK (preview Bab 12)
+- ☐ Bisa menjelaskan mengapa model growth standar well-behaved
+- ☐ Tahu peran Inada conditions dalam well-behavedness
+- ☐ Tahu trajektori Solow-Swan adalah deterministik dari $k_{0}$
+- ☐ Punya intuisi tentang saddle path di RCK (preview Bab 12)
 
 ✦✦✦
 

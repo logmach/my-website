@@ -398,9 +398,9 @@ Picard-Lindelöf menjamin: untuk sembarang $k_{0} >0$, ada solusi $k(t)$ yang ek
 
 **Tiga jenis "tidak bisa di-solve"**
 
-**SKENARIO 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=-2x$, solusi $Ce^{-2t}$.
+**Skenario 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=-2x$, solusi $Ce^{-2t}$.
 
-**SKENARIO 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x^{2}}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
+**Skenario 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x^{2}}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
 
 **Skenario 3** — Solusi eksplisit eksis tapi terlalu rumit untuk memberi insight. Jarang; biasanya melibatkan fungsi spesial.
 
@@ -434,28 +434,25 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 *Siap untuk Bab 8 dan setelahnya jika bisa menjawab.*
 
 **Mekanik**
-
-1. ☐ Bisa hitung trace dan det matriks $2 \times 2$ dengan benar (hati-hati entri)
-2. ☐ Bisa solve persamaan karakteristik $\lambda -^{2}tr(A)\lambda + det(A) = 0$
-3. ☐ Bisa hitung eigenvektor dengan solve $(A -\lambda I)v= 0$ eksplisit
-4. ☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)
-5. ☐ Bisa identifikasi $\alpha, \beta$ untuk complex eigenvalues
+- ☐ Bisa hitung trace dan det matriks $2 \times 2$ dengan benar (hati-hati entri)
+- ☐ Bisa solve persamaan karakteristik $\lambda -^{2}tr(A)\lambda + det(A) = 0$
+- ☐ Bisa hitung eigenvektor dengan solve $(A -\lambda I)v= 0$ eksplisit
+- ☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)
+- ☐ Bisa identifikasi $\alpha, \beta$ untuk complex eigenvalues
 
 **Konseptual**
-
-1. ☐ Paham mengapa diagonalisasi memudahkan solve sistem ODE
-2. ☐ Paham bahwa eigenvektor = arah natural sistem
-3. ☐ Paham multiplicity dihitung per eigenvalue, bukan total
-4. ☐ Bisa membedakan tiga kasus eigenvalue (distinct, complex, repeated)
-5. ☐ Bisa klasifikasi stable node, stable spiral, saddle, center, improper node
+- ☐ Paham mengapa diagonalisasi memudahkan solve sistem ODE
+- ☐ Paham bahwa eigenvektor = arah natural sistem
+- ☐ Paham multiplicity dihitung per eigenvalue, bukan total
+- ☐ Bisa membedakan tiga kasus eigenvalue (distinct, complex, repeated)
+- ☐ Bisa klasifikasi stable node, stable spiral, saddle, center, improper node
 
 **Insight metakognitif**
-
-1. ☐ Paham mengapa "real part" yang menentukan stabilitas
-2. ☐ Paham eksistensi solusi ≠ ekspresibilitas (Picard-Lindelöf vs formula elementer)
-3. ☐ Paham mengapa linearisasi + eigenvalue adalah alat utama untuk growth theory
-4. ☐ Paham peran Hartman-Grobman sebagai jembatan antara linear dan nonlinear
-5. ☐ Habit sanity check eigenvalue: $Av$ harus $= \lambda v$
+- ☐ Paham mengapa "real part" yang menentukan stabilitas
+- ☐ Paham eksistensi solusi ≠ ekspresibilitas (Picard-Lindelöf vs formula elementer)
+- ☐ Paham mengapa linearisasi + eigenvalue adalah alat utama untuk growth theory
+- ☐ Paham peran Hartman-Grobman sebagai jembatan antara linear dan nonlinear
+- ☐ Habit sanity check eigenvalue: $Av$ harus $= \lambda v$
 
 ✦✦✦
 

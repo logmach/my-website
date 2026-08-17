@@ -1114,41 +1114,37 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 ## Checklist Pemahaman Bab 9
 
 **Derivasi yang harus kuasai**
-
-1. ☐ Derivation ODE per-worker dengan population growth (Exercise 9.6) — quotient rule
-2. ☐ Steady state untuk Cobb-Douglas (Exercise 9.9) — formula $\bar{k}$
-3. ☐ Comparative statics — 4 partial derivatives tanda
-4. ☐ Global asymptotic stability via phase line (Exercise 9.10)
-5. ☐Rate of convergence step-by-step — linearisasi, half-life
-6. ☐ Uzawa BGP proof — fakta matematis " $X/Y$ konstan ⟹ $g_{X} =g_{Y}$ "
-7. ☐ ODE Solow-Swan dengan tech (Exercise 9.16) — log-differentiation
+- ☐ Derivation ODE per-worker dengan population growth (Exercise 9.6) — quotient rule
+- ☐ Steady state untuk Cobb-Douglas (Exercise 9.9) — formula $\bar{k}$
+- ☐ Comparative statics — 4 partial derivatives tanda
+- ☐ Global asymptotic stability via phase line (Exercise 9.10)
+- ☐Rate of convergence step-by-step — linearisasi, half-life
+- ☐ Uzawa BGP proof — fakta matematis " $X/Y$ konstan ⟹ $g_{X} =g_{Y}$ "
+- ☐ ODE Solow-Swan dengan tech (Exercise 9.16) — log-differentiation
 
 **Konsep yang harus paham**
-
-1. ☐ Property 9.1-9.3 dan peran masing-masing
-2. ☐ Mengapa $0 < \alpha < 1$ wajib di Cobb-Douglas
-3. ☐ Mengapa market clearing penting
-4. ☐ Walras' Law — pasar barang clear "for free"
-5. ☐ Detrending: $k = K/(AL)$ membuat sistem stationary
-6. ☐ Tiga komponen "effective depreciation" ($\delta, n, g$)
-7. ☐ Level effects vs growth effects (Exercise 9.17)
+- ☐ Property 9.1-9.3 dan peran masing-masing
+- ☐ Mengapa $0 < \alpha < 1$ wajib di Cobb-Douglas
+- ☐ Mengapa market clearing penting
+- ☐ Walras' Law — pasar barang clear "for free"
+- ☐ Detrending: $k = K/(AL)$ membuat sistem stationary
+- ☐ Tiga komponen "effective depreciation" ($\delta, n, g$)
+- ☐ Level effects vs growth effects (Exercise 9.17)
 
 **Uzawa BGP — paling sulit**
-
-1. ☐ Statement Proposition 9.2 ($g_{Y} =g_{K} =g_{C}$, tech labor-augmenting)
-2. ☐ Fakta matematis kunci ($X/Y$ konstan ⟹ $g_{X} =g_{Y}$)
-3. ☐ Mengapa hanya $A_{L}$ yang bekerja (asimetri $K$ endogenous vs $L$ exogenous)
-4. ☐ Exercise 9.14: CES verification (3 skenario, mengapa Hicks dan Solow gagal)
-5. ☐ Exercise 9.15: Cobb-Douglas equivalence dan implikasinya
-6. ☐ Tension Uzawa vs Cobb-Douglas vs data — resolusi knife-edge dan identifikasi
+- ☐ Statement Proposition 9.2 ($g_{Y} =g_{K} =g_{C}$, tech labor-augmenting)
+- ☐ Fakta matematis kunci ($X/Y$ konstan ⟹ $g_{X} =g_{Y}$)
+- ☐ Mengapa hanya $A_{L}$ yang bekerja (asimetri $K$ endogenous vs $L$ exogenous)
+- ☐ Exercise 9.14: CES verification (3 skenario, mengapa Hicks dan Solow gagal)
+- ☐ Exercise 9.15: Cobb-Douglas equivalence dan implikasinya
+- ☐ Tension Uzawa vs Cobb-Douglas vs data — resolusi knife-edge dan identifikasi
 
 **Phase plot Exercise 9.17**
-
-1. ☐ Sketsa phase plot dalam $(k,/k)\dot{k}$ space
-2. ☐ Identifikasi steady state sebagai perpotongan dua kurva
-3. ☐ Dampak naik: shift garis horizontal naik, turun, tapi growth naik $g\bar{k}\tilde{y}$
-4. ☐ Dampak turun: shift garis turun, naik, level naik $n\bar{k}\tilde{y}$
-5. ☐ Dampak naik: shift garis naik, turun, level turun $\delta \bar{k}\tilde{y}$
+- ☐ Sketsa phase plot dalam $(k,/k)\dot{k}$ space
+- ☐ Identifikasi steady state sebagai perpotongan dua kurva
+- ☐ Dampak naik: shift garis horizontal naik, turun, tapi growth naik $g\bar{k}\tilde{y}$
+- ☐ Dampak turun: shift garis turun, naik, level naik $n\bar{k}\tilde{y}$
+- ☐ Dampak naik: shift garis naik, turun, level turun $\delta \bar{k}\tilde{y}$
 
 ✦✦✦
 

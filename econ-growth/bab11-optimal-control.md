@@ -314,7 +314,7 @@ Sebagian tepat, tapi perlu klarifikasi.
 
 **Sufficient** — V memenuhi HJB di semua (t, x) → optimal control. Strategy: solve PDE global.
 
-**NECESSARY** — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.
+**Necessary** — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.
 ```
 **Mengapa butuh necessary conditions**
 
@@ -1106,7 +1106,7 @@ Inilah mengapa di Exercise 11.3, kedua approach (HJB dan PMP) memberi Euler equa
 
 Pertanyaan yang sering muncul: "mengapa untuk envelope condition di PMP, persamaan ψ= e−ρth′ didiferensiasikan dengan t?"
 
-**HJB APPROACH** — Pakai envelope condition: turunkan HJB-R terhadap k. Envelope Theorem cancel suku dc∗/ dk.
+**HJB Approach** — Pakai envelope condition: turunkan HJB-R terhadap k. Envelope Theorem cancel suku dc∗/ dk.
 
 **PMP Approach** — Pakai turunan FOC terhadap t + adjoint equation. Tidak ada envelope theorem di sini.
 

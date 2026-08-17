@@ -875,62 +875,56 @@ Bab 14-15: Endogenous growth — buka black box tech
 ## Checklist Pemahaman Bab 10
 
 **Section 10.1 — Growth accounting**
-
-1. ☐ Derivation persamaan (10.1) dari chain rule
-2. ☐ Income shares $\alpha _{K}, \alpha _{L}$ dari competitive equilibrium
-3. ☐ Solow residual (10.2) dan back-out TFP
-4. ☐ Exercise 10.1: derive formula TFP untuk Cobb-Douglas
-5. ☐ Exercise 10.2: 8 measurement issues (time aggregation, mismeasurement)
-6. ☐ Arah bias mismeasurement dengan persamaan
+- ☐ Derivation persamaan (10.1) dari chain rule
+- ☐ Income shares $\alpha _{K}, \alpha _{L}$ dari competitive equilibrium
+- ☐ Solow residual (10.2) dan back-out TFP
+- ☐ Exercise 10.1: derive formula TFP untuk Cobb-Douglas
+- ☐ Exercise 10.2: 8 measurement issues (time aggregation, mismeasurement)
+- ☐ Arah bias mismeasurement dengan persamaan
 
 **Section 10.2 — Convergence regression**
-
-1. ☐ Distinction (per effective worker) vs (per physical worker) $y\tilde{y}$
-2. ☐ Derivation persamaan (10.6): $y^{~˙}\tilde{y}/ =g + \varepsilon _{f}^{\dot{k}}/k$
-3. ☐ Exercise 10.4: $\varepsilon _{f} =\alpha$ untuk Cobb-Douglas
-4. ☐ Exercise 10.5 dan 10.6: building block tools
-5. ☐ Linearisasi ODE di steady state
-6. ☐ Convergence equation (10.8) dengan derivasi lengkap
-7. ☐Rate of convergence $\beta = (1 -\varepsilon _{f})(\delta +g + n)$
-8. ☐ Distinction $D(0)$ vs untuk Jepang/Amerika/Zimbabwe $\beta$
-9. ☐ Limit cases: $\varepsilon _{f} \to 1$ (AK), $\varepsilon _{f} \to 0$
-10. ☐ Unconditional vs conditional convergence regression
+- ☐ Distinction (per effective worker) vs (per physical worker) $y\tilde{y}$
+- ☐ Derivation persamaan (10.6): $y^{~˙}\tilde{y}/ =g + \varepsilon _{f}^{\dot{k}}/k$
+- ☐ Exercise 10.4: $\varepsilon _{f} =\alpha$ untuk Cobb-Douglas
+- ☐ Exercise 10.5 dan 10.6: building block tools
+- ☐ Linearisasi ODE di steady state
+- ☐ Convergence equation (10.8) dengan derivasi lengkap
+- ☐Rate of convergence $\beta = (1 -\varepsilon _{f})(\delta +g + n)$
+- ☐ Distinction $D(0)$ vs untuk Jepang/Amerika/Zimbabwe $\beta$
+- ☐ Limit cases: $\varepsilon _{f} \to 1$ (AK), $\varepsilon _{f} \to 0$
+- ☐ Unconditional vs conditional convergence regression
 
 **Section 10.3 — Human capital extension**
-
-1. ☐ Derivation sistem ODE 2D dengan log-differentiation
-3. ☐ Exercise 10.13: derive $k^{*}, h^{*}, y^{*}$ step-by-step
-4. ☐ Comparative statics 5 parameter
+- ☐ Derivation sistem ODE 2D dengan log-differentiation
+- ☐ Exercise 10.13: derive $k^{*}, h^{*}, y^{*}$ step-by-step
+- ☐ Comparative statics 5 parameter
 
 **Exercise 10.14 — Nullcline (TERPENTING)**
-
-1. ☐ Identifikasi sistem sebagai ODE map $T= (T_{k}, T_{h})$
-2. ☐ Derive $N_{k}$ secara eksplisit (5 step)
-3. ☐ Derive $N_{h}$ secara eksplisit (5 step)
-4. ☐ Slope $N_{k} =(1 -\beta)/\alpha$, slope $N_{h} =\beta /(1 -\alpha)$
-5. ☐ Bukti $N_{k}$ lebih curam dari $N_{h}$
-6. ☐ Tanda di atas/bawah $\dot{k}N_{k}$ (naik dalam) $h$
-7. ☐ Tanda di atas/bawah $\dot{h}N_{h}$ (turun dalam pada $hN_{h}$)
-8. ☐ Tabel 4 region dengan arah vector
-9. ☐ Vector field di nullcline (vertikal di $N_{k}$, horizontal di $N_{h}$)
-10. ☐ Cara gambar phase plane step-by-step
-11. ☐ Lintasan IVP dan slope $dh/dk = T_{h}/T_{k}$
+- ☐ Identifikasi sistem sebagai ODE map $T= (T_{k}, T_{h})$
+- ☐ Derive $N_{k}$ secara eksplisit (5 step)
+- ☐ Derive $N_{h}$ secara eksplisit (5 step)
+- ☐ Slope $N_{k} =(1 -\beta)/\alpha$, slope $N_{h} =\beta /(1 -\alpha)$
+- ☐ Bukti $N_{k}$ lebih curam dari $N_{h}$
+- ☐ Tanda di atas/bawah $\dot{k}N_{k}$ (naik dalam) $h$
+- ☐ Tanda di atas/bawah $\dot{h}N_{h}$ (turun dalam pada $hN_{h}$)
+- ☐ Tabel 4 region dengan arah vector
+- ☐ Vector field di nullcline (vertikal di $N_{k}$, horizontal di $N_{h}$)
+- ☐ Cara gambar phase plane step-by-step
+- ☐ Lintasan IVP dan slope $dh/dk = T_{h}/T_{k}$
 
 **Section 10.4 — MRW**
-
-1. ☐ Exercise 10.15: derive $\tilde{y}_{j}^{*}(t)$ formula
-2. ☐ Sumber data tiap variabel (PWT, UNESCO, World Bank)
-3. ☐ Asumsi tech growth seragam ($A_{j} =\bar{A}_{j}^{gt}e$)
-4. ☐ Endogeneity problem dan asumsi $\bar{A}_{j} =A\varepsilon _{j}$
-5. ☐ Hasil estimasi: $R=^{2}0.78\beta = 0.30, \alpha = 0.28$,
-6. ☐ Interpretasi: human capital reduce TFP residual dari 41% ke 22%
+- ☐ Exercise 10.15: derive $\tilde{y}_{j}^{*}(t)$ formula
+- ☐ Sumber data tiap variabel (PWT, UNESCO, World Bank)
+- ☐ Asumsi tech growth seragam ($A_{j} =\bar{A}_{j}^{gt}e$)
+- ☐ Endogeneity problem dan asumsi $\bar{A}_{j} =A\varepsilon _{j}$
+- ☐ Hasil estimasi: $R=^{2}0.78\beta = 0.30, \alpha = 0.28$,
+- ☐ Interpretasi: human capital reduce TFP residual dari 41% ke 22%
 
 **Section 10.5 + big picture**
-
-1. ☐ 8 issues measurement MRW
-2. ☐ 6 cara relax asumsi
-3. ☐ Hubungan MRW vs RCK vs Peters (dua deficiency Solow)
-4. ☐ Hubungan ke Bab 11-15 (optimal control, RCK, endogenous growth)
+- ☐ 8 issues measurement MRW
+- ☐ 6 cara relax asumsi
+- ☐ Hubungan MRW vs RCK vs Peters (dua deficiency Solow)
+- ☐ Hubungan ke Bab 11-15 (optimal control, RCK, endogenous growth)
 
 ✦✦✦
 

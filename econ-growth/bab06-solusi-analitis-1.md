@@ -205,15 +205,15 @@ Jika $x^{*}_{1}(t)$ dan $x^{*}_{2}(t)$ keduanya solusi 6.11, maka $c_{1}x^{*}_{1
 
 Bukti (Exercise 6.5):
 
-$$ dtd[c_{1}x^{*}_{1} +c_{2}x^{*}_{2}] =c_{1}^{\dot{x}}_{1}^{*} +c_{2}^{\dot{x}}_{2}^{*} =c_{1}Ax^{*}_{1} +c_{2}Ax^{*}_{2} =A(c_{1}x^{*}_{1} +c_{2}x^{*}_{2})✓ $$
+$$ \frac{d}{dt}\bigl[c_{1}x^{*}_{1}+c_{2}x^{*}_{2}\bigr] = c_{1}\dot{x}^{*}_{1}+c_{2}\dot{x}^{*}_{2} = c_{1}Ax^{*}_{1}+c_{2}Ax^{*}_{2} = A\bigl(c_{1}x^{*}_{1}+c_{2}x^{*}_{2}\bigr)\;\checkmark $$
 ```
-**Corollary 6.1 — Kunci strategi solving** — Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x(t)^{*}_{2}$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
+**Corollary 6.1 — Kunci strategi solving** — Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x^{*}_{2}(t)$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
 
 Konsekuensi praktis: kita fokus solve sistem homogen saja, lalu "tambah kembali" particular solution.
 
 **Exercise 6.6 — Mengapa "general homog + particular = general non- homog"**
 
-Pertanyaan: kalau $x(t)^{*}$ general solution dari 6.11 dan particular solution dari 6.10, mengapa $\bar{x}x(t) +^{*}\bar{x}$ adalah general solution dari 6.10? Bukti intuitif: substitusi ke 6.10:
+Pertanyaan: kalau $x^{*}(t)$ general solution dari 6.11 dan $\bar{x}$ particular solution dari 6.10, mengapa $x^{*}(t)+\bar{x}$ adalah general solution dari 6.10? Bukti intuitif: substitusi ke 6.10:
 
 $$
 \frac{d}{dt}\left[x^{*}+\bar{x}\right]=\dot{x}^{*} \qquad A(x^{*}+\bar{x})+b=Ax^{*}+\underbrace{A\bar{x}+b}_{=0}=Ax^{*}
@@ -369,27 +369,24 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 *Siap untuk Bab 7 jika bisa menjawab.*
 
 **Mekanik solving**
-
-1. ☐ Bisa menyelesaikan $\dot{x}+ax = b$ dengan integrating factor
-2. ☐ Bisa menyelesaikan $\dot{x}+a(t)x = b(t)$ dengan $I(t) = e^{\inta(t)dt}$
-3. ☐ Bisa mengaplikasikan kondisi awal untuk dapat $C$
-4. ☐ Bisa identifikasi steady state $\bar{x}=b/a$ dari ODE konstan
-5. ☐ Bisa pakai trik $I(t)x(t) = C$ untuk ODE homogen (jalur cepat)
+- ☐ Bisa menyelesaikan $\dot{x}+ax = b$ dengan integrating factor
+- ☐ Bisa menyelesaikan $\dot{x}+a(t)x = b(t)$ dengan $I(t) = e^{\inta(t)dt}$
+- ☐ Bisa mengaplikasikan kondisi awal untuk dapat $C$
+- ☐ Bisa identifikasi steady state $\bar{x}=b/a$ dari ODE konstan
+- ☐ Bisa pakai trik $I(t)x(t) = C$ untuk ODE homogen (jalur cepat)
 
 **Konseptual**
-
-1. ☐ Bisa menjelaskan mengapa solusi $\dot{x}=kx$ adalah eksponensial
-2. ☐ Bisa menjelaskan arti "anchor + movement" dalam solusi
-3. ☐ Bisa membedakan general homog, particular non-homog, dan general non-homog
-4. ☐ Bisa menyatakan Principle of Superposition (Proposition 6.1)
-5. ☐ Bisa menjelaskan kenapa Theorem 6.1 Point 2 (selisih) memberi solusi homogen
+- ☐ Bisa menjelaskan mengapa solusi $\dot{x}=kx$ adalah eksponensial
+- ☐ Bisa menjelaskan arti "anchor + movement" dalam solusi
+- ☐ Bisa membedakan general homog, particular non-homog, dan general non-homog
+- ☐ Bisa menyatakan Principle of Superposition (Proposition 6.1)
+- ☐ Bisa menjelaskan kenapa Theorem 6.1 Point 2 (selisih) memberi solusi homogen
 
 **Habit metakognitif**
-
-1. ☐ Selalu sanity check tanda eksponen sebelum submit
-2. ☐ Pakai aturan "tanda eksponen = tanda koefisien" untuk $\dot{x}=kx$
-3. ☐ Verify solusi dengan substitusi ke ODE asli
-4. ☐ Hati-hati saat geser variabel — pastikan turunan benar
+- ☐ Selalu sanity check tanda eksponen sebelum submit
+- ☐ Pakai aturan "tanda eksponen = tanda koefisien" untuk $\dot{x}=kx$
+- ☐ Verify solusi dengan substitusi ke ODE asli
+- ☐ Hati-hati saat geser variabel — pastikan turunan benar
 
 ✦✦✦
 
