@@ -6,5 +6,20 @@ root: intro
 chapters:
 - file: about
 - file: matematika
+- file: econ-growth/index
+  sections:
+  - file: econ-growth/sintesis
+  - file: econ-growth/mindmap
+  - file: econ-growth/bab04-ode
+  - file: econ-growth/bab05-steady-state
+  - file: econ-growth/bab06-solusi-analitis-1
+  - file: econ-growth/bab07-solusi-analitis-2
+  - file: econ-growth/bab08-analisis-kualitatif
+  - file: econ-growth/bab09-solow-swan
+  - file: econ-growth/bab10-teori-pengukuran
+  - file: econ-growth/bab11-optimal-control
+  - file: econ-growth/bab12-rck
+  - file: econ-growth/bab14-romer
+  - file: econ-growth/bab15-peters
 - url: https://logmach.github.io/my-website/nol-ke-805.html
   title: "🎯 Belajar GMAT"
