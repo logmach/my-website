@@ -14,7 +14,7 @@ Bab 9 adalah pertunjukan perdana Tools I: seluruh matematika abstrak Bab 3–8 b
 
 **Level 3: Lanjut (Bab 11–15)** — RCK, Romer: model 2D+, optimisasi, endogenous tech. Dibangun di atas Solow-Swan.
 
-## Karakter "Keynesian" Solow-Swan
+**Karakter "Keynesian" Solow-Swan**
 
 Solow dan Swan punya pendekatan Keynesian: perilaku agen di-"hardwired" (tidak ada optimisasi). Yang fundamental:
 
@@ -29,7 +29,7 @@ Production function untuk barang akhir: $Y= F (A, K, L)$ Capital accumulation te
 
 *Foundation ekonomi Solow-Swan.*
 
-## Tiga properti yang harus dipegang
+**Tiga properti yang harus dipegang**
 
 Property 9.1 — Linear homogeneity (CRS):
 
@@ -51,7 +51,7 @@ $$
 
 Inada menjamin interior solutions — modal selalu berguna, tapi diminishing returns cukup kuat untuk menghentikan akumulasi.
 
-## Cobb-Douglas sebagai contoh utama
+**Cobb-Douglas sebagai contoh utama**
 
 $$ F (A, K, L) = K(AL)^{\alpha1-\alpha },0 <\alpha < 1 $$
 
@@ -72,43 +72,43 @@ $\alpha > 1$: $F_{KK} >0$ (increasing returns dalam $K$) → modal meledak, tida
 
 *Bukti formal yang mendukung Property 9.1.*
 
-## Exercise 9.1 — Linear homogeneity menyiratkan weak concavity
+**Exercise 9.1 — Linear homogeneity menyiratkan weak concavity**
 
 Klaim: kalau $F$ linear homogeneous dan strictly concave dalam tiap input secara terpisah, maka $F$ weakly concave dalam $(K, L)$ secara gabungan.
 
-### Bukti step-by-step
+**Bukti step-by-step**
 
-#### **Step 1** Setup: tujuan
+****Step 1** Setup: tujuan**
 
 Tunjukkan: untuk $\lambda \in [0, 1]$ dan dua titik $(K_{1}, L_{1}), (K_{2}, L_{2})$:
 
 $$ F (\lambda K_{1} +(1 -\lambda)K_{2}, \lambda L_{1} +(1 -\lambda)L_{2}) \ge \lambda F (K_{1}, L_{1}) +(1 -\lambda)F (K_{2}, L_{2}) $$
 
-#### **Step 2** Reduksi ke per-worker form
+****Step 2** Reduksi ke per-worker form**
 
 Linear homogeneity dengan $\lambda = 1/LF (K, L) = L \cdot f(K/L)$: dengan $f(k):= F (k, 1)$.
 
-#### **Step 3** $f$ concave dalam $k$
+****Step 3** $f$ concave dalam $k$**
 
 Karena $F$ concave dalam $Kf(k) = F (k, 1)$, juga concave dalam. $k$
 
-#### **Step 4** Definisikan berat efektif $\mu$
+****Step 4** Definisikan berat efektif $\mu$**
 
 Misalkan $K_{\lambda } =\lambda K_{1} +(1 -\lambda)K_{2}$, $L_{\lambda } =\lambda L_{1} +(1 -\lambda)L_{2}$.
 
 Definisikan $\mu = \lambda L_{1}/L_{\lambda }$. Cek: $K_{\lambda }/L_{\lambda } =\mu (K_{1}/L_{1}) +(1 -\mu)(K_{2}/L_{2})$.
 
-#### **Step 5** Aplikasi concavity $f$
+****Step 5** Aplikasi concavity $f$**
 
 $$ f(K/L_{\lambda\lambda }) \ge \mu f(K_{1}/L_{1}) +(1 -\mu)f(K_{2}/L_{2}) $$
 
-#### **Step 6** Kalikan $L_{\lambda }$ dan substitusi
+****Step 6** Kalikan $L_{\lambda }$ dan substitusi**
 
 Setelah aljabar (kalikan, substitusi $\mu = \lambda L_{1}/L_{\lambda }$):
 
 $$ L_{\lambda }f(K_{\lambda }/L_{\lambda }) \ge \lambda L_{1}f(K_{1}/L_{1}) +(1 -\lambda)L_{2}f(K_{2}/L_{2}) $$
 
-#### **Step 7** Terjemahkan kembali ke $F$
+****Step 7** Terjemahkan kembali ke $F$**
 
 Pakai $F (K, L) = Lf(K/L)$ untuk tiap suku:
 
@@ -116,27 +116,29 @@ $$ F (K_{\lambda }, L_{\lambda }) \ge \lambda F (K_{1}, L_{1}) +(1 -\lambda)F (K
 
 Inilah definisi weak concavity. QED.
 
-**Catatan Nuansa**
+```{admonition} Catatan
+:class: note
 
-### Mengapa hanya "weakly" concave? Karena sepanjang ray dari origin ($K_{2} =$
+**Mengapa hanya "weakly" concave? Karena sepanjang ray dari origin ($K_{2} =$**
 
 $cK_{1}, L_{2} =cL_{1}$), linear homogeneity menghasilkan persamaan (bukan strict inequality). Untuk titik non-proporsional, kita dapat strict — tapi karena ada kasus di mana persamaan,
 
 *hanya "weak".*
 
-## Exercise 9.2 — Euler's Theorem
+**Exercise 9.2 — Euler's Theorem**
 
 Statement: kalau homogeneous of degree $gm$ dalam $x, y$:
 
 $$ m \cdot g(x, y) = g_{x}^{x+g} \cdot _{y}^{y} \cdot $$
 
-### Bukti
+**Bukti**
 
-#### **Step 1** Mulai dari definisi homogeneity
+****Step 1** Mulai dari definisi homogeneity**
 
 $$ g(\lambda x, \lambda y) = \lambda g(x, y)^{m} $$
+```
 
-#### **Step 2** Turunkan kedua sisi terhadap $\lambda$
+****Step 2** Turunkan kedua sisi terhadap $\lambda$**
 
 Sebelah kiri (chain rule): $g_{x}(\lambda x, \lambda y) \cdot x + g_{y}(\lambda x, \lambda y) \cdot y$.
 
@@ -152,7 +154,7 @@ $$ g_{x}(x, y) \cdot x + g_{y}(x, y) \cdot y= mg(x, y) $$
 
 QED.
 
-### Aplikasi Cobb-Douglas
+**Aplikasi Cobb-Douglas**
 
 Verifikasi untuk $F= K(AL)^{\alpha1-\alpha }$ dengan $m= 1$:
 
@@ -171,7 +173,7 @@ Jumlah: $F_{K}K +F_{L}L =\alpha F+ (1 -\alpha)F= F$ ✓
 
 *Definition 9.2, Exercise 9.5, dan mengapa market clearing penting.*
 
-## Definition 9.2 — Competitive equilibrium
+**Definition 9.2 — Competitive equilibrium**
 
 Lintasan $(K, L)(t)$ dan $(w, R)(t)$ yang memenuhi:
 
@@ -180,7 +182,7 @@ Lintasan $(K, L)(t)$ dan $(w, R)(t)$ yang memenuhi:
 3. Harga = marginal product: $R=F_{K}$, $w=F_{L}$ (Eq 9.5-9.6)
 4. Akumulasi: $K^{ˉ˙}=I-\delta \bar{K}$ (Eq 9.2)
 
-## Mengapa market clearing penting?
+**Mengapa market clearing penting?**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -206,15 +208,15 @@ $$ Y= C+ I= (1 -s)Y+ sY= Y ✓ $$
 
 Inilah Walras' Law: kalau $n -1$ pasar clear, pasar terakhir otomatis clear.
 
-## Exercise 9.5 — Reduksi ke ODE tunggal
+**Exercise 9.5 — Reduksi ke ODE tunggal**
 
 Goal: tunjukkan competitive equilibrium bisa dijelaskan oleh dua persamaan saja.
 
-#### **Step 1** Mulai dari capital accumulation
+****Step 1** Mulai dari capital accumulation**
 
 $$ K^{ˉ˙}=I-\delta \bar{K} $$
 
-#### **Step 2** Substitusi $I= sY$ (saving = investment)
+****Step 2** Substitusi $I= sY$ (saving = investment)**
 
 $$ K^{ˉ˙}=sY-\delta \bar{K} $$
 
@@ -222,7 +224,7 @@ $$ K^{ˉ˙}=sY-\delta \bar{K} $$
 
 $$ K^{ˉ˙}=sF (A, K, L) -\delta \bar{K} $$
 
-#### **Step 4** Pakai capital market clearing $K= \bar{K}$
+****Step 4** Pakai capital market clearing $K= \bar{K}$**
 
 $$ \dot{K}=sF (A, K, L) -\delta K $$
 
@@ -241,7 +243,7 @@ Plus labor market clearing $L = \bar{L}$ (Eq 9.8). Selesai.
 
 *Dari ODE level ke ODE per-worker dengan population growth.*
 
-## Setup
+**Setup**
 
 Population growth: $\bar{L}(t) =eL^{nt}_{0}$, jadi $\dot{L}/L =n$ Tech konstan: $A(t) = A$
 
@@ -249,13 +251,13 @@ $F$ linear homogeneous
 
 Goal: derive $\dot{k}=sf(k) -(n + \delta)k$ dengan $k = K/L$.
 
-## Derivation step-by-step
+**Derivation step-by-step**
 
-#### **Step 1** Pakai linear homogeneity untuk simplify $F$
+****Step 1** Pakai linear homogeneity untuk simplify $F$**
 
 $F (A, K, L) = L \cdot F (A, K/L, 1) = L \cdot f(k, A)$ dengan $k = K/L$.
 
-#### **Step 2** Substitusi ke ODE level
+****Step 2** Substitusi ke ODE level**
 
 $$
 \frac{\dot{K}}{L}=\frac{sLf(k)-\delta K}{L}=sf(k)-\delta k
@@ -277,7 +279,7 @@ $$ \dot{k}=\dot{K} -nk $$
 
 $L$
 
-#### **Step 5** Substitusi $\dot{K}$ dari Step 2
+****Step 5** Substitusi $\dot{K}$ dari Step 2**
 
 $$
 \frac{\dot{K}}{L}=\frac{sLf(k)-\delta K}{L}=sf(k)-\delta k
@@ -287,11 +289,11 @@ Maka:
 
 $$ \dot{k}=sf(k) -\delta k -nk $$
 
-#### **Step 6** Faktorkan
+****Step 6** Faktorkan**
 
 $$ \dot{k}= sf(k) -(n + \delta)k $$
 
-## Interpretasi tiap suku
+**Interpretasi tiap suku**
 
 $SF (K)$ Saving per worker. Sumber pertumbuhan modal per worker.
 
@@ -307,7 +309,7 @@ menjaga konstan. $k$
 
 ### Exercise 9.8 dan 9.9 — eksistensi, keunikan, dan reaksi terhadap parameter. $\bar{k}$
 
-## Exercise 9.8 — Steady state condition
+**Exercise 9.8 — Steady state condition**
 
 Set $\dot{k}=0$ di ODE:
 
@@ -315,15 +317,15 @@ $$ sf(, A) =\bar{k}(n + \delta)\bar{k} $$
 
 Interpretasi: saving per worker = effective depreciation. Kekuatan akumulasi dan kekuatan pelarutan seimbang.
 
-## Exercise 9.9 — Derive untuk Cobb-Douglas $\bar{k}$
+**Exercise 9.9 — Derive untuk Cobb-Douglas $\bar{k}$**
 
 $f(k, A) = Ak^{\alpha }$ (Cobb-Douglas dengan $A$ scaling).
 
-#### **Step 1** Substitusi ke steady state condition
+****Step 1** Substitusi ke steady state condition**
 
 $$ sA\bar{k}^{\alpha }=(n + \delta)\bar{k} $$
 
-#### **Step 2** Bagi kedua sisi dengan $\bar{k}^{\alpha }$
+****Step 2** Bagi kedua sisi dengan $\bar{k}^{\alpha }$**
 
 $$ sA= (n + \delta)\bar{k}^{1-\alpha } $$
 
@@ -333,13 +335,13 @@ $$
 \bar{k}^{1-\alpha}=\frac{sA}{n+\delta}
 $$
 
-#### **Step 4** Solve untuk $\bar{k}$
+****Step 4** Solve untuk $\bar{k}$**
 
 $$
 \bar{k}=\left(\frac{s}{n+g+\delta}\right)^{1/(1-\alpha)}
 $$
 
-## Comparative statics — empat partial derivatives
+**Comparative statics — empat partial derivatives**
 
 Pakai rule untuk fungsi $\bar{k}(s, A, n, \delta) =(sA/(n + \delta))^{1/(1-\alpha)}$:
 
@@ -360,11 +362,11 @@ Latihan yang baik: derive keempat partial derivatives dan pastikan tandanya kons
 
 *Inti Section 9.4 — dengan mekanik rate of convergence step-by-step (sesuai permintaanmu).*
 
-## Exercise 9.10 — Global asymptotic stability
+**Exercise 9.10 — Global asymptotic stability**
 
 Klaim: $\bar{k}>0$ adalah globally asymptotic stable.
 
-### Bukti via phase line
+**Bukti via phase line**
 
 ODE: $\dot{k}=G(k):= sf(k) -(n + \delta)k$.
 
@@ -376,22 +378,22 @@ Untuk $0<k<\bar{k}$: $G(k)>0$, jadi $k$ naik ke $\bar{k}$. Untuk $k>\bar{k}$: $G
 
 Konvergen monoton dari kedua sisi. Globally asymptotic stable ✓
 
-## Phase line Solow-Swan dasar
+**Phase line Solow-Swan dasar**
 
-### k̇
+**k̇**
 
-### G(k) = sf(k) - (n+δ)k
+**G(k) = sf(k) - (n+δ)k**
 
 *Phase line Solow-Swan dalam ruang $(k,\dot{k})$: kurva hijau $G(k)$; di kiri $\bar{k}$, $G>0$ → $k$ naik; di kanan, $G<0$ → $k$ turun. Steady state $\bar{k}$ globally asymptotically stable.
 
-## Rate of convergence — mekanik step-by-step
+**Rate of convergence — mekanik step-by-step**
 
 ```{admonition} Ringkasan besar
 :class: important
 
 *Pertanyaan utama: seberapa cepat konvergen ke? $k\bar{k}$ Strategi: linearisasi ODE di → ODE linear → solve eksplisit → half-life. $\bar{k}$*
 ```
-### Linearisasi
+**Linearisasi**
 
 **Step 1** Taylor expansion $G(k)$ di $\bar{k}$
 
@@ -401,7 +403,7 @@ Karena $G(\bar{k})=0$:
 
 $$ G(k) \approx G'(\bar{k})\,(k-\bar{k}) $$
 
-#### **Step 2** Substitusi ke ODE
+****Step 2** Substitusi ke ODE**
 
 $$ \dot{k} \approx G'(\bar{k})\,(k-\bar{k}) $$
 
@@ -413,7 +415,7 @@ $$ \dot{d} = G'(\bar{k})\,d $$
 
 Ini ODE linear paling sederhana — bentuk $\dot{x}=ax$ dari Bab 6.
 
-#### **Step 4** Solve ODE linear
+****Step 4** Solve ODE linear**
 
 $$ d(t) = d_{0}\,e^{G'(\bar{k})\,t} $$
 
@@ -421,15 +423,15 @@ Kembali ke $k$:
 
 $$ k(t)-\bar{k} = (k_{0}-\bar{k})\,e^{G'(\bar{k})\,t} $$
 
-### Hitung $G'(\bar{k})$ untuk Cobb-Douglas
+**Hitung $G'(\bar{k})$ untuk Cobb-Douglas**
 
-#### **Step 1** Turunkan $G$
+****Step 1** Turunkan $G$**
 
 $G(k) = sk^{\alpha} - (n+\delta)k$, maka:
 
 $$ G'(k) = \alpha s k^{\alpha-1} - (n+\delta) $$
 
-#### **Step 2** Evaluasi di $\bar{k}$
+****Step 2** Evaluasi di $\bar{k}$**
 
 $$ G'(\bar{k}) =\alpha s\bar{k}^{\alpha-1}-(n + \delta) $$
 
@@ -445,9 +447,9 @@ Karena $\alpha < 1$:
 
 $$ G'(\bar{k}) = -(1-\alpha)(n+\delta) < 0 $$
 
-### Half-life — berapa lama deviation separuh berkurang?
+**Half-life — berapa lama deviation separuh berkurang?**
 
-#### **Step 1** Setup persamaan
+****Step 1** Setup persamaan**
 
 $$
 \frac{k(t)-\bar{k}}{k_{0}-\bar{k}}=\frac{1}{2}
@@ -457,17 +459,17 @@ Substitusi solusi:
 
 $$ e^{G'(\bar{k})\,t} = \tfrac{1}{2} $$
 
-#### **Step 2** Take log natural
+****Step 2** Take log natural**
 
 $$ G'(\bar{k})\,t = \ln(0.5) = -\ln 2 $$
 
-#### **Step 3** Solve untuk $t$
+****Step 3** Solve untuk $t$**
 
 $$
 t_{1/2}=\frac{\ln 2}{\left|G\'(\bar{k})\right|}=\frac{\ln 2}{(1-\alpha)(n+\delta)}
 $$
 
-### Numerical example
+**Numerical example**
 
 Untuk $\alpha = 1/3, n + \delta = 0.08$:
 
@@ -480,7 +482,7 @@ $t_{1/2} =0.693/0.053 \approx 13$ tahun
 
 *Interpretasi: deviation dari steady state berkurang separuh setiap ~13 tahun. Untuk OECD parameter ($\alpha = 0.33, n + g + \delta = 0.06$): half-life ~17 tahun. Konsisten dengan pemulihan pasca-perang Jerman/Jepang.*
 ```
-## Insight metakognitif
+**Insight metakognitif**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -489,13 +491,13 @@ Titik bingung yang umum: perhitungan rate of convergence. Kuncinya: $\tilde{k}$ 
 ```
 ## Konsep 8 — Perpetual Growth — Section 9.5
 
-### Bagaimana mendapat pertumbuhan permanen?
+**Bagaimana mendapat pertumbuhan permanen?**
 
-## Masalah
+**Masalah**
 
 Solow-Swan dasar menunjukkan ekonomi konvergen ke $\bar{k}$ — yaitu, tidak ada long-run growth per kapita. Kontradiksi dengan data: negara seperti AS sudah tumbuh per kapita selama 150+ tahun.
 
-## Exercise 9.11 — AK model
+**Exercise 9.11 — AK model**
 
 Set $\alpha = 1$ di Cobb-Douglas:
 
@@ -505,13 +507,14 @@ Output hanya tergantung modal. ODE per worker:
 
 $$ \dot{k}=sAk -(n + \delta)k = [sA -(n + \delta)]k $$
 
-### Karakteristik AK model
+**Karakteristik AK model**
 
 ODE linear — solusi: $k(t) = k_{0}^{[sA-(n+\delta)]t}e$ Tidak ada steady state interior Kalau $sA> n + \delta$: perpetual growth dengan rate $sA -(n + \delta)$
 
 Capital share = 100% (counterfactual!)
 
-**Jebakan Umum**
+```{admonition} ⚠️ Jebakan umum
+:class: warning
 
 AK model menghasilkan perpetual growth, tapi:
 
@@ -520,12 +523,12 @@ Tidak ada diminishing returns ($\alpha = 1$ → $F_{KK} =0$) Labor tidak relevan
 Capital share = 100% — data menunjukkan ~30-40%
 
 AK model bertentangan dengan Kaldor facts. Kita butuh solusi yang lebih baik.
-
+```
 ## Konsep 9 — Uzawa BGP — Bukti Step-by-Step
 
 *Proposition 9.2 dan Exercise 9.13. Aturan baru: tidak lompat notasi.*
 
-## Setup
+**Setup**
 
 Production function umum:
 
@@ -533,22 +536,22 @@ $$ Y= A_{H} \cdot F [A_{K}K, A_{L}L] $$
 
 Asumsi BGP: semua growth rate konstan (yaitu $g_{K}, g_{Y}, g_{C}$ tidak berubah seiring waktu).
 
-## Fakta matematis kunci
+**Fakta matematis kunci**
 
 ```{admonition} Hasil kunci
 :class: important
 
 *Fakta: kalau $X/Y$ konstan, maka $g_{X} =g_{Y}$.*
 ```
-### Bukti step-by-step:
+**Bukti step-by-step**
 
 *1. Asumsi: $X/Y= c$ (konstan). Tulis: $X= cY$. 2. Turunkan: $\dot{X}=c\dot{Y}$. 3. Bagi dengan $X$: $\dot{X}/X=c\dot{Y}/X$. 4. Substitusi $X= cY$: $\dot{X}/X=c\dot{Y}/(cY)=\dot{Y}/Y$. 5. Yaitu $g_{X} =g_{Y}$. QED.*
 
 *Aturan praktis: " $X/Y$ konstan"⟹" $g_{X} =g_{Y}$ ".*
 
-## Bukti Uzawa step-by-step
+**Bukti Uzawa step-by-step**
 
-#### **Step 1** Resource constraint
+****Step 1** Resource constraint**
 
 $$ \dot{K}=Y-C-\delta K $$
 
@@ -560,13 +563,13 @@ $$
 
 Yaitu: $g_{K} =Y /K -C/K -\delta$.
 
-#### **Step 2** BGP berarti semua growth rate konstan
+****Step 2** BGP berarti semua growth rate konstan**
 
 $g_{K}$ konstan di sebelah kiri → sebelah kanan juga konstan.
 
 Karena konstan, $\delta Y /K -C/K$ harus konstan. Dengan asumsi BGP yang lebih ketat: $Y /K$ dan $C/K$ masing-masing konstan.
 
-#### **Step 3** Aplikasi fakta matematis
+****Step 3** Aplikasi fakta matematis**
 
 $Y /K$ konstan → $g_{Y} =g_{K}$.
 
@@ -574,7 +577,7 @@ $C/K$ konstan → $g_{C} =g_{K}$.
 
 Maka: $g_{Y} =g_{K} =g_{C}$. (Klaim 1 Uzawa).
 
-#### **Step 4** Bagi production function dengan $Y$
+****Step 4** Bagi production function dengan $Y$**
 
 Karena $F$ linear homogeneous, kita pakai property dengan $\lambda = 1/Y$:
 
@@ -588,11 +591,11 @@ Atau pakai bentuk yang lebih terurai (untuk argumen):
 
 $$ 1 = F[\tilde{A},KY,YL ] $$
 
-#### **Step 5** Cek apakah $K/Y$ konstan
+****Step 5** Cek apakah $K/Y$ konstan**
 
 Dari Step 3: $g_{Y} =g_{K}$. Pakai fakta matematis (arah balik): $g_{X} =g_{Y}$ ⟹ $X/Y$ konstan. Maka $K/Y$ konstan dalam BGP ✓
 
-#### **Step 6** Cek apakah $L/Y$ konstan
+****Step 6** Cek apakah $L/Y$ konstan**
 
 Pakai fakta matematis: $L/Y$ konstan ⟺ $g_{L} =g_{Y}$.
 
@@ -600,7 +603,7 @@ Tapi $g_{L} =n$ (population growth) dan $g_{Y} >n$ dalam BGP per capita growth.
 
 Maka $g_{L}^{ \ne g} =_{Y}$ → $L/Y$ TIDAK konstan. Lebih spesifik, $L/Y$ menurun dengan rate $g_{L} -g_{Y} =$ $n -g_{Y} <0$.
 
-#### **Step 7** Konsekuensi: tech harus menyentuh sisi $L$
+****Step 7** Konsekuensi: tech harus menyentuh sisi $L$**
 
 Persamaan $1 = F [, K/Y, L/Y ]\tilde{A}$ harus tetap berlaku. $K/Y$ konstan (oke), tapi $L/Y$ berubah (masalah). Tech $\tilde{A}$ harus berubah sehingga mengkompensasi perubahan $L/Y$.
 
@@ -608,7 +611,7 @@ Solusi: tech labor-augmenting $A_{L}$ yang menggandakan $L$. Tulis:
 
 $$ Y= F [K, A_{L}L] $$
 
-#### **Step 8** Tentukan rate growth $A_{L}$
+****Step 8** Tentukan rate growth $A_{L}$**
 
 Untuk BGP, $(A_{L}L)/Y$ harus konstan.
 
@@ -622,7 +625,7 @@ $$ g_{AL} +n = g_{Y}⟹g_{AL} =g_{Y} -n $$
 
 Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
-## Mengapa hanya $A_{L}$?
+**Mengapa hanya $A_{L}$?**
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -637,17 +640,17 @@ Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
 *Cek tiga jenis tech untuk CES production function.*
 
-## Setup CES
+**Setup CES**
 
 $$ Y= A_{H}^{[}\gamma (A_{K}K)+ (1 -\gamma)(A^{\sigma }_{L}L)^{\sigma }]^{1/\sigma } $$
 
 Dengan $\sigma \in (-\infty, 1), \sigma = \ne 0$. Elasticity of substitution $= 1/(1 -\sigma)$. Untuk $\sigma \to 0$ (Cobb-Douglas), elasticity = 1.
 
-## Skenario 1 — Hicks-neutral
+**Skenario 1 — Hicks-neutral**
 
 $A_{K} =A_{L} =1$, hanya $A_{H}$ tumbuh.
 
-### Hitung capital share
+**Hitung capital share**
 
 **Step 1** Hitung $F_{K}$
 
@@ -671,7 +674,7 @@ $Capital share =_{\sigma\sigma }$
 
 $$ \gamma K+ (1 -\gamma)L $$
 
-#### **Step 3** Cek konstansi
+****Step 3** Cek konstansi**
 
 Bagi pembilang dan penyebut dengan $K^{\sigma }$:
 
@@ -687,21 +690,21 @@ Tapi $g_{L} =n, g_{K} =g_{Y} >n$ → $L/K$ tidak konstan → capital share berub
 
 Hicks-neutral gagal Kaldor fact 3.
 
-## Skenario 2 — Solow-neutral
+**Skenario 2 — Solow-neutral**
 
 $A_{H} =A_{L} =1$, hanya $A_{K}$ tumbuh.
 
-#### **Step 1** Pakai linear homogeneity
+****Step 1** Pakai linear homogeneity**
 
 $$ YL=[(\gamma A^{K}LK)^{\sigma }+ (1 -\gamma)]^{1/\sigma } $$
 
-#### **Step 2** Argumen BGP
+****Step 2** Argumen BGP**
 
 Untuk $Y /L$ tumbuh dengan rate konstan, sebelah kanan harus tumbuh dengan rate konstan. Karena suku $(1 -\gamma)$ konstan, suku $\gamma (A_{K}K/L)^{\sigma }$ harus konstan (bukan tumbuh).
 
 Maka $A_{K}K/L$ konstan.
 
-#### **Step 3** Pakai fakta matematis
+****Step 3** Pakai fakta matematis**
 
 $A_{K}K/L$ konstan → $g_{AKK} =g_{L} =n$.
 
@@ -713,11 +716,11 @@ $$ g_{AK} =n -g_{Y} <0 $$
 
 Tech harus mundur — tidak realistis. Solow-neutral gagal.
 
-## Skenario 3 — Harrod-neutral
+**Skenario 3 — Harrod-neutral**
 
 $A_{H} =A_{K} =1$, hanya $A_{L}$ tumbuh.
 
-#### **Step 1** Setup
+****Step 1** Setup**
 
 $$ Y=\gamma K+ (1 -\gamma)(A[^{\sigma }_{L}L)^{\sigma }]^{1/\sigma } $$
 
@@ -727,11 +730,11 @@ $$
 \frac{K}{Y}=\left[\gamma+(1-\gamma)\left(\frac{A_{L}L}{K}\right)^{\sigma}\right]^{-1/\sigma}
 $$
 
-#### **Step 2** Argumen BGP
+****Step 2** Argumen BGP**
 
 Untuk $Y /K$ konstan (dari Kaldor fact 1), sebelah kanan harus konstan. Maka $A_{L}L/K$ konstan.
 
-#### **Step 3** Pakai fakta matematis
+****Step 3** Pakai fakta matematis**
 
 $A_{L}L/K$ konstan → $g_{ALL} =g_{K} =g_{Y}$.
 
@@ -741,7 +744,7 @@ $$ g_{AL} =g_{Y} -n > 0 $$
 
 Tech maju. Realistis. ✓
 
-#### **Step 4** Cek capital share
+****Step 4** Cek capital share**
 
 Capital share = $\gamma /[\gamma + (1 -\gamma)(A_{L}L/K)]^{\sigma }$. Karena $A_{L}L/K$ konstan, capital share konstan ✓
 
@@ -758,13 +761,13 @@ Capital share = $\gamma /[\gamma + (1 -\gamma)(A_{L}L/K)]^{\sigma }$. Karena $A_
 
 *Mengapa Cobb-Douglas "menyembunyikan" distinction antara Hicks/Solow/Harrod.*
 
-## Tiga versi Cobb-Douglas dengan tech
+**Tiga versi Cobb-Douglas dengan tech**
 
 Hicks-neutral: $Y= A_{H} \cdot KL^{\alpha1-\alpha }$ Solow-neutral: $Y= (A_{K}K)L^{\alpha1-\alpha }$ Harrod-neutral: $Y= K(A^{\alpha }_{L}L)^{1-\alpha }$
 
-## Tunjukkan equivalence Versi A ≡ Versi B
+**Tunjukkan equivalence Versi A ≡ Versi B**
 
-#### **Step 1** Expand Solow-neutral
+****Step 1** Expand Solow-neutral**
 
 $$ (A_{K}K)=^{\alpha }A^{\alpha }_{K} \cdot K^{\alpha } $$
 
@@ -772,15 +775,15 @@ Maka:
 
 $$ Y_{B} =AKL^{\alpha }_{K}^{\alpha1-\alpha } $$
 
-#### **Step 2** Bandingkan dengan Hicks
+****Step 2** Bandingkan dengan Hicks**
 
 $Y_{A} =A_{H}KL^{\alpha1-\alpha }$. Identik jika:
 
 $$ A_{H} =A^{\alpha }_{K}\Leftrightarrow A_{K} =A^{1/\alpha }_{H} $$
 
-## Tunjukkan equivalence Versi A ≡ Versi C
+**Tunjukkan equivalence Versi A ≡ Versi C**
 
-#### **Step 1** Expand Harrod-neutral
+****Step 1** Expand Harrod-neutral**
 
 $$ (A_{L}L)^{1-\alpha }=A^{1-\alpha }_{L}L^{1-\alpha } $$
 
@@ -788,13 +791,13 @@ Maka:
 
 $$ Y_{C} =A^{1-\alpha }_{L}KL^{\alpha1-\alpha } $$
 
-#### **Step 2** Identifikasi
+****Step 2** Identifikasi**
 
 $Y_{A} =A_{H}KL^{\alpha1-\alpha }$. Identik jika:
 
 $$ A_{H} =A^{1-\alpha }_{L}\Leftrightarrow A_{L} =A^{1/(1-\alpha)}_{H} $$
 
-## Mengapa equivalence?
+**Mengapa equivalence?**
 
 Aljabra: Cobb-Douglas multiplicatively separable. Tech apa pun yang masuk hanya menambah faktor konstan yang bisa "diabsorpsi" lewat aturan eksponen.
 
@@ -816,21 +819,21 @@ Pertanyaanmu: "Tapi data yang ada menunjukkan hubungan fungsi produksi Cobb-Doug
 
 Iya, data kompatibel dengan Cobb-Douglas (capital share ~30-40% relatif konstan, elasticity $\approx 1$). Tapi ini tidak membuat Uzawa BGP irrelevant.
 ```
-## Tiga resolusi tension
+**Tiga resolusi tension**
 
-### Resolusi 1 — Cobb-Douglas adalah idealisasi knife-edge
+**Resolusi 1 — Cobb-Douglas adalah idealisasi knife-edge**
 
 Cobb-Douglas adalah satu titik khusus di CES family ($\sigma = 0$). Empirically, elasticity of substitution biasanya estimasi dekat 1 tapi tidak persis 1 (range $0.4$ hingga $1.2$).
 
 Untuk $\sigma _{KL}$ sedikit berbeda dari 1, Uzawa BGP tetap mengikat. Hanya labor-augmenting yang konsisten.
 
-### Resolusi 2 — Cobb-Douglas mengubur identifikasi
+**Resolusi 2 — Cobb-Douglas mengubur identifikasi**
 
 Untuk Cobb-Douglas, ketiga tech equivalent secara matematis. Tapi tidak berarti ekonomi melakukan tiga jenis tech simultaneous tanpa peduli.
 
 Yang terjadi: ekonomi sebenarnya labor-augmenting (sesuai Uzawa), tapi dengan Cobb-Douglas kita tidak bisa lihat itu dari data.
 
-### Resolusi 3 — Data bukan persis Cobb-Douglas
+**Resolusi 3 — Data bukan persis Cobb-Douglas**
 
 Bukti empiris bahwa data menyimpang dari Cobb-Douglas:
 
@@ -842,7 +845,7 @@ Manufacturing sector lebih dekat ke Leontief, service sector lebih dekat ke perf
 
 Cobb-Douglas adalah aproksimasi, bukan deskripsi persis.
 
-## Mengapa kita pakai Cobb-Douglas di kursus?
+**Mengapa kita pakai Cobb-Douglas di kursus?**
 
 Tractability: formula closed-form untuk steady state
 
@@ -857,7 +860,7 @@ Memudahkan pemahaman konsep tanpa kompleksitas functional form
 
 *Cobb-Douglas berguna tapi bukan final answer. Ekonom yang baik selalu sadar batas model.*
 ```
-## Implikasi praktis
+**Implikasi praktis**
 
 Pertanyaan yang mungkin muncul:
 
@@ -869,15 +872,15 @@ Pertanyaan yang mungkin muncul:
 
 *Derivation step-by-step dari production function ke ODE per-effective-worker.*
 
-## Setup
+**Setup**
 
 Production: $Y= F [K, A(t)L(t)]$ (labor-augmenting) Population: $L(t) = eL^{nt}_{0}$, jadi $g_{L} =n$ Tech: $A(t) = eA^{gt}_{0}$, jadi $g_{A} =g$ Saving: $\dot{K}=sY-\delta K$
 
 Goal: derive $\dot{k}=sf(k) -(n + g + \delta)k$ dengan $k = K/(AL)$.
 
-## Derivation step-by-step
+**Derivation step-by-step**
 
-#### **Step 1** Pakai linear homogeneity
+****Step 1** Pakai linear homogeneity**
 
 $F (K, AL)$ linear homogeneous. Pakai dengan $\lambda = 1/(AL)$:
 
@@ -887,7 +890,7 @@ Substitusi ke capital accumulation:
 
 $$ \dot{K}=sALf(k) -\delta K $$
 
-#### **Step 2** Hitung via log-differentiation $\dot{k}$
+****Step 2** Hitung via log-differentiation $\dot{k}$**
 
 Definisi: $k = K/(AL)$. Ambil log:
 
@@ -899,7 +902,7 @@ $$
 \frac{\dot{k}}{k}=\frac{\dot{K}}{K}-\frac{\dot{A}}{A}-\frac{\dot{L}}{L}
 $$
 
-#### **Step 3** Substitusi growth rates
+****Step 3** Substitusi growth rates**
 
 $\dot{A}/A=g$ dan $\dot{L}/L =n$:
 
@@ -907,13 +910,13 @@ $$
 \frac{\dot{k}}{k}=\frac{\dot{K}}{K}-g-n
 $$
 
-#### **Step 4** Kalikan kedua sisi dengan $k$
+****Step 4** Kalikan kedua sisi dengan $k$**
 
 $$ \dot{k}=k \cdot \dot{K} -(n + g)k $$
 
 $K$
 
-#### **Step 5** Substitusi $\dot{K}$ dari Step 1
+****Step 5** Substitusi $\dot{K}$ dari Step 1**
 
 $$ \dot{k}=k \cdot sALf(k) -\delta K -(n + g)k $$
 
@@ -925,7 +928,7 @@ $$
 \dot{k}=k\cdot\frac{sALf(k)}{K}-\delta k-(n+g)k
 $$
 
-#### **Step 6** Sederhanakan tiap suku
+****Step 6** Sederhanakan tiap suku**
 
 Suku kedua: $k\delta K/K= \delta k$.
 
@@ -939,17 +942,17 @@ Hasil:
 
 $$ \dot{k}=sf(k) -\delta k -(n + g)k $$
 
-#### **Step 7** Faktorkan
+****Step 7** Faktorkan**
 
 $$ \dot{k}= sf(k) -(n + g + \delta)k $$
 
-## Interpretasi: tiga komponen "effective depreciation"
+**Interpretasi: tiga komponen "effective depreciation"**
 
 $\Delta K$ Physical depreciation — modal aus $NK$ Dilution by population growth — modal harus tumbuh secepat $L$
 
 $GK$ Dilution by technology growth — modal harus tumbuh secepat $A$
 
-## Steady state baru
+**Steady state baru**
 
 $$
 \bar{k}=\left(\frac{s}{n+g+\delta}\right)^{1/(1-\alpha)}
@@ -957,7 +960,7 @@ $$
 
 Strukturnya sama, hanya $n + \delta$ jadi $n + g + \delta$.
 
-## Per capita income di BGP
+**Per capita income di BGP**
 
 $Y /L = Af(k)$. Di BGP, $f(\bar{k})$ konstan, jadi $Y/L$ tumbuh dengan rate $g$.
 
@@ -980,7 +983,7 @@ $$
 \frac{\dot{k}}{k}=\frac{sf(k)}{k}-(n+g+\delta)
 $$
 
-### Mengapa $(k,/k)\dot{k}$ lebih informatif
+**Mengapa $(k,/k)\dot{k}$ lebih informatif**
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -991,7 +994,7 @@ $\dot{k}/k$ adalah growth rate modal per effective worker — lebih intuitif sec
 
 *$sf(k)/k$: kekuatan akumulasi (kurva menurun, dari Inada) $(n + g + \delta)$: kekuatan pelarutan (garis horizontal konstan)*
 ```
-### Bentuk $sf(k)/k$ untuk Cobb-Douglas
+**Bentuk $sf(k)/k$ untuk Cobb-Douglas**
 
 $f(k) = k^{\alpha }$, jadi $sf(k)/k = sk^{\alpha-1}$.
 
@@ -999,31 +1002,31 @@ Saat $k \to 0s$: $k^{\alpha-1}\to \infty$ (dari Inada, $\alpha -1 < 0$) Saat $k 
 
 Fungsi menurun monoton
 
-### Sketsa phase plot k̇/k
+**Sketsa phase plot k̇/k**
 
 *Sketsa (pada PDF): phase plot Solow-Swan dalam ruang $(k, \dot{k}/k)$ — kurva $sf(k)/k$ menurun memotong garis datar $n+g+\delta$ tepat di $\bar{k}$; di kiri $\bar{k}$: $\dot{k}/k>0$ ($k$ naik), di kanan: $\dot{k}/k<0$ ($k$ turun).*
 
-### Cara membaca phase plot
+**Cara membaca phase plot**
 
 Untuk $k < \bar{k}$: kurva di atas garis, jadi $sf(k)/k > n + g + \delta$, jadi $\dot{k}/k >0$. Modal tumbuh. Untuk $k > \bar{k}$: kurva di bawah garis, $\dot{k}/k <0$. Modal menurun. Di: kurva tepat di garis, $\bar{k}\dot{k}/k =0$. Steady state.
 
 ## Bagian 2 — Comparative dynamics untuk tiga shock
 
-### Shock 1: meningkat permanen $g$
+**Shock 1: meningkat permanen $g$**
 
-#### **Step 1** Efek pada $\bar{k}$
+****Step 1** Efek pada $\bar{k}$**
 
 $\bar{k}=(s/(n + g + \delta))^{1/(1-\alpha)}g$. naik → $(n + g + \delta)$ naik → turun. $\bar{k}$
 
-#### **Step 2** Efek pada phase plot
+****Step 2** Efek pada phase plot**
 
 Garis horizontal $(n + g + \delta)$ naik. Perpotongan baru di $\bar{k}^{'}<\bar{k}$.
 
-#### **Step 3** Dinamika transisi
+****Step 3** Dinamika transisi**
 
 Pada $k = \bar{k}$ (lama): $sf(\bar{k})/\bar{k} < n+g+\delta$ → $\dot{k}/k <0$. Modal mulai turun ke $\bar{k}^{'}$.
 
-#### **Step 4** Efek pada per capita income $\tilde{y}$
+****Step 4** Efek pada per capita income $\tilde{y}$**
 
 $\tilde{y} =Af(k)$. Selama transisi: $f(k)$ turun (karena turun), tapi $kA$ tumbuh dengan rate $g^{'}$ baru (lebih cepat).
 
@@ -1044,23 +1047,23 @@ Shock naik: garis horizontal naik dari $gn + g + \delta$ ke $n + g+^{'}\delta$. 
 
 Hasil paradoksal Shock 1: $g$ naik → $\bar{k}$ turun, tapi growth rate per capita income naik. Pelajaran: $\bar{k}$ rendah bukan berarti ekonomi buruk. Yang penting adalah growth rate, $\bar{k}\tilde{y}$
 ```
-### bukan level. $\bar{k}$
+**bukan level. $\bar{k}$**
 
-### Shock 2: menurun permanen $n$
+**Shock 2: menurun permanen $n$**
 
-#### **Step 1** Efek pada $\bar{k}$
+****Step 1** Efek pada $\bar{k}$**
 
 $n$ turun → $(n + g + \delta)$ turun → naik. $\bar{k}$
 
-#### **Step 2** Efek pada phase plot
+****Step 2** Efek pada phase plot**
 
 Garis horizontal $(n + g + \delta)$ turun. Perpotongan baru di $\bar{k}^{'}>\bar{k}$.
 
-#### **Step 3** Dinamika transisi
+****Step 3** Dinamika transisi**
 
 Pada $k = \bar{k}$ (lama): $sf(\bar{k})/\bar{k} > n+g+\delta$ → $\dot{k}/k >0$. Modal mulai naik ke $\bar{k}^{'}$.
 
-#### **Step 4** Efek pada per capita income
+****Step 4** Efek pada per capita income**
 
 Selama transisi: $f(k)$ naik, $A$ tumbuh dengan rate sama. $g$
 
@@ -1078,27 +1081,27 @@ k k̄k̄'
 
 Shock turun: garis horizontal turun. Steady state bergeser dari ke $n\bar{k}\bar{k}^{'}>\bar{k}$.
 
-### Shock 3: meningkat permanen $\delta$
+**Shock 3: meningkat permanen $\delta$**
 
-#### **Step 1** Efek pada $\bar{k}$
+****Step 1** Efek pada $\bar{k}$**
 
 $\delta$ naik → $(n + g + \delta)$ naik → turun. Sama secara visual dengan Shock 1. $\bar{k}$
 
-#### **Step 2** Efek pada phase plot
+****Step 2** Efek pada phase plot**
 
 Garis horizontal naik. Perpotongan baru di $\bar{k}^{'}<\bar{k}$.
 
-#### **Step 3** Dinamika transisi
+****Step 3** Dinamika transisi**
 
 Modal turun dari ke $\bar{k}\bar{k}^{'}$.
 
-#### **Step 4** Efek pada per capita income
+****Step 4** Efek pada per capita income**
 
 Selama transisi: $f(k)$ turun, $A$ tumbuh dengan rate sama. $g$ Per capita income tumbuh lebih lambat dari selama transisi. $g$
 
 Di BGP baru: growth rate kembali ke $g$, tapi level lebih rendah.
 
-## Ringkasan tiga shock
+**Ringkasan tiga shock**
 
 | Shock | $\bar{k}$ | Level $\tilde{y}$ di BGP | Growth rate per kapita di BGP |
 |---|---|---|---|
@@ -1106,7 +1109,7 @@ Di BGP baru: growth rate kembali ke $g$, tapi level lebih rendah.
 | $n$ turun | naik | naik | tetap ($=g$) |
 | $\delta$ naik | turun | turun | tetap ($=g$) |
 
-## Insight ekonomi besar
+**Insight ekonomi besar**
 
 **Ringkasan Besar**
 
@@ -1116,7 +1119,7 @@ Di BGP baru: growth rate kembali ke $g$, tapi level lebih rendah.
 
 **Hanya tech progress ($g$) yang bisa mengubah long-run growth rate.**
 
-## Implikasi kebijakan
+**Implikasi kebijakan**
 
 Kalau pemerintah ingin growth jangka panjang lebih cepat:
 
@@ -1132,7 +1135,7 @@ Inilah mengapa Solow menyebut tech progress sebagai "manna from heaven" — di m
 
 *Refleksi metakognitif — apa yang dipelajari dan apa yang masih jadi pertanyaan terbuka.*
 
-## Tiga hasil paling penting
+**Tiga hasil paling penting**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -1143,7 +1146,7 @@ Inilah mengapa Solow menyebut tech progress sebagai "manna from heaven" — di m
 
 *Hasil 3 — Uzawa BGP restriction: untuk konsisten dengan Kaldor facts, tech harus labor-augmenting (Harrod-neutral).*
 ```
-## Tiga deficiency Solow-Swan
+**Tiga deficiency Solow-Swan**
 
 **Tech exogenous** — $g$ "manna from heaven": model tidak menjelaskan dari mana tech progress datang.
 
@@ -1165,7 +1168,7 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 
 ## Checklist Pemahaman Bab 9
 
-## Derivasi yang harus kuasai
+**Derivasi yang harus kuasai**
 
 1. ☐ Derivation ODE per-worker dengan population growth (Exercise 9.6) — quotient rule
 2. ☐ Steady state untuk Cobb-Douglas (Exercise 9.9) — formula $\bar{k}$
@@ -1175,7 +1178,7 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 6. ☐ Uzawa BGP proof — fakta matematis " $X/Y$ konstan ⟹ $g_{X} =g_{Y}$ "
 7. ☐ ODE Solow-Swan dengan tech (Exercise 9.16) — log-differentiation
 
-## Konsep yang harus paham
+**Konsep yang harus paham**
 
 1. ☐ Property 9.1-9.3 dan peran masing-masing
 2. ☐ Mengapa $0 < \alpha < 1$ wajib di Cobb-Douglas
@@ -1185,7 +1188,7 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 6. ☐ Tiga komponen "effective depreciation" ($\delta, n, g$)
 7. ☐ Level effects vs growth effects (Exercise 9.17)
 
-## Uzawa BGP — paling sulit
+**Uzawa BGP — paling sulit**
 
 1. ☐ Statement Proposition 9.2 ($g_{Y} =g_{K} =g_{C}$, tech labor-augmenting)
 2. ☐ Fakta matematis kunci ($X/Y$ konstan ⟹ $g_{X} =g_{Y}$)
@@ -1194,7 +1197,7 @@ Bab 14-15: endogenous growth (Romer, Schumpeterian) — buka black box tech
 5. ☐ Exercise 9.15: Cobb-Douglas equivalence dan implikasinya
 6. ☐ Tension Uzawa vs Cobb-Douglas vs data — resolusi knife-edge dan identifikasi
 
-## Phase plot Exercise 9.17
+**Phase plot Exercise 9.17**
 
 1. ☐ Sketsa phase plot dalam $(k,/k)\dot{k}$ space
 2. ☐ Identifikasi steady state sebagai perpotongan dua kurva

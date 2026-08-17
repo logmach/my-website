@@ -6,7 +6,7 @@ Bab ini meletakkan fondasi paling dasar dari seluruh perangkat matematis teori p
 
 *Pertanyaan yang kelihatannya remeh, tapi punya konsekuensi besar untuk seluruh kursus.*
 
-## Definisi formal
+**Definisi formal**
 
 Sebuah solusi $y^{*}$ untuk ODE adalah satu fungsi $y:^{*}T\to R^{k}$ yang memenuhi dua syarat:
 
@@ -41,17 +41,18 @@ Ini akan dipakai berulang di kursus: di Bellman equation (guess and verify value
 
 *Kerangka untuk memahami "keluarga solusi" dan bagaimana kondisi tambahan memilih satu solusi spesifik.*
 
-## Aturan jumlah konstanta
+**Aturan jumlah konstanta**
 
-**Hasil Kunci**
+```{admonition} Hasil kunci
+:class: important
 
-### Untuk ODE orde- $m$ dalam variabel: $k$
+**Untuk ODE orde- $m$ dalam variabel: $k$**
 
 *General solution memiliki $m \times k$ konstanta arbitrer Particular solution didapat dengan memberi $m \times k$ kondisi (initial atau boundary)*
 
 *Asal-usul: setiap integrasi memunculkan satu konstanta. ODE orde- $m$ butuh $m$ integrasi → $m$ konstanta per variabel.*
 
-## Contoh konkret
+**Contoh konkret**
 
 Sistem dua variabel ($K, A$) masing-masing orde-2:
 
@@ -62,6 +63,7 @@ Total konstanta: $m \times k = 2 \times 2 = 4$.
 General solution:
 
 $$
+```
 \begin{aligned}
 K(t) &= C_{1} cos(t) +C_{2} sin(t) \\
 A(t) &= C_{3} cos(2t) +C_{4} sin(2t)
@@ -81,16 +83,17 @@ Inilah pola dasar: general → tambah kondisi → particular.
 
 *Dua cara memberi kondisi untuk pin down solusi. Bedanya halus tapi konsekuensinya besar.*
 
-**IVP — INITIAL VALUE** — Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk ODE orde- $my($: $t_{0}),\dot{y}(t_{0}),y¨(t_{0}),\dots$ semua di $t_{0}$. Mudah diselesaikan dengan integrasi forward.
+**IVP — Initial Value** — Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk ODE orde-$m$: nilai $y(t_{0}), \dot{y}(t_{0}), \dots$ hingga turunan ke-$(m-1)$.
 
-**BVP — BOUNDARY VALUE** — Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: $y(0) = 1y(2) = 5$,. Lebih sulit — butuh metode khusus seperti shooting.
+**BVP — Boundary Value** — Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: $y(0)=1$, $y(2)=5$. Lebih sulit — butuh metode khusus (shooting, Bab 13).
 
-**Jebakan Umum**
+```{admonition} ⚠️ Jebakan umum
+:class: warning
 
 Hati-hati: BVP bukan sekadar "kondisi pada interval waktu" — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah *di mana* kondisi diberikan dalam
 
 Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP. Lebih dari satu = BVP.
-
+```
 ```{admonition} Koneksi
 :class: important
 
@@ -104,7 +107,7 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 *Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.*
 
-## Statement Teorema 4.1 (versi intuitif)
+**Statement Teorema 4.1 (versi intuitif)**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -113,7 +116,7 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 Jika (1) $G$ kontinu di compact cube $D$ yang memuat $(x_{0}, t_{0})$, dan (2) $G$ Lipschitz
 ```
-### dalam (bisa dijamin lewat continuously differentiable), $x$
+**dalam (bisa dijamin lewat continuously differentiable), $x$**
 
 maka ada $\varepsilon > 0$ sehingga IVP punya solusi unik di interval $[t_{0} -\varepsilon, t_{0} +\varepsilon ]$.
 
@@ -124,7 +127,7 @@ Pemahamanmu sendiri (dari catatan): "Kalau $G$ dan turunannya kontinu di $D$, pl
 
 Intuisi yang tepat. Yang harus diluruskan: bukan "IVP/BVP ada di D" tapi titik kondisi awal $(x_{0}, t_{0})$ ada di dalam $D$.
 ```
-## Mengapa kondisi-kondisi ini tepat
+**Mengapa kondisi-kondisi ini tepat**
 
 Bukan asumsi sembarangan — setiap kondisi punya peran spesifik dalam bukti formal:
 
@@ -138,9 +141,9 @@ $D$ kompak: tertutup dan terbatas, sehingga max/min tercapai
 
 ## Konsep 5 — Saat Picard-Lindelöf Gagal — Eksplorasi Mendalam
 
-### Bagian ini yang paling dalam menggali pemahaman — di sinilah terlihat
+**Bagian ini yang paling dalam menggali pemahaman — di sinilah terlihat**
 
-## Dua kasus untuk dibandingkan
+**Dua kasus untuk dibandingkan**
 
 Kasus A: $\dot{x}=x$ dengan $x(0) = 0$ — well-behaved
 
@@ -176,7 +179,7 @@ Untuk Kasus A, solusi non-trivial $x(t) = Ae^{t}$. Dari $x(0) = 0A= 0$: → satu
 
 Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
 ```
-## Generalisasi: $\dot{x}=x^{\alpha }$ dengan $x(0) = 0$
+**Generalisasi: $\dot{x}=x^{\alpha }$ dengan $x(0) = 0$**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -193,9 +196,9 @@ Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "ka
 ```
 ## Konsep 6 — Hubungan ke Growth Theory
 
-### Setelah pemahaman teknis, pertanyaan yang paling penting
+**Setelah pemahaman teknis, pertanyaan yang paling penting**
 
-## Apakah model growth well-behaved?
+**Apakah model growth well-behaved?**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -204,7 +207,7 @@ Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "ka
 
 *Picard-Lindelöf berlaku, solusi unik dijamin. Tidak ada kasus seperti $x$ yang punya tak hingga solusi.*
 ```
-## Mengapa
+**Mengapa**
 
 Tiga alasan struktural:
 
@@ -219,7 +222,7 @@ Pemahamanmu sendiri: "dalam Solow model, kalau kita potong waktu, solusi tidak a
 
 Tepat. Ini adalah rumusan intuitif uniqueness. Trajektori deterministik: dari $k_{0}$ given, $k(t)$ untuk semua $t> 0$ adalah unik. Tidak ada "cabang" alternatif.
 ```
-## Tapi memahami non-uniqueness tetap penting
+**Tapi memahami non-uniqueness tetap penting**
 
 Meskipun growth well-behaved, konsep ini tetap dibutuhkan
 
@@ -227,25 +230,27 @@ Meskipun growth well-behaved, konsep ini tetap dibutuhkan
 2. Memahami "mengapa teorema dibutuhkan": bukan asumsi sembarangan. Kondisi-kondisi punya peran spesifik.
 3. Aplikasi advanced: poverty traps, multiple equilibria, indeterminacy — non-uniqueness sebagai feature, bukan bug.
 
-**Koneksi**
+```{admonition} Koneksi
+:class: important
 
-### Untuk seluruh materi, kita bisa mengasumsikan well-behaved
+**Untuk seluruh materi, kita bisa mengasumsikan well-behaved**
 
 *Tapi pemahaman mengapa well-behaved akan membuatmu lebih percaya diri saat mengaplikasikan teorema dan memahami subtleties seperti saddle path.*
 
-## Tentang Teorema 4.2 (versi global)
+**Tentang Teorema 4.2 (versi global)**
 
 Teorema 4.2 butuh kondisi lebih kuat (uniform Lipschitz di seluruh ruang). Tidak biasa diaplikasikan langsung di growth karena:
 
 Teorema 4.1 lokal sudah cukup untuk wilayah ekonomi yang masuk akal
 
 Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangkai menjadi global
+```
+```{admonition} Bonus
+:class: tip
 
-**Bonus**
+**Kebiasaan Kerja yang Dibangun di Bab Ini**
 
-## Kebiasaan Kerja yang Dibangun di Bab Ini
-
-### Selain konsep matematis, bab ini membangun strategi kerja
+**Selain konsep matematis, bab ini membangun strategi kerja**
 
 **Tulis Goal di Awal** — Sebelum mulai derivasi, tulis "Saya cari: ____". Mencegah over-engineering seperti pakai $e^{lnc}$ alih-alih $1/c$.
 
@@ -258,34 +263,34 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 **Bukti Formal Bukan Prioritas** — Dalam praktik, fokuslah pada statement dan aplikasinya; bukti formal opsional.
 
 **RENDERING CHECK** — Kalau formula terlihat aneh, minta format alternatif (subscript, plain text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
-
+```
 **SELF-CHECK**
 
 ## Checklist Pemahaman Bab 4
 
 *Siap untuk Bab 5 jika semua pertanyaan ini bisa dijawab dengan yakin.*
 
-## Konsep dasar
+**Konsep dasar**
 
 1. ☐ Bisa menjelaskan beda "menulis ODE" vs "menyelesaikan ODE"
 2. ☐ Bisa menjelaskan beda "general solution" vs "particular solution"
 3. ☐ Bisa menghitung jumlah konstanta arbitrer untuk ODE orde- $m$ dengan variabel $k$
 4. ☐ Bisa membedakan IVP dari BVP berdasarkan letak kondisinya
 
-## Verifikasi solusi
+**Verifikasi solusi**
 
 1. ☐ Bisa verify apakah kandidat fungsi adalah solusi ODE (dengan turunan + substitusi)
 2. ☐ Tahu kapan menggunakan verify vs solve
 3. ☐ Bisa identifikasi solusi trivial $x(t) = x_{0}$ kalau $G(x_{0}) =0$
 
-## Picard-Lindelöf
+**Picard-Lindelöf**
 
 1. ☐ Bisa menyatakan kondisi teorema (kontinuitas $G$ + Lipschitz dalam) $x$
 2. ☐ Bisa cek apakah ODE konkret memenuhi kondisi
 3. ☐ Bisa membuat counter-example seperti $\dot{x}=\sqrt{x}$
 4. ☐ Bisa konstruksi multiple solutions menggunakan trick "potong-tempel"
 
-## Hubungan ke growth
+**Hubungan ke growth**
 
 1. ☐ Bisa menjelaskan mengapa model growth standar well-behaved
 2. ☐ Tahu peran Inada conditions dalam well-behavedness
@@ -294,9 +299,10 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 ✦✦✦
 
-**Penutup**
+```{admonition} Penutup
+:class: important
 
-## Apa yang Menanti di Bab 5
+**Apa yang Menanti di Bab 5**
 
 Bab 5 (Steady States) akan terasa familiar karena fondasinya sudah diletakkan. Yang akan dipelajari:
 
@@ -313,6 +319,7 @@ Bekal yang sudah di tangan:
 Tahu cari steady state = cari $G = 0$
 
 Tahu solusi unik exists untuk kondisi awal di wilayah well-behaved
+```
 
 Punya intuisi geometris (trajektori, "kabur dari nol", dll)
 

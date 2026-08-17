@@ -6,13 +6,13 @@ Bab ini menggeneralisasi teknik Bab 6 dari persamaan skalar ke *sistem* ODE mult
 
 *Generalisasi tools Bab 6 dari skalar ke sistem multi-variabel.*
 
-## Masalah baru di multi-D
+**Masalah baru di multi-D**
 
 Untuk sistem $\dot{x}=Ax$ dengan $A$ matriks $k \times k$:
 
 Kalau $A$ diagonal: persamaan terpisah, solve sebagai ODE skalar independen. Tools Bab 6 langsung berlaku. $k$ Kalau $A$ tidak diagonal: persamaan interdependent — $\dot{x}_{1}$ tergantung $x_{2}$ dan sebaliknya. Tools Bab 6 tidak cukup.
 
-## Contoh interdependensi
+**Contoh interdependensi**
 
 Sistem 2D:
 
@@ -29,7 +29,7 @@ $$
 
 $\dot{x}_{1}$ tergantung $x_{2}$, $\dot{x}_{2}$ tergantung $x_{1}$. Tidak bisa solve satu tanpa yang lain.
 
-## Strategi Bab 7 — decoupling lewat diagonalisasi
+**Strategi Bab 7 — decoupling lewat diagonalisasi**
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -42,7 +42,7 @@ $\dot{x}_{1}$ tergantung $x_{2}$, $\dot{x}_{2}$ tergantung $x_{1}$. Tidak bisa s
 
 *Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.*
 
-## Definisi
+**Definisi**
 
 Untuk matriks $A$ ukuran $k \times k$:
 
@@ -52,7 +52,7 @@ Eigenvalue: skalar yang membuat persamaan di atas berlaku $\lambda$
 
 Intuisi geometris: $A$ "memetakan" ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. $v$
 
-## Cara mencari eigenvalue
+**Cara mencari eigenvalue**
 
 Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
 
@@ -62,7 +62,7 @@ $$ det(A -\lambda I) = 0 $$
 
 Ini disebut persamaan karakteristik.
 
-## Formula 2D yang sering dipakai
+**Formula 2D yang sering dipakai**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -86,7 +86,7 @@ Trace = $-1 + (-1) = -2$, bukan. Kesalahan ini menyebar ke seluruh perhitungan d
 
 Habit yang harus dibangun: sebelum lanjut, double-check entri diagonal. Trace = $a + d$ (kiri atas + kanan bawah), bukan $b + c$.
 ```
-## Mengapa "real part" penting
+**Mengapa "real part" penting**
 
 Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung
 
@@ -105,7 +105,7 @@ Hanya $\alpha$ yang menentukan apakah magnitude tumbuh atau mengecil. hanya memb
 
 *Konsep yang sering disalahpahami — mari luruskan. Sangat penting untuk Bab 7.*
 
-## Dua jenis multiplicity
+**Dua jenis multiplicity**
 
 **ALGEBRAIC MULT (AM)** — Berapa kali eigenvalue tertentu muncul sebagai akar persamaan karakteristik. Yaitu, pangkat faktor $(\lambda -\lambda _{i})$ di persamaan karakteristik.
 
@@ -124,7 +124,7 @@ Ini salah. Multiplicity adalah per eigenvalue. Setiap eigenvalue punya AM dan GM
 
 Yang benar: multiplicity dihitung *per eigenvalue*. Reflex yang harus terbangun: cek tiap eigenvalue secara terpisah.
 ```
-## Aturan diagonalisasi-able
+**Aturan diagonalisasi-able**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -135,7 +135,7 @@ Yang benar: multiplicity dihitung *per eigenvalue*. Reflex yang harus terbangun:
 
 *Kalau ada satu saja eigenvalue dengan GM < AM, matriks tidak diagonalisasi-able.*
 ```
-## Empat kasus utama
+**Empat kasus utama**
 
 Kasus 1 — Distinct eigenvalues: `A = [ -2 1 ]` `[ 0 -3 ]`
 
@@ -177,7 +177,7 @@ Karena untuk $\lambda = 4$, AM ≠ GM → tidak diagonalisasi-able.
 
 *Berdasarkan jenis eigenvalues, ada tiga "wajah" yang berbeda untuk sistem 2D.*
 
-## Cara membedakan
+**Cara membedakan**
 
 Diskriminan persamaan karakteristik 2D:
 
@@ -201,7 +201,7 @@ $$ \Delta =0 $$
 
 dengan suku $te^{\lambda t}$.
 
-## Kasus 1 — Distinct real (Section 7.1.2)
+**Kasus 1 — Distinct real (Section 7.1.2)**
 
 Untuk eigenvalues $\lambda _{1}, \lambda _{2}$ dengan eigenvektor $v_{1}, v_{2}$:
 
@@ -214,7 +214,7 @@ $$ x(t)= c_{1}e^{\lambda1t}v_{1} +c_{2}e^{\lambda2t}v_{2} $$
 
 Interpretasi: kombinasi linear dari "straight-line solutions". Setiap suku $c_{i}^{\lambda }ei^{t}v_{i}$ adalah lintasan sepanjang arah eigenvektor $v_{i}$ dengan magnitude tumbuh/decay secara eksponensial.
 ```
-## Kasus 2 — Complex (Section 7.1.3)
+**Kasus 2 — Complex (Section 7.1.3)**
 
 Untuk eigenvalues $\lambda = \alpha \pm i\beta$:
 
@@ -227,7 +227,7 @@ Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $cos(\beta t), sin(\beta t)$ (r
 
 Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
 ```
-## Kasus 3 — Repeated (Section 7.1.4)
+**Kasus 3 — Repeated (Section 7.1.4)**
 
 Untuk eigenvalue dengan AM = 2 tapi GM = 1: $\lambda$
 
@@ -249,17 +249,17 @@ Mengapa muncul faktor? Karena sistem dalam koordinat baru adalah recursive: $t\d
 
 Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay menang atas polynomial growth ($te^{\lambda t}\to 0$).
 ```
-## Kasus Konkret 1 — Example 7.4 — Distinct Real Eigenvalues
+**Kasus Konkret 1 — Example 7.4 — Distinct Real Eigenvalues**
 
 *Aplikasi penuh formula Equation 7.11 ke contoh nyata.*
 
-## Setup
+**Setup**
 
 `A = [ 2 2 ]` `[ 1 3 ]`
 
-## Step-by-step
+**Step-by-step**
 
-#### **Step 1** Eigenvalues
+****Step 1** Eigenvalues**
 
 $tr(A) = 5, det(A) = 4$. Persamaan: $\lambda -^{2}5\lambda + 4 = 0$ → $(\lambda -4)(\lambda -1) = 0$.
 
@@ -273,7 +273,7 @@ $(A -4I)v_{1} =0$ menghasilkan $v_{2} =v_{1}$. Pilih $v_{1} =(1, 1)$.
 
 $(A -I)v_{2} =0$ menghasilkan $v_{1} =-2v_{2}$. Pilih $v_{2} =(-2, 1)$.
 
-#### **Step 4** General solution
+****Step 4** General solution**
 
 $$ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} $$
 
@@ -283,7 +283,7 @@ Sistem: $c_{1} -2c_{2} =0.1$ dan $c_{1} +c_{2} =0.1$. Solve: $c_{2} =0, c_{1} =0
 
 Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straight-line solution.
 
-## Insight
+**Insight**
 
 ```{admonition} Koneksi
 :class: important
@@ -292,27 +292,27 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 
 *Untuk kondisi awal lain (misal $(1, 0)$), kedua mode akan aktif dan lintasan bukan garis lurus.*
 ```
-## Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues
+**Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues**
 
-### Contoh kasus: matriks dengan trace
+**Contoh kasus: matriks dengan trace**
 
-## Setup
+**Setup**
 
 `A = [ -1 2 ]` `[ -2 -1 ]`
 
-## Step-by-step
+**Step-by-step**
 
-#### **Step 1** Trace dan determinant
+****Step 1** Trace dan determinant**
 
 $tr(A) = -1 + (-1) = -2$ (hati-hati: bukan) $0$
 
 $$ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 $$
 
-#### **Step 2** Diskriminan
+****Step 2** Diskriminan**
 
 $\Delta = 4 -20 = -16 < 0$ → complex eigenvalues ✓
 
-#### **Step 3** Eigenvalues
+****Step 3** Eigenvalues**
 
 $$
 \lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
@@ -324,15 +324,15 @@ $$
 \lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
 $$
 
-#### **Step 4** Identifikasi
+****Step 4** Identifikasi**
 
 $\alpha = -1$ (real part), $\beta = 2$ (imaginary part)
 
-#### **Step 5** Klasifikasi
+****Step 5** Klasifikasi**
 
 $\alpha < 0$ dan $\beta = \ne 0$ → stable spiral
 
-## Interpretasi qualitative
+**Interpretasi qualitative**
 
 Lintasan spiral inward ke origin Magnitude decay dengan rate $∣\alpha ∣= 1$ Periode rotasi $T= 2\pi /\beta = \pi \approx 3.14$
 
@@ -342,7 +342,7 @@ Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
 *Pertanyaan yang membuka mata: mengapa kita belajar semua ini untuk Solow- Swan dan RCK?*
 
-## Hubungan tools dengan pertanyaan ekonomi
+**Hubungan tools dengan pertanyaan ekonomi**
 
 **Pertanyaan Ekonomi** — Tool matematis
 
@@ -360,7 +360,7 @@ Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
 **Optimal?**
 
-## Aplikasi ke Solow-Swan
+**Aplikasi ke Solow-Swan**
 
 Sudah diturunkan di Bab 5:
 
@@ -375,7 +375,7 @@ Inilah prediksi konkrit: ekonomi yang tergeser dari steady state (misal pasca-pe
 
 *butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.*
 ```
-## Aplikasi ke RCK
+**Aplikasi ke RCK**
 
 Sistem 2D nonlinear dengan $(k, c)$:
 
@@ -400,14 +400,14 @@ Implikasi mendalam:
 
 *Pertanyaan tajam: mengapa tidak bisa solve ODE-nya secara eksplisit? Apakah karena $C$ tidak bisa ditemukan?*
 
-## Jawaban: bukan karena C
+**Jawaban: bukan karena C**
 
 ```{admonition} Hasil kunci
 :class: important
 
 *Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.*
 ```
-## Picard-Lindelöf menjamin eksistensi
+**Picard-Lindelöf menjamin eksistensi**
 
 Untuk Solow-Swan $\dot{k}=sk-^{\alpha }\delta k$ dengan $k > 0$:
 
@@ -415,11 +415,11 @@ $G(k) = sk-^{\alpha }\delta k$ kontinu untuk $k > 0$ ✓ $\partial G/\partial k 
 
 Picard-Lindelöf menjamin: untuk sembarang $k_{0} >0$, ada solusi $k(t)$ yang eksis dan unik untuk $t\ge t_{0}$.
 
-## Tapi solusi tidak bisa ditulis
+**Tapi solusi tidak bisa ditulis**
 
 Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progress, Romer), tidak ada formula closed-form dalam fungsi elementer.
 
-## Tiga jenis "tidak bisa di-solve"
+**Tiga jenis "tidak bisa di-solve"**
 
 **SKENARIO 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=-2x$, solusi $Ce^{-2t}$.
 
@@ -440,7 +440,7 @@ Hasilnya: insight kuantitatif lokal (rate of convergence, saddle path, klasifika
 
 *formula eksplisit.*
 ```
-## Insight metakognitif
+**Insight metakognitif**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -455,9 +455,9 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 
 ## Checklist Pemahaman Bab 7
 
-### Siap untuk Bab 8 dan setelahnya jika bisa menjawab
+**Siap untuk Bab 8 dan setelahnya jika bisa menjawab**
 
-## Mekanik
+**Mekanik**
 
 1. ☐ Bisa hitung trace dan det matriks $2 \times 2$ dengan benar (hati-hati entri)
 2. ☐ Bisa solve persamaan karakteristik $\lambda -^{2}tr(A)\lambda + det(A) = 0$
@@ -465,7 +465,7 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 4. ☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)
 5. ☐ Bisa identifikasi $\alpha, \beta$ untuk complex eigenvalues
 
-## Konseptual
+**Konseptual**
 
 1. ☐ Paham mengapa diagonalisasi memudahkan solve sistem ODE
 2. ☐ Paham bahwa eigenvektor = arah natural sistem
@@ -473,7 +473,7 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 4. ☐ Bisa membedakan tiga kasus eigenvalue (distinct, complex, repeated)
 5. ☐ Bisa klasifikasi stable node, stable spiral, saddle, center, improper node
 
-## Insight metakognitif
+**Insight metakognitif**
 
 1. ☐ Paham mengapa "real part" yang menentukan stabilitas
 2. ☐ Paham eksistensi solusi ≠ ekspresibilitas (Picard-Lindelöf vs formula elementer)
@@ -483,12 +483,13 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 
 ✦✦✦
 
-**Penutup**
+```{admonition} Penutup
+:class: important
 
-## Tools I Selesai
+**Tools I Selesai**
 
 Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.
-
+```
 ```{admonition} Ringkasan besar
 :class: important
 
@@ -496,7 +497,7 @@ Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.
 
 *Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus*
 ```
-## Yang menanti
+**Yang menanti**
 
 Bab 8 — Qualitative Analyses: phase diagrams, nullclines, klasifikasi geometris tanpa solve eksplisit
 

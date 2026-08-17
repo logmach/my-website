@@ -1,0 +1,9 @@
+/* Perampingan tipografi — buku, bukan poster */
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.4rem; margin-top: 2.2rem; padding-bottom: .3rem;
+     border-bottom: 1px solid var(--pst-color-border, #e2e2e2); }
+h3 { font-size: 1.12rem; margin-top: 1.5rem; }
+h4 { font-size: 1rem; }
+article .admonition { margin: 1rem 0; }
+article .admonition > .admonition-title { font-size: .92rem; }
+article table { font-size: .93rem; }

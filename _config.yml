@@ -33,4 +33,6 @@ html:
 # File statis tambahan yang disalin apa adanya ke situs
 sphinx:
   config:
+    html_static_path: ["_static"]
+    html_css_files: ["custom.css"]
     html_extra_path: ["gmat-app"]

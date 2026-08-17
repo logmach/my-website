@@ -18,7 +18,7 @@ Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berka
 
 R&D. Tidak bisa perfect competition.
 
-### Dua jenis efek R&D
+**Dua jenis efek R&D**
 
 Expanding variety — lebih banyak jenis produk.
 
@@ -32,7 +32,7 @@ Quality ladder — produk lebih baik.
 
 *Mikroekonomi inovasi — fondasi sebelum model GE.*
 
-### BB1 — Markup Pricing
+**BB1 — Markup Pricing**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -41,17 +41,17 @@ Pertanyaan yang sering muncul: mungkinkah markup negatif?
 
 Benar! Markup negatif = situasi tidak valid. Monopoli tidak pernah beroperasi di region inelastis karena di sana marginal revenue negatif ($MR<0$). Monopoli selalu di region elastis, di mana bisa sama dengan.
 ```
-### Hubungan MR-elasticity
+**Hubungan MR-elasticity**
 
-#### Step 1 — MR dari TR = pq (product rule)
+**Step 1 — MR dari TR = pq (product rule)**
 
-#### Step 2 — Substitusi elasticity
+**Step 2 — Substitusi elasticity**
 
-#### Step 3 — Set MR = MC → markup
+**Step 3 — Set MR = MC → markup**
 
 Lerner index. CES: selalu → markup valid.
 
-### BB2 — Appropriability Effect
+**BB2 — Appropriability Effect**
 
 Social surplus inovasi (planner price at MC):
 
@@ -69,7 +69,7 @@ Pertanyaan yang sering muncul: bukankah berarti firm tidak punya profit?
 
 adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at MC → margin firm = 0, tapi surplus berpindah ke konsumen (tidak hilang). "Cost reduction" di = penghematan resource sosial, bukan profit firm. Di dunia riil, kalau firm dipaksa price at MC, firm rugi → tidak inovasi. Inilah dilema: efisiensi statis vs insentif inovasi.
 ```
-### BB3 — Surplus Ordering
+**BB3 — Surplus Ordering**
 
 **$p=MC$ (planner)** — no deadweight loss, surplus maksimal.
 
@@ -77,7 +77,7 @@ adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at M
 
 **(limit)** — Price tinggi, DWL besar Dua sumber gap: deadweight loss (pricing) + consumer surplus bocor (appropriability). Dua sumber ini → dua margin inefisiensi → dua instrumen kebijakan.
 
-### BB4 — Replacement Effect (Arrow)
+**BB4 — Replacement Effect (Arrow)**
 
 Incumbent kurang incentive (kanibal profit lama). Inovasi cenderung dari entrant.
 
@@ -86,7 +86,7 @@ Incumbent kurang incentive (kanibal profit lama). Inovasi cenderung dari entrant
 
 Romer (Bab 14) TIDAK punya replacement effect — varietas baru tidak gantikan lama (horizontal). Baru relevan Bab 15 (vertical/ quality ladder).
 ```
-### BB5 — Business-Stealing Effect
+**BB5 — Business-Stealing Effect**
 
 Bisa over-investment: entrant ignore loss incumbent (profit transfer bukan nilai baru).
 
@@ -100,7 +100,7 @@ Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- 
 
 *Tiga lapis: household, final good, intermediate. Tanpa modal fisik.*
 
-### Tiga lapis (contoh HP)
+**Tiga lapis (contoh HP)**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -113,11 +113,11 @@ Klarifikasi: HP adalah final good, bukan intermediate. Komponen HP (chip, layar,
 
 **R&D** — Pakai final good untuk ciptakan blueprint baru → $N$ naik.
 ```
-### Mengapa tidak ada modal fisik
+**Mengapa tidak ada modal fisik**
 
 Untuk isolasi efek R&D. Growth murni dari penambahan varietas, bukan akumulasi modal.
 
-### Final good sebagai numeraire, tiga penggunaan
+**Final good sebagai numeraire, tiga penggunaan**
 
 Final good serbaguna (numeraire): konsumsi, input intermediate, input R&D (lab equipment).
 
@@ -125,7 +125,7 @@ Final good serbaguna (numeraire): konsumsi, input intermediate, input R&D (lab e
 
 *OCP identik dengan RCK — Euler equation sama.*
 
-### Portfolio dan OCP
+**Portfolio dan OCP**
 
 Household own saham intermediate firms. Balanced portfolio → return non-stochastic.
 
@@ -138,9 +138,9 @@ Pengingat: CRRA punya Arrow-Pratt konstan (dipakai agar BGP exist). Stochastic =
 
 **Step 1** — Maximality:
 
-#### Step 2 — Log + turunkan, substitusi adjoint
+**Step 2 — Log + turunkan, substitusi adjoint**
 
-#### Step 3 — Euler (14.3)
+**Step 3 — Euler (14.3)**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -153,7 +153,7 @@ TVC bukan diturunkan dari nol — ia necessary condition PMP infinite- horizon. 
 
 *Kompetitif, dua tahap (two-stage budgeting).*
 
-### Production & CES basket
+**Production & CES basket**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -164,9 +164,9 @@ CES = Constant Elasticity of Substitution,. Dipakai untuk love-of- variety + mar
 ```
 ### Exercise 14.3 — FOC (income shares)
 
-#### Step 1 — FOC terhadap M
+**Step 1 — FOC terhadap M**
 
-#### Step 2 — FOC terhadap L
+**Step 2 — FOC terhadap L**
 
 Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero profit (kompetitif). Itulah mengapa household tidak own final good firm.
 
@@ -174,17 +174,17 @@ Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero p
 
 **Step 1** — Lagrangian cost min; multiplier = shadow price (= marginal cost basket).
 
-#### Step 2 — FOC + chain rule lewat price index
+**Step 2 — FOC + chain rule lewat price index**
 
-#### Step 3 — Demand curve (14.10)
+**Step 3 — Demand curve (14.10)**
 
-#### Step 4 — Price index (14.11), substitusi demand ke
+**Step 4 — Price index (14.11), substitusi demand ke**
 
 Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 **Tools**
 
-## Menurunkan Terhadap Integral
+**Menurunkan Terhadap Integral**
 
 *Tiga situasi penting di Bab 14 — functional derivative terhadap integral.*
 
@@ -200,9 +200,9 @@ Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 ### Exercise 14.5 — Markup pricing
 
-#### Step 1 — Profit, substitusi demand
+**Step 1 — Profit, substitusi demand**
 
-#### Step 2 — FOC terhadap $x_{j}$, solve harga optimal
+**Step 2 — FOC terhadap $x_{j}$, solve harga optimal**
 
 Markup konstan dari elastisitas CES: $p=\dfrac{1}{\alpha}$ — markup $1/\alpha$ di atas $MC=1$.
 
@@ -219,23 +219,23 @@ Jebakan umum: tertukar antara CV (current value) dan PV (present value).
 
 Firm value = present value aliran profit, didiskon dengan market rate (bukan subjective). Tidak ada Hamiltonian/adjoint/CV-PV untuk firm — masalahnya statis. HJB (14.16) adalah asset pricing (no-arbitrage), bukan HJB optimal control. CV/PV Hamiltonian hanya untuk household (OCP dinamis dengan).
 ```
-#### Step 1 — Turunkan nilai firm terhadap $t$: batas bawah (situasi B) memberi suku $-\pi$; faktor diskon (situasi C) memberi suku $rV$.
+**Step 1 — Turunkan nilai firm terhadap $t$: batas bawah (situasi B) memberi suku $-\pi$; faktor diskon (situasi C) memberi suku $rV$.**
 
-#### Step 2 — HJB (14.16)
+**Step 2 — HJB (14.16)**
 
 Asset pricing: required return = dividend + capital gain.
 
 **14.3.1.4-5**
 
-## R&D Investment & Free Entry
+**R&D Investment & Free Entry**
 
 *Mesin pertumbuhan — bagaimana N ditentukan.*
 
-### R&D investment
+**R&D investment**
 
 1 unit final good → blueprint dengan Poisson rate. Stochastic di mikro, tapi law of large numbers → agregat deterministic. Paten perpetual → monopoli.
 
-### Free entry
+**Free entry**
 
 Cost entry $=1$ (dinormalisasi), benefit $=V$ (present value profit). Complementary slackness:
 
@@ -262,7 +262,7 @@ Dengan normalisasi harga final good $=1$:
 
 **Output & basket** — $Y$ linear dalam $N$ (AN-style); basket intermediate simetris.
 
-### CRS privat vs IRS agregat
+**CRS privat vs IRS agregat**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -287,11 +287,11 @@ Kritik tajam: pertanyaan yang tepat adalah "mengapa marginal product tidak menuj
 
 Tiap varietas mendapat proporsi lebih kecil saat $N$ naik — TAPI $Y$ tetap naik: via varietas baru, bukan menumpuk varietas lama.
 
-#### Step 2 — Marginal product: downward-sloping
+**Step 2 — Marginal product: downward-sloping**
 
 Untuk $N$ fixed: kurva marginal product fungsi $x$ saja (tidak bergeser).
 
-#### Step 3 — $MP$ turun saat $x$ naik
+**Step 3 — $MP$ turun saat $x$ naik**
 
 Marginal product dan harga turun dengan rate sama → FOC selalu match.
 
@@ -306,9 +306,9 @@ Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru)
 
 ### Exercise 14.11 — Interest rate
 
-#### Step 1 — Free entry: $V=1$ konstan → $\dot{V}=0$; profit konstan.
+**Step 1 — Free entry: $V=1$ konstan → $\dot{V}=0$; profit konstan.**
 
-#### Step 2 — Substitusi ke HJB
+**Step 2 — Substitusi ke HJB**
 
 Interest rate konstan → growth konstan dari awal → no transition dynamics.
 
@@ -335,7 +335,7 @@ Threshold. Policy bisa picu growth (naikkan, jaga).
 
 ### Exercise 14.15. Scale effects & no transition.
 
-### Scale effect
+**Scale effect**
 
 tergantung. Negara besar tumbuh cepat (pasar besar → profit besar → R&D banyak).
 
@@ -346,13 +346,13 @@ tergantung. Negara besar tumbuh cepat (pasar besar → profit besar → R&D bany
 
 Strong scale effect TIDAK didukung data: negara kecil (Singapura, HK, Korea) tumbuh cepat; growth dunia tidak accelerating dengan populasi. Semi-endogenous (Jones 1995) mengaitkan growth ke population growth, bukan level — lebih realistis. Yang relevan mungkin ukuran pasar terintegrasi, bukan populasi mentah.
 ```
-### No transition dynamics
+**No transition dynamics**
 
 konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empiris (kelemahan AK-style).
 
 **14.3.1.9-10**
 
-## Planner & Policy
+**Planner & Policy**
 
 ### Exercise 14.16. First Welfare gagal.
 
@@ -369,7 +369,7 @@ Planner: pakai intermediate lebih banyak (price at MC) + menilai R&D lebih tingg
 
 First Welfare gagal karena aggregate IRS + monopoli + appropriability. Beda RCK (convexity terpenuhi, First Welfare berlaku).
 ```
-### Section 14.3.1.10 — Policy (Tinbergen)
+**Section 14.3.1.10 — Policy (Tinbergen)**
 
 Dua distorsi → dua instrumen:
 
@@ -396,7 +396,7 @@ Catatan untuk 14.3.2 memang ringkas — porsi utama bab ini adalah model Lab Equ
 
 **Sintesis**
 ```
-## Perbandingan BGP: Solow, RCK, Endogenous
+**Perbandingan BGP: Solow, RCK, Endogenous**
 
 *Evolusi pemikiran growth.*
 
@@ -419,7 +419,7 @@ Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, g
 
 *Cek pemahaman.*
 
-### Building blocks
+**Building blocks**
 
 - ☐ Tiga insight Romer (non-rival, IRS, market power)
 - ☐ BB1 markup, MR-elasticity, markup negatif jika
@@ -428,13 +428,13 @@ Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, g
 - ☐ BB4 replacement (Arrow), tidak relevan Romer
 - ☐ BB5 business-stealing, over-investment
 
-### Struktur & household
+**Struktur & household**
 
 - ☐ Tiga lapis (final good vs intermediate, contoh HP)
 - ☐ CRRA, stochastic, balanced portfolio
 - ☐ Exercise 14.1-14.2 Hamiltonian, Euler, TVC
 
-### Firms
+**Firms**
 
 - ☐ Exercise 14.3 income shares, zero profit
 - ☐ Exercise 14.4 demand curve, price index
@@ -443,14 +443,14 @@ Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, g
 - ☐ Exercise 14.6 profit proporsional revenue
 - ☐ Exercise 14.7 HJB asset pricing (CV/PV clarification)
 
-### R&D & equilibrium
+**R&D & equilibrium**
 
 - ☐ R&D, free entry
 - ☐ Exercise 14.8-14.9 profit, output AN
 - ☐ CRS privat vs IRS agregat (given vs endogen)
 - ☐ Exercise 14.10 mekanisme menahan diminishing returns
 
-### BGP & planner
+**BGP & planner**
 
 - ☐ Exercise 14.11
 - ☐ Exercise 14.12-14.13 ODE,
@@ -463,7 +463,7 @@ Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, g
 
 ✦ ✦ ✦
 
-#### Review Bab 14 — R&D I: Horizontal Endogenous Growth
+**Review Bab 14 — R&D I: Horizontal Endogenous Growth**
 
 Economic Growth Personal Study Notes · Lab Equipment Model
 

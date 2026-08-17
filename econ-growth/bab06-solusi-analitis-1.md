@@ -6,11 +6,11 @@ Bab ini membahas dua teknik inti untuk menyelesaikan ODE linear secara eksplisit
 
 *Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.*
 
-## ODE asli
+**ODE asli**
 
 $\dot{x}+ax = b(Equation 6.1, a, b konstan)$
 
-## Trik integrating factor
+**Trik integrating factor**
 
 Kalikan kedua sisi dengan $e^{at}$ — disebut integrating factor:
 
@@ -53,7 +53,7 @@ Sekilas RHS terlihat berbeda dari $be^{at}$, padahal sama (karena $\frac{d(e^{at
 
 Mengapa ditulis seperti itu? Strategi penulisan: agar
 ```
-## Pertanyaan tajam: "Mengapa eksponensial?"
+**Pertanyaan tajam: "Mengapa eksponensial?"**
 
 Catatan kuliah menyatakan: kalau "instantaneous rate of change locally constant", maka anti-derivative-nya eksponensial. Mari bedah pelan-pelan.
 
@@ -114,7 +114,7 @@ Parafrase yang tepat (saat membahas Corollary 6.1):
 
 Rumusan ini akan dipakai di Bab 9
 ```
-## Stabilitas dari struktur
+**Stabilitas dari struktur**
 
 Saat $t\to \infty$:
 
@@ -132,7 +132,7 @@ Solusi langsung: $b/a= 0$, jadi anchor hilang. Tersisa movement saja:
 
 $$ x(t) =^{*}Ce^{-at} $$
 
-## Aplikasi: pertumbuhan/decay murni
+**Aplikasi: pertumbuhan/decay murni**
 
 ```{admonition} Koneksi
 :class: important
@@ -143,7 +143,7 @@ $$ x(t) =^{*}Ce^{-at} $$
 
 *Bentuk eksponensial untuk $L(t)$ dan $A(t)$ bukan asumsi sembarangan — sekarang jelas mengapa*
 ```
-## Trik: $I(t) \cdot x(t) = C$
+**Trik: $I(t) \cdot x(t) = C$**
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -162,19 +162,19 @@ Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-va
 ```
 ## Konsep 4 — 6.1.3 — Time-Varying Parameters
 
-### Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$
+**Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$**
 
-## ODE bentuk umum
+**ODE bentuk umum**
 
 $\dot{x}+a(t)x = b(t)(Equation 6.8)$
 
-## Integrating factor (Exercise 6.3)
+**Integrating factor (Exercise 6.3)**
 
 $$ I(t) = e^{\inta(t)dt} $$
 
 Verifikasi: multiply ODE
 
-## General solution (Exercise 6.4)
+**General solution (Exercise 6.4)**
 
 $x(t) =*\int I(t)b(t) dt +C(Equation 6.9)$
 
@@ -194,7 +194,7 @@ $$ x \cdot I=\int b(t)I(t)\, dt +C $$
 
 Hasil: Equation 6.9.
 
-## 6.1.1 sebagai kasus khusus
+**6.1.1 sebagai kasus khusus**
 
 Kalau $a(t) = a$ (konstan), maka $\int a dt=at$ dan $I(t) = e^{at}$ — sama dengan 6.1.1. Yaitu, 6.1.3 menggeneralisasi 6.1.1.
 
@@ -202,13 +202,13 @@ Kalau $a(t) = a$ (konstan), maka $\int a dt=at$ dan $I(t) = e^{at}$ — sama den
 
 *Generalisasi ke sistem (multi-variabel). Konsep struktur "anchor + movement" tetap berlaku.*
 
-## Setup
+**Setup**
 
 Untuk sistem -dimensi: $k$
 
 Equation 6.10: $\dot{x}=Ax + b$ (non-homogen, autonomous) Equation 6.11: $\dot{x}=Ax$ (homogen, autonomous) Equation 6.12: $\dot{x}=A(t)x + b(t)$ (non-homogen, non-autonomous) Equation 6.13: $\dot{x}=A(t)x$ (homogen, non-autonomous)
 
-## Proposition 6.1 — Principle of Superposition
+**Proposition 6.1 — Principle of Superposition**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -221,13 +221,13 @@ Bukti (Exercise 6.5):
 
 $$ dtd[c_{1}x^{*}_{1} +c_{2}x^{*}_{2}] =c_{1}^{\dot{x}}_{1}^{*} +c_{2}^{\dot{x}}_{2}^{*} =c_{1}Ax^{*}_{1} +c_{2}Ax^{*}_{2} =A(c_{1}x^{*}_{1} +c_{2}x^{*}_{2})✓ $$
 ```
-## Corollary 6.1 — Kunci strategi solving
+**Corollary 6.1 — Kunci strategi solving**
 
 Jika $x^{*}_{1}(t)$ solusi 6.10 (non-homog) dan $x(t)^{*}_{2}$ solusi 6.11 (homog), maka $x^{*}_{1} +x^{*}_{2}$ juga solusi 6.10.
 
 Konsekuensi praktis: kita fokus solve sistem homogen saja, lalu "tambah kembali" particular solution.
 
-## Exercise 6.6 — Mengapa "general homog + particular = general non- homog"
+**Exercise 6.6 — Mengapa "general homog + particular = general non- homog"**
 
 Pertanyaan: kalau $x(t)^{*}$ general solution dari 6.11 dan particular solution dari 6.10, mengapa $\bar{x}x(t) +^{*}\bar{x}$ adalah general solution dari 6.10? Bukti intuitif: substitusi ke 6.10:
 
@@ -254,7 +254,7 @@ Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:
 
 **Point 3** — Setiap solusi 6.12 bisa dikonstruksi sebagai: satu particular solusi 6.12 + solusi homogen 6.13. Inilah strategi standar solving.
 
-## Point 2 — arah logika yang sering terbalik
+**Point 2 — arah logika yang sering terbalik**
 
 Pertanyaan yang wajar: jika $x_{1}$ menyelesaikan 6.11 dan $x_{2}$ menyelesaikan 6.10, bagaimana?
 
@@ -295,7 +295,7 @@ Selisih dua titik di affine space = vektor di subspace. Itulah Point 2.
 
 **Pelajaran Penting**
 ```
-## Sign-Flip — Jebakan Berulang
+**Sign-Flip — Jebakan Berulang**
 
 *Jebakan yang paling sering terjadi. Diagnosis dan solusi.*
 
@@ -310,13 +310,13 @@ Tiga contoh klasik sign-flip error:
 
 Polanya: auto-apply formula $Ce^{-at}$ tanpa memeriksa tanda ketika ODE tidak dalam bentuk standar.
 ```
-## Diagnosis
+**Diagnosis**
 
 Formula $Ce^{-at}$ berlaku untuk ODE bentuk $\dot{x}+ax = b$. Tapi kalau ODE-nya $\dot{x}=kx$ (yaitu $\dot{x}-kx = 0$), maka $a= -k$, dan solusi $Ce^{-(-k)t}=Ce^{+kt}$.
 
 Trap: melihat angka di ODE dan langsung menempatkannya
 
-## Aturan praktis baru — lebih mudah
+**Aturan praktis baru — lebih mudah**
 
 ```{admonition} Hasil kunci
 :class: important
@@ -325,7 +325,7 @@ Trap: melihat angka di ODE dan langsung menempatkannya
 
 *$\dot{x}=+3x$ → $x(t)= Ce^{+3t}$ (growth, unstable) $\dot{x}=-3x$ → $x(t)= Ce^{-3t}$ (decay, stable) $\dot{x}=+0.05x$ → $x(t)= Ce^{+0.05t}$ (growth)*
 ```
-## Toolkit Sanity Check
+**Toolkit Sanity Check**
 
 **Sanity Check Toolkit**
 
@@ -350,7 +350,7 @@ Prinsip sanity check: konfirmasi bahwa solusi yang dihasilkan benar-benar memenu
 
 Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek validitas kandidat solusi, sekarang untuk menangkap kesalahan tanda.
 ```
-## Metakognitif insight
+**Metakognitif insight**
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -389,9 +389,9 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 
 ## Checklist Pemahaman Bab 6
 
-### Siap untuk Bab 7 jika bisa menjawab
+**Siap untuk Bab 7 jika bisa menjawab**
 
-## Mekanik solving
+**Mekanik solving**
 
 1. ☐ Bisa menyelesaikan $\dot{x}+ax = b$ dengan integrating factor
 2. ☐ Bisa menyelesaikan $\dot{x}+a(t)x = b(t)$ dengan $I(t) = e^{\inta(t)dt}$
@@ -399,7 +399,7 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 4. ☐ Bisa identifikasi steady state $\bar{x}=b/a$ dari ODE konstan
 5. ☐ Bisa pakai trik $I(t)x(t) = C$ untuk ODE homogen (jalur cepat)
 
-## Konseptual
+**Konseptual**
 
 1. ☐ Bisa menjelaskan mengapa solusi $\dot{x}=kx$ adalah eksponensial
 2. ☐ Bisa menjelaskan arti "anchor + movement" dalam solusi
@@ -407,7 +407,7 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 4. ☐ Bisa menyatakan Principle of Superposition (Proposition 6.1)
 5. ☐ Bisa menjelaskan kenapa Theorem 6.1 Point 2 (selisih) memberi solusi homogen
 
-## Habit metakognitif
+**Habit metakognitif**
 
 1. ☐ Selalu sanity check tanda eksponen sebelum submit
 2. ☐ Pakai aturan "tanda eksponen = tanda koefisien" untuk $\dot{x}=kx$
@@ -416,12 +416,13 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 
 ✦✦✦
 
-**Penutup**
+```{admonition} Penutup
+:class: important
 
-## Apa yang Menanti
+**Apa yang Menanti**
 
 Kebiasaan sanity check yang dibangun di sini akan dipakai di seluruh sisa materi.
-
+```
 ```{admonition} Ringkasan besar
 :class: important
 
@@ -429,7 +430,7 @@ Kebiasaan sanity check yang dibangun di sini akan dipakai di seluruh sisa materi
 
 *Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.*
 ```
-## Tools yang akan dipakai di Bab 7
+**Tools yang akan dipakai di Bab 7**
 
 Eigenvalue dan eigenvektor (dari aljabar linear)
 
@@ -439,11 +440,11 @@ Klasifikasi stabilitas dari Bab 5
 
 Semua tools sudah di tangan. Bab 7 hanya menggabungkannya.
 
-## Yang harus diingat sebelum Bab 7
+**Yang harus diingat sebelum Bab 7**
 
 1. Solusi $\dot{x}=kx$ adalah $Ce^{kt}$ (bukan $Ce^{-kt}$)
 
-#### 2. General non-homog = general homog + particular
+**2. General non-homog = general homog + particular**
 
 3. Sanity check selalu: substitusi solusi ke ODE asli
 4. Strategy solving: focus on homog, add particular at end
