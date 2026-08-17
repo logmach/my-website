@@ -19,3 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/* ── Fix: tombol toggle sidebar tidak berfungsi ──
+   Theme merender 2 tombol .primary-toggle (satu tersembunyi di navbar,
+   satu terlihat di header artikel), tetapi listener JS theme hanya
+   menempel pada tombol PERTAMA (yang tersembunyi). Akibatnya tap di
+   mobile maupun klik di desktop tidak membuka sidebar.
+   Solusi: teruskan klik dari tombol yang terlihat ke tombol pertama.
+   Catatan: hapus blok ini jika upgrade sphinx-book-theme /
+   pydata-sphinx-theme kelak sudah memperbaiki bug ini. */
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".primary-toggle");
+  if (toggles.length < 2) return;
+  for (let i = 1; i < toggles.length; i++) {
+    toggles[i].addEventListener("click", function (ev) {
+      const dlg = document.getElementById("pst-primary-sidebar-modal");
+      if (dlg && dlg.open) return; /* sudah terbuka, jangan dobel */
+      ev.preventDefault();
+      toggles[0].click();
+    });
+  }
+});
