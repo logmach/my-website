@@ -2,11 +2,9 @@
 
 Bab ini membahas dua teknik inti untuk menyelesaikan ODE linear secara eksplisit: *integrating factor* dan *principle of superposition*. Tema praktisnya: kebiasaan sanity check — bab inilah tempat jebakan *sign-flip* paling sering muncul, dan tempat kebiasaan "verify sebelum percaya" dibangun.
 
-**Konsep1**
+## Konsep 1 — 6.1.1 — Integrating Factor untuk ODE Konstan
 
-## 6.1.1 — Integrating Factor untuk ODE Konstan
-
-### Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.
+*Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.*
 
 ## ODE asli
 
@@ -60,7 +58,7 @@ Catatan kuliah menyatakan: kalau "instantaneous rate of change locally constant"
 
 **Ringkasan Besar**
 
-### Inti penjelasan: Setelah geser variabel $y= x -b/a$, ODE asli berubah jadi $\dot{y} =-ay$ . Inilah "proporsionalitas murni" — turunan proporsional dengan fungsi itu sendiri.
+*Inti penjelasan: Setelah geser variabel $y= x -b/a$, ODE asli berubah jadi $\dot{y} =-ay$ . Inilah "proporsionalitas murni" — turunan proporsional dengan fungsi itu sendiri.*
 
 ### Properti unik fungsi eksponensial:
 
@@ -68,37 +66,35 @@ $$
 \frac{d\,e^{at}}{dt}=a\cdot e^{at}
 $$
 
-### Yaitu, turunan eksponensial proporsional dengan fungsi itu sendiri. Hanya fungsi eksponensial yang punya properti ini. Maka solusi $\dot{y} =-ay$ harus dalam bentuk eksponensial.
+*Yaitu, turunan eksponensial proporsional dengan fungsi itu sendiri. Hanya fungsi eksponensial yang punya properti ini. Maka solusi $\dot{y} =-ay$ harus dalam bentuk eksponensial.*
 
 ## Penurunan eksplisit: dari $\dot{x}+ax = b$ ke $\dot{y} =-ay$
 
 Langkah demi langkah, tanpa lompatan:
 
-**Step1** Definisikan $y:= x -b/a$.
+**Step 1** Definisikan $y:= x -b/a$.
 
 Geser variabel — adalah " relatif terhadap steady state". $yx$
 
-**Step2** Hitung. $\dot{y}$
+**Step 2** Hitung. $\dot{y}$
 
 Karena $b/a$ konstan: $\dot{y} =\dot{x}-0 = \dot{x}$.
 
-**Step3** Substitusi $\dot{x}=b -ax$ dari ODE asli.
+**Step 3** Substitusi $\dot{x}=b -ax$ dari ODE asli.
 
 $\dot{y} =b -ax$.
 
-**Step4** Ganti $x = y + b/a$.
+**Step 4** Ganti $x = y + b/a$.
 
 $$ \dot{y} =b -a(y + b/a) = b -ay -b = -ay$. $$
 
-**Step5** Hasil: $\dot{y} =-ay$. ODE "bersih" — proporsionalitas murni. Solusinya $y(t) = Ce^{-at}$. Kembalikan: $x(t) = Ce^{-at}+$ $b/a$.
+**Step 5** Hasil: $\dot{y} =-ay$. ODE "bersih" — proporsionalitas murni. Solusinya $y(t) = Ce^{-at}$. Kembalikan: $x(t) = Ce^{-at}+$ $b/a$.
 
 "Locally constant" = rasio $\dot{y}/y$ konstan (sama dengan $-a$), bukan sendiri konstan. $\dot{y}$
 
-**Konsep2**
+## Konsep 2 — Struktur Solusi: Anchor + Movement
 
-## Struktur Solusi: Anchor + Movement
-
-### Insight kunci yang dipakai berulang di seluruh materi.
+*Insight kunci yang dipakai berulang di seluruh materi.*
 
 General solution $x(t) =^{*}b/a + Ce^{-at}$ punya struktur dua bagian:
 
@@ -130,11 +126,9 @@ Kalau $a> 0e$: $^{-at}\to 0$ → movement menghilang → $x \to \bar{x}=b/a$ (st
 
 Inilah hasil Exercise 6.1 — koneksi langsung ke Teorema 5.1 dari Bab 5.
 
-**Konsep3**
+## Konsep 3 — 6.1.2 — Homogeneous Case
 
-## 6.1.2 — Homogeneous Case
-
-### Kasus khusus ketika $b = 0$. Lebih sederhana, tapi punya satu aplikasi penting.
+*Kasus khusus ketika $b = 0$. Lebih sederhana, tapi punya satu aplikasi penting.*
 
 ODE: $\dot{x}+ax = 0$ (Equation 6.7)
 
@@ -148,9 +142,9 @@ $$ x(t) =^{*}Ce^{-at} $$
 
 ### Persis bentuk yang muncul di growth theory:
 
-### Population: $\dot{L}=nL$ → $L(t)= L_{0}^{nt}e$ Technology: $\dot{A}=gA$ → $A(t)= A_{0}^{gt}e$
+*Population: $\dot{L}=nL$ → $L(t)= L_{0}^{nt}e$ Technology: $\dot{A}=gA$ → $A(t)= A_{0}^{gt}e$*
 
-### Bentuk eksponensial untuk $L(t)$ dan $A(t)$ bukan asumsi sembarangan — sekarang jelas mengapa
+*Bentuk eksponensial untuk $L(t)$ dan $A(t)$ bukan asumsi sembarangan — sekarang jelas mengapa*
 
 ## Trik: $I(t) \cdot x(t) = C$
 
@@ -168,9 +162,7 @@ Maka langsung $x(t) = C/I(t)$ — tidak perlu separation of variables, tidak ada
 
 Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-varying).
 
-**Konsep4**
-
-## 6.1.3 — Time-Varying Parameters
+## Konsep 4 — 6.1.3 — Time-Varying Parameters
 
 ### Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$
 
@@ -192,15 +184,15 @@ $$ I(t)I(t) $$
 
 Derivasinya:
 
-**Step1** Multiply ODE dengan $I(t)$.
+**Step 1** Multiply ODE dengan $I(t)$.
 
 Sisi kiri jadi $_{dt}^{d}[x \cdot I]$. Sisi kanan: $b(t)I(t)$.
 
-**Step2** Integrasi kedua sisi.
+**Step 2** Integrasi kedua sisi.
 
 $$ x \cdot I=\int b(t)I(t) dt +C$. $$
 
-**Step3** Bagi dengan $I(t)$.
+**Step 3** Bagi dengan $I(t)$.
 
 Hasil: Equation 6.9.
 
@@ -208,11 +200,9 @@ Hasil: Equation 6.9.
 
 Kalau $a(t) = a$ (konstan), maka $\int a dt=at$ dan $I(t) = e^{at}$ — sama dengan 6.1.1. Yaitu, 6.1.3 menggeneralisasi 6.1.1.
 
-**Konsep5**
+## Konsep 5 — 6.2 — Multiple-Variable Case
 
-## 6.2 — Multiple-Variable Case
-
-### Generalisasi ke sistem (multi-variabel). Konsep struktur "anchor + movement" tetap berlaku.
+*Generalisasi ke sistem (multi-variabel). Konsep struktur "anchor + movement" tetap berlaku.*
 
 ## Setup
 
@@ -222,11 +212,11 @@ Equation 6.10: $\dot{x}=Ax + b$ (non-homogen, autonomous) Equation 6.11: $\dot{x
 
 ## Proposition 6.1 — Principle of Superposition
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Jika $x^{*}_{1}(t)$ dan $x^{*}_{2}(t)$ keduanya solusi 6.11, maka $c_{1}x^{*}_{1} +c_{2}x^{*}_{2}$ juga solusi 6.11, untuk
 
-### sembarang $c_{1}, c_{2} \in R$.
+*sembarang $c_{1}, c_{2} \in R$.*
 
 Bukti (Exercise 6.5):
 
@@ -254,11 +244,9 @@ Parafrase yang menangkap inti algebra: " menyerap konstanta. Sisanya bisa disera
 
 Pembagian kerja yang elegan: particular handle forcing term $b$; homogen handle perpindahan dari kondisi awal.
 
-**Konsep6**
+## Konsep 6 — Theorem 6.1 — Superposition Reloaded
 
-## Theorem 6.1 — Superposition Reloaded
-
-### Versi paling kuat untuk kasus non-autonomous. Tiga poin yang harus dipahami.
+*Versi paling kuat untuk kasus non-autonomous. Tiga poin yang harus dipahami.*
 
 Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:
 
@@ -278,9 +266,9 @@ Pertanyaan yang wajar: jika $x_{1}$ menyelesaikan 6.11 dan $x_{2}$ menyelesaikan
 
 Perhatikan baik-baik: Theorem 6.1 Point 2 justru mengatakan arah sebaliknya:
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Kalau keduanya solusi 6.10 (non-homog), maka SELISIH mereka solusi 6.11 (homog).
+*Kalau keduanya solusi 6.10 (non-homog), maka SELISIH mereka solusi 6.11 (homog).*
 
 Bukti cepat: ambil $x_{1}, x_{2}$ keduanya solusi 6.10:
 
@@ -309,11 +297,11 @@ Set solusi 6.10 (non-homog) = subspace + 1 titik anchor = affine space
 
 Selisih dua titik di affine space = vektor di subspace. Itulah Point 2.
 
-**Pelajaranpenting**
+**Pelajaran Penting**
 
 ## Sign-Flip — Jebakan Berulang
 
-### Jebakan yang paling sering terjadi. Diagnosis dan solusi.
+*Jebakan yang paling sering terjadi. Diagnosis dan solusi.*
 
 **⚠️ Jebakan umum**
 
@@ -333,15 +321,15 @@ Trap: melihat angka di ODE dan langsung menempatkannya
 
 ## Aturan praktis baru — lebih mudah
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Untuk ODE $\dot{x}=kx$ (bentuk yang langsung): solusinya $x(t)= Ce^{kt}$ — eksponen punya tanda yang sama dengan koefisien di ODE.
+*Untuk ODE $\dot{x}=kx$ (bentuk yang langsung): solusinya $x(t)= Ce^{kt}$ — eksponen punya tanda yang sama dengan koefisien di ODE.*
 
-### $\dot{x}=+3x$ → $x(t)= Ce^{+3t}$ (growth, unstable) $\dot{x}=-3x$ → $x(t)= Ce^{-3t}$ (decay, stable) $\dot{x}=+0.05x$ → $x(t)= Ce^{+0.05t}$ (growth)
+*$\dot{x}=+3x$ → $x(t)= Ce^{+3t}$ (growth, unstable) $\dot{x}=-3x$ → $x(t)= Ce^{-3t}$ (decay, stable) $\dot{x}=+0.05x$ → $x(t)= Ce^{+0.05t}$ (growth)*
 
 ## Toolkit Sanity Check
 
-**Sanitychecktoolkit**
+**Sanity Check Toolkit**
 
 Metode utama — substitusi ke ODE asli:
 
@@ -367,17 +355,17 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 
 **Ringkasan Besar**
 
-### Pelajaran pentingnya: biasakan sanity check — tertukar tanda adalah bahaya yang nyata.
+*Pelajaran pentingnya: biasakan sanity check — tertukar tanda adalah bahaya yang nyata.*
 
-### Sign-flip adalah kesalahan paling umum di matematika ekonomi — dari S1 sampai PhD. Yang membedakan adalah kebiasaan menangkapnya
+*Sign-flip adalah kesalahan paling umum di matematika ekonomi — dari S1 sampai PhD. Yang membedakan adalah kebiasaan menangkapnya*
 
-### Sepuluh detik sanity check per soal adalah investasi kecil yang menyelamatkan banyak kesalahan.
+*Sepuluh detik sanity check per soal adalah investasi kecil yang menyelamatkan banyak kesalahan.*
 
 **Latihan**
 
 ## Latihan-Latihan Bab Ini
 
-### Daftar latihan inti Bab 6.
+*Daftar latihan inti Bab 6.*
 
 Steady state & stability untuk $\dot{x}+ax = b$. Tidak dikerjakan
 
@@ -421,7 +409,7 @@ didemonstrasikan.
 
 $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$ (stable) $\dot{x}=0.05xx$, $_{0} =100$ — solusi $100e^{0.05t}x(10) \approx 164.9$, $\dot{N}=nN$ — population growth (eksponensial) $\dot{x}=-2x + 6x$, $_{0} =5$ — solusi $3 + 2e^{-2t}$, konvergen ke $\bar{x}=3$ $\dot{x}+(1/t)x = 0x(1) = 5$, — solusi $5/t$ $\dot{x}=-5x + 10x$, $_{0} =3$ — solusi $e^{-5t}+2$ ✓ (kerja mandiri)
 
-**Self-Check**
+**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 6
 
@@ -460,9 +448,9 @@ Kebiasaan sanity check yang dibangun di sini akan dipakai
 
 **Ringkasan Besar**
 
-### Bab 7 — Analytical Solutions II: aplikasi Principle of Superposition untuk sistem 2D dan beyond. Eigenvalue analysis akan jadi alat utama.
+*Bab 7 — Analytical Solutions II: aplikasi Principle of Superposition untuk sistem 2D dan beyond. Eigenvalue analysis akan jadi alat utama.*
 
-### Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.
+*Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.*
 
 ## Tools yang akan dipakai di Bab 7
 

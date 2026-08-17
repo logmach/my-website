@@ -2,11 +2,9 @@
 
 Bab ini menggeneralisasi teknik Bab 6 dari persamaan skalar ke *sistem* ODE multi-variabel, dengan eigenvalue, eigenvektor, dan diagonalisasi sebagai alat utamanya. Inilah jembatan kunci antara perangkat matematis (Bab 3–6) dan aplikasi teori pertumbuhan (Bab 9 dan setelahnya): kestabilan sistem 2D seperti RCK ditentukan oleh tanda bagian riil eigenvalue-nya.
 
-**Konsep1**
+## Konsep 1 — Mengapa Bab 7 Diperlukan
 
-## Mengapa Bab 7 Diperlukan
-
-### Generalisasi tools Bab 6 dari skalar ke sistem multi-variabel.
+*Generalisasi tools Bab 6 dari skalar ke sistem multi-variabel.*
 
 ## Masalah baru di multi-D
 
@@ -35,15 +33,13 @@ $\dot{x}_{1}$ tergantung $x_{2}$, $\dot{x}_{2}$ tergantung $x_{1}$. Tidak bisa s
 
 **Ringkasan Besar**
 
-### Idenya: ubah ke koordinat di mana sistem menjadi diagonal (independent). Solve di koordinat baru, lalu kembalikan ke koordinat asli.
+*Idenya: ubah ke koordinat di mana sistem menjadi diagonal (independent). Solve di koordinat baru, lalu kembalikan ke koordinat asli.*
 
-### Tools yang membuat ini bekerja: eigenvalue dan eigenvektor.
+*Tools yang membuat ini bekerja: eigenvalue dan eigenvektor.*
 
-**Konsep2**
+## Konsep 2 — Eigenvalue dan Eigenvektor
 
-## Eigenvalue dan Eigenvektor
-
-### Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.
+*Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.*
 
 ## Definisi
 
@@ -67,7 +63,7 @@ Ini disebut persamaan karakteristik.
 
 ## Formula 2D yang sering dipakai
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### Untuk matriks $2 \times 2$:
 
@@ -101,15 +97,13 @@ $e^{\alpha t}$: magnitude — eksponensial growth/decay $cos(\beta t) + i sin(\b
 
 Hanya $\alpha$ yang menentukan apakah magnitude tumbuh atau mengecil. hanya memberi oscillation. Maka $\beta$ stability tergantung tanda $\alpha$ (real part), bukan eigenvalue penuh.
 
-**Konsep3**
+## Konsep 3 — Multiplicity — Per Eigenvalue, Bukan Total
 
-## Multiplicity — Per Eigenvalue, Bukan Total
-
-### Konsep yang sering disalahpahami — mari luruskan. Sangat penting untuk Bab 7.
+*Konsep yang sering disalahpahami — mari luruskan. Sangat penting untuk Bab 7.*
 
 ## Dua jenis multiplicity
 
-Berapa kali eigenvalue tertentu muncul sebagai akar persamaan `ALGEBRAIC MULT (AM)` karakteristik. Yaitu, pangkat faktor $(\lambda -\lambda _{i})$ di persamaan karakteristik.
+**ALGEBRAIC MULT (AM)** — Berapa kali eigenvalue tertentu muncul sebagai akar persamaan karakteristik. Yaitu, pangkat faktor $(\lambda -\lambda _{i})$ di persamaan karakteristik.
 
 Jumlah eigenvektor independent untuk eigenvalue tertentu. Sama
 
@@ -131,13 +125,13 @@ Yang benar: multiplicity dihitung *per eigenvalue*. Reflex yang harus terbangun:
 
 ## Aturan diagonalisasi-able
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### $A$ diagonalisasi-able jika dan hanya jika:
 
-### Untuk SETIAP eigenvalue, AM = GM.
+*Untuk SETIAP eigenvalue, AM = GM.*
 
-### Kalau ada satu saja eigenvalue dengan GM < AM, matriks tidak diagonalisasi-able.
+*Kalau ada satu saja eigenvalue dengan GM < AM, matriks tidak diagonalisasi-able.*
 
 ## Empat kasus utama
 
@@ -175,11 +169,9 @@ $\lambda = 4$: AM = 2, GM = 1 (karena entri 1 di posisi (1,2)) $\lambda = 2$: AM
 
 Karena untuk $\lambda = 4$, AM ≠ GM → tidak diagonalisasi-able.
 
-**Konsep4**
+## Konsep 4 — Tiga Kasus Solusi ODE Sistem
 
-## Tiga Kasus Solusi ODE Sistem
-
-### Berdasarkan jenis eigenvalues, ada tiga "wajah" yang berbeda untuk sistem 2D.
+*Berdasarkan jenis eigenvalues, ada tiga "wajah" yang berbeda untuk sistem 2D.*
 
 ## Cara membedakan
 
@@ -209,7 +201,7 @@ dengan suku $te^{\lambda t}$.
 
 Untuk eigenvalues $\lambda _{1}, \lambda _{2}$ dengan eigenvektor $v_{1}, v_{2}$:
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### General solution (Equation 7.11):
 
@@ -221,11 +213,11 @@ Interpretasi: kombinasi linear dari "straight-line solutions". Setiap suku $c_{i
 
 Untuk eigenvalues $\lambda = \alpha \pm i\beta$:
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $cos(\beta t), sin(\beta t)$ (rotation). Hasilnya:
 
-### $\alpha < 0, \beta =0$: stable spiral (focus) $\alpha > 0, \beta =0$: unstable spiral $\alpha = 0, \beta =0$: center (orbit periodic)
+*$\alpha < 0, \beta =0$: stable spiral (focus) $\alpha > 0, \beta =0$: unstable spiral $\alpha = 0, \beta =0$: center (orbit periodic)*
 
 Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
 
@@ -233,13 +225,13 @@ Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
 
 Untuk eigenvalue dengan AM = 2 tapi GM = 1: $\lambda$
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### General solution (Equation 7.14):
 
 $$ x(t)= e(c^{\lambda t}_{1}v +c_{2}w) +te(c^{\lambda t}_{2}v) $$
 
-### dengan eigenvektor, $vw$ generalized eigenvector ($w$ memenuhi $(A -\lambda I)w = v$).
+*dengan eigenvektor, $vw$ generalized eigenvector ($w$ memenuhi $(A -\lambda I)w = v$).*
 
 Yang baru: suku $te^{\lambda t}$ — polynomial growth karena kekurangan eigenvektor independent.
 
@@ -249,11 +241,9 @@ Mengapa muncul faktor? Karena sistem dalam koordinat baru adalah recursive: $t\d
 
 Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay menang atas polynomial growth ($te^{\lambda t}\to 0$).
 
-**Kasuskonkret 1**
+## Kasus Konkret 1 — Example 7.4 — Distinct Real Eigenvalues
 
-## Example 7.4 — Distinct Real Eigenvalues
-
-### Aplikasi penuh formula Equation 7.11 ke contoh nyata.
+*Aplikasi penuh formula Equation 7.11 ke contoh nyata.*
 
 ## Setup
 
@@ -261,25 +251,25 @@ Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay mena
 
 ## Step-by-step
 
-#### **Step1** Eigenvalues
+#### **Step 1** Eigenvalues
 
 $tr(A) = 5, det(A) = 4$. Persamaan: $\lambda -^{2}5\lambda + 4 = 0$ → $(\lambda -4)(\lambda -1) = 0$.
 
 $\lambda _{1} =4, \lambda _{2} =1$. Distinct dan real ✓
 
-**Step2** Eigenvektor untuk $\lambda _{1} =4$
+**Step 2** Eigenvektor untuk $\lambda _{1} =4$
 
 $(A -4I)v_{1} =0$ menghasilkan $v_{2} =v_{1}$. Pilih $v_{1} =(1, 1)$.
 
-**Step3** Eigenvektor untuk $\lambda _{2} =1$
+**Step 3** Eigenvektor untuk $\lambda _{2} =1$
 
 $(A -I)v_{2} =0$ menghasilkan $v_{1} =-2v_{2}$. Pilih $v_{2} =(-2, 1)$.
 
-#### **Step4** General solution
+#### **Step 4** General solution
 
 $$ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} $$
 
-**Step5** Apply kondisi awal $x_{0} =(0.1, 0.1)$
+**Step 5** Apply kondisi awal $x_{0} =(0.1, 0.1)$
 
 Sistem: $c_{1} -2c_{2} =0.1$ dan $c_{1} +c_{2} =0.1$. Solve: $c_{2} =0, c_{1} =0.1$.
 
@@ -289,13 +279,11 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 
 **Koneksi**
 
-### Kondisi awal $(0.1, 0.1)$ kebetulan sejajar dengan eigenvektor $v_{1}$. Maka lintasannya straight-line — hanya mode pertama yang aktif.
+*Kondisi awal $(0.1, 0.1)$ kebetulan sejajar dengan eigenvektor $v_{1}$. Maka lintasannya straight-line — hanya mode pertama yang aktif.*
 
-### Untuk kondisi awal lain (misal $(1, 0)$), kedua mode akan aktif dan lintasan bukan garis lurus.
+*Untuk kondisi awal lain (misal $(1, 0)$), kedua mode akan aktif dan lintasan bukan garis lurus.*
 
-**Kasuskonkret 2**
-
-## Stable Spiral — Complex Eigenvalues
+## Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues
 
 ### Contoh kasus: matriks dengan trace
 
@@ -305,17 +293,17 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 
 ## Step-by-step
 
-#### **Step1** Trace dan determinant
+#### **Step 1** Trace dan determinant
 
 $tr(A) = -1 + (-1) = -2$ (hati-hati: bukan) $0$
 
 $$ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 $$
 
-#### **Step2** Diskriminan
+#### **Step 2** Diskriminan
 
 $\Delta = 4 -20 = -16 < 0$ → complex eigenvalues ✓
 
-#### **Step3** Eigenvalues
+#### **Step 3** Eigenvalues
 
 $$
 \lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
@@ -327,11 +315,11 @@ $$
 \lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
 $$
 
-#### **Step4** Identifikasi
+#### **Step 4** Identifikasi
 
 $\alpha = -1$ (real part), $\beta = 2$ (imaginary part)
 
-#### **Step5** Klasifikasi
+#### **Step 5** Klasifikasi
 
 $\alpha < 0$ dan $\beta =0$ → stable spiral
 
@@ -341,11 +329,9 @@ Lintasan spiral inward ke origin Magnitude decay dengan rate $∣\alpha ∣= 1$ 
 
 Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin
 
-**Konsep5**
+## Konsep 5 — Big Picture — Mengapa Eigenvalue Penting untuk Growth
 
-## Big Picture — Mengapa Eigenvalue Penting untuk Growth
-
-### Pertanyaan yang membuka mata: mengapa kita belajar semua ini untuk Solow- Swan dan RCK?
+*Pertanyaan yang membuka mata: mengapa kita belajar semua ini untuk Solow- Swan dan RCK?*
 
 ## Hubungan tools dengan pertanyaan ekonomi
 
@@ -377,7 +363,7 @@ $∣G ()∣=^{'}\bar{k}0.67 \times 0.06 = 0.04$ per tahun Half-life: $ln 2/0.04 
 
 Inilah prediksi konkrit: ekonomi yang tergeser dari steady state (misal pasca-perang) akan
 
-### butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.
+*butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.*
 
 ## Aplikasi ke RCK
 
@@ -395,21 +381,19 @@ Komponen $c_{2}^{\lambda }e^{2t}v_{2}$ dengan $\lambda _{2} >0$ meledak → haru
 
 **Ringkasan Besar**
 
-### Tanpa eigenvektor analysis, kita tidak bisa karakterisasi saddle path. Ekonomi tidak bisa di-solve dengan benar.
+*Tanpa eigenvektor analysis, kita tidak bisa karakterisasi saddle path. Ekonomi tidak bisa di-solve dengan benar.*
 
-### Eigenvalue + eigenvektor = inti analisis dinamika di growth theory.
+*Eigenvalue + eigenvektor = inti analisis dinamika di growth theory.*
 
-**Konsep6**
+## Konsep 6 — Eksistensi vs Ekspresibilitas Solusi
 
-## Eksistensi vs Ekspresibilitas Solusi
-
-### Pertanyaan tajam: mengapa tidak bisa solve ODE-nya secara eksplisit? Apakah karena $C$ tidak bisa ditemukan?
+*Pertanyaan tajam: mengapa tidak bisa solve ODE-nya secara eksplisit? Apakah karena $C$ tidak bisa ditemukan?*
 
 ## Jawaban: bukan karena C
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.
+*Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.*
 
 ## Picard-Lindelöf menjamin eksistensi
 
@@ -425,9 +409,9 @@ Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progr
 
 ## Tiga jenis "tidak bisa di-solve"
 
-Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=$ `SKENARIO 1` $-2x$, solusi $Ce^{-2t}$.
+**SKENARIO 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=$ $-2x$, solusi $Ce^{-2t}$.
 
-Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: `SKENARIO 2` $\dot{x}=e^{-x2}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
+**SKENARIO 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x2}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
 
 `SKENARIO 3`
 
@@ -439,11 +423,11 @@ memberi insight. Jarang, biasanya melibatkan fungsi spesial.
 
 ### Karena ODE growth theory tidak bisa di-solve eksplisit, kita pakai:
 
-### 1. Linearisasi di steady state (lewat Jacobian) — Bab 5 2. Eigenvalue + eigenvektor dari Jacobian — Bab 7 3. Hartman-Grobman membenarkan ini secara formal — Bab 5
+*1. Linearisasi di steady state (lewat Jacobian) — Bab 5 2. Eigenvalue + eigenvektor dari Jacobian — Bab 7 3. Hartman-Grobman membenarkan ini secara formal — Bab 5*
 
 Hasilnya: insight kuantitatif lokal (rate of convergence, saddle path, klasifikasi) tanpa perlu
 
-### formula eksplisit.
+*formula eksplisit.*
 
 ## Insight metakognitif
 
@@ -455,7 +439,7 @@ Pertanyaanmu menyentuh hal fundamental dalam matematika applied:
 
 Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah yang melibatkan struktur aljabar fungsi $G$. Inilah mengapa numerik, qualitative, dan linearisasi menjadi alat penting — bukan karena malas, tapi karena formula eksplisit memang sering tidak ada.
 
-**Self-Check**
+**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 7
 
@@ -497,7 +481,7 @@ Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.
 
 ### Yang sudah dikuasai dari bab ini:
 
-### Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus
+*Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus*
 
 ## Yang menanti
 

@@ -2,11 +2,9 @@
 
 Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving rate $s$ konstan, model Ramsey-Cass-Koopmans meng-endogenkan $s$ lewat optimisasi rumah tangga. Isi utamanya: setup planner's problem (HJB dan PMP), aturan Keynes-Ramsey, phase plane $(k, c)$ dengan saddle path, modified golden rule, dan comparative dynamics.
 
-**Konsep1**
+## Konsep 1 — Posisi dan Pengantar RCK
 
-## Posisi dan Pengantar RCK
-
-### RCK mengendogenkan saving — perbedaan fundamental dari Solow.
+*RCK mengendogenkan saving — perbedaan fundamental dari Solow.*
 
 ### Bedanya dari Solow-Swan
 
@@ -48,11 +46,9 @@ Bab 12 punya tiga representasi:
 - Cass & Koopmans (1965): popularize untuk growth
 - Ramsey meninggal usia 26 — kerugian besar bagi ekonomi
 
-**Konsep2**
+## Konsep 2 — Section 12.1 — Model Primitives
 
-## Section 12.1 — Model Primitives
-
-### Building blocks: utility, technology, resource constraint.
+*Building blocks: utility, technology, resource constraint.*
 
 ### Objective function (12.1)
 
@@ -74,21 +70,19 @@ dengan ρ > 0 subjective rate of time preference.
 
 ### Identifikasi state vs control
 
-`STATEK` Modal per pekerja. Punya ODE, tidak bisa lompat.
+**State $k$** — Modal per pekerja. Punya ODE, tidak bisa lompat.
 
-`CONTROLC` Konsumsi. Dipilih bebas tiap saat, jump variable.
+**Control $c$** — Konsumsi. Dipilih bebas tiap saat, jump variable.
 
-**Catatannuansa**
+**Catatan Nuansa**
 
 Setup minimal: hanya empat objek menentukan model — u(c), f(k),
 
 ρ, δ. Itulah keindahan RCK.
 
-**Konsep3**
+## Konsep 3 — Section 12.2 — Planner's Problem
 
-## Section 12.2 — Planner's Problem
-
-### Benevolent planner sebagai benchmark Pareto optimum.
+*Benevolent planner sebagai benchmark Pareto optimum.*
 
 ### HJB equation Planner
 
@@ -120,19 +114,19 @@ $$
 
 ### Derivation envelope condition (12.9)
 
-#### `S TEP 1` Turunkan maximality (12.6) terhadap t
+#### `Step 1` Turunkan maximality (12.6) terhadap t
 
 $$
 \dot{\lambda}=e^{-\rho t}\bigl[-\rho\,u_{c}+u_{cc}\,\dot{c}\bigr]
 $$
 
-#### `S TEP 2` Bagi dengan λ = e−ρtuc
+#### `Step 2` Bagi dengan λ = e−ρtuc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-#### `S TEP 3` Substitusi Arrow-Pratt σ= −uccc/uc
+#### `Step 3` Substitusi Arrow-Pratt σ= −uccc/uc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho-\sigma(c)\,\frac{\dot{c}}{c}
@@ -140,17 +134,17 @@ $$
 
 ### Derivation Keynes-Ramsey (12.10)
 
-#### `S TEP 1` Dari adjoint (12.5)
+#### `Step 1` Dari adjoint (12.5)
 
 λλ˙ = −[f′(k) −δ]
 
-#### `S TEP 2` Set sama dengan envelope (12.9)
+#### `Step 2` Set sama dengan envelope (12.9)
 
 $$
 -\rho-\sigma\,\frac{\dot{c}}{c}=-\bigl[f\'(k)-\delta\bigr]
 $$
 
-#### `S TEP 3` Solve → Keynes-Ramsey rule
+#### `Step 3` Solve → Keynes-Ramsey rule
 
 $$
 \rho+\sigma(c)\,\frac{\dot{c}}{c}=r,\qquad r=f\'(k)-\delta
@@ -172,7 +166,7 @@ Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus
 
 r= f′(k) −δ adalah net return on capital — opportunity cost konsumsi sekarang.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner balance benefit defer vs impatience, di-scale oleh 1/σ.
 
@@ -188,7 +182,7 @@ Smoothing — \dot{c} = 0, konsumsi konstan (steady
 
 state)
 
-**Catatannuansa**
+**Catatan Nuansa**
 
 Ada pepatah yang pas: "先苦後甜" — pahit sesaat, manis sehayat ("#YOLO, not"). Keynes-Ramsey adalah formalisasi disiplin intertemporal itu.
 
@@ -196,11 +190,9 @@ Ada pepatah yang pas: "先苦後甜" — pahit sesaat, manis sehayat ("#YOLO, no
 
 Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0) harus disesuaikan (jump) ke saddle path: c∗(0) = g(k0).
 
-**Konsep4**
+## Konsep 4 — Exercise 12.2 — Phase Plane (Paling Penting)
 
-## Exercise 12.2 — Phase Plane (Paling Penting)
-
-### Inti analisis RCK.
+*Inti analisis RCK.*
 
 ### Part 1 — Nullclines
 
@@ -218,13 +210,13 @@ Kurva hump-shape, puncak di kGR where f′(kGR) = δ.
 
 ### Bukti modified golden rule k̄ < kGR
 
-#### `S TEP 1` Bandingkan FOC
+#### `Step 1` Bandingkan FOC
 
 f′(k̄) = δ + ρ > δ= f′(kGR)
 
-#### `S TEP 2` f′ strictly decreasing (dari f′′< 0)
+#### `Step 2` f′ strictly decreasing (dari f′′< 0)
 
-`S TEP 3` Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
+`Step 3` Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
 
 ### Cobb-Douglas verifikasi
 
@@ -292,17 +284,17 @@ $$
 J=\begin{pmatrix}\rho & -1\\ \bar{c}\,f''(\bar{k})/\sigma & 0\end{pmatrix}
 $$
 
-#### `S TEP 1` Entry ∂\dot{k}/∂k= f′(k̄) −δ= ρ (karena f′(k̄) = δ + ρ)
+#### `Step 1` Entry ∂\dot{k}/∂k= f′(k̄) −δ= ρ (karena f′(k̄) = δ + ρ)
 
-`S TEP 2` Entry ∂\dot{c}/∂c = 0 (bracket Keynes-Ramsey = 0 di steady state)
+`Step 2` Entry ∂\dot{c}/∂c = 0 (bracket Keynes-Ramsey = 0 di steady state)
 
-#### `S TEP 3` Determinant
+#### `Step 3` Determinant
 
 det J= σc̄f′′(k̄) < 0
 
 (karena f′′< 0, c̄, σ> 0)
 
-`S TEP 4` det J< 0 → eigenvalues berlawanan tanda → saddle point
+`Step 4` det J< 0 → eigenvalues berlawanan tanda → saddle point
 
 ### Part 4 — Stable Arm (Kualitatif)
 
@@ -330,7 +322,7 @@ Threshold c0∗= g(k0) → konvergen ke steady
 
 state. Stable arm.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Argumen kontinuitas: outcome berubah kontinu dari "crash" (high c0) ke "explode" (low c0). Pasti ada threshold c0∗ yang konvergen.
 
@@ -338,7 +330,7 @@ Unik karena trajektori ODE tidak berpotongan (Picard-Lindelöf). TVC mem-pin-dow
 
 Stable arm adalah kurva 1D → ditulis c = g(k), state feedback rule. Sifat: g(k̄) = c̄, g increasing, slope = ρ −λ2> 0.
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Untuk soal yang minta kualitatif: cukup vector field + kontinuitas. Eigenvalue memberi slope eksak (bonus), tapi tidak perlu untuk deduce eksistensi stable arm.
 
@@ -346,11 +338,9 @@ Untuk soal yang minta kualitatif: cukup vector field + kontinuitas. Eigenvalue m
 
 Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43), c̄ = 1.40, eigenvalues +0.111/ −0.071 (saddle confirmed). Shooting method: k0= 2 →c0∗≈0.901.
 
-**Konsep5**
+## Konsep 5 — Exercise 12.3 — Comparative Dynamics (ρ ↑)
 
-## Exercise 12.3 — Comparative Dynamics (ρ ↑)
-
-### Shock permanen: household jadi lebih impatient.
+*Shock permanen: household jadi lebih impatient.*
 
 ### Part 1 — Perubahan nullclines
 
@@ -384,7 +374,7 @@ $$
 \frac{\partial\bar{s}}{\partial\rho}=-\frac{\alpha\,\delta}{(\delta+\rho)^{2}}<0
 $$
 
-**Hasilkunci**
+**Hasil Kunci**
 
 s̄ TURUN saat ρ naik. Verifikasi: ρ 0.04→0.06 memberi s̄ 16.7%→13.6%. Magnitude/kecepatan adjustment tergantung EIS 1/σ
 
@@ -400,11 +390,9 @@ s(k) endogen dari optimisasi, adjust optimal
 
 terhadap shock
 
-**Konsep6**
+## Konsep 6 — Section 12.3 — Competitive Equilibrium
 
-## Section 12.3 — Competitive Equilibrium
-
-### Decentralized economy: household + firm + market clearing.
+*Decentralized economy: household + firm + market clearing.*
 
 ### Ownership structure
 
@@ -428,13 +416,13 @@ $$
 
 ### Euler equation (12.15)
 
-#### `S TEP 1` Turunkan maximality terhadap t, bagi dengan μ
+#### `Step 1` Turunkan maximality terhadap t, bagi dengan μ
 
 $$
 \frac{\dot{\mu}}{\mu}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-#### `S TEP 2` Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt
+#### `Step 2` Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r(t)-\rho\bigr]
@@ -460,11 +448,9 @@ r= f′(k) −δ(12.17),w= f(k) −kf′(k)(12.18)
 
 a = k,f(k) = c + \dot{k} + δk
 
-**Konsep7**
+## Konsep 7 — Section 12.4 — First Welfare Theorem
 
-## Section 12.4 — First Welfare Theorem
-
-### Planner = competitive equilibrium.
+*Planner = competitive equilibrium.*
 
 ### Equivalence (Exercise 12.5)
 
@@ -488,11 +474,9 @@ Convexity terpenuhi: u concave, f concave → Mangasarian Sufficiency → PMP = 
 
 Implikasi: di RCK (pasar sempurna, convex), tidak ada room untuk policy. Di Bab 14-15 (increasing returns dari R&D), convexity gagal → First Welfare gagal → policy matters.
 
-**Konsep8**
+## Konsep 8 — Section 12.5 — TFP & Population Growth
 
-## Section 12.5 — TFP & Population Growth
-
-### Extension ke Balanced Growth Path (BGP).
+*Extension ke Balanced Growth Path (BGP).*
 
 ### Redefinisi per efficient unit
 
@@ -500,15 +484,15 @@ L(t) = ent, A(t) = egt. Variabel per efficient unit: c = C/(AL), k= K/(AL).
 
 ### Exercise 12.6 — Resource constraint
 
-#### `S TEP 1` Aggregate: \dot{K} = F(K, AL) −δK −C
+#### `Step 1` Aggregate: \dot{K} = F(K, AL) −δK −C
 
-#### `S TEP 2` Log-differentiate k= K/(AL)
+#### `Step 2` Log-differentiate k= K/(AL)
 
 k\dot{k} = K\dot{K} −g −n
 
-#### `S TEP 3` CRS: F(K, AL)/(AL) = f(k) (pilih λ = 1/(AL))
+#### `Step 3` CRS: F(K, AL)/(AL) = f(k) (pilih λ = 1/(AL))
 
-#### `S TEP 4` Substitusi dan kumpulkan → hasil
+#### `Step 4` Substitusi dan kumpulkan → hasil
 
 \dot{k} = f(k) −(n + g + δ)k −c
 
@@ -530,23 +514,23 @@ Objective punya L(t) = ent (planner peduli total welfare). e−ρt ⋅ent= e−(
 
 ### Exercise 12.8 — Euler dengan growth
 
-#### `S TEP 1` Log maximality, turunkan
+#### `Step 1` Log maximality, turunkan
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-(\rho-n)+g+\frac{d}{dt}\ln u'(Ac)
 $$
 
-`S TEP 2` Kunci: dtd ln u′(Ac) = −σ(g + ċ/c) karena growth rate Ac adalah
+`Step 2` Kunci: dtd ln u′(Ac) = −σ(g + ċ/c) karena growth rate Ac adalah
 
 #### g + ċ/c
 
-#### `S TEP 3` Set sama adjoint, cancel n, g, solve
+#### `Step 3` Set sama adjoint, cancel n, g, solve
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[f'(k)-(\delta+\rho+\sigma g)\bigr]
 $$
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Suku baru σg = effective impatience tambahan karena konsumsi per pekerja tumbuh g. BGP: f′(k̄) = δ + ρ + σg. Verifikasi: dengan
 
@@ -566,7 +550,7 @@ $$
 \sigma(cA)=\frac{f'(\bar{k})-\delta-\rho}{g}=\text{konstanta}
 $$
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Karena cA = c̄ ⋅egt→∞, σ harus asymptotically constant. Sufficiency: jika σ→σ∗, maka f′(k̄) = δ + ρ + σ∗g punya solusi
 
@@ -574,11 +558,11 @@ unique → BGP exists.
 
 ### Exercise 12.10 — CRRA patience restriction
 
-#### `S TEP 1` CRRA + BGP: integrand objective
+#### `Step 1` CRRA + BGP: integrand objective
 
 ∼e[−ρ+(1−σ)g+n]t
 
-#### `S TEP 2` Konvergen iff eksponen < 0
+#### `Step 2` Konvergen iff eksponen < 0
 
 ρ > n + (1 −σ)g
 
@@ -596,7 +580,7 @@ Utility bounded.
 
 unbounded, butuh discount besar.
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Jebakan aljabar eksponen: (a/b)p= apb−p. Eksponen penyebut jadi −p, bukan eksponen lain. Contoh: (δ/α)1/(α−1)= δ1/(α−1)α−1/(α−1), bukan α(α−1). Bentuk bersih: kGR= (α/δ)1/(1−α).
 
@@ -604,7 +588,7 @@ Jebakan aljabar eksponen: (a/b)p= apb−p. Eksponen penyebut jadi −p, bukan ek
 
 ## Self-Assessment Bab 12
 
-### Cek pemahaman.
+*Cek pemahaman.*
 
 ### Setup dan Planner
 

@@ -2,11 +2,9 @@
 
 Bab ini meletakkan fondasi paling dasar dari seluruh perangkat matematis teori pertumbuhan: apa sebenarnya arti *solusi* sebuah ODE (persamaan diferensial biasa). Pendekatannya *verification-based* — sebuah fungsi disebut solusi bukan karena bisa diturunkan dari rumus, melainkan karena terbukti memenuhi persamaannya. Dari bab ini pula dua kebiasaan kerja terpenting mulai dibangun: menuliskan goal sebelum menurunkan, dan sanity check setelahnya.
 
-**Konsep1**
+## Konsep 1 — Apa Itu "Solusi" ODE?
 
-## Apa Itu "Solusi" ODE?
-
-### Pertanyaan yang kelihatannya remeh, tapi punya konsekuensi besar untuk seluruh kursus.
+*Pertanyaan yang kelihatannya remeh, tapi punya konsekuensi besar untuk seluruh kursus.*
 
 ## Definisi formal
 
@@ -45,21 +43,19 @@ Definisi solusi verification-based, bukan derivation-based. Kamu tidak perlu men
 
 Ini akan dipakai berulang di kursus: di Bellman equation (guess and verify value function), di optimal control (verify policy memenuhi FOC), di equilibrium (verify market clearing). Saat lihat kandidat solusi, verify dulu — jangan langsung mode "solve".
 
-**Konsep2**
+## Konsep 2 — General Solution vs Particular Solution
 
-## General Solution vs Particular Solution
-
-### Kerangka untuk memahami "keluarga solusi" dan bagaimana kondisi tambahan memilih satu solusi spesifik.
+*Kerangka untuk memahami "keluarga solusi" dan bagaimana kondisi tambahan memilih satu solusi spesifik.*
 
 ## Aturan jumlah konstanta
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### Untuk ODE orde- $m$ dalam variabel: $k$
 
-### General solution memiliki $m \times k$ konstanta arbitrer Particular solution didapat dengan memberi $m \times k$ kondisi (initial atau boundary)
+*General solution memiliki $m \times k$ konstanta arbitrer Particular solution didapat dengan memberi $m \times k$ kondisi (initial atau boundary)*
 
-### Asal-usul: setiap integrasi memunculkan satu konstanta. ODE orde- $m$ butuh $m$ integrasi → $m$ konstanta per variabel.
+*Asal-usul: setiap integrasi memunculkan satu konstanta. ODE orde- $m$ butuh $m$ integrasi → $m$ konstanta per variabel.*
 
 ## Contoh konkret
 
@@ -86,17 +82,15 @@ Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk $\dot{y}=2t$,
 
 Inilah pola dasar: general → tambah kondisi → particular.
 
-**Konsep3**
+## Konsep 3 — IVP vs BVP — Beda yang Penting untuk RCK
 
-## IVP vs BVP — Beda yang Penting untuk RCK
+*Dua cara memberi kondisi untuk pin down solusi. Bedanya halus tapi konsekuensinya besar.*
 
-### Dua cara memberi kondisi untuk pin down solusi. Bedanya halus tapi konsekuensinya besar.
+**IVP — INITIAL VALUE** — Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk ODE orde- $my(t$: $_{0}),\dot{y}(t_{0}),y¨(t_{0}),\dots$ semua di $t_{0}$. Mudah diselesaikan dengan integrasi forward.
 
-Semua kondisi diberikan di satu titik waktu yang sama $t_{0}$. Untuk `IVP — INITIAL VALUE` ODE orde- $my(t$: $_{0}),\dot{y}(t_{0}),y¨(t_{0}),\dots$ semua di $t_{0}$. Mudah diselesaikan dengan integrasi forward.
+**BVP — BOUNDARY VALUE** — Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: $y(0) = 1y(2) = 5$,. Lebih sulit — butuh metode khusus seperti shooting.
 
-Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: `BVP — BOUNDARY VALUE` $y(0) = 1y(2) = 5$,. Lebih sulit — butuh metode khusus seperti shooting.
-
-**Jebakanumum**
+**Jebakan Umum**
 
 Hati-hati: BVP bukan sekadar "kondisi pada interval waktu" — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah *di mana* kondisi diberikan dalam
 
@@ -106,19 +100,17 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 ### Di RCK (Bab 12) akan muncul BVP yang tidak biasa:
 
-### Capital: initial condition di $kt = 0$ — $k(0)= k_{0}$ Consumption: transversality condition di $ct \to \infty$
+*Capital: initial condition di $kt = 0$ — $k(0)= k_{0}$ Consumption: transversality condition di $ct \to \infty$*
 
-### Kondisi di dua titik waktu berbeda → BVP. Inilah mengapa Bab 13 mengajarkan shooting method — algoritma khusus untuk mengubah BVP menjadi IVP yang bisa diselesaikan komputer.
+*Kondisi di dua titik waktu berbeda → BVP. Inilah mengapa Bab 13 mengajarkan shooting method — algoritma khusus untuk mengubah BVP menjadi IVP yang bisa diselesaikan komputer.*
 
-**Konsep4**
+## Konsep 4 — Existence and Uniqueness (Picard-Lindelöf)
 
-## Existence and Uniqueness (Picard-Lindelöf)
-
-### Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.
+*Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.*
 
 ## Statement Teorema 4.1 (versi intuitif)
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ### Untuk IVP $\dot{x}=G(x, t)$ dengan $x(t_{0})=x_{0}$:
 
@@ -144,11 +136,9 @@ $G$ Lipschitz dalam: kritis untuk membuat operator integrasi menjadi contraction
 
 $D$ kompak: tertutup dan terbatas, sehingga max/min tercapai
 
-**Catatannuansa**
+**Catatan Nuansa**
 
-**Konsep5**
-
-## Saat Picard-Lindelöf Gagal — Eksplorasi Mendalam
+## Konsep 5 — Saat Picard-Lindelöf Gagal — Eksplorasi Mendalam
 
 ### Bagian ini yang paling dalam menggali pemahaman — di sinilah terlihat
 
@@ -192,31 +182,29 @@ Tidak ada cara kabur dari nol. Sekali stuck di nol, selamanya stuck.
 
 ## Generalisasi: $\dot{x}=x^{\alpha }$ dengan $x(0) = 0$
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### $\alpha \ge 1$ (linear, kuadratik,...): solusi unik ($x\equiv 0$) $0 < \alpha < 1$ (akar kuadrat, akar kubik,...): tak hingga solusi
+*$\alpha \ge 1$ (linear, kuadratik,...): solusi unik ($x\equiv 0$) $0 < \alpha < 1$ (akar kuadrat, akar kubik,...): tak hingga solusi*
 
-### Aturan praktis: pangkat $\ge 1$ adalah well-behaved di titik asal. Pangkat pecahan $< 1$ menghasilkan turunan yang meledak → non-uniqueness.
+*Aturan praktis: pangkat $\ge 1$ adalah well-behaved di titik asal. Pangkat pecahan $< 1$ menghasilkan turunan yang meledak → non-uniqueness.*
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Jebakan umum: mengira Kasus B hanya punya dua solusi. Sebenarnya tak hingga banyak — setiap $\tau \ge 0$ memberi solusi berbeda.
 
 Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "kapan mulai bergerak". Pemahaman ini membedakan "ada multiple solutions" dari "memahami struktur multiple solutions".
 
-**Konsep6**
-
-## Hubungan ke Growth Theory
+## Konsep 6 — Hubungan ke Growth Theory
 
 ### Setelah pemahaman teknis, pertanyaan yang paling penting
 
 ## Apakah model growth well-behaved?
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Ya, semua model growth di kursus ini well-behaved di wilayah yang relevan.
+*Ya, semua model growth di kursus ini well-behaved di wilayah yang relevan.*
 
-### Picard-Lindelöf berlaku, solusi unik dijamin. Tidak ada kasus seperti $x$ yang punya tak hingga solusi.
+*Picard-Lindelöf berlaku, solusi unik dijamin. Tidak ada kasus seperti $x$ yang punya tak hingga solusi.*
 
 ## Mengapa
 
@@ -244,7 +232,7 @@ Meskipun growth well-behaved, konsep ini tetap dibutuhkan
 
 ### Untuk seluruh materi, kita bisa mengasumsikan well-behaved
 
-### Tapi pemahaman mengapa well-behaved akan membuatmu lebih percaya diri saat mengaplikasikan teorema dan memahami subtleties seperti saddle path.
+*Tapi pemahaman mengapa well-behaved akan membuatmu lebih percaya diri saat mengaplikasikan teorema dan memahami subtleties seperti saddle path.*
 
 ## Tentang Teorema 4.2 (versi global)
 
@@ -274,13 +262,13 @@ Ekonomi self-limiting (boundedness dari dinamika) → solusi lokal bisa dirangka
 
 **Bukti Formal Bukan Prioritas** — Dalam praktik, fokuslah pada statement dan aplikasinya; bukti formal opsional.
 
-Kalau formula terlihat aneh, minta format alternatif (subscript, plain `RENDERING CHECK` text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
+**RENDERING CHECK** — Kalau formula terlihat aneh, minta format alternatif (subscript, plain text). Beberapa menit untuk reread lebih baik daripada salah pemahaman.
 
-**Self-Check**
+**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 4
 
-### Siap untuk Bab 5 jika semua pertanyaan ini bisa dijawab dengan yakin.
+*Siap untuk Bab 5 jika semua pertanyaan ini bisa dijawab dengan yakin.*
 
 ## Konsep dasar
 
@@ -337,9 +325,9 @@ Punya intuisi geometris (trajektori, "kabur dari nol", dll)
 
 **Ringkasan Besar**
 
-### Bab 5 akan jadi jembatan antara tools matematis (Bab 3-4) dan model ekonomi (Bab 9 dan setelahnya). Setiap konsep di Bab 5 akan dipakai berulang di:
+*Bab 5 akan jadi jembatan antara tools matematis (Bab 3-4) dan model ekonomi (Bab 9 dan setelahnya). Setiap konsep di Bab 5 akan dipakai berulang di:*
 
-### Solow-Swan: konvergensi monoton ke $k^{*}$ RCK: saddle path dynamics di sekitar steady state Romer R&D: balanced growth path sebagai steady state efficiency units
+*Solow-Swan: konvergensi monoton ke $k^{*}$ RCK: saddle path dynamics di sekitar steady state Romer R&D: balanced growth path sebagai steady state efficiency units*
 
-### Selamat melanjutkan.
+*Selamat melanjutkan.*
 

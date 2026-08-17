@@ -2,9 +2,7 @@
 
 Bab paling visual di Tools I: menerjemahkan hasil analisis eigenvalue menjadi gambar *phase diagram*. Yang paling penting di sini bukan teori baru (itu sudah ada di Bab 5 dan 7), melainkan prosedur menggambar — plus konsep *nullcline* yang akan dipakai berulang dari Bab 9 sampai akhir.
 
-**Konsep1**
-
-## Filosofi Qualitative Approach
+## Konsep 1 — Filosofi Qualitative Approach
 
 ### Mengapa kita gambar phase diagram daripada solve ODE?
 
@@ -30,15 +28,13 @@ nonlinear apapun — bahkan yang tidak bisa di-solve.
 
 **Ringkasan Besar**
 
-### Untuk model growth (Solow, RCK, Romer) yang nonlinear dan tidak bisa di-solve eksplisit, qualitative approach adalah alat utama untuk dapat insight visual.
+*Untuk model growth (Solow, RCK, Romer) yang nonlinear dan tidak bisa di-solve eksplisit, qualitative approach adalah alat utama untuk dapat insight visual.*
 
-### Pertanyaan yang sama muncul lagi: "Mengapa tidak bisa solve ODE eksplisit?" Jawabannya melibatkan Picard-Lindelöf vs ekspresibilitas. Sekarang di Bab 8, kita pakai tools tanpa butuh formula eksplisit.
+*Pertanyaan yang sama muncul lagi: "Mengapa tidak bisa solve ODE eksplisit?" Jawabannya melibatkan Picard-Lindelöf vs ekspresibilitas. Sekarang di Bab 8, kita pakai tools tanpa butuh formula eksplisit.*
 
-**Konsep2**
+## Konsep 2 — Phase Diagram 1D (Section 8.1)
 
-## Phase Diagram 1D (Section 8.1)
-
-### Versi paling sederhana — untuk ODE skalar.
+*Versi paling sederhana — untuk ODE skalar.*
 
 ## Setup
 
@@ -68,11 +64,9 @@ Phase line untuk ODE skalar $\dot{x}=g(x)$ dengan dua steady state. Panah di sum
 
 $g () <^{'}\bar{x}0$ (slope negatif): stable — lintasan dari kedua sisi menuju $\bar{x}$ $g () >^{'}\bar{x}0$ (slope positif): unstable — lintasan dari kedua sisi menjauh dari $\bar{x}$
 
-**Konsep3**
+## Konsep 3 — Phase Diagram 2D — Vector Field
 
-## Phase Diagram 2D — Vector Field
-
-### Generalisasi ke sistem 2D. Konsep dasar: di tiap titik, ada "arah" dinamika.
+*Generalisasi ke sistem 2D. Konsep dasar: di tiap titik, ada "arah" dinamika.*
 
 ## Setup
 
@@ -98,25 +92,23 @@ Kumpulan semua vektor di seluruh phase plane = vector field.
 
 Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksikan ke state space (tanpa waktu eksplisit).
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Konsekuensi Picard-Lindelöf: stream lines tidak pernah berpotongan.
+*Konsekuensi Picard-Lindelöf: stream lines tidak pernah berpotongan.*
 
-### Mengapa? Karena di tiap titik, arah aliran unik (dari ODE). Kalau dua lintasan berpotongan di satu titik, mereka harus pergi ke arah berbeda dari titik itu — mustahil.
+*Mengapa? Karena di tiap titik, arah aliran unik (dari ODE). Kalau dua lintasan berpotongan di satu titik, mereka harus pergi ke arah berbeda dari titik itu — mustahil.*
 
-**Konsep4**
+## Konsep 4 — Nullcline — Alat Visual Paling Powerful
 
-## Nullcline — Alat Visual Paling Powerful
-
-### Konsep yang dipakai berulang dari Bab 9 sampai akhir.
+*Konsep yang dipakai berulang dari Bab 9 sampai akhir.*
 
 ## Definisi
 
-**Hasilkunci**
+**Hasil Kunci**
 
-### Nullcline = kurva di phase plane di mana salah satu $\dot{x}_{i} =0$.
+*Nullcline = kurva di phase plane di mana salah satu $\dot{x}_{i} =0$.*
 
-### $\dot{x}_{1}$ -nullcline = kurva di mana $\dot{x}_{1} =0$ $\dot{x}_{2}$ -nullcline = kurva di mana $\dot{x}_{2} =0$
+*$\dot{x}_{1}$ -nullcline = kurva di mana $\dot{x}_{1} =0$ $\dot{x}_{2}$ -nullcline = kurva di mana $\dot{x}_{2} =0$*
 
 ## Apa artinya geometris
 
@@ -165,11 +157,9 @@ Perpotongan: solve $x_{1} =2 -x_{1}$ → $x_{1} =1x$, $_{2} =1$. Steady state $(
 
 Dua nullcline berpotongan di steady state $(1,1)$.
 
-**Konsep5**
+## Konsep 5 — Lima Klasifikasi Phase Diagram 2D
 
-## Lima Klasifikasi Phase Diagram 2D
-
-### Visualisasi tiap kasus eigenvalue. Pelajari gambarnya — itulah yang dipakai berulang.
+*Visualisasi tiap kasus eigenvalue. Pelajari gambarnya — itulah yang dipakai berulang.*
 
 ## Klasifikasi 1 — Stable Node (Sink)
 
@@ -235,29 +225,27 @@ Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Ma
 
 Center: lintasan adalah orbit konsentris di sekitar origin. Tidak konvergen, tidak diverge.
 
-**Konsep6**
+## Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram
 
-## Algoritma 7-Langkah Menggambar Phase Diagram
+*Prosedur konkret yang dipakai berulang. Hafalkan urutannya.*
 
-### Prosedur konkret yang dipakai berulang. Hafalkan urutannya.
-
-#### **Step1** Hitung eigenvalues
+#### **Step 1** Hitung eigenvalues
 
 Pakai formula 2D: $\lambda -^{2}tr(A)\lambda + det(A) = 0$. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).
 
-#### **Step2** Klasifikasi dari eigenvalues
+#### **Step 2** Klasifikasi dari eigenvalues
 
 Trick cepat: kalau $det(A) < 0$ → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.
 
-#### **Step3** Cari eigenvektor (kalau real eigenvalues)
+#### **Step 3** Cari eigenvektor (kalau real eigenvalues)
 
 Solve $(A -\lambda I)v= 0$ untuk tiap eigenvalue. Identifikasi stable (eigenvalue negatif) dan unstable (eigenvalue positif) directions.
 
-#### **Step4** Plot sumbu dan steady state
+#### **Step 4** Plot sumbu dan steady state
 
 Sumbu horizontal $x_{1}$, vertikal $x_{2}$. Tandai steady state (biasanya origin untuk sistem homogen) dengan titik.
 
-#### **Step5** Gambar eigenvektor sebagai garis lurus
+#### **Step 5** Gambar eigenvektor sebagai garis lurus
 
 Untuk node atau saddle: gambar garis lewat origin sepanjang tiap eigenvektor. Tambahkan panah:
 
@@ -267,7 +255,7 @@ Eigenvalue positif: panah menjauh dari origin
 
 Untuk spiral: skip langkah ini (eigenvektor kompleks).
 
-#### **Step6** Gambar lintasan tipikal
+#### **Step 6** Gambar lintasan tipikal
 
 Pilih 4-8 kondisi awal yang tersebar di phase plane. Gambar lintasan sesuai klasifikasi:
 
@@ -277,7 +265,7 @@ Unstable node: semua menjauh, keluar tangensial eigenvektor lambat Saddle: datan
 
 Stable spiral: spiral inward
 
-#### **Step7** Cek dengan vector field
+#### **Step 7** Cek dengan vector field
 
 Evaluasi $\dot{x}=Ax$ di beberapa titik untuk verifikasi:
 
@@ -305,11 +293,9 @@ $\Delta = tr-^{2}4 det\Delta > 0$. → node (real distinct), $\Delta < 0$ → sp
 
 atau center (complex), $\Delta = 0$ → repeated (improper node)
 
-**Konsep7**
+## Konsep 7 — Preview Aplikasi — RCK Saddle Path
 
-## Preview Aplikasi — RCK Saddle Path
-
-### Inilah tempat semua tools Bab 8 bertemu di growth theory.
+*Inilah tempat semua tools Bab 8 bertemu di growth theory.*
 
 ## Setup RCK
 
@@ -343,11 +329,11 @@ Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah pu
 
 **Ringkasan Besar**
 
-### Modal adalah state predetermined ($kk_{0}$ diberikan). Konsumsi adalah control $c$ (pilihan).
+*Modal adalah state predetermined ($kk_{0}$ diberikan). Konsumsi adalah control $c$ (pilihan).*
 
 Untuk tiap $k_{0}$, ada satu nilai $c_{0}$ yang benar — yang persis di saddle path. Pilihan lain
 
-### menyebabkan trajectory meledak.
+*menyebabkan trajectory meledak.*
 
 transversality condition (dibahas di Bab 11)
 
@@ -361,7 +347,7 @@ Magnitude eigenvalue → rate of convergence sepanjang saddle path
 
 Tanpa eigenvalue analysis, kita tidak bisa karakterisasi saddle path. Inilah inti analisis RCK.
 
-**Self-Check**
+**SELF-CHECK**
 
 ## Checklist Pemahaman Bab 8
 
@@ -404,7 +390,7 @@ Kini lengkap sudah lima alat utama
 
 **Ringkasan Besar**
 
-### Bab 3: ODE notation dan struktur Bab 4: Picard-Lindelöf — eksistensi dan keunikan solusi Bab 5: Steady state dan klasifikasi stabilitas Bab 6: Integrating factor untuk linear ODE Bab 7: Eigenvalue analysis untuk sistem linear Bab 8: Phase diagram visualisasi qualitative
+*Bab 3: ODE notation dan struktur Bab 4: Picard-Lindelöf — eksistensi dan keunikan solusi Bab 5: Steady state dan klasifikasi stabilitas Bab 6: Integrating factor untuk linear ODE Bab 7: Eigenvalue analysis untuk sistem linear Bab 8: Phase diagram visualisasi qualitative*
 
 ## Yang menanti
 

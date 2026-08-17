@@ -17,7 +17,7 @@ Mulailah dari **[Peta Konsep](mindmap)** untuk melihat arsitektur besarnya, lalu
 
 ## Peta bagian
 
-**Gambaran besar**
+**Gambaran Besar**
 
 - [Sintesis Lintas Bab](sintesis) — satu pertanyaan yang tumbuh menjadi seluruh teori
 - [Peta Konsep](mindmap) — arsitektur enam pilar, benang konsep, dan alat

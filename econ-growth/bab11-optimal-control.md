@@ -2,11 +2,9 @@
 
 Bab 11 adalah Tools II — teori *optimal control*, fondasi teknis untuk RCK dan seluruh endogenous growth. Dua pendekatan besar dibahas tuntas: HJB (dynamic programming, kondisi cukup) dan PMP (Pontryagin, kondisi perlu), berikut hubungan keduanya, interpretasi ekonomi tiap suku, dan transversality condition. Format catatan: langkah demi langkah, derivasi lengkap, tanpa lompatan notasi.
 
-**Konsep1**
+## Konsep 1 — Posisi Bab 11 dalam Kursus
 
-## Posisi Bab 11 dalam Kursus
-
-### Bab 11 adalah Tools II — analog dengan Tools I (Bab 3-8 untuk ODE), tapi untuk optimisasi dinamis.
+*Bab 11 adalah Tools II — analog dengan Tools I (Bab 3-8 untuk ODE), tapi untuk optimisasi dinamis.*
 
 ### Sifat Bab 11 vs Bab sebelumnya
 
@@ -22,7 +20,7 @@ Aplikasi Solow-Swan. Model deskriptif tanpa
 
 optimisasi household. s konstan.
 
-Tools II (Optimal Control). Tools matematis `BAB 11` untuk optimisasi atas path. Foundation untuk RCK.
+**Bab 11** — Tools II (Optimal Control). Tools matematis untuk optimisasi atas path. Foundation untuk RCK.
 
 Model dengan optimisasi. RCK, endogenous
 
@@ -56,11 +54,9 @@ Mereka adalah dual — analog dengan Welfare Theorems di general equilibrium. Ka
 
 Keduanya adalah produk era Perang Dingin — lahir independen, awalnya untuk aplikasi militer, akhirnya menjadi tulang punggung ekonomi dinamis.
 
-**Konsep2**
+## Konsep 2 — Section 11.1 — Setup Optimal Control Problem
 
-## Section 11.1 — Setup Optimal Control Problem
-
-### Setup formal masalah optimisasi dinamis.
+*Setup formal masalah optimisasi dinamis.*
 
 ### Komponen OCP
 
@@ -93,9 +89,9 @@ V (t0, x0) — value function, indirect utility dari OCP.
 
 Pertanyaan yang sering muncul: "apa beda state dan control secara konkret di model ekonomi?"
 
-Distinction yang krusial untuk paham semua model dinamis. `STATEX` Punya ODE sendiri (ẋ = f), tidak dipilih langsung, history-dependent, encapsulate masa lalu. Contoh: modal, wealth, stok ikan.
+**STATEX** — Distinction yang krusial untuk paham semua model dinamis. Punya ODE sendiri (ẋ = f), tidak dipilih langsung, history-dependent, encapsulate masa lalu. Contoh: modal, wealth, stok ikan.
 
-Dipilih bebas tiap saat, tidak punya ODE, bisa `CONTROLU` berubah seketika. Contoh: konsumsi, investasi, harga.
+**Control $u$** — Dipilih bebas tiap saat, tidak punya ODE, bisa berubah seketika. Contoh: konsumsi, investasi, harga.
 
 ### Tes diagnostik untuk identifikasi
 
@@ -106,17 +102,9 @@ Dipilih bebas tiap saat, tidak punya ODE, bisa `CONTROLU` berubah seketika. Cont
 
 ### Contoh konkret di RCK
 
-Modal per pekerja. ODE: k̇ = f(k) −δk −c. Tidak
+**State $k$** — Modal per pekerja. ODE: $\dot{k} = f(k) - \delta k - c$. Tidak bisa lompat — harus akumulasi seiring waktu.
 
-`STATEK`
-
-bisa lompat — harus akumulasi seiring waktu.
-
-Konsumsi. Dipilih bebas tiap saat. Tidak ada ODE
-
-`CONTROLC`
-
-untuk c sendiri.
+**Control $c$** — Konsumsi. Dipilih bebas tiap saat. Tidak ada ODE untuk $c$ sendiri.
 
 ### Mengapa OCP sulit
 
@@ -126,11 +114,9 @@ Satu peringatan penting:
 
 Tidak bisa pakai Lagrangian biasa. Butuh trick matematis baru — itulah BPO, HJB, PMP.
 
-**Konsep3**
+## Konsep 3 — Section 11.2 — Bellman's Principle of Optimality
 
-## Section 11.2 — Bellman's Principle of Optimality
-
-### Filosofi pemandu: optimal plan self-consistent di setiap titik.
+*Filosofi pemandu: optimal plan self-consistent di setiap titik.*
 
 ### Pernyataan BPO
 
@@ -212,11 +198,9 @@ dengan dx = f⋅dt.
 
 Setelah manipulasi → HJB equation. Inilah continuous-time version BPO.
 
-**Konsep4**
+## Konsep 4 — Section 11.3 — HJB Equation (Sufficient)
 
-## Section 11.3 — HJB Equation (Sufficient)
-
-### Bagian paling teknis Bab 11. Derive HJB equation dari intuisi cost- benefit.
+*Bagian paling teknis Bab 11. Derive HJB equation dari intuisi cost- benefit.*
 
 ### Intuisi cost-benefit
 
@@ -240,16 +224,16 @@ Jawaban: pada optimal path, V menurun karena horizon mengecil. Maka V ˙ ≤0, d
 
 ### Chain rule untuk V ˙
 
-#### `S TEP 1` V (t, x(t)) tergantung pada t lewat dua channel
+#### `Step 1` V (t, x(t)) tergantung pada t lewat dua channel
 
 - Langsung lewat t
 - Lewat x(t)
 
-#### `S TEP 2` Chain rule multivariate
+#### `Step 2` Chain rule multivariate
 
 dtdV= Vt + Vx ⋅ẋ
 
-#### `S TEP 3` Substitusi ODE constraint ẋ = f
+#### `Step 3` Substitusi ODE constraint ẋ = f
 
 V ˙ = Vt + Vx ⋅f(t, x, u)
 
@@ -327,9 +311,9 @@ Independen u.
 
 `H` Direct effect kontrol u pada payoff.
 
-Indirect effect kontrol u via state transition. `VX F` Bukan inherent "marginal benefit" — bisa + atau −.
+**VX F** — Indirect effect kontrol u via state transition. Bukan inherent "marginal benefit" — bisa + atau −.
 
-**Catatannuansa**
+**Catatan Nuansa**
 
 Istilah untuk $V_{x}f$: "marginal lifetime benefit"
 
@@ -346,7 +330,7 @@ Sifat PDE umumnya sulit di-solve. Closed-form hanya untuk kasus khusus (LQR).
 
 ### Theorem 11.1 — HJB Sufficiency
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Statement: kalau V memenuhi HJB equation dengan boundary V (T, x) = 0, maka μ(t, x) = arg max di kanan HJB adalah optimal
 
@@ -354,15 +338,13 @@ control.
 
 Implikasi: solve HJB → optimal control gratis.
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Common mistake: lupa boundary V (T, x) = 0. Tanpa boundary, HJB punya banyak solusi. Boundary mem-pin-down solusi unique.
 
-**Konsep5**
+## Konsep 5 — Section 11.4 — Necessary Conditions
 
-## Section 11.4 — Necessary Conditions
-
-### Mengapa kita butuh necessary conditions selain HJB? Karena PDE sulit.
+*Mengapa kita butuh necessary conditions selain HJB? Karena PDE sulit.*
 
 ### Sufficient vs Necessary
 
@@ -378,7 +360,7 @@ V memenuhi HJB di semua (t, x) → optimal
 
 control. Strategy: solve PDE global.
 
-Vtetap memenuhi HJB, tapi tidak perlu solve `NECESSARY` PDE global. Cukup kondisi lokal sepanjang optimal path.
+**NECESSARY** — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.
 
 ### Mengapa butuh necessary conditions
 
@@ -396,19 +378,19 @@ Tidak perlu memperhitungkan dk∗/dx. Hanya turunan parsial F terhadap x. Mengap
 
 ### Derivation persamaan (11.12)
 
-#### `S TEP 1` Turunkan HJB terhadap x
+#### `Step 1` Turunkan HJB terhadap x
 
 Sisi kanan: maxk{h + Vxf}. Pakai Envelope Theorem.
 
-#### `S TEP 2` Hasilnya
+#### `Step 2` Hasilnya
 
 0 = hx + Vtx + Vxxf+ Vxfx
 
-#### `S TEP 3` Pakai chain rule untuk V ˙x
+#### `Step 3` Pakai chain rule untuk V ˙x
 
 V ˙x= Vtx + Vxxẋ = Vtx + Vxxf
 
-#### `S TEP 4` Substitusi → persamaan (11.12)
+#### `Step 4` Substitusi → persamaan (11.12)
 
 0 = hx + V ˙x + Vxfx
 
@@ -426,7 +408,7 @@ $$
 
 Interpretasi tiap suku — satu per satu.
 
-Direct effect of time on momentary payoff. `HT` Bagaimana payoff berubah saat waktu maju, holding x, u konstan. Direct effect of state on momentary payoff. `HX` Bagaimana payoff berubah saat state naik, holding t, u konstan.
+**HT** — Direct effect of time on momentary payoff. Bagaimana payoff berubah saat waktu maju, holding x, u konstan. Direct effect of state on momentary payoff. `HX` Bagaimana payoff berubah saat state naik, holding t, u konstan.
 
 Rate of marginal value change over time. `V̇X` Bagaimana Vx (shadow price state) berubah sepanjang optimal path.
 
@@ -488,7 +470,7 @@ Untuk growth models, h dan f biasanya tidak tergantung pada t explisit. Maka:
 
 Persamaan (11.13) trivial terpenuhi. Hanya (11.12) relevan.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Inilah mengapa di RCK kita hanya pakai satu adjoint equation (yang akan jadi ψ˙ = −Hk di PMP).
 
@@ -498,15 +480,13 @@ Inilah mengapa di RCK kita hanya pakai satu adjoint equation (yang akan jadi ψ�
 - (11.13): kalau kita tunggu sebentar, apa optimal masih tunjuk arah yang sama?
 - Balance ke nol: kalau iya, kita sedang di optimal path
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Jangan paham tiap suku terpisah — itu sumber kebingungan. Paham sebagai paket cost-benefit: tweak variabel → tiga efek muncul → optimal saat balance ke nol.
 
-**Konsep6**
+## Konsep 6 — Section 11.5 — Pontryagin Maximum Principle
 
-## Section 11.5 — Pontryagin Maximum Principle
-
-### Reformulasi necessary conditions sebagai Hamiltonian system. Workhorse ekonomi makro dinamis.
+*Reformulasi necessary conditions sebagai Hamiltonian system. Workhorse ekonomi makro dinamis.*
 
 ### Adjoint variables
 
@@ -576,15 +556,15 @@ Pertanyaan yang sering muncul: "darimana (11.18) dan (11.19)?"
 
 Persamaan (11.18): H∗= −Vt. Diturunkan dari HJB equation langsung dengan substitusi Vx= ψ.
 
-#### `S TEP 1` Mulai dari HJB
+#### `Step 1` Mulai dari HJB
 
 −Vt= kmax{h + Vxf}
 
-#### `S TEP 2` Substitusi Vx= ψ sepanjang optimal path
+#### `Step 2` Substitusi Vx= ψ sepanjang optimal path
 
 −Vt= kmax{h + ψf} = kmax H
 
-#### `S TEP 3` Pada u∗ (maximizer)
+#### `Step 3` Pada u∗ (maximizer)
 
 $$
 H^{*}(t):=H(t,x^{*},u^{*},\psi)=-V_{t}\qquad(11.18)
@@ -594,17 +574,17 @@ Persamaan (11.19): $$
 \dot{H}^{*}=H_{t}\qquad(11.19)
 $$. Diturunkan dari (11.18) + (11.13).
 
-#### `S TEP 1` Turunkan (11.18) terhadap t
+#### `Step 1` Turunkan (11.18) terhadap t
 
 $\dot{H}^{*}=-\dot{V}_{t}$
 
-#### `S TEP 2` Pakai (11.13) untuk solve V ˙t
+#### `Step 2` Pakai (11.13) untuk solve V ˙t
 
 $\dot{V}_{t}=-h_{t}-V_{x}f_{t}$
 
-#### `S TEP 3` Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$
+#### `Step 3` Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$
 
-#### `S TEP 4` Kenali sebagai Ht (turunan parsial Hamiltonian)
+#### `Step 4` Kenali sebagai Ht (turunan parsial Hamiltonian)
 
 Ḣ∗= Ht
 
@@ -626,7 +606,7 @@ Ḣ∗= Ht
 
 ### Adjoint sebagai shadow price
 
-**Hasilkunci**
+**Hasil Kunci**
 
 ψ(t) = nilai marginal punya satu unit state ekstra pada waktu t.
 
@@ -654,11 +634,9 @@ Inilah Hamiltonian system — workhorse ekonomi makro dinamis.
 
 ODE jauh lebih mudah dari PDE. Inilah keuntungan PMP.
 
-**Konsep7**
+## Konsep 7 — Section 11.6 — Duality dan Mangasarian Sufficiency
 
-## Section 11.6 — Duality dan Mangasarian Sufficiency
-
-### Hubungan PMP ↔ HJB sebagai analogi Welfare Theorems.
+*Hubungan PMP ↔ HJB sebagai analogi Welfare Theorems.*
 
 ### Walrasian Pricing Mechanism
 
@@ -731,7 +709,7 @@ dengan harga yang tepat
 
 ### Mangasarian Sufficiency Theorem
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Statement: Jika H(t, x, u, ψ)concave dalam (x, u), dan PMP
 
@@ -750,11 +728,9 @@ Implikasi praktis: kalau h dan f concave dalam (x, u), H otomatis concave. Maka 
 
 Pesan filosofis: equilibrium pasar tidak otomatis optimal. Convexity adalah jembatan. Kalau convexity gagal, intervensi kebijakan bisa improve welfare.
 
-**Konsep8**
+## Konsep 8 — Section 11.7 — Infinite Horizon
 
-## Section 11.7 — Infinite Horizon
-
-### Generalisasi ke T→∞. Pondasi untuk RCK dan endogenous growth.
+*Generalisasi ke T→∞. Pondasi untuk RCK dan endogenous growth.*
 
 ### Mengapa infinite horizon
 
@@ -798,13 +774,13 @@ Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t —
 
 Pertanyaan yang sering muncul: "darimana (11.25) diturunkan?"
 
-#### `S TEP 1` Mulai dari HJB finite (11.8) dengan discount
+#### `Step 1` Mulai dari HJB finite (11.8) dengan discount
 
 $$
 -V_{t}=\max_{u}\bigl\{e^{-rt}h+V_{x}f\bigr\}
 $$
 
-#### `S TEP 2` Konversi ke current-value
+#### `Step 2` Konversi ke current-value
 
 Definisikan $\tilde{V}:=e^{rt}V$. Maka:
 
@@ -812,17 +788,17 @@ $$
 V_{t}=e^{-rt}\bigl(-r\tilde{V}+\tilde{V}_{t}\bigr),\qquad V_{x}=e^{-rt}\tilde{V}_{x}
 $$
 
-#### `S TEP 3` Substitusi dan bagi dengan e−rt
+#### `Step 3` Substitusi dan bagi dengan e−rt
 
 $$
 r\tilde{V}-\tilde{V}_{t}=\max_{u}\bigl\{h+\tilde{V}_{x}f\bigr\}
 $$
 
-#### `S TEP 4` Ambil limit T→∞ → V ~ time-invariant
+#### `Step 4` Ambil limit T→∞ → V ~ time-invariant
 
 $\tilde{V}_{t}=0$
 
-#### `S TEP 5` Drop tilda → persamaan (11.25)
+#### `Step 5` Drop tilda → persamaan (11.25)
 
 $$
 rV(x)=\max_{u}\bigl\{h(x,u)+V_{x}f(x,u)\bigr\}\qquad(11.25)
@@ -908,11 +884,9 @@ Untuk RCK (Bab 12), TVC standar: $\lim_{t\to\infty}e^{-\rho t}\hat{\psi}(t)\,k(t
 
 dengan ψ^ current-value adjoint.
 
-**Konsep9**
+## Konsep 9 — Exercise 11.1 — Linear Quadratic Regulator
 
-## Exercise 11.1 — Linear Quadratic Regulator
-
-### Contoh closed-form OCP. State dynamics linear, payoff quadratic.
+*Contoh closed-form OCP. State dynamics linear, payoff quadratic.*
 
 ### Setup
 
@@ -965,7 +939,7 @@ Substitusi Vx= −2Qx:
 
 −2Sy −2Q(t)βx = 0 ⇒y∗= −SβQ(t)x
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Optimal control linear dalam state: u∗= −K(t)x dengan gain
 
@@ -996,25 +970,25 @@ Bagian ini paling sering membuat macet. Triknya:
 
 Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.
 
-#### `S TEP 1` Substitusi Q = Z/Y
+#### `Step 1` Substitusi Q = Z/Y
 
 Q̇ = Y Ż −Y 2ZY ˙
 
-#### `S TEP 2` Substitusi ke Riccati
+#### `Step 2` Substitusi ke Riccati
 
 Y Ż −Y 2ZY ˙ + 2a ⋅Y Z + b ⋅Y 2Z2= −R
 
-#### `S TEP 3` Kalikan dengan Y
+#### `Step 3` Kalikan dengan Y
 
 Ż −Y ZY ˙ + 2aZ + Y bZ2= −RY
 
-#### `S TEP 4` Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms
+#### `Step 4` Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms
 
 Suku −Y ZY ˙ + Y bZ2= −aZ −Y bZ2 + Y bZ2= −aZ — nonlinear terms
 
 hilang!
 
-#### `S TEP 5` Sisa sistem linear
+#### `Step 5` Sisa sistem linear
 
 Y ˙ = aY+ bZŻ = −RY−aZ
 
@@ -1074,7 +1048,7 @@ Gain K= (b/r)P⋅.
 
 `PERSISTENT)`
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Insight kunci: bukan P yang menentukan magnitude control, tapi gain K= (b/r)P.
 
@@ -1091,11 +1065,9 @@ LQR adalah workhorse macroeconomic policy:
 - Linear-quadratic approximation di DSGE
 - RCK lokal (linearisasi sekitar steady state)
 
-**Konsep10**
+## Konsep 10 — Exercise 11.3 — Finite-Horizon Ramsey
 
-## Exercise 11.3 — Finite-Horizon Ramsey
-
-### Bridge ke Bab 12. Latihan paling penting di Bab 11.
+*Bridge ke Bab 12. Latihan paling penting di Bab 11.*
 
 ### Setup
 
@@ -1139,7 +1111,7 @@ Turunkan kanan terhadap c:
 
 hc(c) −Vk= 0 ⇒hc(c) = Vk
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Marginal utility consumption = marginal value of capital.
 
@@ -1149,41 +1121,41 @@ Marginal utility consumption = marginal value of capital.
 
 Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 
-#### `S TEP 1` Turunkan HJB-R terhadap k
+#### `Step 1` Turunkan HJB-R terhadap k
 
 ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]
 
-`S TEP 2` Pakai Envelope Theorem — suku ∂G/∂c ⋅dc∗/dk= 0 karena FOC.
+`Step 2` Pakai Envelope Theorem — suku ∂G/∂c ⋅dc∗/dk= 0 karena FOC.
 
 ρVk−Vtk= Vkk[φ(k) −dk −c] + Vk[φ′(k) −d]
 
-#### `S TEP 3` Pakai chain rule untuk V ˙k
+#### `Step 3` Pakai chain rule untuk V ˙k
 
 V ˙k= Vtk+ Vkk⋅k̇ = Vtk+ Vkk[φ(k) −dk −c]
 
-#### `S TEP 4` Substitusi
+#### `Step 4` Substitusi
 
 ρVk= V ˙k+ Vk[φ′(k) −d]
 
-#### `S TEP 5` Solve untuk V ˙k — envelope condition
+#### `Step 5` Solve untuk V ˙k — envelope condition
 
 V ˙k= −Vk[φ′(k) −d −ρ]
 
 ### Euler equation
 
-#### `S TEP 1` Turunkan FOC terhadap t
+#### `Step 1` Turunkan FOC terhadap t
 
 hcc(c)ċ = V ˙k
 
-#### `S TEP 2` Substitusi envelope condition
+#### `Step 2` Substitusi envelope condition
 
 hcc(c)ċ = −Vk[φ′(k) −d −ρ]
 
-#### `S TEP 3` Substitusi Vk= hc
+#### `Step 3` Substitusi Vk= hc
 
 hcc(c)ċ = −hc[φ′(k) −d −ρ]
 
-#### `S TEP 4` Bagi dengan hc ⋅c dan rearrange
+#### `Step 4` Bagi dengan hc ⋅c dan rearrange
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
@@ -1204,21 +1176,21 @@ H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]
 
 ### From PMP to Euler equation
 
-#### `S TEP 1` Turunkan Maximality terhadap t
+#### `Step 1` Turunkan Maximality terhadap t
 
 ψ˙ = e−ρt[−ρhc(c) + hcc(c)ċ]
 
-#### `S TEP 2` Bagi dengan ψ= e−ρthc(c)
+#### `Step 2` Bagi dengan ψ= e−ρthc(c)
 
 ψψ˙ = −ρ + hc(c)hcc(c)ċ
 
-#### `S TEP 3` Dari Adjoint: ψ˙/ψ= −[φ′(k) −d]
+#### `Step 3` Dari Adjoint: ψ˙/ψ= −[φ′(k) −d]
 
-#### `S TEP 4` Set kedua sama
+#### `Step 4` Set kedua sama
 
 −[φ′(k) −d] = −ρ + hc(c)hcc(c)ċ
 
-#### `S TEP 5` Solve untuk ċ/c — sama dengan HJB approach
+#### `Step 5` Solve untuk ċ/c — sama dengan HJB approach
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
@@ -1236,7 +1208,7 @@ Inilah mengapa di Exercise 11.3, kedua approach (HJB dan PMP) memberi Euler equa
 
 Pertanyaan yang sering muncul: "mengapa untuk envelope condition di PMP, persamaan ψ= e−ρth′ didiferensiasikan dengan t?"
 
-Pakai envelope condition: turunkan HJB-R `HJB APPROACH` terhadap k. Envelope Theorem cancel suku dc∗/ dk.
+**HJB APPROACH** — Pakai envelope condition: turunkan HJB-R terhadap k. Envelope Theorem cancel suku dc∗/ dk.
 
 Pakai turunan FOC terhadap t + adjoint
 
@@ -1318,7 +1290,7 @@ Inilah persamaan kunci RCK. Bab 12 akan analisis lengkap dengan phase plane.
 
 ## Self-Assessment Bab 11
 
-### Cek pemahaman.
+*Cek pemahaman.*
 
 ### Konsep dasar
 

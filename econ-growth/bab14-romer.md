@@ -6,11 +6,9 @@ Bab 14 membuka kotak hitam teknologi: pertumbuhan tidak lagi eksogen, melainkan 
 Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berkas sumber tidak menyimpan lapisan teks untuk formula-formulanya. Persamaan kunci telah dipulihkan; beberapa detail turunan disajikan secara naratif.
 ```
 
-**Konsep1**
+## Konsep 1 — Tiga Insight Romer (Nobel 2018)
 
-## Tiga Insight Romer (Nobel 2018)
-
-### Fondasi filosofis mengapa firm menghasilkan ide baru.
+*Fondasi filosofis mengapa firm menghasilkan ide baru.*
 
 Ide non-rival (dipakai berkali-kali tanpa `1. NON-RIVAL` berkurang), tapi partially excludable (paten) — beda dari public good murni.
 
@@ -40,11 +38,9 @@ Quality ladder — produk lebih baik.
 
 Schumpeterian.
 
-**Konsep2**
+## Konsep 2 — Lima Micro Building Blocks
 
-## Lima Micro Building Blocks
-
-### Mikroekonomi inovasi — fondasi sebelum model GE.
+*Mikroekonomi inovasi — fondasi sebelum model GE.*
 
 ### BB1 — Markup Pricing
 
@@ -56,11 +52,11 @@ Benar! Markup negatif = situasi tidak valid. Monopoli tidak pernah beroperasi di
 
 ### Hubungan MR-elasticity
 
-#### `STEP 1` MR dari TR = pq (product rule)
+#### `Step 1` MR dari TR = pq (product rule)
 
-#### `STEP 2` Substitusi elasticity
+#### `Step 2` Substitusi elasticity
 
-#### `STEP 3` Set MR = MC → markup
+#### `Step 3` Set MR = MC → markup
 
 Lerner index. CES: selalu → markup valid.
 
@@ -92,7 +88,7 @@ adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at M
 
 Incumbent kurang incentive (kanibal profit lama). Inovasi cenderung dari entrant.
 
-**Catatannuansa**
+**Catatan Nuansa**
 
 Romer (Bab 14) TIDAK punya replacement effect — varietas baru tidak gantikan lama (horizontal). Baru relevan Bab 15 (vertical/ quality ladder).
 
@@ -106,11 +102,9 @@ Bisa over-investment: entrant ignore loss incumbent (profit transfer bukan nilai
 
 Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- investment.
 
-**Konsep3**
+## Konsep 3 — Struktur Lab Equipment Model
 
-## Struktur Lab Equipment Model
-
-### Tiga lapis: household, final good, intermediate. Tanpa modal fisik.
+*Tiga lapis: household, final good, intermediate. Tanpa modal fisik.*
 
 ### Tiga lapis (contoh HP)
 
@@ -144,11 +138,11 @@ Untuk isolasi efek R&D. Growth murni dari penambahan varietas, bukan akumulasi m
 
 Final good serbaguna (numeraire): konsumsi, input intermediate, input R&D (lab equipment).
 
-`1 4. 3. 1. 1`
+`14.3.1.1`
 
 ## Representative Household
 
-### OCP identik dengan RCK — Euler equation sama.
+*OCP identik dengan RCK — Euler equation sama.*
 
 ### Portfolio dan OCP
 
@@ -160,11 +154,11 @@ Pengingat: CRRA punya Arrow-Pratt konstan (dipakai agar BGP exist). Stochastic =
 
 ### Exercise 14.1-14.2 — Hamiltonian & Euler
 
-`STEP 1` Maximality:
+`Step 1` Maximality:
 
-#### `STEP 2` Log + turunkan, substitusi adjoint
+#### `Step 2` Log + turunkan, substitusi adjoint
 
-#### `STEP 3` Euler (14.3)
+#### `Step 3` Euler (14.3)
 
 **💡 Insight**
 
@@ -172,11 +166,11 @@ Pertanyaan yang sering muncul: bagaimana membuktikan TVC (14.2) terpenuhi?
 
 TVC bukan diturunkan dari nol — ia necessary condition PMP infinite- horizon. Dari adjoint, substitusi ke TVC umum → (14.2). Di BGP: integrand jika.
 
-`1 4. 3. 1. 2`
+`14.3.1.2`
 
 ## Final Good Firm
 
-### Kompetitif, dua tahap (two-stage budgeting).
+*Kompetitif, dua tahap (two-stage budgeting).*
 
 ### Production & CES basket
 
@@ -188,21 +182,21 @@ CES = Constant Elasticity of Substitution,. Dipakai untuk love-of- variety + mar
 
 ### Exercise 14.3 — FOC (income shares)
 
-#### `STEP 1` FOC terhadap M
+#### `Step 1` FOC terhadap M
 
-#### `STEP 2` FOC terhadap L
+#### `Step 2` FOC terhadap L
 
 Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero profit (kompetitif). Itulah mengapa household tidak own final good firm.
 
 ### Exercise 14.4 — Demand curve & price index
 
-`STEP 1` Lagrangian cost min, multiplier = shadow price (= cost marginal
+`Step 1` Lagrangian cost min, multiplier = shadow price (= cost marginal
 
-#### basket) `STEP 2` FOC + chain rule lewat
+#### basket) `Step 2` FOC + chain rule lewat
 
-#### `STEP 3` Demand curve (14.10)
+#### `Step 3` Demand curve (14.10)
 
-#### `STEP 4` Price index (14.11), substitusi demand ke
+#### `Step 4` Price index (14.11), substitusi demand ke
 
 Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
@@ -210,7 +204,7 @@ Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 ## Menurunkan Terhadap Integral
 
-### Tiga situasi penting di Bab 14. Functional `A — ELEMEN` derivative — seperti penjumlahan, hanya titik relevan. (Exercise 14.4); batas bawah. (HJB
+*Tiga situasi penting di Bab 14. Functional `A — ELEMEN` derivative — seperti penjumlahan, hanya titik relevan. (Exercise 14.4); batas bawah. (HJB*
 
 `B — BATAS`
 
@@ -220,17 +214,17 @@ Exercise 14.7). Turunan masuk integral.
 
 (HJB faktor diskon)
 
-`1 4. 3. 1. 3`
+`14.3.1.3`
 
 ## Intermediate Goods Firms
 
-### Monopoli per varietas. Markup pricing.
+*Monopoli per varietas. Markup pricing.*
 
 ### Exercise 14.5 — Markup pricing
 
-#### `STEP 1` Profit, substitusi demand
+#### `Step 1` Profit, substitusi demand
 
-#### `STEP 2` FOC terhadap $x_{j}$, solve harga optimal
+#### `Step 2` FOC terhadap $x_{j}$, solve harga optimal
 
 Markup konstan dari elastisitas CES: $p=\dfrac{1}{\alpha}$ — markup $1/\alpha$ di atas $MC=1$.
 
@@ -246,17 +240,17 @@ Jebakan umum: tertukar antara CV (current value) dan PV (present value).
 
 Firm value = present value aliran profit, didiskon dengan market rate (bukan subjective). Tidak ada Hamiltonian/adjoint/CV-PV untuk firm — masalahnya statis. HJB (14.16) adalah asset pricing (no-arbitrage), bukan HJB optimal control. CV/PV Hamiltonian hanya untuk household (OCP dinamis dengan).
 
-#### `STEP 1`, turunkan terhadap `STEP 2` Batas bawah (B) →; faktor diskon (C) →
+#### `Step 1`, turunkan terhadap `Step 2` Batas bawah (B) →; faktor diskon (C) →
 
-#### `STEP 3` HJB (14.16)
+#### `Step 3` HJB (14.16)
 
 Asset pricing: required return = dividend + capital gain.
 
-`1 4. 3. 1. 4 - 5`
+`14.3.1.4-5`
 
 ## R&D Investment & Free Entry
 
-### Mesin pertumbuhan — bagaimana N ditentukan.
+*Mesin pertumbuhan — bagaimana N ditentukan.*
 
 ### R&D investment
 
@@ -274,7 +268,7 @@ konstan, inversely proportional.
 
 Free entry memaksa private value. Tapi social value lebih tinggi (appropriability) → entry kurang dari optimal (extensive margin).
 
-`1 4. 3. 1. 6`
+`14.3.1.6`
 
 ## Competitive Equilibrium
 
@@ -300,7 +294,7 @@ Pemahaman yang tepat: bukan "satu vs semua varietas", tapi given (firm) vs endog
 
 Private CRS: firm individual, given, CRS dalam — gandakan input firm → output ×2. Aggregate IRS: ekonomi, endogen, IRS dalam — gandakan keduanya → output ×4. Sumber IRS: non-rival, dimanfaatkan semua firm.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 "AN" bukan "AK": linearitas adalah hasil equilibrium (CRS privat + IRS agregat dari non-rival ideas), bukan asumsi primitif seperti AK. Aggregate IRS → convexity gagal → First Welfare gagal.
 
@@ -310,23 +304,23 @@ Private CRS: firm individual, given, CRS dalam — gandakan input firm → outpu
 
 Kritik tajam: pertanyaan yang tepat adalah "mengapa marginal product tidak menuju nol", dan analisis kurvanya saat $A$ tumbuh harus dituntaskan.
 
-`STEP 1`
+`Step 1`
 
 Tiap varietas proporsi lebih kecil saat naik. TAPI tetap — naik via varietas baru, bukan menumpuk lama.
 
-#### `STEP 2` Marginal product: downward-sloping
+#### `Step 2` Marginal product: downward-sloping
 
 Untuk fixed. Kurva fungsi saja (tidak bergeser).
 
-#### `STEP 3` turun saat naik
+#### `Step 3` turun saat naik
 
 Marginal product dan turun dengan rate sama → FOC selalu match.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru), bukan menumpuk varietas lama. Analogi: tambah jenis bumbu baru, bukan menumpuk garam. Net: naik linear → sustained growth. Variety expansion mengalahkan diminishing returns.
 
-`1 4. 3. 1. 7`
+`14.3.1.7`
 
 ## Balanced-Growth Path
 
@@ -334,9 +328,9 @@ Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru)
 
 ### Exercise 14.11 — Interest rate
 
-#### `STEP 1` Free entry (konstan →), profit
+#### `Step 1` Free entry (konstan →), profit
 
-#### `STEP 2` Substitusi ke HJB
+#### `Step 2` Substitusi ke HJB
 
 Interest rate konstan → growth konstan dari awal → no transition dynamics.
 
@@ -344,11 +338,11 @@ Interest rate konstan → growth konstan dari awal → no transition dynamics.
 
 Sistem partially-coupled: independen; tergantung.
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Hasil kuncinya: kebijakan berbentuk *state feedback linear*, dan semua variabel utama tumbuh dengan rate yang sama:
 
-**Jebakanumum**
+**Jebakan Umum**
 
 Detail koefisien bergantung pada normalisasi spesifik yang dipakai; yang pasti benar adalah bentuk umum di atas.
 
@@ -358,7 +352,7 @@ Growth butuh. Jika: no entry, konstan, living standard stagnan:
 
 Threshold. Policy bisa picu growth (naikkan, jaga).
 
-`1 4. 3. 1. 8`
+`14.3.1.8`
 
 ## Model Implications
 
@@ -370,7 +364,7 @@ tergantung. Negara besar tumbuh cepat (pasar besar → profit besar → R&D bany
 
 ### Exercise 14.15 — Didukung data?
 
-**Hasilkunci**
+**Hasil Kunci**
 
 Strong scale effect TIDAK didukung data: negara kecil (Singapura, HK, Korea) tumbuh cepat; growth dunia tidak accelerating dengan populasi. Semi-endogenous (Jones 1995) mengaitkan growth ke population growth, bukan level — lebih realistis. Yang relevan mungkin ukuran pasar terintegrasi, bukan populasi mentah.
 
@@ -378,7 +372,7 @@ Strong scale effect TIDAK didukung data: negara kecil (Singapura, HK, Korea) tum
 
 konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empiris (kelemahan AK-style).
 
-`1 4. 3. 1. 9 - 1 0`
+`14.3.1.9-10`
 
 ## Planner & Policy
 
@@ -418,11 +412,11 @@ optimal
 
 Satu instrumen tidak cukup — butuh keduanya (prinsip Tinbergen).
 
-`1 4. 3. 2`
+`14.3.2`
 
 ## Knowledge Spillovers (Romer 1990)
 
-### Ide diproduksi dengan human capital langka.
+*Ide diproduksi dengan human capital langka.*
 
 `LAB EQUIPMENT` R&D pakai final good (reproducible):
 
@@ -432,7 +426,7 @@ R&D pakai human capital langka + spillover:
 
 Spillover eksplisit (di RHS): stok ide membuat R&D lebih produktif ("standing on shoulders"). Trade-off alokasi. Scale effect tetap ada. Kesamaan: horizontal, monopoli, First Welfare gagal, appropriability.
 
-**Catatannuansa**
+**Catatan Nuansa**
 
 Catatan untuk 14.3.2 memang ringkas — porsi utama bab ini adalah model Lab Equipment (dibahas lengkap enam belas exercise).
 
@@ -440,7 +434,7 @@ Catatan untuk 14.3.2 memang ringkas — porsi utama bab ini adalah model Lab Equ
 
 ## Perbandingan BGP: Solow, RCK, Endogenous
 
-### Evolusi pemikiran growth.
+*Evolusi pemikiran growth.*
 
 Growth eksogen, saving konstan, ada transition
 
@@ -468,7 +462,7 @@ Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, g
 
 ## Self-Assessment Bab 14
 
-### Cek pemahaman.
+*Cek pemahaman.*
 
 ### Building blocks
 
