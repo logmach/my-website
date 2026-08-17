@@ -5,3 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: about
+- url: https://logmach.github.io/my-website/nol-ke-805.html
+  title: "🎯 Belajar GMAT"
