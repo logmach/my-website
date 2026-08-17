@@ -10,7 +10,7 @@ Bab ini memformalkan dua konsep yang menjadi bahasa sehari-hari seluruh teori pe
 
 Steady state (atau equilibrium) untuk ODE autonomous $\dot{x}=G(x)$ adalah titik yang memenuhi: $\bar{x}$
 
-$$ 0 = G()\bar{x} $$
+$$ 0 = G(\bar{x}) $$
 
 Yaitu, titik di mana sistem tidak berubah: sekali berada di $\bar{x}$, sistem tinggal di sana selamanya.
 
@@ -74,7 +74,7 @@ Definisi 5.5 (Unstable):
 
 Bukan stable. Yaitu: untuk kecil apapun, ada $\delta x_{0}$ di dalam lingkaran yang lintasannya keluar dari lingkaran $\delta \varepsilon$ apapun.
 
-Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari. $\bar{x}$
+Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari $\bar{x}$.
 ```
 ```{admonition} Hasil kunci — hierarki yang ketat
 :class: important
@@ -159,7 +159,7 @@ Pertanyaan yang sering muncul: "Apakah $b$ matriks $k \times 1$?"
 
 Ya, $b$ adalah vektor kolom $k \times 1$. Perannya: Menentukan lokasi steady state: $\bar{x}=-A^{-1}b$ Tidak mempengaruhi stabilitas — stabilitas hanya tergantung eigenvalues $A$
 
-Kalau $b= 0$, steady state di origin. Kalau $b=0$, steady state pindah, tapi sifat stabilitasnya sama.
+Kalau $b= 0$, steady state di origin. Kalau $b= \ne 0$, steady state pindah, tapi sifat stabilitasnya sama.
 
 ## Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi
 
@@ -171,14 +171,14 @@ Pertanyaan yang sering muncul: "Apakah nonlinear berarti pangkat ≠ 1?"
 
 Tidak cukup spesifik. Nonlinear berarti apa saja yang bukan bentuk $Ax + b$:
 
-Pangkat ≠ 1: $x^{2}$, $xx^{\alpha }$, Fungsi transendental: $e^{x}ln(x)sin(x)$,, Perkalian variabel: $xy$, $x_{1}x_{2}$ Kombinasi yang di atas
+Pangkat ≠ 1: $x^{2}$, $x^{\alpha}$. Fungsi transendental: $e^{x}$, $\ln x$, $\sin x$. Perkalian variabel: $xy$, $x_{1}x_{2}$ Kombinasi yang di atas
 
 ```{admonition} Koneksi
 :class: important
 
 **Hampir semua fungsi di growth theory adalah nonlinear**
 
-*Cobb-Douglas $f(k)= k^{\alpha }$ — nonlinear (pangkat $\alpha =1$) CRRA $u(c)= c^{1-\sigma }/(1 -\sigma)$ — nonlinear Solow-Swan ODE $\dot{k}=sk-^{\alpha }(n + \delta)k$ — nonlinear karena $k^{\alpha }$*
+*Cobb-Douglas $f(k)= k^{\alpha }$ — nonlinear (pangkat $\alpha = \ne 1$) CRRA $u(c)= c^{1-\sigma }/(1 -\sigma)$ — nonlinear Solow-Swan ODE $\dot{k}=sk-^{\alpha }(n + \delta)k$ — nonlinear karena $k^{\alpha }$*
 ```
 ### Itulah mengapa Teorema 5.2 yang paling sering dipakai
 
@@ -193,11 +193,11 @@ $$
 ```{admonition} Hasil kunci
 :class: important
 
-*Jika semua eigenvalue $J()\bar{x}$ memiliki real part negatif, maka adalah locally $\bar{x}$ asymptotically stable.*
+*Jika semua eigenvalue $J(\bar{x})$ memiliki real part negatif, maka $\bar{x}$ locally asymptotically stable.*
 ```
 ## Idenya: linearisasi
 
-Dekat, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $\bar{x}J()\bar{x}$.
+Dekat $\bar{x}$, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $J(\bar{x})$.
 
 Generalisasi Taylor expansion (di 1D):
 
@@ -205,14 +205,14 @@ $$
 G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
 $$
 
-Untuk multivariate, $G ()^{'}\bar{x}$ digantikan oleh matriks Jacobian.
+Untuk multivariate, $G'(\bar{x})$ digantikan oleh matriks Jacobian.
 
 ```{admonition} 💡 Insight
 :class: tip
 
 Analogi yang pas: "dalam optimisasi kita lihat SOC". Sangat tepat. Pola yang sama:
 
-Optimisasi: FOC ($∇f= 0$) → Hessian negative definite (max) Stabilitas: $G() =\bar{x}0$ → Jacobian eigenvalues negative real part (stable)
+Optimisasi: FOC ($∇f= 0$) → Hessian negative definite (max) Stabilitas: $G(\bar{x})=0$ → Jacobian eigenvalues negative real part (stable)
 
 Di multi-dimensi, "tanda turunan kedua" digantikan oleh "eigenvalues matriks turunan". Hessian untuk optimisasi, Jacobian untuk dinamika.
 ```
@@ -233,15 +233,15 @@ Teorema 5.2 (nonlinear via linearisasi): local asymptotic stable
 
 *Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue real part*
 
-$=0$), maka dinamika nonlinear di sekitar secara topologis equivalen dengan dinamika $\bar{x}$
+$= \ne 0$), maka dinamika nonlinear di sekitar $\bar{x}$ secara topologis ekuivalen dengan dinamika linearisasinya.
 
-*linearisasinya. Yaitu, dekat, sistem nonlinear "kelihatan seperti" $\bar{x}\dot{y} =J()y\bar{x}$. Inilah justifikasi Teorema 5.2.*
+*Yaitu, dekat $\bar{x}$, sistem nonlinear "kelihatan seperti" $\dot{y}=J(\bar{x})\,y$. Inilah justifikasi Teorema 5.2.*
 
 *Untuk steady state non-hyperbolic (ada eigenvalue real part = 0), linearisasi tidak konklusif — butuh metode lain.*
 ```
 ## Konsep 6 — Aturan 1D dan Generalisasi ke Multi-D
 
-### Loncatan logis yang wajar dipertanyakan: kenapa di 1D
+*Loncatan logis yang wajar dipertanyakan: kenapa di 1D cukup melihat tanda $G'(\bar{x})$?*
 
 ## 1D sebagai kasus khusus dari Teorema 5.2
 
@@ -249,21 +249,20 @@ Untuk ODE skalar $\dot{x}=G(x)$ (yaitu $k = 1$):
 
 1. Jacobian 1D: matriks $1 \times 1$ dengan satu entri:
 
-$$ J() =\bar{x}(\partial x\partial G\bar{x})()=(G ())^{'}\bar{x} $$
+$$ J(\bar{x}) = \left(\frac{\partial G}{\partial x}(\bar{x})\right) = \big(G'(\bar{x})\big) $$
 
 2. Eigenvalue matriks $1 \times 1$: entri matriks itu sendiri:
 
 $$ det((a) -\lambda) = a -\lambda = 0⟹\lambda = a $$
 
-Maka eigenvalue Jacobian 1D = $G ()^{'}\bar{x}$.
+Maka eigenvalue Jacobian 1D = $G'(\bar{x})$.
 
-3. Aturan stabilitas Teorema 5.2: semua eigenvalue real part negatif. Di 1D, hanya ada satu eigenvalue: $G ()^{'}\bar{x}$.
+3. Aturan stabilitas Teorema 5.2: semua eigenvalue real part negatif. Di 1D, hanya ada satu eigenvalue: $G'(\bar{x})$.
 
-**Hasil Kunci**
-
-### Aturan praktis 1D:
-
-*$G ()<^{'}\bar{x}0$ → stable (asymptotic stable) $G ()>^{'}\bar{x}0$ → unstable $G ()=^{'}\bar{x}0$ → tidak konklusif dari linearisasi*
+```{admonition} Hasil kunci — aturan praktis 1D
+:class: important
+$G'(\bar{x})<0$ → stable (asymptotic) · $G'(\bar{x})>0$ → unstable · $G'(\bar{x})=0$ → tidak konklusif dari linearisasi.
+```
 
 ## Kasus borderline
 
@@ -275,25 +274,25 @@ $G (0) =^{'}0$ — kasus borderline!
 
 Linearisasi tidak konklusif. Tapi analisis sign langsung menunjukkan $\bar{x}=0$ stable:
 
-$x > 0$: $\dot{x}=-x<^{3}0$ → turun $x$ $x < 0$: $\dot{x}=-x>^{3}0$ → naik $x$ Dari kedua sisi mengarah ke 0 → stable. Tapi konvergensi lambat (polynomial, bukan eksponensial) karena $G () =^{'}\bar{x}$ $0$.
+$x>0$: $\dot{x}=-x^{3}<0$ → $x$ turun. $x<0$: $\dot{x}=-x^{3}>0$ → $x$ naik. Dari kedua sisi mengarah ke 0 → stable. Tapi konvergensi lambat (polynomial, bukan eksponensial) karena $G'(\bar{x})=0$.
 
 **Jebakan Umum**
 
 Jebakan umum: menulis "$G'(\bar{x}) = -3x^{2} < 0$ untuk semua $x$" — padahal di steady state $\bar{x}=0$ nilainya $G'(0)=0$, bukan negatif.
 
-Pelajaran: selalu evaluasi $G^{'}$ tepat di, bukan generalisasi untuk semua. Linearisasi mantra (" $\bar{x}xG<^{'}0$ → stable") berlaku kalau $G () =^{'}\bar{x}0$ — kalau $= 0$, butuh analisis lain.
+Pelajaran: selalu evaluasi $G'$ tepat di $\bar{x}$, bukan generalisasi untuk semua $x$. Linearisasi mantra ("$G'(\bar{x})<0$ → stable") berlaku kalau $G'(\bar{x}) \ne 0$ — kalau $= 0$, butuh analisis lain.
 
 ## Generalisasi ke multi-D
 
 Pola yang sama, tapi lebih kaya:
 
-**Semua** — $RE(\Lambda)<_{I}0$ Stable node/spiral. Lintasan konvergen ke dari semua arah lokal. $\bar{x}$
+**Semua $\mathrm{Re}(\lambda_{i})<0$** — Stable node/spiral: lintasan konvergen ke $\bar{x}$ dari semua arah lokal.
 
-**Semua** — $RE(\Lambda)>_{I}0$ Unstable node/spiral. Lintasan menjauh dari di semua arah. $\bar{x}$
+**Semua $\mathrm{Re}(\lambda_{i})>0$** — Unstable node/spiral: lintasan menjauh dari $\bar{x}$ di semua arah.
 
-**CAMPURAN TANDA** — Saddle point. Stable di arah eigenvector dengan eigenvalue negatif, unstable di arah eigenvector dengan eigenvalue positif. Fenomena multi-D yang tidak ada di 1D.
+**Tanda campuran** — Saddle point: stable di arah eigenvector ber-eigenvalue negatif, unstable di arah ber-eigenvalue positif.
 
-**Ada** — $RE(\Lambda _{I})=0$ Non-hyperbolic. Linearisasi tidak konklusif — butuh analisis lain.
+**Ada $\mathrm{Re}(\lambda_{i})=0$** — Non-hyperbolic: linearisasi tidak konklusif — butuh analisis lain.
 
 ## Konsep 7 — Aplikasi Langsung — Solow-Swan
 
@@ -309,31 +308,27 @@ $$ \dot{k}=G(k) = sk-^{\alpha }(n + g + \delta)k $$
 
 **Step 1** Cari steady state.
 
-Solve $G() =\bar{k}0$:
+Solve $G(\bar{k})=0$:
 
 $$
 s\bar{k}^{\alpha}=(n+g+\delta)\bar{k} \quad\Longrightarrow\quad s\bar{k}^{\alpha-1}=n+g+\delta
 $$
 
-$s$
+**Step 2** Hitung $G'(k)$.
 
-**Step 2** Hitung $G (k)^{'}$.
+$$ G'(k) = \alpha s k^{\alpha-1} - (n+g+\delta) $$
 
-$$ G (k) =^{'}\alpha sk^{\alpha-1}-(n + g + \delta) $$
-
-#### **Step 3** Substitusi cerdas di. $\bar{k}$
+#### **Step 3** Substitusi cerdas di $\bar{k}$
 
 Daripada substitusi langsung (ekspresi rumit), gunakan $s\bar{k}^{\alpha-1}=n+g+\delta$ dari persamaan steady state:
 
-$$ G () ='\bar{k}\alpha s \cdot n + g + \delta -(n + g + \delta) = \alpha (n + g + \delta) -(n + g + \delta) $$
-
-$s$
+$$ G'(\bar{k}) = \alpha\, s\bar{k}^{\alpha-1} - (n+g+\delta) = \alpha(n+g+\delta) - (n+g+\delta) $$
 
 **Step 4** Faktorkan.
 
-$$ G () = (\alpha -1)(n + g + \delta)^{'}\bar{k} $$
+$$ G'(\bar{k}) = (\alpha-1)(n+g+\delta) $$
 
-**Step 5** Analisis tanda. $\alpha < 1$ (Cobb-Douglas standar) → $\alpha -1 < 0$ $(n + g + \delta) > 0$ (parameter ekonomi positif) Produk: negatif → $G () <^{'}\bar{k}0$ → stable
+**Step 5** Analisis tanda. $\alpha < 1$ (Cobb-Douglas standar) → $\alpha -1 < 0$ $(n + g + \delta) > 0$ (parameter ekonomi positif) Produk: negatif → $G'(\bar{k})<0$ → stable
 
 ## Insight ekonomi
 
@@ -341,7 +336,7 @@ $$ G () = (\alpha -1)(n + g + \delta)^{'}\bar{k} $$
 
 ### Mengapa Solow-Swan selalu stable?
 
-*Karena diminishing returns ($\alpha < 1$). Inilah satu-satunya asumsi yang membuat $G ()<^{'}\bar{k}0$. Tanpa diminishing returns, model tidak konvergen.*
+*Karena diminishing returns ($\alpha < 1$). Inilah satu-satunya asumsi yang membuat $G'(\bar{k})<0$. Tanpa diminishing returns, model tidak konvergen.*
 
 ## Kontras dengan AK Model
 
@@ -356,9 +351,7 @@ $G (k) =^{'}sA -(n + g + \delta)$ — konstan, tidak tergantung $k$ Kalau $sA> (
 
 *Inilah mengapa AK disebut endogenous growth — tidak konvergen ke steady state, tumbuh selamanya. Akan dipelajari di Bab 14-15.*
 
-Sebaliknya, Solow-Swan disebut exogenous growth karena konvergensi ke adalah fitur $\bar{k}$
-
-*kunci — pertumbuhan jangka panjang hanya datang dari pertumbuhan teknologi eksogen ( $g$).*
+Sebaliknya, Solow-Swan disebut *exogenous growth*: konvergensi ke $\bar{k}$ adalah fiturnya — pertumbuhan jangka panjang hanya datang dari pertumbuhan teknologi eksogen ($g$).
 ```
 ## Konsep 8 — Saddle Point — Preview RCK
 
@@ -368,9 +361,9 @@ Sebaliknya, Solow-Swan disebut exogenous growth karena konvergensi ke adalah fit
 
 Steady state dengan eigenvalues yang tanda real part-nya berbeda. Contoh sederhana:
 
-$$ J() =\bar{x}(^{-2}003^{)} $$
+$$ J(\bar{x}) = \begin{pmatrix} -2 & 0 \\ 0 & 3 \end{pmatrix} $$
 
-Eigenvalues $-2$ dan $+3$. Rumusanmu: "satu menuju, satu menjauh — satu stable satu unstable". Persis $\bar{x}$ menggambarkan saddle.
+Eigenvalues $-2$ dan $+3$. Rumusanmu: "satu menuju, satu menjauh — satu stable satu unstable". Persis menggambarkan saddle.
 
 ## Struktur saddle point
 
@@ -379,7 +372,7 @@ Eigenvalues $-2$ dan $+3$. Rumusanmu: "satu menuju, satu menjauh — satu stable
 
 **Untuk saddle point dengan eigenvalues $\lambda _{1} <0 < \lambda _{2}$**
 
-*Arah eigenvector $v_{1}$ (eigenvalue $-2$) → stable manifold. Lintasan di arah ini konvergen ke. $\bar{x}$ Arah eigenvector $v_{2}$ (eigenvalue $+3$) → unstable manifold. Lintasan di arah ini menjauh dari. $\bar{x}$*
+*Arah eigenvector $v_{1}$ (eigenvalue $-2$) → stable manifold. Lintasan di arah ini konvergen ke $\bar{x}$. Arah eigenvector $v_{2}$ (eigenvalue $+3$) → unstable manifold. Lintasan di arah ini menjauh dari $\bar{x}$.*
 
 *Steady state bukan stable secara keseluruhan (karena ada arah unstable), tapi juga bukan unstable sempurna (karena ada arah stable).*
 ```
@@ -418,7 +411,7 @@ $$
 
 ## Definisi
 
-1. ☐ Bisa mendefinisikan steady state sebagai $G() =\bar{x}0$
+1. ☐ Bisa mendefinisikan steady state sebagai $G(\bar{x})=0$
 2. ☐ Bisa membedakan stable, asymptotic stable, dan global asymptotic stable
 3. ☐ Bisa menggambar phase plane illustration untuk masing-masing (Exercise 5.1-5.3)
 4. ☐ Bisa mendefinisikan unstable
@@ -435,13 +428,13 @@ $$
 1. ☐ Bisa menghitung Jacobian untuk sistem 2D
 2. ☐ Bisa menemukan eigenvalues matriks $2 \times 2$ (lewat persamaan karakteristik)
 3. ☐ Bisa mengklasifikasikan steady state: stable node, stable spiral, saddle, unstable
-4. ☐ Bisa derive $G () =^{'}\bar{k}(\alpha -1)(n + g + \delta)$ untuk Solow-Swan
+4. ☐ Bisa derive $G'(\bar{k}) =(\alpha -1)(n + g + \delta)$ untuk Solow-Swan
 
 ## Konsep konseptual
 
-1. ☐ Bisa menjelaskan mengapa steady state $=$ otomatis stable
+1. ☐ Bisa menjelaskan mengapa steady state $= \ne $ otomatis stable
 2. ☐ Bisa menjelaskan analogi "bola di permukaan"
-3. ☐ Memahami kasus borderline ($G () =^{'}\bar{x}0$) dan apa yang harus dilakukan
+3. ☐ Memahami kasus borderline ($G'(\bar{x})=0$) dan apa yang harus dilakukan
 4. ☐ Memahami saddle point dan signifikansinya untuk RCK
 
 ✦✦✦

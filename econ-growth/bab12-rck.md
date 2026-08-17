@@ -8,11 +8,11 @@ Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving ra
 
 ### Bedanya dari Solow-Swan
 
-\dot{k} = sf(k) −δk dengan s konstan (eksogen,
+$\dot{k} = sf(k) - \delta k$ dengan $s$ konstan (eksogen,
 
-**Solow-swan** — arbitrer). Tidak ada optimisasi household.
+**Solow-Swan** — $\dot{k}=sf(k)-\delta k$ dengan $s$ konstan (arbitrer). Tidak ada optimisasi household.
 
-**RCK** — \dot{k} = f(k) −δk −c dengan c dipilih optimal. Saving endogen dari maksimisasi utility.
+**RCK** — $\dot{k}=f(k)-\delta k-c$ dengan $c$ dipilih optimal. Saving endogen dari maksimisasi utility.
 
 ### Tiga pendekatan Bab 12
 
@@ -61,7 +61,7 @@ dengan ρ > 0 subjective rate of time preference.
 
 ### Resource constraint (12.2)
 
-\dot{k} = f(k) −δk −c,k(0) = k0
+$\dot{k} = f(k) - \delta k - c$, $k(0)=k_{0}$
 
 ### Identifikasi state vs control
 
@@ -91,7 +91,7 @@ $$
 
 Interpretasi asset pricing: required return (ρV) = dividend (u(c)) +
 
-capital gain (Vk\dot{k}).
+capital gain ($V_{k}\dot{k}$).
 ```
 ### Present-value Hamiltonian (12.4)
 
@@ -101,29 +101,29 @@ $$
 
 ### PMP conditions
 
-**Adjoint (12.5)** — −λ˙ = λ[f′(k) −δ]
+**Adjoint (12.5)** — $-\dot{\lambda}=\lambda\,[f'(k)-\delta]$
 
-**Maximality C (12.6)** — e−ρtuc(c) = λ
+**Maximality (12.6)** — $e^{-\rho t}u_{c}(c)=\lambda$
 
-**State (12.7)** — \dot{k} = f(k) −c −δk
+**State (12.7)** — $\dot{k}=f(k)-c-\delta k$
 
-**TVC (12.8)** — limT→∞λ(T)k(T) = 0
+**TVC (12.8)** — $\lim_{T\to\infty}\lambda(T)\,k(T)=0$
 
 ### Derivation envelope condition (12.9)
 
-#### `Step 1` Turunkan maximality (12.6) terhadap t
+#### Step 1 — Turunkan maximality (12.6) terhadap t
 
 $$
 \dot{\lambda}=e^{-\rho t}\bigl[-\rho\,u_{c}+u_{cc}\,\dot{c}\bigr]
 $$
 
-#### `Step 2` Bagi dengan λ = e−ρtuc
+#### Step 2 — Bagi dengan λ = e−ρtuc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-#### `Step 3` Substitusi Arrow-Pratt σ= −uccc/uc
+#### Step 3 — Substitusi Arrow-Pratt σ= −uccc/uc
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-\rho-\sigma(c)\,\frac{\dot{c}}{c}
@@ -131,17 +131,17 @@ $$
 
 ### Derivation Keynes-Ramsey (12.10)
 
-#### `Step 1` Dari adjoint (12.5)
+#### Step 1 — Dari adjoint (12.5)
 
 λλ˙ = −[f′(k) −δ]
 
-#### `Step 2` Set sama dengan envelope (12.9)
+#### Step 2 — Set sama dengan envelope (12.9)
 
 $$
 -\rho-\sigma\,\frac{\dot{c}}{c}=-\bigl[f\'(k)-\delta\bigr]
 $$
 
-#### `Step 3` Solve → Keynes-Ramsey rule
+#### Step 3 — Solve → Keynes-Ramsey rule
 
 $$
 \rho+\sigma(c)\,\frac{\dot{c}}{c}=r,\qquad r=f\'(k)-\delta
@@ -158,11 +158,11 @@ Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus
 ```
 ### Sisi kiri = MRS antarwaktu
 
-ρ + σ\dot{c}/c adalah marginal rate of substitution konsumsi antarwaktu (discounted).
+$\rho + \sigma\,\dot{c}/c$ adalah marginal rate of substitution konsumsi antarwaktu (discounted).
 
 ### Sisi kanan = opportunity cost
 
-r= f′(k) −δ adalah net return on capital — opportunity cost konsumsi sekarang.
+$r = f'(k) - \delta$ adalah net return on capital — opportunity cost konsumsi sekarang.
 
 ```{admonition} Hasil kunci
 :class: important
@@ -171,11 +171,11 @@ Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner bala
 ```
 ### Cases (Proposition 12.1)
 
-**$r>\rho$** — Patience pays — \dot{c} > 0, konsumsi tumbuh
+**$r>\rho$** — Patience pays: $\dot{c}>0$, konsumsi tumbuh.
 
-**$r<\rho$** — Impatience dominates — \dot{c} < 0, konsumsi turun
+**$r<\rho$** — Impatience dominates: $\dot{c}<0$, konsumsi turun.
 
-**R=ρ** — Smoothing — \dot{c} = 0, konsumsi konstan (steady state)
+**$r=\rho$** — Smoothing: $\dot{c}=0$, konsumsi konstan (steady state).
 
 ```{admonition} Catatan
 :class: note
@@ -192,13 +192,13 @@ Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0)
 
 ### Part 1 — Nullclines
 
-### \dot{c} = 0 nullcline
+### Nullcline $\dot{c}=0$
 
-Dari Keynes-Ramsey, \dot{c} = 0 butuh f′(k̄) = δ + ρ. Karena f′′< 0, solusi unique.
+Dari Keynes-Ramsey, $\dot{c}=0$ butuh $f'(\bar{k}) = \delta+\rho$. Karena $f''<0$, solusinya unik.
 
-Garis vertikal k= k̄.
+Garis vertikal $k=\bar{k}$.
 
-### \dot{k} = 0 nullcline
+### Nullcline $\dot{k}=0$
 
 Dari resource constraint: c = f(k) −δk.
 
@@ -206,11 +206,11 @@ Kurva hump-shape, puncak di kGR where f′(kGR) = δ.
 
 ### Bukti modified golden rule k̄ < kGR
 
-#### `Step 1` Bandingkan FOC
+#### Step 1 — Bandingkan FOC
 
 f′(k̄) = δ + ρ > δ= f′(kGR)
 
-#### `Step 2` f′ strictly decreasing (dari f′′< 0)
+#### Step 2 — f′ strictly decreasing (dari f′′< 0)
 
 **Step 3** — Kontrapositif: f′(k̄) > f′(kGR) dan f′ decreasing → k̄ < kGR
 
@@ -240,23 +240,23 @@ Untuk Cobb-Douglas: k̄ = (α/(δ + ρ))1/(1−α).
 
 Pertanyaan yang sering muncul: mengapa arah vektornya demikian?
 ```
-### Arah \dot{k} (bukti)
+### Arah $\dot{k}$ (bukti)
 
-Dari ∂\dot{k}/∂c = −1 < 0: \dot{k} menurun dalam c.
+Dari $\partial\dot{k}/\partial c=-1<0$: $\dot{k}$ menurun dalam $c$.
 
-c < f(k) −δk → \dot{k} > 0 → k tumbuh (kanan). `BAWAHK ˙=0` Konsumsi kurang dari output bersih → modal akumulasi.
+**Bawah $\dot{k}=0$** — $c<f(k)-\delta k$ → $\dot{k}>0$ → $k$ tumbuh (panah kanan): konsumsi kurang dari output bersih → modal terakumulasi.
 
-c > f(k) −δk → \dot{k} < 0 → k menurun (kiri).
+**Atas $\dot{k}=0$** — $c>f(k)-\delta k$ → $\dot{k}<0$ → $k$ menurun (panah kiri).
 
 **Atas $\dot{k}=0$**
 
 Konsumsi melebihi output bersih.
 
-### Arah \dot{c} (bukti)
+### Arah $\dot{c}$ (bukti)
 
-Dari Keynes-Ramsey, sign(\dot{c}) = sign[f′(k) −δ −ρ]. Karena f′′< 0:
+Dari Keynes-Ramsey, $\mathrm{sign}(\dot{c}) = \mathrm{sign}[f'(k) - \delta - \rho]$. Karena $f''<0$:
 
-k< k̄ → f′(k) > δ + ρ → \dot{c} > 0 → c tumbuh (atas).
+$k<\bar{k}$ → $f'(k) > \delta+\rho$ → $\dot{c}>0$ → $c$ tumbuh (kuadran atas).
 
 **Kiri $\dot{c}=0$**
 
@@ -266,13 +266,13 @@ Return > impatience → defer.
 
 ### Empat region
 
-**I Kiri-bawah** — \dot{k} > 0, \dot{c} > 0 → panah ↗
+**I (kiri-bawah)** — $\dot{k}>0,\ \dot{c}>0$ → panah ↗
 
-**II Kanan-bawah** — \dot{k} > 0, \dot{c} < 0 → panah ↘
+**II (kanan-bawah)** — $\dot{k}>0,\ \dot{c}<0$ → panah ↘
 
-**Iii Kiri-atas** — \dot{k} < 0, \dot{c} > 0 → panah ↖
+**III (kiri-atas)** — $\dot{k}<0,\ \dot{c}>0$ → panah ↖
 
-**IV Kanan-atas** — \dot{k} < 0, \dot{c} < 0 → panah ↙
+**IV (kanan-atas)** — $\dot{k}<0,\ \dot{c}<0$ → panah ↙
 
 ### Bukti saddle point (Jacobian)
 
@@ -282,11 +282,11 @@ $$
 J=\begin{pmatrix}\rho & -1\\ \bar{c}\,f''(\bar{k})/\sigma & 0\end{pmatrix}
 $$
 
-#### `Step 1` Entry ∂\dot{k}/∂k= f′(k̄) −δ= ρ (karena f′(k̄) = δ + ρ)
+#### Step 1 — Entry $\partial\dot{k}/\partial k = f'(\bar{k}) - \delta = \rho$ (karena $f'(\bar{k})=\delta+\rho$)
 
-**Step 2** — Entry ∂\dot{c}/∂c = 0 (bracket Keynes-Ramsey = 0 di steady state)
+**Step 2** — Entry $\partial\dot{c}/\partial c = 0$ (bracket Keynes-Ramsey = 0 di steady state)
 
-#### `Step 3` Determinant
+#### Step 3 — Determinant
 
 det J= σc̄f′′(k̄) < 0
 
@@ -303,7 +303,7 @@ Pertanyaan yang sering muncul: bagaimana menjawab analisis kualitatif *tanpa* ei
 
 Dari vector field saja (tanpa eigenvalue), pakai argumen kontinuitas:
 
-**C0 Terlalu Tinggi** — Mulai region III, \dot{k} < 0 → k crash ke 0. Tidak feasible.
+**C0 Terlalu Tinggi** — Mulai region III, $\dot{k}<0$ → $k$ crash ke 0. Tidak feasible.
 
 **C0 Terlalu Rendah** — Mulai region I → menyeberang ke region II → k explode ke ∞. Melanggar TVC.
 
@@ -366,7 +366,7 @@ $$
 ```{admonition} Hasil kunci
 :class: important
 
-s̄ TURUN saat ρ naik. Verifikasi: ρ 0.04→0.06 memberi s̄ 16.7%→13.6%. Magnitude/kecepatan adjustment tergantung EIS 1/σ
+**$\bar{s}$ turun saat $\rho$ naik.** Verifikasi: $\rho: 0.04 \to 0.06$ memberi $\bar{s}: 16.7\% \to 13.6\%$. Magnitude/kecepatan adjustment tergantung EIS 1/σ
 
 (atau 1/θ).
 ```
@@ -394,21 +394,21 @@ $$
 
 ### PMP conditions
 
-**Maximality** — e−ρtuc(c) = μ
+**Maximality** — $e^{-\rho t}u_{c}(c)=\mu$
 
-**Adjoint** — μ˙/μ = −r(t)
+**Adjoint** — $\dot{\mu}/\mu=-r(t)$
 
-**Budget (12.16)** — \dot{a} = ra + w −c
+**Budget (12.16)** — $\dot{a}=r a+w-c$
 
 ### Euler equation (12.15)
 
-#### `Step 1` Turunkan maximality terhadap t, bagi dengan μ
+#### Step 1 — Turunkan maximality terhadap t, bagi dengan μ
 
 $$
 \frac{\dot{\mu}}{\mu}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
 $$
 
-#### `Step 2` Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt
+#### Step 2 — Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r(t)-\rho\bigr]
@@ -423,17 +423,17 @@ Tentang NPG dan notasi $\dot{p}/p$:
 
 NPG mencegah household pinjam tanpa batas (Ponzi strategy). No-arbitrage: harga konsumsi p(t) = e−0t rdτ, sehingga:∫
 
-p\dot{p} = −r(t)
+$\dot{p}/p = -r(t)$
 
-(\dot{p}/p = growth rate harga = turunan logaritma). NPG (12.14): limT→∞p(T)a(T) ≥0 — present value assets tidak boleh negatif tak terbatas.
+($\dot{p}/p$ = growth rate harga = turunan logaritma). NPG (12.14): $\lim_{T\to\infty} p(T)\,a(T) \ge 0$ — present value assets tidak boleh negatif tak terbatas.
 ```
 ### Firm FOC
 
-r= f′(k) −δ(12.17),w= f(k) −kf′(k)(12.18)
+$r = f'(k) - \delta$ (12.17), $\quad w = f(k) - k\,f'(k)$ (12.18)
 
 ### Market clearing
 
-a = k,f(k) = c + \dot{k} + δk
+$a=k$, $f(k) = c + \dot{k} + \delta k$
 
 ## Konsep 7 — Section 12.4 — First Welfare Theorem
 
@@ -473,15 +473,15 @@ L(t) = ent, A(t) = egt. Variabel per efficient unit: c = C/(AL), k= K/(AL).
 
 ### Exercise 12.6 — Resource constraint
 
-#### `Step 1` Aggregate: \dot{K} = F(K, AL) −δK −C
+#### Step 1 — Aggregate: $\dot{K} = F(K,AL) - \delta K - C$
 
-#### `Step 2` Log-differentiate k= K/(AL)
+#### Step 2 — Log-differentiate $k = K/(AL)$
 
-k\dot{k} = K\dot{K} −g −n
+$\dot{k}/k = \dot{K}/K - g - n$
 
-#### `Step 3` CRS: F(K, AL)/(AL) = f(k) (pilih λ = 1/(AL))
+#### Step 3 — CRS: $F(K,AL)/(AL) = f(k)$ (pilih $\lambda = 1/(AL)$)
 
-#### `Step 4` Substitusi dan kumpulkan → hasil
+#### Step 4 — Substitusi dan kumpulkan → hasil
 
 $$
 \dot{k} = f(k) - (n+g+\delta)k - c
@@ -507,7 +507,7 @@ Objective punya L(t) = ent (planner peduli total welfare). e−ρt ⋅ent= e−(
 ```
 ### Exercise 12.8 — Euler dengan growth
 
-#### `Step 1` Log maximality, turunkan
+#### Step 1 — Log maximality, turunkan
 
 $$
 \frac{\dot{\lambda}}{\lambda}=-(\rho-n)+g+\frac{d}{dt}\ln u'(Ac)
@@ -517,7 +517,7 @@ $$
 
 #### g + ċ/c
 
-#### `Step 3` Set sama adjoint, cancel n, g, solve
+#### Step 3 — Set sama adjoint, cancel n, g, solve
 
 $$
 \frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[f'(k)-(\delta+\rho+\sigma g)\bigr]
@@ -528,7 +528,7 @@ $$
 
 Suku baru σg = effective impatience tambahan karena konsumsi per pekerja tumbuh g. BGP: f′(k̄) = δ + ρ + σg. Verifikasi: dengan
 
-growth k̄ lebih rendah; limit g= 0 kembali ke no-growth.
+growth $\bar{k}$ lebih rendah; pada limit $g=0$ kembali ke no-growth.
 ```
 ### Exercise 12.9 — BGP preference restriction
 
@@ -553,11 +553,11 @@ unique → BGP exists.
 ```
 ### Exercise 12.10 — CRRA patience restriction
 
-#### `Step 1` CRRA + BGP: integrand objective
+#### Step 1 — CRRA + BGP: integrand objective
 
 ∼e[−ρ+(1−σ)g+n]t
 
-#### `Step 2` Konvergen iff eksponen < 0
+#### Step 2 — Konvergen iff eksponen < 0
 
 ρ > n + (1 −σ)g
 
@@ -569,7 +569,7 @@ Utility bounded.
 
 **$\sigma=1$** — Restriction sama dengan ρ > n (log utility).
 
-**Σ<1** — (1 −σ)g> 0 → restriction lebih ketat. Utility unbounded, butuh discount besar.
+**$\sigma<1$** — $(1-\sigma)g>0$ → restriction lebih ketat. Utility unbounded, butuh discount besar.
 
 **Jebakan Umum**
 

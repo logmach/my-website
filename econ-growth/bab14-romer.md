@@ -43,11 +43,11 @@ Benar! Markup negatif = situasi tidak valid. Monopoli tidak pernah beroperasi di
 ```
 ### Hubungan MR-elasticity
 
-#### `Step 1` MR dari TR = pq (product rule)
+#### Step 1 — MR dari TR = pq (product rule)
 
-#### `Step 2` Substitusi elasticity
+#### Step 2 — Substitusi elasticity
 
-#### `Step 3` Set MR = MC → markup
+#### Step 3 — Set MR = MC → markup
 
 Lerner index. CES: selalu → markup valid.
 
@@ -71,9 +71,9 @@ adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at M
 ```
 ### BB3 — Surplus Ordering
 
-**(planner)** — Price at MC, no DWL, surplus maksimal
+**$p=MC$ (planner)** — no deadweight loss, surplus maksimal.
 
-**(drastic)** — Price rendah, DWL kecil
+**$p$ rendah (drastic)** — DWL kecil.
 
 **(limit)** — Price tinggi, DWL besar Dua sumber gap: deadweight loss (pricing) + consumer surplus bocor (appropriability). Dua sumber ini → dua margin inefisiensi → dua instrumen kebijakan.
 
@@ -107,11 +107,11 @@ Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- 
 
 Klarifikasi: HP adalah final good, bukan intermediate. Komponen HP (chip, layar, sensor) adalah intermediate goods yang bervariasi.
 
-**Final Good** — HP jadi (dikonsumsi). Diproduksi firm kompetitif dari labor + basket intermediate.
+**Final good** — Barang jadi (dikonsumsi) — analogi: HP utuh. Diproduksi firm kompetitif dari labor + basket intermediate.
 
 **Intermediate** — Komponen (chip, layar). Tiap jenis monopoli (paten). R&D horizontal = jenis komponen baru.
 
-**R&D** — Pakai final good untuk ciptakan blueprint baru → naik.
+**R&D** — Pakai final good untuk ciptakan blueprint baru → $N$ naik.
 ```
 ### Mengapa tidak ada modal fisik
 
@@ -138,9 +138,9 @@ Pengingat: CRRA punya Arrow-Pratt konstan (dipakai agar BGP exist). Stochastic =
 
 **Step 1** — Maximality:
 
-#### `Step 2` Log + turunkan, substitusi adjoint
+#### Step 2 — Log + turunkan, substitusi adjoint
 
-#### `Step 3` Euler (14.3)
+#### Step 3 — Euler (14.3)
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -164,21 +164,21 @@ CES = Constant Elasticity of Substitution,. Dipakai untuk love-of- variety + mar
 ```
 ### Exercise 14.3 — FOC (income shares)
 
-#### `Step 1` FOC terhadap M
+#### Step 1 — FOC terhadap M
 
-#### `Step 2` FOC terhadap L
+#### Step 2 — FOC terhadap L
 
 Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero profit (kompetitif). Itulah mengapa household tidak own final good firm.
 
 ### Exercise 14.4 — Demand curve & price index
 
-**Step 1** — Lagrangian cost min, multiplier = shadow price (= cost marginal
+**Step 1** — Lagrangian cost min; multiplier = shadow price (= marginal cost basket).
 
-#### basket) `Step 2` FOC + chain rule lewat
+#### Step 2 — FOC + chain rule lewat price index
 
-#### `Step 3` Demand curve (14.10)
+#### Step 3 — Demand curve (14.10)
 
-#### `Step 4` Price index (14.11), substitusi demand ke
+#### Step 4 — Price index (14.11), substitusi demand ke
 
 Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
@@ -186,11 +186,13 @@ Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 ## Menurunkan Terhadap Integral
 
-*Tiga situasi penting di Bab 14. Functional `A — ELEMEN` derivative — seperti penjumlahan, hanya titik relevan. (Exercise 14.4); batas bawah. (HJB*
+*Tiga situasi penting di Bab 14 — functional derivative terhadap integral.*
 
-**B — Batas** — Exercise 14.7). Turunan masuk integral.
+**A — Elemen** — Seperti penjumlahan: hanya titik yang relevan (Exercise 14.4).as bawah. (HJB*
 
-**C — Parameter** — (HJB faktor diskon)
+**B — Batas** — Turunan terhadap batas integral: turunan "masuk" ke integran (Exercise 14.7).
+
+**C — Parameter** — Turunan terhadap parameter di dalam integran (HJB: faktor diskon).
 
 ## 14.3.1.3 · Intermediate Goods Firms
 
@@ -198,9 +200,9 @@ Dengan konstan: — turun saat naik (kunci Exercise 14.10).
 
 ### Exercise 14.5 — Markup pricing
 
-#### `Step 1` Profit, substitusi demand
+#### Step 1 — Profit, substitusi demand
 
-#### `Step 2` FOC terhadap $x_{j}$, solve harga optimal
+#### Step 2 — FOC terhadap $x_{j}$, solve harga optimal
 
 Markup konstan dari elastisitas CES: $p=\dfrac{1}{\alpha}$ — markup $1/\alpha$ di atas $MC=1$.
 
@@ -217,9 +219,9 @@ Jebakan umum: tertukar antara CV (current value) dan PV (present value).
 
 Firm value = present value aliran profit, didiskon dengan market rate (bukan subjective). Tidak ada Hamiltonian/adjoint/CV-PV untuk firm — masalahnya statis. HJB (14.16) adalah asset pricing (no-arbitrage), bukan HJB optimal control. CV/PV Hamiltonian hanya untuk household (OCP dinamis dengan).
 ```
-#### `Step 1`, turunkan terhadap `Step 2` Batas bawah (B) →; faktor diskon (C) →
+#### Step 1 — Turunkan nilai firm terhadap $t$: batas bawah (situasi B) memberi suku $-\pi$; faktor diskon (situasi C) memberi suku $rV$.
 
-#### `Step 3` HJB (14.16)
+#### Step 2 — HJB (14.16)
 
 Asset pricing: required return = dividend + capital gain.
 
@@ -252,13 +254,13 @@ Free entry memaksa private value. Tapi social value lebih tinggi (appropriabilit
 
 ### Exercise 14.8-14.9 — Profit & output
 
-Dengan normalisasi,:
+Dengan normalisasi harga final good $=1$:
 
-**Demand** — (konstan, proporsional populasi)
+**Demand** — $x_{j}=x$: konstan, proporsional populasi.
 
-**Profit (14.21)** — (konstan)
+**Profit (14.21)** — $\pi=(1-\alpha)\,p\,x$: konstan.
 
-**Output** — **Basket** — (AN-style)
+**Output & basket** — $Y$ linear dalam $N$ (AN-style); basket intermediate simetris.
 
 ### CRS privat vs IRS agregat
 
@@ -283,15 +285,15 @@ Kritik tajam: pertanyaan yang tepat adalah "mengapa marginal product tidak menuj
 ```
 **Step 1**
 
-Tiap varietas proporsi lebih kecil saat naik. TAPI tetap — naik via varietas baru, bukan menumpuk lama.
+Tiap varietas mendapat proporsi lebih kecil saat $N$ naik — TAPI $Y$ tetap naik: via varietas baru, bukan menumpuk varietas lama.
 
-#### `Step 2` Marginal product: downward-sloping
+#### Step 2 — Marginal product: downward-sloping
 
-Untuk fixed. Kurva fungsi saja (tidak bergeser).
+Untuk $N$ fixed: kurva marginal product fungsi $x$ saja (tidak bergeser).
 
-#### `Step 3` turun saat naik
+#### Step 3 — $MP$ turun saat $x$ naik
 
-Marginal product dan turun dengan rate sama → FOC selalu match.
+Marginal product dan harga turun dengan rate sama → FOC selalu match.
 
 ```{admonition} Hasil kunci
 :class: important
@@ -304,9 +306,9 @@ Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru)
 
 ### Exercise 14.11 — Interest rate
 
-#### `Step 1` Free entry (konstan →), profit
+#### Step 1 — Free entry: $V=1$ konstan → $\dot{V}=0$; profit konstan.
 
-#### `Step 2` Substitusi ke HJB
+#### Step 2 — Substitusi ke HJB
 
 Interest rate konstan → growth konstan dari awal → no transition dynamics.
 
@@ -356,11 +358,9 @@ konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empir
 
 ### Exercise 14.16 — Dua margin inefisiensi
 
-**Intensive Margin** — Monopoly pricing → per varietas terlalu rendah. (BB1, BB3)
+**Intensive margin** — Monopoly pricing → $x_{j}$ per varietas terlalu rendah (BB1, BB3).
 
-Appropriability → varietas terlalu sedikit.
-
-**Extensive Margin** — (BB2)
+**Extensive margin** — Appropriability → jumlah varietas $N$ terlalu sedikit (BB2).
 
 Planner: pakai intermediate lebih banyak (price at MC) + menilai R&D lebih tinggi (internalize CS) → tumbuh lebih cepat.
 
@@ -373,9 +373,9 @@ First Welfare gagal karena aggregate IRS + monopoli + appropriability. Beda RCK 
 
 Dua distorsi → dua instrumen:
 
-**Intensive** — Subsidi intermediate inputs → naik ke optimal
+**Intensive** — Subsidi intermediate inputs → $x$ naik ke optimal.
 
-**Extensive** — Subsidi R&D → naik ke optimal
+**Extensive** — Subsidi R&D → $\dot{N}$ naik ke optimal.
 
 Satu instrumen tidak cukup — butuh keduanya (prinsip Tinbergen).
 

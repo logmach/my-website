@@ -99,19 +99,11 @@ $$ \dot{y} =b -a(y + b/a) = b -ay -b = -ay $$
 
 *Insight kunci yang dipakai berulang di seluruh materi.*
 
-General solution $x(t) =^{*}b/a + Ce^{-at}$ punya struktur dua bagian:
+General solution $x(t) = b/a + Ce^{-at}$ punya struktur dua bagian:
 
-Steady state. "Tempat akhir" sistem (kalau stable). Particular solution
+**$b/a$ — anchor** — Steady state: "tempat akhir" sistem (kalau stable). Ini particular solution dari ODE non-homogen.
 
-$B/A$ `— ANCHOR`
-
-dari ODE non-homogen.
-
-Transient. "Bagaimana sistem sampai ke anchor". General solution
-
-$CE^{-AT}$ `— MOVEMENT`
-
-dari ODE homogen.
+**$Ce^{-at}$ — movement** — Transient: "bagaimana sistem sampai ke anchor". Ini general solution dari ODE homogen.
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -260,11 +252,7 @@ Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:
 
 **Point 1** — Kalau $x^{*}_{1},x^{*}_{2}$ keduanya solusi 6.13 (homog), maka $c_{1}x^{*}_{1} +c_{2}x^{*}_{2}$ juga solusi 6.13. Superposition standar.
 
-.
-
-Setiap solusi 6.12 bisa di-konstruksi sebagai particular solusi 6.12 +
-
-**Point 3** — solusi 6.13. Strategi standar solving.
+**Point 3** — Setiap solusi 6.12 bisa dikonstruksi sebagai: satu particular solusi 6.12 + solusi homogen 6.13. Inilah strategi standar solving.
 
 ## Point 2 — arah logika yang sering terbalik
 
@@ -385,9 +373,7 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 
 **Exercise 6.3** — Show integrating factor $I(t) = e^{\inta(t)dt}$. ✓ Dikerjakan dengan verify-based approach.
 
-Derive general solution (6.9). ✓ Dikerjakan dengan multiply $I(t)$,
-
-**Exercise 6.4** — integrasi, bagi.
+**Exercise 6.4** — Derive general solution (6.9). ✓ Dikerjakan dengan multiply $I(t)$, integrasi, bagi.
 
 **Exercise 6.5** — Prove Proposition 6.1. ✓ Dibahas konseptual lewat linearitas turunan dan multiplikasi matriks.
 
@@ -434,7 +420,7 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 
 ## Apa yang Menanti
 
-Kebiasaan sanity check yang dibangun di sini akan dipakai
+Kebiasaan sanity check yang dibangun di sini akan dipakai di seluruh sisa materi.
 
 ```{admonition} Ringkasan besar
 :class: important

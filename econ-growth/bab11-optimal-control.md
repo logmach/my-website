@@ -81,7 +81,7 @@ V (t0, x0) — value function, indirect utility dari OCP.
 
 Pertanyaan yang sering muncul: "apa beda state dan control secara konkret di model ekonomi?"
 
-**STATEX** — Distinction yang krusial untuk paham semua model dinamis. Punya ODE sendiri (ẋ = f), tidak dipilih langsung, history-dependent, encapsulate masa lalu. Contoh: modal, wealth, stok ikan.
+**State $x$** — Punya ODE sendiri ($\dot{x}=f$), tidak dipilih langsung, *history-dependent*. Contoh: modal, aset, utang.
 ```
 **Control $u$** — Dipilih bebas tiap saat, tidak punya ODE, bisa berubah seketika. Contoh: konsumsi, investasi, harga.
 
@@ -214,16 +214,16 @@ Jawaban: pada optimal path, V menurun karena horizon mengecil. Maka V ˙ ≤0, d
 ```
 ### Chain rule untuk V ˙
 
-#### `Step 1` V (t, x(t)) tergantung pada t lewat dua channel
+#### Step 1 — V (t, x(t)) tergantung pada t lewat dua channel
 
 - Langsung lewat t
 - Lewat x(t)
 
-#### `Step 2` Chain rule multivariate
+#### Step 2 — Chain rule multivariate
 
 dtdV= Vt + Vx ⋅ẋ
 
-#### `Step 3` Substitusi ODE constraint ẋ = f
+#### Step 3 — Substitusi ODE constraint ẋ = f
 
 V ˙ = Vt + Vx ⋅f(t, x, u)
 
@@ -264,15 +264,15 @@ $$
 
 Pertanyaan yang sering muncul: "apakah Vt dan Vxf semuanya negatif?"
 
-**VT** — **VX** — Positif biasanya. Marginal value state. Lebih banyak modal = welfare lebih.
+**$V_{t}$** — Negatif pada optimal path: $V$ menurun karena horizon menyusut.
 
-**F** — Bervariasi. Bisa positif (state tumbuh) atau negatif (state menurun). Tergantung u.
+**$V_{x}$** — Positif biasanya: marginal value state — lebih banyak modal = welfare lebih.
 
-Tidak punya tanda universal. Bisa + atau −
+**$f$** — Bervariasi: bisa positif (state tumbuh) atau negatif (menurun), tergantung $u$.
 
-**VX F** — tergantung tanda f.
+**$V_{x}f$** — Tidak punya tanda universal: bisa $+$ atau $-$, tergantung tanda $f$.
 
-**V̇** — Negatif pada optimal path. Vt negatif mendominasi Vxf.
+**$\dot{V}$** — Negatif pada optimal path: $V_{t}$ negatif mendominasi $V_{x}f$.
 ```
 ### Interpretasi persamaan (11.7)
 
@@ -350,19 +350,19 @@ Tidak perlu memperhitungkan dk∗/dx. Hanya turunan parsial F terhadap x. Mengap
 
 ### Derivation persamaan (11.12)
 
-#### `Step 1` Turunkan HJB terhadap x
+#### Step 1 — Turunkan HJB terhadap x
 
 Sisi kanan: maxk{h + Vxf}. Pakai Envelope Theorem.
 
-#### `Step 2` Hasilnya
+#### Step 2 — Hasilnya
 
 0 = hx + Vtx + Vxxf+ Vxfx
 
-#### `Step 3` Pakai chain rule untuk V ˙x
+#### Step 3 — Pakai chain rule untuk V ˙x
 
 V ˙x= Vtx + Vxxẋ = Vtx + Vxxf
 
-#### `Step 4` Substitusi → persamaan (11.12)
+#### Step 4 — Substitusi → persamaan (11.12)
 
 0 = hx + V ˙x + Vxfx
 
@@ -381,33 +381,27 @@ $$
 
 Interpretasi tiap suku — satu per satu.
 
-**HT** — Direct effect of time on momentary payoff. Bagaimana payoff berubah saat waktu maju, holding x, u konstan. Direct effect of state on momentary payoff. `HX` Bagaimana payoff berubah saat state naik, holding t, u konstan.
+**$h_{t}$** — Direct effect of time on payoff: bagaimana payoff berubah saat waktu maju, holding $x, u$ konstan. **$h_{x}$** — Direct effect of state on momentary payoff: bagaimana payoff berubah saat state naik, holding t, u konstan.
 
-Rate of marginal value change over time. `V̇X` Bagaimana Vx (shadow price state) berubah sepanjang optimal path.
+**$\dot{V}_{x}$** — Rate of marginal-value change: bagaimana $V_{x}$ (shadow price state) berubah sepanjang optimal path.
 ```
-#### Rate at which time-effects accumulate along
+**$\dot{V}_{t}$** — Rate at which time-effects accumulate: bagaimana $V_{t}$ (rate value hilang) berubah sepanjang optimal path.
 
-**$\dot{V}_{t}$** — Bagaimana $V_{t}$ (rate value hilang) berubah sepanjang optimal path.
+**$V_{x}f_{x}$** — Continuation value melalui transition law of state: Efek tidak langsung state pada future value lewat dinamika.
 
-#### Continuation marginal value through
-
-**VX FX** — transition law of state. Efek tidak langsung state pada future value lewat dinamika.
-
-#### Indirect effect through time-variation in
-
-**VX FT** — transition law, valued by Vx. Efek tidak langsung waktu pada future value lewat dinamika.
+**$V_{x}f_{t}$** — Indirect effect melalui time-variation in transition law, dinilai oleh $V_{x}$: Efek tidak langsung waktu pada future value lewat dinamika.
 
 ### Tabel cost-benefit framework
 
-**Tweakx** — Persamaan (11.12): 0 = hx + V ˙x + Vxfx
+**Tweak $x$** — Persamaan (11.12): $0=h_{x}+\dot{V}_{x}+V_{x}f_{x}$
 
-**Tweakt** — Persamaan (11.13): 0 = ht + V ˙t + Vxft
+**Tweak $t$** — Persamaan (11.13): $0=h_{t}+\dot{V}_{t}+V_{x}f_{t}$
 
-**Direct Effect Padah** — hx (state) atau ht (waktu)
+**Direct effect pada $h$** — $h_{x}$ (state) atau $h_{t}$ (waktu)
 
-**Effect Via Dinamika** — Vxfx (state) atau Vxft (waktu)
+**Effect via dinamika** — $V_{x}f_{x}$ (state) atau $V_{x}f_{t}$ (waktu)
 
-**Akumulasi Rate** — V ˙x (state) atau V ˙t (waktu)
+**Akumulasi rate** — $\dot{V}_{x}$ (state) atau $\dot{V}_{t}$ (waktu)
 
 **Balance Optimal** — Semua suku berjumlah nol
 
@@ -524,15 +518,15 @@ Pertanyaan yang sering muncul: "darimana (11.18) dan (11.19)?"
 
 Persamaan (11.18): H∗= −Vt. Diturunkan dari HJB equation langsung dengan substitusi Vx= ψ.
 ```
-#### `Step 1` Mulai dari HJB
+#### Step 1 — Mulai dari HJB
 
 −Vt= kmax{h + Vxf}
 
-#### `Step 2` Substitusi Vx= ψ sepanjang optimal path
+#### Step 2 — Substitusi Vx= ψ sepanjang optimal path
 
 −Vt= kmax{h + ψf} = kmax H
 
-#### `Step 3` Pada u∗ (maximizer)
+#### Step 3 — Pada u∗ (maximizer)
 
 $$
 H^{*}(t):=H(t,x^{*},u^{*},\psi)=-V_{t}\qquad(11.18)
@@ -542,17 +536,17 @@ Persamaan (11.19): $$
 \dot{H}^{*}=H_{t}\qquad(11.19)
 $$. Diturunkan dari (11.18) + (11.13).
 
-#### `Step 1` Turunkan (11.18) terhadap t
+#### Step 1 — Turunkan (11.18) terhadap t
 
 $\dot{H}^{*}=-\dot{V}_{t}$
 
-#### `Step 2` Pakai (11.13) untuk solve V ˙t
+#### Step 2 — Pakai (11.13) untuk solve V ˙t
 
 $\dot{V}_{t}=-h_{t}-V_{x}f_{t}$
 
-#### `Step 3` Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$
+#### Step 3 — Substitusi → $\dot{H}^{*}=h_{t}+V_{x}f_{t}$
 
-#### `Step 4` Kenali sebagai Ht (turunan parsial Hamiltonian)
+#### Step 4 — Kenali sebagai Ht (turunan parsial Hamiltonian)
 
 Ḣ∗= Ht
 
@@ -570,7 +564,9 @@ Ḣ∗= Ht
 
 **FOC Dinamis** — Hu= 0 (maximality)
 
-**Kkt/complementary** — ### Adjoint sebagai shadow price
+**KKT / complementary** — kondisi complementary slackness pada constraint.
+
+### Adjoint sebagai shadow price
 
 ```{admonition} Hasil kunci
 :class: important
@@ -627,20 +623,22 @@ Diberi nama dari Léon Walras — pendiri general equilibrium theory.
 
 **Walrasian** — Decentralized. Banyak agen, koordinasi lewat harga.
 
-Centralized. Satu pengambil keputusan,
-
-**Planner** — optimisasi langsung.
+**Planner** — Centralized: satu pengambil keputusan, optimisasi langsung.
 
 ### Welfare Theorems
 
-**First Welfare** — **Second Welfare** — Pareto optimum → bisa diraih sebagai competitive equilibrium (butuh convexity)
+**First Welfare** — Competitive equilibrium → Pareto optimum.
+
+**Second Welfare** — Pareto optimum → bisa diraih sebagai competitive equilibrium (butuh convexity).
 
 ### Analogi PMP/HJB ↔ Welfare Theorems
 
 ```{admonition} Ringkasan besar
 :class: important
 
-**HJB Approach** — Insight kuncinya: PMP dan HJB adalah dual ≈ Social planner / Pareto. Centralized optimisasi.
+PMP dan HJB adalah dual — dalam arti yang sama dengan Welfare Theorems:
+
+**HJB approach** — ≈ Social planner / Pareto: centralized optimisasi.
 
 **PMP Approach** — ≈ Competitive equilibrium. Decentralized via shadow prices.
 
@@ -706,7 +704,9 @@ Bukan derivation matematis — ini definisi IH-OCP, generalisasi dari finite (11
 
 **Discount** — Finite: tidak eksplisit. Infinite: e−rt.
 
-**Dependencevpadat** — ### Mengapa V jadi V (x) saja
+**Dependence $V$ pada $t$** — Finite: ada. Infinite: hilang.
+
+### Mengapa $V$ jadi $V(x)$ saja
 
 Untuk finite horizon: V (t, x) berbeda di tiap t karena horizon tersisa T−t berbeda.
 
@@ -719,13 +719,13 @@ Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t —
 
 Pertanyaan yang sering muncul: "darimana (11.25) diturunkan?"
 ```
-#### `Step 1` Mulai dari HJB finite (11.8) dengan discount
+#### Step 1 — Mulai dari HJB finite (11.8) dengan discount
 
 $$
 -V_{t}=\max_{u}\bigl\{e^{-rt}h+V_{x}f\bigr\}
 $$
 
-#### `Step 2` Konversi ke current-value
+#### Step 2 — Konversi ke current-value
 
 Definisikan $\tilde{V}:=e^{rt}V$. Maka:
 
@@ -733,17 +733,17 @@ $$
 V_{t}=e^{-rt}\bigl(-r\tilde{V}+\tilde{V}_{t}\bigr),\qquad V_{x}=e^{-rt}\tilde{V}_{x}
 $$
 
-#### `Step 3` Substitusi dan bagi dengan e−rt
+#### Step 3 — Substitusi dan bagi dengan e−rt
 
 $$
 r\tilde{V}-\tilde{V}_{t}=\max_{u}\bigl\{h+\tilde{V}_{x}f\bigr\}
 $$
 
-#### `Step 4` Ambil limit T→∞ → V ~ time-invariant
+#### Step 4 — Ambil limit T→∞ → V ~ time-invariant
 
 $\tilde{V}_{t}=0$
 
-#### `Step 5` Drop tilda → persamaan (11.25)
+#### Step 5 — Drop tilda → persamaan (11.25)
 
 $$
 rV(x)=\max_{u}\bigl\{h(x,u)+V_{x}f(x,u)\bigr\}\qquad(11.25)
@@ -785,11 +785,11 @@ Untuk (11.27): yang mendekati nol adalah produk, bukan hanya x. Bisa terjadi via
 ```
 ### Tiga skenario ψx →0
 
-**Skenario A skenario b** — ψ(T) →0 dan x(T) terbatas → produk nol ψ(T) terbatas tapi x(T) →0 → produk nol
+**Skenario A** — $\psi(T)\to 0$ dan $x(T)$ terbatas → produk nol.
 
-Keduanya tumbuh, tapi ψ turun lebih cepat →
+**Skenario B** — $\psi(T)$ terbatas tapi $x(T)\to 0$ → produk nol.
 
-**Skenario C** — produk nol. Paling penting di RCK.
+**Skenario C** — Keduanya tumbuh, tapi $\psi$ turun lebih cepat → produk nol. Paling penting di RCK.
 
 ### Bedanya finite vs infinite TVC
 
@@ -798,13 +798,13 @@ Keduanya tumbuh, tapi ψ turun lebih cepat →
 
 Pertanyaan yang sering muncul: "bukankah saat T finite juga ψ(T) = 0?"
 
-**Finite TVC** — ψ(T) = 0tepat di titik akhir T. Plan berakhir.
+**Finite TVC** — $\psi(T)=0$ tepat di titik akhir $T$: plan berakhir.
 
 $$
 \lim_{T\to\infty}\psi(T)=0 \quad\text{atau}\quad \lim_{T\to\infty}\psi(T)\,x(T)=0
 $$
 
-**Infinite TVC** — sebagai limit. Plan tidak pernah berakhir.
+**Infinite TVC** — batas di atas berlaku sebagai limit: plan tidak pernah berakhir.
 ```
 ### Tidak ada "definitive" TVC
 
@@ -838,7 +838,7 @@ dengan ψ^ current-value adjoint.
 
 Linear controllable system:
 
-ẋ = αx + βu,x(t0) = x0,α < 0,β= 0
+ẋ = αx + βu,x(t0) = x0,α < 0,β \ne  0
 
 Discounted objective:
 
@@ -879,18 +879,16 @@ Vt= −Q̇(t)x2,Vx= −2Q(t)x
 
 Turunkan sisi kanan HJB terhadap y:
 
-∂y∂{−Sy2 + Vxβy} = −2Sy + Vxβ= 0
+$$\frac{\partial}{\partial y}\left\{-Sy^{2}+V_{x}\beta y\right\}=-2Sy+V_{x}\beta=0$$
 
-Substitusi Vx= −2Qx:
+Substitusi $V_{x}=-2Q(t)x$:
 
-−2Sy −2Q(t)βx = 0 ⇒y∗= −SβQ(t)x
+$$-2Sy-2Q(t)\beta x=0 \;\Rightarrow\; y^{*}=-\frac{\beta Q(t)}{S}\,x$$
 
 ```{admonition} Hasil kunci
 :class: important
 
-Optimal control linear dalam state: u∗= −K(t)x dengan gain
-
-K(t) = (β/S)Q(t).
+Optimal control linear dalam state: $u^{*}=-K(t)\,x$ dengan gain $K(t)=\dfrac{\beta}{S}\,Q(t)$.
 
 Inilah state feedback rule klasik di engineering control.
 ```
@@ -918,25 +916,25 @@ Bagian ini paling sering membuat macet. Triknya:
 
 Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.
 
-#### `Step 1` Substitusi Q = Z/Y
+#### Step 1 — Substitusi Q = Z/Y
 
 Q̇ = Y Ż −Y 2ZY ˙
 
-#### `Step 2` Substitusi ke Riccati
+#### Step 2 — Substitusi ke Riccati
 
 Y Ż −Y 2ZY ˙ + 2a ⋅Y Z + b ⋅Y 2Z2= −R
 
-#### `Step 3` Kalikan dengan Y
+#### Step 3 — Kalikan dengan Y
 
 Ż −Y ZY ˙ + 2aZ + Y bZ2= −RY
 
-#### `Step 4` Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms
+#### Step 4 — Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms
 
 Suku −Y ZY ˙ + Y bZ2= −aZ −Y bZ2 + Y bZ2= −aZ — nonlinear terms
 
 hilang!
 
-#### `Step 5` Sisa sistem linear
+#### Step 5 — Sisa sistem linear
 
 Y ˙ = aY+ bZŻ = −RY−aZ
 
@@ -980,21 +978,17 @@ Parameter: a = 0.5, b = −1, q= 1, r= 1, qT= 5, T= 10, x0= 3. Steady state Ricc
 
 2 ≈1.618 (golden ratio!).
 
-Gain K= (b/r)P⋅.
+Gain $K=(b/r)\,P$.
 
 ### Sensitivitas parameter
 
-**Besar (control** — P∗ besar tapi ∣K∣= ∣b∣P/r kecil → control hemat →
+**$r$ besar (control mahal)** — $P^{*}$ besar tapi $|K|=|b|P/r$ kecil → control hemat → konvergensi lambat.
 
-**$r$**
+**$q$ besar (penalty inflasi)** — $P^{*}$ besar dan $|K|$ besar → control agresif → konvergensi cepat.
 
-**Mahal)** — konvergensi lambat
+**$a$ besar (inflasi persistent)** — $P^{*}$ besar → harus control sangat aktif.
 
-**Q Besar (penalty** — P∗ besar dan ∣K∣ besar → control agresif → `INFLASI)` konvergensi cepat
-
-**Abesar (inflasi** — P∗ besar → harus control sangat aktif
-
-**Persistent)** — **Hasil Kunci**
+**Hasil Kunci**
 
 Insight kunci: bukan P yang menentukan magnitude control, tapi gain K= (b/r)P.
 
@@ -1057,7 +1051,7 @@ V (0, k0) = c≥0max {0Te−ρth(c(t))dtk̇ = φ(k) −dk −c,k(0) = k0}∫
 
 Turunkan kanan terhadap c:
 
-hc(c) −Vk= 0 ⇒hc(c) = Vk
+$$h_{c}(c)-V_{k}=0 \;\Rightarrow\; h_{c}(c)=V_{k}$$
 
 ```{admonition} Hasil kunci
 :class: important
@@ -1071,7 +1065,7 @@ Marginal utility consumption = marginal value of capital.
 
 Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 ```
-#### `Step 1` Turunkan HJB-R terhadap k
+#### Step 1 — Turunkan HJB-R terhadap k
 
 ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]
 
@@ -1079,33 +1073,33 @@ Pertanyaan yang sering muncul: "bagaimana derive envelope condition?"
 
 ρVk−Vtk= Vkk[φ(k) −dk −c] + Vk[φ′(k) −d]
 
-#### `Step 3` Pakai chain rule untuk V ˙k
+#### Step 3 — Pakai chain rule untuk V ˙k
 
 V ˙k= Vtk+ Vkk⋅k̇ = Vtk+ Vkk[φ(k) −dk −c]
 
-#### `Step 4` Substitusi
+#### Step 4 — Substitusi
 
 ρVk= V ˙k+ Vk[φ′(k) −d]
 
-#### `Step 5` Solve untuk V ˙k — envelope condition
+#### Step 5 — Solve untuk V ˙k — envelope condition
 
 V ˙k= −Vk[φ′(k) −d −ρ]
 
 ### Euler equation
 
-#### `Step 1` Turunkan FOC terhadap t
+#### Step 1 — Turunkan FOC terhadap t
 
 hcc(c)ċ = V ˙k
 
-#### `Step 2` Substitusi envelope condition
+#### Step 2 — Substitusi envelope condition
 
 hcc(c)ċ = −Vk[φ′(k) −d −ρ]
 
-#### `Step 3` Substitusi Vk= hc
+#### Step 3 — Substitusi Vk= hc
 
 hcc(c)ċ = −hc[φ′(k) −d −ρ]
 
-#### `Step 4` Bagi dengan hc ⋅c dan rearrange
+#### Step 4 — Bagi dengan hc ⋅c dan rearrange
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
@@ -1126,21 +1120,21 @@ H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]
 
 ### From PMP to Euler equation
 
-#### `Step 1` Turunkan Maximality terhadap t
+#### Step 1 — Turunkan Maximality terhadap t
 
 ψ˙ = e−ρt[−ρhc(c) + hcc(c)ċ]
 
-#### `Step 2` Bagi dengan ψ= e−ρthc(c)
+#### Step 2 — Bagi dengan ψ= e−ρthc(c)
 
 ψψ˙ = −ρ + hc(c)hcc(c)ċ
 
-#### `Step 3` Dari Adjoint: ψ˙/ψ= −[φ′(k) −d]
+#### Step 3 — Dari Adjoint: ψ˙/ψ= −[φ′(k) −d]
 
-#### `Step 4` Set kedua sama
+#### Step 4 — Set kedua sama
 
 −[φ′(k) −d] = −ρ + hc(c)hcc(c)ċ
 
-#### `Step 5` Solve untuk ċ/c — sama dengan HJB approach
+#### Step 5 — Solve untuk ċ/c — sama dengan HJB approach
 
 cċ = σ(c)1[φ′(k) −d −ρ]
 
@@ -1205,7 +1199,7 @@ Planner menyeimbangkan benefit defer konsumsi (earn return r) dengan impatience 
 
 **$r<\rho$** — Impatience dominates → ċ < 0 (konsumsi turun)
 
-**R=ρ** — Konsumsi konstan (steady state, modified golden rule)
+**$r=\rho$** — Konsumsi konstan (steady state, modified golden rule)
 
 **EIS Tinggi** — Konsumsi lebih responsif terhadap gap r −ρ
 

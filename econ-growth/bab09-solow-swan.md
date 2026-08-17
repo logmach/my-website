@@ -368,11 +368,11 @@ Klaim: $\bar{k}>0$ adalah globally asymptotic stable.
 
 ODE: $\dot{k}=G(k):= sf(k) -(n + \delta)k$.
 
-$G(0) = 0$ (titik trivial) $G() =\bar{k}0$ (steady state) $G$ konkav (turunan $sf(k) <^{''}0$) $G (0) =^{'}\infty$ (dari Inada) → $G(k) > 0$ untuk kecil positif $k$
+$G(0)=0$ (titik trivial); $G(\bar{k})=0$ (steady state); $G$ konkav ($G''(k)=sf''(k)<0$); $G'(0)=\infty$ (dari Inada) → $G(k) > 0$ untuk kecil positif $k$
 
 Dari bentuk $G$:
 
-Untuk $0 < k < \bar{k}G(k) > 0$:, jadi naik ke $k\bar{k}$ Untuk $k > \bar{k}G(k) < 0$:, jadi turun ke $k\bar{k}$
+Untuk $0<k<\bar{k}$: $G(k)>0$, jadi $k$ naik ke $\bar{k}$. Untuk $k>\bar{k}$: $G(k)<0$, jadi $k$ turun ke $\bar{k}$.
 
 Konvergen monoton dari kedua sisi. Globally asymptotic stable ✓
 
@@ -382,13 +382,7 @@ Konvergen monoton dari kedua sisi. Globally asymptotic stable ✓
 
 ### G(k) = sf(k) - (n+δ)k
 
-### k
-
-k̄
-
-k naikk naikk turunk turun
-
-Phase line Solow-Swan dalam $(k,)\dot{k}$ space. Kurva hijau adalah $G(k)$. Steady state di adalah $\bar{k}$ globally asymptotic stable.
+*Phase line Solow-Swan dalam ruang $(k,\dot{k})$: kurva hijau $G(k)$; di kiri $\bar{k}$, $G>0$ → $k$ naik; di kanan, $G<0$ → $k$ turun. Steady state $\bar{k}$ globally asymptotically stable.
 
 ## Rate of convergence — mekanik step-by-step
 
@@ -401,55 +395,55 @@ Phase line Solow-Swan dalam $(k,)\dot{k}$ space. Kurva hijau adalah $G(k)$. Stea
 
 **Step 1** Taylor expansion $G(k)$ di $\bar{k}$
 
-$$ G(k) \approx G() +\bar{k}G ()(k -^{'}\bar{k}\bar{k}) $$
+$$ G(k) \approx G(\bar{k}) + G'(\bar{k})\,(k-\bar{k}) $$
 
-Karena $G() =\bar{k}0$:
+Karena $G(\bar{k})=0$:
 
-$$ G(k) \approx G ()(k -^{'}\bar{k}\bar{k}) $$
+$$ G(k) \approx G'(\bar{k})\,(k-\bar{k}) $$
 
 #### **Step 2** Substitusi ke ODE
 
-$$ \dot{k}\approx G ()(k -^{'}\bar{k}\bar{k}) $$
+$$ \dot{k} \approx G'(\bar{k})\,(k-\bar{k}) $$
 
-**Step 3** Definisikan deviation $d(t):= k(t) -\bar{k}$ Karena konstan: $\bar{k}\dot{d}=\dot{k}$.
+**Step 3** Definisikan deviation $d(t):= k(t)-\bar{k}$. Karena $\bar{k}$ konstan: $\dot{d}=\dot{k}$.
 
 ODE jadi:
 
-$$ \dot{d}=G () \cdot ^{'}\bar{k}d $$
+$$ \dot{d} = G'(\bar{k})\,d $$
 
 Ini ODE linear paling sederhana — bentuk $\dot{x}=ax$ dari Bab 6.
 
 #### **Step 4** Solve ODE linear
 
-$$ d(t) = d_{0}^{eG()\cdott} \cdot ^{'\bar{k}} $$
+$$ d(t) = d_{0}\,e^{G'(\bar{k})\,t} $$
 
-Kembali ke: $k$
+Kembali ke $k$:
 
-$$ k(t) -\bar{k}=(k_{0} -\bar{k})e^{G()\cdott'\bar{k}} $$
+$$ k(t)-\bar{k} = (k_{0}-\bar{k})\,e^{G'(\bar{k})\,t} $$
 
-### Hitung $G ()^{'}\bar{k}$ untuk Cobb-Douglas
+### Hitung $G'(\bar{k})$ untuk Cobb-Douglas
 
 #### **Step 1** Turunkan $G$
 
-$G(k) = sk-^{\alpha }(n + \delta)k$, maka:
+$G(k) = sk^{\alpha} - (n+\delta)k$, maka:
 
-$$ G (k) =^{'}\alpha sk^{\alpha-1}-(n + \delta) $$
+$$ G'(k) = \alpha s k^{\alpha-1} - (n+\delta) $$
 
 #### **Step 2** Evaluasi di $\bar{k}$
 
-$$ G () =^{'}\bar{k}\alpha s\bar{k}^{\alpha-1}-(n + \delta) $$
+$$ G'(\bar{k}) =\alpha s\bar{k}^{\alpha-1}-(n + \delta) $$
 
-**Step 3** Pakai persamaan steady state $s\bar{k}^{\alpha }=(n + \delta)\bar{k}$ Bagi kedua sisi dengan: $\bar{k}$
+**Step 3** Pakai persamaan steady state $s\bar{k}^{\alpha}=(n+\delta)\bar{k}$. Bagi kedua sisi dengan $\bar{k}$:
 
 $$ s\bar{k}^{\alpha-1}=(n + \delta) $$
 
-**Step 4** Substitusi ke $G ()^{'}\bar{k}$
+**Step 4** Substitusi ke $G'(\bar{k})$
 
-$$ G () =^{'}\bar{k}\alpha (n + \delta) -(n + \delta) = (\alpha -1)(n + \delta) $$
+$$ G'(\bar{k}) = \alpha(n+\delta) - (n+\delta) = (\alpha-1)(n+\delta) $$
 
 Karena $\alpha < 1$:
 
-$$ G () = -(1 -\alpha)(n + \delta) < 0^{'}\bar{k} $$
+$$ G'(\bar{k}) = -(1-\alpha)(n+\delta) < 0 $$
 
 ### Half-life — berapa lama deviation separuh berkurang?
 
@@ -461,13 +455,11 @@ $$
 
 Substitusi solusi:
 
-$$ eG ()\cdot t^{'}\bar{k}=1 $$
-
-$2$
+$$ e^{G'(\bar{k})\,t} = \tfrac{1}{2} $$
 
 #### **Step 2** Take log natural
 
-$$ G () \cdot ^{'}\bar{k}t= ln(0.5) = -ln 2 $$
+$$ G'(\bar{k})\,t = \ln(0.5) = -\ln 2 $$
 
 #### **Step 3** Solve untuk $t$
 
@@ -479,7 +471,7 @@ $$
 
 Untuk $\alpha = 1/3, n + \delta = 0.08$:
 
-$$ ∣G ()∣=^{'}\bar{k}(2/3)(0.08) \approx 0.053 $$
+$$ |G'(\bar{k})| = (2/3)(0.08) \approx 0.053 $$
 
 $t_{1/2} =0.693/0.053 \approx 13$ tahun
 
@@ -501,7 +493,7 @@ Titik bingung yang umum: perhitungan rate of convergence. Kuncinya: $\tilde{k}$ 
 
 ## Masalah
 
-Solow-Swan dasar menunjukkan ekonomi konvergen ke. Yaitu, tidak ada long-run growth. Kontradiksi dengan $\bar{k}$ data: negara seperti AS sudah tumbuh per kapita selama 150+ tahun.
+Solow-Swan dasar menunjukkan ekonomi konvergen ke $\bar{k}$ — yaitu, tidak ada long-run growth per kapita. Kontradiksi dengan data: negara seperti AS sudah tumbuh per kapita selama 150+ tahun.
 
 ## Exercise 9.11 — AK model
 
@@ -606,7 +598,7 @@ Pakai fakta matematis: $L/Y$ konstan ⟺ $g_{L} =g_{Y}$.
 
 Tapi $g_{L} =n$ (population growth) dan $g_{Y} >n$ dalam BGP per capita growth.
 
-Maka $g_{L}^{g} =_{Y}$ → $L/Y$ TIDAK konstan. Lebih spesifik, $L/Y$ menurun dengan rate $g_{L} -g_{Y} =$ $n -g_{Y} <0$.
+Maka $g_{L}^{ \ne g} =_{Y}$ → $L/Y$ TIDAK konstan. Lebih spesifik, $L/Y$ menurun dengan rate $g_{L} -g_{Y} =$ $n -g_{Y} <0$.
 
 #### **Step 7** Konsekuensi: tech harus menyentuh sisi $L$
 
@@ -649,7 +641,7 @@ Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
 $$ Y= A_{H}^{[}\gamma (A_{K}K)+ (1 -\gamma)(A^{\sigma }_{L}L)^{\sigma }]^{1/\sigma } $$
 
-Dengan $\sigma \in (-\infty, 1), \sigma =0$. Elasticity of substitution $= 1/(1 -\sigma)$. Untuk $\sigma \to 0$ (Cobb-Douglas), elasticity = 1.
+Dengan $\sigma \in (-\infty, 1), \sigma = \ne 0$. Elasticity of substitution $= 1/(1 -\sigma)$. Untuk $\sigma \to 0$ (Cobb-Douglas), elasticity = 1.
 
 ## Skenario 1 — Hicks-neutral
 
@@ -811,7 +803,7 @@ Elasticity: Cobb-Douglas punya elasticity of substitution = 1 (unit elasticity).
 ```{admonition} Catatan
 :class: note
 
-*Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk $\sigma =0$ generic, ketiga jenis tech tidak equivalent.*
+*Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk $\sigma = \ne 0$ generic, ketiga jenis tech tidak equivalent.*
 ```
 ## Konsep 12 — Tension: Uzawa vs Cobb-Douglas vs Data
 
@@ -967,7 +959,7 @@ Strukturnya sama, hanya $n + \delta$ jadi $n + g + \delta$.
 
 ## Per capita income di BGP
 
-$Y /L = Af(k)$. Di BGP, $f()\bar{k}$ konstan, jadi $Y /L$ tumbuh dengan rate. $g$
+$Y /L = Af(k)$. Di BGP, $f(\bar{k})$ konstan, jadi $Y/L$ tumbuh dengan rate $g$.
 
 ```{admonition} Hasil kunci
 :class: important
@@ -1009,15 +1001,7 @@ Fungsi menurun monoton
 
 ### Sketsa phase plot k̇/k
 
-sf(k)/k
-
-n+g+δ
-
-### k k̇/k > 0k̇/k > 0k̄k̇/k < 0k̇/k < 0
-
-k naikk naikk turunk turun
-
-Phase plot Solow-Swan dalam $(k,/k)\dot{k}$ space. Steady state adalah perpotongan kurva $\bar{k}sf(k)/k$ (hijau) dengan garis $(n + g + \delta)$ (ungu).
+*Sketsa (pada PDF): phase plot Solow-Swan dalam ruang $(k, \dot{k}/k)$ — kurva $sf(k)/k$ menurun memotong garis datar $n+g+\delta$ tepat di $\bar{k}$; di kiri $\bar{k}$: $\dot{k}/k>0$ ($k$ naik), di kanan: $\dot{k}/k<0$ ($k$ turun).*
 
 ### Cara membaca phase plot
 
@@ -1037,7 +1021,7 @@ Garis horizontal $(n + g + \delta)$ naik. Perpotongan baru di $\bar{k}^{'}<\bar{
 
 #### **Step 3** Dinamika transisi
 
-Pada $k = \bar{k}$ (lama): $sf()/\bar{k}\bar{k}<n + g+^{'}\delta$ → $\dot{k}/k <0$. Modal mulai turun ke $\bar{k}^{'}$.
+Pada $k = \bar{k}$ (lama): $sf(\bar{k})/\bar{k} < n+g+\delta$ → $\dot{k}/k <0$. Modal mulai turun ke $\bar{k}^{'}$.
 
 #### **Step 4** Efek pada per capita income $\tilde{y}$
 
@@ -1058,7 +1042,7 @@ Shock naik: garis horizontal naik dari $gn + g + \delta$ ke $n + g+^{'}\delta$. 
 ```{admonition} Catatan
 :class: note
 
-Hasil paradoksal Shock 1: naik → turun, tapi growth rate per capita income naik. $g\bar{k}$ Pelajaran: rendah bukan berarti ekonomi buruk. Yang penting adalah growth rate, $\bar{k}\tilde{y}$
+Hasil paradoksal Shock 1: $g$ naik → $\bar{k}$ turun, tapi growth rate per capita income naik. Pelajaran: $\bar{k}$ rendah bukan berarti ekonomi buruk. Yang penting adalah growth rate, $\bar{k}\tilde{y}$
 ```
 ### bukan level. $\bar{k}$
 
@@ -1074,7 +1058,7 @@ Garis horizontal $(n + g + \delta)$ turun. Perpotongan baru di $\bar{k}^{'}>\bar
 
 #### **Step 3** Dinamika transisi
 
-Pada $k = \bar{k}$ (lama): $sf()/\bar{k}\bar{k}>n+^{'}g + \delta$ → $\dot{k}/k >0$. Modal mulai naik ke $\bar{k}^{'}$.
+Pada $k = \bar{k}$ (lama): $sf(\bar{k})/\bar{k} > n+g+\delta$ → $\dot{k}/k >0$. Modal mulai naik ke $\bar{k}^{'}$.
 
 #### **Step 4** Efek pada per capita income
 
@@ -1082,7 +1066,7 @@ Selama transisi: $f(k)$ naik, $A$ tumbuh dengan rate sama. $g$
 
 Per capita income tumbuh lebih cepat dari selama transisi. $g$
 
-Di BGP baru: growth rate kembali ke, tapi level lebih tinggi. $g$
+Di BGP baru: growth rate kembali ke $g$, tapi level lebih tinggi.
 
 k̇/k
 
@@ -1112,7 +1096,7 @@ Modal turun dari ke $\bar{k}\bar{k}^{'}$.
 
 Selama transisi: $f(k)$ turun, $A$ tumbuh dengan rate sama. $g$ Per capita income tumbuh lebih lambat dari selama transisi. $g$
 
-Di BGP baru: growth rate kembali ke, tapi level lebih rendah. $g$
+Di BGP baru: growth rate kembali ke $g$, tapi level lebih rendah.
 
 ## Ringkasan tiga shock
 
@@ -1128,9 +1112,9 @@ Di BGP baru: growth rate kembali ke, tapi level lebih rendah. $g$
 
 **Level effects vs Growth effects**
 
-*Perubahan $s, n, \delta$: hanya level effects — level steady state berubah, growth rate jangka panjang tidak Perubahan: growth effects — growth rate jangka panjang berubah $g$*
+*Perubahan $s, n, \delta$: hanya level effects — level steady state berubah, growth rate jangka panjang tidak Perubahan $g$: growth effects — growth rate jangka panjang berubah $g$*
 
-### Hanya tech progress () yang bisa mengubah long-run growth rate. $g$
+**Hanya tech progress ($g$) yang bisa mengubah long-run growth rate.**
 
 ## Implikasi kebijakan
 
@@ -1161,17 +1145,11 @@ Inilah mengapa Solow menyebut tech progress sebagai "manna from heaven" — di m
 ```
 ## Tiga deficiency Solow-Swan
 
-$g$ "manna from heaven" — model tidak menjelaskan dari mana tech
+**Tech exogenous** — $g$ "manna from heaven": model tidak menjelaskan dari mana tech progress datang.
 
-**Tech Exogenous** — progress datang.
+**Saving exogenous** — $s$ assumed constant: tidak ada optimisasi household; model tidak bisa menjawab pertanyaan welfare.
 
-$s$ assumed constant — tidak ada optimisasi household. Model tidak bisa
-
-**Saving Exogenous** — jawab pertanyaan welfare.
-
-Mengapa beberapa negara konvergen, yang lain tidak? Mengapa $A$ dan $s$
-
-**Cross-country** — berbeda antar negara?
+**Cross-country** — Mengapa beberapa negara konvergen dan yang lain tidak? Mengapa $A$ dan $s$ berbeda antar negara?
 
 ## Roadmap ke depan
 

@@ -56,7 +56,7 @@ Intuisi geometris: $A$ "memetakan" ke kelipatannya sendiri — yaitu, tidak rota
 
 Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
 
-Untuk solusi non-trivial ($v=0$), matriks $(A -\lambda I)$ harus singular:
+Untuk solusi non-trivial ($v= \ne 0$), matriks $(A -\lambda I)$ harus singular:
 
 $$ det(A -\lambda I) = 0 $$
 
@@ -69,11 +69,11 @@ Ini disebut persamaan karakteristik.
 
 **Untuk matriks $2 \times 2$**
 
-$$ \lambda -^{2}tr(A) \cdot \lambda + det(A)= 0 $$
+$$ \lambda^{2} - tr(A)\,\lambda + \det(A) = 0 $$
 ```
-### di mana:
+di mana:
 
-### $tr(A)= a_{11} +a_{22}$ (jumlah diagonal)
+- $tr(A)= a_{11} +a_{22}$ (jumlah diagonal)
 
 $$ det(A)= a_{11}a_{22} -a_{12}a_{21} $$
 
@@ -223,7 +223,7 @@ Untuk eigenvalues $\lambda = \alpha \pm i\beta$:
 
 Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $cos(\beta t), sin(\beta t)$ (rotation). Hasilnya:
 
-*$\alpha < 0, \beta =0$: stable spiral (focus) $\alpha > 0, \beta =0$: unstable spiral $\alpha = 0, \beta =0$: center (orbit periodic)*
+*$\alpha < 0, \beta = \ne 0$: stable spiral (focus) $\alpha > 0, \beta = \ne 0$: unstable spiral $\alpha = 0, \beta = \ne 0$: center (orbit periodic)*
 
 Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
 ```
@@ -330,7 +330,7 @@ $\alpha = -1$ (real part), $\beta = 2$ (imaginary part)
 
 #### **Step 5** Klasifikasi
 
-$\alpha < 0$ dan $\beta =0$ → stable spiral
+$\alpha < 0$ dan $\beta = \ne 0$ → stable spiral
 
 ## Interpretasi qualitative
 
@@ -366,7 +366,7 @@ Sudah diturunkan di Bab 5:
 
 Untuk parameter realistik ($\alpha = 0.33, n + g + \delta = 0.06$):
 
-$∣G ()∣=^{'}\bar{k}0.67 \times 0.06 = 0.04$ per tahun Half-life: $ln 2/0.04 \approx 17$ tahun
+$|G'(\bar{k})| = 0.67 \times 0.06 \approx 0.04$ per tahun. Half-life: $\ln 2/0.04 \approx 17$ tahun.
 
 ```{admonition} Koneksi
 :class: important
@@ -387,7 +387,7 @@ Jacobian di steady state menghasilkan saddle point — satu eigenvalue negatif, 
 
 Implikasi mendalam:
 
-Komponen $c_{2}^{\lambda }e^{2t}v_{2}$ dengan $\lambda _{2} >0$ meledak → harus pilih $c_{2} =0$ (transversality) Solusi efektif: hanya komponen sepanjang $v_{1}$ — saddle path Untuk tiap $k_{0}$, ada satu $c_{0}$ yang benar (di saddle path) Eigenvektor $v_{1}$ memberi slope policy function $c = c(k)$ dekat steady state
+**Implikasi** — Komponen $c_{2}e^{2t}v_{2}$ dengan $\lambda_{2}>0$ meledak → harus pilih $c_{2}=0$ (transversality). Solusi efektif: hanya komponen stabil.
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -421,11 +421,11 @@ Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progr
 
 ## Tiga jenis "tidak bisa di-solve"
 
-**SKENARIO 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=$ $-2x$, solusi $Ce^{-2t}$.
+**SKENARIO 1** — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=-2x$, solusi $Ce^{-2t}$.
 
-**SKENARIO 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x2}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
+**SKENARIO 2** — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: $\dot{x}=e^{-x^{2}}$, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak
 
-**Skenario 3** — memberi insight. Jarang, biasanya melibatkan fungsi spesial.
+**Skenario 3** — Solusi eksplisit eksis tapi terlalu rumit untuk memberi insight. Jarang; biasanya melibatkan fungsi spesial.
 
 **Mengapa "linearisasi + eigenvalue" jadi alat utama**
 

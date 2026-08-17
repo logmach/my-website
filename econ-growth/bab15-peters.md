@@ -300,15 +300,17 @@ Ini masalah STATIS. Bagian 1 pakai Lagrangian statis (household pilih di satu ti
 
 Bagian 1 — Sales equalized
 ```
-#### `Step 1` Household pilih untuk max s.t. budget `Step 2` Lagrangian statis (multiplier = shadow price budget)
+#### Step 1 — Household memilih $\{c_{j}\}$ untuk max utility s.t. budget.
 
-#### `Step 3` FOC terhadap
+#### Step 2 — Lagrangian statis (multiplier = shadow price budget).
 
-#### `Step 4` Pin down dari budget
+#### Step 3 — FOC terhadap $c_{j}$.
 
-(karena numeraire,)
+#### Step 4 — Pin down multiplier dari budget.
 
-#### `Step 5` Hasil
+(karena numeraire: total belanja $=Y$).
+
+#### Step 5 — Hasil
 
 ```{admonition} Penjelasan intuitif
 :class: tip
@@ -317,9 +319,11 @@ Cobb-Douglas membuat konsumen membelanjakan porsi yang sama di tiap kategori. Ka
 
 Bagian 2 — Employment (15.6)
 ```
-#### `Step 1` Dari production
+#### Step 1 — Dari production: $l_{j}=y_{j}/q_{j}$.
 
-#### `Step 2` Substitusi (sales) dan (limit price) `Step 3` Kenali
+#### Step 2 — Substitusi sales ($p_{j}y_{j}=Y$) dan limit price ($p_{j}=w/q_{j}^{F}$).
+
+#### Step 3 — Kenali
 
 ```{admonition} Penjelasan intuitif
 :class: tip
@@ -328,9 +332,9 @@ adalah labor yang dibutuhkan kalau pasar kompetitif (markup = 1). Faktor adalah 
 
 Bagian 3 — Profit (15.7)
 ```
-#### `Step 1` Profit = revenue − cost
+#### Step 1 — Profit = revenue − cost
 
-#### `Step 2` Substitusi dan
+#### Step 2 — Substitusi dan
 
 ```{admonition} Hasil kunci
 :class: important
@@ -353,11 +357,11 @@ Markup firm (harmonic mean)
 
 Tunjukkan total employment firm adalah (15.8), dengan harmonic mean.
 
-#### `Step 1` Total labor = jumlah labor tiap produk
+#### Step 1 — Total labor = jumlah labor tiap produk
 
-#### `Step 2` Faktorkan dan rata-rata
+#### Step 2 — Faktorkan dan rata-rata
 
-#### `Step 3` Definisi (harmonic mean) → hasil (15.8)
+#### Step 3 — Definisi (harmonic mean) → hasil (15.8)
 
 ```{admonition} Penjelasan formal
 :class: note
@@ -379,7 +383,7 @@ Linear positif.
 
 Lebih banyak produk → firm lebih besar.
 
-**Efek** — Inversely proportional:. Markup tinggi → firm lebih kecil (per produk).
+**Efek** — Inversely proportional: $l_{j}\propto 1/\mu_{j}$. Markup tinggi → firm lebih kecil (per produk).
 
 ```{admonition} Penjelasan intuitif
 :class: tip
@@ -411,11 +415,10 @@ Total labor di produksi
 
 ### Total labor produksi (15.9)
 
-#### `Step 1` Integrate across firm
+#### Step 1 — Integrate across firm
 
 **Step 2** — Tiap produk dimiliki tepat satu firm → integrate across produk: $L_{P}=\int_{0}^{1} l_{j}\,dj$
 
-#### distribusi
 
 ### Exercise 15.8 — Equilibrium wage (15.10)
 
@@ -423,13 +426,13 @@ Tunjukkan equilibrium wage adalah (15.10): upah berbanding lurus dengan output a
 
 **Step 1** — Mulai dari (15.2), Bertrand:
 
-#### `Step 2` Suku pertama = (definisi)
+#### Step 2 — Suku pertama = (definisi)
 
-#### `Step 3` Suku kedua: substitusi (15.6)
+#### Step 3 — Suku kedua: substitusi (15.6)
 
-#### `Step 4` Gabung — suku CANCEL di kedua sisi
+#### Step 4 — Gabung — suku CANCEL di kedua sisi
 
-#### `Step 5` Eksponen → hasil (15.10)
+#### Step 5 — Eksponen → hasil (15.10)
 
 ```{admonition} Penjelasan intuitif
 :class: tip
@@ -438,9 +441,9 @@ Upah = produktivitas dikali "wedge markup". Kalau markup tinggi di mana-mana, se
 ```
 ### Output ekonomi (15.11)
 
-#### `Step 1` Substitusi (15.10) ke (15.9), solve
+#### Step 1 — Substitusi (15.10) ke (15.9), solve
 
-#### `Step 2` Hasil (15.11)
+#### Step 2 — Hasil (15.11)
 
 **Gambaran Besar**
 
@@ -534,13 +537,13 @@ Kualitas membentuk barisan geometrik. Naik anak tangga → kualitas.
 
 Verifikasi konsistensinya dengan definisi markup agregat.
 
-#### `Step 1` Markup dari Bertrand (15.5)
+#### Step 1 — Markup dari Bertrand (15.5)
 
 **Step 2** — Tulis kualitas dalam anak tangga,
 
-#### `Step 3` Definisi gap
+#### Step 3 — Definisi gap
 
-#### `Step 4` karena pemenang strictly ahead
+#### Step 4 — karena pemenang strictly ahead
 
 Markup minimum.
 
@@ -565,11 +568,9 @@ Jawab: Identitas firm tidak relevan untuk outcome market. Markup hanya bergantun
 ```{admonition} Penjelasan formal
 :class: note
 
-Tiga kanal pertumbuhan, semua menaikkan satu langkah ke, tapi efek berbeda pada markup:
+Tiga kanal pertumbuhan — semua menaikkan kualitas satu anak tangga, tapi efeknya pada markup berbeda:
 
-Gap naik. Markup naik faktor
-
-`Own-innovation `. Contra-competition.
+**Own-innovation** — Gap naik; markup naik faktor $\lambda$. Contra-competition.
 
 **Expansion / Entry** — Gap reset ke 1; markup turun ke $\lambda$. Pro-competition (creative destruction).
 ```
@@ -716,11 +717,11 @@ Additive separable: nilai firm = kali nilai baseline per produk + jumlah premium
 ```
 ### Exercise 15.16 — Interpretasi dan
 
-Interpretasikan dan.
+Interpretasikan $A$ dan $B$ — dua komponen nilai.
 
-Nilai "memiliki satu produk" baseline (gap 1). `(Product value)` Profit baseline + bonus opsi expansion. Discount.
+**$A$ (product value)** — Nilai "memiliki satu produk" baseline (gap 1): profit baseline + bonus opsi expansion, terdiskon.
 
-Nilai tambahan dari gap. Extra profit `(Markup value)` + bonus opsi own-innovation. Naik seiring lebar gap kualitas.
+**$B$ (markup value)** — Nilai tambahan dari gap: extra profit + bonus opsi own-innovation. Naik seiring lebar gap.
 
 ```{admonition} Penjelasan formal
 :class: note
@@ -736,21 +737,21 @@ Discount efektif: firm mendiskon future dengan impatience PLUS hazard kanibalism
 
 Derive value function lewat guess-and-verify.
 
-#### `Step 1` Tebak additive separable
+#### Step 1 — Tebak additive separable
 
 Masuk akal: profit additive, creative destruction hit tiap produk independen, keputusan per-produk.
 
-#### `Step 2` Hitung selisih nilai tiap jump
+#### Step 2 — Hitung selisih nilai tiap jump
 
 Creative destruction (kehilangan produk).
 
 Own-innovation. Expansion.
 
-#### `Step 3` Substitusi ke HJB, pisahkan per-komponen
+#### Step 3 — Substitusi ke HJB, pisahkan per-komponen
 
 Karena semua additive, HJB terpecah jadi persamaan untuk (baseline) dan (premium) secara terpisah.
 
-#### `Step 4` Solve & verify
+#### Step 4 — Solve & verify
 
 Menghasilkan formula (15.18). Substitusi balik konfirmasi memenuhi HJB. Bekerja karena struktur HJB linear dalam komponen value (cocok dengan additive profit + independent jumps).
 
@@ -758,33 +759,33 @@ Properti 2 — Optimal investments (15.19, 15.20)
 
 Expansion rate (15.19):
 
-#### `Step 1` FOC expansion: marginal value = marginal cost
+#### Step 1 — FOC expansion: marginal value = marginal cost
 
-#### `Step 2` Free entry: produk baru (gap 1) = nilai entrant
+#### Step 2 — Free entry: produk baru (gap 1) = nilai entrant
 
-#### `Step 3` Samakan, solve
+#### Step 3 — Samakan, solve
 
 ```{admonition} Hasil kunci
 :class: important
 
-konstan, ditentukan parameter saja! Karena expand ke market baru memberi produk gap 1 — persis sama dengan yang didapat entrant — free entry menyamakan nilainya ke, membuat FOC expansion independen dari kondisi agregat.
+**$x^{*}$ konstan**, ditentukan parameter saja! Karena expand ke market baru memberi produk gap 1 — persis sama dengan yang didapat entrant — free entry menyamakan nilainya ke, membuat FOC expansion independen dari kondisi agregat.
 
 Own-innovation rate (15.20):
 ```
 ```{admonition} Penjelasan formal
 :class: note
 
-Implicit (di kedua sisi). Tergantung (kondisi agregat) — beda dari. Faktor = incremental gain naik satu gap.
+**$I^{*}$ implicit** (muncul di kedua sisi): tergantung kondisi agregat — beda dari $x^{*}$. Faktor kuncinya: incremental gain dari naik satu gap.
 ```
-### Exercise 15.17 — Interpretasi, dan
+### Exercise 15.17 — Interpretasi $I^{*}$ dan $x^{*}$
 
 Interpretasikan behavior kebijakan optimal $I^{*}$ dan $x^{*}$. Apa artinya untuk dinamika firm?
 
-Konstan, parameter saja. Tergantung rasio `(expansion)`: expand vs entry. Stabil, tak terpengaruh agregat.
+**Expansion $x^{*}$** — Konstan, parameter saja: tergantung rasio biaya expand vs entry. Stabil, tak terpengaruh agregat.
 
 **Own-innovation** — Tergantung kondisi agregat dan gap kualitas: profit tinggi → intensitas naik; impatient/risky → turun.
 
-TIDAK masuk (own-innovation tidak gusur firm lain). Hanya dan.
+Own-innovation TIDAK menggusur firm lain — creative destruction $\tau$ hanya berasal dari $x$ dan $z$.
 
 ```{admonition} Koneksi
 :class: important
@@ -834,23 +835,23 @@ Gap: Inflow = produk gap naik via own- innovation. Outflow = naik via own-innova
 
 **Step 1** — Impose stationarity:
 
-#### `Step 2` Solve
+#### Step 2 — Solve
 
-#### `Step 3` Solve recursively
+#### Step 3 — Solve recursively
 
 Definisi. Maka.
 
-#### `Step 4` Distribusi geometrik
+#### Step 4 — Distribusi geometrik
 
 (Cek: ✓)
 
-#### `Step 5` CDF atas gap
+#### Step 5 — CDF atas gap
 
 **Step 6** — Change of variable ke markup,
 
 **Step 7** — Sederhanakan,
 
-#### `Step 8` Distribusi Pareto
+#### Step 8 — Distribusi Pareto
 
 ```{admonition} Penjelasan intuitif
 :class: tip
@@ -865,29 +866,29 @@ Mengapa geometrik menjadi Pareto? Karena markup adalah transformasi eksponensial
 Definisikan,. Maka:
 
 1. Distribusi markup stasioner: (Pareto).
-2. Misallocation & labor share,.
+2. Misallocation & labor share.
 ```
-### Derivasi dan (sering di final)
+### Derivasi $m(\Delta)$ dan tail Pareto
 
-Density Pareto,.
+Density-nya Pareto.
 
-#### `Step 1` Labor share
+#### Step 1 — Labor share
 
-#### `Step 2` via substitusi
+#### Step 2 — via substitusi
 
-#### `Step 3` Misallocation
+#### Step 3 — Misallocation
 
 ### Exercise 15.19 — Comparative statics
 
 Bagaimana lebih tinggi mempengaruhi (1) Pareto tail, (2) misallocation?
 
-#### `Step 1` naik → naik
+#### Step 1 — naik → naik
 
-#### `Step 2` naik → tail tipis
+#### Step 2 — naik → tail tipis
 
 Tail turun lebih cepat → sedikit firm markup tinggi.
 
-#### `Step 3` naik → naik (less misallocation): (no misallocation). Juga naik.
+#### Step 3 — naik → naik (less misallocation): (no misallocation). Juga naik.
 
 **Hasil Kunci**
 
@@ -921,15 +922,15 @@ Jawaban atas misteri Hsieh-Klenow: misallocation TIDAK perlu diasumsikan eksogen
 
 Bagaimana semua bagian terhubung.
 
-**Static (15.3.3)** — Bertrand → markup → sales, employment, profit per market → agregat → wedge. Tools: Lagrangian statis + aljabar.
+**Static (15.3.3)** — Bertrand → markup → sales, employment, profit per market → agregat → wedge. Tools: Lagrangian statis + aljabar..
 
 **Dynamic (15.3.4)** — HJB firm (multi-jump asset pricing) → pilih intensitas inovasi optimal. Free entry → kondisi nilai masuk. Tools: HJB + complementary slackness.
 
-**BGP (15.3.5)** — Closed-form value function, konstan (parameter), tergantung agregat. Growth.
+**BGP (15.3.5)** — Closed-form value function; $x^{*}$ konstan (parameter), $I^{*}$ tergantung agregat. Growth $g$ dari agregasi inovasi.
 
-**Distribution(15.3.5.1)** — Flow accounting → geometrik gap → Pareto markup. Churning menentukan.
+**Distribution (15.3.5.1)** — Flow accounting → distribusi geometrik gap → Pareto markup. Churning menentukan misallocation.
 
-### Tiga rumus yang WAJIB hafal untuk final
+### Tiga rumus yang wajib melekat
 
 **Hasil Kunci**
 
@@ -961,7 +962,7 @@ dari markup heterogen.
 
 ## Self-Assessment Bab 15
 
-Cek pemahaman sebelum final 6 Juni.
+Cek pemahaman menyeluruh atas bab ini.
 
 ### Konteks & setup
 
@@ -993,7 +994,7 @@ Cek pemahaman sebelum final 6 Juni.
 - ☐ Creative destruction (15.17):
 - ☐ Ex 15.14: labor clearing
 
-### BGP & distribusi (★ final)
+### BGP & distribusi (★ inti)
 
 - ☐ Prop 15.2: value function (15.18) additive separable
 - ☐ Ex 15.16: product value, markup premium
@@ -1016,4 +1017,4 @@ Economic Growth Personal Study Notes · Peters (2020) · Schumpeterian R&D II
 
 Bab terakhir kursus · Misallocation endogen dari dinamika kompetisi
 
-✦ Selamat menempuh final 6 Juni ✦
+✦ Selamat — seluruh materi kursus tuntas ✦

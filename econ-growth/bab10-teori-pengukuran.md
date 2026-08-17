@@ -89,7 +89,7 @@ Fraksi dari $Y$ yang ke modal = $\alpha _{K}$. Inilah interpretation "income sha
 ```{admonition} Catatan
 :class: note
 
-*Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, $R=F_{K}$, dan formula bisa misleading. Plus dengan Euler's Theorem (Exercise 9.2): $\alpha _{K} +\alpha _{L} =1$.*
+*Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, $R= \ne F_{K}$, dan formula bisa misleading. Plus dengan Euler's Theorem (Exercise 9.2): $\alpha _{K} +\alpha _{L} =1$.*
 ```
 ## Solow residual — TFP measurement
 
@@ -207,13 +207,9 @@ Solow-Swan memprediksi negara di bawah steady state tumbuh lebih cepat. Apakah i
 
 Distinction yang harus jelas dulu:
 
-$y:= Y /(AL) = f(k)$. Per effective worker. Konstan di BGP. Tidak
+**$y$ (per effective worker)** — $y:=Y/(AL)=f(k)$. Konstan di BGP. Tidak observable langsung karena butuh $A$.
 
-$Y$ `(EFFECTIVE WORKER)`
-
-observable karena butuh $$.
-
-$A_{Y}^{~}$ `(PHYSICAL WORKER)` $\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y$. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). $g$
+**$\tilde{y}$ (per physical worker)** — $\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y$. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). $g$
 
 ```{admonition} Catatan
 :class: note
@@ -328,7 +324,7 @@ $$
 
 #### **Step 4** Evaluasi di $k^{*}$ pakai steady state
 
-$sf(k)/k=^{**}\delta + g + n$. Substitusi:
+$sf(k^{*})/k^{*}=\delta + g + n$. Substitusi:
 
 $$
 \left.\frac{\partial G}{\partial \ln k}\right|_{k^{*}}=(\delta+g+n)\left(\varepsilon_{f}(k^{*})-1\right)
@@ -338,9 +334,7 @@ $$
 
 $$ \dot{k}\approx (\varepsilon _{f}(k) -_{*}1)(\delta + g + n)(ln k -ln k)_{*} $$
 
-$k$
-
-## Step 4 — Convergence equation final
+## Step 4 — Convergence equation (bentuk akhir)
 
 Substitusi (10.6) dan konversi ke $ln\tilde{y}$: Pakai Exercise 10.6 untuk hubungkan $ln k -ln k^{*}$ ke $ln\tilde{y}-lny^{~*}$:
 
@@ -395,11 +389,11 @@ Konsisten dengan growth Jepang ~7-10% per tahun selama 1950-1970.
 
 ### Steady state level berbeda antar negara
 
-**Amerika** — $D\approx 0$ (sudah di steady state). $y^{~*}$ tinggi. Growth ≈ (slow). $g$ $D(0)$ besar negatif. $y^{~*}$ tinggi (institusi baik). Growth ≈ $g + ∣\beta D(0)∣$
+**Amerika** — $D\approx 0$ (sudah di steady state), $\tilde{y}^{*}$ tinggi → growth $\approx g$ (slow).
 
-**Jepang Post-1945** — (cepat).
+**Jepang pasca-1945** — $D(0)$ besar negatif, $\tilde{y}^{*}$ tinggi (institusi baik) → growth $\gg g$ (cepat).
 
-**Zimbabwe** — $D\approx 0$ atau positive. $y^{~*}$ rendah (institusi buruk). Growth ≈ (stuck). $g$
+**Zimbabwe** — $D\approx 0$ atau positif, $\tilde{y}^{*}$ rendah (institusi buruk) → growth $\approx g$ (stuck).
 
 ```{admonition} Ringkasan besar
 :class: important
@@ -408,9 +402,8 @@ Konsisten dengan growth Jepang ~7-10% per tahun selama 1950-1970.
 
 *1. Menentukan steady state level: tinggi → $\delta k^{*}$ rendah 2. Menentukan convergence rate: tinggi → tinggi → konvergensi cepat $\delta \beta$*
 
-Untuk menjelaskan variasi cross-country growth, peran 1 ($y^{~*}$) dan posisi $D(0)$ lebih
+Untuk menjelaskan variasi cross-country growth, peran 1 ($\tilde{y}^{*}$) dan posisi $D(0)$ lebih dominan daripada peran 2 ($\beta$).
 ```
-### dominan dari peran 2 (). $\beta$
 
 ## Reduced-form regression
 
@@ -492,7 +485,7 @@ Pakai $K= AL \cdot k$ untuk cancel:
 
 $$ \dot{k}=s_{k}f(k, h) -(\delta _{k} +g + n)k $$
 
-Analog untuk. $\dot{h}$
+Analog untuk $\dot{h}$.
 
 ```{admonition} Catatan
 :class: note
@@ -637,13 +630,11 @@ $$ h_{Nh}(k) =(\delta _{h} + g + ns^{h})^{1/(1-\alpha)}\cdot k^{\beta/(1-\alpha)
 
 ## Karakteristik kedua nullcline
 
-**Slope** — $N_{K}$ $(1 -\beta)/\alpha$ — fungsi meningkat dalam, lewat origin $k$
+**Slope $N_{k}$** — $(1-\beta)/\alpha$: fungsi meningkat dalam $k$, lewat origin.
 
-**Slope** — $N_{H}$ $\beta /(1 -\alpha)$ — fungsi meningkat dalam, lewat origin $k$
+**Slope $N_{h}$** — $\beta/(1-\alpha)$: fungsi meningkat dalam $k$, lewat origin.
 
-$(1 -\beta)/\alpha > \beta /(1 -\alpha)$ karena $1 -\alpha -\beta > 0$. $N_{k}$ lebih
-
-**Perbandingan** — curam dari $N_{h}$.
+**Perbandingan** — $(1-\beta)/\alpha > \beta/(1-\alpha)$ karena $1-\alpha-\beta>0$: $N_{k}$ lebih curam dari $N_{h}$.
 
 ### Bukti $N_{k}$ lebih curam
 
@@ -721,7 +712,7 @@ Pada $N_{h}\partial $: $T_{h}/\partial h =(\alpha -1)(\delta _{h} +g + n) < 0$ (
 
 ## Vector field di nullcline
 
-Di $N_{k}$: $\dot{k}=0$, vector vertikal (hanya). Atas $\dot{h}N_{h}$: bawah, bawah $N_{h}$: atas. Di $N_{h}$: $\dot{h}=0$, vector horizontal (hanya). Atas $\dot{k}N_{k}$: kanan, bawah $N_{k}$: kiri.
+**Vector di nullcline** — Di $N_{k}$ ($\dot{k}=0$): vector vertikal, arahnya mengikuti tanda $\dot{h}$. Di $N_{h}$ ($\dot{h}=0$): vector horizontal, arahnya mengikuti tanda $\dot{k}$.
 
 ## Lintasan solusi (IVP)
 
@@ -840,11 +831,11 @@ MRW asumsi: $\bar{A}_{j} =A \cdot \varepsilon _{j}$ dengan $\varepsilon _{j}$ or
 
 ## Hasil estimasi MRW
 
-**Adj** — $R^{2}$ 0.78 — 78% variasi income antar negara dijelaskan oleh $s_{k},s_{h},n$
+**Adjusted $R^{2} = 0{,}78$** — 78\% variasi income antar negara dijelaskan oleh $s_{k}, s_{h}, n$.
 
-**Implied** — Β0.30 — capital share di income, konsisten dengan data
+**Implied $\beta \approx 0{,}30$** — capital share di income, konsisten dengan data.
 
-**Implied** — Α0.28 — human capital share di income
+**Implied $\alpha_{h} \approx 0{,}28$** — human capital share di income.
 
 ```{admonition} Hasil kunci
 :class: important
@@ -863,21 +854,17 @@ Tanpa human capital (Solow standar): $R\approx ^{2}0.59$. Dengan human capital: 
 
 **Deficiency 1** — $s$ exogenous — saving rate diasumsikan konstan, tidak ada optimisasi
 
-$A$ black box — tech "manna from heaven", tidak ada penjelasan asal-
-
-**Deficiency 2** — usul
+**Deficiency 2** — $A$ black box: tech "manna from heaven", tidak ada penjelasan asal-usulnya.
 
 ## Bagaimana setiap model memecahkan
 
 **MRW (bab 10.4)** — Tambah faktor baru (human capital) ke production function. Pecahkan deficiency 2 partial (residu turun ke 22%). Keep exogenous. $s$
 
-Optimisasi household. Pecahkan deficiency 1: jadi endogenous. Keep $s$
-
-**RCK (bab 12)** — $A$ black box. Tidak pakai human capital.
+**RCK (Bab 12)** — Optimisasi household: pecahkan deficiency 1 ($s$ jadi endogenous). $A$ tetap black box; tidak pakai human capital.
 
 **Romer (bab 14)** — R&D investment sebagai engine. Pecahkan deficiency 2 full: $A$ jadi endogenous. Keep relatif simple. $s$
 
-**PETERS (BAB 15)** — Heterogeneous firms, markup variation. Pecahkan deficiency 2 dari angle berbeda: gap TFP dari misallocation, bukan tech rendah. Tidak fokus human capital.
+**Peters (Bab 15)** — Heterogeneous firms, markup variation. Pecahkan deficiency 2 dari angle berbeda: gap TFP dari misallocation, bukan tech rendah. Tidak fokus human capital.
 
 ## Insight metakognitif
 
@@ -969,7 +956,7 @@ Bab 14-15: Endogenous growth — buka black box tech
 ## Section 10.3 — Human capital extension
 
 1. ☐ Derivation sistem ODE 2D dengan log-differentiation
-3. ☐ Exercise 10.13: derive $k, h, y^{***}$ step-by-step
+3. ☐ Exercise 10.13: derive $k^{*}, h^{*}, y^{*}$ step-by-step
 4. ☐ Comparative statics 5 parameter
 
 ## Exercise 10.14 — Nullcline (TERPENTING)
