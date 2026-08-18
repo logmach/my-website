@@ -1,0 +1,901 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 5 — Steady-State Equilibria &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab05-steady-state';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 6 — Solusi Analitis I" href="bab06-solusi-analitis-1.html" />
+    <link rel="prev" title="Bab 4 — ODE: Apa itu Solusi" href="bab04-ode.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab05-steady-state.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab05-steady-state.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 5 — Steady-State Equilibria</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-apa-itu-steady-state">Konsep 1 — Apa Itu Steady State?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-hierarki-stabilitas">Konsep 2 — Hierarki Stabilitas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-mengapa-cek-stabilitas">Konsep 3 — Mengapa Cek Stabilitas?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-teorema-5-1-linear-stability-via-eigenvalues">Konsep 4 — Teorema 5.1 — Linear Stability via Eigenvalues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi">Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-aturan-1d-dan-generalisasi-ke-multi-d">Konsep 6 — Aturan 1D dan Generalisasi ke Multi-D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-aplikasi-langsung-solow-swan">Konsep 7 — Aplikasi Langsung — Solow-Swan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-saddle-point-preview-rck">Konsep 8 — Saddle Point — Preview RCK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-5">Checklist Pemahaman Bab 5</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-5-steady-state-equilibria">
+<h1>Bab 5 — Steady-State Equilibria<a class="headerlink" href="#bab-5-steady-state-equilibria" title="Link to this heading">#</a></h1>
+<p>Bab ini memformalkan dua konsep yang menjadi bahasa sehari-hari seluruh teori pertumbuhan: <em>steady state</em> (titik di mana sistem berhenti berubah) dan <em>stabilitas</em> (apakah sistem kembali ke sana setelah diganggu). Bab 5 adalah jembatan dari teori abstrak ODE (Bab 3–4) ke aplikasi konkret: di ujungnya, kestabilan Solow-Swan diturunkan langsung dari alat-alat ini.</p>
+<section id="konsep-1-apa-itu-steady-state">
+<h2>Konsep 1 — Apa Itu Steady State?<a class="headerlink" href="#konsep-1-apa-itu-steady-state" title="Link to this heading">#</a></h2>
+<p><em>Konsep yang intuisinya sudah muncul di akhir Bab 4 — sekarang diformalkan.</em></p>
+<p><strong>Definisi 5.1</strong></p>
+<p>Steady state (atau equilibrium) untuk ODE autonomous <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> adalah titik yang memenuhi: <span class="math notranslate nohighlight">\(\bar{x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[ 0 = G(\bar{x}) \]</div>
+<p>Yaitu, titik di mana sistem tidak berubah: sekali berada di <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem tinggal di sana selamanya.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Intuisinya sudah muncul di akhir Bab 4: untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=x-x^{2}\)</span>, <span class="math notranslate nohighlight">\(x = 0\)</span> adalah solusi karena <span class="math notranslate nohighlight">\(G(0) = 0\)</span>, dan kemudian ditemukan $x =</p>
+<p>Catatan terminologi: di matematika “equilibrium”, di ekonomi “steady state” — keduanya lazim dipakai bergantian, sebuah “happy halfway house”.</p>
+</div>
+</section>
+<section id="konsep-2-hierarki-stabilitas">
+<h2>Konsep 2 — Hierarki Stabilitas<a class="headerlink" href="#konsep-2-hierarki-stabilitas" title="Link to this heading">#</a></h2>
+<p><em>Empat jenis stabilitas, masing-masing lebih kuat dari sebelumnya. Hierarki yang harus jelas di kepala.</em></p>
+<p><strong>Analogi “bola di permukaan”</strong></p>
+<p><strong>Stable</strong> — Sebelum definisi formal, pakai analogi klasik: bola pingpong Bola di dasar mangkuk dangkal. Dorong sedikit, tetap di sekitar dasar tapi mungkin tidak persis kembali. Tetap dekat, tapi mungkin orbit.</p>
+<p><strong>Asymptotic Stable</strong> — Bola di dasar mangkuk dalam. Dorong sedikit, akhirnya kembali persis ke dasar. Tetap dekat DAN konvergen.</p>
+<p><strong>Global asymptotic stable</strong> — Bola di mangkuk tanpa pinggiran. Tidak peduli seberapa keras goyangkan, akhirnya bola kembali ke dasar. Konvergen dari MANAPUN.</p>
+<p>Bola di puncak bukit. Dorong sedikit, bola menggelinding jauh.</p>
+<p><strong>Unstable</strong> — Tidak tetap dekat — terbang keluar.</p>
+<p><strong>Definisi formal dan visualisasinya</strong></p>
+<p>Definisi 5.2 (Stable / Lyapunov Stable):</p>
+<p>Untuk setiap <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, ada <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> sehingga kalau <span class="math notranslate nohighlight">\(∥x_{0} -\bar{x}∥&lt;\delta\)</span>, maka <span class="math notranslate nohighlight">\(∥\varphi (t) -\bar{x}∥&lt;\varepsilon\)</span> untuk semua <span class="math notranslate nohighlight">\(t\ge t_{0}\)</span>.</p>
+<p>Visualisasi: dua lingkaran konsentrik di sekitar — lingkaran (kecil, starting points) di dalam lingkaran (besar, <span class="math notranslate nohighlight">\(\bar{x}\delta \varepsilon\)</span> batas yang tidak boleh dilewati). Lintasan boleh orbit, tapi harus tetap di dalam. <span class="math notranslate nohighlight">\(\varepsilon\)</span></p>
+<p>Definisi 5.3 (Asymptotic Stable):</p>
+<p>Stable DAN <span class="math notranslate nohighlight">\(lim\varphi (t) =\bar{x}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ t\to \infty \]</div>
+<p>Visualisasi: lintasan spiral inward menuju — radius putaran mengecil seiring waktu. <span class="math notranslate nohighlight">\(\bar{x}\)</span></p>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Awas notasi pada Definisi 5.3: yang benar adalah limit menuju <span class="math notranslate nohighlight">\(\bar{x}\)</span> (dengan bar), bukan <span class="math notranslate nohighlight">\(x\)</span> polos. Konteks ekonomi dan konsistensi dengan definisi lain menegaskannya.</p>
+<p>Kebiasaan yang baik: baca persis apa yang tertulis, lalu cek konsistensi dengan definisi lain. Kalau ada inkonsistensi, kemungkinan typo.</p>
+<p>Definisi 5.4 (Global Asymptotic Stable):</p>
+<p>Asymptotic stable DAN konvergensi dari manapun di <span class="math notranslate nohighlight">\(R^{k}\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Rumusan yang tepat: yang membedakan 5.4 dari 5.3 adalah titik awalnya — 5.3 mengharuskan mulai dari neighborhood, sedangkan 5.4 boleh mulai dari mana saja.</p>
+<p>Tepat. Bedanya hanya pada scope starting points — neighborhood kecil <span class="math notranslate nohighlight">\(N\)</span> (5.3) vs seluruh <span class="math notranslate nohighlight">\(R^{k}\)</span> (5.4).</p>
+<p>Definisi 5.5 (Unstable):</p>
+<p>Bukan stable. Yaitu: untuk kecil apapun, ada <span class="math notranslate nohighlight">\(\delta x_{0}\)</span> di dalam lingkaran yang lintasannya keluar dari lingkaran <span class="math notranslate nohighlight">\(\delta \varepsilon\)</span> apapun.</p>
+<p>Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari <span class="math notranslate nohighlight">\(\bar{x}\)</span>.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci — hierarki yang ketat</p>
+<p>Dari paling lemah ke paling kuat:</p>
+<p><strong>Stable ⊂ Asymptotic Stable ⊂ Global Asymptotic Stable</strong></p>
+<p>Setiap level menambah syarat: <em>stable</em> (tetap dekat) + konvergen → <em>asymptotic stable</em>; + konvergen dari titik awal mana pun → <em>global asymptotic stable</em>.</p>
+</div>
+</section>
+<section id="konsep-3-mengapa-cek-stabilitas">
+<h2>Konsep 3 — Mengapa Cek Stabilitas?<a class="headerlink" href="#konsep-3-mengapa-cek-stabilitas" title="Link to this heading">#</a></h2>
+<p><em>Pertanyaan tajam — dan jawabannya menjelaskan inti mengapa Bab 5 penting untuk ekonomi.</em></p>
+<p><strong>Steady state ≠ otomatis stable</strong> — Pertanyaan yang sering muncul: kalau sudah berada di steady state, mengapa masih perlu cek stabilitas?</p>
+<p>Jawaban: steady state hanya berarti “kalau tepat di sini, tidak bergerak”. Tapi dunia nyata penuh gangguan. Pertanyaan yang penting:</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>“Kalau ekonomi sedikit tergeser dari, apakah dia kembali (stable) atau terbang jauh <span class="math notranslate nohighlight">\(\bar{x}\)</span> (unstable)?”</em></p>
+</div>
+<p><strong>Kontras: bola di mangkuk vs bola di puncak</strong> — Dasar mangkuk: bola “diam” di sana. Dorong sedikit → kembali. Stable steady state.</p>
+<p>Puncak bukit: bola juga “diam” di sana. Tapi dorong sedikit → menggelinding jauh. Unstable steady state.</p>
+<p>Kedua-duanya adalah steady state — tapi perilakunya sangat berbeda saat ada gangguan.</p>
+<p><strong>Mengapa ini penting untuk ekonomi</strong> — Ekonomi tidak pernah persis di steady state. Selalu ada gangguan: krisis finansial, perang, pandemi, perubahan teknologi, bencana alam.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><em>Pertanyaan kebijakan: kalau ekonomi tergeser, apakah dia akan pulih sendiri?</em></p>
+<p><em>Stable: tidak perlu intervensi besar — ekonomi pulih sendiri. Contoh: Solow-Swan untuk negara pasca-perang. Unstable: butuh kebijakan untuk mengembalikan ke trajectory yang benar. Saddle: hanya satu trajectory yang konvergen — butuh “memilih” konsumsi awal yang tepat. Inilah RCK.</em></p>
+</div>
+</section>
+<section id="konsep-4-teorema-5-1-linear-stability-via-eigenvalues">
+<h2>Konsep 4 — Teorema 5.1 — Linear Stability via Eigenvalues<a class="headerlink" href="#konsep-4-teorema-5-1-linear-stability-via-eigenvalues" title="Link to this heading">#</a></h2>
+<p><em>Alat utama untuk mengecek stabilitas sistem linear. Mengubah pertanyaan dinamika menjadi pertanyaan aljabar.</em></p>
+<p><strong>Statement</strong> — Untuk sistem linear <span class="math notranslate nohighlight">\(\dot{x}=Ax + b\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}=-A^{-1}b\)</span>:</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Jika semua eigenvalue <span class="math notranslate nohighlight">\(A\)</span> memiliki real part negatif, maka adalah globally <span class="math notranslate nohighlight">\(\bar{x}\)</span> asymptotically stable.</em></p>
+</div>
+<p><strong>Mengapa eigenvalues?</strong> Solusi sistem linear bisa ditulis sebagai kombinasi “mode”:</p>
+<div class="math notranslate nohighlight">
+\[ x(t) = C_{1}e^{\lambda1t}v_{1} +C_{2}e^{\lambda2t}v_{2} +⋯ \]</div>
+<p>Setiap mode <span class="math notranslate nohighlight">\(e^{\lambda }i^{t}\)</span>:</p>
+<p>Mengecil ke 0 kalau <span class="math notranslate nohighlight">\(Re(\lambda _{i}) &lt;0\)</span> Membesar tak hingga kalau <span class="math notranslate nohighlight">\(Re(\lambda _{i}) &gt;0\)</span></p>
+<p>Untuk konvergensi: semua mode harus mengecil → semua eigenvalue real part negatif.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Mengapa “real part”? Karena eigenvalues bisa kompleks: <span class="math notranslate nohighlight">\(\lambda = a + bi\)</span>. Maka:</p>
+<div class="math notranslate nohighlight">
+\[ e\lambda t=eat[cos(bt) + i sin(bt)]\cdot \]</div>
+<p>Bagian <span class="math notranslate nohighlight">\(cos +i sin\)</span> memberi oscillation (spiral). Bagian <span class="math notranslate nohighlight">\(e^{at}\)</span> memberi magnitude growth/decay. Hanya real part yang menentukan apakah lintasan mengecil atau membesar. <span class="math notranslate nohighlight">\(a\)</span></p>
+</div>
+<p><strong>Peran <span class="math notranslate nohighlight">\(b\)</span></strong> — Pertanyaan yang sering muncul: “Apakah <span class="math notranslate nohighlight">\(b\)</span> matriks <span class="math notranslate nohighlight">\(k \times 1\)</span>?”</p>
+<p>Ya, <span class="math notranslate nohighlight">\(b\)</span> adalah vektor kolom <span class="math notranslate nohighlight">\(k \times 1\)</span>. Perannya: Menentukan lokasi steady state: <span class="math notranslate nohighlight">\(\bar{x}=-A^{-1}b\)</span> Tidak mempengaruhi stabilitas — stabilitas hanya tergantung eigenvalues <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>Kalau <span class="math notranslate nohighlight">\(b= 0\)</span>, steady state di origin. Kalau <span class="math notranslate nohighlight">\(b= \ne 0\)</span>, steady state pindah, tapi sifat stabilitasnya sama.</p>
+</section>
+<section id="konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi">
+<h2>Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi<a class="headerlink" href="#konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi Teorema 5.1 untuk sistem nonlinear — yang paling sering dipakai di seluruh materi.</em></p>
+<p><strong>Apa itu “nonlinear”?</strong> Pertanyaan yang sering muncul: “Apakah nonlinear berarti pangkat ≠ 1?”</p>
+<p>Tidak cukup spesifik. Nonlinear berarti apa saja yang bukan bentuk <span class="math notranslate nohighlight">\(Ax + b\)</span>:</p>
+<p>Pangkat ≠ 1: <span class="math notranslate nohighlight">\(x^{2}\)</span>, <span class="math notranslate nohighlight">\(x^{\alpha}\)</span>. Fungsi transendental: <span class="math notranslate nohighlight">\(e^{x}\)</span>, <span class="math notranslate nohighlight">\(\ln x\)</span>, <span class="math notranslate nohighlight">\(\sin x\)</span>. Perkalian variabel: <span class="math notranslate nohighlight">\(xy\)</span>, <span class="math notranslate nohighlight">\(x_{1}x_{2}\)</span> Kombinasi yang di atas</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><strong>Hampir semua fungsi di growth theory adalah nonlinear</strong></p>
+<p><em>Cobb-Douglas <span class="math notranslate nohighlight">\(f(k)= k^{\alpha }\)</span> — nonlinear (pangkat <span class="math notranslate nohighlight">\(\alpha = \ne 1\)</span>) CRRA <span class="math notranslate nohighlight">\(u(c)= c^{1-\sigma }/(1 -\sigma)\)</span> — nonlinear Solow-Swan ODE <span class="math notranslate nohighlight">\(\dot{k}=sk-^{\alpha }(n + \delta)k\)</span> — nonlinear karena <span class="math notranslate nohighlight">\(k^{\alpha }\)</span></em></p>
+</div>
+<p><em>Itulah mengapa Teorema 5.2 yang paling sering dipakai.</em></p>
+<p><strong>Statement</strong> — Untuk sistem <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> dengan steady state, definisikan Jacobian di: <span class="math notranslate nohighlight">\(\bar{x}\bar{x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J(\bar{x}) = \begin{pmatrix} \dfrac{\partial G_{1}(\bar{x})}{\partial x_{1}} &amp; \cdots &amp; \dfrac{\partial G_{1}(\bar{x})}{\partial x_{k}} \\ \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial G_{k}(\bar{x})}{\partial x_{1}} &amp; \cdots &amp; \dfrac{\partial G_{k}(\bar{x})}{\partial x_{k}} \end{pmatrix}
+\end{split}\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Jika semua eigenvalue <span class="math notranslate nohighlight">\(J(\bar{x})\)</span> memiliki real part negatif, maka <span class="math notranslate nohighlight">\(\bar{x}\)</span> locally asymptotically stable.</em></p>
+</div>
+<p><strong>Idenya: linearisasi</strong> — Dekat <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks <span class="math notranslate nohighlight">\(J(\bar{x})\)</span>.</p>
+<p>Generalisasi Taylor expansion (di 1D):</p>
+<div class="math notranslate nohighlight">
+\[
+G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
+\]</div>
+<p>Untuk multivariate, <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span> digantikan oleh matriks Jacobian.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Analogi yang pas: “dalam optimisasi kita lihat SOC”. Sangat tepat. Pola yang sama:</p>
+<p>Optimisasi: FOC (<span class="math notranslate nohighlight">\(∇f= 0\)</span>) → Hessian negative definite (max) Stabilitas: <span class="math notranslate nohighlight">\(G(\bar{x})=0\)</span> → Jacobian eigenvalues negative real part (stable)</p>
+<p>Di multi-dimensi, “tanda turunan kedua” digantikan oleh “eigenvalues matriks turunan”. Hessian untuk optimisasi, Jacobian untuk dinamika.</p>
+</div>
+<p><strong>Mengapa hanya “local”?</strong> Linearisasi adalah aproksimasi yang baik hanya di sekitar. Untuk titik yang jauh, dinamika nonlinear bisa sangat <span class="math notranslate nohighlight">\(\bar{x}\)</span> berbeda dari linear.</p>
+<p>Konsekuensi:</p>
+<p>Teorema 5.1 (linear): global asymptotic stable</p>
+<p>Teorema 5.2 (nonlinear via linearisasi): local asymptotic stable</p>
+<p><strong>Hartman-Grobman: justifikasi formal</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p><em>Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue real part</em></p>
+<p><span class="math notranslate nohighlight">\(= \ne 0\)</span>), maka dinamika nonlinear di sekitar <span class="math notranslate nohighlight">\(\bar{x}\)</span> secara topologis ekuivalen dengan dinamika linearisasinya.</p>
+<p><em>Yaitu, dekat <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem nonlinear “kelihatan seperti” <span class="math notranslate nohighlight">\(\dot{y}=J(\bar{x})\,y\)</span>. Inilah justifikasi Teorema 5.2.</em></p>
+<p><em>Untuk steady state non-hyperbolic (ada eigenvalue real part = 0), linearisasi tidak konklusif — butuh metode lain.</em></p>
+</div>
+</section>
+<section id="konsep-6-aturan-1d-dan-generalisasi-ke-multi-d">
+<h2>Konsep 6 — Aturan 1D dan Generalisasi ke Multi-D<a class="headerlink" href="#konsep-6-aturan-1d-dan-generalisasi-ke-multi-d" title="Link to this heading">#</a></h2>
+<p><em>Loncatan logis yang wajar dipertanyakan: kenapa di 1D cukup melihat tanda <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span>?</em></p>
+<p><strong>1D sebagai kasus khusus dari Teorema 5.2</strong> — Untuk ODE skalar <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> (yaitu <span class="math notranslate nohighlight">\(k = 1\)</span>):</p>
+<ol class="arabic simple">
+<li><p>Jacobian 1D: matriks <span class="math notranslate nohighlight">\(1 \times 1\)</span> dengan satu entri:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ J(\bar{x}) = \left(\frac{\partial G}{\partial x}(\bar{x})\right) = \big(G'(\bar{x})\big) \]</div>
+<ol class="arabic simple" start="2">
+<li><p>Eigenvalue matriks <span class="math notranslate nohighlight">\(1 \times 1\)</span>: entri matriks itu sendiri:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ det((a) -\lambda) = a -\lambda = 0⟹\lambda = a \]</div>
+<p>Maka eigenvalue Jacobian 1D = <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Aturan stabilitas Teorema 5.2: semua eigenvalue real part negatif. Di 1D, hanya ada satu eigenvalue: <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span>.</p></li>
+</ol>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci — aturan praktis 1D</p>
+<p><span class="math notranslate nohighlight">\(G'(\bar{x})&lt;0\)</span> → stable (asymptotic) · <span class="math notranslate nohighlight">\(G'(\bar{x})&gt;0\)</span> → unstable · <span class="math notranslate nohighlight">\(G'(\bar{x})=0\)</span> → tidak konklusif dari linearisasi.</p>
+</div>
+<p><strong>Kasus borderline</strong></p>
+<p>Untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ G (x) =^{'}-3x^{2} \]</div>
+<p><span class="math notranslate nohighlight">\(G (0) =^{'}0\)</span> — kasus borderline!</p>
+<p>Linearisasi tidak konklusif. Tapi analisis sign langsung menunjukkan <span class="math notranslate nohighlight">\(\bar{x}=0\)</span> stable:</p>
+<p><span class="math notranslate nohighlight">\(x&gt;0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}&lt;0\)</span> → <span class="math notranslate nohighlight">\(x\)</span> turun. <span class="math notranslate nohighlight">\(x&lt;0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}&gt;0\)</span> → <span class="math notranslate nohighlight">\(x\)</span> naik. Dari kedua sisi mengarah ke 0 → stable. Tapi konvergensi lambat (polynomial, bukan eksponensial) karena <span class="math notranslate nohighlight">\(G'(\bar{x})=0\)</span>.</p>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Jebakan umum: menulis “<span class="math notranslate nohighlight">\(G'(\bar{x}) = -3x^{2} &lt; 0\)</span> untuk semua <span class="math notranslate nohighlight">\(x\)</span>” — padahal di steady state <span class="math notranslate nohighlight">\(\bar{x}=0\)</span> nilainya <span class="math notranslate nohighlight">\(G'(0)=0\)</span>, bukan negatif.</p>
+<p>Pelajaran: selalu evaluasi <span class="math notranslate nohighlight">\(G'\)</span> tepat di <span class="math notranslate nohighlight">\(\bar{x}\)</span>, bukan generalisasi untuk semua <span class="math notranslate nohighlight">\(x\)</span>. Linearisasi mantra (”<span class="math notranslate nohighlight">\(G'(\bar{x})&lt;0\)</span> → stable”) berlaku kalau <span class="math notranslate nohighlight">\(G'(\bar{x}) \ne 0\)</span> — kalau <span class="math notranslate nohighlight">\(= 0\)</span>, butuh analisis lain.</p>
+<p><strong>Generalisasi ke multi-D</strong></p>
+<p>Pola yang sama, tapi lebih kaya:</p>
+<p><strong>Semua <span class="math notranslate nohighlight">\(\mathrm{Re}(\lambda_{i})&lt;0\)</span></strong> — Stable node/spiral: lintasan konvergen ke <span class="math notranslate nohighlight">\(\bar{x}\)</span> dari semua arah lokal.</p>
+<p><strong>Semua <span class="math notranslate nohighlight">\(\mathrm{Re}(\lambda_{i})&gt;0\)</span></strong> — Unstable node/spiral: lintasan menjauh dari <span class="math notranslate nohighlight">\(\bar{x}\)</span> di semua arah.</p>
+<p><strong>Tanda campuran</strong> — Saddle point: stable di arah eigenvector ber-eigenvalue negatif, unstable di arah ber-eigenvalue positif.</p>
+<p><strong>Ada <span class="math notranslate nohighlight">\(\mathrm{Re}(\lambda_{i})=0\)</span></strong> — Non-hyperbolic: linearisasi tidak konklusif — butuh analisis lain.</p>
+</div>
+</section>
+<section id="konsep-7-aplikasi-langsung-solow-swan">
+<h2>Konsep 7 — Aplikasi Langsung — Solow-Swan<a class="headerlink" href="#konsep-7-aplikasi-langsung-solow-swan" title="Link to this heading">#</a></h2>
+<p><em>Derivasi yang menunjukkan mengapa Solow-Swan selalu stable.</em></p>
+<p><strong>Setup</strong></p>
+<p>ODE Solow-Swan:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{k}=G(k) = sk-^{\alpha }(n + g + \delta)k \]</div>
+<p><strong>Pengerjaanmu — step by step</strong></p>
+<p><strong>Step 1</strong> Cari steady state.</p>
+<p>Solve <span class="math notranslate nohighlight">\(G(\bar{k})=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+s\bar{k}^{\alpha}=(n+g+\delta)\bar{k} \quad\Longrightarrow\quad s\bar{k}^{\alpha-1}=n+g+\delta
+\]</div>
+<p><strong>Step 2</strong> Hitung <span class="math notranslate nohighlight">\(G'(k)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ G'(k) = \alpha s k^{\alpha-1} - (n+g+\delta) \]</div>
+<p><strong>Step 3.</strong> Substitusi cerdas di <span class="math notranslate nohighlight">\(\bar{k}\)</span></p>
+<p>Daripada substitusi langsung (ekspresi rumit), gunakan <span class="math notranslate nohighlight">\(s\bar{k}^{\alpha-1}=n+g+\delta\)</span> dari persamaan steady state:</p>
+<div class="math notranslate nohighlight">
+\[ G'(\bar{k}) = \alpha\, s\bar{k}^{\alpha-1} - (n+g+\delta) = \alpha(n+g+\delta) - (n+g+\delta) \]</div>
+<p><strong>Step 4</strong> Faktorkan.</p>
+<div class="math notranslate nohighlight">
+\[ G'(\bar{k}) = (\alpha-1)(n+g+\delta) \]</div>
+<p><strong>Step 5</strong> Analisis tanda. <span class="math notranslate nohighlight">\(\alpha &lt; 1\)</span> (Cobb-Douglas standar) → <span class="math notranslate nohighlight">\(\alpha -1 &lt; 0\)</span> <span class="math notranslate nohighlight">\((n + g + \delta) &gt; 0\)</span> (parameter ekonomi positif) Produk: negatif → <span class="math notranslate nohighlight">\(G'(\bar{k})&lt;0\)</span> → stable</p>
+<p><strong>Insight ekonomi</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><strong>Mengapa Solow-Swan selalu stable?</strong></p>
+<p><em>Karena diminishing returns (<span class="math notranslate nohighlight">\(\alpha &lt; 1\)</span>). Inilah satu-satunya asumsi yang membuat <span class="math notranslate nohighlight">\(G'(\bar{k})&lt;0\)</span>. Tanpa diminishing returns, model tidak konvergen.</em></p>
+<p><strong>Kontras dengan AK Model</strong></p>
+<p>AK model: <span class="math notranslate nohighlight">\(f(k) = Ak\)</span> (pangkat 1, no diminishing returns):</p>
+<div class="math notranslate nohighlight">
+\[ G(k) = sAk -(n + g + \delta)k = [sA -(n + g + \delta)]k \]</div>
+<p><span class="math notranslate nohighlight">\(G (k) =^{'}sA -(n + g + \delta)\)</span> — konstan, tidak tergantung <span class="math notranslate nohighlight">\(k\)</span> Kalau <span class="math notranslate nohighlight">\(sA&gt; (n + g + \delta)\)</span>: pertumbuhan eksponensial, tidak konvergen</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><em>Inilah mengapa AK disebut endogenous growth — tidak konvergen ke steady state, tumbuh selamanya. Akan dipelajari di Bab 14-15.</em></p>
+<p>Sebaliknya, Solow-Swan disebut <em>exogenous growth</em>: konvergensi ke <span class="math notranslate nohighlight">\(\bar{k}\)</span> adalah fiturnya — pertumbuhan jangka panjang hanya datang dari pertumbuhan teknologi eksogen (<span class="math notranslate nohighlight">\(g\)</span>).</p>
+</div>
+</section>
+<section id="konsep-8-saddle-point-preview-rck">
+<h2>Konsep 8 — Saddle Point — Preview RCK<a class="headerlink" href="#konsep-8-saddle-point-preview-rck" title="Link to this heading">#</a></h2>
+<p><em>Fenomena multi-D yang akan menjadi inti dari analisis RCK (Bab 12).</em></p>
+<p><strong>Apa itu saddle point?</strong> Steady state dengan eigenvalues yang tanda real part-nya berbeda. Contoh sederhana:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} J(\bar{x}) = \begin{pmatrix} -2 &amp; 0 \\ 0 &amp; 3 \end{pmatrix} \end{split}\]</div>
+<p>Eigenvalues <span class="math notranslate nohighlight">\(-2\)</span> dan <span class="math notranslate nohighlight">\(+3\)</span>. Rumusanmu: “satu menuju, satu menjauh — satu stable satu unstable”. Persis menggambarkan saddle.</p>
+<p><strong>Struktur saddle point</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Untuk saddle point dengan eigenvalues <span class="math notranslate nohighlight">\(\lambda _{1} &lt;0 &lt; \lambda _{2}\)</span></strong></p>
+<p><em>Arah eigenvector <span class="math notranslate nohighlight">\(v_{1}\)</span> (eigenvalue <span class="math notranslate nohighlight">\(-2\)</span>) → stable manifold. Lintasan di arah ini konvergen ke <span class="math notranslate nohighlight">\(\bar{x}\)</span>. Arah eigenvector <span class="math notranslate nohighlight">\(v_{2}\)</span> (eigenvalue <span class="math notranslate nohighlight">\(+3\)</span>) → unstable manifold. Lintasan di arah ini menjauh dari <span class="math notranslate nohighlight">\(\bar{x}\)</span>.</em></p>
+<p><em>Steady state bukan stable secara keseluruhan (karena ada arah unstable), tapi juga bukan unstable sempurna (karena ada arah stable).</em></p>
+</div>
+<p><strong>Mengapa saddle penting untuk RCK</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><strong>Di RCK, sistem 2D dengan state <span class="math notranslate nohighlight">\((k, c)\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}\dot{k}&amp;=f(k)-(n+\delta)k-c \\ \dot{c}&amp;=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
+\end{split}\]</div>
+<p><em>Steady state <span class="math notranslate nohighlight">\((,)\bar{k}\bar{c}\)</span> adalah saddle point.</em></p>
+<p><em>Implikasi ekonomi: dari modal awal <span class="math notranslate nohighlight">\(k_{0}\)</span>, ada hanya satu trajectory yang konvergen ke <span class="math notranslate nohighlight">\((,)\bar{k}\bar{c}\)</span>. Trajectory ini disebut saddle path.</em></p>
+<p><em>Konsumsi terlalu tinggi → modal habis → ekonomi crash Konsumsi terlalu rendah → over-saving → tidak optimal Konsumsi tepat di saddle path → konvergen optimal</em></p>
+<p><em>Pertanyaan: bagaimana memilih <span class="math notranslate nohighlight">\(c_{0}\)</span> yang tepat? Jawaban: transversality condition (TVC) — dibahas</em></p>
+</div>
+<p><strong>Empat klasifikasi steady state 2D</strong></p>
+<ul class="simple">
+<li><p><strong>Kedua <span class="math notranslate nohighlight">\(\lambda\)</span> negatif (real)</strong> — Stable node: konvergensi monoton. Contoh: Solow-Swan.</p></li>
+<li><p><strong>Kompleks dengan <span class="math notranslate nohighlight">\(\mathrm{Re}(\lambda) &lt; 0\)</span></strong> — Stable spiral (focus): konvergensi spiral ke dalam.</p></li>
+<li><p><strong>Kedua <span class="math notranslate nohighlight">\(\lambda\)</span> positif (real)</strong> — Unstable node: lintasan menjauh. Contoh: model AK (di luar steady state).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\lambda\)</span> berlawanan tanda</strong> — Saddle point: stable di satu arah, unstable di arah lain. Contoh: RCK.</p></li>
+<li><p><strong>Pure imaginary</strong> — Center: orbit periodik, marginal stable.</p></li>
+</ul>
+</section>
+<section id="checklist-pemahaman-bab-5">
+<h2>Checklist Pemahaman Bab 5<a class="headerlink" href="#checklist-pemahaman-bab-5" title="Link to this heading">#</a></h2>
+<p><em>Siap untuk Bab 6 dan setelahnya jika bisa menjawab.</em></p>
+<p><strong>Definisi</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa mendefinisikan steady state sebagai <span class="math notranslate nohighlight">\(G(\bar{x})=0\)</span></p></li>
+<li><p>☐ Bisa membedakan stable, asymptotic stable, dan global asymptotic stable</p></li>
+<li><p>☐ Bisa menggambar phase plane illustration untuk masing-masing (Exercise 5.1-5.3)</p></li>
+<li><p>☐ Bisa mendefinisikan unstable</p></li>
+</ul>
+<p><strong>Teorema</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa menyatakan Teorema 5.1 (linear, semua eigenvalue real part negatif → global asymptotic stable)</p></li>
+<li><p>☐ Bisa menyatakan Teorema 5.2 (nonlinear, Jacobian eigenvalue real part negatif → local asymptotic stable)</p></li>
+<li><p>☐ Bisa menjelaskan mengapa “real part” yang penting (bukan eigenvalue mentah)</p></li>
+<li><p>☐ Bisa menjelaskan mengapa Teorema 5.2 hanya “local”</p></li>
+</ul>
+<p><strong>Aplikasi</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa menghitung Jacobian untuk sistem 2D</p></li>
+<li><p>☐ Bisa menemukan eigenvalues matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span> (lewat persamaan karakteristik)</p></li>
+<li><p>☐ Bisa mengklasifikasikan steady state: stable node, stable spiral, saddle, unstable</p></li>
+<li><p>☐ Bisa derive <span class="math notranslate nohighlight">\(G'(\bar{k}) =(\alpha -1)(n + g + \delta)\)</span> untuk Solow-Swan</p></li>
+</ul>
+<p><strong>Konsep konseptual</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa menjelaskan mengapa steady state <span class="math notranslate nohighlight">\(= \ne \)</span> otomatis stable</p></li>
+<li><p>☐ Bisa menjelaskan analogi “bola di permukaan”</p></li>
+<li><p>☐ Memahami kasus borderline (<span class="math notranslate nohighlight">\(G'(\bar{x})=0\)</span>) dan apa yang harus dilakukan</p></li>
+<li><p>☐ Memahami saddle point dan signifikansinya untuk RCK</p></li>
+</ul>
+<p>✦✦✦</p>
+<div class="important admonition">
+<p class="admonition-title">Penutup</p>
+<p><strong>Apa yang Menanti</strong></p>
+<p>Bab 5 adalah jembatan antara tools matematis (Bab 3-5) dan model ekonomi (Bab 9 dan setelahnya). Setiap konsep di Bab 5 akan dipakai berulang:</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Di Solow-Swan (Bab 9): konvergensi monoton ke adalah aplikasi Teorema 5.2 dengan <span class="math notranslate nohighlight">\(\bar{k}\)</span></p>
+<p>.</p>
+<p><em>Di RCK (Bab 12): saddle path stability di sekitar steady state. Pemilihan trajectory unik lewat TVC.</em></p>
+<p><em>Di Romer R&amp;D (Bab 14): balanced growth path sebagai steady state dalam “efficiency units” — bukan langsung tapi <span class="math notranslate nohighlight">\(k\tilde{k}=k/(AL)\)</span>.</em></p>
+<p><em>Di Peters (Bab 15): misallocation dan firm dynamics dengan analisis stabilitas yang lebih kompleks.</em></p>
+<p>Sebelum masuk ke aplikasi ekonomi, masih ada dua bab</p>
+<p>Bab 6-7: Solusi analitis ODE (cara menyelesaikan ODE, bukan hanya menganalisis stabilitas)</p>
+<p>Bab 8: Phase diagram analysis (visualisasi dinamika di 2D)</p>
+<p>Fondasi sudah kuat: tiga bab pertama tools (3, 4, 5) selesai. Selamat melanjutkan.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab04-ode.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 4 — ODE: Apa itu Solusi</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab06-solusi-analitis-1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 6 — Solusi Analitis I</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-apa-itu-steady-state">Konsep 1 — Apa Itu Steady State?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-hierarki-stabilitas">Konsep 2 — Hierarki Stabilitas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-mengapa-cek-stabilitas">Konsep 3 — Mengapa Cek Stabilitas?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-teorema-5-1-linear-stability-via-eigenvalues">Konsep 4 — Teorema 5.1 — Linear Stability via Eigenvalues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi">Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-aturan-1d-dan-generalisasi-ke-multi-d">Konsep 6 — Aturan 1D dan Generalisasi ke Multi-D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-aplikasi-langsung-solow-swan">Konsep 7 — Aplikasi Langsung — Solow-Swan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-saddle-point-preview-rck">Konsep 8 — Saddle Point — Preview RCK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-5">Checklist Pemahaman Bab 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 12 — Neoclassical Growth (RCK) &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab12-rck';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 14 — R&amp;D I (Romer)" href="bab14-romer.html" />
+    <link rel="prev" title="Bab 11 — Optimal Control" href="bab11-optimal-control.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab12-rck.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab12-rck.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 12 — Neoclassical Growth (RCK)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-dan-pengantar-rck">Konsep 1 — Posisi dan Pengantar RCK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-12-1-model-primitives">Konsep 2 — Section 12.1 — Model Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-12-2-planner-s-problem">Konsep 3 — Section 12.2 — Planner’s Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-exercise-12-2-phase-plane-paling-penting">Konsep 4 — Exercise 12.2 — Phase Plane (Paling Penting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-exercise-12-3-comparative-dynamics">Konsep 5 — Exercise 12.3 — Comparative Dynamics (ρ ↑)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-12-3-competitive-equilibrium">Konsep 6 — Section 12.3 — Competitive Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-4-household-ocp">Exercise 12.4 — Household OCP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-section-12-4-first-welfare-theorem">Konsep 7 — Section 12.4 — First Welfare Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-12-5-tfp-population-growth">Konsep 8 — Section 12.5 — TFP &amp; Population Growth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-6-resource-constraint">Exercise 12.6 — Resource constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-7-hamiltonian-dengan-growth">Exercise 12.7 — Hamiltonian dengan growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-8-euler-dengan-growth">Exercise 12.8 — Euler dengan growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-9-bgp-preference-restriction">Exercise 12.9 — BGP preference restriction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-10-crra-patience-restriction">Exercise 12.10 — CRRA patience restriction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-12">Self-Assessment Bab 12</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-12-neoclassical-growth-rck">
+<h1>Bab 12 — Neoclassical Growth (RCK)<a class="headerlink" href="#bab-12-neoclassical-growth-rck" title="Link to this heading">#</a></h1>
+<p>Bab 12 adalah aplikasi langsung Bab 11. Kalau Solow-Swan mengasumsikan saving rate <span class="math notranslate nohighlight">\(s\)</span> konstan, model Ramsey-Cass-Koopmans meng-endogenkan <span class="math notranslate nohighlight">\(s\)</span> lewat optimisasi rumah tangga. Isi utamanya: setup planner’s problem (HJB dan PMP), aturan Keynes-Ramsey, phase plane <span class="math notranslate nohighlight">\((k, c)\)</span> dengan saddle path, modified golden rule, dan comparative dynamics.</p>
+<section id="konsep-1-posisi-dan-pengantar-rck">
+<h2>Konsep 1 — Posisi dan Pengantar RCK<a class="headerlink" href="#konsep-1-posisi-dan-pengantar-rck" title="Link to this heading">#</a></h2>
+<p><em>RCK mengendogenkan saving — perbedaan fundamental dari Solow.</em></p>
+<p><strong>Bedanya dari Solow-Swan</strong> — <span class="math notranslate nohighlight">\(\dot{k} = sf(k) - \delta k\)</span> dengan <span class="math notranslate nohighlight">\(s\)</span> konstan (eksogen,</p>
+<p><strong>Solow-Swan</strong> — <span class="math notranslate nohighlight">\(\dot{k}=sf(k)-\delta k\)</span> dengan <span class="math notranslate nohighlight">\(s\)</span> konstan (arbitrer). Tidak ada optimisasi household.</p>
+<p><strong>RCK</strong> — <span class="math notranslate nohighlight">\(\dot{k}=f(k)-\delta k-c\)</span> dengan <span class="math notranslate nohighlight">\(c\)</span> dipilih optimal. Saving endogen dari maksimisasi utility.</p>
+<p><strong>Tiga pendekatan Bab 12</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Bab 12 punya tiga representasi:</p>
+<ol class="arabic simple">
+<li><p>Planner’s problem (12.2): Pareto optimum, centralized</p></li>
+<li><p>Competitive equilibrium (12.3): market solution, decentralized</p></li>
+<li><p>Welfare theorems (12.4): planner = competitive equilibrium</p></li>
+</ol>
+</div>
+<p><strong>Switch notasi dari Bab 11</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(h \to u\)</span></strong> — Momentary payoff jadi utility</p>
+<p><strong><span class="math notranslate nohighlight">\(f \to\)</span> production</strong> — f direpurpose jadi production function</p>
+<p><strong>control <span class="math notranslate nohighlight">\(\to c\)</span></strong> — Control variable jadi konsumsi</p>
+<p><strong><span class="math notranslate nohighlight">\(\psi \to \lambda\)</span></strong> — Adjoint jadi λ</p>
+<p><strong>Sejarah</strong></p>
+<ul class="simple">
+<li><p>Ramsey (1928): paper original, pakai calculus of variations</p></li>
+<li><p>Cass &amp; Koopmans (1965): popularize untuk growth</p></li>
+<li><p>Ramsey meninggal usia 26 — kerugian besar bagi ekonomi</p></li>
+</ul>
+</section>
+<section id="konsep-2-section-12-1-model-primitives">
+<h2>Konsep 2 — Section 12.1 — Model Primitives<a class="headerlink" href="#konsep-2-section-12-1-model-primitives" title="Link to this heading">#</a></h2>
+<p><em>Building blocks: utility, technology, resource constraint.</em></p>
+<p><strong>Objective function (12.1)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+J(c)=\int_{0}^{\infty}e^{-\rho t}\,u\bigl(c(t)\bigr)\,dt
+\]</div>
+<p>dengan ρ &gt; 0 subjective rate of time preference.</p>
+<p><strong>Asumsi pada u</strong></p>
+<ul class="simple">
+<li><p>uc&gt; 0 (strictly increasing)</p></li>
+<li><p>ucc&lt; 0 (strictly concave)</p></li>
+<li><p>Inada: limc→0 uc= ∞ dan limc→∞uc= 0</p></li>
+</ul>
+<p><strong>Resource constraint (12.2)</strong> — <span class="math notranslate nohighlight">\(\dot{k} = f(k) - \delta k - c\)</span>, <span class="math notranslate nohighlight">\(k(0)=k_{0}\)</span></p>
+<p><strong>Identifikasi state vs control</strong></p>
+<p><strong>State <span class="math notranslate nohighlight">\(k\)</span></strong> — Modal per pekerja. Punya ODE, tidak bisa lompat.</p>
+<p><strong>Control <span class="math notranslate nohighlight">\(c\)</span></strong> — Konsumsi. Dipilih bebas tiap saat, jump variable.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Setup minimal: hanya empat objek menentukan model — u(c), f(k),</p>
+<p>ρ, δ. Itulah keindahan RCK.</p>
+</div>
+</section>
+<section id="konsep-3-section-12-2-planner-s-problem">
+<h2>Konsep 3 — Section 12.2 — Planner’s Problem<a class="headerlink" href="#konsep-3-section-12-2-planner-s-problem" title="Link to this heading">#</a></h2>
+<p><em>Benevolent planner sebagai benchmark Pareto optimum.</em></p>
+<p><strong>HJB equation Planner</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\rho V(k)=\max_{c}\bigl\{u(c)+V_{k}\bigl[f(k)-\delta k-c\bigr]\bigr\}
+\]</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Interpretasi asset pricing: required return (ρV) = dividend (u(c)) +</p>
+<p>capital gain (<span class="math notranslate nohighlight">\(V_{k}\dot{k}\)</span>).</p>
+</div>
+<p><strong>Present-value Hamiltonian (12.4)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+H=e^{-\rho t}u(c)+\lambda\bigl[f(k)-c-\delta k\bigr]
+\]</div>
+<p><strong>PMP conditions</strong></p>
+<p><strong>Adjoint (12.5)</strong> — <span class="math notranslate nohighlight">\(-\dot{\lambda}=\lambda\,[f'(k)-\delta]\)</span></p>
+<p><strong>Maximality (12.6)</strong> — <span class="math notranslate nohighlight">\(e^{-\rho t}u_{c}(c)=\lambda\)</span></p>
+<p><strong>State (12.7)</strong> — <span class="math notranslate nohighlight">\(\dot{k}=f(k)-c-\delta k\)</span></p>
+<p><strong>TVC (12.8)</strong> — <span class="math notranslate nohighlight">\(\lim_{T\to\infty}\lambda(T)\,k(T)=0\)</span></p>
+<p><strong>Derivation envelope condition (12.9)</strong></p>
+<p><strong>Step 1.</strong> Turunkan maximality (12.6) terhadap t</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{\lambda}=e^{-\rho t}\bigl[-\rho\,u_{c}+u_{cc}\,\dot{c}\bigr]
+\]</div>
+<p><strong>Step 2.</strong> Bagi dengan λ = e−ρtuc</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\lambda}}{\lambda}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
+\]</div>
+<p><strong>Step 3.</strong> Substitusi Arrow-Pratt σ= −uccc/uc</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\lambda}}{\lambda}=-\rho-\sigma(c)\,\frac{\dot{c}}{c}
+\]</div>
+<p><strong>Derivation Keynes-Ramsey (12.10)</strong></p>
+<p><strong>Step 1.</strong> Dari adjoint (12.5)</p>
+<p>λλ˙ = −[f′(k) −δ]</p>
+<p><strong>Step 2.</strong> Set sama dengan envelope (12.9)</p>
+<div class="math notranslate nohighlight">
+\[
+-\rho-\sigma\,\frac{\dot{c}}{c}=-\bigl[f\'(k)-\delta\bigr]
+\]</div>
+<p><strong>Step 3.</strong> Solve → Keynes-Ramsey rule</p>
+<div class="math notranslate nohighlight">
+\[
+\rho+\sigma(c)\,\frac{\dot{c}}{c}=r,\qquad r=f\'(k)-\delta
+\]</div>
+<p><strong>Keynes-Ramsey = Euler-Lagrange</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Dua observasi lanjutan yang layak dielaborasi:</p>
+<p>Keynes-Ramsey rule secara matematis adalah Euler-Lagrange equation dari calculus of variations (Euler-Lagrange abad 18, bukan “Bab 18”). Ramsey 1928 pakai ini sebelum PMP/HJB ada.</p>
+</div>
+<p><strong>Sisi kiri = MRS antarwaktu</strong> — <span class="math notranslate nohighlight">\(\rho + \sigma\,\dot{c}/c\)</span> adalah marginal rate of substitution konsumsi antarwaktu (discounted).</p>
+<p><strong>Sisi kanan = opportunity cost</strong> — <span class="math notranslate nohighlight">\(r = f'(k) - \delta\)</span> adalah net return on capital — opportunity cost konsumsi sekarang.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Keynes-Ramsey: pertumbuhan konsumsi = (return - impatience) × EIS. Planner balance benefit defer vs impatience, di-scale oleh 1/σ.</p>
+</div>
+<p><strong>Cases (Proposition 12.1)</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(r&gt;\rho\)</span></strong> — Patience pays: <span class="math notranslate nohighlight">\(\dot{c}&gt;0\)</span>, konsumsi tumbuh.</p>
+<p><strong><span class="math notranslate nohighlight">\(r&lt;\rho\)</span></strong> — Impatience dominates: <span class="math notranslate nohighlight">\(\dot{c}&lt;0\)</span>, konsumsi turun.</p>
+<p><strong><span class="math notranslate nohighlight">\(r=\rho\)</span></strong> — Smoothing: <span class="math notranslate nohighlight">\(\dot{c}=0\)</span>, konsumsi konstan (steady state).</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Ada pepatah yang pas: “先苦後甜” — pahit sesaat, manis sehayat (“#YOLO, not”). Keynes-Ramsey adalah formalisasi disiplin intertemporal itu.</p>
+</div>
+<p><strong>c sebagai jump variable</strong> — Hanya k punya dua boundary (k(0) dan TVC). c tidak punya boundary explicit. c(0) harus disesuaikan (jump) ke saddle path: c∗(0) = g(k0).</p>
+</section>
+<section id="konsep-4-exercise-12-2-phase-plane-paling-penting">
+<h2>Konsep 4 — Exercise 12.2 — Phase Plane (Paling Penting)<a class="headerlink" href="#konsep-4-exercise-12-2-phase-plane-paling-penting" title="Link to this heading">#</a></h2>
+<p><em>Inti analisis RCK.</em></p>
+<p><strong>Part 1.</strong> Nullclines</p>
+<p><strong>Nullcline <span class="math notranslate nohighlight">\(\dot{c}=0\)</span></strong> — Dari Keynes-Ramsey, <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> butuh <span class="math notranslate nohighlight">\(f'(\bar{k}) = \delta+\rho\)</span>. Karena <span class="math notranslate nohighlight">\(f''&lt;0\)</span>, solusinya unik.</p>
+<p>Garis vertikal <span class="math notranslate nohighlight">\(k=\bar{k}\)</span>.</p>
+<p><strong>Nullcline <span class="math notranslate nohighlight">\(\dot{k}=0\)</span></strong> — Dari resource constraint: c = f(k) −δk.</p>
+<p>Kurva hump-shape, puncak di kGR where f′(kGR) = δ.</p>
+<p><strong>Bukti modified golden rule k̄ &lt; kGR</strong></p>
+<p><strong>Step 1.</strong> Bandingkan FOC</p>
+<p>f′(k̄) = δ + ρ &gt; δ= f′(kGR)</p>
+<p><strong>Step 2.</strong> F′ strictly decreasing (dari f′′&lt; 0)</p>
+<p><strong>Step 3</strong> — Kontrapositif: f′(k̄) &gt; f′(kGR) dan f′ decreasing → k̄ &lt; kGR</p>
+<p><strong>Cobb-Douglas verifikasi</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\bar{k}}{k_{GR}}=\left(\frac{\delta}{\delta+\rho}\right)^{1/(1-\alpha)}&lt;1
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Mengapa planner tidak pilih golden rule: planner impatient (ρ &gt; 0). Tidak mau accumulate sampai max consumption steady state — korban konsumsi short- run tidak worth it. Limit ρ →0: k̄ →kGR.</p>
+</div>
+<p><strong>Part 2.</strong> Steady State</p>
+<div class="math notranslate nohighlight">
+\[
+f'(\bar{k})=\delta+\rho,\qquad \bar{c}=f(\bar{k})-\delta\bar{k}
+\]</div>
+<p>Untuk Cobb-Douglas: k̄ = (α/(δ + ρ))1/(1−α).</p>
+<p><strong>Part 3.</strong> Vector Field</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: mengapa arah vektornya demikian?</p>
+</div>
+<p><strong>Arah <span class="math notranslate nohighlight">\(\dot{k}\)</span> (bukti)</strong> — Dari <span class="math notranslate nohighlight">\(\partial\dot{k}/\partial c=-1&lt;0\)</span>: <span class="math notranslate nohighlight">\(\dot{k}\)</span> menurun dalam <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p><strong>Bawah <span class="math notranslate nohighlight">\(\dot{k}=0\)</span></strong> — <span class="math notranslate nohighlight">\(c&lt;f(k)-\delta k\)</span> → <span class="math notranslate nohighlight">\(\dot{k}&gt;0\)</span> → <span class="math notranslate nohighlight">\(k\)</span> tumbuh (panah kanan): konsumsi kurang dari output bersih → modal terakumulasi.</p>
+<p><strong>Atas <span class="math notranslate nohighlight">\(\dot{k}=0\)</span></strong> — <span class="math notranslate nohighlight">\(c&gt;f(k)-\delta k\)</span> → <span class="math notranslate nohighlight">\(\dot{k}&lt;0\)</span> → <span class="math notranslate nohighlight">\(k\)</span> menurun (panah kiri).</p>
+<p><strong>Atas <span class="math notranslate nohighlight">\(\dot{k}=0\)</span></strong> — Konsumsi melebihi output bersih.</p>
+<p><strong>Arah <span class="math notranslate nohighlight">\(\dot{c}\)</span> (bukti)</strong> — Dari Keynes-Ramsey, <span class="math notranslate nohighlight">\(\mathrm{sign}(\dot{c}) = \mathrm{sign}[f'(k) - \delta - \rho]\)</span>. Karena <span class="math notranslate nohighlight">\(f''&lt;0\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(k&lt;\bar{k}\)</span> → <span class="math notranslate nohighlight">\(f'(k) &gt; \delta+\rho\)</span> → <span class="math notranslate nohighlight">\(\dot{c}&gt;0\)</span> → <span class="math notranslate nohighlight">\(c\)</span> tumbuh (kuadran atas).</p>
+<p><strong>Kiri <span class="math notranslate nohighlight">\(\dot{c}=0\)</span></strong> — Return &gt; impatience → defer.</p>
+<p><strong>Kanan <span class="math notranslate nohighlight">\(\dot{c}=0\)</span></strong></p>
+<p><strong>Empat region</strong></p>
+<p><strong>I (kiri-bawah)</strong> — <span class="math notranslate nohighlight">\(\dot{k}&gt;0,\ \dot{c}&gt;0\)</span> → panah ↗</p>
+<p><strong>II (kanan-bawah)</strong> — <span class="math notranslate nohighlight">\(\dot{k}&gt;0,\ \dot{c}&lt;0\)</span> → panah ↘</p>
+<p><strong>III (kiri-atas)</strong> — <span class="math notranslate nohighlight">\(\dot{k}&lt;0,\ \dot{c}&gt;0\)</span> → panah ↖</p>
+<p><strong>IV (kanan-atas)</strong> — <span class="math notranslate nohighlight">\(\dot{k}&lt;0,\ \dot{c}&lt;0\)</span> → panah ↙</p>
+<p><strong>Bukti saddle point (Jacobian)</strong> — Linearisasi di (k̄, c̄):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J=\begin{pmatrix}\rho &amp; -1\\ \bar{c}\,f''(\bar{k})/\sigma &amp; 0\end{pmatrix}
+\end{split}\]</div>
+<p><strong>Step 1.</strong> Entry <span class="math notranslate nohighlight">\(\partial\dot{k}/\partial k = f'(\bar{k}) - \delta = \rho\)</span> (karena <span class="math notranslate nohighlight">\(f'(\bar{k})=\delta+\rho\)</span>)</p>
+<p><strong>Step 2</strong> — Entry <span class="math notranslate nohighlight">\(\partial\dot{c}/\partial c = 0\)</span> (bracket Keynes-Ramsey = 0 di steady state)</p>
+<p><strong>Step 3.</strong> Determinant</p>
+<p>det J= σc̄f′′(k̄) &lt; 0</p>
+<p>(karena f′′&lt; 0, c̄, σ&gt; 0)</p>
+<p><strong>Step 4</strong> — det J&lt; 0 → eigenvalues berlawanan tanda → saddle point</p>
+<p><strong>Part 4.</strong> Stable Arm (Kualitatif)</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: bagaimana menjawab analisis kualitatif <em>tanpa</em> eigenvalue (Part 4)?</p>
+<p>Dari vector field saja (tanpa eigenvalue), pakai argumen kontinuitas:</p>
+<p><strong>C0 Terlalu Tinggi</strong> — Mulai region III, <span class="math notranslate nohighlight">\(\dot{k}&lt;0\)</span> → <span class="math notranslate nohighlight">\(k\)</span> crash ke 0. Tidak feasible.</p>
+<p><strong>C0 Terlalu Rendah</strong> — Mulai region I → menyeberang ke region II → k explode ke ∞. Melanggar TVC.</p>
+<p><strong>C0 Tepat</strong> — Threshold c0∗= g(k0) → konvergen ke steady state. Stable arm.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Argumen kontinuitas: outcome berubah kontinu dari “crash” (high c0) ke “explode” (low c0). Pasti ada threshold c0∗ yang konvergen.</p>
+<p>Unik karena trajektori ODE tidak berpotongan (Picard-Lindelöf). TVC mem-pin-down stable arm sebagai unique optimal path.</p>
+<p>Stable arm adalah kurva 1D → ditulis c = g(k), state feedback rule. Sifat: g(k̄) = c̄, g increasing, slope = ρ −λ2&gt; 0.</p>
+<p><strong>Jebakan Umum</strong></p>
+<p>Untuk soal yang minta kualitatif: cukup vector field + kontinuitas. Eigenvalue memberi slope eksak (bonus), tapi tidak perlu untuk deduce eksistensi stable arm.</p>
+</div>
+<p><strong>Numerik (parameter konkret)</strong> — Dengan α = 0.3, δ= 0.05, ρ = 0.04, σ= 2: k̄ = 5.58, kGR= 12.93 (ratio 0.43), c̄ = 1.40, eigenvalues +0.111/ −0.071 (saddle confirmed). Shooting method: k0= 2 →c0∗≈0.901.</p>
+</section>
+<section id="konsep-5-exercise-12-3-comparative-dynamics">
+<h2>Konsep 5 — Exercise 12.3 — Comparative Dynamics (ρ ↑)<a class="headerlink" href="#konsep-5-exercise-12-3-comparative-dynamics" title="Link to this heading">#</a></h2>
+<p><em>Shock permanen: household jadi lebih impatient.</em></p>
+<p><strong>Part 1.</strong> Perubahan nullclines</p>
+<p><strong><span class="math notranslate nohighlight">\(\dot{c}=0\)</span></strong> — f′(k̄) = δ + ρ. ρ ↑ → k̄ ↓ → nullcline geser KIRI.</p>
+<p><strong><span class="math notranslate nohighlight">\(\dot{k}=0\)</span></strong> — c = f(k) −δk. Tidak tergantung ρ → TETAP.</p>
+<p>Steady state baru (k̄′, c̄′) di kiri-bawah dari lama.</p>
+<p><strong>Part 2-3 — Transitional dynamics &amp; time profile</strong></p>
+<ul class="simple">
+<li><p>k tidak bisa lompat → tetap k̄ saat shock</p></li>
+<li><p>c jump variable → jump naik (lebih impatient, konsumsi sekarang)</p></li>
+<li><p>Setelah jump: c, k turun gradual ke steady state baru</p></li>
+</ul>
+<p><strong>Part 4.</strong> Marginal propensity to save</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Soal time path <span class="math notranslate nohighlight">\(s\)</span> vs <span class="math notranslate nohighlight">\(\theta\)</span>: parameter <span class="math notranslate nohighlight">\(\theta\)</span> adalah notasi alternatif untuk <span class="math notranslate nohighlight">\(\sigma\)</span> (Acemoglu/Barro memakai <span class="math notranslate nohighlight">\(\theta\)</span>).</p>
+<p>Saving rate steady state (Cobb-Douglas):</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{s}=\frac{\delta\bar{k}}{f(\bar{k})}=\frac{\alpha\,\delta}{\delta+\rho}
+\]</div>
+<p>Efek shock:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial\bar{s}}{\partial\rho}=-\frac{\alpha\,\delta}{(\delta+\rho)^{2}}&lt;0
+\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong><span class="math notranslate nohighlight">\(\bar{s}\)</span> turun saat <span class="math notranslate nohighlight">\(\rho\)</span> naik.</strong> Verifikasi: <span class="math notranslate nohighlight">\(\rho: 0.04 \to 0.06\)</span> memberi <span class="math notranslate nohighlight">\(\bar{s}: 16.7\% \to 13.6\%\)</span>. Magnitude/kecepatan adjustment tergantung EIS 1/σ</p>
+<p>(atau 1/θ).</p>
+</div>
+<p><strong>Part 5.</strong> Endogenisasi saving</p>
+<p><strong>Solow</strong> — s konstan, arbitrer, mekanis</p>
+<p><strong>RCK</strong> — s(k) endogen dari optimisasi, adjust optimal terhadap shock</p>
+</section>
+<section id="konsep-6-section-12-3-competitive-equilibrium">
+<h2>Konsep 6 — Section 12.3 — Competitive Equilibrium<a class="headerlink" href="#konsep-6-section-12-3-competitive-equilibrium" title="Link to this heading">#</a></h2>
+<p><em>Decentralized economy: household + firm + market clearing.</em></p>
+<p><strong>Ownership structure</strong> — Household own assets a, sewakan modal ke firm. Modigliani-Miller: tiga struktur ownership ekuivalen di pasar frictionless.</p>
+<section id="exercise-12-4-household-ocp">
+<h3>Exercise 12.4 — Household OCP<a class="headerlink" href="#exercise-12-4-household-ocp" title="Link to this heading">#</a></h3>
+<p><strong>Present-value Hamiltonian</strong></p>
+<div class="math notranslate nohighlight">
+\[
+H=e^{-\rho t}u(c)+\mu\bigl[r(t)\,a+w(t)-c\bigr]
+\]</div>
+<p><strong>PMP conditions</strong></p>
+<p><strong>Maximality</strong> — <span class="math notranslate nohighlight">\(e^{-\rho t}u_{c}(c)=\mu\)</span></p>
+<p><strong>Adjoint</strong> — <span class="math notranslate nohighlight">\(\dot{\mu}/\mu=-r(t)\)</span></p>
+<p><strong>Budget (12.16)</strong> — <span class="math notranslate nohighlight">\(\dot{a}=r a+w-c\)</span></p>
+<p><strong>Euler equation (12.15)</strong></p>
+<p><strong>Step 1.</strong> Turunkan maximality terhadap t, bagi dengan μ</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\mu}}{\mu}=-\rho+\frac{u_{cc}}{u_{c}}\,\dot{c}
+\]</div>
+<p><strong>Step 2.</strong> Substitusi adjoint μ˙/μ = −r dan Arrow-Pratt</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r(t)-\rho\bigr]
+\]</div>
+<p><strong>No-Ponzi-Game</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Tentang NPG dan notasi <span class="math notranslate nohighlight">\(\dot{p}/p\)</span>:</p>
+<p>NPG mencegah household pinjam tanpa batas (Ponzi strategy). No-arbitrage: harga konsumsi p(t) = e−0t rdτ, sehingga:∫</p>
+<p><span class="math notranslate nohighlight">\(\dot{p}/p = -r(t)\)</span></p>
+<p>(<span class="math notranslate nohighlight">\(\dot{p}/p\)</span> = growth rate harga = turunan logaritma). NPG (12.14): <span class="math notranslate nohighlight">\(\lim_{T\to\infty} p(T)\,a(T) \ge 0\)</span> — present value assets tidak boleh negatif tak terbatas.</p>
+</div>
+<p><strong>Firm FOC</strong> — <span class="math notranslate nohighlight">\(r = f'(k) - \delta\)</span> (12.17), <span class="math notranslate nohighlight">\(\quad w = f(k) - k\,f'(k)\)</span> (12.18)</p>
+<p><strong>Market clearing</strong> — <span class="math notranslate nohighlight">\(a=k\)</span>, <span class="math notranslate nohighlight">\(f(k) = c + \dot{k} + \delta k\)</span></p>
+</section>
+</section>
+<section id="konsep-7-section-12-4-first-welfare-theorem">
+<h2>Konsep 7 — Section 12.4 — First Welfare Theorem<a class="headerlink" href="#konsep-7-section-12-4-first-welfare-theorem" title="Link to this heading">#</a></h2>
+<p><em>Planner = competitive equilibrium.</em></p>
+<p><strong>Equivalence (Exercise 12.5)</strong> — Substitusi firm FOC r= f′(k) −δ ke household Euler:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[r-\rho\bigr]=\frac{1}{\sigma}\bigl[f'(k)-\delta-\rho\bigr]
+\]</div>
+<p><strong>Sama dengan planner Keynes-Ramsey!</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Plus resource constraint (market clearing) dan TVC/NPG sama. Maka competitive equilibrium = planner’s allocation. First Welfare Theorem.</p>
+</div>
+<p><strong>Mengapa berlaku</strong> — Convexity terpenuhi: u concave, f concave → Mangasarian Sufficiency → PMP = HJB.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Implikasi: di RCK (pasar sempurna, convex), tidak ada room untuk policy. Di Bab 14-15 (increasing returns dari R&amp;D), convexity gagal → First Welfare gagal → policy matters.</p>
+</div>
+</section>
+<section id="konsep-8-section-12-5-tfp-population-growth">
+<h2>Konsep 8 — Section 12.5 — TFP &amp; Population Growth<a class="headerlink" href="#konsep-8-section-12-5-tfp-population-growth" title="Link to this heading">#</a></h2>
+<p><em>Extension ke Balanced Growth Path (BGP).</em></p>
+<p><strong>Redefinisi per efficient unit</strong> — L(t) = ent, A(t) = egt. Variabel per efficient unit: c = C/(AL), k= K/(AL).</p>
+<section id="exercise-12-6-resource-constraint">
+<h3>Exercise 12.6 — Resource constraint<a class="headerlink" href="#exercise-12-6-resource-constraint" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> Aggregate: <span class="math notranslate nohighlight">\(\dot{K} = F(K,AL) - \delta K - C\)</span></p>
+<p><strong>Step 2.</strong> Log-differentiate <span class="math notranslate nohighlight">\(k = K/(AL)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dot{k}/k = \dot{K}/K - g - n\)</span></p>
+<p><strong>Step 3.</strong> CRS: <span class="math notranslate nohighlight">\(F(K,AL)/(AL) = f(k)\)</span> (pilih <span class="math notranslate nohighlight">\(\lambda = 1/(AL)\)</span>)</p>
+<p><strong>Step 4.</strong> Substitusi dan kumpulkan → hasil</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{k} = f(k) - (n+g+\delta)k - c
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Titik buntu yang umum ada di Hint 4 — kuncinya</p>
+</div>
+</section>
+<section id="exercise-12-7-hamiltonian-dengan-growth">
+<h3>Exercise 12.7 — Hamiltonian dengan growth<a class="headerlink" href="#exercise-12-7-hamiltonian-dengan-growth" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+H=e^{-(\rho-n)t}\,u(Ac)+\lambda\bigl[f(k)-(n+g+\delta)k-c\bigr]
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: kenapa discount rate menjadi <span class="math notranslate nohighlight">\((\rho - n)\)</span>?</p>
+<p>Objective punya L(t) = ent (planner peduli total welfare). e−ρt ⋅ent= e−(ρ−n)t. Effective discount = impatience minus population growth. Asumsi ρ &gt; n untuk konvergensi. Argumen utility Ac = konsumsi per pekerja.</p>
+</div>
+</section>
+<section id="exercise-12-8-euler-dengan-growth">
+<h3>Exercise 12.8 — Euler dengan growth<a class="headerlink" href="#exercise-12-8-euler-dengan-growth" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> Log maximality, turunkan</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\lambda}}{\lambda}=-(\rho-n)+g+\frac{d}{dt}\ln u'(Ac)
+\]</div>
+<p><strong>Step 2</strong> — Kunci: <span class="math notranslate nohighlight">\(\frac{d}{dt}\ln u'(Ac) = -\sigma\,(g+\dot{c}/c)\)</span>, karena growth rate <span class="math notranslate nohighlight">\(Ac\)</span> adalah <span class="math notranslate nohighlight">\(g+\dot{c}/c\)</span>.</p>
+<p><strong>g + ċ/c</strong></p>
+<p><strong>Step 3.</strong> Set sama adjoint, cancel n, g, solve</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{c}}{c}=\frac{1}{\sigma}\bigl[f'(k)-(\delta+\rho+\sigma g)\bigr]
+\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Suku baru σg = effective impatience tambahan karena konsumsi per pekerja tumbuh g. BGP: f′(k̄) = δ + ρ + σg. Verifikasi: dengan</p>
+<p>growth <span class="math notranslate nohighlight">\(\bar{k}\)</span> lebih rendah; pada limit <span class="math notranslate nohighlight">\(g=0\)</span> kembali ke no-growth.</p>
+</div>
+</section>
+<section id="exercise-12-9-bgp-preference-restriction">
+<h3>Exercise 12.9 — BGP preference restriction<a class="headerlink" href="#exercise-12-9-bgp-preference-restriction" title="Link to this heading">#</a></h3>
+<p>Euler umum (tanpa asumsi σ konstan):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{c}}{c}=\frac{f'(k)-\delta-\rho-g}{\sigma(Ac)}
+\]</div>
+<p>Di BGP (ċ/c = 0):</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(cA)=\frac{f'(\bar{k})-\delta-\rho}{g}=\text{konstanta}
+\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Karena cA = c̄ ⋅egt→∞, σ harus asymptotically constant. Sufficiency: jika σ→σ∗, maka f′(k̄) = δ + ρ + σ∗g punya solusi</p>
+<p>unique → BGP exists.</p>
+</div>
+</section>
+<section id="exercise-12-10-crra-patience-restriction">
+<h3>Exercise 12.10 — CRRA patience restriction<a class="headerlink" href="#exercise-12-10-crra-patience-restriction" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> CRRA + BGP: integrand objective</p>
+<p>∼e[−ρ+(1−σ)g+n]t</p>
+<p><strong>Step 2.</strong> Konvergen iff eksponen &lt; 0</p>
+<p>ρ &gt; n + (1 −σ)g</p>
+<p>(1 −σ)g&lt; 0 → restriction lebih longgar dari ρ &gt; n.</p>
+<p><strong><span class="math notranslate nohighlight">\(\sigma&gt;1\)</span></strong> — Utility bounded.</p>
+<p><strong><span class="math notranslate nohighlight">\(\sigma=1\)</span></strong> — Restriction sama dengan ρ &gt; n (log utility).</p>
+<p><strong><span class="math notranslate nohighlight">\(\sigma&lt;1\)</span></strong> — <span class="math notranslate nohighlight">\((1-\sigma)g&gt;0\)</span> → restriction lebih ketat. Utility unbounded, butuh discount besar.</p>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Jebakan aljabar eksponen: (a/b)p= apb−p. Eksponen penyebut jadi −p, bukan eksponen lain. Contoh: (δ/α)1/(α−1)= δ1/(α−1)α−1/(α−1), bukan α(α−1). Bentuk bersih: kGR= (α/δ)1/(1−α).</p>
+<p><strong>Checklist</strong></p>
+</div>
+</section>
+</section>
+<section id="self-assessment-bab-12">
+<h2>Self-Assessment Bab 12<a class="headerlink" href="#self-assessment-bab-12" title="Link to this heading">#</a></h2>
+<p><em>Cek pemahaman.</em></p>
+<p><strong>Setup dan Planner</strong></p>
+<ul class="simple">
+<li><p>☐ Bedanya RCK vs Solow (saving endogen)</p></li>
+<li><p>☐ Setup u(c), f(k), ρ, δ; state k vs control c</p></li>
+<li><p>☐ HJB equation planner (asset pricing)</p></li>
+<li><p>☐ PMP conditions (12.5)-(12.8)</p></li>
+<li><p>☐ Derivation envelope (12.9) dan Keynes-Ramsey (12.10)</p></li>
+<li><p>☐ Keynes-Ramsey = Euler-Lagrange equation</p></li>
+<li><p>☐ Cases: patience/impatience/smoothing</p></li>
+<li><p>☐ c jump variable</p></li>
+</ul>
+<p><strong>Phase Plane (Exercise 12.2)</strong></p>
+<ul class="simple">
+<li><p>☐ Nullclines: ċ = 0 vertikal, k̇ = 0 hump</p></li>
+<li><p>☐ Bukti k̄ &lt; kGR</p></li>
+<li><p>☐ Steady state (k̄, c̄)</p></li>
+<li><p>☐ Vector field 4 region (bukti arah)</p></li>
+<li><p>☐ Jacobian, det J&lt; 0, saddle point</p></li>
+<li><p>☐ Stable arm kualitatif (argumen kontinuitas)</p></li>
+<li><p>☐ State feedback rule c = g(k)</p></li>
+</ul>
+<p><strong>Comparative Dynamics (Exercise 12.3)</strong></p>
+<ul class="simple">
+<li><p>☐ Shock ρ ↑: nullcline geser</p></li>
+<li><p>☐ c jump naik, lalu turun</p></li>
+<li><p>☐ Saving rate s̄ = αδ/(δ + ρ) turun</p></li>
+<li><p>☐ Endogenisasi saving vs Solow</p></li>
+</ul>
+<p><strong>Competitive Equilibrium</strong></p>
+<ul class="simple">
+<li><p>☐ Household OCP (Exercise 12.4)</p></li>
+<li><p>☐ Euler household (12.15)</p></li>
+<li><p>☐ NPG dan ṗ/p = −r</p></li>
+<li><p>☐ Firm FOC (12.17)-(12.18)</p></li>
+<li><p>☐ Market clearing</p></li>
+<li><p>☐ First Welfare Theorem (planner = CE)</p></li>
+</ul>
+<p><strong>Growth Case</strong></p>
+<ul class="simple">
+<li><p>☐ Resource constraint efficiency units (Exercise 12.6)</p></li>
+<li><p>☐ Hamiltonian (ρ −n) (Exercise 12.7)</p></li>
+<li><p>☐ Euler dengan σg (Exercise 12.8)</p></li>
+<li><p>☐ BGP σ asymptotically constant (Exercise 12.9)</p></li>
+<li><p>☐ Patience restriction ρ &gt; n + (1 −σ)g (Exercise 12.10)</p></li>
+</ul>
+<p>✦ ✦ ✦</p>
+<p><strong>Review Bab 12 — Ramsey-Cass-Koopmans</strong> — Economic Growth Personal Study Notes · Neoclassical Growth</p>
+<p>Aplikasi PMP/HJB · Jembatan ke Endogenous Growth (Bab 14-15)</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab11-optimal-control.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 11 — Optimal Control</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab14-romer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 14 — R&amp;D I (Romer)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-dan-pengantar-rck">Konsep 1 — Posisi dan Pengantar RCK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-12-1-model-primitives">Konsep 2 — Section 12.1 — Model Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-12-2-planner-s-problem">Konsep 3 — Section 12.2 — Planner’s Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-exercise-12-2-phase-plane-paling-penting">Konsep 4 — Exercise 12.2 — Phase Plane (Paling Penting)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-exercise-12-3-comparative-dynamics">Konsep 5 — Exercise 12.3 — Comparative Dynamics (ρ ↑)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-12-3-competitive-equilibrium">Konsep 6 — Section 12.3 — Competitive Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-4-household-ocp">Exercise 12.4 — Household OCP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-section-12-4-first-welfare-theorem">Konsep 7 — Section 12.4 — First Welfare Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-12-5-tfp-population-growth">Konsep 8 — Section 12.5 — TFP &amp; Population Growth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-6-resource-constraint">Exercise 12.6 — Resource constraint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-7-hamiltonian-dengan-growth">Exercise 12.7 — Hamiltonian dengan growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-8-euler-dengan-growth">Exercise 12.8 — Euler dengan growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-9-bgp-preference-restriction">Exercise 12.9 — BGP preference restriction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-10-crra-patience-restriction">Exercise 12.10 — CRRA patience restriction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-12">Self-Assessment Bab 12</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

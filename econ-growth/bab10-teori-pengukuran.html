@@ -1,0 +1,1256 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 10 — Teori &amp; Pengukuran &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab10-teori-pengukuran';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 11 — Optimal Control" href="bab11-optimal-control.html" />
+    <link rel="prev" title="Bab 9 — Solow-Swan" href="bab09-solow-swan.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab10-teori-pengukuran.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab10-teori-pengukuran.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 10 — Teori & Pengukuran</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-bab-10-dalam-kursus">Konsep 1 — Posisi Bab 10 dalam Kursus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-10-1-growth-accounting">Konsep 2 — Section 10.1 — Growth Accounting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-10-2-convergence-regression">Konsep 3 — Section 10.2 — Convergence Regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-5-turunan-f-k-k">Exercise 10.5 — Turunan <span class="math notranslate nohighlight">\(f(k)/k\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-6-differentiation-trick">Exercise 10.6 — Differentiation trick</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-section-10-3-solow-dengan-human-capital">Konsep 4 — Section 10.3 — Solow dengan Human Capital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-exercise-10-14-nullcline-analysis-lengkap">Konsep 5 — Exercise 10.14 — Nullcline Analysis Lengkap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-10-4-mankiw-romer-weil-cross-country">Konsep 6 — Section 10.4 — Mankiw-Romer-Weil Cross-country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-hubungan-ke-model-model-lain">Konsep 7 — Hubungan ke Model-Model Lain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-10-5-discussion-exercise-10-17">Konsep 8 — Section 10.5 — Discussion (Exercise 10.17)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap-ke-depan">Roadmap ke depan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-10">Checklist Pemahaman Bab 10</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-10-teori-pengukuran">
+<h1>Bab 10 — Teori &amp; Pengukuran<a class="headerlink" href="#bab-10-teori-pengukuran" title="Link to this heading">#</a></h1>
+<p>Bab ini mempertemukan model dengan data: growth accounting, persamaan konvergensi, dan studi empiris Mankiw-Romer-Weil. Fokusnya pada konsep-konsep yang paling sering membingungkan: perbedaan variabel per effective worker vs per pekerja fisik, derivasi linearisasi persamaan konvergensi, sumber data human capital, serta ketegangan sehat antara teori dan data yang mendorong lahirnya model-model berikutnya.</p>
+<section id="konsep-1-posisi-bab-10-dalam-kursus">
+<h2>Konsep 1 — Posisi Bab 10 dalam Kursus<a class="headerlink" href="#konsep-1-posisi-bab-10-dalam-kursus" title="Link to this heading">#</a></h2>
+<p><em>Bab 10 adalah jembatan teori-data untuk Solow-Swan.</em></p>
+<p><strong>Sifat Bab 10 vs Bab 9</strong> — Teori murni. Setup, ODE, steady state, comparative statics, Uzawa BGP.</p>
+<p><strong>Bab 9</strong> — Pertanyaan: “Bagaimana model bekerja?”</p>
+<p><strong>Bab 10</strong> — Empirics: growth accounting, regresi convergence, MRW. Pertanyaannya: “Apa yang data katakan tentang model?”</p>
+<p><em>Lima section dan apa yang masing-masing pelajari.</em></p>
+<p><strong>10.1 Growth Accounting</strong> — Dekomposisi <span class="math notranslate nohighlight">\(g_{Y}\)</span> ke kontribusi modal, labor, dan tech. Solow residual.</p>
+<p><strong>10.2 Convergence Regression</strong> — Linearisasi Solow-Swan untuk menguji apakah negara miskin tumbuh lebih cepat (beta-konvergensi).</p>
+<p><strong>10.3 Human Capital Extension</strong> — Sistem ODE 2D dengan modal fisik dan human capital. Nullcline analysis.</p>
+<p><strong>10.4 Cross-Country MRW</strong> — Aplikasi cross-country dari Section 10.3 ke data. Mankiw-Romer-Weil.</p>
+<p><strong>10.5 Discussion</strong> — Diskusi terbuka tentang batas MRW dan transisi ke endogenous growth.</p>
+<p><strong>Ringkasan Besar</strong></p>
+<p><em>Bab 10 menjawab dua pertanyaan besar.</em></p>
+<p><em>1. Apa yang menjelaskan ketimpangan income antar negara? 2. Apakah Solow-Swan menjelaskan dinamika growth dengan baik?</em></p>
+<p><em>Plus, Bab 10 membuka research program growth empirics modern.</em></p>
+</section>
+<section id="konsep-2-section-10-1-growth-accounting">
+<h2>Konsep 2 — Section 10.1 — Growth Accounting<a class="headerlink" href="#konsep-2-section-10-1-growth-accounting" title="Link to this heading">#</a></h2>
+<p><em>Solow (1957): seberapa banyak growth bisa dijelaskan oleh modal dan labor, dan seberapa banyak oleh tech?</em></p>
+<p><strong>Pertanyaan motivasi</strong> — Data menunjukkan output tumbuh lebih cepat dari yang bisa dijelaskan oleh akumulasi modal dan labor saja. Sisanya — yang disebut “tech progress” atau TFP — dari mana?</p>
+<p><strong>Derivation formula growth accounting</strong> — Production function umum: <span class="math notranslate nohighlight">\(Y (t) = F [A(t), K(t), L(t)]\)</span>.</p>
+<p><strong>Step 1.</strong> Turunkan <span class="math notranslate nohighlight">\(Y\)</span> terhadap pakai chain rule <span class="math notranslate nohighlight">\(t\)</span></p>
+<p><span class="math notranslate nohighlight">\(Y\)</span> tergantung pada lewat tiga channel (<span class="math notranslate nohighlight">\(tA, K, L\)</span>). Chain rule memberi:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{Y}=F_{A} \cdot \dot{A}+F_{K} \cdot \dot{K}+F_{L}^{\dot{L}} \cdot \]</div>
+<p><strong>Step 2.</strong> Bagi kedua sisi dengan <span class="math notranslate nohighlight">\(Y\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{Y}}{Y}=\frac{F_{A}\dot{A}}{Y}+\frac{F_{K}\dot{K}}{Y}+\frac{F_{L}\dot{L}}{Y}
+\]</div>
+<p><strong>Step 3.</strong> Manipulasi tiap suku (kali dan bagi dengan input)</p>
+<p>Suku <span class="math notranslate nohighlight">\(K\)</span>: kali dan bagi dengan <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{F_{K}\dot{K}}{Y}=\frac{F_{K}K}{Y}\cdot\frac{\dot{K}}{K}
+\]</div>
+<p>Sama untuk <span class="math notranslate nohighlight">\(L\)</span> dan <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>Step 4.</strong> Definisikan notasi ringkas</p>
+<p><span class="math notranslate nohighlight">\(\alpha _{K}(t):=F_{K}(t)K(t)/Y (t)\)</span> — capital share of income <span class="math notranslate nohighlight">\(\alpha _{L}(t):=F_{L}(t)L(t)/Y (t)\)</span> — labor share of income <span class="math notranslate nohighlight">\(x(t):= F_{A}(t)A(t)/Y (t) \cdot \dot{A}(t)/A(t)\)</span> — TFP contribution Hasil:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{Y}}{Y}=\alpha_{K}(t)\,\frac{\dot{K}}{K}+x(t)+\alpha_{L}(t)\,\frac{\dot{L}}{L}
+\]</div>
+<p>Inilah persamaan (10.1).</p>
+<p><strong>Mengapa <span class="math notranslate nohighlight">\(\alpha _{K}, \alpha _{L}\)</span> disebut “income shares”?</strong> Di competitive equilibrium: <span class="math notranslate nohighlight">\(R= F_{K}, W=F_{L}\)</span>. Maka:</p>
+<p><span class="math notranslate nohighlight">\(F_{K}^{K=R\cdotK=} \cdot\)</span> total capital income <span class="math notranslate nohighlight">\(F_{L}^{L=W\cdotL=} \cdot\)</span> total labor income</p>
+<p>Fraksi dari <span class="math notranslate nohighlight">\(Y\)</span> yang ke modal = <span class="math notranslate nohighlight">\(\alpha _{K}\)</span>. Inilah interpretation “income share”.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p><em>Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, <span class="math notranslate nohighlight">\(R= \ne F_{K}\)</span>, dan formula bisa misleading. Plus dengan Euler’s Theorem (Exercise 9.2): <span class="math notranslate nohighlight">\(\alpha _{K} +\alpha _{L} =1\)</span>.</em></p>
+</div>
+<p><strong>Solow residual — TFP measurement</strong> — Rearrange untuk solve <span class="math notranslate nohighlight">\(x(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ x(t) = g(t) -\alpha _{K}(t)g_{K}(t) -\alpha _{L}(t)g_{L}(t) \]</div>
+<p>Inilah persamaan (10.2) — Solow’s growth accounting formula.</p>
+<p>Semua sisi kanan observable. Maka <span class="math notranslate nohighlight">\(x(t)\)</span> — kontribusi TFP terhadap output growth — bisa di-back-out dari data.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Catatan Moses Abramovitz: Solow residual adalah “measure of our ignorance”. Yang kita sebut “tech” sebenarnya bisa apa saja yang tidak masuk hitungan modal dan labor: innovation real, efficiency gains, mismeasurement, externalities, institutional change.</p>
+</div>
+<p><strong>Exercise 10.1 — TFP growth untuk Cobb-Douglas</strong></p>
+<p>Setup: <span class="math notranslate nohighlight">\(Y= K(AL)^{\alpha1-\alpha }\)</span>.</p>
+<p><strong>Step 1.</strong> Ambil log kedua sisi</p>
+<div class="math notranslate nohighlight">
+\[ ln Y= \alpha ln K + (1 -\alpha)(ln A + ln L) \]</div>
+<p><strong>Step 2.</strong> Turunkan terhadap <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{Y}}{Y}=\alpha\,\frac{\dot{K}}{K}+(1-\alpha)\,\frac{\dot{A}}{A}+(1-\alpha)\,\frac{\dot{L}}{L}
+\]</div>
+<p><strong>Step 3.</strong> Pakai income share Cobb-Douglas</p>
+<p><span class="math notranslate nohighlight">\(\alpha _{K} =\alpha, \alpha _{L} =1 -\alpha\)</span>. Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{Y}}{Y}=\alpha_{K}\,\frac{\dot{K}}{K}+\alpha_{L}\,\frac{\dot{A}}{A}+\alpha_{L}\,\frac{\dot{L}}{L}
+\]</div>
+<p><strong>Step 4</strong> Solve untuk <span class="math notranslate nohighlight">\(\dot{A}/A\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{A}}{A}=\frac{1}{\alpha_{L}}\left[g_{Y}-\alpha_{K}\,g_{K}-\alpha_{L}\,g_{L}\right]
+\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Untuk Cobb-Douglas labor-augmenting, TFP growth <span class="math notranslate nohighlight">\(\dot{A}/A\)</span> adalah Solow residual dibagi</em></p>
+<p><span class="math notranslate nohighlight">\(\alpha _{L}\)</span>. Implikasi: kalau <span class="math notranslate nohighlight">\(\alpha _{L} =0.65\)</span>, TFP growth <span class="math notranslate nohighlight">\(= x(t)/0.65 \approx 1.54 \cdot x(t)\)</span>. Lebih</p>
+<p><em>besar dari Solow residual.</em></p>
+</div>
+<p><strong>Exercise 10.2 — Measurement issues</strong></p>
+<p><strong>Issue 1.</strong> Time aggregation</p>
+<p>Formula adalah continuous-time, tapi data discrete-time (annual). Tiga workaround:</p>
+<p>Asumsi Cobb-Douglas: <span class="math notranslate nohighlight">\(\alpha _{K}\)</span> konstan, masalah time-varying share hilang Tornqvist index: pakai rata-rata income share <span class="math notranslate nohighlight">\([\alpha _{K}(t) +\alpha _{K}(t +1)]/2\)</span> Log approximation: <span class="math notranslate nohighlight">\(ln X_{t+1} -ln X_{t} \approx g_{X} \cdot \Delta t\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Tornqvist tidak pakai dari Cobb-Douglas. Income share dihitung dari data observasi: <span class="math notranslate nohighlight">\(\alpha\)</span> capital income / GDP. Untuk tiap tahun, hitung <span class="math notranslate nohighlight">\(\alpha _{K}(t)\)</span> baru. Lebih fleksibel dari Cobb-</p>
+</div>
+<p><em>Douglas yang asumsi konstan. <span class="math notranslate nohighlight">\(\alpha\)</span>.</em></p>
+<p><strong>Issue 2.</strong> Mismeasurement input</p>
+<p>Labor bisa underestimated karena:</p>
+<p>Quality (pendidikan, skill) tidak terhitung</p>
+<p>Informal sector tidak tercatat</p>
+<p>Jam kerja vs head count</p>
+<p>Capital bisa underestimated karena:</p>
+<p>Quality (intangibles: software, R&amp;D, brand value)</p>
+<p>Estimasi salah <span class="math notranslate nohighlight">\(\delta\)</span></p>
+<p>Capital utilization fluktuasi</p>
+<p><strong>Arah bias mismeasurement</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “bagaimana mismeasurement bias estimasi TFP?”</p>
+<p>Logika dengan persamaan: kalau <span class="math notranslate nohighlight">\(g_{L}^{measured} &lt;g_{L}^{true}\)</span>, maka <span class="math notranslate nohighlight">\(\alpha _{LL}g^{measured} &lt;\alpha _{LL}g^{true}\)</span>. Karena kita kurangkan dari <span class="math notranslate nohighlight">\(g_{Y}\)</span> untuk dapat residual, hasil <span class="math notranslate nohighlight">\(x^{measured}&gt;x^{true}\)</span>.</p>
+<p>Numerical example: <span class="math notranslate nohighlight">\(g_{Y} =3\%, g_{K} =4\%, \alpha _{K} =0.3, \alpha _{L} =0.7\)</span>. Kalau <span class="math notranslate nohighlight">\(g_{L}^{true} =2\%\)</span> tapi <span class="math notranslate nohighlight">\(g_{L}^{measured} =1\%\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ x^{true}=3 -0.3(4) -0.7(2) = 0.4\% \]</div>
+<p><span class="math notranslate nohighlight">\(x^{measured}=3 -0.3(4) -0.7(1) = 1.1\%\)</span></p>
+<p>Solow residual overestimate <span class="math notranslate nohighlight">\(∼0.7\)</span> percentage points.</p>
+<p>Implikasi: tech “dapat credit” untuk labor quality improvement yang tersembunyi. Ini motivasi MRW (Section 10.4) — pisahkan human capital dari TFP.</p>
+</div>
+</section>
+<section id="konsep-3-section-10-2-convergence-regression">
+<h2>Konsep 3 — Section 10.2 — Convergence Regression<a class="headerlink" href="#konsep-3-section-10-2-convergence-regression" title="Link to this heading">#</a></h2>
+<p><em>Linearisasi ODE Solow-Swan untuk uji empiris konvergensi.</em></p>
+<p><strong>Pertanyaan motivasi</strong> — Solow-Swan memprediksi negara di bawah steady state tumbuh lebih cepat. Apakah ini terlihat di data?</p>
+<p><strong>Variabel kunci: vs <span class="math notranslate nohighlight">\(y\tilde{y}\)</span></strong> — Distinction yang harus jelas dulu:</p>
+<p><strong><span class="math notranslate nohighlight">\(y\)</span> (per effective worker)</strong> — <span class="math notranslate nohighlight">\(y:=Y/(AL)=f(k)\)</span>. Konstan di BGP. Tidak observable langsung karena butuh <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\tilde{y}\)</span> (per physical worker)</strong> — <span class="math notranslate nohighlight">\(\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y\)</span>. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). <span class="math notranslate nohighlight">\(g\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective <span class="math notranslate nohighlight">\(\cdot ^{~}\)</span></p>
+<p><em>worker (model). Bedanya: <span class="math notranslate nohighlight">\(\tilde{y} =A \cdot y\)</span>. Saat <span class="math notranslate nohighlight">\(A\)</span> tumbuh, tumbuh meskipun konstan. <span class="math notranslate nohighlight">\(\tilde{y}y\)</span></em></p>
+</div>
+<p><strong>Step 1.</strong> Hubungkan growth ke growth <span class="math notranslate nohighlight">\(\tilde{y}k\)</span></p>
+<p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(\tilde{y} =Af(k)\)</span></p>
+<p>Ambil log:</p>
+<div class="math notranslate nohighlight">
+\[ ln\tilde{y} =ln A + ln f(k) \]</div>
+<p><strong>Step 2.</strong> Turunkan terhadap <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\tilde{y}}}{\tilde{y}}=\frac{\dot{A}}{A}+\frac{d}{dt}\ln f(k(t))
+\]</div>
+<p><strong>Step 3.</strong> Chain rule untuk suku kedua</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}\ln f(k(t))=\frac{f\'(k)}{f(k)}\cdot\dot{k}
+\]</div>
+<p><strong>Step 4</strong> Substitusi <span class="math notranslate nohighlight">\(\dot{A}/A=g\)</span> dan manipulasi</p>
+<p>Kali dan bagi suku kedua dengan: <span class="math notranslate nohighlight">\(k\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{f\'(k)}{f(k)}\cdot\dot{k}=\frac{f\'(k)\,k}{f(k)}\cdot\frac{\dot{k}}{k}=\varepsilon_{f}(k)\cdot\frac{\dot{k}}{k}
+\]</div>
+<p>Definisikan elastisitas: <span class="math notranslate nohighlight">\(\varepsilon _{f}(k):=f(k)k/f(k)^{'}\)</span>.</p>
+<p>Hasil:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\dot{\tilde{y}}}{\tilde{y}}=g+\varepsilon_{f}(k)\cdot\frac{\dot{k}}{k}
+\]</div>
+<p>Inilah persamaan (10.6).</p>
+<p><strong>Exercise 10.4 — Verifikasi <span class="math notranslate nohighlight">\(\varepsilon _{f} =\alpha\)</span> untuk Cobb-Douglas</strong></p>
+<p><span class="math notranslate nohighlight">\(f(k) = k^{\alpha }\)</span>. Hitung:</p>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon_{f}(k)=\frac{f\'(k)\,k}{f(k)}=\frac{\alpha k^{\alpha-1}\cdot k}{k^{\alpha}}=\alpha
+\]</div>
+<p>Konstan, sama dengan capital share.</p>
+<p><strong>Step 2.</strong> Tools matematis (Exercise 10.5 dan 10.6)</p>
+<section id="exercise-10-5-turunan-f-k-k">
+<h3>Exercise 10.5 — Turunan <span class="math notranslate nohighlight">\(f(k)/k\)</span><a class="headerlink" href="#exercise-10-5-turunan-f-k-k" title="Link to this heading">#</a></h3>
+<p>Tunjukkan <span class="math notranslate nohighlight">\(\frac{d}{dk}\left[\frac{f(k)}{k}\right]=\frac{f(k)}{k^{2}}\left[\varepsilon_{f}(k)-1\right]\)</span>.</p>
+<p><strong>Step 1.</strong> Quotient rule</p>
+<div class="math notranslate nohighlight">
+\[ dkd[f(k)]k=f(k)k -f(k)^{'}k^{2} \]</div>
+<p><strong>Step 2.</strong> Faktorkan <span class="math notranslate nohighlight">\(f(k)\)</span> di pembilang</p>
+<div class="math notranslate nohighlight">
+\[ f(k)k -^{'}f(k) = f(k)[f(k)f(k)k^{'} -1]=f(k)[\varepsilon _{f}(k) -1] \]</div>
+<p><strong>Step 3.</strong> Substitusi</p>
+<div class="math notranslate nohighlight">
+\[ dkd[f(k)]k=f(k)[\varepsilon ^{f}k^{2}(k) -1] \]</div>
+</section>
+<section id="exercise-10-6-differentiation-trick">
+<h3>Exercise 10.6 — Differentiation trick<a class="headerlink" href="#exercise-10-6-differentiation-trick" title="Link to this heading">#</a></h3>
+<p>Tunjukkan <span class="math notranslate nohighlight">\(\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}\)</span>. Bukti via chain rule: misalkan <span class="math notranslate nohighlight">\(u = ln x\)</span>, jadi <span class="math notranslate nohighlight">\(x = e^{u}\)</span>. Maka <span class="math notranslate nohighlight">\(dx/du = e=^{u}x\)</span>. Pakai chain rule:</p>
+<div class="math notranslate nohighlight">
+\[ dy=dy \cdot dx=x \cdot dy \]</div>
+<p><span class="math notranslate nohighlight">\(dudxdudx\)</span></p>
+<p><strong>Step 3.</strong> Linearisasi ODE di steady state</p>
+<p>Definisikan <span class="math notranslate nohighlight">\(G(k):=\dot{k}/k =sf(k)/k -(\delta + g + n)\)</span>.</p>
+<p>Di <span class="math notranslate nohighlight">\(k^{*}\)</span>: <span class="math notranslate nohighlight">\(G(k^{*})=0\)</span>.</p>
+<p>Taylor expansion dalam <span class="math notranslate nohighlight">\(ln k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+G(\ln k)\approx G(\ln k^{*})+\left.\frac{\partial G}{\partial \ln k}\right|_{k^{*}}\left(\ln k-\ln k^{*}\right)
+\]</div>
+<p><strong>Step 1</strong> Hitung <span class="math notranslate nohighlight">\(\partial G/\partial ln k\)</span> pakai Exercise 10.6</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial G}{\partial \ln k}=k\cdot\frac{dG}{dk}
+\]</div>
+<p><strong>Step 2.</strong> Hitung <span class="math notranslate nohighlight">\(dG/dk\)</span> pakai Exercise 10.5</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dG}{dk}=s\cdot\frac{f(k)}{k^{2}}\left[\varepsilon_{f}(k)-1\right]
+\]</div>
+<p><strong>Step 3.</strong> Kombinasikan</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial G}{\partial \ln k}=s\cdot\frac{f(k)}{k}\left[\varepsilon_{f}(k)-1\right]
+\]</div>
+<p><strong>Step 4.</strong> Evaluasi di <span class="math notranslate nohighlight">\(k^{*}\)</span> pakai steady state</p>
+<p><span class="math notranslate nohighlight">\(sf(k^{*})/k^{*}=\delta + g + n\)</span>. Substitusi:</p>
+<div class="math notranslate nohighlight">
+\[
+\left.\frac{\partial G}{\partial \ln k}\right|_{k^{*}}=(\delta+g+n)\left(\varepsilon_{f}(k^{*})-1\right)
+\]</div>
+<p><strong>Step 5.</strong> Linearisasi</p>
+<div class="math notranslate nohighlight">
+\[ \dot{k}\approx (\varepsilon _{f}(k) -_{*}1)(\delta + g + n)(ln k -ln k)_{*} \]</div>
+<p><strong>Step 4.</strong> Convergence equation (bentuk akhir)</p>
+<p>Substitusi (10.6) dan konversi ke <span class="math notranslate nohighlight">\(ln\tilde{y}\)</span>: Pakai Exercise 10.6 untuk hubungkan <span class="math notranslate nohighlight">\(ln k -ln k^{*}\)</span> ke <span class="math notranslate nohighlight">\(ln\tilde{y}-lny^{~*}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ ln\tilde{y} -lny^{~*}\approx \varepsilon _{f}(k)(ln k -^{*}ln k)^{*} \]</div>
+<p>Substitusi balik dan sederhanakan:</p>
+<div class="math notranslate nohighlight">
+\[ y^{~˙}\tilde{y}\approx g -(1 -\varepsilon _{f}(k))(\delta + g + n)(ln^{*}\tilde{y}-lny^{~*}) \]</div>
+<p>Inilah persamaan (10.8) — convergence equation.</p>
+<p><strong>Exercise 10.7 — Rate of convergence dengan persamaan</strong></p>
+<p>Definisikan deviation <span class="math notranslate nohighlight">\(D(t):= ln\tilde{y} -lny^{~*}\)</span>. Turunkan <span class="math notranslate nohighlight">\(D\)</span>: <span class="math notranslate nohighlight">\(\dot{D}=y^{~˙}\tilde{y}/ -g\)</span>. Substitusi (10.8):</p>
+<div class="math notranslate nohighlight">
+\[ \dot{D}=-\beta D \]</div>
+<p>dengan <span class="math notranslate nohighlight">\(\beta = (1 -\varepsilon _{f}(k))(\delta +^{*}g + n)\)</span>.</p>
+<p>Solusi: <span class="math notranslate nohighlight">\(D(t) = D(0)e^{-\beta t}\)</span>. Convergence rate. <span class="math notranslate nohighlight">\(\beta\)</span></p>
+<p><strong>Partial derivatives</strong> — <span class="math notranslate nohighlight">\(\partial \beta /\partial (\delta + g + n) = (1 -\varepsilon _{f}) &gt;0\)</span>: kalau <span class="math notranslate nohighlight">\(\delta + g + n\)</span> naik, konvergensi cepat <span class="math notranslate nohighlight">\(\partial \beta /\partial \varepsilon _{f} =-(\delta + g + n) &lt; 0\)</span>: kalau <span class="math notranslate nohighlight">\(\varepsilon _{f}\)</span> naik, konvergensi lambat</p>
+<p><strong>Limit cases</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(\varepsilon_{f} \to 1\)</span> (kasus AK)</strong> — <span class="math notranslate nohighlight">\(\beta \to 0\)</span>: tidak konvergen. Konsisten dengan Exercise 9.11.</p>
+<p><strong><span class="math notranslate nohighlight">\(\varepsilon_{f} \to 0\)</span></strong> — <span class="math notranslate nohighlight">\(\beta \to (\delta+g+n)\)</span>: konvergensi paling cepat.</p>
+<p><span class="math notranslate nohighlight">\(\Delta + G+ N\to 0\beta \to 0\)</span>. Tidak konvergen.</p>
+<p><strong>Intuisi konvergensi</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: bagaimana mungkin depresiasi yang lebih cepat justru mempercepat konvergensi, dan capital share yang lebih besar justru memperlambatnya?</p>
+<p>Lebih dalam: “Jepang vs Amerika vs Zimbabwe — kenapa Jepang tumbuh cepat kalau Jepang tidak tinggi?” <span class="math notranslate nohighlight">\(\delta\)</span></p>
+</div>
+<p><strong>Pesan kunci — distinction <span class="math notranslate nohighlight">\(D(0)\)</span> vs <span class="math notranslate nohighlight">\(\beta\)</span></strong> — Yang membuat Jepang tumbuh cepat pasca-perang BUKAN tinggi. Yang membuat Jepang tumbuh cepat adalah: <span class="math notranslate nohighlight">\(\beta\)</span></p>
+<p><span class="math notranslate nohighlight">\(D(0)\)</span> besar negatif — Jepang jauh di bawah steady state-nya <span class="math notranslate nohighlight">\(\beta\)</span> positive — ada force konvergensi (terlepas dari magnitude) Numerical example: kalau <span class="math notranslate nohighlight">\(D(0) = -1.4\)</span> (Jepang 25% dari <span class="math notranslate nohighlight">\(y^{~*}g= 0.02, \beta = 0.04\)</span>),:</p>
+<div class="math notranslate nohighlight">
+\[ Growth = g -\beta D(0) = 0.02 -0.04(-1.4) = 0.076 = 7.6\% \]</div>
+<p>Konsisten dengan growth Jepang ~7-10% per tahun selama 1950-1970.</p>
+<p><em>Steady state level berbeda antar negara.</em></p>
+<p><strong>Amerika</strong> — <span class="math notranslate nohighlight">\(D\approx 0\)</span> (sudah di steady state), <span class="math notranslate nohighlight">\(\tilde{y}^{*}\)</span> tinggi → growth <span class="math notranslate nohighlight">\(\approx g\)</span> (slow).</p>
+<p><strong>Jepang pasca-1945</strong> — <span class="math notranslate nohighlight">\(D(0)\)</span> besar negatif, <span class="math notranslate nohighlight">\(\tilde{y}^{*}\)</span> tinggi (institusi baik) → growth <span class="math notranslate nohighlight">\(\gg g\)</span> (cepat).</p>
+<p><strong>Zimbabwe</strong> — <span class="math notranslate nohighlight">\(D\approx 0\)</span> atau positif, <span class="math notranslate nohighlight">\(\tilde{y}^{*}\)</span> rendah (institusi buruk) → growth <span class="math notranslate nohighlight">\(\approx g\)</span> (stuck).</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><strong><span class="math notranslate nohighlight">\(\delta\)</span> memainkan dua peran sekaligus</strong></p>
+<p><em>1. Menentukan steady state level: tinggi → <span class="math notranslate nohighlight">\(\delta k^{*}\)</span> rendah 2. Menentukan convergence rate: tinggi → tinggi → konvergensi cepat <span class="math notranslate nohighlight">\(\delta \beta\)</span></em></p>
+<p>Untuk menjelaskan variasi cross-country growth, peran 1 (<span class="math notranslate nohighlight">\(\tilde{y}^{*}\)</span>) dan posisi <span class="math notranslate nohighlight">\(D(0)\)</span> lebih dominan daripada peran 2 (<span class="math notranslate nohighlight">\(\beta\)</span>).</p>
+</div>
+<p><strong>Reduced-form regression</strong> — Dari (10.8), motivasi regresi:</p>
+<div class="math notranslate nohighlight">
+\[ g_{i,t,t-1} =b+^{0}bln^{1}\tilde{y}_{i,t-1} +\varepsilon _{i,t} \]</div>
+<p>Prediksi: <span class="math notranslate nohighlight">\(b&lt;^{1}0\)</span> (convergence).</p>
+<p><strong>Hasil empiris</strong> — OECD: <span class="math notranslate nohighlight">\(b^{1}\)</span> negatif signifikan. Konvergensi terbukti. Seluruh dunia: <span class="math notranslate nohighlight">\(b^{1}\)</span> tidak signifikan. Karena negara berbeda steady state.</p>
+<p><strong>Conditional convergence</strong> — Solusi: bebaskan intercept antar negara:</p>
+<div class="math notranslate nohighlight">
+\[ g_{i,t,t-1} =b^{0}_{i} +bln^{1}\tilde{y}_{i,t-1} +\varepsilon _{i,t} \]</div>
+<p>dengan <span class="math notranslate nohighlight">\(b^{0}_{i} =X^{'}_{i,t}\beta\)</span> — country-specific characteristics. Setelah controlling: <span class="math notranslate nohighlight">\(b^{1}\)</span> negatif untuk seluruh dunia juga.</p>
+<p><strong>Issues regresi (Exercise 10.9, 10.10)</strong> — Endogeneity: <span class="math notranslate nohighlight">\(X\)</span> correlate dengan growth lewat reverse causality Omitted variable bias: institusi, geografi tidak terobservasi</p>
+<p>Measurement error: lihat Exercise 10.2 Dynamic panel bias (Nickell): kalau ada <span class="math notranslate nohighlight">\(\tilde{y}_{t-1}\)</span> di kanan</p>
+<p>Solusi advanced: instrumental variables (Arellano-Bond, GMM).</p>
+</section>
+</section>
+<section id="konsep-4-section-10-3-solow-dengan-human-capital">
+<h2>Konsep 4 — Section 10.3 — Solow dengan Human Capital<a class="headerlink" href="#konsep-4-section-10-3-solow-dengan-human-capital" title="Link to this heading">#</a></h2>
+<p><em>Perluasan model dengan input ketiga: human capital. Sistem ODE 2D dan nullcline.</em></p>
+<p><strong>Motivasi</strong> — Section 10.2 menunjukkan empirical issues:</p>
+<p>Convergence rate empiris (<span class="math notranslate nohighlight">\(\beta \approx 0.02\)</span>) lebih lambat dari prediksi Solow (<span class="math notranslate nohighlight">\(\beta \approx 0.04\)</span>) Cross-country variation tidak bisa dijelaskan hanya oleh <span class="math notranslate nohighlight">\(s, n\)</span></p>
+<p>Solusi MRW: tambah human capital sebagai input ketiga.</p>
+<p><strong>Setup model</strong> — Production function diperluas:</p>
+<div class="math notranslate nohighlight">
+\[ Y= F (K, H, AL) \]</div>
+<p>Saving rules dua jenis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{K}&amp;=s_{k}Y-\delta _{k}K \\
+\dot{H}&amp;=s_{h}Y-\delta _{h}H
+\end{aligned}
+\end{split}\]</div>
+<p><strong>Exercise 10.11 — Derive sistem ODE 2D</strong></p>
+<p>Tunjukkan competitive equilibrium adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{k}&amp;=s_{k}f(k, h) -(\delta _{k} +g + n)k \\
+\dot{h}&amp;=s_{h}f(k, h) -(\delta _{h} +g + n)h
+\end{aligned}
+\end{split}\]</div>
+<p><strong>Step 1.</strong> Pakai linear homogeneity</p>
+<p><span class="math notranslate nohighlight">\(F (K, H, AL) = AL \cdot f(k, h)\)</span> dengan <span class="math notranslate nohighlight">\(k = K/(AL), h = H/(AL)\)</span>. Substitusi ke capital accumulation: <span class="math notranslate nohighlight">\(\dot{K}=s_{k}ALf(k, h) -\delta _{k}K\)</span>.</p>
+<p><strong>Step 2.</strong> Log-differentiation untuk <span class="math notranslate nohighlight">\(\dot{k}\)</span></p>
+<p><span class="math notranslate nohighlight">\(k = K/(AL)\)</span>, ambil log: <span class="math notranslate nohighlight">\(ln k = ln K -ln A -ln L\)</span>. Turunkan: <span class="math notranslate nohighlight">\(\dot{k}/k =\dot{K}/K -g -n\)</span>.</p>
+<p><strong>Step 3</strong> — Kalikan dengan <span class="math notranslate nohighlight">\(k\)</span>, substitusi <span class="math notranslate nohighlight">\(\dot{K}\)</span>, dan sederhanakan</p>
+<p>Pakai <span class="math notranslate nohighlight">\(K= AL \cdot k\)</span> untuk cancel:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{k}=s_{k}f(k, h) -(\delta _{k} +g + n)k \]</div>
+<p>Analog untuk <span class="math notranslate nohighlight">\(\dot{h}\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p><em>Awas: persamaan (10.11) di sebagian catatan mengandung typo — <span class="math notranslate nohighlight">\(k\)</span> dan <span class="math notranslate nohighlight">\(h\)</span> hilang di suku terakhir. Versi yang benar (konsisten secara dimensi) harus memuat keduanya.</em></p>
+</div>
+<p><strong>Exercise 10.13 — Steady state Cobb-Douglas</strong></p>
+<p>Production function spesifik:</p>
+<div class="math notranslate nohighlight">
+\[ Y= K[H(AL)^{ba1-a1-b}] \]</div>
+<p>dengan <span class="math notranslate nohighlight">\(a, b \in (0, 1)\)</span>. Setelah expansion:</p>
+<div class="math notranslate nohighlight">
+\[ f(k, h) = kh^{\beta\alpha } \]</div>
+<p>dengan <span class="math notranslate nohighlight">\(\beta = b, \alpha = a(1 -b), 1 -\alpha -\beta = (1 -a)(1 -b)\)</span>.</p>
+<p><strong>Solve sistem <span class="math notranslate nohighlight">\(\dot{k}=\dot{h}=0\)</span></strong></p>
+<p><strong>Step 1.</strong> Steady state conditions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+s_{k}(k^{*})^{\alpha}(h^{*})^{\beta}&amp;=(\delta_{k}+g+n)\,k^{*} \\
+s_{h}(k^{*})^{\alpha}(h^{*})^{\beta}&amp;=(\delta_{h}+g+n)\,h^{*}
+\end{aligned}
+\end{split}\]</div>
+<p><strong>Step 2.</strong> Bagi dua persamaan</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{s_{h}}{s_{k}}=\frac{(\delta_{h}+g+n)\,h^{*}}{(\delta_{k}+g+n)\,k^{*}}
+\]</div>
+<p>Definisikan <span class="math notranslate nohighlight">\(\Lambda _{k} =s_{k}/(\delta _{k} +g + n), \Lambda _{h} =s_{h}/(\delta _{h} +g + n)\)</span>. Solve: <span class="math notranslate nohighlight">\(h=^{*}(\Lambda _{h}/\Lambda _{k})k^{*}\)</span>.</p>
+<p><strong>Step 3</strong> Substitusi <span class="math notranslate nohighlight">\(h^{*}\)</span> ke persamaan pertama dan solve <span class="math notranslate nohighlight">\(k^{*}\)</span></p>
+<p>Hasil:</p>
+<div class="math notranslate nohighlight">
+\[
+k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)},\qquad h^{*}=\left[\Lambda_{k}^{\alpha}\Lambda_{h}^{1-\alpha}\right]^{1/(1-\alpha-\beta)}
+\]</div>
+<p><strong>Step 4</strong> Hitung <span class="math notranslate nohighlight">\(y=^{*}(k)(h)^{*\beta*\alpha }\)</span></p>
+<p>Setelah aljabar eksponen:</p>
+<div class="math notranslate nohighlight">
+\[ y= \Lambda ^{*\alpha/(1-\alpha-\beta)}_{h} \cdot \Lambda ^{\beta/(1-\alpha-\beta)}_{k} \]</div>
+<p><strong>Comparative statics</strong></p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(s_{h}\)</span> naik</strong> — <span class="math notranslate nohighlight">\(y^{*}\)</span> naik: lebih banyak akumulasi human capital.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(s_{k}\)</span> naik</strong> — <span class="math notranslate nohighlight">\(y^{*}\)</span> naik: lebih banyak akumulasi physical capital.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(g\)</span> naik</strong> — <span class="math notranslate nohighlight">\(\tilde{y}^{*}\)</span> turun (per effective worker), tapi growth rate per kapita naik (analog Exercise 9.17).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\delta_{k}\)</span> naik</strong> — <span class="math notranslate nohighlight">\(y^{*}\)</span> turun: physical capital cepat aus.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\delta_{h}\)</span> naik</strong> — <span class="math notranslate nohighlight">\(y^{*}\)</span> turun: human capital cepat memudar.</p></li>
+</ul>
+</section>
+<section id="konsep-5-exercise-10-14-nullcline-analysis-lengkap">
+<h2>Konsep 5 — Exercise 10.14 — Nullcline Analysis Lengkap<a class="headerlink" href="#konsep-5-exercise-10-14-nullcline-analysis-lengkap" title="Link to this heading">#</a></h2>
+<p><em>Exercise paling penting Bab 10. Foundation untuk semua analisis phase plane 2D ke depan (RCK, Romer, Schumpeterian).</em></p>
+<p><strong>Mengapa Exercise 10.14 sangat penting</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><strong>Exercise 10.14 adalah template untuk semua analisis sistem 2D di kursus</strong></p>
+<p><em>Bab 12 (RCK): sistem <span class="math notranslate nohighlight">\((k, c)\)</span> Bab 14 (Romer): sistem <span class="math notranslate nohighlight">\((k, A)\)</span> Bab 15 (Schumpeterian): sistem <span class="math notranslate nohighlight">\((k, n)\)</span></em></p>
+<p>Master nullcline analysis sekarang = master phase plane analysis untuk seluruh sisa kursus.</p>
+</div>
+<p><strong>Setup — ODE map <span class="math notranslate nohighlight">\(T= (T_{k}, T_{h})\)</span></strong> — Sistem ODE dengan Cobb-Douglas <span class="math notranslate nohighlight">\(f(k, h) = kh^{\beta\alpha }\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{k}&amp;=s_{k}k^{\alpha}h^{\beta}-(\delta_{k}+g+n)k=:T_{k}(k,h) \\
+\dot{h}&amp;=s_{h}k^{\alpha}h^{\beta}-(\delta_{h}+g+n)h=:T_{h}(k,h)
+\end{aligned}
+\end{split}\]</div>
+<p>Notasi vector: <span class="math notranslate nohighlight">\(x = (k, h), T (x) =^{T}(T_{k}, T_{h}^{T})\)</span>, sistem <span class="math notranslate nohighlight">\(\dot{x}=T (x)\)</span>.</p>
+<p><strong>Definisi nullcline</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(\dot{k}\)</span>-nullcline <span class="math notranslate nohighlight">\(N_{k}\)</span></strong> — Set titik <span class="math notranslate nohighlight">\((k,h)\)</span> di mana <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> (modal per effective worker tidak berubah). <span class="math notranslate nohighlight">\(N_{k} ={(k,h): T_{k}(k,h) =0}\)</span>.</p>
+<p>Set titik <span class="math notranslate nohighlight">\((k,h)\)</span> di mana <span class="math notranslate nohighlight">\(\dot{h}=0\)</span> (human capital per effective worker (<span class="math notranslate nohighlight">\(h = H/AL\)</span>) (<span class="math notranslate nohighlight">\(\dot{h}\)</span>-nullcline <span class="math notranslate nohighlight">\(N_{h}\)</span>) tidak berubah). <span class="math notranslate nohighlight">\(N_{h} ={(k,h): T_{h}(k,h) =0}\)</span>.</p>
+<p><strong>Steady State</strong> — Perpotongan dua nullcline. Di mana <span class="math notranslate nohighlight">\(\dot{k}=\dot{h}=0\)</span> simultan.</p>
+<p><em>Cara derive <span class="math notranslate nohighlight">\(N_{k}\)</span> — step-by-step.</em></p>
+<p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(T_{k} =0\)</span></p>
+<div class="math notranslate nohighlight">
+\[ s_{k}kh-^{\beta\alpha }(\delta _{k} +g + n)k = 0 \]</div>
+<p><strong>Step 2.</strong> Pindahkan suku</p>
+<div class="math notranslate nohighlight">
+\[ s_{k}kh=^{\beta\alpha }(\delta _{k} +g + n)k \]</div>
+<p><strong>Step 3.</strong> Bagi kedua sisi dengan (asumsi <span class="math notranslate nohighlight">\(kk &gt; 0\)</span>)</p>
+<p>Sebelah kiri: <span class="math notranslate nohighlight">\(s_{k}kh/k =^{\beta\alpha }s_{k}k^{\beta-1}h^{\alpha }\)</span>.</p>
+<p>Sebelah kanan: <span class="math notranslate nohighlight">\((\delta _{k} +g + n)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ s_{k}k^{\beta-1}h=^{\alpha }\delta _{k} +g + n \]</div>
+<p><strong>Step 4.</strong> Solve untuk <span class="math notranslate nohighlight">\(h^{\alpha }\)</span></p>
+<div class="math notranslate nohighlight">
+\[ h=^{\alpha }\delta ^{k} + g + ns_{k}k_{\beta-1}=\delta ^{k} + g + ns_{k} \cdot k^{1-\beta } \]</div>
+<p><strong>Step 5</strong> Pangkat <span class="math notranslate nohighlight">\(1/\alpha\)</span></p>
+<div class="math notranslate nohighlight">
+\[ h_{Nk}(k) =(\delta ^{k} + g + ns_{k})^{1/\alpha }\cdot k^{(1-\beta)/\alpha } \]</div>
+<p><em>Cara derive <span class="math notranslate nohighlight">\(N_{h}\)</span> — step-by-step.</em></p>
+<p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(T_{h} =0\)</span></p>
+<div class="math notranslate nohighlight">
+\[ s_{h}kh-^{\beta\alpha }(\delta _{h} +g + n)h = 0 \]</div>
+<p><strong>Step 2.</strong> Pindahkan dan bagi dengan <span class="math notranslate nohighlight">\(h\)</span></p>
+<div class="math notranslate nohighlight">
+\[ s_{h}kh^{\beta\alpha-1}=\delta _{h} +g + n \]</div>
+<p><strong>Step 3</strong> Solve untuk <span class="math notranslate nohighlight">\(h^{\alpha-1}\)</span></p>
+<p>Catatan: <span class="math notranslate nohighlight">\(\alpha -1 &lt; 0\)</span>, jadi <span class="math notranslate nohighlight">\(h^{\alpha-1}\)</span> menurun dalam. <span class="math notranslate nohighlight">\(h\)</span></p>
+<div class="math notranslate nohighlight">
+\[ h^{\alpha-1}=\delta ^{h} + g + ns_{h}k_{\beta } \]</div>
+<p><strong>Step 4</strong> Pangkat <span class="math notranslate nohighlight">\(1/(\alpha -1)\)</span>, balik fraksi</p>
+<div class="math notranslate nohighlight">
+\[ h_{Nh}(k) =(\delta _{h} + g + ns^{h})^{1/(1-\alpha)}\cdot k^{\beta/(1-\alpha)} \]</div>
+<p><strong>Karakteristik kedua nullcline</strong></p>
+<p><strong>Slope <span class="math notranslate nohighlight">\(N_{k}\)</span></strong> — <span class="math notranslate nohighlight">\((1-\beta)/\alpha\)</span>: fungsi meningkat dalam <span class="math notranslate nohighlight">\(k\)</span>, lewat origin.</p>
+<p><strong>Slope <span class="math notranslate nohighlight">\(N_{h}\)</span></strong> — <span class="math notranslate nohighlight">\(\beta/(1-\alpha)\)</span>: fungsi meningkat dalam <span class="math notranslate nohighlight">\(k\)</span>, lewat origin.</p>
+<p><strong>Perbandingan</strong> — <span class="math notranslate nohighlight">\((1-\beta)/\alpha &gt; \beta/(1-\alpha)\)</span> karena <span class="math notranslate nohighlight">\(1-\alpha-\beta&gt;0\)</span>: <span class="math notranslate nohighlight">\(N_{k}\)</span> lebih curam dari <span class="math notranslate nohighlight">\(N_{h}\)</span>.</p>
+<p><strong>Bukti <span class="math notranslate nohighlight">\(N_{k}\)</span> lebih curam</strong></p>
+<p><strong>Step 1.</strong> Bandingkan dua slope</p>
+<div class="math notranslate nohighlight">
+\[
+\text{slope }\dot{k}=0:\ \frac{1-\alpha}{\beta}\qquad\text{vs}\qquad\text{slope }\dot{h}=0:\ \frac{\alpha}{1-\beta}
+\]</div>
+<p><strong>Step 2</strong> Kali kedua sisi dengan <span class="math notranslate nohighlight">\(\alpha (1 -\alpha)\)</span></p>
+<div class="math notranslate nohighlight">
+\[ (1 -\beta)(1 -\alpha) vs \alpha \beta \]</div>
+<p><strong>Step 3.</strong> Expand kiri</p>
+<div class="math notranslate nohighlight">
+\[ (1 -\beta)(1 -\alpha) = 1 -\alpha -\beta + \alpha \beta \]</div>
+<p><strong>Step 4.</strong> Beda kedua</p>
+<div class="math notranslate nohighlight">
+\[ 1 -\alpha -\beta + \alpha \beta -\alpha \beta = 1 -\alpha -\beta &gt; 0 \]</div>
+<p>Maka <span class="math notranslate nohighlight">\((1 -\beta)/\alpha &gt; \beta /(1 -\alpha)\)</span>. QED.</p>
+<p><strong>Cara gambar phase plane</strong></p>
+<p>h</p>
+<p>N_k (k̇=0)</p>
+<p>IVPcuram</p>
+<p><strong>Region I</strong> — atas N_k, atas N_hRegion III</p>
+<p>k̇ &gt; 0, ḣ &lt; 0bawah N_k, atas N_h k̇ &lt; 0, ḣ &lt; 0</p>
+<p>N_h (ḣ=0)</p>
+<p>landai</p>
+<p>(k*, h*)</p>
+<p>steady state</p>
+<p><strong>Region II Region IV</strong> — atas N_k, bawah N_h k̇ &gt; 0, ḣ &gt; 0bawah N_k, bawah N_h k̇ &lt; 0, ḣ &gt; 0</p>
+<p>k</p>
+<p>Phase plane Solow-Swan dengan human capital. <span class="math notranslate nohighlight">\(N_{k}\)</span> (biru, curam) dan <span class="math notranslate nohighlight">\(N_{h}\)</span> (coklat, landai) berpotongan di <span class="math notranslate nohighlight">\((k,h)^{**}\)</span>. Empat region dengan arah vector berbeda; semua mengarah ke steady state.</p>
+<p><strong>Analisis tanda di tiap region</strong></p>
+<p><strong>Tanda <span class="math notranslate nohighlight">\(\dot{k}\)</span></strong> — <span class="math notranslate nohighlight">\(T_{k}\)</span> adalah fungsi naik dalam (turunan <span class="math notranslate nohighlight">\(h\partial T_{k}/\partial h =s_{k}k\alpha h^{\beta\alpha-1}&gt;0\)</span>):</p>
+<p>Di atas <span class="math notranslate nohighlight">\(N_{k}\)</span>: <span class="math notranslate nohighlight">\(T_{k} &gt;0,\dot{k}&gt;0, k\)</span> naik Di bawah <span class="math notranslate nohighlight">\(N_{k}\)</span>: <span class="math notranslate nohighlight">\(T_{k} &lt;0,\dot{k}&lt;0, k\)</span> turun</p>
+<p><strong>Tanda <span class="math notranslate nohighlight">\(\dot{h}\)</span></strong> — Pada <span class="math notranslate nohighlight">\(N_{h}\partial \)</span>: <span class="math notranslate nohighlight">\(T_{h}/\partial h =(\alpha -1)(\delta _{h} +g + n) &lt; 0\)</span> (karena <span class="math notranslate nohighlight">\(\alpha &lt; 1\)</span>). Di atas <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(T_{h} &lt;0,\dot{h}&lt;0, h\)</span> turun Di bawah <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(T_{h} &gt;0,\dot{h}&gt;0, h\)</span> naik</p>
+<p><strong>Tabel empat region</strong></p>
+<p><strong>Region I</strong> — Atas <span class="math notranslate nohighlight">\(N_{k}\)</span> dan atas <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(\dot{k}&gt;0,\dot{h}&lt;0\)</span>. Vector kanan-bawah.</p>
+<p><strong>Region II</strong> — Atas <span class="math notranslate nohighlight">\(N_{k}\)</span> tapi bawah <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(\dot{k}&gt;0,\dot{h}&gt;0\)</span>. Vector kanan-atas.</p>
+<p><strong>Region Iii</strong> — Bawah <span class="math notranslate nohighlight">\(N_{k}\)</span> tapi atas <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(\dot{k}&lt;0,\dot{h}&lt;0\)</span>. Vector kiri-bawah.</p>
+<p><strong>Region IV</strong> — Bawah <span class="math notranslate nohighlight">\(N_{k}\)</span> dan bawah <span class="math notranslate nohighlight">\(N_{h}\)</span>: <span class="math notranslate nohighlight">\(\dot{k}&lt;0,\dot{h}&gt;0\)</span>. Vector kiri-atas.</p>
+<p><strong>Vector field di nullcline</strong></p>
+<p><strong>Vector di nullcline</strong> — Di <span class="math notranslate nohighlight">\(N_{k}\)</span> (<span class="math notranslate nohighlight">\(\dot{k}=0\)</span>): vector vertikal, arahnya mengikuti tanda <span class="math notranslate nohighlight">\(\dot{h}\)</span>. Di <span class="math notranslate nohighlight">\(N_{h}\)</span> (<span class="math notranslate nohighlight">\(\dot{h}=0\)</span>): vector horizontal, arahnya mengikuti tanda <span class="math notranslate nohighlight">\(\dot{k}\)</span>.</p>
+<p><strong>Lintasan solusi (IVP)</strong> — Slope lintasan di titik <span class="math notranslate nohighlight">\((k, h)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dh}{dk}=\frac{\dot{h}}{\dot{k}}=\frac{T_{h}(k,h)}{T_{k}(k,h)}
+\]</div>
+<p>Lintasan tidak pernah memotong nullcline kecuali di steady state.</p>
+<p><strong>Prosedur: menggambar phase plot</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Tugas tipikal: “draw the phase plot for Solow-Swan with human capital”</strong></p>
+<p><em>1. Tulis sistem ODE <span class="math notranslate nohighlight">\(\dot{k}\dot{h},\)</span> 2. Derive nullcline <span class="math notranslate nohighlight">\(N_{k}\)</span> dan <span class="math notranslate nohighlight">\(N_{h}\)</span> secara eksplisit 3. Tentukan slope masing-masing dan verifikasi <span class="math notranslate nohighlight">\(N_{k}\)</span> lebih curam 4. Gambar kedua nullcline mulai dari origin, berpotongan di <span class="math notranslate nohighlight">\((k, h)^{**}\)</span> 5. Tentukan tanda <span class="math notranslate nohighlight">\(\dot{k}\dot{h},\)</span> di setiap dari 4 region 6. Gambar arrow di setiap region 7. Tunjukkan lintasan IVP dari initial condition konvergen ke steady state</em></p>
+</div>
+<p><strong>Proposition 10.2 — Global stability</strong> — Untuk sembarang <span class="math notranslate nohighlight">\((k_{0}, h_{0}) \in R^{2}_{++}\)</span>, lintasan konvergen ke <span class="math notranslate nohighlight">\((k, h)^{**}\)</span>. Dari analisis empat region, semua vector mengarah ke steady state.</p>
+</section>
+<section id="konsep-6-section-10-4-mankiw-romer-weil-cross-country">
+<h2>Konsep 6 — Section 10.4 — Mankiw-Romer-Weil Cross-country<a class="headerlink" href="#konsep-6-section-10-4-mankiw-romer-weil-cross-country" title="Link to this heading">#</a></h2>
+<p><em>Aplikasi cross-country Solow dengan human capital ke data 100+ negara.</em></p>
+<p><strong>Pertanyaan motivasi</strong> — Setelah MRW (1992):</p>
+<ol class="arabic simple">
+<li><p>Apa yang menjelaskan ketimpangan income antar negara?</p></li>
+<li><p>Apakah Solow-Swan dengan human capital konsisten dengan data?</p></li>
+</ol>
+<p><strong>Setup cross-country</strong> — Setiap negara punya production function: <span class="math notranslate nohighlight">\(j\)</span></p>
+<div class="math notranslate nohighlight">
+\[ Y_{j} =K_{j}^{\beta }H_{j}^{\alpha }(A_{j}L_{j})^{1-\alpha-\beta } \]</div>
+<p>Negara berbeda dalam: <span class="math notranslate nohighlight">\(s_{k,j}, s_{h,j}, n_{j}, g_{j}, A_{j}\)</span>.</p>
+<p><strong>Asumsi tambahan</strong> — Negara tidak berdagang (autarky)</p>
+<p>Data konsisten dengan negara di atau dekat steady state</p>
+<p><strong>Exercise 10.15 — Derive <span class="math notranslate nohighlight">\(\tilde{y}_{j}^{*}(t)\)</span></strong></p>
+<p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(\tilde{y}_{j} =A_{j}y_{j}\)</span></p>
+<p><span class="math notranslate nohighlight">\(y_{j} =(k_{j}^{*\beta })(h^{*\alpha }_{j})\)</span> di steady state.</p>
+<p><strong>Step 2</strong> Substitusi formula <span class="math notranslate nohighlight">\(k_{j}^{*}\)</span> dan <span class="math notranslate nohighlight">\(h_{j}^{*}\)</span></p>
+<p>Dari Exercise 10.13.</p>
+<p>Setelah aljabar eksponen (cek: eksponen <span class="math notranslate nohighlight">\(\Lambda _{k,j}\)</span> jadi <span class="math notranslate nohighlight">\(\beta /(1 -\alpha -\beta)\)</span>, eksponen <span class="math notranslate nohighlight">\(\Lambda _{h,j}\)</span> jadi <span class="math notranslate nohighlight">\(\alpha /(1 -\alpha -\)</span> <span class="math notranslate nohighlight">\(\beta)\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ y=_{j}^{*}\Lambda ^{\beta/(1-\alpha-\beta)}\Lambda _{k,j} \cdot ^{\alpha/(1-\alpha-\beta)}_{h,j} \]</div>
+<p><strong>Step 3.</strong> Kembali ke per-capita income</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{y}_{j}^{*}(t)=A_{j}(t)\left(\frac{s_{j}^{k}}{n_{j}+g+\delta_{k}}\right)^{\alpha/(1-\alpha-\beta)}\left(\frac{s_{j}^{h}}{n_{j}+g+\delta_{h}}\right)^{\beta/(1-\alpha-\beta)}
+\]</div>
+<p><strong>Section 10.4.3 — Testable empirical model</strong></p>
+<p><strong>Asumsi tech growth seragam</strong> — MRW asumsikan <span class="math notranslate nohighlight">\(A_{j}(t) =\bar{A}_{j} \cdot e^{gt}\)</span> — rate sama untuk semua negara, level <span class="math notranslate nohighlight">\(g\bar{A}_{j}\)</span> berbeda.</p>
+<p><strong>Take log</strong></p>
+<div class="math notranslate nohighlight">
+\[ ln\tilde{y}_{j}^{*}(t) =ln\bar{A}_{j} +gt +1 -\alpha -\beta \beta ln(n_{j} + g + \delta s^{k,j}_{k})+1 -\alpha -\beta \alpha ln(n_{j} + g + \delta s^{h,j}_{h}) \]</div>
+<p><strong>Sumber data untuk regresi MRW</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: dari mana data human capital — termasuk saving dan depresiasinya — bisa diperoleh?</p>
+<p><span class="math notranslate nohighlight">\(\tilde{y}_{j}\)</span> Penn World Tables (PWT) — GDP per worker</p>
+<p><span class="math notranslate nohighlight">\(S_{K,J}\)</span> Investment-to-GDP ratio rata-rata (dari PWT atau national accounts)</p>
+<p><span class="math notranslate nohighlight">\(S_{H,J}\)</span> Secondary school enrollment rate (UNESCO atau World Bank WDI)</p>
+<p><span class="math notranslate nohighlight">\(N_{J}\)</span> Population growth rate (World Bank, PWT)</p>
+<p><span class="math notranslate nohighlight">\(\Delta _{K}, \Delta _{H}, G\)</span> Asumsi konstan: <span class="math notranslate nohighlight">\(\delta _{k} =\delta _{h} =3\%g= 2\%\)</span>, untuk semua negara</p>
+</div>
+<p><strong>Modern human capital index</strong> — PWT 10.0 punya human capital index <span class="math notranslate nohighlight">\(hc\)</span> dikonstruksi dari years of schooling lewat Mincerian return:</p>
+<div class="math notranslate nohighlight">
+\[ hc = e^{\phi(s)} \]</div>
+<p>dengan piecewise linear return (13.4% per year pertama 4 tahun, 10.1% berikutnya 4 tahun, 6.8% selanjutnya).</p>
+<p><strong>Endogeneity problem</strong> — <span class="math notranslate nohighlight">\(ln\bar{A}_{j}\)</span> tidak observable dan kemungkinan correlate dengan <span class="math notranslate nohighlight">\(s_{k,j}, s_{h,j}, n_{j}\)</span>. Sumber korelasi:</p>
+<p>Institusi: negara dengan institusi baik punya <span class="math notranslate nohighlight">\(A\)</span> tinggi dan tinggi <span class="math notranslate nohighlight">\(s\)</span></p>
+<p>Health: <span class="math notranslate nohighlight">\(A\)</span> tinggi correlate dengan rendah (demographic transition) <span class="math notranslate nohighlight">\(n\)</span></p>
+<p>Geography: akses laut correlate dengan keduanya</p>
+<p>MRW asumsi: <span class="math notranslate nohighlight">\(\bar{A}_{j} =A \cdot \varepsilon _{j}\)</span> dengan <span class="math notranslate nohighlight">\(\varepsilon _{j}\)</span> orthogonal. Asumsi kuat dan kontroversial.</p>
+<p><strong>Hasil estimasi MRW</strong></p>
+<p><strong>Adjusted <span class="math notranslate nohighlight">\(R^{2} = 0{,}78\)</span></strong> — 78% variasi income antar negara dijelaskan oleh <span class="math notranslate nohighlight">\(s_{k}, s_{h}, n\)</span>.</p>
+<p><strong>Implied <span class="math notranslate nohighlight">\(\beta \approx 0{,}30\)</span></strong> — capital share di income, konsisten dengan data.</p>
+<p><strong>Implied <span class="math notranslate nohighlight">\(\alpha_{h} \approx 0{,}28\)</span></strong> — human capital share di income.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Tanpa human capital (Solow standar): <span class="math notranslate nohighlight">\(R\approx ^{2}0.59\)</span>. Dengan human capital: <span class="math notranslate nohighlight">\(R=^{2}0.78\)</span>.</p>
+<p><em>Penambahan human capital menambah ~20 percentage points explanatory power.</em></p>
+<p><em>Implikasi: TFP residual yang sebelumnya 41% berkurang ke 22%. Banyak “tech” sebelumnya ternyata adalah human capital tersembunyi.</em></p>
+</div>
+</section>
+<section id="konsep-7-hubungan-ke-model-model-lain">
+<h2>Konsep 7 — Hubungan ke Model-Model Lain<a class="headerlink" href="#konsep-7-hubungan-ke-model-model-lain" title="Link to this heading">#</a></h2>
+<p><em>Bagaimana MRW, RCK, dan Peters memecahkan deficiency Solow secara berbeda.</em></p>
+<p><strong>Dua deficiency Solow</strong></p>
+<p><strong>Deficiency 1</strong> — <span class="math notranslate nohighlight">\(s\)</span> exogenous — saving rate diasumsikan konstan, tidak ada optimisasi</p>
+<p><strong>Deficiency 2</strong> — <span class="math notranslate nohighlight">\(A\)</span> black box: tech “manna from heaven”, tidak ada penjelasan asal-usulnya.</p>
+<p><strong>Bagaimana setiap model memecahkan</strong></p>
+<p><strong>MRW (bab 10.4)</strong> — Tambah faktor baru (human capital) ke production function. Pecahkan deficiency 2 partial (residu turun ke 22%). Keep exogenous. <span class="math notranslate nohighlight">\(s\)</span></p>
+<p><strong>RCK (Bab 12)</strong> — Optimisasi household: pecahkan deficiency 1 (<span class="math notranslate nohighlight">\(s\)</span> jadi endogenous). <span class="math notranslate nohighlight">\(A\)</span> tetap black box; tidak pakai human capital.</p>
+<p><strong>Romer (bab 14)</strong> — R&amp;D investment sebagai engine. Pecahkan deficiency 2 full: <span class="math notranslate nohighlight">\(A\)</span> jadi endogenous. Keep relatif simple. <span class="math notranslate nohighlight">\(s\)</span></p>
+<p><strong>Peters (Bab 15)</strong> — Heterogeneous firms, markup variation. Pecahkan deficiency 2 dari angle berbeda: gap TFP dari misallocation, bukan tech rendah. Tidak fokus human capital.</p>
+<p><strong>Insight metakognitif</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: apakah RCK dan Peters memakai human capital?</p>
+<p>Jawaban: tidak. RCK fokus optimisasi saving, Peters fokus misallocation. Mereka memecahkan deficiency berbeda dari MRW.</p>
+<p>Lucas (1988) menggabungkan RCK + human capital, tapi ini di luar kurikulum Economic Growth. Setiap model adalah aspek parsial dari research program besar — membongkar black box <span class="math notranslate nohighlight">\(A\)</span> dari berbagai angle.</p>
+</div>
+<p><strong>Pelajaran filosofis untuk research</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Pertanyaan lanjutan yang wajar: untuk analisis atau penelitian, apakah kita harus mencari data yang tidak bias?</em></p>
+<p><strong>Jawaban: tidak mungkin. Semua data ekonomi punya bias. Yang penting</strong></p>
+<p><em>Tahu sumber bias (mismeasurement, selection, time aggregation) Tahu arah bias (overstate atau understate) Sensitivity analysis: estimasi dengan multiple proxy Triangulation: pakai multiple methods untuk cross-check Transparency: eksplisit sebutkan limitations di paper</em></p>
+<p><em>Model dan data saling memperbaiki, tapi tidak ada yang sempurna. Inilah iterative research program.</em></p>
+</div>
+</section>
+<section id="konsep-8-section-10-5-discussion-exercise-10-17">
+<h2>Konsep 8 — Section 10.5 — Discussion (Exercise 10.17)<a class="headerlink" href="#konsep-8-section-10-5-discussion-exercise-10-17" title="Link to this heading">#</a></h2>
+<p><em>Pertanyaan terbuka tentang batas MRW dan transisi ke endogenous growth.</em></p>
+<p><strong>Issues measurement MRW (8 issues)</strong></p>
+<p><strong>1. Proxy human capital</strong> — Enrollment rate tidak menghitung quality, tertiary education, on-the-job training.</p>
+<p><strong>2. Asumsi <span class="math notranslate nohighlight">\(\delta, g\)</span> konstan</strong> — Variasi real antar negara diserap ke variasi <span class="math notranslate nohighlight">\(A_{j}\)</span>.</p>
+<p><strong>3. Orthogonality <span class="math notranslate nohighlight">\(\bar{A}_{j}\)</span></strong> — Asumsi paling kontroversial: institusi, geografi, dan history berkorelasi dengan <span class="math notranslate nohighlight">\(s, n\)</span>.</p>
+<p><strong>4. Steady State</strong> — China, Africa SS, post-war Japan tidak di steady state</p>
+<p><strong>5. Constant Returns</strong> — Endogenous growth models argue increasing returns</p>
+<p><strong>6. Reverse Causality</strong> — Income tinggi → saving tinggi, bukan sebaliknya</p>
+<p><strong>7. Aggregation</strong> — Cross-country agregat menyembunyikan variasi internal</p>
+<p><strong>8. Autarky</strong> — Trade, FDI, migration tidak dipertimbangkan</p>
+<p><strong>Cara relax asumsi</strong></p>
+<ol class="arabic simple">
+<li><p>Tambah faktor: health (Weil), institusi (Acemoglu-Robinson), geografi (Sachs)</p></li>
+<li><p>Endogenize tech: Romer (R&amp;D), Schumpeterian (creative destruction), Hsieh-Klenow (misallocation)</p></li>
+<li><p>Endogenize saving: RCK approach</p></li>
+<li><p>Heterogenitas dalam negara: firm-level (Peters), spatial (Krugman)</p></li>
+<li><p>Identifikasi kausal yang lebih baik: IV, natural experiments, fixed effects</p></li>
+<li><p>Better data: PWT 10.0, firm-level census, harmonized national accounts</p></li>
+</ol>
+</section>
+<section id="roadmap-ke-depan">
+<h2>Roadmap ke depan<a class="headerlink" href="#roadmap-ke-depan" title="Link to this heading">#</a></h2>
+<p>Bab 11: Optimal Control Theory — tools matematis untuk optimisasi dinamis Bab 12: RCK — endogenize saving rate</p>
+<p>Bab 14-15: Endogenous growth — buka black box tech</p>
+</section>
+<section id="checklist-pemahaman-bab-10">
+<h2>Checklist Pemahaman Bab 10<a class="headerlink" href="#checklist-pemahaman-bab-10" title="Link to this heading">#</a></h2>
+<p><strong>Section 10.1 — Growth accounting</strong></p>
+<ul class="simple">
+<li><p>☐ Derivation persamaan (10.1) dari chain rule</p></li>
+<li><p>☐ Income shares <span class="math notranslate nohighlight">\(\alpha _{K}, \alpha _{L}\)</span> dari competitive equilibrium</p></li>
+<li><p>☐ Solow residual (10.2) dan back-out TFP</p></li>
+<li><p>☐ Exercise 10.1: derive formula TFP untuk Cobb-Douglas</p></li>
+<li><p>☐ Exercise 10.2: 8 measurement issues (time aggregation, mismeasurement)</p></li>
+<li><p>☐ Arah bias mismeasurement dengan persamaan</p></li>
+</ul>
+<p><strong>Section 10.2 — Convergence regression</strong></p>
+<ul class="simple">
+<li><p>☐ Distinction (per effective worker) vs (per physical worker) <span class="math notranslate nohighlight">\(y\tilde{y}\)</span></p></li>
+<li><p>☐ Derivation persamaan (10.6): <span class="math notranslate nohighlight">\(y^{~˙}\tilde{y}/ =g + \varepsilon _{f}^{\dot{k}}/k\)</span></p></li>
+<li><p>☐ Exercise 10.4: <span class="math notranslate nohighlight">\(\varepsilon _{f} =\alpha\)</span> untuk Cobb-Douglas</p></li>
+<li><p>☐ Exercise 10.5 dan 10.6: building block tools</p></li>
+<li><p>☐ Linearisasi ODE di steady state</p></li>
+<li><p>☐ Convergence equation (10.8) dengan derivasi lengkap</p></li>
+<li><p>☐Rate of convergence <span class="math notranslate nohighlight">\(\beta = (1 -\varepsilon _{f})(\delta +g + n)\)</span></p></li>
+<li><p>☐ Distinction <span class="math notranslate nohighlight">\(D(0)\)</span> vs untuk Jepang/Amerika/Zimbabwe <span class="math notranslate nohighlight">\(\beta\)</span></p></li>
+<li><p>☐ Limit cases: <span class="math notranslate nohighlight">\(\varepsilon _{f} \to 1\)</span> (AK), <span class="math notranslate nohighlight">\(\varepsilon _{f} \to 0\)</span></p></li>
+<li><p>☐ Unconditional vs conditional convergence regression</p></li>
+</ul>
+<p><strong>Section 10.3 — Human capital extension</strong></p>
+<ul class="simple">
+<li><p>☐ Derivation sistem ODE 2D dengan log-differentiation</p></li>
+<li><p>☐ Exercise 10.13: derive <span class="math notranslate nohighlight">\(k^{*}, h^{*}, y^{*}\)</span> step-by-step</p></li>
+<li><p>☐ Comparative statics 5 parameter</p></li>
+</ul>
+<p><strong>Exercise 10.14 — Nullcline (TERPENTING)</strong></p>
+<ul class="simple">
+<li><p>☐ Identifikasi sistem sebagai ODE map <span class="math notranslate nohighlight">\(T= (T_{k}, T_{h})\)</span></p></li>
+<li><p>☐ Derive <span class="math notranslate nohighlight">\(N_{k}\)</span> secara eksplisit (5 step)</p></li>
+<li><p>☐ Derive <span class="math notranslate nohighlight">\(N_{h}\)</span> secara eksplisit (5 step)</p></li>
+<li><p>☐ Slope <span class="math notranslate nohighlight">\(N_{k} =(1 -\beta)/\alpha\)</span>, slope <span class="math notranslate nohighlight">\(N_{h} =\beta /(1 -\alpha)\)</span></p></li>
+<li><p>☐ Bukti <span class="math notranslate nohighlight">\(N_{k}\)</span> lebih curam dari <span class="math notranslate nohighlight">\(N_{h}\)</span></p></li>
+<li><p>☐ Tanda di atas/bawah <span class="math notranslate nohighlight">\(\dot{k}N_{k}\)</span> (naik dalam) <span class="math notranslate nohighlight">\(h\)</span></p></li>
+<li><p>☐ Tanda di atas/bawah <span class="math notranslate nohighlight">\(\dot{h}N_{h}\)</span> (turun dalam pada <span class="math notranslate nohighlight">\(hN_{h}\)</span>)</p></li>
+<li><p>☐ Tabel 4 region dengan arah vector</p></li>
+<li><p>☐ Vector field di nullcline (vertikal di <span class="math notranslate nohighlight">\(N_{k}\)</span>, horizontal di <span class="math notranslate nohighlight">\(N_{h}\)</span>)</p></li>
+<li><p>☐ Cara gambar phase plane step-by-step</p></li>
+<li><p>☐ Lintasan IVP dan slope <span class="math notranslate nohighlight">\(dh/dk = T_{h}/T_{k}\)</span></p></li>
+</ul>
+<p><strong>Section 10.4 — MRW</strong></p>
+<ul class="simple">
+<li><p>☐ Exercise 10.15: derive <span class="math notranslate nohighlight">\(\tilde{y}_{j}^{*}(t)\)</span> formula</p></li>
+<li><p>☐ Sumber data tiap variabel (PWT, UNESCO, World Bank)</p></li>
+<li><p>☐ Asumsi tech growth seragam (<span class="math notranslate nohighlight">\(A_{j} =\bar{A}_{j}^{gt}e\)</span>)</p></li>
+<li><p>☐ Endogeneity problem dan asumsi <span class="math notranslate nohighlight">\(\bar{A}_{j} =A\varepsilon _{j}\)</span></p></li>
+<li><p>☐ Hasil estimasi: <span class="math notranslate nohighlight">\(R=^{2}0.78\beta = 0.30, \alpha = 0.28\)</span>,</p></li>
+<li><p>☐ Interpretasi: human capital reduce TFP residual dari 41% ke 22%</p></li>
+</ul>
+<p><strong>Section 10.5 + big picture</strong></p>
+<ul class="simple">
+<li><p>☐ 8 issues measurement MRW</p></li>
+<li><p>☐ 6 cara relax asumsi</p></li>
+<li><p>☐ Hubungan MRW vs RCK vs Peters (dua deficiency Solow)</p></li>
+<li><p>☐ Hubungan ke Bab 11-15 (optimal control, RCK, endogenous growth)</p></li>
+</ul>
+<p>✦✦✦</p>
+<div class="important admonition">
+<p class="admonition-title">Penutup</p>
+<p>Bab 10 memperkenalkan empat tools kunci yang akan dipakai sepanjang sisa kursus:</p>
+<ol class="arabic simple">
+<li><p>Growth accounting (Solow residual) — dekomposisi growth</p></li>
+<li><p>Linearisasi di steady state — convergence equation</p></li>
+<li><p>Nullcline analysis — phase plane 2D (template untuk RCK, Romer, Schumpeterian)</p></li>
+<li><p>Cross-country regression — empirics framework</p></li>
+</ol>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>1. Derivation: konvergensi (10.8), nullcline (Exercise 10.14), MRW formula (Exercise 10.15) 2. Gambar phase plane: template 7-step di atas (Exercise 10.14) 3. Intuisi rate of convergence: distinction <span class="math notranslate nohighlight">\(D(0)\)</span> vs <span class="math notranslate nohighlight">\(\beta\)</span> 4. Empirics: sumber data MRW dan issues measurement 5. Diskusi konseptual: 8 issues + 6 cara relax (Exercise 10.17)</em></p>
+<p>Aturan yang sudah ditetapkan: derivasi matematis selalu step-by-step, tidak lompat notasi. Ini akan dipakai konsisten untuk seterusnya.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab09-solow-swan.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 9 — Solow-Swan</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab11-optimal-control.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 11 — Optimal Control</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-bab-10-dalam-kursus">Konsep 1 — Posisi Bab 10 dalam Kursus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-10-1-growth-accounting">Konsep 2 — Section 10.1 — Growth Accounting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-10-2-convergence-regression">Konsep 3 — Section 10.2 — Convergence Regression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-5-turunan-f-k-k">Exercise 10.5 — Turunan <span class="math notranslate nohighlight">\(f(k)/k\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-10-6-differentiation-trick">Exercise 10.6 — Differentiation trick</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-section-10-3-solow-dengan-human-capital">Konsep 4 — Section 10.3 — Solow dengan Human Capital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-exercise-10-14-nullcline-analysis-lengkap">Konsep 5 — Exercise 10.14 — Nullcline Analysis Lengkap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-10-4-mankiw-romer-weil-cross-country">Konsep 6 — Section 10.4 — Mankiw-Romer-Weil Cross-country</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-hubungan-ke-model-model-lain">Konsep 7 — Hubungan ke Model-Model Lain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-10-5-discussion-exercise-10-17">Konsep 8 — Section 10.5 — Discussion (Exercise 10.17)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap-ke-depan">Roadmap ke depan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-10">Checklist Pemahaman Bab 10</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

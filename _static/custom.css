@@ -1,0 +1,22 @@
+/* ── Tipografi buku ── */
+article h1 { font-size: 1.8rem; }
+article h2 { font-size: 1.3rem; margin-top: 2.1rem; padding: .4rem .75rem;
+  background: linear-gradient(90deg, #e9f0fa 0%, rgba(233,240,250,0) 85%);
+  border-left: 4px solid #3b6ea5; border-radius: 6px; border-bottom: none; }
+article h3 { font-size: 1.1rem; margin-top: 1.5rem; padding: .2rem .6rem;
+  background: linear-gradient(90deg, #f3f6fb 0%, rgba(243,246,251,0) 80%);
+  border-left: 3px solid #9db8d9; border-radius: 5px; }
+/* ── Label mini (bold berdiri sendiri / run-in) jadi pil lembut ── */
+article p > strong:only-child { display: inline-block; background: #eef3fb; color: #1c3d6e;
+  padding: .12rem .6rem; border-radius: .55rem; font-size: .95rem; }
+article table strong, article .admonition-title strong { all: unset; font-weight: 700; }
+/* ── Kotak & tabel ── */
+article .admonition { margin: 1rem 0; }
+article .admonition > .admonition-title { font-size: .92rem; }
+article table { font-size: .93rem; }
+/* ── Checklist interaktif ── */
+article li.cek { list-style: none; cursor: pointer; position: relative; padding-left: 1.5em; margin-left: -1.2em; }
+article li.cek::before { content: "☐"; position: absolute; left: 0; color: #93a1b5; font-weight: 700; }
+article li.cek:hover::before { color: #3b6ea5; }
+article li.cek.done { color: #1565c0; }
+article li.cek.done::before { content: "✔"; color: #1565c0; }

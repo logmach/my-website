@@ -1,0 +1,3 @@
+# About
+
+Pengetahuan itu mengasyikan

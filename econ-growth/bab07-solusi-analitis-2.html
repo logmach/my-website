@@ -1,0 +1,899 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 7 — Solusi Analitis II &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab07-solusi-analitis-2';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 8 — Analisis Kualitatif" href="bab08-analisis-kualitatif.html" />
+    <link rel="prev" title="Bab 6 — Solusi Analitis I" href="bab06-solusi-analitis-1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab07-solusi-analitis-2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab07-solusi-analitis-2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 7 — Solusi Analitis II</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-mengapa-bab-7-diperlukan">Konsep 1 — Mengapa Bab 7 Diperlukan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-eigenvalue-dan-eigenvektor">Konsep 2 — Eigenvalue dan Eigenvektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-multiplicity-per-eigenvalue-bukan-total">Konsep 3 — Multiplicity — Per Eigenvalue, Bukan Total</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-tiga-kasus-solusi-ode-sistem">Konsep 4 — Tiga Kasus Solusi ODE Sistem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-big-picture-mengapa-eigenvalue-penting-untuk-growth">Konsep 5 — Big Picture — Mengapa Eigenvalue Penting untuk Growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-eksistensi-vs-ekspresibilitas-solusi">Konsep 6 — Eksistensi vs Ekspresibilitas Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-7">Checklist Pemahaman Bab 7</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-7-solusi-analitis-ii">
+<h1>Bab 7 — Solusi Analitis II<a class="headerlink" href="#bab-7-solusi-analitis-ii" title="Link to this heading">#</a></h1>
+<p>Bab ini menggeneralisasi teknik Bab 6 dari persamaan skalar ke <em>sistem</em> ODE multi-variabel, dengan eigenvalue, eigenvektor, dan diagonalisasi sebagai alat utamanya. Inilah jembatan kunci antara perangkat matematis (Bab 3–6) dan aplikasi teori pertumbuhan (Bab 9 dan setelahnya): kestabilan sistem 2D seperti RCK ditentukan oleh tanda bagian riil eigenvalue-nya.</p>
+<section id="konsep-1-mengapa-bab-7-diperlukan">
+<h2>Konsep 1 — Mengapa Bab 7 Diperlukan<a class="headerlink" href="#konsep-1-mengapa-bab-7-diperlukan" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi tools Bab 6 dari skalar ke sistem multi-variabel.</em></p>
+<p><strong>Masalah baru di multi-D</strong> — Untuk sistem <span class="math notranslate nohighlight">\(\dot{x}=Ax\)</span> dengan <span class="math notranslate nohighlight">\(A\)</span> matriks <span class="math notranslate nohighlight">\(k \times k\)</span>:</p>
+<p>Kalau <span class="math notranslate nohighlight">\(A\)</span> diagonal: persamaan terpisah, solve sebagai ODE skalar independen. Tools Bab 6 langsung berlaku. <span class="math notranslate nohighlight">\(k\)</span> Kalau <span class="math notranslate nohighlight">\(A\)</span> tidak diagonal: persamaan interdependent — <span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> tergantung <span class="math notranslate nohighlight">\(x_{2}\)</span> dan sebaliknya. Tools Bab 6 tidak cukup.</p>
+<p><strong>Contoh interdependensi</strong></p>
+<p>Sistem 2D:</p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">1</span> <span class="pre">3</span> <span class="pre">]</span></code></p>
+<p>Expand:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{x}_{1} &amp;=2x_{1} +2x_{2} \\
+\dot{x}_{2} &amp;=x_{1} +3x_{2}
+\end{aligned}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> tergantung <span class="math notranslate nohighlight">\(x_{2}\)</span>, <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> tergantung <span class="math notranslate nohighlight">\(x_{1}\)</span>. Tidak bisa solve satu tanpa yang lain.</p>
+<p><strong>Strategi Bab 7 — decoupling lewat diagonalisasi</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Idenya: ubah ke koordinat di mana sistem menjadi diagonal (independent). Solve di koordinat baru, lalu kembalikan ke koordinat asli.</em></p>
+<p><em>Tools yang membuat ini bekerja: eigenvalue dan eigenvektor.</em></p>
+</div>
+</section>
+<section id="konsep-2-eigenvalue-dan-eigenvektor">
+<h2>Konsep 2 — Eigenvalue dan Eigenvektor<a class="headerlink" href="#konsep-2-eigenvalue-dan-eigenvektor" title="Link to this heading">#</a></h2>
+<p><em>Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.</em></p>
+<p><strong>Definisi</strong></p>
+<p>Untuk matriks <span class="math notranslate nohighlight">\(A\)</span> ukuran <span class="math notranslate nohighlight">\(k \times k\)</span>:</p>
+<p>Eigenvektor: vektor non-zero yang memenuhi <span class="math notranslate nohighlight">\(vAv= \lambda v\)</span></p>
+<p>Eigenvalue: skalar yang membuat persamaan di atas berlaku <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<p>Intuisi geometris: <span class="math notranslate nohighlight">\(A\)</span> “memetakan” ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. <span class="math notranslate nohighlight">\(v\)</span></p>
+<p><strong>Cara mencari eigenvalue</strong> — Dari <span class="math notranslate nohighlight">\(Av= \lambda v\)</span>, rearrange: <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span>.</p>
+<p>Untuk solusi non-trivial (<span class="math notranslate nohighlight">\(v= \ne 0\)</span>), matriks <span class="math notranslate nohighlight">\((A -\lambda I)\)</span> harus singular:</p>
+<div class="math notranslate nohighlight">
+\[ det(A -\lambda I) = 0 \]</div>
+<p>Ini disebut persamaan karakteristik.</p>
+<p><strong>Formula 2D yang sering dipakai</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Untuk matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[ \lambda^{2} - tr(A)\,\lambda + \det(A) = 0 \]</div>
+</div>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(tr(A)= a_{11} +a_{22}\)</span> (jumlah diagonal)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ det(A)= a_{11}a_{22} -a_{12}a_{21} \]</div>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Jebakan umum: salah menghitung trace untuk matriks:</p>
+<p>Trace = <span class="math notranslate nohighlight">\(-1 + (-1) = -2\)</span>, bukan. Kesalahan ini menyebar ke seluruh perhitungan dan menghasilkan <span class="math notranslate nohighlight">\(0\)</span> klasifikasi “center” padahal seharusnya “stable spiral”.</p>
+<p>Habit yang harus dibangun: sebelum lanjut, double-check entri diagonal. Trace = <span class="math notranslate nohighlight">\(a + d\)</span> (kiri atas + kanan bawah), bukan <span class="math notranslate nohighlight">\(b + c\)</span>.</p>
+</div>
+<p><strong>Mengapa “real part” penting</strong> — Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung</p>
+<p>Untuk <span class="math notranslate nohighlight">\(\lambda = \alpha + i\beta\)</span> (kompleks):</p>
+<div class="math notranslate nohighlight">
+\[ e\lambda t=e\alpha t[cos(\beta t) + i sin(\beta t)]\cdot \]</div>
+<p><span class="math notranslate nohighlight">\(e^{\alpha t}\)</span>: magnitude — eksponensial growth/decay <span class="math notranslate nohighlight">\(cos(\beta t) + i sin(\beta t)\)</span>: rotation — osilasi periodik dengan amplitudo 1</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Hanya <span class="math notranslate nohighlight">\(\alpha\)</span> yang menentukan apakah magnitude tumbuh atau mengecil. hanya memberi oscillation. Maka <span class="math notranslate nohighlight">\(\beta\)</span> stability tergantung tanda <span class="math notranslate nohighlight">\(\alpha\)</span> (real part), bukan eigenvalue penuh.</p>
+</div>
+</section>
+<section id="konsep-3-multiplicity-per-eigenvalue-bukan-total">
+<h2>Konsep 3 — Multiplicity — Per Eigenvalue, Bukan Total<a class="headerlink" href="#konsep-3-multiplicity-per-eigenvalue-bukan-total" title="Link to this heading">#</a></h2>
+<p><em>Konsep yang sering disalahpahami — mari luruskan. Sangat penting untuk Bab 7.</em></p>
+<p><strong>Dua jenis multiplicity</strong></p>
+<p><strong>ALGEBRAIC MULT (AM)</strong> — Berapa kali eigenvalue tertentu muncul sebagai akar persamaan karakteristik. Yaitu, pangkat faktor <span class="math notranslate nohighlight">\((\lambda -\lambda _{i})\)</span> di persamaan karakteristik.</p>
+<p><strong>Geometric Mult (gm)</strong> — Jumlah eigenvektor independent untuk eigenvalue tertentu. Sama dengan dimensi eigenspace.</p>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Jebakan umum: mengira multiplicity dihitung secara total:</p>
+<p>“AM matriks = jumlah eigenvalue”</p>
+<p>“GM matriks = total eigenvektor”</p>
+<p>Ini salah. Multiplicity adalah per eigenvalue. Setiap eigenvalue punya AM dan GM sendiri-sendiri.</p>
+<p>Yang benar: multiplicity dihitung <em>per eigenvalue</em>. Reflex yang harus terbangun: cek tiap eigenvalue secara terpisah.</p>
+</div>
+<p><strong>Aturan diagonalisasi-able</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong><span class="math notranslate nohighlight">\(A\)</span> diagonalisasi-able jika dan hanya jika</strong></p>
+<p><em>Untuk SETIAP eigenvalue, AM = GM.</em></p>
+<p><em>Kalau ada satu saja eigenvalue dengan GM &lt; AM, matriks tidak diagonalisasi-able.</em></p>
+</div>
+<p><strong>Empat kasus utama</strong> — Kasus 1 — Distinct eigenvalues: <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">-2</span> <span class="pre">1</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">0</span> <span class="pre">-3</span> <span class="pre">]</span></code></p>
+<p>Eigenvalues: <span class="math notranslate nohighlight">\(-2, -3\)</span>. AM = GM = 1 untuk masing-masing. Diagonalisasi-able.</p>
+<p>Kasus 2 — Repeated dengan eigenvektor cukup:</p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">3</span> <span class="pre">0</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">0</span> <span class="pre">3</span> <span class="pre">]</span></code></p>
+<p>Eigenvalue: (AM = 2). <span class="math notranslate nohighlight">\(3(A -3I)\)</span> adalah matriks nol → semua vektor adalah eigenvektor → GM = 2. Diagonalisasi-able.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Jebakan umum untuk matriks ini: menyimpulkan “tidak ada eigenvektor”. Yang benar: matriks nol</p>
+<p>Reflex yang harus dibangun: selalu solve <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span> eksplisit. Jangan tebak dari bentuk matriks.</p>
+<p>Kasus 3 — Repeated dengan eigenvektor kurang (Jordan block):</p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">2</span> <span class="pre">1</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">0</span> <span class="pre">2</span> <span class="pre">]</span></code></p>
+<p>Eigenvalue: (AM = 2). <span class="math notranslate nohighlight">\(2(A -2I)\)</span> punya rank 1 → eigenspace dimensi 1 → GM = 1.</p>
+<p>GM (1) &lt; AM (2) → tidak diagonalisasi-able.</p>
+<p>Kasus 4 — Contoh soal <span class="math notranslate nohighlight">\(3 \times 3\)</span>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">4</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">0</span> <span class="pre">4</span> <span class="pre">0</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">0</span> <span class="pre">0</span> <span class="pre">2</span> <span class="pre">]</span></code></p>
+<p>Hasil:</p>
+</div>
+<p><span class="math notranslate nohighlight">\(\lambda = 4\)</span>: AM = 2, GM = 1 (karena entri 1 di posisi (1,2)) <span class="math notranslate nohighlight">\(\lambda = 2\)</span>: AM = 1, GM = 1</p>
+<p>Karena untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span>, AM ≠ GM → tidak diagonalisasi-able.</p>
+</section>
+<section id="konsep-4-tiga-kasus-solusi-ode-sistem">
+<h2>Konsep 4 — Tiga Kasus Solusi ODE Sistem<a class="headerlink" href="#konsep-4-tiga-kasus-solusi-ode-sistem" title="Link to this heading">#</a></h2>
+<p><em>Berdasarkan jenis eigenvalues, ada tiga “wajah” yang berbeda untuk sistem 2D.</em></p>
+<p><strong>Cara membedakan</strong> — Diskriminan persamaan karakteristik 2D:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta = tr(A)-^{2}4 det(A) \]</div>
+<p>Distinct real eigenvalues (Section 7.1.2). Solusi: kombinasi linear</p>
+<div class="math notranslate nohighlight">
+\[ \Delta &gt;0 \]</div>
+<p>“straight-line solutions”.</p>
+<p>Complex conjugate eigenvalues (Section 7.1.3). Solusi: spiral (atau</p>
+<div class="math notranslate nohighlight">
+\[ \Delta &lt;0 \]</div>
+<p>center).</p>
+<p>Repeated real eigenvalue (Section 7.1.4). Solusi: improper node</p>
+<div class="math notranslate nohighlight">
+\[ \Delta =0 \]</div>
+<p>dengan suku <span class="math notranslate nohighlight">\(te^{\lambda t}\)</span>.</p>
+<p><strong>Kasus 1 — Distinct real (Section 7.1.2)</strong></p>
+<p>Untuk eigenvalues <span class="math notranslate nohighlight">\(\lambda _{1}, \lambda _{2}\)</span> dengan eigenvektor <span class="math notranslate nohighlight">\(v_{1}, v_{2}\)</span>:</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>General solution (Equation 7.11)</strong></p>
+<div class="math notranslate nohighlight">
+\[ x(t)= c_{1}e^{\lambda1t}v_{1} +c_{2}e^{\lambda2t}v_{2} \]</div>
+<p>Interpretasi: kombinasi linear dari “straight-line solutions”. Setiap suku <span class="math notranslate nohighlight">\(c_{i}^{\lambda }ei^{t}v_{i}\)</span> adalah lintasan sepanjang arah eigenvektor <span class="math notranslate nohighlight">\(v_{i}\)</span> dengan magnitude tumbuh/decay secara eksponensial.</p>
+</div>
+<p><strong>Kasus 2 — Complex (Section 7.1.3)</strong></p>
+<p>Untuk eigenvalues <span class="math notranslate nohighlight">\(\lambda = \alpha \pm i\beta\)</span>:</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Solusi melibatkan <span class="math notranslate nohighlight">\(e^{\alpha t}\)</span> (magnitude) dan <span class="math notranslate nohighlight">\(cos(\beta t), sin(\beta t)\)</span> (rotation). Hasilnya:</p>
+<p><em><span class="math notranslate nohighlight">\(\alpha &lt; 0, \beta = \ne 0\)</span>: stable spiral (focus) <span class="math notranslate nohighlight">\(\alpha &gt; 0, \beta = \ne 0\)</span>: unstable spiral <span class="math notranslate nohighlight">\(\alpha = 0, \beta = \ne 0\)</span>: center (orbit periodic)</em></p>
+<p>Visualisasi: lintasan spiral di phase plane — bukan garis lurus.</p>
+</div>
+<p><strong>Kasus 3 — Repeated (Section 7.1.4)</strong></p>
+<p>Untuk eigenvalue dengan AM = 2 tapi GM = 1: <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>General solution (Equation 7.14)</strong></p>
+<div class="math notranslate nohighlight">
+\[ x(t)= e(c^{\lambda t}_{1}v +c_{2}w) +te(c^{\lambda t}_{2}v) \]</div>
+<p><em>dengan eigenvektor, <span class="math notranslate nohighlight">\(vw\)</span> generalized eigenvector (<span class="math notranslate nohighlight">\(w\)</span> memenuhi <span class="math notranslate nohighlight">\((A -\lambda I)w = v\)</span>).</em></p>
+<p>Yang baru: suku <span class="math notranslate nohighlight">\(te^{\lambda t}\)</span> — polynomial growth karena kekurangan eigenvektor independent.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Mengapa muncul faktor? Karena sistem dalam koordinat baru adalah recursive: <span class="math notranslate nohighlight">\(t\dot{y}_{1} =\lambda y_{1} +y_{2}\)</span> dengan <span class="math notranslate nohighlight">\(y_{2} =c_{2}^{\lambda t}e\)</span>. Forcing-nya resonan dengan solusi homogen → particular solution berbentuk <span class="math notranslate nohighlight">\(te^{\lambda t}\)</span>.</p>
+<p>Stabilitas tetap dari tanda: untuk <span class="math notranslate nohighlight">\(\lambda \lambda &lt; 0\)</span>, exponensial decay menang atas polynomial growth (<span class="math notranslate nohighlight">\(te^{\lambda t}\to 0\)</span>).</p>
+</div>
+<p><strong>Kasus Konkret 1 — Example 7.4 — Distinct Real Eigenvalues</strong></p>
+<p><em>Aplikasi penuh formula Equation 7.11 ke contoh nyata.</em></p>
+<p><strong>Setup</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">1</span> <span class="pre">3</span> <span class="pre">]</span></code></p>
+<p><strong>Step 1.</strong> Eigenvalues</p>
+<p><span class="math notranslate nohighlight">\(tr(A) = 5, det(A) = 4\)</span>. Persamaan: <span class="math notranslate nohighlight">\(\lambda -^{2}5\lambda + 4 = 0\)</span> → <span class="math notranslate nohighlight">\((\lambda -4)(\lambda -1) = 0\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\lambda _{1} =4, \lambda _{2} =1\)</span>. Distinct dan real ✓</p>
+<p><strong>Step 2</strong> Eigenvektor untuk <span class="math notranslate nohighlight">\(\lambda _{1} =4\)</span></p>
+<p><span class="math notranslate nohighlight">\((A -4I)v_{1} =0\)</span> menghasilkan <span class="math notranslate nohighlight">\(v_{2} =v_{1}\)</span>. Pilih <span class="math notranslate nohighlight">\(v_{1} =(1, 1)\)</span>.</p>
+<p><strong>Step 3</strong> Eigenvektor untuk <span class="math notranslate nohighlight">\(\lambda _{2} =1\)</span></p>
+<p><span class="math notranslate nohighlight">\((A -I)v_{2} =0\)</span> menghasilkan <span class="math notranslate nohighlight">\(v_{1} =-2v_{2}\)</span>. Pilih <span class="math notranslate nohighlight">\(v_{2} =(-2, 1)\)</span>.</p>
+<p><strong>Step 4.</strong> General solution</p>
+<div class="math notranslate nohighlight">
+\[ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} \]</div>
+<p><strong>Step 5</strong> Apply kondisi awal <span class="math notranslate nohighlight">\(x_{0} =(0.1, 0.1)\)</span></p>
+<p>Sistem: <span class="math notranslate nohighlight">\(c_{1} -2c_{2} =0.1\)</span> dan <span class="math notranslate nohighlight">\(c_{1} +c_{2} =0.1\)</span>. Solve: <span class="math notranslate nohighlight">\(c_{2} =0, c_{1} =0.1\)</span>.</p>
+<p>Particular solution: <span class="math notranslate nohighlight">\(x(t) = 0.1e(1, 1)^{4t}\)</span>. Sepanjang arah <span class="math notranslate nohighlight">\(v_{1}\)</span> — straight-line solution.</p>
+<p><strong>Insight</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><em>Kondisi awal <span class="math notranslate nohighlight">\((0.1, 0.1)\)</span> kebetulan sejajar dengan eigenvektor <span class="math notranslate nohighlight">\(v_{1}\)</span>. Maka lintasannya straight-line — hanya mode pertama yang aktif.</em></p>
+<p><em>Untuk kondisi awal lain (misal <span class="math notranslate nohighlight">\((1, 0)\)</span>), kedua mode akan aktif dan lintasan bukan garis lurus.</em></p>
+</div>
+<p><strong>Kasus Konkret 2 — Stable Spiral — Complex Eigenvalues</strong></p>
+<p><em>Contoh kasus: matriks dengan trace.</em></p>
+<p><strong>Setup</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">-1</span> <span class="pre">2</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">-2</span> <span class="pre">-1</span> <span class="pre">]</span></code></p>
+<p><strong>Step 1.</strong> Trace dan determinant</p>
+<p><span class="math notranslate nohighlight">\(tr(A) = -1 + (-1) = -2\)</span> (hati-hati: bukan) <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 \]</div>
+<p><strong>Step 2.</strong> Diskriminan</p>
+<p><span class="math notranslate nohighlight">\(\Delta = 4 -20 = -16 &lt; 0\)</span> → complex eigenvalues ✓</p>
+<p><strong>Step 3.</strong> Eigenvalues</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
+\]</div>
+<p>Tunggu — periksa lagi. Persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span> menjadi <span class="math notranslate nohighlight">\(\lambda +^{2}2\lambda +\)</span> <span class="math notranslate nohighlight">\(5 = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
+\]</div>
+<p><strong>Step 4.</strong> Identifikasi</p>
+<p><span class="math notranslate nohighlight">\(\alpha = -1\)</span> (real part), <span class="math notranslate nohighlight">\(\beta = 2\)</span> (imaginary part)</p>
+<p><strong>Step 5.</strong> Klasifikasi</p>
+<p><span class="math notranslate nohighlight">\(\alpha &lt; 0\)</span> dan <span class="math notranslate nohighlight">\(\beta = \ne 0\)</span> → stable spiral</p>
+<p><strong>Interpretasi qualitative</strong> — Lintasan spiral inward ke origin Magnitude decay dengan rate <span class="math notranslate nohighlight">\(∣\alpha ∣= 1\)</span> Periode rotasi <span class="math notranslate nohighlight">\(T= 2\pi /\beta = \pi \approx 3.14\)</span></p>
+<p>Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin</p>
+</section>
+<section id="konsep-5-big-picture-mengapa-eigenvalue-penting-untuk-growth">
+<h2>Konsep 5 — Big Picture — Mengapa Eigenvalue Penting untuk Growth<a class="headerlink" href="#konsep-5-big-picture-mengapa-eigenvalue-penting-untuk-growth" title="Link to this heading">#</a></h2>
+<p><em>Pertanyaan yang membuka mata: mengapa kita belajar semua ini untuk Solow- Swan dan RCK?</em></p>
+<p><em>Hubungan tools dengan pertanyaan ekonomi.</em></p>
+<p><strong>Pertanyaan Ekonomi</strong> — Tool matematis</p>
+<p><strong>Stable Atau Tidak?</strong> — Tanda eigenvalue (real part untuk complex)</p>
+<p><strong>Seberapa Cepat</strong> — Magnitude eigenvalue → rate of convergence</p>
+<p><strong>Konvergen?</strong></p>
+<p><strong>Arah Konvergensi?</strong> — Eigenvektor → saddle path direction</p>
+<p><strong>Bentuk Solusi Lokal?</strong> — Equation 7.11 — kombinasi linear eksponensial</p>
+<p><strong>Pilihan Trajectory</strong> — Pilih komponen dengan eigenvalue negatif (transversality)</p>
+<p><strong>Aplikasi ke Solow-Swan</strong> — Sudah diturunkan di Bab 5:</p>
+<p>Untuk parameter realistik (<span class="math notranslate nohighlight">\(\alpha = 0.33, n + g + \delta = 0.06\)</span>):</p>
+<p><span class="math notranslate nohighlight">\(|G'(\bar{k})| = 0.67 \times 0.06 \approx 0.04\)</span> per tahun. Half-life: <span class="math notranslate nohighlight">\(\ln 2/0.04 \approx 17\)</span> tahun.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Inilah prediksi konkrit: ekonomi yang tergeser dari steady state (misal pasca-perang) akan</p>
+<p><em>butuh ~17 tahun untuk setengah pulih. Konsisten dengan empirics Jerman/Jepang pasca- PD2. Tanpa eigenvalue analysis, kita tidak punya angka kuantitatif ini.</em></p>
+</div>
+<p><strong>Aplikasi ke RCK</strong> — Sistem 2D nonlinear dengan <span class="math notranslate nohighlight">\((k, c)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}\dot{k}&amp;=f(k)-(n+\delta)k-c \\ \dot{c}&amp;=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
+\end{split}\]</div>
+<p>Jacobian di steady state menghasilkan saddle point — satu eigenvalue negatif, satu positif.</p>
+<p>Implikasi mendalam:</p>
+<p><strong>Implikasi</strong> — Komponen <span class="math notranslate nohighlight">\(c_{2}e^{2t}v_{2}\)</span> dengan <span class="math notranslate nohighlight">\(\lambda_{2}&gt;0\)</span> meledak → harus pilih <span class="math notranslate nohighlight">\(c_{2}=0\)</span> (transversality). Solusi efektif: hanya komponen stabil.</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Tanpa eigenvektor analysis, kita tidak bisa karakterisasi saddle path. Ekonomi tidak bisa di-solve dengan benar.</em></p>
+<p><em>Eigenvalue + eigenvektor = inti analisis dinamika di growth theory.</em></p>
+</div>
+</section>
+<section id="konsep-6-eksistensi-vs-ekspresibilitas-solusi">
+<h2>Konsep 6 — Eksistensi vs Ekspresibilitas Solusi<a class="headerlink" href="#konsep-6-eksistensi-vs-ekspresibilitas-solusi" title="Link to this heading">#</a></h2>
+<p><em>Pertanyaan tajam: mengapa tidak bisa solve ODE-nya secara eksplisit? Apakah karena <span class="math notranslate nohighlight">\(C\)</span> tidak bisa ditemukan?</em></p>
+<p><strong>Jawaban: bukan karena C</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan <span class="math notranslate nohighlight">\(C\)</span>. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.</em></p>
+</div>
+<p><strong>Picard-Lindelöf menjamin eksistensi</strong> — Untuk Solow-Swan <span class="math notranslate nohighlight">\(\dot{k}=sk-^{\alpha }\delta k\)</span> dengan <span class="math notranslate nohighlight">\(k &gt; 0\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(G(k) = sk-^{\alpha }\delta k\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓ <span class="math notranslate nohighlight">\(\partial G/\partial k = \alpha sk^{\alpha-1}-\delta\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓</p>
+<p>Picard-Lindelöf menjamin: untuk sembarang <span class="math notranslate nohighlight">\(k_{0} &gt;0\)</span>, ada solusi <span class="math notranslate nohighlight">\(k(t)\)</span> yang eksis dan unik untuk <span class="math notranslate nohighlight">\(t\ge t_{0}\)</span>.</p>
+<p><strong>Tapi solusi tidak bisa ditulis</strong> — Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progress, Romer), tidak ada formula closed-form dalam fungsi elementer.</p>
+<p><strong>Tiga jenis “tidak bisa di-solve”</strong></p>
+<p><strong>Skenario 1</strong> — Solusi eksis dan bisa ditulis dengan fungsi elementer. Contoh: <span class="math notranslate nohighlight">\(\dot{x}=-2x\)</span>, solusi <span class="math notranslate nohighlight">\(Ce^{-2t}\)</span>.</p>
+<p><strong>Skenario 2</strong> — Solusi eksis tapi tidak bisa ditulis dengan fungsi elementer. Contoh: <span class="math notranslate nohighlight">\(\dot{x}=e^{-x^{2}}\)</span>, RCK, Romer. Solusi eksis dan ditulis dengan formula sangat kompleks yang tidak</p>
+<p><strong>Skenario 3</strong> — Solusi eksplisit eksis tapi terlalu rumit untuk memberi insight. Jarang; biasanya melibatkan fungsi spesial.</p>
+<p><em>Mengapa “linearisasi + eigenvalue” jadi alat utama.</em></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><strong>Karena ODE growth theory tidak bisa di-solve eksplisit, kita pakai</strong></p>
+<p><em>1. Linearisasi di steady state (lewat Jacobian) — Bab 5 2. Eigenvalue + eigenvektor dari Jacobian — Bab 7 3. Hartman-Grobman membenarkan ini secara formal — Bab 5</em></p>
+<p>Hasilnya: insight kuantitatif lokal (rate of convergence, saddle path, klasifikasi) tanpa perlu</p>
+<p><em>formula eksplisit.</em></p>
+</div>
+<p><strong>Insight metakognitif</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaanmu menyentuh hal fundamental dalam matematika applied:</p>
+<p>“Eksistensi solusi ≠ ekspresibilitas dalam fungsi elementer.”</p>
+<p>Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah yang melibatkan struktur aljabar fungsi <span class="math notranslate nohighlight">\(G\)</span>. Inilah mengapa numerik, qualitative, dan linearisasi menjadi alat penting — bukan karena malas, tapi karena formula eksplisit memang sering tidak ada.</p>
+</div>
+</section>
+<section id="checklist-pemahaman-bab-7">
+<h2>Checklist Pemahaman Bab 7<a class="headerlink" href="#checklist-pemahaman-bab-7" title="Link to this heading">#</a></h2>
+<p><em>Siap untuk Bab 8 dan setelahnya jika bisa menjawab.</em></p>
+<p><strong>Mekanik</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa hitung trace dan det matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span> dengan benar (hati-hati entri)</p></li>
+<li><p>☐ Bisa solve persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span></p></li>
+<li><p>☐ Bisa hitung eigenvektor dengan solve <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span> eksplisit</p></li>
+<li><p>☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)</p></li>
+<li><p>☐ Bisa identifikasi <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> untuk complex eigenvalues</p></li>
+</ul>
+<p><strong>Konseptual</strong></p>
+<ul class="simple">
+<li><p>☐ Paham mengapa diagonalisasi memudahkan solve sistem ODE</p></li>
+<li><p>☐ Paham bahwa eigenvektor = arah natural sistem</p></li>
+<li><p>☐ Paham multiplicity dihitung per eigenvalue, bukan total</p></li>
+<li><p>☐ Bisa membedakan tiga kasus eigenvalue (distinct, complex, repeated)</p></li>
+<li><p>☐ Bisa klasifikasi stable node, stable spiral, saddle, center, improper node</p></li>
+</ul>
+<p><strong>Insight metakognitif</strong></p>
+<ul class="simple">
+<li><p>☐ Paham mengapa “real part” yang menentukan stabilitas</p></li>
+<li><p>☐ Paham eksistensi solusi ≠ ekspresibilitas (Picard-Lindelöf vs formula elementer)</p></li>
+<li><p>☐ Paham mengapa linearisasi + eigenvalue adalah alat utama untuk growth theory</p></li>
+<li><p>☐ Paham peran Hartman-Grobman sebagai jembatan antara linear dan nonlinear</p></li>
+<li><p>☐ Habit sanity check eigenvalue: <span class="math notranslate nohighlight">\(Av\)</span> harus <span class="math notranslate nohighlight">\(= \lambda v\)</span></p></li>
+</ul>
+<p>✦✦✦</p>
+<div class="important admonition">
+<p class="admonition-title">Penutup</p>
+<p><strong>Tools I Selesai</strong></p>
+<p>Bab 7 menyelesaikan Tools I (Bab 3-7). Foundation matematis lengkap.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><strong>Yang sudah dikuasai dari bab ini</strong></p>
+<p><em>Bab 3: ODE notation dan struktur Bab 4: Eksistensi, keunikan, Picard-Lindelöf Bab 5: Steady state, Jacobian, klasifikasi stabilitas Bab 6: Integrating factor, Principle of Superposition, struktur anchor + movement Bab 7: Eigenvalue analysis untuk sistem linear, diagonalisasi, tiga kasus</em></p>
+</div>
+<p><strong>Yang menanti</strong> — Bab 8 — Qualitative Analyses: phase diagrams, nullclines, klasifikasi geometris tanpa solve eksplisit</p>
+<p>Bab 9 — Solow-Swan: aplikasi pertama growth theory</p>
+<p>Bab 11-12 — Optimal Control dan RCK: tempat saddle path benar-benar penting</p>
+<p>Bab 14-15 — Endogenous Growth: sistem lebih kompleks dengan teknologi endogen</p>
+<p>Semua bab selanjutnya dibangun di atas fondasi Tools I. Selamat — bagian paling abstrak sudah terlewati.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab06-solusi-analitis-1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 6 — Solusi Analitis I</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab08-analisis-kualitatif.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 8 — Analisis Kualitatif</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-mengapa-bab-7-diperlukan">Konsep 1 — Mengapa Bab 7 Diperlukan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-eigenvalue-dan-eigenvektor">Konsep 2 — Eigenvalue dan Eigenvektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-multiplicity-per-eigenvalue-bukan-total">Konsep 3 — Multiplicity — Per Eigenvalue, Bukan Total</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-tiga-kasus-solusi-ode-sistem">Konsep 4 — Tiga Kasus Solusi ODE Sistem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-big-picture-mengapa-eigenvalue-penting-untuk-growth">Konsep 5 — Big Picture — Mengapa Eigenvalue Penting untuk Growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-eksistensi-vs-ekspresibilitas-solusi">Konsep 6 — Eksistensi vs Ekspresibilitas Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-7">Checklist Pemahaman Bab 7</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1113 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Matematika &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'matematika';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="📈 Belajar Economic Growth" href="econ-growth/index.html" />
+    <link rel="prev" title="About" href="about.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matematika</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="econ-growth/index.html">📈 Belajar Economic Growth</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="econ-growth/bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatematika.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/matematika.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Matematika</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksi-ilmu-matematika">1. Introduksi Ilmu Matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-matematika">Apa itu matematika?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-matematika-dibangun-definisi-aksioma-teorema-bukti">Bagaimana matematika dibangun: definisi, aksioma, teorema, bukti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencicipi-sebuah-bukti">Mencicipi sebuah bukti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-matematika-begitu-ampuh">Mengapa matematika begitu ampuh?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cabang-cabang-ilmu-matematika-dan-sejarahnya">2. Cabang-Cabang Ilmu Matematika dan Sejarahnya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peta-besar-cabang-matematika">Peta besar cabang matematika</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lini-masa-perjalanan-panjang-matematika">Lini masa: perjalanan panjang matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesopotamia-dan-mesir-3000500-sm-matematika-para-juru-ukur">Mesopotamia dan Mesir (± 3000–500 SM): matematika para juru ukur</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#yunani-kuno-600-sm-300-m-lahirnya-bukti">Yunani Kuno (± 600 SM – 300 M): lahirnya bukti</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#india-5001200-m-nol-dan-sistem-bilangan-modern">India (± 500–1200 M): nol dan sistem bilangan modern</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dunia-islam-8001400-m-aljabar-dan-algoritma">Dunia Islam (± 800–1400 M): aljabar dan algoritma</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tiongkok-tradisi-yang-berjalan-sendiri">Tiongkok: tradisi yang berjalan sendiri</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eropa-dari-kebangkitan-hingga-kalkulus-12001700">Eropa: dari kebangkitan hingga kalkulus (± 1200–1700)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#abad-ke-18-dan-ke-19-perluasan-dan-pengetatan">Abad ke-18 dan ke-19: perluasan dan pengetatan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#abad-ke-20-hingga-kini-batas-batas-dan-komputasi">Abad ke-20 hingga kini: batas-batas dan komputasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notasi-matematika">3. Notasi Matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dari-kalimat-panjang-menuju-simbol">Dari kalimat panjang menuju simbol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-notasi-begitu-penting">Mengapa notasi begitu penting?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kamus-simbol-dasar">Kamus simbol dasar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-membaca-sebuah-rumus">Latihan membaca sebuah rumus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ilmu-matematika-dan-terapannya">4. Ilmu Matematika dan Terapannya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fisika-dan-rekayasa">Fisika dan rekayasa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-dan-kriptografi">Komputasi dan kriptografi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekonomi-dan-keuangan">Ekonomi dan keuangan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistika-dan-sains-data">Statistika dan sains data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biologi-dan-kedokteran">Biologi dan kedokteran</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kehidupan-sehari-hari">Kehidupan sehari-hari</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penutup-cara-terbaik-melanjutkan">Penutup: cara terbaik melanjutkan</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="matematika">
+<h1>Matematika<a class="headerlink" href="#matematika" title="Link to this heading">#</a></h1>
+<p>Halaman ini adalah pintu masuk ke dunia matematika: apa sebenarnya matematika itu, dari mana ia berasal, bagaimana cara membacanya, dan mengapa ia hadir di hampir setiap sudut kehidupan modern. Tidak ada prasyarat apa pun — cukup rasa ingin tahu.</p>
+<div class="tip admonition">
+<p class="admonition-title">Untuk siapa halaman ini?</p>
+<p>Untuk siapa saja: pelajar yang baru mulai, orang dewasa yang ingin berdamai kembali dengan matematika, atau pembaca yang sekadar penasaran. Semua istilah dijelaskan saat pertama kali muncul.</p>
+</div>
+<section id="introduksi-ilmu-matematika">
+<h2>1. Introduksi Ilmu Matematika<a class="headerlink" href="#introduksi-ilmu-matematika" title="Link to this heading">#</a></h2>
+<section id="apa-itu-matematika">
+<h3>Apa itu matematika?<a class="headerlink" href="#apa-itu-matematika" title="Link to this heading">#</a></h3>
+<p>Banyak orang mengira matematika adalah <em>ilmu berhitung</em>. Itu keliru — atau setidaknya terlalu sempit. Berhitung berhubungan dengan matematika kira-kira seperti mengeja berhubungan dengan sastra: keterampilan dasarnya, bukan intinya.</p>
+<p>Definisi kerja yang lebih tepat: <strong>matematika adalah ilmu tentang pola dan struktur</strong>, yang dipelajari dengan penalaran yang tepat dan dapat diperiksa. Empat pertanyaan besar yang melahirkan cabang-cabang utamanya:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pertanyaan tentang…</p></th>
+<th class="head"><p>Melahirkan cabang</p></th>
+<th class="head"><p>Contoh soalnya</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Kuantitas</strong> (berapa banyak?)</p></td>
+<td><p>Aritmetika, teori bilangan</p></td>
+<td><p>Apakah bilangan prima ada tak terhingga banyaknya?</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Struktur</strong> (bagaimana hubungannya?)</p></td>
+<td><p>Aljabar</p></td>
+<td><p>Kapan sebuah persamaan punya penyelesaian?</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Ruang</strong> (di mana dan berbentuk apa?)</p></td>
+<td><p>Geometri</p></td>
+<td><p>Berapa jumlah sudut dalam segitiga?</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Perubahan</strong> (bagaimana ia bergerak?)</p></td>
+<td><p>Kalkulus dan analisis</p></td>
+<td><p>Seberapa cepat sesuatu tumbuh atau meluruh?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="bagaimana-matematika-dibangun-definisi-aksioma-teorema-bukti">
+<h3>Bagaimana matematika dibangun: definisi, aksioma, teorema, bukti<a class="headerlink" href="#bagaimana-matematika-dibangun-definisi-aksioma-teorema-bukti" title="Link to this heading">#</a></h3>
+<p>Matematika punya cara kerja yang membedakannya dari semua ilmu lain. Ilmu alam (fisika, biologi) menyimpulkan dari <strong>pengamatan</strong>: kita mengamati banyak kejadian lalu menarik pola umum, dan kesimpulannya selalu bisa direvisi oleh pengamatan baru. Matematika bekerja sebaliknya, secara <strong>deduktif</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Definisi</strong> — menyepakati arti kata dengan tepat. <em>“Bilangan genap adalah bilangan bulat yang habis dibagi dua.”</em></p></li>
+<li><p><strong>Aksioma</strong> — pernyataan awal yang disepakati benar tanpa dibuktikan, sebagai titik berangkat. <em>“Melalui dua titik berbeda dapat ditarik tepat satu garis lurus.”</em></p></li>
+<li><p><strong>Teorema</strong> — pernyataan baru yang <strong>dibuktikan</strong> benar berdasarkan definisi, aksioma, dan teorema sebelumnya.</p></li>
+<li><p><strong>Bukti</strong> — rangkaian langkah logis yang memaksa siapa pun yang menerima titik berangkatnya untuk menerima kesimpulannya.</p></li>
+</ol>
+<p>Inilah sebabnya teorema Pythagoras yang dibuktikan 2.300 tahun lalu masih benar hari ini, dan akan tetap benar selamanya: kebenarannya tidak bergantung pada pengamatan, melainkan pada logika.</p>
+</section>
+<section id="mencicipi-sebuah-bukti">
+<h3>Mencicipi sebuah bukti<a class="headerlink" href="#mencicipi-sebuah-bukti" title="Link to this heading">#</a></h3>
+<p>Supaya tidak abstrak, mari buktikan satu pernyataan kecil.</p>
+<div class="note admonition">
+<p class="admonition-title">Klaim: jumlah dua bilangan ganjil selalu genap</p>
+<p><strong>Bukti.</strong> Bilangan ganjil adalah bilangan yang bersisa 1 jika dibagi 2, sehingga setiap bilangan ganjil dapat ditulis sebagai <span class="math notranslate nohighlight">\(2m + 1\)</span> untuk suatu bilangan bulat <span class="math notranslate nohighlight">\(m\)</span>. Ambil dua bilangan ganjil sembarang, <span class="math notranslate nohighlight">\(2m+1\)</span> dan <span class="math notranslate nohighlight">\(2n+1\)</span>. Jumlahnya:</p>
+<div class="math notranslate nohighlight">
+\[(2m+1) + (2n+1) = 2m + 2n + 2 = 2(m+n+1).\]</div>
+<p>Hasilnya dua kali sebuah bilangan bulat — artinya genap. Karena <span class="math notranslate nohighlight">\(m\)</span> dan <span class="math notranslate nohighlight">\(n\)</span> bebas dipilih, ini berlaku untuk <em>semua</em> pasangan bilangan ganjil, bukan hanya contoh yang kita coba. ∎</p>
+</div>
+<p>Perhatikan yang baru saja terjadi: dengan beberapa baris, kita memastikan kebenaran untuk <strong>tak terhingga banyaknya kasus</strong> — sesuatu yang mustahil dicapai dengan mencoba satu per satu. Itulah kekuatan bukti.</p>
+</section>
+<section id="mengapa-matematika-begitu-ampuh">
+<h3>Mengapa matematika begitu ampuh?<a class="headerlink" href="#mengapa-matematika-begitu-ampuh" title="Link to this heading">#</a></h3>
+<p>Rahasianya adalah <strong>abstraksi</strong>. Ketika kita menulis “5”, kita menangkap apa yang sama dari lima ekor ayam, lima hari, dan lima gagasan — lalu membuang sisanya. Hasilnya, satu teorema tentang “5” langsung berlaku untuk semua hal yang berjumlah lima. Fisikawan Eugene Wigner menyebut fenomena ini <em>“keampuhan matematika yang tak masuk akal”</em> (the unreasonable effectiveness of mathematics): persamaan yang lahir dari corat-coret abstrak ternyata mendeskripsikan alam semesta dengan ketepatan menakjubkan — dari orbit planet sampai perilaku partikel subatomik.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cabang-cabang-ilmu-matematika-dan-sejarahnya">
+<h2>2. Cabang-Cabang Ilmu Matematika dan Sejarahnya<a class="headerlink" href="#cabang-cabang-ilmu-matematika-dan-sejarahnya" title="Link to this heading">#</a></h2>
+<section id="peta-besar-cabang-matematika">
+<h3>Peta besar cabang matematika<a class="headerlink" href="#peta-besar-cabang-matematika" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Cabang</p></th>
+<th class="head"><p>Objek kajian</p></th>
+<th class="head"><p>Pertanyaan khasnya</p></th>
+<th class="head"><p>Tokoh ikonik</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Aritmetika &amp; Teori Bilangan</strong></p></td>
+<td><p>Bilangan dan sifat-sifatnya</p></td>
+<td><p>Bagaimana pola sebaran bilangan prima?</p></td>
+<td><p>Euclid, Fermat, Gauss</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Geometri</strong></p></td>
+<td><p>Bentuk, ukuran, dan ruang</p></td>
+<td><p>Apa yang terjadi jika ruangnya melengkung?</p></td>
+<td><p>Euclid, Riemann</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Aljabar</strong></p></td>
+<td><p>Struktur, simbol, dan persamaan</p></td>
+<td><p>Persamaan mana yang bisa diselesaikan, dan bagaimana?</p></td>
+<td><p>al-Khwarizmi, Galois</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Trigonometri</strong></p></td>
+<td><p>Hubungan sudut dan sisi</p></td>
+<td><p>Bagaimana mengukur yang tak terjangkau (bintang, gunung)?</p></td>
+<td><p>Hipparchus, Aryabhata</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Kalkulus &amp; Analisis</strong></p></td>
+<td><p>Perubahan, limit, dan kekontinuan</p></td>
+<td><p>Seberapa cepat berubah? Berapa total akumulasinya?</p></td>
+<td><p>Newton, Leibniz, Cauchy</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Probabilitas &amp; Statistika</strong></p></td>
+<td><p>Ketidakpastian dan data</p></td>
+<td><p>Seberapa mungkin? Apa yang bisa disimpulkan dari data?</p></td>
+<td><p>Pascal, Kolmogorov, Fisher</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Matematika Diskrit</strong></p></td>
+<td><p>Objek terhitung: graf, jaringan, kombinasi</p></td>
+<td><p>Berapa banyak cara? Adakah rute yang efisien?</p></td>
+<td><p>Euler, Erdős</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Logika &amp; Fondasi</strong></p></td>
+<td><p>Penalaran itu sendiri</p></td>
+<td><p>Apa saja yang <em>bisa</em> dan <em>tidak bisa</em> dibuktikan?</p></td>
+<td><p>Boole, Gödel, Turing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Cabang-cabang ini tidak berdiri sendiri-sendiri; justru penemuan terbesar sering lahir di persilangannya. Geometri analitik menikahkan aljabar dengan geometri; teori probabilitas modern dibangun di atas analisis; ilmu komputer lahir dari logika.</p>
+</section>
+<section id="lini-masa-perjalanan-panjang-matematika">
+<h3>Lini masa: perjalanan panjang matematika<a class="headerlink" href="#lini-masa-perjalanan-panjang-matematika" title="Link to this heading">#</a></h3>
+<section id="mesopotamia-dan-mesir-3000500-sm-matematika-para-juru-ukur">
+<h4>Mesopotamia dan Mesir (± 3000–500 SM): matematika para juru ukur<a class="headerlink" href="#mesopotamia-dan-mesir-3000500-sm-matematika-para-juru-ukur" title="Link to this heading">#</a></h4>
+<p>Matematika tertua lahir dari kebutuhan praktis: mencatat panen, membagi warisan tanah, memungut pajak, dan menyusun kalender. Orang Babilonia menulis dengan sistem <strong>basis 60</strong> — warisannya masih kita pakai setiap hari: 60 detik, 60 menit, 360 derajat. Lempeng tanah liat <em>Plimpton 322</em> (± 1800 SM) menunjukkan mereka sudah mengenal tripel Pythagoras lebih dari seribu tahun sebelum Pythagoras lahir. Orang Mesir memakai geometri praktis untuk menata ulang batas sawah setelah banjir Sungai Nil — kata <em>geometri</em> sendiri berarti “pengukuran bumi”.</p>
+</section>
+<section id="yunani-kuno-600-sm-300-m-lahirnya-bukti">
+<h4>Yunani Kuno (± 600 SM – 300 M): lahirnya bukti<a class="headerlink" href="#yunani-kuno-600-sm-300-m-lahirnya-bukti" title="Link to this heading">#</a></h4>
+<p>Sumbangan terbesar Yunani bukan rumus, melainkan sebuah <strong>gagasan</strong>: kebenaran matematika harus <em>dibuktikan</em>, bukan sekadar dicontohkan. Thales dan Pythagoras merintisnya; puncaknya adalah <strong>Euclid</strong>, yang dalam buku <em>Elements</em> (± 300 SM) menyusun seluruh geometri dari lima aksioma — buku teks paling berpengaruh sepanjang sejarah, dipakai lebih dari dua ribu tahun. <strong>Archimedes</strong> menghitung luas dan volume bentuk lengkung dengan metode yang nyaris mendahului kalkulus, delapan belas abad sebelum zamannya.</p>
+</section>
+<section id="india-5001200-m-nol-dan-sistem-bilangan-modern">
+<h4>India (± 500–1200 M): nol dan sistem bilangan modern<a class="headerlink" href="#india-5001200-m-nol-dan-sistem-bilangan-modern" title="Link to this heading">#</a></h4>
+<p>Dari India datang salah satu penemuan terpenting umat manusia: <strong>angka nol sebagai bilangan</strong> dan sistem <strong>nilai tempat desimal</strong> — sepuluh lambang yang bisa menuliskan bilangan sebesar apa pun. Brahmagupta (abad ke-7) merumuskan aturan berhitung dengan nol dan bilangan negatif; Aryabhata menghitung π dengan ketelitian tinggi dan mengembangkan trigonometri. Tanpa sistem ini, aritmetika modern (dan komputer) tak terbayangkan.</p>
+</section>
+<section id="dunia-islam-8001400-m-aljabar-dan-algoritma">
+<h4>Dunia Islam (± 800–1400 M): aljabar dan algoritma<a class="headerlink" href="#dunia-islam-8001400-m-aljabar-dan-algoritma" title="Link to this heading">#</a></h4>
+<p>Di Baitul Hikmah, Baghdad, para sarjana menerjemahkan, menyatukan, lalu mengembangkan warisan Yunani dan India. <strong>Muhammad ibn Musa al-Khwarizmi</strong> menulis kitab <em>al-Jabr</em> tentang cara sistematis menyelesaikan persamaan — dari judulnya lahir kata <strong>aljabar</strong>, dan dari namanya lahir kata <strong>algoritma</strong>. Omar Khayyam menyelesaikan persamaan kubik secara geometris; para astronom Islam mengasah trigonometri menjadi disiplin mandiri. Lewat jalur inilah angka Hindu-Arab akhirnya sampai ke Eropa.</p>
+</section>
+<section id="tiongkok-tradisi-yang-berjalan-sendiri">
+<h4>Tiongkok: tradisi yang berjalan sendiri<a class="headerlink" href="#tiongkok-tradisi-yang-berjalan-sendiri" title="Link to this heading">#</a></h4>
+<p>Secara paralel, Tiongkok mengembangkan tradisi matematikanya sendiri. Kitab <em>Sembilan Bab tentang Seni Matematika</em> (± abad ke-1) memuat sistem persamaan linear yang diselesaikan dengan cara yang serupa dengan eliminasi Gauss modern. “Teorema sisa Tiongkok” tentang sistem kongruensi masih dipakai dalam kriptografi hari ini.</p>
+</section>
+<section id="eropa-dari-kebangkitan-hingga-kalkulus-12001700">
+<h4>Eropa: dari kebangkitan hingga kalkulus (± 1200–1700)<a class="headerlink" href="#eropa-dari-kebangkitan-hingga-kalkulus-12001700" title="Link to this heading">#</a></h4>
+<p><strong>Fibonacci</strong> memperkenalkan angka Hindu-Arab ke Eropa lewat <em>Liber Abaci</em> (1202) — pedagang segera menyadari betapa lebih mudahnya berhitung dibanding memakai angka Romawi. <strong>Descartes</strong> (1637) menikahkan aljabar dan geometri: setiap titik menjadi pasangan koordinat <span class="math notranslate nohighlight">\((x, y)\)</span>, setiap kurva menjadi persamaan. Lalu datanglah revolusi besar: <strong>Newton</strong> dan <strong>Leibniz</strong>, secara terpisah, menemukan <strong>kalkulus</strong> — matematika tentang perubahan — yang membuat gerak planet, benda jatuh, dan aliran fluida bisa dihitung. Fisika modern lahir bersamanya.</p>
+</section>
+<section id="abad-ke-18-dan-ke-19-perluasan-dan-pengetatan">
+<h4>Abad ke-18 dan ke-19: perluasan dan pengetatan<a class="headerlink" href="#abad-ke-18-dan-ke-19-perluasan-dan-pengetatan" title="Link to this heading">#</a></h4>
+<p><strong>Euler</strong>, matematikawan paling produktif sepanjang masa, menjelajah ke segala arah dan mewariskan banyak notasi yang kita pakai sekarang (<span class="math notranslate nohighlight">\(e\)</span>, <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(f(x)\)</span>, <span class="math notranslate nohighlight">\(\Sigma\)</span>). <strong>Gauss</strong> merajai teori bilangan dan statistika. Abad ke-19 kemudian menjadi abad <em>pengetatan</em>: Cauchy dan Weierstrass memberi kalkulus fondasi yang benar-benar kokoh lewat konsep <strong>limit</strong>; Lobachevsky, Bolyai, dan Riemann menunjukkan ada <strong>geometri non-Euclid</strong> yang konsisten — ruang bisa melengkung (kelak menjadi bahasa teori relativitas Einstein); dan <strong>Cantor</strong> membuktikan hal yang mengguncang: ketakhinggaan itu <strong>bertingkat-tingkat</strong> — ada tak hingga yang lebih besar dari tak hingga lainnya.</p>
+</section>
+<section id="abad-ke-20-hingga-kini-batas-batas-dan-komputasi">
+<h4>Abad ke-20 hingga kini: batas-batas dan komputasi<a class="headerlink" href="#abad-ke-20-hingga-kini-batas-batas-dan-komputasi" title="Link to this heading">#</a></h4>
+<p>Hilbert menantang para matematikawan membangun fondasi yang lengkap dan bebas kontradiksi. <strong>Gödel</strong> (1931) menjawab dengan teorema ketaklengkapan: dalam sistem matematika yang cukup kaya, <em>selalu ada</em> pernyataan benar yang tak bisa dibuktikan dari dalam sistem itu — batas prinsipiil bagi matematika itu sendiri. <strong>Turing</strong> merumuskan secara tepat apa artinya “menghitung”, dan dari gagasan itu lahirlah komputer. Paruh kedua abad ke-20 sampai sekarang ditandai bukti-bukti raksasa (Teorema Terakhir Fermat akhirnya dibuktikan Andrew Wiles, 1995, setelah 358 tahun), bukti berbantuan komputer (teorema empat warna), dan meledaknya matematika terapan: statistika, optimisasi, dan pembelajaran mesin.</p>
+<div class="tip admonition">
+<p class="admonition-title">Benang merah sejarahnya</p>
+<p>Polanya berulang: matematika lahir dari kebutuhan praktis → diabstraksikan menjadi teori “murni” → berabad kemudian teori itu menemukan terapan yang tak terduga. Geometri irisan kerucut Yunani (± 200 SM) baru terpakai 1.800 tahun kemudian ketika Kepler menyadari orbit planet berbentuk elips.</p>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="notasi-matematika">
+<h2>3. Notasi Matematika<a class="headerlink" href="#notasi-matematika" title="Link to this heading">#</a></h2>
+<section id="dari-kalimat-panjang-menuju-simbol">
+<h3>Dari kalimat panjang menuju simbol<a class="headerlink" href="#dari-kalimat-panjang-menuju-simbol" title="Link to this heading">#</a></h3>
+<p>Hal yang mengejutkan banyak orang: selama ribuan tahun, matematika ditulis <strong>tanpa simbol</strong> — semuanya kalimat biasa. Persamaan yang kini kita tulis <span class="math notranslate nohighlight">\(x^2 + 10x = 39\)</span> dulu ditulis kira-kira: <em>“sebuah harta ditambah sepuluh akarnya sama dengan tiga puluh sembilan dirham.”</em> Bayangkan mengerjakan aljabar berhalaman-halaman dengan gaya begitu.</p>
+<p>Sejarah notasi bergerak dalam tiga tahap: <strong>retoris</strong> (semua kata), <strong>sinkopasi</strong> (kata-kata disingkat), lalu <strong>simbolik</strong> (lambang murni). Beberapa tonggaknya:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tahun</p></th>
+<th class="head"><p>Simbol</p></th>
+<th class="head"><p>Pencetus</p></th>
+<th class="head"><p>Catatan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1489</p></td>
+<td><p><span class="math notranslate nohighlight">\(+\)</span> dan <span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td><p>Johannes Widmann</p></td>
+<td><p>Awalnya penanda kelebihan/kekurangan muatan peti dagang</p></td>
+</tr>
+<tr class="row-odd"><td><p>1557</p></td>
+<td><p><span class="math notranslate nohighlight">\(=\)</span></p></td>
+<td><p>Robert Recorde</p></td>
+<td><p>Dipilihnya dua garis sejajar karena “tak ada dua hal yang lebih setara”</p></td>
+</tr>
+<tr class="row-even"><td><p>1637</p></td>
+<td><p><span class="math notranslate nohighlight">\(x, y, z\)</span> dan pangkat <span class="math notranslate nohighlight">\(x^2\)</span></p></td>
+<td><p>René Descartes</p></td>
+<td><p>Huruf akhir alfabet untuk yang tak diketahui</p></td>
+</tr>
+<tr class="row-odd"><td><p>1675</p></td>
+<td><p><span class="math notranslate nohighlight">\(\int\)</span> dan <span class="math notranslate nohighlight">\(\dfrac{dy}{dx}\)</span></p></td>
+<td><p>Gottfried Leibniz</p></td>
+<td><p><span class="math notranslate nohighlight">\(\int\)</span> adalah huruf S memanjang, dari <em>summa</em> (jumlah)</p></td>
+</tr>
+<tr class="row-even"><td><p>1706–1737</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi\)</span>, lalu <span class="math notranslate nohighlight">\(e\)</span>, <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(f(x)\)</span>, <span class="math notranslate nohighlight">\(\Sigma\)</span></p></td>
+<td><p>William Jones; Leonhard Euler</p></td>
+<td><p>Euler-lah yang membuat banyak notasi ini menjadi standar dunia</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="mengapa-notasi-begitu-penting">
+<h3>Mengapa notasi begitu penting?<a class="headerlink" href="#mengapa-notasi-begitu-penting" title="Link to this heading">#</a></h3>
+<p>Notasi yang baik bukan sekadar singkatan. Ia melakukan tiga hal sekaligus:</p>
+<ol class="arabic simple">
+<li><p><strong>Memadatkan</strong> — satu baris simbol menggantikan satu paragraf.</p></li>
+<li><p><strong>Menepatkan</strong> — tidak ada ruang untuk tafsir ganda.</p></li>
+<li><p><strong>Mengotomatiskan pikiran</strong> — begitu ide menjadi simbol, kita bisa <em>memanipulasinya secara mekanis</em> (pindah ruas, coret, substitusi) tanpa harus memikirkan ulang maknanya di setiap langkah. Notasi yang baik seakan “berpikir untuk kita”.</p></li>
+</ol>
+</section>
+<section id="kamus-simbol-dasar">
+<h3>Kamus simbol dasar<a class="headerlink" href="#kamus-simbol-dasar" title="Link to this heading">#</a></h3>
+<p>Anggap tabel-tabel ini kamus yang dibuka saat perlu — <strong>tidak untuk dihafal sekaligus</strong>.</p>
+<p><strong>Operasi dan perbandingan</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Nama</p></th>
+<th class="head"><p>Cara membaca</p></th>
+<th class="head"><p>Contoh</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(=\)</span></p></td>
+<td><p>kesamaan</p></td>
+<td><p>“sama dengan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(7 = 3 + 4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\ne\)</span></p></td>
+<td><p>ketaksamaan</p></td>
+<td><p>“tidak sama dengan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(5 \ne 2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\approx\)</span></p></td>
+<td><p>hampiran</p></td>
+<td><p>“kira-kira sama dengan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi \approx 3{,}14\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(&lt;, \le\)</span></p></td>
+<td><p>pertidaksamaan</p></td>
+<td><p>“kurang dari”, “kurang dari atau sama dengan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(3 &lt; 5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(&gt;, \ge\)</span></p></td>
+<td><p>pertidaksamaan</p></td>
+<td><p>“lebih dari”, “lebih dari atau sama dengan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(9 \ge 9\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\times\)</span> atau <span class="math notranslate nohighlight">\(\cdot\)</span></p></td>
+<td><p>perkalian</p></td>
+<td><p>“kali”</p></td>
+<td><p><span class="math notranslate nohighlight">\(4 \cdot 6 = 24\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\div\)</span> atau <span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p>pembagian</p></td>
+<td><p>“dibagi”</p></td>
+<td><p><span class="math notranslate nohighlight">\(12/3 = 4\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pm\)</span></p></td>
+<td><p>plus-minus</p></td>
+<td><p>“plus atau minus”</p></td>
+<td><p><span class="math notranslate nohighlight">\(x = 2 \pm 1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sqrt{\;}\)</span></p></td>
+<td><p>akar kuadrat</p></td>
+<td><p>“akar dari”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{49} = 7\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x^n\)</span></p></td>
+<td><p>pangkat</p></td>
+<td><p>“<span class="math notranslate nohighlight">\(x\)</span> pangkat <span class="math notranslate nohighlight">\(n\)</span>”</p></td>
+<td><p><span class="math notranslate nohighlight">\(2^5 = 32\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lvert x \rvert\)</span></p></td>
+<td><p>nilai mutlak</p></td>
+<td><p>“nilai mutlak <span class="math notranslate nohighlight">\(x\)</span>”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lvert -3 \rvert = 3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n!\)</span></p></td>
+<td><p>faktorial</p></td>
+<td><p>“<span class="math notranslate nohighlight">\(n\)</span> faktorial”</p></td>
+<td><p><span class="math notranslate nohighlight">\(4! = 4\cdot3\cdot2\cdot1 = 24\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Himpunan dan jenis-jenis bilangan</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Cara membaca</p></th>
+<th class="head"><p>Artinya</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span></p></td>
+<td><p>“himpunan bilangan asli”</p></td>
+<td><p><span class="math notranslate nohighlight">\(1, 2, 3, \dots\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></p></td>
+<td><p>“himpunan bilangan bulat”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\dots, -2, -1, 0, 1, 2, \dots\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></p></td>
+<td><p>“himpunan bilangan rasional”</p></td>
+<td><p>semua pecahan <span class="math notranslate nohighlight">\(p/q\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
+<td><p>“himpunan bilangan riil”</p></td>
+<td><p>seluruh garis bilangan, termasuk <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> dan <span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathbb{C}\)</span></p></td>
+<td><p>“himpunan bilangan kompleks”</p></td>
+<td><p>bilangan berbentuk <span class="math notranslate nohighlight">\(a + bi\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\in\)</span></p></td>
+<td><p>“anggota dari”</p></td>
+<td><p><span class="math notranslate nohighlight">\(3 \in \mathbb{N}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\subset\)</span></p></td>
+<td><p>“himpunan bagian dari”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbb{N} \subset \mathbb{Z}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cup\)</span>, <span class="math notranslate nohighlight">\(\cap\)</span></p></td>
+<td><p>“gabungan”, “irisan”</p></td>
+<td><p><span class="math notranslate nohighlight">\(A \cup B\)</span>, <span class="math notranslate nohighlight">\(A \cap B\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\emptyset\)</span></p></td>
+<td><p>“himpunan kosong”</p></td>
+<td><p>himpunan tanpa anggota</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Logika dan simbol lanjutan</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Cara membaca</p></th>
+<th class="head"><p>Contoh penggunaan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\forall\)</span></p></td>
+<td><p>“untuk setiap”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\forall x \in \mathbb{R}: x^2 \ge 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\exists\)</span></p></td>
+<td><p>“ada / terdapat”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\exists n: n^2 = 25\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Rightarrow\)</span></p></td>
+<td><p>“mengakibatkan / maka”</p></td>
+<td><p>hujan <span class="math notranslate nohighlight">\(\Rightarrow\)</span> jalan basah</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Leftrightarrow\)</span></p></td>
+<td><p>“jika dan hanya jika”</p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span> genap <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> <span class="math notranslate nohighlight">\(x\)</span> habis dibagi 2</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Sigma\)</span></p></td>
+<td><p>“jumlah dari” (sigma)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_{i=1}^{n} i\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\int\)</span></p></td>
+<td><p>“integral dari”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\int_0^1 x^2\, dx\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lim\)</span></p></td>
+<td><p>“limit”</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\to\)</span></p></td>
+<td><p>“menuju / dipetakan ke”</p></td>
+<td><p><span class="math notranslate nohighlight">\(x \to \infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>“tak hingga”</p></td>
+<td><p>bukan bilangan, melainkan konsep “tanpa batas”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="latihan-membaca-sebuah-rumus">
+<h3>Latihan membaca sebuah rumus<a class="headerlink" href="#latihan-membaca-sebuah-rumus" title="Link to this heading">#</a></h3>
+<p>Rumus terkenal ini terlihat menakutkan bagi pemula:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\]</div>
+<p>Mari kita baca pelan-pelan, dari kiri ke kanan:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\sum\)</span> — “jumlahkan…”</p></li>
+<li><p><span class="math notranslate nohighlight">\(i=1\)</span> di bawah dan <span class="math notranslate nohighlight">\(n\)</span> di atas — “…dengan <span class="math notranslate nohighlight">\(i\)</span> berjalan mulai dari 1 sampai <span class="math notranslate nohighlight">\(n\)</span>…”</p></li>
+<li><p><span class="math notranslate nohighlight">\(i\)</span> di sebelah kanan sigma — “…dan yang dijumlahkan adalah <span class="math notranslate nohighlight">\(i\)</span> itu sendiri.”</p></li>
+<li><p>Ruas kanan — “hasilnya sama dengan <span class="math notranslate nohighlight">\(n(n+1)\)</span> dibagi 2.”</p></li>
+</ol>
+<p>Jadi rumus itu hanyalah kalimat: <em>“1 + 2 + 3 + … + n sama dengan n(n+1)/2.”</em> Cek cepat untuk <span class="math notranslate nohighlight">\(n = 5\)</span>: ruas kiri <span class="math notranslate nohighlight">\(1+2+3+4+5 = 15\)</span>; ruas kanan <span class="math notranslate nohighlight">\(\frac{5 \cdot 6}{2} = 15\)</span>. Cocok. ✓</p>
+<div class="tip admonition">
+<p class="admonition-title">Tips membaca matematika</p>
+<p>Rumus dibaca seperti puisi, bukan seperti koran: <strong>pelan, berulang, sambil dicek dengan contoh angka kecil</strong>. Kalau macet, terjemahkan setiap simbol kembali menjadi kata — semua rumus pada dasarnya adalah kalimat yang dipadatkan.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ilmu-matematika-dan-terapannya">
+<h2>4. Ilmu Matematika dan Terapannya<a class="headerlink" href="#ilmu-matematika-dan-terapannya" title="Link to this heading">#</a></h2>
+<p>Kalau matematika adalah bahasa pola, maka setiap bidang yang memiliki pola akan berbicara dengannya. Berikut peta singkatnya.</p>
+<section id="fisika-dan-rekayasa">
+<h3>Fisika dan rekayasa<a class="headerlink" href="#fisika-dan-rekayasa" title="Link to this heading">#</a></h3>
+<p>Kalkulus lahir <em>bersama</em> fisika: hukum gerak Newton adalah persamaan diferensial, dan sejak itu bahasa alam adalah matematika. Jembatan dan gedung pencakar langit berdiri karena analisis strukturnya dihitung; sinyal radio, Wi-Fi, dan musik digital mengalir berkat <strong>analisis Fourier</strong>, yang memecah gelombang serumit apa pun menjadi jumlahan gelombang-gelombang sederhana.</p>
+</section>
+<section id="komputasi-dan-kriptografi">
+<h3>Komputasi dan kriptografi<a class="headerlink" href="#komputasi-dan-kriptografi" title="Link to this heading">#</a></h3>
+<p>Komputer adalah matematika yang menjadi mesin: rangkaian logikanya adalah <strong>aljabar Boole</strong> (benar/salah, 1/0), dan setiap program adalah <strong>algoritma</strong> — kata yang, seperti kita lihat, berasal dari nama al-Khwarizmi. Yang lebih mengejutkan: keamanan internet bersandar pada <strong>teori bilangan</strong>. Sistem kriptografi seperti RSA memanfaatkan fakta bahwa mengalikan dua bilangan prima raksasa itu mudah, tetapi menguraikan hasilnya kembali menjadi faktor-faktornya luar biasa sulit. Setiap kali Anda melihat gembok 🔒 di peramban, teori bilangan sedang bekerja. Kode koreksi galat (matematika juga) membuat kode QR tetap terbaca meski tergores.</p>
+</section>
+<section id="ekonomi-dan-keuangan">
+<h3>Ekonomi dan keuangan<a class="headerlink" href="#ekonomi-dan-keuangan" title="Link to this heading">#</a></h3>
+<p>Ekonomi modern berbahasa matematika di hampir semua lini. Perilaku konsumen dan produsen dimodelkan sebagai <strong>optimisasi berkendala</strong> — memaksimalkan kepuasan atau laba dengan anggaran terbatas. Bunga majemuk memunculkan salah satu bilangan terpenting matematika, <span class="math notranslate nohighlight">\(e \approx 2{,}718\)</span>: tabungan yang bunganya digulung terus-menerus tumbuh mengikuti</p>
+<div class="math notranslate nohighlight">
+\[A = P e^{rt},\]</div>
+<p>dengan <span class="math notranslate nohighlight">\(P\)</span> pokok, <span class="math notranslate nohighlight">\(r\)</span> tingkat bunga, dan <span class="math notranslate nohighlight">\(t\)</span> waktu. <strong>Ekonometrika</strong> memakai statistika untuk menguji teori ekonomi dengan data dunia nyata — misalnya menaksir hubungan <span class="math notranslate nohighlight">\(y = \beta_0 + \beta_1 x + \varepsilon\)</span> antara pendidikan dan pendapatan. <strong>Teori permainan</strong> menganalisis interaksi strategis, dari lelang frekuensi telekomunikasi hingga negosiasi dagang antarnegara.</p>
+</section>
+<section id="statistika-dan-sains-data">
+<h3>Statistika dan sains data<a class="headerlink" href="#statistika-dan-sains-data" title="Link to this heading">#</a></h3>
+<p>Bagaimana survei terhadap dua ribu orang bisa memotret opini dua ratus juta penduduk? Itulah keajaiban <strong>teori sampling</strong> dan probabilitas. Uji klinis obat, kontrol mutu pabrik, hingga prakiraan cuaca semuanya berdiri di atas statistika. <strong>Kecerdasan buatan</strong> modern pun, di balik semua kehebohannya, adalah ramuan dari aljabar linear (data sebagai matriks), kalkulus (belajar = menuruni lereng fungsi kesalahan), dan probabilitas (menimbang ketidakpastian).</p>
+</section>
+<section id="biologi-dan-kedokteran">
+<h3>Biologi dan kedokteran<a class="headerlink" href="#biologi-dan-kedokteran" title="Link to this heading">#</a></h3>
+<p>Penyebaran wabah dimodelkan dengan persamaan diferensial (model SIR yang populer selama pandemi — angka reproduksi <span class="math notranslate nohighlight">\(R_0\)</span> berasal dari sini). CT scan merekonstruksi citra tiga dimensi tubuh dari ratusan foto sinar-X menggunakan <strong>transformasi Radon</strong>, matematika murni dari tahun 1917 yang menunggu enam puluh tahun sebelum menyelamatkan nyawa.</p>
+</section>
+<section id="kehidupan-sehari-hari">
+<h3>Kehidupan sehari-hari<a class="headerlink" href="#kehidupan-sehari-hari" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>GPS</strong> menentukan posisi lewat geometri (trilaterasi) — dan harus mengoreksi efek relativitas Einstein; tanpanya, posisi Anda melenceng beberapa kilometer setiap hari.</p></li>
+<li><p><strong>Aplikasi peta</strong> mencari rute tercepat dengan teori graf (algoritme rute terpendek).</p></li>
+<li><p><strong>Foto dan musik digital</strong> muat di ponsel karena algoritma kompresi berbasis Fourier dan aljabar linear.</p></li>
+<li><p><strong>Prakiraan cuaca</strong> adalah penyelesaian numerik persamaan atmosfer oleh superkomputer, berkali-kali sehari.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Murni hari ini, terapan esok hari</p>
+<p>G. H. Hardy, ahli teori bilangan, pernah bangga bahwa bidangnya “tidak akan pernah punya kegunaan praktis”. Ia keliru total: satu abad kemudian teori bilangan menjadi jantung keamanan seluruh internet. Dalam matematika, batas antara “murni” dan “terapan” hanyalah soal waktu.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="penutup-cara-terbaik-melanjutkan">
+<h2>Penutup: cara terbaik melanjutkan<a class="headerlink" href="#penutup-cara-terbaik-melanjutkan" title="Link to this heading">#</a></h2>
+<p>Matematika dipelajari dengan <strong>mengerjakan</strong>, bukan sekadar membaca — seperti berenang, ia tidak bisa dikuasai dari tepi kolam. Mulailah dari mana pun yang membuat penasaran, kerjakan contoh dengan tangan, dan biarkan setiap “kok bisa?” menjadi pintu berikutnya.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Beberapa titik awal yang ramah pemula:</p>
+<ul class="simple">
+<li><p><strong>Buku</strong>: <em>What Is Mathematics?</em> (Courant &amp; Robbins) — klasik abadi; <em>The Joy of x</em> (Steven Strogatz) — tur santai dari bilangan sampai kalkulus.</p></li>
+<li><p><strong>Video</strong>: kanal <em>3Blue1Brown</em> — visualisasi matematika terbaik di internet; <em>Khan Academy</em> — latihan terstruktur gratis dari nol.</p></li>
+<li><p><strong>Di situs ini</strong>: coba juga tab <strong>🎯 Belajar GMAT</strong> untuk mengasah penalaran kuantitatif dengan cara yang interaktif.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="about.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">About</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="econ-growth/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">📈 Belajar Economic Growth</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduksi-ilmu-matematika">1. Introduksi Ilmu Matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-matematika">Apa itu matematika?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-matematika-dibangun-definisi-aksioma-teorema-bukti">Bagaimana matematika dibangun: definisi, aksioma, teorema, bukti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencicipi-sebuah-bukti">Mencicipi sebuah bukti</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-matematika-begitu-ampuh">Mengapa matematika begitu ampuh?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cabang-cabang-ilmu-matematika-dan-sejarahnya">2. Cabang-Cabang Ilmu Matematika dan Sejarahnya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peta-besar-cabang-matematika">Peta besar cabang matematika</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lini-masa-perjalanan-panjang-matematika">Lini masa: perjalanan panjang matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesopotamia-dan-mesir-3000500-sm-matematika-para-juru-ukur">Mesopotamia dan Mesir (± 3000–500 SM): matematika para juru ukur</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#yunani-kuno-600-sm-300-m-lahirnya-bukti">Yunani Kuno (± 600 SM – 300 M): lahirnya bukti</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#india-5001200-m-nol-dan-sistem-bilangan-modern">India (± 500–1200 M): nol dan sistem bilangan modern</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dunia-islam-8001400-m-aljabar-dan-algoritma">Dunia Islam (± 800–1400 M): aljabar dan algoritma</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tiongkok-tradisi-yang-berjalan-sendiri">Tiongkok: tradisi yang berjalan sendiri</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eropa-dari-kebangkitan-hingga-kalkulus-12001700">Eropa: dari kebangkitan hingga kalkulus (± 1200–1700)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#abad-ke-18-dan-ke-19-perluasan-dan-pengetatan">Abad ke-18 dan ke-19: perluasan dan pengetatan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#abad-ke-20-hingga-kini-batas-batas-dan-komputasi">Abad ke-20 hingga kini: batas-batas dan komputasi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notasi-matematika">3. Notasi Matematika</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dari-kalimat-panjang-menuju-simbol">Dari kalimat panjang menuju simbol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-notasi-begitu-penting">Mengapa notasi begitu penting?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kamus-simbol-dasar">Kamus simbol dasar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-membaca-sebuah-rumus">Latihan membaca sebuah rumus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ilmu-matematika-dan-terapannya">4. Ilmu Matematika dan Terapannya</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fisika-dan-rekayasa">Fisika dan rekayasa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komputasi-dan-kriptografi">Komputasi dan kriptografi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekonomi-dan-keuangan">Ekonomi dan keuangan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistika-dan-sains-data">Statistika dan sains data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biologi-dan-kedokteran">Biologi dan kedokteran</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kehidupan-sehari-hari">Kehidupan sehari-hari</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penutup-cara-terbaik-melanjutkan">Penutup: cara terbaik melanjutkan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

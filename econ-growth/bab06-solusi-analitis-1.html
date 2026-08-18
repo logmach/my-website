@@ -1,0 +1,882 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 6 — Solusi Analitis I &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab06-solusi-analitis-1';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 7 — Solusi Analitis II" href="bab07-solusi-analitis-2.html" />
+    <link rel="prev" title="Bab 5 — Steady-State Equilibria" href="bab05-steady-state.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab06-solusi-analitis-1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab06-solusi-analitis-1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 6 — Solusi Analitis I</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-6-1-1-integrating-factor-untuk-ode-konstan">Konsep 1 — 6.1.1 — Integrating Factor untuk ODE Konstan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-struktur-solusi-anchor-movement">Konsep 2 — Struktur Solusi: Anchor + Movement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-6-1-2-homogeneous-case">Konsep 3 — 6.1.2 — Homogeneous Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-6-1-3-time-varying-parameters">Konsep 4 — 6.1.3 — Time-Varying Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-6-2-multiple-variable-case">Konsep 5 — 6.2 — Multiple-Variable Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-theorem-6-1-superposition-reloaded">Konsep 6 — Theorem 6.1 — Superposition Reloaded</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-latihan-bab-ini">Latihan-Latihan Bab Ini</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-tambahan">Latihan tambahan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-6">Checklist Pemahaman Bab 6</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-6-solusi-analitis-i">
+<h1>Bab 6 — Solusi Analitis I<a class="headerlink" href="#bab-6-solusi-analitis-i" title="Link to this heading">#</a></h1>
+<p>Bab ini membahas dua teknik inti untuk menyelesaikan ODE linear secara eksplisit: <em>integrating factor</em> dan <em>principle of superposition</em>. Tema praktisnya: kebiasaan sanity check — bab inilah tempat jebakan <em>sign-flip</em> paling sering muncul, dan tempat kebiasaan “verify sebelum percaya” dibangun.</p>
+<section id="konsep-1-6-1-1-integrating-factor-untuk-ode-konstan">
+<h2>Konsep 1 — 6.1.1 — Integrating Factor untuk ODE Konstan<a class="headerlink" href="#konsep-1-6-1-1-integrating-factor-untuk-ode-konstan" title="Link to this heading">#</a></h2>
+<p><em>Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.</em></p>
+<p><strong>ODE asli</strong> — <span class="math notranslate nohighlight">\(\dot{x}+ax = b(Equation 6.1, a, b konstan)\)</span></p>
+<p><strong>Trik integrating factor</strong> — Kalikan kedua sisi dengan <span class="math notranslate nohighlight">\(e^{at}\)</span> — disebut integrating factor:</p>
+<p><span class="math notranslate nohighlight">\([+\dot{x}ax]e^{at}=be^{at}(Equation 6.2)\)</span></p>
+<p>Mengapa <span class="math notranslate nohighlight">\(e^{at}\)</span>? Karena sisi kiri sekarang adalah turunan dari <span class="math notranslate nohighlight">\(xe^{at}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ d(xe)dt^{at}=\dot{x}e^{at}+x \cdot ae^{at}=e[+^{at}\dot{x}ax]✓ \]</div>
+<p>Persamaan 6.2 jadi:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d\left(x e^{at}\right)}{dt}=b\,e^{at}
+\]</div>
+<p>Integrasi kedua sisi:</p>
+<div class="math notranslate nohighlight">
+\[ xeat=beat+C \]</div>
+<p><span class="math notranslate nohighlight">\(a\)</span></p>
+<p>Bagi dengan <span class="math notranslate nohighlight">\(e^{at}\)</span> — general solution (Equation 6.5):</p>
+<div class="math notranslate nohighlight">
+\[ x(t) =*b + Ce-at \]</div>
+<p><span class="math notranslate nohighlight">\(a\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Titik yang sering membingungkan pada Equation 6.3:</p>
+<div class="math notranslate nohighlight">
+\[ d(xe)^{at}bd(e)^{at} \]</div>
+<p><span class="math notranslate nohighlight">\(=\)</span></p>
+<div class="math notranslate nohighlight">
+\[ dtadt \]</div>
+<p>Sekilas RHS terlihat berbeda dari <span class="math notranslate nohighlight">\(be^{at}\)</span>, padahal sama (karena <span class="math notranslate nohighlight">\(\frac{d(e^{at})}{dt}=ae^{at}\)</span>, jadi <span class="math notranslate nohighlight">\(\frac{b}{a} \cdot ae^{at}=be^{at}\)</span>).</p>
+<p>Mengapa ditulis seperti itu? Strategi penulisan: agar</p>
+</div>
+<p><strong>Pertanyaan tajam: “Mengapa eksponensial?”</strong> — Catatan kuliah menyatakan: kalau “instantaneous rate of change locally constant”, maka anti-derivative-nya eksponensial. Mari bedah pelan-pelan.</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Inti penjelasan: Setelah geser variabel <span class="math notranslate nohighlight">\(y= x -b/a\)</span>, ODE asli berubah jadi <span class="math notranslate nohighlight">\(\dot{y} =-ay\)</span> . Inilah “proporsionalitas murni” — turunan proporsional dengan fungsi itu sendiri.</em></p>
+<p><strong>Properti unik fungsi eksponensial</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d\,e^{at}}{dt}=a\cdot e^{at}
+\]</div>
+<p><em>Yaitu, turunan eksponensial proporsional dengan fungsi itu sendiri. Hanya fungsi eksponensial yang punya properti ini. Maka solusi <span class="math notranslate nohighlight">\(\dot{y} =-ay\)</span> harus dalam bentuk eksponensial.</em></p>
+<p><strong>Penurunan eksplisit: dari <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span> ke <span class="math notranslate nohighlight">\(\dot{y} =-ay\)</span></strong></p>
+<p>Langkah demi langkah, tanpa lompatan:</p>
+<p><strong>Step 1</strong> Definisikan <span class="math notranslate nohighlight">\(y:= x -b/a\)</span>.</p>
+<p>Geser variabel — adalah “ relatif terhadap steady state”. <span class="math notranslate nohighlight">\(yx\)</span></p>
+</div>
+<p><strong>Step 2</strong> Hitung. <span class="math notranslate nohighlight">\(\dot{y}\)</span></p>
+<p>Karena <span class="math notranslate nohighlight">\(b/a\)</span> konstan: <span class="math notranslate nohighlight">\(\dot{y} =\dot{x}-0 = \dot{x}\)</span>.</p>
+<p><strong>Step 3</strong> Substitusi <span class="math notranslate nohighlight">\(\dot{x}=b -ax\)</span> dari ODE asli.</p>
+<p><span class="math notranslate nohighlight">\(\dot{y} =b -ax\)</span>.</p>
+<p><strong>Step 4</strong> Ganti <span class="math notranslate nohighlight">\(x = y + b/a\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \dot{y} =b -a(y + b/a) = b -ay -b = -ay \]</div>
+<p><strong>Step 5</strong> Hasil: <span class="math notranslate nohighlight">\(\dot{y} =-ay\)</span>. ODE “bersih” — proporsionalitas murni. Solusinya <span class="math notranslate nohighlight">\(y(t) = Ce^{-at}\)</span>. Kembalikan: <span class="math notranslate nohighlight">\(x(t) = Ce^{-at}+\)</span> <span class="math notranslate nohighlight">\(b/a\)</span>.</p>
+<p>“Locally constant” = rasio <span class="math notranslate nohighlight">\(\dot{y}/y\)</span> konstan (sama dengan <span class="math notranslate nohighlight">\(-a\)</span>), bukan sendiri konstan. <span class="math notranslate nohighlight">\(\dot{y}\)</span></p>
+</section>
+<section id="konsep-2-struktur-solusi-anchor-movement">
+<h2>Konsep 2 — Struktur Solusi: Anchor + Movement<a class="headerlink" href="#konsep-2-struktur-solusi-anchor-movement" title="Link to this heading">#</a></h2>
+<p><em>Insight kunci yang dipakai berulang di seluruh materi.</em></p>
+<p>General solution <span class="math notranslate nohighlight">\(x(t) = b/a + Ce^{-at}\)</span> punya struktur dua bagian:</p>
+<p><strong><span class="math notranslate nohighlight">\(b/a\)</span> — anchor</strong> — Steady state: “tempat akhir” sistem (kalau stable). Ini particular solution dari ODE non-homogen.</p>
+<p><strong><span class="math notranslate nohighlight">\(Ce^{-at}\)</span> — movement</strong> — Transient: “bagaimana sistem sampai ke anchor”. Ini general solution dari ODE homogen.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Parafrase yang tepat (saat membahas Corollary 6.1):</p>
+<p>“Pergerakannya ditentukan dari solusi general homogen, solusi particular non-homogen hanya menentukan solusi punya posisi yang benar. Solusi particular non-homogen ini memberikan suatu guidance untuk mengarahkan state di posisi steady state yang benar tetapi kecepatan pergerakannya ditentukan oleh solusi general homogen yang varies dengan waktu.”</p>
+<p>Rumusan ini akan dipakai di Bab 9</p>
+</div>
+<p><strong>Stabilitas dari struktur</strong> — Saat <span class="math notranslate nohighlight">\(t\to \infty\)</span>:</p>
+<p>Kalau <span class="math notranslate nohighlight">\(a&gt; 0\)</span>: <span class="math notranslate nohighlight">\(e^{-at}\to 0\)</span> → movement menghilang → <span class="math notranslate nohighlight">\(x \to \bar{x}=b/a\)</span> (stable) Kalau <span class="math notranslate nohighlight">\(a&lt; 0\)</span>: <span class="math notranslate nohighlight">\(e^{-at}\to \infty\)</span> → movement meledak → unstable</p>
+<p>Inilah hasil Exercise 6.1 — koneksi langsung ke Teorema 5.1 dari Bab 5.</p>
+</section>
+<section id="konsep-3-6-1-2-homogeneous-case">
+<h2>Konsep 3 — 6.1.2 — Homogeneous Case<a class="headerlink" href="#konsep-3-6-1-2-homogeneous-case" title="Link to this heading">#</a></h2>
+<p><em>Kasus khusus ketika <span class="math notranslate nohighlight">\(b = 0\)</span>. Lebih sederhana, tapi punya satu aplikasi penting.</em></p>
+<p>ODE: <span class="math notranslate nohighlight">\(\dot{x}+ax = 0\)</span> (Equation 6.7)</p>
+<p>Solusi langsung: <span class="math notranslate nohighlight">\(b/a= 0\)</span>, jadi anchor hilang. Tersisa movement saja:</p>
+<div class="math notranslate nohighlight">
+\[ x(t) =^{*}Ce^{-at} \]</div>
+<p><strong>Aplikasi: pertumbuhan/decay murni</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p><strong>Persis bentuk yang muncul di growth theory</strong></p>
+<p><em>Population: <span class="math notranslate nohighlight">\(\dot{L}=nL\)</span> → <span class="math notranslate nohighlight">\(L(t)= L_{0}^{nt}e\)</span> Technology: <span class="math notranslate nohighlight">\(\dot{A}=gA\)</span> → <span class="math notranslate nohighlight">\(A(t)= A_{0}^{gt}e\)</span></em></p>
+<p><em>Bentuk eksponensial untuk <span class="math notranslate nohighlight">\(L(t)\)</span> dan <span class="math notranslate nohighlight">\(A(t)\)</span> bukan asumsi sembarangan — sekarang jelas mengapa</em></p>
+</div>
+<p><strong>Trik: <span class="math notranslate nohighlight">\(I(t) \cdot x(t) = C\)</span></strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Observasi tajam saat mengerjakan latihan: untuk ODE homogen, setelah multiply dengan integrating factor:</p>
+<p><span class="math notranslate nohighlight">\(d\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}\left[x(t)I(t)\right]=0 \;\Longrightarrow\; x(t)\,I(t)=C
+\]</div>
+<p>Maka langsung <span class="math notranslate nohighlight">\(x(t) = C/I(t)\)</span> — tidak perlu separation of variables, tidak ada risiko sign error.</p>
+<p>Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-varying).</p>
+</div>
+</section>
+<section id="konsep-4-6-1-3-time-varying-parameters">
+<h2>Konsep 4 — 6.1.3 — Time-Varying Parameters<a class="headerlink" href="#konsep-4-6-1-3-time-varying-parameters" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. <span class="math notranslate nohighlight">\(ab\)</span>.</em></p>
+<p><strong>ODE bentuk umum</strong> — <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)(Equation 6.8)\)</span></p>
+<p><strong>Integrating factor (Exercise 6.3)</strong></p>
+<div class="math notranslate nohighlight">
+\[ I(t) = e^{\inta(t)dt} \]</div>
+<p>Verifikasi: multiply ODE</p>
+<p><strong>General solution (Exercise 6.4)</strong> — <span class="math notranslate nohighlight">\(x(t) =*\int I(t)b(t) dt +C(Equation 6.9)\)</span></p>
+<div class="math notranslate nohighlight">
+\[ I(t)I(t) \]</div>
+<p>Derivasinya:</p>
+<p><strong>Step 1</strong> Multiply ODE dengan <span class="math notranslate nohighlight">\(I(t)\)</span>.</p>
+<p>Sisi kiri jadi <span class="math notranslate nohighlight">\(\frac{d}{dt}[x \cdot I]\)</span>. Sisi kanan: <span class="math notranslate nohighlight">\(b(t)I(t)\)</span>.</p>
+<p><strong>Step 2</strong> Integrasi kedua sisi.</p>
+<div class="math notranslate nohighlight">
+\[ x \cdot I=\int b(t)I(t)\, dt +C \]</div>
+<p><strong>Step 3</strong> Bagi dengan <span class="math notranslate nohighlight">\(I(t)\)</span>.</p>
+<p>Hasil: Equation 6.9.</p>
+<p><strong>6.1.1 sebagai kasus khusus</strong> — Kalau <span class="math notranslate nohighlight">\(a(t) = a\)</span> (konstan), maka <span class="math notranslate nohighlight">\(\int a dt=at\)</span> dan <span class="math notranslate nohighlight">\(I(t) = e^{at}\)</span> — sama dengan 6.1.1. Yaitu, 6.1.3 menggeneralisasi 6.1.1.</p>
+</section>
+<section id="konsep-5-6-2-multiple-variable-case">
+<h2>Konsep 5 — 6.2 — Multiple-Variable Case<a class="headerlink" href="#konsep-5-6-2-multiple-variable-case" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi ke sistem (multi-variabel). Konsep struktur “anchor + movement” tetap berlaku.</em></p>
+<p><strong>Setup</strong></p>
+<p>Untuk sistem -dimensi: <span class="math notranslate nohighlight">\(k\)</span></p>
+<p>Equation 6.10: <span class="math notranslate nohighlight">\(\dot{x}=Ax + b\)</span> (non-homogen, autonomous) Equation 6.11: <span class="math notranslate nohighlight">\(\dot{x}=Ax\)</span> (homogen, autonomous) Equation 6.12: <span class="math notranslate nohighlight">\(\dot{x}=A(t)x + b(t)\)</span> (non-homogen, non-autonomous) Equation 6.13: <span class="math notranslate nohighlight">\(\dot{x}=A(t)x\)</span> (homogen, non-autonomous)</p>
+<p><strong>Proposition 6.1 — Principle of Superposition</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Jika <span class="math notranslate nohighlight">\(x^{*}_{1}(t)\)</span> dan <span class="math notranslate nohighlight">\(x^{*}_{2}(t)\)</span> keduanya solusi 6.11, maka <span class="math notranslate nohighlight">\(c_{1}x^{*}_{1} +c_{2}x^{*}_{2}\)</span> juga solusi 6.11, untuk</p>
+<p><em>sembarang <span class="math notranslate nohighlight">\(c_{1}, c_{2} \in R\)</span>.</em></p>
+<p>Bukti (Exercise 6.5):</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{dt}\bigl[c_{1}x^{*}_{1}+c_{2}x^{*}_{2}\bigr] = c_{1}\dot{x}^{*}_{1}+c_{2}\dot{x}^{*}_{2} = c_{1}Ax^{*}_{1}+c_{2}Ax^{*}_{2} = A\bigl(c_{1}x^{*}_{1}+c_{2}x^{*}_{2}\bigr)\;\checkmark \]</div>
+</div>
+<p><strong>Corollary 6.1 — Kunci strategi solving</strong> — Jika <span class="math notranslate nohighlight">\(x^{*}_{1}(t)\)</span> solusi 6.10 (non-homog) dan <span class="math notranslate nohighlight">\(x^{*}_{2}(t)\)</span> solusi 6.11 (homog), maka <span class="math notranslate nohighlight">\(x^{*}_{1} +x^{*}_{2}\)</span> juga solusi 6.10.</p>
+<p>Konsekuensi praktis: kita fokus solve sistem homogen saja, lalu “tambah kembali” particular solution.</p>
+<p><strong>Exercise 6.6 — Mengapa “general homog + particular = general non- homog”</strong></p>
+<p>Pertanyaan: kalau <span class="math notranslate nohighlight">\(x^{*}(t)\)</span> general solution dari 6.11 dan <span class="math notranslate nohighlight">\(\bar{x}\)</span> particular solution dari 6.10, mengapa <span class="math notranslate nohighlight">\(x^{*}(t)+\bar{x}\)</span> adalah general solution dari 6.10? Bukti intuitif: substitusi ke 6.10:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}\left[x^{*}+\bar{x}\right]=\dot{x}^{*} \qquad A(x^{*}+\bar{x})+b=Ax^{*}+\underbrace{A\bar{x}+b}_{=0}=Ax^{*}
+\]</div>
+<p>Cocok. Plus, free constants di <span class="math notranslate nohighlight">\(x^{*}\)</span> (k buah untuk sistem k-dim) memberikan derajat kebebasan untuk match sembarang kondisi awal.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Parafrase yang menangkap inti algebra: “ menyerap konstanta. Sisanya bisa diserahkan ke homogen.” <span class="math notranslate nohighlight">\(\bar{x}b\)</span></p>
+<p>Pembagian kerja yang elegan: particular handle forcing term <span class="math notranslate nohighlight">\(b\)</span>; homogen handle perpindahan dari kondisi awal.</p>
+</div>
+</section>
+<section id="konsep-6-theorem-6-1-superposition-reloaded">
+<h2>Konsep 6 — Theorem 6.1 — Superposition Reloaded<a class="headerlink" href="#konsep-6-theorem-6-1-superposition-reloaded" title="Link to this heading">#</a></h2>
+<p><em>Versi paling kuat untuk kasus non-autonomous. Tiga poin yang harus dipahami.</em></p>
+<p>Untuk sistem non-autonomous (6.12 dan 6.13), Theorem 6.1 menyatakan tiga hal:</p>
+<p><strong>Point 1</strong> — Kalau <span class="math notranslate nohighlight">\(x^{*}_{1},x^{*}_{2}\)</span> keduanya solusi 6.13 (homog), maka <span class="math notranslate nohighlight">\(c_{1}x^{*}_{1} +c_{2}x^{*}_{2}\)</span> juga solusi 6.13. Superposition standar.</p>
+<p><strong>Point 3</strong> — Setiap solusi 6.12 bisa dikonstruksi sebagai: satu particular solusi 6.12 + solusi homogen 6.13. Inilah strategi standar solving.</p>
+<p><strong>Point 2 — arah logika yang sering terbalik</strong> — Pertanyaan yang wajar: jika <span class="math notranslate nohighlight">\(x_{1}\)</span> menyelesaikan 6.11 dan <span class="math notranslate nohighlight">\(x_{2}\)</span> menyelesaikan 6.10, bagaimana?</p>
+<p>Perhatikan baik-baik: Theorem 6.1 Point 2 justru mengatakan arah sebaliknya:</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Kalau keduanya solusi 6.10 (non-homog), maka SELISIH mereka solusi 6.11 (homog).</em></p>
+<p>Bukti cepat: ambil <span class="math notranslate nohighlight">\(x_{1}, x_{2}\)</span> keduanya solusi 6.10:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\dot{x}_{1} &amp;=Ax_{1} +b \\
+\dot{x}_{2} &amp;=Ax_{2} +b
+\end{aligned}
+\end{split}\]</div>
+<p>Kurangkan:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{x}_{1}-\dot{x}_{2}=A(x_{1}-x_{2})+\underbrace{b-b}_{=0}=A(x_{1}-x_{2})
+\]</div>
+</div>
+<p>Yaitu <span class="math notranslate nohighlight">\(x_{1} -x_{2}\)</span> memenuhi 6.11 (homog). ✓</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Implikasi struktural: set solusi 6.10 adalah affine space (translasi dari subspace).</p>
+<p>Set solusi 6.11 (homog) = subspace vektor dimensi <span class="math notranslate nohighlight">\(k\)</span></p>
+<p>Set solusi 6.10 (non-homog) = subspace + 1 titik anchor = affine space</p>
+<p>Selisih dua titik di affine space = vektor di subspace. Itulah Point 2.</p>
+<p><strong>Pelajaran Penting</strong></p>
+</div>
+<p><strong>Sign-Flip — Jebakan Berulang</strong></p>
+<p><em>Jebakan yang paling sering terjadi. Diagnosis dan solusi.</em></p>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Tiga contoh klasik sign-flip error:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\dot{x}=3x\)</span> — tergoda menulis <span class="math notranslate nohighlight">\(Ce^{-3t}\)</span>, padahal seharusnya <span class="math notranslate nohighlight">\(Ce^{+3t}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{x}=0.05x\)</span> — tergoda menulis <span class="math notranslate nohighlight">\(100e^{-0.05t}\)</span>, padahal seharusnya <span class="math notranslate nohighlight">\(100e^{+0.05t}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{x}+x/t=0\)</span> — tergoda menulis <span class="math notranslate nohighlight">\(x=5t\)</span>, padahal seharusnya <span class="math notranslate nohighlight">\(x=5/t\)</span>.</p></li>
+</ol>
+<p>Polanya: auto-apply formula <span class="math notranslate nohighlight">\(Ce^{-at}\)</span> tanpa memeriksa tanda ketika ODE tidak dalam bentuk standar.</p>
+</div>
+<p><strong>Diagnosis</strong> — Formula <span class="math notranslate nohighlight">\(Ce^{-at}\)</span> berlaku untuk ODE bentuk <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span>. Tapi kalau ODE-nya <span class="math notranslate nohighlight">\(\dot{x}=kx\)</span> (yaitu <span class="math notranslate nohighlight">\(\dot{x}-kx = 0\)</span>), maka <span class="math notranslate nohighlight">\(a= -k\)</span>, dan solusi <span class="math notranslate nohighlight">\(Ce^{-(-k)t}=Ce^{+kt}\)</span>.</p>
+<p>Trap: melihat angka di ODE dan langsung menempatkannya</p>
+<p><strong>Aturan praktis baru — lebih mudah</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=kx\)</span> (bentuk yang langsung): solusinya <span class="math notranslate nohighlight">\(x(t)= Ce^{kt}\)</span> — eksponen punya tanda yang sama dengan koefisien di ODE.</em></p>
+<p><em><span class="math notranslate nohighlight">\(\dot{x}=+3x\)</span> → <span class="math notranslate nohighlight">\(x(t)= Ce^{+3t}\)</span> (growth, unstable) <span class="math notranslate nohighlight">\(\dot{x}=-3x\)</span> → <span class="math notranslate nohighlight">\(x(t)= Ce^{-3t}\)</span> (decay, stable) <span class="math notranslate nohighlight">\(\dot{x}=+0.05x\)</span> → <span class="math notranslate nohighlight">\(x(t)= Ce^{+0.05t}\)</span> (growth)</em></p>
+</div>
+<p><strong>Toolkit Sanity Check</strong></p>
+<p><strong>Sanity Check Toolkit</strong> — Metode utama — substitusi ke ODE asli:</p>
+<p>Setelah dapat solusi <span class="math notranslate nohighlight">\(x(t)\)</span>, substitusi ke kedua sisi ODE. Kalau cocok, konsisten. Kalau tidak, salah.</p>
+<p>Untuk <span class="math notranslate nohighlight">\(\dot{x}=0.05x\)</span> dengan solusi salah <span class="math notranslate nohighlight">\(x(t) = 100e^{-0.05t}\)</span>:</p>
+<p>LHS: <span class="math notranslate nohighlight">\(\dot{x}=-5e^{-0.05t}\)</span> RHS: <span class="math notranslate nohighlight">\(0.05 \cdot 100e^{-0.05t}=5e^{-0.05t}\)</span></p>
+<p>LHS ≠ RHS → salah ✗</p>
+<p>Untuk solusi benar <span class="math notranslate nohighlight">\(x(t) = 100e^{+0.05t}\)</span>:</p>
+<p>LHS: <span class="math notranslate nohighlight">\(\dot{x}=5e^{+0.05t}\)</span> RHS: <span class="math notranslate nohighlight">\(0.05 \cdot 100e^{+0.05t}=5e^{+0.05t}\)</span> LHS = RHS → benar ✓</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Prinsip sanity check: konfirmasi bahwa solusi yang dihasilkan benar-benar memenuhi persamaan aslinya ketika disubstitusikan kembali.</p>
+<p>Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek validitas kandidat solusi, sekarang untuk menangkap kesalahan tanda.</p>
+</div>
+<p><strong>Metakognitif insight</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Pelajaran pentingnya: biasakan sanity check — tertukar tanda adalah bahaya yang nyata.</em></p>
+<p><em>Sign-flip adalah kesalahan paling umum di matematika ekonomi — dari S1 sampai PhD. Yang membedakan adalah kebiasaan menangkapnya</em></p>
+<p><em>Sepuluh detik sanity check per soal adalah investasi kecil yang menyelamatkan banyak kesalahan.</em></p>
+<p><strong>Latihan</strong></p>
+</div>
+</section>
+<section id="latihan-latihan-bab-ini">
+<h2>Latihan-Latihan Bab Ini<a class="headerlink" href="#latihan-latihan-bab-ini" title="Link to this heading">#</a></h2>
+<p><em>Daftar latihan inti Bab 6.</em></p>
+<p><strong>Exercise 6.1</strong> — Steady state &amp; stability untuk <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span>. Tidak dikerjakan formal, tapi konsepnya sudah masuk lewat Bab 5.</p>
+<p><strong>Exercise 6.2</strong> — Verify general solution homog. Konsep “kelipatan solusi juga solusi” sudah dibahas.</p>
+<p><strong>Exercise 6.3</strong> — Show integrating factor <span class="math notranslate nohighlight">\(I(t) = e^{\inta(t)dt}\)</span>. ✓ Dikerjakan dengan verify-based approach.</p>
+<p><strong>Exercise 6.4</strong> — Derive general solution (6.9). ✓ Dikerjakan dengan multiply <span class="math notranslate nohighlight">\(I(t)\)</span>, integrasi, bagi.</p>
+<p><strong>Exercise 6.5</strong> — Prove Proposition 6.1. ✓ Dibahas konseptual lewat linearitas turunan dan multiplikasi matriks.</p>
+<p><strong>Exercise 6.6</strong> — General homog + particular = general non-homog. ✓ Dibahas dengan parafrase intuitif.</p>
+<p><strong>Exercise 6.7</strong> — Prove Theorem 6.1. Dibahas konseptual, bukti Point 2 didemonstrasikan.</p>
+</section>
+<section id="latihan-tambahan">
+<h2>Latihan tambahan<a class="headerlink" href="#latihan-tambahan" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\dot{x}=3x\)</span> — solusi <span class="math notranslate nohighlight">\(Ce^{3t}\)</span> (unstable) <span class="math notranslate nohighlight">\(\dot{x}=-5x\)</span> — solusi <span class="math notranslate nohighlight">\(Ce^{-5t}\)</span> (stable) <span class="math notranslate nohighlight">\(\dot{x}=0.05x\)</span>, <span class="math notranslate nohighlight">\(x_{0} =100\)</span> — solusi <span class="math notranslate nohighlight">\(100e^{0.05t}x(10) \approx 164.9\)</span>, <span class="math notranslate nohighlight">\(\dot{N}=nN\)</span> — population growth (eksponensial) <span class="math notranslate nohighlight">\(\dot{x}=-2x + 6\)</span>, <span class="math notranslate nohighlight">\(x_{0} =5\)</span> — solusi <span class="math notranslate nohighlight">\(3 + 2e^{-2t}\)</span>, konvergen ke <span class="math notranslate nohighlight">\(\bar{x}=3\)</span> <span class="math notranslate nohighlight">\(\dot{x}+(1/t)x = 0x(1) = 5\)</span>, — solusi <span class="math notranslate nohighlight">\(5/t\)</span> <span class="math notranslate nohighlight">\(\dot{x}=-5x + 10\)</span>, <span class="math notranslate nohighlight">\(x_{0} =3\)</span> — solusi <span class="math notranslate nohighlight">\(e^{-5t}+2\)</span> ✓ (kerja mandiri)</p>
+</section>
+<section id="checklist-pemahaman-bab-6">
+<h2>Checklist Pemahaman Bab 6<a class="headerlink" href="#checklist-pemahaman-bab-6" title="Link to this heading">#</a></h2>
+<p><em>Siap untuk Bab 7 jika bisa menjawab.</em></p>
+<p><strong>Mekanik solving</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa menyelesaikan <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span> dengan integrating factor</p></li>
+<li><p>☐ Bisa menyelesaikan <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)\)</span> dengan <span class="math notranslate nohighlight">\(I(t) = e^{\inta(t)dt}\)</span></p></li>
+<li><p>☐ Bisa mengaplikasikan kondisi awal untuk dapat <span class="math notranslate nohighlight">\(C\)</span></p></li>
+<li><p>☐ Bisa identifikasi steady state <span class="math notranslate nohighlight">\(\bar{x}=b/a\)</span> dari ODE konstan</p></li>
+<li><p>☐ Bisa pakai trik <span class="math notranslate nohighlight">\(I(t)x(t) = C\)</span> untuk ODE homogen (jalur cepat)</p></li>
+</ul>
+<p><strong>Konseptual</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa menjelaskan mengapa solusi <span class="math notranslate nohighlight">\(\dot{x}=kx\)</span> adalah eksponensial</p></li>
+<li><p>☐ Bisa menjelaskan arti “anchor + movement” dalam solusi</p></li>
+<li><p>☐ Bisa membedakan general homog, particular non-homog, dan general non-homog</p></li>
+<li><p>☐ Bisa menyatakan Principle of Superposition (Proposition 6.1)</p></li>
+<li><p>☐ Bisa menjelaskan kenapa Theorem 6.1 Point 2 (selisih) memberi solusi homogen</p></li>
+</ul>
+<p><strong>Habit metakognitif</strong></p>
+<ul class="simple">
+<li><p>☐ Selalu sanity check tanda eksponen sebelum submit</p></li>
+<li><p>☐ Pakai aturan “tanda eksponen = tanda koefisien” untuk <span class="math notranslate nohighlight">\(\dot{x}=kx\)</span></p></li>
+<li><p>☐ Verify solusi dengan substitusi ke ODE asli</p></li>
+<li><p>☐ Hati-hati saat geser variabel — pastikan turunan benar</p></li>
+</ul>
+<p>✦✦✦</p>
+<div class="important admonition">
+<p class="admonition-title">Penutup</p>
+<p><strong>Apa yang Menanti</strong></p>
+<p>Kebiasaan sanity check yang dibangun di sini akan dipakai di seluruh sisa materi.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Bab 7 — Analytical Solutions II: aplikasi Principle of Superposition untuk sistem 2D dan beyond. Eigenvalue analysis akan jadi alat utama.</em></p>
+<p><em>Inilah jembatan antara Bab 6 (mekanik skalar) dan Bab 5 (eigenvalue stability) — di Bab 7, eigenvalue muncul kembali sebagai cara untuk solve sistem.</em></p>
+</div>
+<p><strong>Tools yang akan dipakai di Bab 7</strong> — Eigenvalue dan eigenvektor (dari aljabar linear)</p>
+<p>Principle of Superposition (Bab 6)</p>
+<p>Klasifikasi stabilitas dari Bab 5</p>
+<p>Semua tools sudah di tangan. Bab 7 hanya menggabungkannya.</p>
+<p><strong>Yang harus diingat sebelum Bab 7</strong></p>
+<ol class="arabic simple">
+<li><p>Solusi <span class="math notranslate nohighlight">\(\dot{x}=kx\)</span> adalah <span class="math notranslate nohighlight">\(Ce^{kt}\)</span> (bukan <span class="math notranslate nohighlight">\(Ce^{-kt}\)</span>)</p></li>
+</ol>
+<p><em>2. General non-homog = general homog + particular.</em></p>
+<ol class="arabic simple" start="3">
+<li><p>Sanity check selalu: substitusi solusi ke ODE asli</p></li>
+<li><p>Strategy solving: focus on homog, add particular at end</p></li>
+</ol>
+<p>Selamat — bab paling teknis di Tools I sudah terlewati.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab05-steady-state.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 5 — Steady-State Equilibria</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab07-solusi-analitis-2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 7 — Solusi Analitis II</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-6-1-1-integrating-factor-untuk-ode-konstan">Konsep 1 — 6.1.1 — Integrating Factor untuk ODE Konstan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-struktur-solusi-anchor-movement">Konsep 2 — Struktur Solusi: Anchor + Movement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-6-1-2-homogeneous-case">Konsep 3 — 6.1.2 — Homogeneous Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-6-1-3-time-varying-parameters">Konsep 4 — 6.1.3 — Time-Varying Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-6-2-multiple-variable-case">Konsep 5 — 6.2 — Multiple-Variable Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-theorem-6-1-superposition-reloaded">Konsep 6 — Theorem 6.1 — Superposition Reloaded</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-latihan-bab-ini">Latihan-Latihan Bab Ini</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-tambahan">Latihan tambahan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-6">Checklist Pemahaman Bab 6</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

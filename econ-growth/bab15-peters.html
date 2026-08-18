@@ -1,0 +1,1493 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 15 — R&amp;D II (Peters) &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab15-peters';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Bab 14 — R&amp;D I (Romer)" href="bab14-romer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab15-peters.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab15-peters.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 15 — R&D II (Peters)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kamus-notasi-lengkap">Kamus Notasi Lengkap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang-misteri-tfp">15.1 · Latar Belakang: Misteri TFP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-household">15.3.1 · Preferences (Household)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production">15.3.2 · Production</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bertrand-pricing-equilibrium">15.3.3.1 · Bertrand Pricing Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-1-bertrand-pricing-equilibrium">Proposition 15.1 — Bertrand Pricing Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-5-sales-employment-profit">Exercise 15.5 — Sales, Employment, Profit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-level-allocations">15.3.3.2 · Firm -level Allocations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-6-total-employment-firm">Exercise 15.6 — Total employment firm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-7-variety-markups-firm-size">Exercise 15.7 — Variety, markups, firm size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-allocations-misallocation">15.3.3.3 · Aggregate Allocations &amp; Misallocation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-8-equilibrium-wage-15-10">Exercise 15.8 — Equilibrium wage (15.10)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-9-mengapa">Exercise 15.9 — Mengapa</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-parts-pengantar">15.3.4 · Dynamic Parts: Pengantar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-hjb-equation">15.3.4.1 · Firm HJB Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-10-markup-agregat">Exercise 15.10 — Markup agregat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-11-mengapa-tanpa-indeks">Exercise 15.11 — Mengapa tanpa indeks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-12-payoff-relevant-states">Exercise 15.12 — Payoff-relevant states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-13-cost-units">Exercise 15.13 — Cost units</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-entry">15.3.4.2 · Free Entry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-14-labor-market-clearing">Exercise 15.14 — Labor market clearing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balanced-growth-equilibrium">15.3.5 · Balanced-Growth Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-2-unique-stationary-equilibrium">Proposition 15.2 — Unique Stationary Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-16-interpretasi-dan">Exercise 15.16 — Interpretasi dan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-15-derive-value-function-guess-and-verify">Exercise 15.15 — Derive value function (guess-and- verify)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-17-interpretasi-i-dan-x">Exercise 15.17 — Interpretasi <span class="math notranslate nohighlight">\(I^{*}\)</span> dan <span class="math notranslate nohighlight">\(x^{*}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-18-flow-accounting">Exercise 15.18 — Flow accounting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-3">Proposition 15.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-19-comparative-statics">Exercise 15.19 — Comparative statics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-20-langkah-derivasi-flow-distribution">Exercise 15.20 — Langkah derivasi (flow → distribution)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-15">Self-Assessment Bab 15</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-15-r-d-ii-peters">
+<h1>Bab 15 — R&amp;D II (Peters)<a class="headerlink" href="#bab-15-r-d-ii-peters" title="Link to this heading">#</a></h1>
+<p>Bab terkompleks secara konseptual: model Schumpeterian Peters (2020, <em>Econometrica</em>) yang menyatukan endogenous growth vertikal, misallocation akibat markup heterogen, dan growth accounting generasi baru. Catatan ini ditulis untuk pembaca yang baru pertama bertemu materinya: setiap konsep mendapat penjelasan formal (definisi presisi dan derivasi penuh) sekaligus penjelasan intuitif (analogi dan “mengapa masuk akal”), dan setiap notasi dijelaskan sebelum dipakai.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berkas sumber tidak menyimpan lapisan teks untuk formula-formulanya. Persamaan kunci telah dipulihkan; beberapa detail turunan disajikan secara naratif.</p>
+</div>
+<section id="kamus-notasi-lengkap">
+<h2>Kamus Notasi Lengkap<a class="headerlink" href="#kamus-notasi-lengkap" title="Link to this heading">#</a></h2>
+<p><em>Setiap simbol yang dipakai di bab ini, dengan maknanya. Rujuk kembali ke sini kapan pun bingung.</em></p>
+<p><strong>Indeks &amp; himpunan</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Arti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(j \in [0,1]\)</span></p></td>
+<td><p>Indeks produk/market (varietas), continuum</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(f\)</span></p></td>
+<td><p>Indeks firm</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>Waktu</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathcal{F}_{j}\)</span></p></td>
+<td><p>Himpunan firm yang berkompetisi di market <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathcal{J}_{f}\)</span></p></td>
+<td><p>Himpunan produk yang firm <span class="math notranslate nohighlight">\(f\)</span> produksi</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n_{f}\)</span></p></td>
+<td><p>Jumlah produk firm <span class="math notranslate nohighlight">\(f\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Kuantitas &amp; harga</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Arti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Y\)</span></p></td>
+<td><p>Output final good agregat (numeraire)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(C\)</span></p></td>
+<td><p>Konsumsi composite good</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y_{j}\)</span></p></td>
+<td><p>Kuantitas produk <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_{fj}\)</span></p></td>
+<td><p>Produktivitas/kualitas firm <span class="math notranslate nohighlight">\(f\)</span> untuk produk <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(q_{j}\)</span></p></td>
+<td><p>Kualitas firm paling efisien (pemenang) di market <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_{j}^{F}\)</span></p></td>
+<td><p>Kualitas follower (terbaik kedua)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_{j}\)</span></p></td>
+<td><p>Harga produk <span class="math notranslate nohighlight">\(j\)</span> (limit pricing: <span class="math notranslate nohighlight">\(p_{j}=w/q_{j}^{F}\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(w\)</span></p></td>
+<td><p>Upah</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(l_{j}\)</span></p></td>
+<td><p>Labor produksi di market <span class="math notranslate nohighlight">\(j\)</span>; <span class="math notranslate nohighlight">\(L_{P}=\int_{0}^{1} l_{j}\,dj\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\pi_{j}\)</span></p></td>
+<td><p>Profit di market <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Agregat &amp; distribusi</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Arti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta_{j}\)</span></p></td>
+<td><p>Quality gap pemenang vs follower (jumlah anak tangga)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lambda &gt; 1\)</span></p></td>
+<td><p>Ukuran satu anak tangga kualitas</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu_{j} = \lambda^{\Delta_{j}}\)</span></p></td>
+<td><p>Markup di market <span class="math notranslate nohighlight">\(j\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(m(\Delta)\)</span></p></td>
+<td><p>Measure produk dengan gap <span class="math notranslate nohighlight">\(\Delta\)</span> (distribusinya Pareto)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td><p>Indeks kualitas/produktivitas agregat</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathcal{M}\)</span></p></td>
+<td><p>Efisiensi alokasi dari distribusi markup; TFP <span class="math notranslate nohighlight">\(= Q\times\mathcal{M}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Dinamis (pilihan &amp; rate)</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Arti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p>Intensitas own-innovation (memperlebar gap sendiri)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p>Intensitas expansion (merebut produk firm lain)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p>Rate entry (firm baru)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tau\)</span></p></td>
+<td><p>Rate creative destruction total yang dihadapi tiap produk</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>Nilai firm (present value profit)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>Discount rate pasar</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Parameter</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Simbol</p></th>
+<th class="head"><p>Arti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>Discount rate household</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sigma = 1\)</span></p></td>
+<td><p>Log utility (menjamin BGP)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\bar{L}\)</span></p></td>
+<td><p>Total tenaga kerja</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\chi_{I}, \chi_{x}\)</span></p></td>
+<td><p>Cost shifter own-innovation / expansion</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\chi_{z}\)</span></p></td>
+<td><p>Produktivitas teknologi entry</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\psi &gt; 1\)</span></p></td>
+<td><p>Eksponen cost convex — biaya naik tajam dengan intensitas inovasi</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="latar-belakang-misteri-tfp">
+<h2>15.1 · Latar Belakang: Misteri TFP<a class="headerlink" href="#latar-belakang-misteri-tfp" title="Link to this heading">#</a></h2>
+<p>Mengapa standar hidup antar negara berbeda jauh? Hsieh-Klenow punya jawaban mengejutkan.</p>
+<p><strong>Pertanyaan lama dari Solow</strong> — Ingat dari growth accounting Solow (Bab 10): sebagian besar ketimpangan standar hidup antar negara dijelaskan oleh perbedaan TFP (Total Factor Productivity), bukan modal atau labor.</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>TFP itu seperti “resep” — seberapa banyak output yang bisa dihasilkan dari input yang sama. Negara kaya seolah punya resep lebih baik. Tapi mengapa resepnya berbeda? Itu pertanyaan yang lama tak terjawab.</p>
+</div>
+<p><strong>Jawaban tradisional vs Hsieh-Klenow</strong></p>
+<p><strong>Tradisional</strong> — TFP beda karena friksi difusi teknologi — negara miskin lambat mengadopsi teknologi baru.</p>
+<p><strong>Hsieh-Klenow (2009)</strong> — TFP beda karena misallocation — penggunaan teknologi yang tidak efisien (BUMN, market power/markup, red-tape).</p>
+<p><strong>Bagaimana mengukur misallocation: TFPR</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>TFPR = Total Factor Revenue Productivity = TFP firm × harga produknya. Di pasar kompetitif sempurna, firm yang lebih produktif menetapkan harga proporsional lebih rendah, sehingga TFPR konstan antar firm — meski TFP fisik bervariasi.</p>
+<p>Dengan distorsi (misallocation), TFPR menjadi terdispersi antar firm. Maka dispersi TFPR = ukuran misallocation.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Bayangkan dua pabrik. Pabrik A sangat produktif, pabrik B biasa saja. Di pasar sehat, A menjual murah (karena efisien) dan B menjual mahal — pendapatan per unit input (TFPR) mereka sama. Tapi kalau ada distorsi (misal B dapat subsidi, A kena pajak), TFPR mereka melenceng. Semakin lebar selisihnya, semakin “salah alokasi” sumber daya ekonomi itu.</p>
+</div>
+<p><strong>Temuan empiris</strong> — Hsieh-Klenow menunjukkan dispersi TFPR di China dan India jauh lebih besar dari US. Misallocation ini menjelaskan sekitar setengah perbedaan TFP agregat. Mereka memperlakukan wedge (distorsi) sebagai eksogen.</p>
+<div class="important admonition">
+<p class="admonition-title">Gambaran besar</p>
+<p>Pertanyaan yang ditinggalkan Hsieh-Klenow, dan yang dijawab Peters: dari mana wedge ini berasal? Apa kaitan kausal antara kompetisi industri, dinamika entry-exit firm, distribusi markup, dengan growth dan TFP? Inilah misi Bab 15.</p>
+<p><strong>15.2 &amp; 15.2.1</strong></p>
+<p><strong>Bird’s-Eye View: Dua Kekuatan</strong></p>
+<p>Survei helikopter atas logika Peters sebelum menyelam ke detail.</p>
+<p><strong>Garis keturunan model</strong></p>
+<p><strong>Aghion-Howitt (1992) / Grossman-Helpman (1991)</strong> — Creative destruction, quality ladder (inovasi vertikal stokastik).</p>
+<p><strong>Klette-Kortum (2004)</strong> — Multi-product firm: expansion + entry.</p>
+<p><strong>Peters (2020) — Bab ini</strong> — Tambah Bertrand pricing + own-innovation → markup heterogen endogen.</p>
+<p><strong>Twist baru Peters: dua kekuatan berlawanan</strong></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<ol class="arabic simple">
+<li><p>Creative destruction: entry firm baru + limit pricing berarti incumbent (awalnya) tidak bisa menetapkan markup tinggi. Firm baru berkualitas lebih tinggi menggantikan incumbent lama. Efek: mengkompres distribusi markup.</p></li>
+<li><p>Own-innovation: dengan investasi mahal menurunkan marginal cost, incumbent bisa menahan masuknya pesaing dan memperlebar gap. Efek: menebalkan ekor (tail) distribusi markup. <strong>Penjelasan Intuitif</strong></p></li>
+</ol>
+<p>Bayangkan persaingan lari maraton yang tak pernah selesai. Creative destruction = pelari baru yang lebih cepat terus bermunculan, menyalip yang di depan — menjaga agar tak ada yang terlalu jauh memimpin. Own-innovation = pelari yang di depan berlatih keras untuk memperlebar jarak. Bentuk akhir “sebaran jarak antar pelari” ditentukan oleh tarik-menarik kedua gaya ini.</p>
+</div>
+<p><em>Mengapa model ini tractable: block-recursive.</em></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Model block-recursive: bisa dipecah jadi blok yang diselesaikan berurutan.</p>
+<p>Bagian statis: diberikan jumlah firm dan distribusi produktivitas pada satu waktu, kita turunkan limit-pricing, lalu employment, markup, profit tiap produk. Diberikan distribusi marginal, kita konstruksi agregat dan identifikasi wedge.</p>
+<p>Bagian dinamis: pilihan dinamis firm (rate dan) tidak bergantung eksplisit pada distribusi agregat — hanya pada jumlah produk yang dimiliki dan daftar quality gap. HJB punya solusi closed-form. Rate creative destruction bergantung pada entry dan total expansion.</p>
+</div>
+<p><strong>Hasil utama yang akan dicapai</strong></p>
+<ul class="simple">
+<li><p>Distribusi markup Pareto unik dengan tail endogen</p></li>
+<li><p>Aggregate TFP</p></li>
+<li><p>Churning intensity: tinggi → misallocation rendah, TFP tinggi, labor share tinggi</p></li>
+<li><p>Life-cycle: markup naik dengan umur firm (own-innovation dominan)</p></li>
+<li><p>Kalibrasi Indonesia: 15% dispersi TFPR dari markup → kerugian 1% TFP agregat</p></li>
+</ul>
+</section>
+<section id="preferences-household">
+<h2>15.3.1 · Preferences (Household)<a class="headerlink" href="#preferences-household" title="Link to this heading">#</a></h2>
+<p>Konsumen homogen, log utility. Sederhana — tidak ada trade-off dinamis di sisi household.</p>
+<p><strong>Lifetime utility (15.1)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Persamaan Ini</p>
+<p>Lifetime utility household</p>
+<p>Discount rate (impatience)</p>
+<p>Konsumsi composite good pada waktu</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Log utility adalah kasus khusus CRRA dengan <span class="math notranslate nohighlight">\(\sigma=1\)</span>. Ini menjamin BGP exist (preferensi homothetic dengan elastisitas substitusi intertemporal konstan = 1).</p>
+</div>
+<p><strong>Final good demand (15.2)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Persamaan Ini</p>
+<p>Total final good (numeraire)</p>
+<p>Set firm di market</p>
+<p>Kuantitas produk dari firm</p>
+<p>Exercise 15.1 — Labor supply</p>
+<p>Soal: Berapa labor yang disupply household secara optimal?</p>
+<p>Jawab: (seluruh endowment).</p>
+<p>Household tidak menghargai leisure (tidak ada disutility labor), dan wage di equilibrium. Maka tidak ada alasan menahan labor — supply seluruh endowment = 1.</p>
+</div>
+<p>Exercise 15.2 — Substitusi dalam vs antar market</p>
+<p>Soal: Pecah (15.2) jadi dua komponen. Mengapa varietas imperfect substitutes? Mengapa firm di market sama perfect substitutes?</p>
+<p>Dekomposisi (15.2):</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Antar market (imperfect): agregasi Cobb-Douglas (lewat). Sifat Cobb-Douglas: tidak bisa (karena → utility ). Konsumen butuh konsumsi positif dari setiap market. Elastisitas substitusi = 1 (terbatas) → imperfect substitutes.</p>
+<p>Dalam market (perfect): penjumlahan linear. Output firm berbeda di market sama bersifat identik bagi konsumen. Elastisitas substitusi = → perfect substitutes.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Antar market: roti dan obat tidak bisa saling gantikan — kamu butuh keduanya. Itu sebabnya Cobb-Douglas “memaksa” kamu beli sedikit dari semua kategori.</p>
+<p>Dalam market: dua merek paku yang identik — kamu beli dari yang termurah, tak peduli mereknya. Karena itu firm berkompetisi habis-habisan pada harga (Bertrand).</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Dua sifat ini bukan kebetulan: perfect substitution dalam market → Bertrand → limit pricing (15.3.3.1). Cobb-Douglas antar market → expenditure share konstan → sales tiap market sama (Exercise 15.5).</p>
+</div>
+</section>
+<section id="production">
+<h2>15.3.2 · Production<a class="headerlink" href="#production" title="Link to this heading">#</a></h2>
+<p>Firm bisa produksi banyak varietas. Teknologi linear dalam labor.</p>
+<p><strong>Production function (15.3)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Persamaan Ini</p>
+<p>Output produk dari firm</p>
+<p>Produktivitas firm untuk produk</p>
+<p>Labor yang dipekerjakan</p>
+<p>Linear dalam labor — konstan returns to scale (CRS) di level firm.</p>
+<p>Exercise 15.3 — Demand structure</p>
+<p>Soal: Mengapa Peters asumsi demand antar firm (di market sama) perfect substitutes? Kenyamanan modelling apa yang diberikan?</p>
+<p>Jawab: Perfect substitution → konsumen beli dari termurah → firm MC terendah captures seluruh pasar → strategi harga jelas (limit pricing). Ini memberi closed-form pricing equilibrium dan memungkinkan analisis markup heterogen (markup = gap kualitas dengan pesaing terdekat). Tanpa asumsi ini, tiap firm punya market share positif dan pricing jadi rumit (tidak ada closed- form).</p>
+</div>
+<p>Exercise 15.4 — Marginal cost</p>
+<p>Soal: Jelaskan dengan kata-kata mengapa MC firm di market <span class="math notranslate nohighlight">\(j\)</span> adalah <span class="math notranslate nohighlight">\(w/q_{j}\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Untuk produksi unit, dari (15.3) butuh labor. Cost labor. Marginal cost (turunan total cost terhadap).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p><span class="math notranslate nohighlight">\(w\)</span> = harga sejam tenaga kerja; <span class="math notranslate nohighlight">\(1/q\)</span> = berapa jam kerja untuk membuat satu unit (kebalikan produktivitas). Kalikan: biaya membuat satu unit <span class="math notranslate nohighlight">\(=w/q\)</span> =. Firm yang lebih produktif (tinggi) punya biaya per unit lebih rendah — bisa “membanting harga” pesaing.</p>
+</div>
+</section>
+<section id="bertrand-pricing-equilibrium">
+<h2>15.3.3.1 · Bertrand Pricing Equilibrium<a class="headerlink" href="#bertrand-pricing-equilibrium" title="Link to this heading">#</a></h2>
+<p>Twist baru Peters. Limit pricing menghasilkan markup = gap kualitas.</p>
+<p><strong>Setup: pemenang dan follower</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Baru</p>
+<p>Produktivitas firm paling efisien (pemenang) di market</p>
+<p>Produktivitas firm terefisien kedua (Follower) di market</p>
+<p>Karena MC, firm dengan tertinggi punya MC terendah. Firm ini akan memenangkan kompetisi Bertrand.</p>
+</div>
+<section id="proposition-15-1-bertrand-pricing-equilibrium">
+<h3>Proposition 15.1 — Bertrand Pricing Equilibrium<a class="headerlink" href="#proposition-15-1-bertrand-pricing-equilibrium" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Firm paling efisien (MC terendah) melayani seluruh market dan menetapkan limit price sama dengan MC firm terefisien kedua.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Si juara tidak perlu menetapkan harga setinggi-tingginya. Ia cukup menetapkan harga sedikit di bawah biaya pesaing terdekat (follower). Pada harga itu, follower tak bisa untung kalau ikut bermain, jadi mundur — dan si juara mengambil seluruh pasar. Menetapkan harga lebih tinggi berisiko follower masuk; lebih rendah membuang profit percuma.</p>
+<p>Limit price (15.4)</p>
+<p>Harga = MC follower (<span class="math notranslate nohighlight">\(w/q^{F}\)</span>). Perhatikan ini lebih tinggi dari MC pemenang (<span class="math notranslate nohighlight">\(w/q^{L}\)</span>), karena <span class="math notranslate nohighlight">\(q^{L} &gt; q^{F}\)</span>. Selisih inilah sumber markup.</p>
+<p>Markup (15.5)</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Markup = rasio kualitas pemenang terhadap follower.</strong> Hanya bergantung pada seberapa jauh pemenang unggul, bukan kualitas absolut. Gap besar → markup besar (monopoli kuat). Gap kecil → markup kecil (kompetisi ketat).</p>
+</div>
+</section>
+<section id="exercise-15-5-sales-employment-profit">
+<h3>Exercise 15.5 — Sales, Employment, Profit<a class="headerlink" href="#exercise-15-5-sales-employment-profit" title="Link to this heading">#</a></h3>
+<p>Tunjukkan untuk tiap market: (1) sales; (2) employment (15.6); (3) profit (15.7).</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Ini masalah STATIS. Bagian 1 pakai Lagrangian statis (household pilih di satu titik waktu). Bagian 2-3 hanya aljabar substitusi. Tidak ada Hamiltonian — itu hanya untuk masalah dinamis (HJB muncul nanti di 15.3.4).</p>
+<p>Bagian 1 — Sales equalized</p>
+</div>
+<p><strong>Step 1.</strong> Household memilih <span class="math notranslate nohighlight">\(\{c_{j}\}\)</span> untuk max utility s.t. budget.</p>
+<p><strong>Step 2.</strong> Lagrangian statis (multiplier = shadow price budget).</p>
+<p><strong>Step 3.</strong> FOC terhadap <span class="math notranslate nohighlight">\(c_{j}\)</span>.</p>
+<p><strong>Step 4.</strong> Pin down multiplier dari budget.</p>
+<p>(karena numeraire: total belanja <span class="math notranslate nohighlight">\(=Y\)</span>).</p>
+<p><strong>Step 5.</strong> Hasil</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Cobb-Douglas membuat konsumen membelanjakan porsi yang sama di tiap kategori. Karena ada kontinum kategori dan total belanja, tiap market menerima pendapatan total yang sama, yaitu — terlepas dari kualitas atau markup market itu.</p>
+<p>Bagian 2 — Employment (15.6)</p>
+</div>
+<p><strong>Step 1.</strong> Dari production: <span class="math notranslate nohighlight">\(l_{j}=y_{j}/q_{j}\)</span>.</p>
+<p><strong>Step 2.</strong> Substitusi sales (<span class="math notranslate nohighlight">\(p_{j}y_{j}=Y\)</span>) dan limit price (<span class="math notranslate nohighlight">\(p_{j}=w/q_{j}^{F}\)</span>).</p>
+<p><strong>Step 3.</strong> Kenali</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>adalah labor yang dibutuhkan kalau pasar kompetitif (markup = 1). Faktor adalah “rem”: markup tinggi → harga tinggi → konsumen beli lebih sedikit → lebih sedikit tenaga kerja dipakai. Monopoli menekan employment.</p>
+<p>Bagian 3 — Profit (15.7)</p>
+</div>
+<p><strong>Step 1.</strong> Profit = revenue − cost</p>
+<p><strong>Step 2.</strong> Substitusi dan sederhanakan → (15.7)</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Profit margin. Cek ekstrem: (kompetitif) → profit 0; (monopoli) → profit. Markup tinggi → profit tinggi.</p>
+</div>
+</section>
+</section>
+<section id="firm-level-allocations">
+<h2>15.3.3.2 · Firm -level Allocations<a class="headerlink" href="#firm-level-allocations" title="Link to this heading">#</a></h2>
+<p>Satu firm bisa punya banyak produk. Agregasi dari market ke firm.</p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Baru</p>
+<p>Set produk firm</p>
+<p>Jumlah produk firm</p>
+<p>Markup firm (harmonic mean)</p>
+</div>
+<section id="exercise-15-6-total-employment-firm">
+<h3>Exercise 15.6 — Total employment firm<a class="headerlink" href="#exercise-15-6-total-employment-firm" title="Link to this heading">#</a></h3>
+<p>Tunjukkan total employment firm adalah (15.8), dengan harmonic mean.</p>
+<p><strong>Step 1.</strong> Total labor = jumlah labor tiap produk</p>
+<p><strong>Step 2.</strong> Faktorkan dan rata-rata</p>
+<p><strong>Step 3.</strong> Definisi (harmonic mean) → hasil (15.8)</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>adalah harmonic mean dari markup produk. Sifat. Karena (employment inversely proportional ke markup), agregasi yang natural lewat.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Markup firm “condong” ke produk dengan markup rendah, karena produk markup rendah menyerap lebih banyak tenaga kerja (lebih banyak diproduksi). Produk yang mendominasi employment-lah yang paling menentukan markup rata-rata firm — itulah yang ditangkap harmonic mean.</p>
+</div>
+</section>
+<section id="exercise-15-7-variety-markups-firm-size">
+<h3>Exercise 15.7 — Variety, markups, firm size<a class="headerlink" href="#exercise-15-7-variety-markups-firm-size" title="Link to this heading">#</a></h3>
+<p>Firm size bergantung dua faktor: (1) jumlah produk — bagaimana? (2) markup (conditional) — bagaimana?</p>
+<p>Linear positif.</p>
+<p><strong>Efek</strong> — Lebih banyak produk → firm lebih besar.</p>
+<p><strong>Efek</strong> — Inversely proportional: <span class="math notranslate nohighlight">\(l_{j}\propto 1/\mu_{j}\)</span>. Markup tinggi → firm lebih kecil (per produk).</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Firm bisa besar karena dua alasan berbeda: (Tipe 1) punya banyak produk meski tiap produk kompetitif (markup rendah); atau (Tipe 2) punya sedikit produk tapi dengan monopoli kuat (markup tinggi). Firm besar tidak selalu bermarkup tinggi — tergantung strukturnya.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Life-cycle: firm muda (kecil, markup rendah, baru entry) → firm tua (besar via expansion, markup tinggi via own-innovation). Firm tua lebih besar dari dua kanal: extensive (naik) + intensive (naik). Sales firm selalu naik dengan.</p>
+</div>
+</section>
+</section>
+<section id="aggregate-allocations-misallocation">
+<h2>15.3.3.3 · Aggregate Allocations &amp; Misallocation<a class="headerlink" href="#aggregate-allocations-misallocation" title="Link to this heading">#</a></h2>
+<p>Naik ke level ekonomi. Inti bab: dari mana wedge misallocation berasal.</p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Baru</p>
+<p>CDF distribusi markup across produk</p>
+<p>CDF distribusi produktivitas across produk</p>
+<p>Indeks produktivitas agregat:</p>
+<p>Wedge misallocation</p>
+<p>Labor share of income</p>
+<p>Total labor di produksi</p>
+</div>
+<p><strong>Total labor produksi (15.9)</strong></p>
+<p><strong>Step 1.</strong> Integrate across firm</p>
+<p><strong>Step 2</strong> — Tiap produk dimiliki tepat satu firm → integrate across produk: <span class="math notranslate nohighlight">\(L_{P}=\int_{0}^{1} l_{j}\,dj\)</span></p>
+<section id="exercise-15-8-equilibrium-wage-15-10">
+<h3>Exercise 15.8 — Equilibrium wage (15.10)<a class="headerlink" href="#exercise-15-8-equilibrium-wage-15-10" title="Link to this heading">#</a></h3>
+<p>Tunjukkan equilibrium wage adalah (15.10): upah berbanding lurus dengan output agregat dan berbanding terbalik dengan markup agregat.</p>
+<p><strong>Step 1</strong> — Mulai dari (15.2), Bertrand:</p>
+<p><strong>Step 2.</strong> Suku pertama = (definisi)</p>
+<p><strong>Step 3.</strong> Suku kedua: substitusi (15.6)</p>
+<p><strong>Step 4.</strong> Gabung — suku CANCEL di kedua sisi</p>
+<p><strong>Step 5.</strong> Eksponen → hasil (15.10)</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Upah = produktivitas dikali “wedge markup”. Kalau markup tinggi di mana-mana, sebagian nilai yang seharusnya jadi upah malah “diambil” sebagai profit firm — sehingga upah turun.</p>
+</div>
+<p><strong>Output ekonomi (15.11)</strong></p>
+<p><strong>Step 1.</strong> Substitusi (15.10) ke (15.9), solve</p>
+<p><strong>Step 2.</strong> Hasil (15.11)</p>
+<div class="important admonition">
+<p class="admonition-title">Gambaran besar</p>
+<p>Aggregate TFP <span class="math notranslate nohighlight">\(=Q\times\mathcal{M}\)</span>. Dua komponen: <span class="math notranslate nohighlight">\(Q\)</span> (produktivitas teknis) dan <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> (efisiensi alokasi). Cross-country TFP differences bisa dari <span class="math notranslate nohighlight">\(Q\)</span> (teknologi) atau (misallocation). Hsieh-Klenow: sebagian besar dari.</p>
+</div>
+</section>
+<section id="exercise-15-9-mengapa">
+<h3>Exercise 15.9 — Mengapa<a class="headerlink" href="#exercise-15-9-mengapa" title="Link to this heading">#</a></h3>
+<p>Mengapa? Apa arti vs?</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Bukti via AM-GM inequality. Untuk variabel random positif: (geometric mean ≤ arithmetic mean), dengan equality iff konstan. Set:</p>
+<p>Markup homogen (sama semua). Tidak ada misallocation. (efisien).</p>
+<p>Markup heterogen. Ada misallocation. (di bawah frontier).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Di pasar sehat, semua produk dihargai dekat biaya marginal → sumber daya mengalir ke tempat paling produktif. Kalau markup heterogen, produk bermarkup tinggi “terlalu mahal” → konsumen beli sedikit → tenaga kerja kurang di sana, tapi terlalu banyak di sektor markup rendah. Sumber daya salah tempat — itulah misallocation. Kuncinya bukan markup tinggi, tapi markup heterogen.</p>
+</div>
+<p><strong>Labor share (15.12)</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Macro takeaway: markup tinggi → labor share rendah. Markup menaikkan profit firm (15.7) dan menekan upah (15.10). Konsisten dengan tren empiris global: labor share menurun seiring konsentrasi pasar naik.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Karena aggregator final good di sini Cobb-Douglas, hanya bergantung pada distribusi markup — bukan joint distribution. Dengan CES umum, bisa bergantung joint distribution (lebih rumit; Section 2.7 Peters).</p>
+</div>
+</section>
+</section>
+<section id="dynamic-parts-pengantar">
+<h2>15.3.4 · Dynamic Parts: Pengantar<a class="headerlink" href="#dynamic-parts-pengantar" title="Link to this heading">#</a></h2>
+<p>Transisi besar: dari snapshot statis ke evolusi distribusi. Akhirnya HJB muncul.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Sebelumnya (15.3.3) kita ambil distribusi sebagai given — snapshot pada satu waktu. Tugas sekarang: jelaskan bagaimana distribusi itu terbentuk dari pilihan dinamis firm. Karena limit pricing sudah ditentukan per-periode, firm dynamic problem hanya soal investasi (pricing otomatis dari Bertrand).</p>
+</div>
+<p><strong>Dua pilihan dinamis firm</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Pilihan Dinamis</p>
+<p>Rate own-innovation di market (Poisson)</p>
+<p>Rate expansion ke market baru (Poisson)</p>
+<p>Rate entry firm baru</p>
+<p>Rate creative destruction total</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>“Flow rate” Poisson = seberapa sering keberhasilan muncul per satuan waktu. Tiap percobaan inovasi acak (kadang berhasil, kadang tidak), tapi dengan banyak percobaan, rate rata-ratanya pasti (law of large numbers).</p>
+</div>
+<p><strong>Catatan: Cannibalism (dua arah)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Total rate creative destruction adalah jumlah dari rate entrant baru dan total rate expansion semua firm existing. Firm yang sedang memimpin harus memperhitungkan ancaman ini dalam optimal control-nya.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>“Kanibalisme” = saling memakan sesama. Firm existing yang memperluas wilayah memakan incumbent di market tujuan. Entrant baru juga memakan incumbent. Jadi ancaman datang dari dua arah: pendatang baru dan ekspansi firm lama. Setiap firm hidup di bawah bayang-bayang bahwa suatu saat ia bisa dikanibal — dan ia memasukkan risiko itu ke dalam perhitungannya.</p>
+</div>
+</section>
+<section id="firm-hjb-equation">
+<h2>15.3.4.1 · Firm HJB Equation<a class="headerlink" href="#firm-hjb-equation" title="Link to this heading">#</a></h2>
+<p>Jantung bagian dinamis. Asset pricing dengan banyak Poisson jumps.</p>
+<p><strong>Quality ladder (15.13)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Tangga Kualitas</p>
+<p>Anak tangga (rung) — level kualitas</p>
+<p>Faktor lompatan tiap inovasi</p>
+<p>Quality gap di market</p>
+<p>Kualitas membentuk barisan geometrik. Naik anak tangga → kualitas.</p>
+</div>
+<section id="exercise-15-10-markup-agregat">
+<h3>Exercise 15.10 — Markup agregat<a class="headerlink" href="#exercise-15-10-markup-agregat" title="Link to this heading">#</a></h3>
+<p>Verifikasi konsistensinya dengan definisi markup agregat.</p>
+<p><strong>Step 1.</strong> Markup dari Bertrand (15.5)</p>
+<p><strong>Step 2</strong> — Tulis kualitas dalam anak tangga,</p>
+<p><strong>Step 3.</strong> Definisi gap</p>
+<p><strong>Step 4.</strong> Karena pemenang strictly ahead</p>
+<p>Markup minimum.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>One-to-one mapping antara gap dan markup. Profit (15.7): — hanya bergantung. Karena itu adalah payoff-relevant statistic.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Markup sepenuhnya ditentukan oleh “berapa anak tangga si juara unggul dari pesaing terdekat”. Tidak peduli nilai kualitas absolutnya — hanya jaraknya yang penting. Ini menyederhanakan segalanya: kita cukup melacak gap (bilangan bulat), bukan kualitas absolut.</p>
+</div>
+</section>
+<section id="exercise-15-11-mengapa-tanpa-indeks">
+<h3>Exercise 15.11 — Mengapa tanpa indeks<a class="headerlink" href="#exercise-15-11-mengapa-tanpa-indeks" title="Link to this heading">#</a></h3>
+<p>Mengapa kita tidak pakai indeks di? Apakah identitas firm penting?</p>
+<p>Jawab: Identitas firm tidak relevan untuk outcome market. Markup hanya bergantung pada gap antara pemenang dan follower di market — bukan siapa pemenangnya. Analogi: margin kemenangan lomba lari ditentukan selisih waktu, bukan nama pelari. Identitas firm baru relevan di level firm dynamics (, portofolio).</p>
+<p><strong>Catatan: Birth-Death Process</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Tiga kanal pertumbuhan — semua menaikkan kualitas satu anak tangga, tapi efeknya pada markup berbeda:</p>
+<p><strong>Own-innovation</strong> — Gap naik; markup naik faktor <span class="math notranslate nohighlight">\(\lambda\)</span>. Contra-competition.</p>
+<p><strong>Expansion / Entry</strong> — Gap reset ke 1; markup turun ke <span class="math notranslate nohighlight">\(\lambda\)</span>. Pro-competition (creative destruction).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Mengapa creative destruction mereset gap ke 1? Karena entrant masuk dengan kualitas tepat satu anak tangga di atas incumbent lama. Incumbent lama (yang tadinya jauh memimpin) kini jadi follower, dan gap pemenang-baru ke follower hanya 1 langkah. Markup “kembali ke nol” (baseline).</p>
+</div>
+<p><strong>Catatan: Dynamic Trade-off</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Firm menghadapi dilema. Own-innovation: investasi memperlebar gap di market yang sudah dikuasai → markup naik, “stay ahead”. Expansion: masuk market baru → tapi mulai dari markup rendah, dengan harapan profit masa depan kalau bertahan. Tarik- menarik: perdalam kekuasaan di kandang sendiri, atau perluas wilayah baru?</p>
+</div>
+</section>
+<section id="exercise-15-12-payoff-relevant-states">
+<h3>Exercise 15.12 — Payoff-relevant states<a class="headerlink" href="#exercise-15-12-payoff-relevant-states" title="Link to this heading">#</a></h3>
+<p>Verifikasi vektor state yang cukup untuk firm: <span class="math notranslate nohighlight">\(n_{f}\)</span> (jumlah produk) dan <span class="math notranslate nohighlight">\(\{\Delta_{j}\}\)</span> (daftar quality gap).</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Payoff: total profit — hanya bergantung <span class="math notranslate nohighlight">\(n_{f}\)</span> dan <span class="math notranslate nohighlight">\(\{\Delta_{j}\}\)</span> (<span class="math notranslate nohighlight">\(t\)</span> implisit). Dynamics: own-innovation, creative destruction (kehilangan produk), expansion (, tambah) — semua hanya butuh. Tidak butuh kualitas absolut, identitas, atau distribusi agregat (hanya given).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Untuk tahu nilai sebuah firm, kamu hanya perlu tahu: berapa banyak produk yang ia kuasai, dan seberapa jauh ia memimpin di tiap produk. Tidak perlu tahu nama firm, tidak perlu tahu kualitas absolut, tidak perlu tahu seluruh peta ekonomi. Itu sebabnya masalahnya bisa diselesaikan closed-form.</p>
+</div>
+<p><strong>HJB Equation (15.14)</strong> — Inti Section 15.3.4.1. Ruas kiri <span class="math notranslate nohighlight">\(rV\)</span> = required return; ruas kanan terdiri dari enam term:</p>
+<ol class="arabic simple">
+<li><p><strong>Flow profits</strong> — total profit semua produk (dividend).</p></li>
+<li><p><strong>Capital gain</strong> — perubahan nilai firm seiring waktu.</p></li>
+<li><p><strong>Creative destruction</strong> — expected loss (negatif): tiap produk hilang dengan rate <span class="math notranslate nohighlight">\(\tau\)</span>. Inilah risk-nya.</p></li>
+<li><p><strong>Own innovation</strong> — gain dari gap yang naik (rate <span class="math notranslate nohighlight">\(I\)</span>, variabel pilihan).</p></li>
+<li><p><strong>Expansion</strong> — gain dari produk baru ber-gap 1 (rate <span class="math notranslate nohighlight">\(x\)</span>, variabel pilihan).</p></li>
+<li><p><strong>Cost</strong> — biaya inovasi (diukur dalam labor) × wage <span class="math notranslate nohighlight">\(w\)</span>.</p></li>
+</ol>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Bandingkan Bab 14: di Romer HJB hanya <span class="math notranslate nohighlight">\(rV=\pi+\dot{V}\)</span> (asset pricing sederhana). Di Peters jauh lebih kaya: ada creative destruction (risk), own-innovation &amp; expansion (option value), multi- product. Tetap asset pricing, tapi dengan banyak Poisson jumps.</p>
+</div>
+</section>
+<section id="exercise-15-13-cost-units">
+<h3>Exercise 15.13 — Cost units<a class="headerlink" href="#exercise-15-13-cost-units" title="Link to this heading">#</a></h3>
+<p>True/False: Cost function mengembalikan cost dalam unit numeraire good?</p>
+<p>Jawab: FALSE. Cost function diukur dalam unit labor. Baru setelah dikali <span class="math notranslate nohighlight">\(w\)</span> (lihat term 6) ia menjadi unit numeraire; fungsi cost sendiri = jumlah labor untuk inovasi.</p>
+<p><strong>Convex innovation cost (15.15)</strong></p>
+<p><strong>Notasi Parameter Cost</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Cost shifter own-innovation Cost shifter expansion Eksponen convex membuat cost convex dalam rate → marginal cost naik → firm tak pilih rate tak terbatas → solusi interior unik. Karena payoff (gain) linear dalam dan cost convex, max (linear − convex) → FOC interior unik → closed-form.</p>
+</div>
+<p>Faktor: firm dengan gap lebih besar menghadapi cost own- innovation lebih rendah.</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Faktor menangkap “success breeds success” — pemimpin teknologi (gap besar) lebih mudah berinovasi lagi karena sudah punya know-how dan infrastruktur riset. Akibatnya pemimpin terus menjauh → ekor distribusi markup menebal (ini kanal own- innovation yang menebalkan tail).</p>
+</div>
+</section>
+</section>
+<section id="free-entry">
+<h2>15.3.4.2 · Free Entry<a class="headerlink" href="#free-entry" title="Link to this heading">#</a></h2>
+<p>Menentukan rate entry firm baru secara endogen.</p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Baru</p>
+<p>Produktivitas teknologi entry (labor → ide)</p>
+<p>Nilai firm entrant baru</p>
+</div>
+<p><strong>State entrant &amp; teknologi</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>State entrant baru: (satu produk), (gap satu langkah, karena masuk dengan kualitas incumbent lama). Teknologi entry linear: 1 unit labor → ide. Untuk 1 unit rate entry butuh labor; cost (numeraire).</p>
+</div>
+<p><strong>Free entry condition (15.16)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Complementary slackness: jika → tidak ada entry; jika → benefit = cost. Asumsi kasus menarik → binding.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Orang akan terus membuka firm baru selama nilai firm melebihi biaya membukanya. Entry berlanjut sampai keuntungan habis — nilai = biaya. Ini “zero excess profit” dari pintu masuk.</p>
+</div>
+<p><strong>Creative destruction rate (15.17)</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Total rate incumbent kehilangan market = entry baru + total expansion firm existing. Kedua sumber menggusur incumbent. Catatan: muncul di HJB tiap firm, tapi sendiri terdiri dari keputusan agregat — ini fixed point yang konsisten di BGP.</p>
+</div>
+<section id="exercise-15-14-labor-market-clearing">
+<h3>Exercise 15.14 — Labor market clearing<a class="headerlink" href="#exercise-15-14-labor-market-clearing" title="Link to this heading">#</a></h3>
+<p>Jelaskan dengan kata-kata accounting condition labor market clearing.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Sisi kiri: total supply labor = 1 (Exercise 15.1, measure-one household). Sisi kanan: demand = produksi + riset. tiga komponen: entry (linear), expansion (convex), own-innovation (convex + diskon leader).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Seluruh tenaga kerja ekonomi (= 1) dibagi dua: membuat barang hari ini atau berinovasi untuk masa depan. Lebih banyak ke riset → growth lebih cepat, tapi output sekarang lebih sedikit. Ini trade-off konsumsi-vs-pertumbuhan di level seluruh ekonomi.</p>
+</div>
+</section>
+</section>
+<section id="balanced-growth-equilibrium">
+<h2>15.3.5 · Balanced-Growth Equilibrium<a class="headerlink" href="#balanced-growth-equilibrium" title="Link to this heading">#</a></h2>
+<p>Merangkai semua. Proposition 15.2: equilibrium stasioner unik dengan closed-form.</p>
+<p><strong>Apa itu stationary equilibrium</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Di BGP: rate inovasi konstan, distribusi markup stasioner, wedge konstan, semua variabel agregat tumbuh rate sama.</p>
+</div>
+<section id="proposition-15-2-unique-stationary-equilibrium">
+<h3>Proposition 15.2 — Unique Stationary Equilibrium<a class="headerlink" href="#proposition-15-2-unique-stationary-equilibrium" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Asumsi parameter.</p>
+<p>Asumsi ini (cukup besar) menjamin nilai firm finite — kalau terlalu kecil, firm bisa expand tanpa batas dengan return tinggi sehingga nilai meledak. Analog syarat di RCK.</p>
+<p>Properti 1 — Value function (15.18)</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Additive separable: nilai firm = kali nilai baseline per produk + jumlah premium markup tiap produk. Inilah yang membuat closed-form.</p>
+</div>
+</section>
+<section id="exercise-15-16-interpretasi-dan">
+<h3>Exercise 15.16 — Interpretasi dan<a class="headerlink" href="#exercise-15-16-interpretasi-dan" title="Link to this heading">#</a></h3>
+<p>Interpretasikan <span class="math notranslate nohighlight">\(A\)</span> dan <span class="math notranslate nohighlight">\(B\)</span> — dua komponen nilai.</p>
+<p><strong><span class="math notranslate nohighlight">\(A\)</span> (product value)</strong> — Nilai “memiliki satu produk” baseline (gap 1): profit baseline + bonus opsi expansion, terdiskon.</p>
+<p><strong><span class="math notranslate nohighlight">\(B\)</span> (markup value)</strong> — Nilai tambahan dari gap: extra profit + bonus opsi own-innovation. Naik seiring lebar gap.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Discount efektif: firm mendiskon future dengan impatience PLUS hazard kanibalisme. Seperti asset pricing dengan default risk: discount = rate + hazard.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>= “harga dasar” punya satu produk (di level pemula, gap 1). = “premium” karena unggul jauh — semakin besar lead, semakin besar premium. Total nilai firm = (banyaknya produk × harga dasar) + (jumlah premium dari tiap lead). Persis dua dimensi firm size: extensive (berapa produk) + intensive (seberapa unggul).</p>
+</div>
+</section>
+<section id="exercise-15-15-derive-value-function-guess-and-verify">
+<h3>Exercise 15.15 — Derive value function (guess-and- verify)<a class="headerlink" href="#exercise-15-15-derive-value-function-guess-and-verify" title="Link to this heading">#</a></h3>
+<p>Derive value function lewat guess-and-verify.</p>
+<p><strong>Step 1.</strong> Tebak additive separable</p>
+<p>Masuk akal: profit additive, creative destruction hit tiap produk independen, keputusan per-produk.</p>
+<p><strong>Step 2.</strong> Hitung selisih nilai tiap jump</p>
+<p>Creative destruction (kehilangan produk).</p>
+<p>Own-innovation. Expansion.</p>
+<p><strong>Step 3.</strong> Substitusi ke HJB, pisahkan per-komponen</p>
+<p>Karena semua additive, HJB terpecah jadi persamaan untuk (baseline) dan (premium) secara terpisah.</p>
+<p><strong>Step 4.</strong> Solve &amp; verify</p>
+<p>Menghasilkan formula (15.18). Substitusi balik konfirmasi memenuhi HJB. Bekerja karena struktur HJB linear dalam komponen value (cocok dengan additive profit + independent jumps).</p>
+<p>Properti 2 — Optimal investments (15.19, 15.20)</p>
+<p>Expansion rate (15.19):</p>
+<p><strong>Step 1.</strong> FOC expansion: marginal value = marginal cost</p>
+<p><strong>Step 2.</strong> Free entry: produk baru (gap 1) = nilai entrant</p>
+<p><strong>Step 3.</strong> Samakan, solve</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong><span class="math notranslate nohighlight">\(x^{*}\)</span> konstan</strong>, ditentukan parameter saja! Karena expand ke market baru memberi produk gap 1 — persis sama dengan yang didapat entrant — free entry menyamakan nilainya ke, membuat FOC expansion independen dari kondisi agregat.</p>
+<p>Own-innovation rate (15.20):</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p><strong><span class="math notranslate nohighlight">\(I^{*}\)</span> implicit</strong> (muncul di kedua sisi): tergantung kondisi agregat — beda dari <span class="math notranslate nohighlight">\(x^{*}\)</span>. Faktor kuncinya: incremental gain dari naik satu gap.</p>
+</div>
+</section>
+<section id="exercise-15-17-interpretasi-i-dan-x">
+<h3>Exercise 15.17 — Interpretasi <span class="math notranslate nohighlight">\(I^{*}\)</span> dan <span class="math notranslate nohighlight">\(x^{*}\)</span><a class="headerlink" href="#exercise-15-17-interpretasi-i-dan-x" title="Link to this heading">#</a></h3>
+<p>Interpretasikan behavior kebijakan optimal <span class="math notranslate nohighlight">\(I^{*}\)</span> dan <span class="math notranslate nohighlight">\(x^{*}\)</span>. Apa artinya untuk dinamika firm?</p>
+<p><strong>Expansion <span class="math notranslate nohighlight">\(x^{*}\)</span></strong> — Konstan, parameter saja: tergantung rasio biaya expand vs entry. Stabil, tak terpengaruh agregat.</p>
+<p><strong>Own-innovation</strong> — Tergantung kondisi agregat dan gap kualitas: profit tinggi → intensitas naik; impatient/risky → turun.</p>
+<p>Own-innovation TIDAK menggusur firm lain — creative destruction <span class="math notranslate nohighlight">\(\tau\)</span> hanya berasal dari <span class="math notranslate nohighlight">\(x\)</span> dan <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Churning intensity menangkap dua kekuatan: creative destruction (, kompres) vs own-innovation (, fatten). Rasio ini menentukan bentuk distribusi markup (Proposition 15.3).</p>
+<p>Properti 4 — Growth rate (15.21)</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Produktivitas agregat naik setiap kali ada inovasi dari salah satu dari tiga kanal. Tiap inovasi mengalikan kualitas dengan faktor <span class="math notranslate nohighlight">\(\lambda&gt;1\)</span> → menyumbang ke pertumbuhan. Total rate inovasi =. Maka growth = (total inovasi).</p>
+<p><strong>15.3.5.1 — Hasil penting</strong></p>
+</div>
+<p><strong>Distribusi Markup Pareto</strong> — Klimaks bab: dari flow accounting ke distribusi Pareto.</p>
+<div class="note admonition">
+<p class="admonition-title">Notasi Baru</p>
+<p><span class="math notranslate nohighlight">\(m(\Delta)\)</span> — measure produk dengan quality gap <span class="math notranslate nohighlight">\(\Delta\)</span></p>
+<p>Churning intensity</p>
+<p>Shape parameter Pareto</p>
+</div>
+<p><strong>Sistem ODE distribusi gap</strong></p>
+</section>
+<section id="exercise-15-18-flow-accounting">
+<h3>Exercise 15.18 — Flow accounting<a class="headerlink" href="#exercise-15-18-flow-accounting" title="Link to this heading">#</a></h3>
+<p>Jelaskan accounting process yang menghasilkan sistem ODE.</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Bayangkan tiap gap sebagai “kotak”. Produk mengalir masuk dan keluar. Laju perubahan isi kotak = inflow − outflow. Dua gerakan: own-innovation menaikkan gap satu tingkat; creative destruction mereset gap ke 1.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Gap: Inflow = semua produk di gap yang dikanibal (reset ke 1). Outflow = produk gap 1 yang naik via own-innovation. (Creative destruction pada gap-1 tetap di gap 1, bukan flow.)</p>
+<p>Gap: Inflow = produk gap naik via own- innovation. Outflow = naik via own-innovation ATAU reset via creative destruction.</p>
+</div>
+<p><strong>Derivasi distribusi stasioner (langkah Exercise 15.20)</strong></p>
+<p><strong>Step 1</strong> — Impose stationarity:</p>
+<p><strong>Step 2.</strong> Solve</p>
+<p><strong>Step 3.</strong> Solve recursively</p>
+<p>Definisi. Maka.</p>
+<p><strong>Step 4.</strong> Distribusi geometrik</p>
+<p>(Cek: ✓)</p>
+<p><strong>Step 5.</strong> CDF atas gap</p>
+<p><strong>Step 6</strong> — Change of variable ke markup,</p>
+<p><strong>Step 7</strong> — Sederhanakan,</p>
+<p><strong>Step 8.</strong> Distribusi Pareto</p>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Mengapa geometrik menjadi Pareto? Karena markup adalah transformasi eksponensial dari gap. Distribusi geometrik (exponential decay dalam) + transformasi log = Pareto (power law dalam). Hubungan matematis fundamental: exponential of geometric = power law.</p>
+</div>
+</section>
+<section id="proposition-15-3">
+<h3>Proposition 15.3<a class="headerlink" href="#proposition-15-3" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Definisikan,. Maka:</p>
+<ol class="arabic simple">
+<li><p>Distribusi markup stasioner: (Pareto).</p></li>
+<li><p>Misallocation &amp; labor share.</p></li>
+</ol>
+</div>
+<p><strong>Derivasi <span class="math notranslate nohighlight">\(m(\Delta)\)</span> dan tail Pareto</strong> — Density-nya Pareto.</p>
+<p><strong>Step 1.</strong> Labor share</p>
+<p><strong>Step 2.</strong> Via substitusi</p>
+<p><strong>Step 3.</strong> Misallocation</p>
+</section>
+<section id="exercise-15-19-comparative-statics">
+<h3>Exercise 15.19 — Comparative statics<a class="headerlink" href="#exercise-15-19-comparative-statics" title="Link to this heading">#</a></h3>
+<p>Bagaimana lebih tinggi mempengaruhi (1) Pareto tail, (2) misallocation?</p>
+<p><strong>Step 1.</strong> Naik → naik</p>
+<p><strong>Step 2.</strong> Naik → tail tipis</p>
+<p>Tail turun lebih cepat → sedikit firm markup tinggi.</p>
+<p><strong>Step 3.</strong> Naik → naik (less misallocation): (no misallocation). Juga naik.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Churning tinggi → misallocation rendah → TFP tinggi → labor</strong></p>
+<p>share tinggi. Banyak creative destruction relatif own-innovation → markup terkompres (homogen) → less heterogeneity → less misallocation.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Penjelasan intuitif</p>
+<p>Ekonomi yang “churning” tinggi (banyak pendatang baru menggusur incumbent) menjaga agar tak ada firm yang terlalu lama menikmati monopoli besar. Markup tetap seragam dan rendah → sumber daya teralokasi efisien. Sebaliknya, ekonomi dengan incumbent yang mengakar (own-innovation dominan, sedikit gangguan) membiarkan markup tumbuh heterogen → misallocation besar.</p>
+</div>
+</section>
+<section id="exercise-15-20-langkah-derivasi-flow-distribution">
+<h3>Exercise 15.20 — Langkah derivasi (flow → distribution)<a class="headerlink" href="#exercise-15-20-langkah-derivasi-flow-distribution" title="Link to this heading">#</a></h3>
+<p>Jelaskan langkah logis dari flow accounting menuju distribusi stasioner markup.</p>
+<div class="note admonition">
+<p class="admonition-title">Penjelasan formal</p>
+<p>Enam langkah: (1) flow accounting ODE untuk; (2) impose stationarity; (3) solve; (4) solve recursive → geometrik; (5) CDF gap; (6) change of variable + definisi → Pareto.</p>
+<p><strong>Gambaran Besar</strong></p>
+<p>Jawaban atas misteri Hsieh-Klenow: misallocation TIDAK perlu diasumsikan eksogen. Ia muncul endogen dari dinamika kompetisi — keseimbangan antara creative destruction dan own-innovation, diringkas oleh churning. Inilah kontribusi Peters.</p>
+<p>✦ ✦ ✦</p>
+<p><strong>Sintesis</strong></p>
+</div>
+<p><strong>Benang Merah Bab 15</strong> — Bagaimana semua bagian terhubung.</p>
+<p><strong>Static (15.3.3)</strong> — Bertrand → markup → sales, employment, profit per market → agregat → wedge. Tools: Lagrangian statis + aljabar..</p>
+<p><strong>Dynamic (15.3.4)</strong> — HJB firm (multi-jump asset pricing) → pilih intensitas inovasi optimal. Free entry → kondisi nilai masuk. Tools: HJB + complementary slackness.</p>
+<p><strong>BGP (15.3.5)</strong> — Closed-form value function; <span class="math notranslate nohighlight">\(x^{*}\)</span> konstan (parameter), <span class="math notranslate nohighlight">\(I^{*}\)</span> tergantung agregat. Growth <span class="math notranslate nohighlight">\(g\)</span> dari agregasi inovasi.</p>
+<p><strong>Distribution (15.3.5.1)</strong> — Flow accounting → distribusi geometrik gap → Pareto markup. Churning menentukan misallocation.</p>
+<p><strong>Tiga rumus yang wajib melekat</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><strong>Peters vs Romer (Bab 14)</strong></p>
+<p><strong>Inovasi</strong></p>
+<p>Romer: identik, markup konstan. Peters:</p>
+<p><strong>Firm</strong></p>
+<p>heterogen, markup Pareto.</p>
+<p>KEDUANYA: private CRS, aggregate IRS.</p>
+<p><strong>Returns to scale</strong></p>
+<p>Sumber IRS: (Romer) vs (Peters).</p>
+<p><strong>Replacement/business-</strong> — Romer: tidak relevan. Peters: AKTIF (creative <code class="docutils literal notranslate"><span class="pre">stealing</span></code> destruction).</p>
+</div>
+<p>Romer: tidak ada (markup homogen). Peters:</p>
+<p><strong>Misallocation</strong> — dari markup heterogen.</p>
+<p><strong>Checklist</strong></p>
+</section>
+</section>
+<section id="self-assessment-bab-15">
+<h2>Self-Assessment Bab 15<a class="headerlink" href="#self-assessment-bab-15" title="Link to this heading">#</a></h2>
+<p>Cek pemahaman menyeluruh atas bab ini.</p>
+<p><strong>Konteks &amp; setup</strong></p>
+<ul class="simple">
+<li><p>☐ Hsieh-Klenow: TFP cross-country dari misallocation, diukur dispersi TFPR</p></li>
+<li><p>☐ Dua kekuatan: creative destruction (kompres) vs own-innovation (fatten)</p></li>
+<li><p>☐ Block-recursive → tractable closed-form</p></li>
+<li><p>☐ Ex 15.1: labor supply = 1</p></li>
+<li><p>☐ Ex 15.2: Cobb-Douglas antar market (imperfect), linear dalam market (perfect)</p></li>
+<li><p>☐ Ex 15.3-15.4: perfect substitution → limit pricing; MC <span class="math notranslate nohighlight">\(=w/q\)</span></p></li>
+</ul>
+<p><strong>Static (Bertrand &amp; agregat)</strong></p>
+<ul class="simple">
+<li><p>☐ Limit price (15.4); markup (15.5):</p></li>
+<li><p>☐ Ex 15.5: sales (Lagrangian statis), employment (15.6), profit (15.7)</p></li>
+<li><p>☐ Ex 15.6: harmonic mean; Ex 15.7: firm size dua kanal</p></li>
+<li><p>☐ Ex 15.8: wage (15.10) derivasi log aggregation</p></li>
+<li><p>☐ Output (15.11); Ex 15.9: via AM-GM</p></li>
+<li><p>☐ Labor share (15.12):</p></li>
+</ul>
+<p><strong>Dynamic (HJB &amp; free entry)</strong></p>
+<ul class="simple">
+<li><p>☐ Quality ladder (15.13); Ex 15.10:</p></li>
+<li><p>☐ Ex 15.11: identitas tidak relevan (hanya gap)</p></li>
+<li><p>☐ Birth-death: own-innov (gap+1) vs creative destruction (reset 1)</p></li>
+<li><p>☐ Ex 15.12: state cukup</p></li>
+<li><p>☐ HJB (15.14) enam term; Ex 15.13: dalam labor (FALSE numeraire)</p></li>
+<li><p>☐ Convex cost (15.15): closed-form, leader murah</p></li>
+<li><p>☐ Free entry (15.16):</p></li>
+<li><p>☐ Creative destruction (15.17):</p></li>
+<li><p>☐ Ex 15.14: labor clearing</p></li>
+</ul>
+<p><strong>BGP &amp; distribusi (★ inti)</strong></p>
+<ul class="simple">
+<li><p>☐ Prop 15.2: value function (15.18) additive separable</p></li>
+<li><p>☐ Ex 15.16: product value, markup premium</p></li>
+<li><p>☐ Ex 15.15: guess-and-verify</p></li>
+<li><p>☐ (15.19) konstan parameter; (15.20) tergantung agregat</p></li>
+<li><p>☐ Ex 15.17: (tidak masuk); churning</p></li>
+<li><p>☐ Growth (15.21):</p></li>
+<li><p>☐ Ex 15.18: flow accounting ODE</p></li>
+<li><p>☐ Derivasi: stationarity → geometrik → Pareto</p></li>
+<li><p>☐ Prop 15.3,</p></li>
+<li><p>☐ Ex 15.19: naik → naik → tail tipis → less misallocation</p></li>
+<li><p>☐ Ex 15.20: enam langkah flow → distribution</p></li>
+<li><p>☐ HAFAL: formulas</p></li>
+</ul>
+<p>✦ ✦ ✦</p>
+<p>Review Bab 15 — Endogenous Growth, Misallocation &amp; Growth Accounting</p>
+<p>Economic Growth Personal Study Notes · Peters (2020) · Schumpeterian R&amp;D II</p>
+<p>Bab terakhir kursus · Misallocation endogen dari dinamika kompetisi</p>
+<p>✦ Selamat — seluruh materi kursus tuntas ✦</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab14-romer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 14 — R&amp;D I (Romer)</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kamus-notasi-lengkap">Kamus Notasi Lengkap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latar-belakang-misteri-tfp">15.1 · Latar Belakang: Misteri TFP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preferences-household">15.3.1 · Preferences (Household)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#production">15.3.2 · Production</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bertrand-pricing-equilibrium">15.3.3.1 · Bertrand Pricing Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-1-bertrand-pricing-equilibrium">Proposition 15.1 — Bertrand Pricing Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-5-sales-employment-profit">Exercise 15.5 — Sales, Employment, Profit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-level-allocations">15.3.3.2 · Firm -level Allocations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-6-total-employment-firm">Exercise 15.6 — Total employment firm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-7-variety-markups-firm-size">Exercise 15.7 — Variety, markups, firm size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-allocations-misallocation">15.3.3.3 · Aggregate Allocations &amp; Misallocation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-8-equilibrium-wage-15-10">Exercise 15.8 — Equilibrium wage (15.10)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-9-mengapa">Exercise 15.9 — Mengapa</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-parts-pengantar">15.3.4 · Dynamic Parts: Pengantar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-hjb-equation">15.3.4.1 · Firm HJB Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-10-markup-agregat">Exercise 15.10 — Markup agregat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-11-mengapa-tanpa-indeks">Exercise 15.11 — Mengapa tanpa indeks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-12-payoff-relevant-states">Exercise 15.12 — Payoff-relevant states</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-13-cost-units">Exercise 15.13 — Cost units</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-entry">15.3.4.2 · Free Entry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-14-labor-market-clearing">Exercise 15.14 — Labor market clearing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balanced-growth-equilibrium">15.3.5 · Balanced-Growth Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-2-unique-stationary-equilibrium">Proposition 15.2 — Unique Stationary Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-16-interpretasi-dan">Exercise 15.16 — Interpretasi dan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-15-derive-value-function-guess-and-verify">Exercise 15.15 — Derive value function (guess-and- verify)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-17-interpretasi-i-dan-x">Exercise 15.17 — Interpretasi <span class="math notranslate nohighlight">\(I^{*}\)</span> dan <span class="math notranslate nohighlight">\(x^{*}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-18-flow-accounting">Exercise 15.18 — Flow accounting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposition-15-3">Proposition 15.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-19-comparative-statics">Exercise 15.19 — Comparative statics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-20-langkah-derivasi-flow-distribution">Exercise 15.20 — Langkah derivasi (flow → distribution)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-15">Self-Assessment Bab 15</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

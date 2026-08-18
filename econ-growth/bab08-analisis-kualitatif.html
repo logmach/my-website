@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 8 — Analisis Kualitatif &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab08-analisis-kualitatif';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 9 — Solow-Swan" href="bab09-solow-swan.html" />
+    <link rel="prev" title="Bab 7 — Solusi Analitis II" href="bab07-solusi-analitis-2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab08-analisis-kualitatif.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab08-analisis-kualitatif.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 8 — Analisis Kualitatif</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-filosofi-qualitative-approach">Konsep 1 — Filosofi Qualitative Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-phase-diagram-1d-section-8-1">Konsep 2 — Phase Diagram 1D (Section 8.1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-phase-diagram-2d-vector-field">Konsep 3 — Phase Diagram 2D — Vector Field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-nullcline-alat-visual-paling-powerful">Konsep 4 — Nullcline — Alat Visual Paling Powerful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-lima-klasifikasi-phase-diagram-2d">Konsep 5 — Lima Klasifikasi Phase Diagram 2D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-algoritma-7-langkah-menggambar-phase-diagram">Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-preview-aplikasi-rck-saddle-path">Konsep 7 — Preview Aplikasi — RCK Saddle Path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-8">Checklist Pemahaman Bab 8</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-8-analisis-kualitatif">
+<h1>Bab 8 — Analisis Kualitatif<a class="headerlink" href="#bab-8-analisis-kualitatif" title="Link to this heading">#</a></h1>
+<p>Bab paling visual di Tools I: menerjemahkan hasil analisis eigenvalue menjadi gambar <em>phase diagram</em>. Yang paling penting di sini bukan teori baru (itu sudah ada di Bab 5 dan 7), melainkan prosedur menggambar — plus konsep <em>nullcline</em> yang akan dipakai berulang dari Bab 9 sampai akhir.</p>
+<section id="konsep-1-filosofi-qualitative-approach">
+<h2>Konsep 1 — Filosofi Qualitative Approach<a class="headerlink" href="#konsep-1-filosofi-qualitative-approach" title="Link to this heading">#</a></h2>
+<p><strong>Mengapa kita gambar phase diagram daripada solve ODE?</strong></p>
+<p><strong>Tiga pendekatan untuk analisis ODE</strong></p>
+<p><strong>Analytical (Bab 6–7)</strong> — Solve secara eksplisit. Hanya bekerja untuk ODE linear atau kasus khusus nonlinear.</p>
+<p><strong>Stability (Bab 5)</strong> — Eigenvalue analysis di steady state. Memberi klasifikasi (stable, unstable, saddle) dan rate of convergence.</p>
+<p><strong>Qualitative (Bab 8)</strong> — Visualisasi geometris dinamika di phase plane. Bekerja untuk ODE nonlinear apa pun — bahkan yang tidak bisa di-solve.</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Untuk model growth (Solow, RCK, Romer) yang nonlinear dan tidak bisa di-solve eksplisit, qualitative approach adalah alat utama untuk dapat insight visual.</em></p>
+<p><em>Pertanyaan yang sama muncul lagi: “Mengapa tidak bisa solve ODE eksplisit?” Jawabannya melibatkan Picard-Lindelöf vs ekspresibilitas. Sekarang di Bab 8, kita pakai tools tanpa butuh formula eksplisit.</em></p>
+</div>
+</section>
+<section id="konsep-2-phase-diagram-1d-section-8-1">
+<h2>Konsep 2 — Phase Diagram 1D (Section 8.1)<a class="headerlink" href="#konsep-2-phase-diagram-1d-section-8-1" title="Link to this heading">#</a></h2>
+<p><em>Versi paling sederhana — untuk ODE skalar.</em></p>
+<p><strong>Setup</strong></p>
+<p>Untuk ODE skalar <span class="math notranslate nohighlight">\(\dot{x}=g(x)\)</span>:</p>
+<p>Sumbu horizontal: (state variable) <span class="math notranslate nohighlight">\(x\)</span> Sumbu vertikal: <span class="math notranslate nohighlight">\(\dot{x}=g(x)\)</span> Plot kurva <span class="math notranslate nohighlight">\(y= g(x)\)</span></p>
+<p><strong>Cara baca</strong> — Di mana <span class="math notranslate nohighlight">\(g(x) &gt; 0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}&gt;0\)</span>, jadi naik <span class="math notranslate nohighlight">\(x\)</span> Di mana <span class="math notranslate nohighlight">\(g(x) &lt; 0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}&lt;0\)</span>, jadi turun <span class="math notranslate nohighlight">\(x\)</span> Di mana <span class="math notranslate nohighlight">\(g(x) = 0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}=0\)</span>, jadi steady (steady state) <span class="math notranslate nohighlight">\(x\)</span></p>
+<p><em>Sketsa (PDF): grafik <span class="math notranslate nohighlight">\(g(x)\)</span> terhadap <span class="math notranslate nohighlight">\(x\)</span> — perpotongan dengan sumbu = steady state; tanda <span class="math notranslate nohighlight">\(g\)</span> menentukan arah panah.</em></p>
+<p><em>Phase line untuk ODE skalar <span class="math notranslate nohighlight">\(\dot{x}=g(x)\)</span> dengan dua steady state (<span class="math notranslate nohighlight">\(\bar{x}_{1}=0\)</span> dan <span class="math notranslate nohighlight">\(\bar{x}_{2}\)</span>): di daerah <span class="math notranslate nohighlight">\(g(x)&gt;0\)</span>, <span class="math notranslate nohighlight">\(x\)</span> naik (panah kanan); di daerah <span class="math notranslate nohighlight">\(g(x)&lt;0\)</span>, <span class="math notranslate nohighlight">\(x\)</span> turun (panah kiri).</em></p>
+<p><strong>Stabilitas 1D dari grafik</strong> — <span class="math notranslate nohighlight">\(g'(\bar{x})&lt;0\)</span> (slope negatif): stable — lintasan dari kedua sisi menuju <span class="math notranslate nohighlight">\(\bar{x}\)</span>. <span class="math notranslate nohighlight">\(g'(\bar{x})&gt;0\)</span> (slope positif): unstable — lintasan menjauh.</p>
+</section>
+<section id="konsep-3-phase-diagram-2d-vector-field">
+<h2>Konsep 3 — Phase Diagram 2D — Vector Field<a class="headerlink" href="#konsep-3-phase-diagram-2d-vector-field" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi ke sistem 2D. Konsep dasar: di tiap titik, ada “arah” dinamika.</em></p>
+<p><strong>Setup</strong></p>
+<p>Untuk sistem 2D <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span>:</p>
+<p>Sumbu horizontal: <span class="math notranslate nohighlight">\(x_{1}\)</span> (beberapa referensi menomori dari <span class="math notranslate nohighlight">\(x_{0}\)</span>). Sumbu vertikal: <span class="math notranslate nohighlight">\(x_{2}\)</span>. Phase plane = <span class="math notranslate nohighlight">\(R^{2}\)</span>, semua kemungkinan <span class="math notranslate nohighlight">\((x_{1}, x_{2})\)</span>.</p>
+<p><strong>Vector field</strong> — Di tiap titik <span class="math notranslate nohighlight">\((x_{1}, x_{2})\)</span> di phase plane, ODE memberi vektor:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{x}=(\dot{x}^{1}\dot{x}_{2}^{)}=G((^{x}x_{2}^{))1} \]</div>
+<p>Vektor ini punya:</p>
+<p>Arah: kemana sistem bergerak dari titik itu</p>
+<p>Magnitude: seberapa cepat</p>
+<p>Kumpulan semua vektor di seluruh phase plane = vector field.</p>
+<p><strong>Stream lines (solution curves)</strong> — Lintasan yang mengikuti vector field = stream line = solusi ODE yang diproyeksikan ke state space (tanpa waktu eksplisit).</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Konsekuensi Picard-Lindelöf: stream lines tidak pernah berpotongan.</em></p>
+<p><em>Mengapa? Karena di tiap titik, arah aliran unik (dari ODE). Kalau dua lintasan berpotongan di satu titik, mereka harus pergi ke arah berbeda dari titik itu — mustahil.</em></p>
+</div>
+</section>
+<section id="konsep-4-nullcline-alat-visual-paling-powerful">
+<h2>Konsep 4 — Nullcline — Alat Visual Paling Powerful<a class="headerlink" href="#konsep-4-nullcline-alat-visual-paling-powerful" title="Link to this heading">#</a></h2>
+<p><em>Konsep yang dipakai berulang dari Bab 9 sampai akhir.</em></p>
+<p><strong>Definisi</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p><em>Nullcline = kurva di phase plane di mana salah satu <span class="math notranslate nohighlight">\(\dot{x}_{i} =0\)</span>.</em></p>
+<p><em><span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> -nullcline = kurva di mana <span class="math notranslate nohighlight">\(\dot{x}_{1} =0\)</span> <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> -nullcline = kurva di mana <span class="math notranslate nohighlight">\(\dot{x}_{2} =0\)</span></em></p>
+</div>
+<p><strong>Apa artinya geometris</strong> — Di <span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> -nullcline: <span class="math notranslate nohighlight">\(x_{1}\)</span> tidak berubah, tapi <span class="math notranslate nohighlight">\(x_{2}\)</span> masih bergerak → lintasan vertikal Di <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> -nullcline: <span class="math notranslate nohighlight">\(x_{2}\)</span> tidak berubah, tapi <span class="math notranslate nohighlight">\(x_{1}\)</span> bergerak → lintasan horizontal</p>
+<p><strong>Steady state = perpotongan KEDUA nullcline</strong> — Steady state adalah titik di mana kedua <span class="math notranslate nohighlight">\(\dot{x}_{1} =0\)</span> dan <span class="math notranslate nohighlight">\(\dot{x}_{2} =0\)</span>. Yaitu, titik yang simultaneously ada di kedua nullcline.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan tajam: bagaimana kalau sebuah titik hanya berada di salah satu nullcline?</p>
+<p>Itu bukan steady state. Sistem masih bergerak — hanya salah satu komponen yang “diam”. Lintasan akan punya bentuk khusus (vertikal di <span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> -nullcline, horizontal di <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> -nullcline).</p>
+<p>Pelajaran: “perpotongan” di sini berarti titik yang simultaneously di kedua kurva. Bukan dua kurva yang melintas tanpa berbagi titik.</p>
+</div>
+<p><strong>Empat alasan nullcline berguna</strong></p>
+<ol class="arabic simple">
+<li><p>Mencari steady state secara visual: gambar dua nullcline, lihat titik perpotongan</p></li>
+<li><p>Membagi phase plane jadi region: di tiap region, tanda <span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> dan <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> konstan → cara cepat sketsa vector field</p></li>
+<li><p>Lintasan menyeberang nullcline secara orthogonal: vertikal di <span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> -nullcline, horizontal di <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> -nullcline</p></li>
+<li><p>Inti analisis qualitative untuk nonlinear: bisa pakai bahkan kalau eigenvalue sulit dihitung</p></li>
+</ol>
+<p><strong>Contoh sederhana</strong></p>
+<p>Sistem:</p>
+<div class="math notranslate nohighlight">
+\[ \dot{x}_{1} =x_{1} -x_{2},\dot{x}_{2} =x_{1} +x_{2} -2 \]</div>
+<p>Nullcline:</p>
+<p><span class="math notranslate nohighlight">\(\dot{x}_{1}\)</span> -nullcline: <span class="math notranslate nohighlight">\(x_{2} =x_{1}\)</span> (garis 45°) <span class="math notranslate nohighlight">\(\dot{x}_{2}\)</span> -nullcline: <span class="math notranslate nohighlight">\(x_{2} =2 -x_{1}\)</span> (slope -1, intercept 2)</p>
+<p>Perpotongan: solve <span class="math notranslate nohighlight">\(x_{1} =2 -x_{1}\)</span> → <span class="math notranslate nohighlight">\(x_{1} =1\)</span>, <span class="math notranslate nohighlight">\(x_{2} =1\)</span>. Steady state <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p>
+<p><em>Sketsa (PDF): bidang <span class="math notranslate nohighlight">\((x_{1},x_{2})\)</span> dengan nullcline <span class="math notranslate nohighlight">\(\dot{x}_{1}=0\)</span> dan <span class="math notranslate nohighlight">\(\dot{x}_{2}=0\)</span> berpotongan di steady state <span class="math notranslate nohighlight">\((1,1)\)</span>.</em></p>
+<p><strong>x₁</strong> — Dua nullcline berpotongan di steady state <span class="math notranslate nohighlight">\((1,1)\)</span>.</p>
+</section>
+<section id="konsep-5-lima-klasifikasi-phase-diagram-2d">
+<h2>Konsep 5 — Lima Klasifikasi Phase Diagram 2D<a class="headerlink" href="#konsep-5-lima-klasifikasi-phase-diagram-2d" title="Link to this heading">#</a></h2>
+<p><em>Visualisasi tiap kasus eigenvalue. Pelajari gambarnya — itulah yang dipakai berulang.</em></p>
+<p><strong>Klasifikasi 1 — Stable Node (Sink)</strong> — Eigenvalues: kedua real, kedua negatif, distinct (<span class="math notranslate nohighlight">\(\lambda _{1} &lt;\lambda _{2} &lt;0\)</span>).</p>
+<p>Cara baca: semua lintasan konvergen ke origin. Dekat origin, lintasan tangensial dengan eigenvektor lambat (<span class="math notranslate nohighlight">\(\lambda _{2}\)</span>, magnitude lebih kecil).</p>
+<p><strong>x₁</strong> — Stable node: semua lintasan menuju origin.</p>
+<p><strong>Klasifikasi 2 — Unstable Node (Source)</strong> — Eigenvalues: kedua real, kedua positif, distinct (<span class="math notranslate nohighlight">\(0 &lt; \lambda _{1} &lt;\lambda _{2}\)</span>).</p>
+<p>Cara baca: semua lintasan menjauh dari origin. Lintasan keluar tangensial dengan eigenvektor lambat, lalu sejajar eigenvektor cepat.</p>
+<p><strong>x₁</strong> — Unstable node: semua lintasan menjauh dari origin.</p>
+<p><strong>Klasifikasi 3 — Saddle Point (paling penting untuk RCK)</strong> — Eigenvalues: kedua real, tanda berlawanan (<span class="math notranslate nohighlight">\(\lambda _{1} &lt;0 &lt; \lambda _{2}\)</span>).</p>
+<p>Cara baca: dua “manifold” istimewa lewat origin. Stable manifold (sepanjang eigenvektor dengan <span class="math notranslate nohighlight">\(\lambda &lt; 0\)</span>) → lintasan menuju origin. Unstable manifold (sepanjang eigenvektor dengan <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span>) → lintasan menjauh.</p>
+<p>Lintasan generik: datang dari arah stable manifold, curve dekat origin, terbang sepanjang unstable manifold.</p>
+<p><strong>x₁</strong> — Saddle point: stable manifold (hijau, menuju origin) dan unstable manifold (merah, menjauh). Lintasan biru: datang dari stable, terbang sepanjang unstable.</p>
+<p><strong>Klasifikasi 4 — Stable Spiral (Focus)</strong> — Eigenvalues: complex conjugate dengan real part negatif (<span class="math notranslate nohighlight">\(\lambda = \alpha \pm i\beta \alpha &lt; 0\)</span>,).</p>
+<p>Cara baca: lintasan spiral inward ke origin.</p>
+<p><strong>x₁</strong> — Stable spiral: lintasan spiral inward ke origin.</p>
+<p><strong>Klasifikasi 5 — Center</strong> — Eigenvalues: pure imaginary (<span class="math notranslate nohighlight">\(\lambda = \pm i\beta \alpha = 0\)</span>,).</p>
+<p>Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Marginal stable (Lyapunov stable tapi tidak asymptotic stable).</p>
+<p><strong>x₁</strong> — Center: lintasan adalah orbit konsentris di sekitar origin. Tidak konvergen, tidak diverge.</p>
+</section>
+<section id="konsep-6-algoritma-7-langkah-menggambar-phase-diagram">
+<h2>Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram<a class="headerlink" href="#konsep-6-algoritma-7-langkah-menggambar-phase-diagram" title="Link to this heading">#</a></h2>
+<p><em>Prosedur konkret yang dipakai berulang. Hafalkan urutannya.</em></p>
+<p><strong>Step 1.</strong> Hitung eigenvalues</p>
+<p>Pakai formula 2D: <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span>. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).</p>
+<p><strong>Step 2.</strong> Klasifikasi dari eigenvalues</p>
+<p>Trick cepat: kalau <span class="math notranslate nohighlight">\(det(A) &lt; 0\)</span> → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.</p>
+<p><strong>Step 3.</strong> Cari eigenvektor (kalau real eigenvalues)</p>
+<p>Solve <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span> untuk tiap eigenvalue. Identifikasi stable (eigenvalue negatif) dan unstable (eigenvalue positif) directions.</p>
+<p><strong>Step 4.</strong> Plot sumbu dan steady state</p>
+<p>Sumbu horizontal <span class="math notranslate nohighlight">\(x_{1}\)</span>, vertikal <span class="math notranslate nohighlight">\(x_{2}\)</span>. Tandai steady state (biasanya origin untuk sistem homogen) dengan titik.</p>
+<p><strong>Step 5.</strong> Gambar eigenvektor sebagai garis lurus</p>
+<p>Untuk node atau saddle: gambar garis lewat origin sepanjang tiap eigenvektor. Tambahkan panah:</p>
+<p>Eigenvalue negatif: panah menuju origin</p>
+<p>Eigenvalue positif: panah menjauh dari origin</p>
+<p>Untuk spiral: skip langkah ini (eigenvektor kompleks).</p>
+<p><strong>Step 6.</strong> Gambar lintasan tipikal</p>
+<p>Pilih 4-8 kondisi awal yang tersebar di phase plane. Gambar lintasan sesuai klasifikasi:</p>
+<p>Stable node: semua mendekat origin, sejajar eigenvektor lambat dekat origin</p>
+<p>Unstable node: semua menjauh, keluar tangensial eigenvektor lambat Saddle: datang sepanjang stable, terbang sepanjang unstable</p>
+<p>Stable spiral: spiral inward</p>
+<p><strong>Step 7.</strong> Cek dengan vector field</p>
+<p>Evaluasi <span class="math notranslate nohighlight">\(\dot{x}=Ax\)</span> di beberapa titik untuk verifikasi:</p>
+<p>Di <span class="math notranslate nohighlight">\((1, 0)\dot{x}\)</span>: = kolom pertama <span class="math notranslate nohighlight">\(A\)</span> Di <span class="math notranslate nohighlight">\((0, 1)\dot{x}\)</span>: = kolom kedua <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>Panah di tiap titik harus konsisten dengan klasifikasi.</p>
+<p><strong>Tabel klasifikasi dari <span class="math notranslate nohighlight">\(det\)</span> dan <span class="math notranslate nohighlight">\(tr\)</span></strong> — Saddle point (tidak peduli trace) — langsung jelas, <span class="math notranslate nohighlight">\(det(A) =\)</span></p>
+<div class="math notranslate nohighlight">
+\[ DET&lt;0 \]</div>
+<p><span class="math notranslate nohighlight">\(\lambda _{1}\lambda _{2} &lt;0\)</span> berarti tanda berlawanan</p>
+<p><span class="math notranslate nohighlight">\(DET&gt;0, TR&lt;0\)</span> Stable (node atau spiral, tergantung diskriminan)</p>
+<p><span class="math notranslate nohighlight">\(DET&gt;0, TR&gt;0\)</span> Unstable (node atau spiral)</p>
+<p><span class="math notranslate nohighlight">\(DET&gt;0, TR=0\)</span> Center (kalau diskriminan <span class="math notranslate nohighlight">\(&lt; 0\)</span>)</p>
+<p><strong>Diskriminan</strong> — <span class="math notranslate nohighlight">\(\Delta=\mathrm{tr}^{2}-4\det\)</span>: <span class="math notranslate nohighlight">\(\Delta&gt;0\)</span> → node (real distinct); <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span> → spiral atau center (complex); <span class="math notranslate nohighlight">\(\Delta=0\)</span> → repeated (improper node).</p>
+</section>
+<section id="konsep-7-preview-aplikasi-rck-saddle-path">
+<h2>Konsep 7 — Preview Aplikasi — RCK Saddle Path<a class="headerlink" href="#konsep-7-preview-aplikasi-rck-saddle-path" title="Link to this heading">#</a></h2>
+<p><em>Inilah tempat semua tools Bab 8 bertemu di growth theory.</em></p>
+<p><strong>Setup RCK</strong> — Sistem 2D dengan <span class="math notranslate nohighlight">\((k, c)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}\dot{k}&amp;=f(k)-(n+\delta)k-c \\ \dot{c}&amp;=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
+\end{split}\]</div>
+<p><strong>Nullcline RCK</strong> — <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(c = f(k) -(n + \delta)k\)</span> — kurva concav (karena concav) <span class="math notranslate nohighlight">\(f\)</span> <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(f(k) =^{'}\rho + n\)</span> — garis vertikal di <span class="math notranslate nohighlight">\(k = \bar{k}\)</span> (independent dari) <span class="math notranslate nohighlight">\(c\)</span></p>
+<p><em>Sketsa (PDF): phase diagram RCK di bidang <span class="math notranslate nohighlight">\((k,c)\)</span> — nullcline <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> vertikal dan <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> melengkung berpotongan di <span class="math notranslate nohighlight">\((\bar{k},\bar{c})\)</span>; saddle path mengarah tepat ke titik itu.</em></p>
+<p><em>Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah putus-putus) terbang menjauh.</em></p>
+<p><strong>Implikasi ekonomi</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Modal adalah state predetermined (<span class="math notranslate nohighlight">\(kk_{0}\)</span> diberikan). Konsumsi adalah control <span class="math notranslate nohighlight">\(c\)</span> (pilihan).</em></p>
+<p>Untuk tiap <span class="math notranslate nohighlight">\(k_{0}\)</span>, ada satu nilai <span class="math notranslate nohighlight">\(c_{0}\)</span> yang benar — yang persis di saddle path. Pilihan lain</p>
+<p><em>menyebabkan trajectory meledak.</em></p>
+<p>transversality condition (dibahas di Bab 11)</p>
+</div>
+<p><strong>Mengapa eigenvalue dan eigenvektor penting</strong> — Eigenvalue negatif → arah konvergen → saddle path</p>
+<p>Eigenvektor untuk eigenvalue negatif → arah saddle path dekat steady state Slope eigenvektor → slope policy function <span class="math notranslate nohighlight">\(c = c(k)\)</span> dekat steady state</p>
+<p>Magnitude eigenvalue → rate of convergence sepanjang saddle path</p>
+<p>Tanpa eigenvalue analysis, kita tidak bisa karakterisasi saddle path. Inilah inti analisis RCK.</p>
+</section>
+<section id="checklist-pemahaman-bab-8">
+<h2>Checklist Pemahaman Bab 8<a class="headerlink" href="#checklist-pemahaman-bab-8" title="Link to this heading">#</a></h2>
+<p><strong>Konsep</strong></p>
+<ul class="simple">
+<li><p>☐ Paham filosofi qualitative vs analytical approach</p></li>
+<li><p>☐ Bisa baca phase diagram 1D dari grafik <span class="math notranslate nohighlight">\(g(x)\)</span></p></li>
+<li><p>☐ Paham vector field di phase plane 2D</p></li>
+<li><p>☐ Paham stream lines tidak pernah berpotongan (Picard-Lindelöf)</p></li>
+<li><p>☐ Paham definisi nullcline dan apa artinya geometris</p></li>
+<li><p>☐ Paham steady state = perpotongan KEDUA nullcline</p></li>
+</ul>
+<p><strong>Klasifikasi (lima jenis)</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa identifikasi stable node dari eigenvalue</p></li>
+<li><p>☐ Bisa identifikasi unstable node</p></li>
+<li><p>☐ Bisa identifikasi saddle point (paling penting!)</p></li>
+<li><p>☐ Bisa identifikasi stable spiral</p></li>
+<li><p>☐ Bisa identifikasi center</p></li>
+<li><p>☐ Bisa gunakan trick <span class="math notranslate nohighlight">\(det &lt; 0\)</span> → saddle untuk klasifikasi cepat</p></li>
+</ul>
+<p><strong>Skill menggambar</strong></p>
+<ul class="simple">
+<li><p>☐ Bisa gambar sumbu dan steady state</p></li>
+<li><p>☐ Bisa gambar eigenvektor sebagai garis lurus dengan panah yang benar</p></li>
+<li><p>☐ Bisa gambar lintasan tipikal untuk tiap klasifikasi</p></li>
+<li><p>☐ Bisa cek konsistensi dengan vector field di beberapa titik</p></li>
+</ul>
+<p><strong>Aplikasi</strong></p>
+<ul class="simple">
+<li><p>☐ Paham nullcline RCK (<span class="math notranslate nohighlight">\(\dot{k}=0\)</span> kurva, <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> vertikal)</p></li>
+<li><p>☐ Paham saddle path = stable manifold di RCK</p></li>
+<li><p>☐ Paham mengapa hanya satu trajectory yang konvergen di RCK ✦✦✦</p></li>
+</ul>
+<div class="important admonition">
+<p class="admonition-title">Penutup</p>
+<p><strong>Tools I Selesai Sepenuhnya</strong></p>
+<p>Kini lengkap sudah lima alat utama</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p><em>Bab 3: ODE notation dan struktur Bab 4: Picard-Lindelöf — eksistensi dan keunikan solusi Bab 5: Steady state dan klasifikasi stabilitas Bab 6: Integrating factor untuk linear ODE Bab 7: Eigenvalue analysis untuk sistem linear Bab 8: Phase diagram visualisasi qualitative</em></p>
+</div>
+<p><strong>Yang menanti</strong> — Bab 9 — Solow-Swan: aplikasi pertama growth theory dengan tools yang sudah dikuasai</p>
+<p>Bab 10 — Theory and Measurement: empirics Solow-Swan</p>
+<p>Bab 11 — Optimal Control: dynamic optimization, transversality condition</p>
+<p>Bab 12 — RCK: tempat saddle path benar-benar penting</p>
+<p>Bab 14-15 — Endogenous Growth: Romer dan misallocation</p>
+<p>Fondasi matematisnya kini solid. Semua bab selanjutnya akan terasa lebih intuitif karena tools sudah lengkap.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab07-solusi-analitis-2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 7 — Solusi Analitis II</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab09-solow-swan.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 9 — Solow-Swan</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-filosofi-qualitative-approach">Konsep 1 — Filosofi Qualitative Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-phase-diagram-1d-section-8-1">Konsep 2 — Phase Diagram 1D (Section 8.1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-phase-diagram-2d-vector-field">Konsep 3 — Phase Diagram 2D — Vector Field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-nullcline-alat-visual-paling-powerful">Konsep 4 — Nullcline — Alat Visual Paling Powerful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-lima-klasifikasi-phase-diagram-2d">Konsep 5 — Lima Klasifikasi Phase Diagram 2D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-algoritma-7-langkah-menggambar-phase-diagram">Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-preview-aplikasi-rck-saddle-path">Konsep 7 — Preview Aplikasi — RCK Saddle Path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-pemahaman-bab-8">Checklist Pemahaman Bab 8</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

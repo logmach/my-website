@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 14 — R&amp;D I (Romer) &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab14-romer';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 15 — R&amp;D II (Peters)" href="bab15-peters.html" />
+    <link rel="prev" title="Bab 12 — Neoclassical Growth (RCK)" href="bab12-rck.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab14-romer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab14-romer.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 14 — R&D I (Romer)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-tiga-insight-romer-nobel-2018">Konsep 1 — Tiga Insight Romer (Nobel 2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-lima-micro-building-blocks">Konsep 2 — Lima Micro Building Blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-struktur-lab-equipment-model">Konsep 3 — Struktur Lab Equipment Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representative-household">14.3.1.1 · Representative Household</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-1-14-2-hamiltonian-euler">Exercise 14.1-14.2 — Hamiltonian &amp; Euler</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-good-firm">14.3.1.2 · Final Good Firm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-3-foc-income-shares">Exercise 14.3 — FOC (income shares)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-4-demand-curve-price-index">Exercise 14.4 — Demand curve &amp; price index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-goods-firms">14.3.1.3 · Intermediate Goods Firms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-5-markup-pricing">Exercise 14.5 — Markup pricing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-6-profit-proporsional-revenue">Exercise 14.6 — Profit proporsional revenue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-7-hjb-firm-value">Exercise 14.7 — HJB firm value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#competitive-equilibrium">14.3.1.6 · Competitive Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-8-14-10-crs-privat-irs-agregat">Exercise 14.8-14.10. CRS privat, IRS agregat.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-8-14-9-profit-output">Exercise 14.8-14.9 — Profit &amp; output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-10-mekanisme-menahan-diminishing-returns">Exercise 14.10 — Mekanisme menahan diminishing returns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balanced-growth-path">14.3.1.7 · Balanced-Growth Path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-11-14-14-no-transition-dynamics">Exercise 14.11-14.14. No transition dynamics.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-11-interest-rate">Exercise 14.11 — Interest rate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-12-14-13-ode-system-growth">Exercise 14.12-14.13 — ODE system &amp; growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-14-no-entry-case">Exercise 14.14 — No entry case</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-implications">14.3.1.8 · Model Implications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-15-scale-effects-no-transition">Exercise 14.15. Scale effects &amp; no transition.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-15-didukung-data">Exercise 14.15 — Didukung data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-16-first-welfare-gagal">Exercise 14.16. First Welfare gagal.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-16-dua-margin-inefisiensi">Exercise 14.16 — Dua margin inefisiensi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-spillovers-romer-1990">14.3.2 · Knowledge Spillovers (Romer 1990)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-14">Self-Assessment Bab 14</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-14-r-d-i-romer">
+<h1>Bab 14 — R&amp;D I (Romer)<a class="headerlink" href="#bab-14-r-d-i-romer" title="Link to this heading">#</a></h1>
+<p>Bab 14 membuka kotak hitam teknologi: pertumbuhan tidak lagi eksogen, melainkan hasil investasi R&amp;D yang disengaja — model <em>lab equipment</em> Rivera-Batiz &amp; Romer (1991). Perangkat matematisnya sama dengan Bab 12 (Hamiltonian, Euler, BGP); yang baru adalah struktur ekonominya: kompetisi monopolistik, knowledge nonrivalry, dan alasan First Welfare Theorem gagal di sini.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sebagian notasi matematis pada bab ini direkonstruksi dari konteks, karena berkas sumber tidak menyimpan lapisan teks untuk formula-formulanya. Persamaan kunci telah dipulihkan; beberapa detail turunan disajikan secara naratif.</p>
+</div>
+<section id="konsep-1-tiga-insight-romer-nobel-2018">
+<h2>Konsep 1 — Tiga Insight Romer (Nobel 2018)<a class="headerlink" href="#konsep-1-tiga-insight-romer-nobel-2018" title="Link to this heading">#</a></h2>
+<p><em>Fondasi filosofis mengapa firm menghasilkan ide baru.</em></p>
+<p><strong>1. Non-rival</strong> — Ide dipakai berkali-kali tanpa berkurang, tapi partially excludable (paten) — beda dari public good murni.</p>
+<p><strong>2. IRS Agregat</strong> — CRS pada input privat, tapi increasing returns agregat karena penciptaan ide.</p>
+<p><strong>3. Market power</strong> — Butuh monopoli rent untuk menutup fixed cost R&amp;D.</p>
+<p>R&amp;D. Tidak bisa perfect competition.</p>
+<p><strong>Dua jenis efek R&amp;D</strong> — Expanding variety — lebih banyak jenis produk.</p>
+<p><strong>Horizontal (bab 14)</strong> — Romer 1990.</p>
+<p>Quality ladder — produk lebih baik.</p>
+<p><strong>Vertical (bab 15)</strong> — Schumpeterian.</p>
+</section>
+<section id="konsep-2-lima-micro-building-blocks">
+<h2>Konsep 2 — Lima Micro Building Blocks<a class="headerlink" href="#konsep-2-lima-micro-building-blocks" title="Link to this heading">#</a></h2>
+<p><em>Mikroekonomi inovasi — fondasi sebelum model GE.</em></p>
+<p><strong>BB1 — Markup Pricing</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: mungkinkah markup negatif?</p>
+<p>Benar! Markup negatif = situasi tidak valid. Monopoli tidak pernah beroperasi di region inelastis karena di sana marginal revenue negatif (<span class="math notranslate nohighlight">\(MR&lt;0\)</span>). Monopoli selalu di region elastis, di mana bisa sama dengan.</p>
+</div>
+<p><strong>Hubungan MR-elasticity</strong></p>
+<p><strong>Step 1.</strong> MR dari TR = pq (product rule)</p>
+<p><strong>Step 2.</strong> Substitusi elasticity</p>
+<p><strong>Step 3.</strong> Set MR = MC → markup</p>
+<p>Lerner index. CES: selalu → markup valid.</p>
+<p><strong>BB2 — Appropriability Effect</strong> — Social surplus inovasi (planner price at MC):</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: jika biaya masuk lebih besar dari profit, mengapa firm enggan berinovasi — bukankah tetap untung?</p>
+<p>Firm tidak malas — tetap untung dan tetap inovasi. Tapi karena firm hanya capture sebagian nilai (profit &lt; social value), ada zona abu-abu: inovasi dengan tidak terjadi padahal bernilai sosial. Inilah under- investment (bukan no investment).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: bukankah berarti firm tidak punya profit?</p>
+<p>adalah valuation planner (hipotetis), bukan deskripsi firm operate. Pricing at MC → margin firm = 0, tapi surplus berpindah ke konsumen (tidak hilang). “Cost reduction” di = penghematan resource sosial, bukan profit firm. Di dunia riil, kalau firm dipaksa price at MC, firm rugi → tidak inovasi. Inilah dilema: efisiensi statis vs insentif inovasi.</p>
+</div>
+<p><strong>BB3 — Surplus Ordering</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(p=MC\)</span> (planner)</strong> — no deadweight loss, surplus maksimal.</p>
+<p><strong><span class="math notranslate nohighlight">\(p\)</span> rendah (drastic)</strong> — DWL kecil.</p>
+<p><strong>(limit)</strong> — Price tinggi, DWL besar Dua sumber gap: deadweight loss (pricing) + consumer surplus bocor (appropriability). Dua sumber ini → dua margin inefisiensi → dua instrumen kebijakan.</p>
+<p><strong>BB4 — Replacement Effect (Arrow)</strong> — Incumbent kurang incentive (kanibal profit lama). Inovasi cenderung dari entrant.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Romer (Bab 14) TIDAK punya replacement effect — varietas baru tidak gantikan lama (horizontal). Baru relevan Bab 15 (vertical/ quality ladder).</p>
+</div>
+<p><strong>BB5 — Business-Stealing Effect</strong> — Bisa over-investment: entrant ignore loss incumbent (profit transfer bukan nilai baru).</p>
+<p><strong>Appropriability</strong> — Under-investment (CS bocor)</p>
+<p><strong>Business-stealing</strong> — Over-investment (ignore loss incumbent)</p>
+<p>Net effect ambiguous. Di Romer (horizontal), appropriability dominan → under- investment.</p>
+</section>
+<section id="konsep-3-struktur-lab-equipment-model">
+<h2>Konsep 3 — Struktur Lab Equipment Model<a class="headerlink" href="#konsep-3-struktur-lab-equipment-model" title="Link to this heading">#</a></h2>
+<p><em>Tiga lapis: household, final good, intermediate. Tanpa modal fisik.</em></p>
+<p><strong>Tiga lapis (contoh HP)</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Klarifikasi: HP adalah final good, bukan intermediate. Komponen HP (chip, layar, sensor) adalah intermediate goods yang bervariasi.</p>
+<p><strong>Final good</strong> — Barang jadi (dikonsumsi) — analogi: HP utuh. Diproduksi firm kompetitif dari labor + basket intermediate.</p>
+<p><strong>Intermediate</strong> — Komponen (chip, layar). Tiap jenis monopoli (paten). R&amp;D horizontal = jenis komponen baru.</p>
+<p><strong>R&amp;D</strong> — Pakai final good untuk ciptakan blueprint baru → <span class="math notranslate nohighlight">\(N\)</span> naik.</p>
+</div>
+<p><strong>Mengapa tidak ada modal fisik</strong> — Untuk isolasi efek R&amp;D. Growth murni dari penambahan varietas, bukan akumulasi modal.</p>
+<p><strong>Final good sebagai numeraire, tiga penggunaan</strong> — Final good serbaguna (numeraire): konsumsi, input intermediate, input R&amp;D (lab equipment).</p>
+</section>
+<section id="representative-household">
+<h2>14.3.1.1 · Representative Household<a class="headerlink" href="#representative-household" title="Link to this heading">#</a></h2>
+<p><em>OCP identik dengan RCK — Euler equation sama.</em></p>
+<p><strong>Portfolio dan OCP</strong> — Household own saham intermediate firms. Balanced portfolio → return non-stochastic.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pengingat: CRRA punya Arrow-Pratt konstan (dipakai agar BGP exist). Stochastic = acak; balanced portfolio → diversifikasi → return non-stochastic → deterministic optimal control cukup.</p>
+</div>
+<section id="exercise-14-1-14-2-hamiltonian-euler">
+<h3>Exercise 14.1-14.2 — Hamiltonian &amp; Euler<a class="headerlink" href="#exercise-14-1-14-2-hamiltonian-euler" title="Link to this heading">#</a></h3>
+<p><strong>Step 1</strong> — Maximality:</p>
+<p><strong>Step 2.</strong> Log + turunkan, substitusi adjoint</p>
+<p><strong>Step 3.</strong> Euler (14.3)</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: bagaimana membuktikan TVC (14.2) terpenuhi?</p>
+<p>TVC bukan diturunkan dari nol — ia necessary condition PMP infinite- horizon. Dari adjoint, substitusi ke TVC umum → (14.2). Di BGP: integrand jika.</p>
+</div>
+</section>
+</section>
+<section id="final-good-firm">
+<h2>14.3.1.2 · Final Good Firm<a class="headerlink" href="#final-good-firm" title="Link to this heading">#</a></h2>
+<p><em>Kompetitif, dua tahap (two-stage budgeting).</em></p>
+<p><strong>Production &amp; CES basket</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul tentang CES, dan cost minimization:</p>
+<p>CES = Constant Elasticity of Substitution,. Dipakai untuk love-of- variety + markup konstan. = normalisasi aljabar bersih. Cost minimization (tahap 2): firm pilih komposisi termurah untuk target → menghasilkan demand curve.</p>
+</div>
+<section id="exercise-14-3-foc-income-shares">
+<h3>Exercise 14.3 — FOC (income shares)<a class="headerlink" href="#exercise-14-3-foc-income-shares" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> FOC terhadap M</p>
+<p><strong>Step 2.</strong> FOC terhadap L</p>
+<p>Income shares = output elasticities (Cobb-Douglas). Share berjumlah 1 → zero profit (kompetitif). Itulah mengapa household tidak own final good firm.</p>
+</section>
+<section id="exercise-14-4-demand-curve-price-index">
+<h3>Exercise 14.4 — Demand curve &amp; price index<a class="headerlink" href="#exercise-14-4-demand-curve-price-index" title="Link to this heading">#</a></h3>
+<p><strong>Step 1</strong> — Lagrangian cost min; multiplier = shadow price (= marginal cost basket).</p>
+<p><strong>Step 2.</strong> FOC + chain rule lewat price index</p>
+<p><strong>Step 3.</strong> Demand curve (14.10)</p>
+<p><strong>Step 4.</strong> Price index (14.11), substitusi demand ke</p>
+<p>Dengan konstan: — turun saat naik (kunci Exercise 14.10).</p>
+<p><strong>Tools — menurunkan terhadap integral</strong></p>
+<p><em>Tiga situasi penting di Bab 14 — functional derivative terhadap integral.</em></p>
+<p><strong>A — Elemen</strong> — Seperti penjumlahan: hanya titik yang relevan (Exercise 14.4).as bawah. (HJB*</p>
+<p><strong>B — Batas</strong> — Turunan terhadap batas integral: turunan “masuk” ke integran (Exercise 14.7).</p>
+<p><strong>C — Parameter</strong> — Turunan terhadap parameter di dalam integran (HJB: faktor diskon).</p>
+</section>
+</section>
+<section id="intermediate-goods-firms">
+<h2>14.3.1.3 · Intermediate Goods Firms<a class="headerlink" href="#intermediate-goods-firms" title="Link to this heading">#</a></h2>
+<p><em>Monopoli per varietas. Markup pricing.</em></p>
+<section id="exercise-14-5-markup-pricing">
+<h3>Exercise 14.5 — Markup pricing<a class="headerlink" href="#exercise-14-5-markup-pricing" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> Profit, substitusi demand</p>
+<p><strong>Step 2.</strong> FOC terhadap <span class="math notranslate nohighlight">\(x_{j}\)</span>, solve harga optimal</p>
+<p>Markup konstan dari elastisitas CES: <span class="math notranslate nohighlight">\(p=\dfrac{1}{\alpha}\)</span> — markup <span class="math notranslate nohighlight">\(1/\alpha\)</span> di atas <span class="math notranslate nohighlight">\(MC=1\)</span>.</p>
+</section>
+<section id="exercise-14-6-profit-proporsional-revenue">
+<h3>Exercise 14.6 — Profit proporsional revenue<a class="headerlink" href="#exercise-14-6-profit-proporsional-revenue" title="Link to this heading">#</a></h3>
+<p>Karena <span class="math notranslate nohighlight">\(p=MC/\alpha\)</span>, profit per varietas <span class="math notranslate nohighlight">\(\pi=(1-\alpha)\,p\,x\)</span> — proporsional terhadap revenue, dengan profit share <span class="math notranslate nohighlight">\(1-\alpha\)</span>.</p>
+</section>
+<section id="exercise-14-7-hjb-firm-value">
+<h3>Exercise 14.7 — HJB firm value<a class="headerlink" href="#exercise-14-7-hjb-firm-value" title="Link to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Jebakan umum: tertukar antara CV (current value) dan PV (present value).</p>
+<p>Firm value = present value aliran profit, didiskon dengan market rate (bukan subjective). Tidak ada Hamiltonian/adjoint/CV-PV untuk firm — masalahnya statis. HJB (14.16) adalah asset pricing (no-arbitrage), bukan HJB optimal control. CV/PV Hamiltonian hanya untuk household (OCP dinamis dengan).</p>
+</div>
+<p><strong>Step 1.</strong> Turunkan nilai firm terhadap <span class="math notranslate nohighlight">\(t\)</span>: batas bawah (situasi B) memberi suku <span class="math notranslate nohighlight">\(-\pi\)</span>; faktor diskon (situasi C) memberi suku <span class="math notranslate nohighlight">\(rV\)</span>.</p>
+<p><strong>Step 2.</strong> HJB (14.16)</p>
+<p>Asset pricing: required return = dividend + capital gain.</p>
+<p><strong>14.3.1.4-5 · R&amp;D Investment &amp; Free Entry</strong></p>
+<p><em>Mesin pertumbuhan — bagaimana N ditentukan.</em></p>
+<p><strong>R&amp;D investment</strong> — 1 unit final good → blueprint dengan Poisson rate. Stochastic di mikro, tapi law of large numbers → agregat deterministic. Paten perpetual → monopoli.</p>
+<p><strong>Free entry</strong> — Cost entry <span class="math notranslate nohighlight">\(=1\)</span> (dinormalisasi), benefit <span class="math notranslate nohighlight">\(=V\)</span> (present value profit). Complementary slackness:</p>
+<p>Entry positif → <span class="math notranslate nohighlight">\(V=1\)</span> → firm value terpaku:</p>
+<p>konstan, inversely proportional.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Free entry memaksa private value. Tapi social value lebih tinggi (appropriability) → entry kurang dari optimal (extensive margin).</p>
+</div>
+</section>
+</section>
+<section id="competitive-equilibrium">
+<h2>14.3.1.6 · Competitive Equilibrium<a class="headerlink" href="#competitive-equilibrium" title="Link to this heading">#</a></h2>
+<section id="exercise-14-8-14-10-crs-privat-irs-agregat">
+<h3>Exercise 14.8-14.10. CRS privat, IRS agregat.<a class="headerlink" href="#exercise-14-8-14-10-crs-privat-irs-agregat" title="Link to this heading">#</a></h3>
+</section>
+<section id="exercise-14-8-14-9-profit-output">
+<h3>Exercise 14.8-14.9 — Profit &amp; output<a class="headerlink" href="#exercise-14-8-14-9-profit-output" title="Link to this heading">#</a></h3>
+<p>Dengan normalisasi harga final good <span class="math notranslate nohighlight">\(=1\)</span>:</p>
+<p><strong>Demand</strong> — <span class="math notranslate nohighlight">\(x_{j}=x\)</span>: konstan, proporsional populasi.</p>
+<p><strong>Profit (14.21)</strong> — <span class="math notranslate nohighlight">\(\pi=(1-\alpha)\,p\,x\)</span>: konstan.</p>
+<p><strong>Output &amp; basket</strong> — <span class="math notranslate nohighlight">\(Y\)</span> linear dalam <span class="math notranslate nohighlight">\(N\)</span> (AN-style); basket intermediate simetris.</p>
+<p><strong>CRS privat vs IRS agregat</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pemahaman yang tepat: bukan “satu vs semua varietas”, tapi given (firm) vs endogen (ekonomi).</p>
+<p>Private CRS: firm individual, given, CRS dalam — gandakan input firm → output ×2. Aggregate IRS: ekonomi, endogen, IRS dalam — gandakan keduanya → output ×4. Sumber IRS: non-rival, dimanfaatkan semua firm.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>“AN” bukan “AK”: linearitas adalah hasil equilibrium (CRS privat + IRS agregat dari non-rival ideas), bukan asumsi primitif seperti AK. Aggregate IRS → convexity gagal → First Welfare gagal.</p>
+</div>
+</section>
+<section id="exercise-14-10-mekanisme-menahan-diminishing-returns">
+<h3>Exercise 14.10 — Mekanisme menahan diminishing returns<a class="headerlink" href="#exercise-14-10-mekanisme-menahan-diminishing-returns" title="Link to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Kritik tajam: pertanyaan yang tepat adalah “mengapa marginal product tidak menuju nol”, dan analisis kurvanya saat <span class="math notranslate nohighlight">\(A\)</span> tumbuh harus dituntaskan.</p>
+</div>
+<p><strong>Step 1</strong> — Tiap varietas mendapat proporsi lebih kecil saat <span class="math notranslate nohighlight">\(N\)</span> naik — TAPI <span class="math notranslate nohighlight">\(Y\)</span> tetap naik: via varietas baru, bukan menumpuk varietas lama.</p>
+<p><strong>Step 2.</strong> Marginal product: downward-sloping</p>
+<p>Untuk <span class="math notranslate nohighlight">\(N\)</span> fixed: kurva marginal product fungsi <span class="math notranslate nohighlight">\(x\)</span> saja (tidak bergeser).</p>
+<p><strong>Step 3.</strong> <span class="math notranslate nohighlight">\(MP\)</span> turun saat <span class="math notranslate nohighlight">\(x\)</span> naik</p>
+<p>Marginal product dan harga turun dengan rate sama → FOC selalu match.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Mengapa marginal product tidak ke nol: tumbuh lewat varietas baru (dimensi baru), bukan menumpuk varietas lama. Analogi: tambah jenis bumbu baru, bukan menumpuk garam. Net: naik linear → sustained growth. Variety expansion mengalahkan diminishing returns.</p>
+</div>
+</section>
+</section>
+<section id="balanced-growth-path">
+<h2>14.3.1.7 · Balanced-Growth Path<a class="headerlink" href="#balanced-growth-path" title="Link to this heading">#</a></h2>
+<section id="exercise-14-11-14-14-no-transition-dynamics">
+<h3>Exercise 14.11-14.14. No transition dynamics.<a class="headerlink" href="#exercise-14-11-14-14-no-transition-dynamics" title="Link to this heading">#</a></h3>
+</section>
+<section id="exercise-14-11-interest-rate">
+<h3>Exercise 14.11 — Interest rate<a class="headerlink" href="#exercise-14-11-interest-rate" title="Link to this heading">#</a></h3>
+<p><strong>Step 1.</strong> Free entry: <span class="math notranslate nohighlight">\(V=1\)</span> konstan → <span class="math notranslate nohighlight">\(\dot{V}=0\)</span>; profit konstan.</p>
+<p><strong>Step 2.</strong> Substitusi ke HJB</p>
+<p>Interest rate konstan → growth konstan dari awal → no transition dynamics.</p>
+</section>
+<section id="exercise-14-12-14-13-ode-system-growth">
+<h3>Exercise 14.12-14.13 — ODE system &amp; growth<a class="headerlink" href="#exercise-14-12-14-13-ode-system-growth" title="Link to this heading">#</a></h3>
+<p>Sistem partially-coupled: independen; tergantung.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Hasil kuncinya: kebijakan berbentuk <em>state feedback linear</em>, dan semua variabel utama tumbuh dengan rate yang sama:</p>
+<p><strong>Jebakan Umum</strong></p>
+<p>Detail koefisien bergantung pada normalisasi spesifik yang dipakai; yang pasti benar adalah bentuk umum di atas.</p>
+</div>
+</section>
+<section id="exercise-14-14-no-entry-case">
+<h3>Exercise 14.14 — No entry case<a class="headerlink" href="#exercise-14-14-no-entry-case" title="Link to this heading">#</a></h3>
+<p>Growth butuh. Jika: no entry, konstan, living standard stagnan:</p>
+<p>Threshold. Policy bisa picu growth (naikkan, jaga).</p>
+</section>
+</section>
+<section id="model-implications">
+<h2>14.3.1.8 · Model Implications<a class="headerlink" href="#model-implications" title="Link to this heading">#</a></h2>
+<section id="exercise-14-15-scale-effects-no-transition">
+<h3>Exercise 14.15. Scale effects &amp; no transition.<a class="headerlink" href="#exercise-14-15-scale-effects-no-transition" title="Link to this heading">#</a></h3>
+<p><strong>Scale effect</strong> — tergantung. Negara besar tumbuh cepat (pasar besar → profit besar → R&amp;D banyak).</p>
+</section>
+<section id="exercise-14-15-didukung-data">
+<h3>Exercise 14.15 — Didukung data?<a class="headerlink" href="#exercise-14-15-didukung-data" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Strong scale effect TIDAK didukung data: negara kecil (Singapura, HK, Korea) tumbuh cepat; growth dunia tidak accelerating dengan populasi. Semi-endogenous (Jones 1995) mengaitkan growth ke population growth, bukan level — lebih realistis. Yang relevan mungkin ukuran pasar terintegrasi, bukan populasi mentah.</p>
+</div>
+<p><strong>No transition dynamics</strong> — konstan dari → langsung BGP. Beda Solow/RCK. Tidak menangkap konvergensi empiris (kelemahan AK-style).</p>
+<p><strong>14.3.1.9-10 · Planner &amp; Policy</strong></p>
+</section>
+<section id="exercise-14-16-first-welfare-gagal">
+<h3>Exercise 14.16. First Welfare gagal.<a class="headerlink" href="#exercise-14-16-first-welfare-gagal" title="Link to this heading">#</a></h3>
+</section>
+<section id="exercise-14-16-dua-margin-inefisiensi">
+<h3>Exercise 14.16 — Dua margin inefisiensi<a class="headerlink" href="#exercise-14-16-dua-margin-inefisiensi" title="Link to this heading">#</a></h3>
+<p><strong>Intensive margin</strong> — Monopoly pricing → <span class="math notranslate nohighlight">\(x_{j}\)</span> per varietas terlalu rendah (BB1, BB3).</p>
+<p><strong>Extensive margin</strong> — Appropriability → jumlah varietas <span class="math notranslate nohighlight">\(N\)</span> terlalu sedikit (BB2).</p>
+<p>Planner: pakai intermediate lebih banyak (price at MC) + menilai R&amp;D lebih tinggi (internalize CS) → tumbuh lebih cepat.</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>First Welfare gagal karena aggregate IRS + monopoli + appropriability. Beda RCK (convexity terpenuhi, First Welfare berlaku).</p>
+</div>
+<p><strong>Section 14.3.1.10 — Policy (Tinbergen)</strong> — Dua distorsi → dua instrumen:</p>
+<p><strong>Intensive</strong> — Subsidi intermediate inputs → <span class="math notranslate nohighlight">\(x\)</span> naik ke optimal.</p>
+<p><strong>Extensive</strong> — Subsidi R&amp;D → <span class="math notranslate nohighlight">\(\dot{N}\)</span> naik ke optimal.</p>
+<p>Satu instrumen tidak cukup — butuh keduanya (prinsip Tinbergen).</p>
+</section>
+</section>
+<section id="knowledge-spillovers-romer-1990">
+<h2>14.3.2 · Knowledge Spillovers (Romer 1990)<a class="headerlink" href="#knowledge-spillovers-romer-1990" title="Link to this heading">#</a></h2>
+<p><em>Ide diproduksi dengan human capital langka.</em></p>
+<p><strong>Lab Equipment</strong> — R&amp;D pakai final good (reproducible):</p>
+<p>R&amp;D pakai human capital langka + spillover:</p>
+<p><strong>Romer 1990</strong> — Spillover eksplisit (di RHS): stok ide membuat R&amp;D lebih produktif (“standing on shoulders”). Trade-off alokasi. Scale effect tetap ada. Kesamaan: horizontal, monopoli, First Welfare gagal, appropriability.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Catatan untuk 14.3.2 memang ringkas — porsi utama bab ini adalah model Lab Equipment (dibahas lengkap enam belas exercise).</p>
+<p><strong>Sintesis</strong></p>
+</div>
+<p><strong>Perbandingan BGP: Solow, RCK, Endogenous</strong></p>
+<p><em>Evolusi pemikiran growth.</em></p>
+<p><strong>Solow</strong> — Growth eksogen, saving konstan, ada transition (konvergensi). Black box.</p>
+<p><strong>RCK</strong> — Growth eksogen, saving optimal, ada transition (saddle path). First Welfare berlaku.</p>
+<p>Growth endogen, no transition (langsung BGP).</p>
+<p><strong>Endogenous</strong> — First Welfare gagal. Policy → growth rate.</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Evolusi: Solow (growth dari akumulasi modal, mekanis) → RCK (saving optimal, growth eksogen) → Endogenous (buka black box, growth dari R&amp;D, kebijakan matters). Endogenous tidak punya transition karena struktur linear (AN), tidak ada diminishing returns.</p>
+<p><strong>Checklist</strong></p>
+</div>
+</section>
+<section id="self-assessment-bab-14">
+<h2>Self-Assessment Bab 14<a class="headerlink" href="#self-assessment-bab-14" title="Link to this heading">#</a></h2>
+<p><em>Cek pemahaman.</em></p>
+<p><strong>Building blocks</strong></p>
+<ul class="simple">
+<li><p>☐ Tiga insight Romer (non-rival, IRS, market power)</p></li>
+<li><p>☐ BB1 markup, MR-elasticity, markup negatif jika</p></li>
+<li><p>☐ BB2 appropriability, under-investment, valuation planner</p></li>
+<li><p>☐ BB3 surplus ordering, dua sumber gap (DWL + CS bocor)</p></li>
+<li><p>☐ BB4 replacement (Arrow), tidak relevan Romer</p></li>
+<li><p>☐ BB5 business-stealing, over-investment</p></li>
+</ul>
+<p><strong>Struktur &amp; household</strong></p>
+<ul class="simple">
+<li><p>☐ Tiga lapis (final good vs intermediate, contoh HP)</p></li>
+<li><p>☐ CRRA, stochastic, balanced portfolio</p></li>
+<li><p>☐ Exercise 14.1-14.2 Hamiltonian, Euler, TVC</p></li>
+</ul>
+<p><strong>Firms</strong></p>
+<ul class="simple">
+<li><p>☐ Exercise 14.3 income shares, zero profit</p></li>
+<li><p>☐ Exercise 14.4 demand curve, price index</p></li>
+<li><p>☐ Turunan integral (A elemen, B batas, C parameter)</p></li>
+<li><p>☐ Exercise 14.5 markup pricing</p></li>
+<li><p>☐ Exercise 14.6 profit proporsional revenue</p></li>
+<li><p>☐ Exercise 14.7 HJB asset pricing (CV/PV clarification)</p></li>
+</ul>
+<p><strong>R&amp;D &amp; equilibrium</strong></p>
+<ul class="simple">
+<li><p>☐ R&amp;D, free entry</p></li>
+<li><p>☐ Exercise 14.8-14.9 profit, output AN</p></li>
+<li><p>☐ CRS privat vs IRS agregat (given vs endogen)</p></li>
+<li><p>☐ Exercise 14.10 mekanisme menahan diminishing returns</p></li>
+</ul>
+<p><strong>BGP &amp; planner</strong></p>
+<ul class="simple">
+<li><p>☐ Exercise 14.11</p></li>
+<li><p>☐ Exercise 14.12-14.13 ODE,</p></li>
+<li><p>☐ Exercise 14.14 no entry, stagnan</p></li>
+<li><p>☐ Exercise 14.15 scale effect tidak didukung data</p></li>
+<li><p>☐ Exercise 14.16 dua margin (intensive, extensive)</p></li>
+<li><p>☐ Policy: dua instrumen (Tinbergen)</p></li>
+<li><p>☐ Romer 1990 (human capital, spillover)</p></li>
+<li><p>☐ Perbandingan BGP Solow/RCK/Endogenous</p></li>
+</ul>
+<p>✦ ✦ ✦</p>
+<p><strong>Review Bab 14 — R&amp;D I: Horizontal Endogenous Growth</strong> — Economic Growth Personal Study Notes · Lab Equipment Model</p>
+<p>Membuka black box · Jembatan ke Schumpeterian (Bab 15)</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab12-rck.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 12 — Neoclassical Growth (RCK)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab15-peters.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 15 — R&amp;D II (Peters)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-tiga-insight-romer-nobel-2018">Konsep 1 — Tiga Insight Romer (Nobel 2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-lima-micro-building-blocks">Konsep 2 — Lima Micro Building Blocks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-struktur-lab-equipment-model">Konsep 3 — Struktur Lab Equipment Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representative-household">14.3.1.1 · Representative Household</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-1-14-2-hamiltonian-euler">Exercise 14.1-14.2 — Hamiltonian &amp; Euler</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-good-firm">14.3.1.2 · Final Good Firm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-3-foc-income-shares">Exercise 14.3 — FOC (income shares)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-4-demand-curve-price-index">Exercise 14.4 — Demand curve &amp; price index</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intermediate-goods-firms">14.3.1.3 · Intermediate Goods Firms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-5-markup-pricing">Exercise 14.5 — Markup pricing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-6-profit-proporsional-revenue">Exercise 14.6 — Profit proporsional revenue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-7-hjb-firm-value">Exercise 14.7 — HJB firm value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#competitive-equilibrium">14.3.1.6 · Competitive Equilibrium</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-8-14-10-crs-privat-irs-agregat">Exercise 14.8-14.10. CRS privat, IRS agregat.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-8-14-9-profit-output">Exercise 14.8-14.9 — Profit &amp; output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-10-mekanisme-menahan-diminishing-returns">Exercise 14.10 — Mekanisme menahan diminishing returns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#balanced-growth-path">14.3.1.7 · Balanced-Growth Path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-11-14-14-no-transition-dynamics">Exercise 14.11-14.14. No transition dynamics.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-11-interest-rate">Exercise 14.11 — Interest rate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-12-14-13-ode-system-growth">Exercise 14.12-14.13 — ODE system &amp; growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-14-no-entry-case">Exercise 14.14 — No entry case</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-implications">14.3.1.8 · Model Implications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-15-scale-effects-no-transition">Exercise 14.15. Scale effects &amp; no transition.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-15-didukung-data">Exercise 14.15 — Didukung data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-16-first-welfare-gagal">Exercise 14.16. First Welfare gagal.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-16-dua-margin-inefisiensi">Exercise 14.16 — Dua margin inefisiensi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-spillovers-romer-1990">14.3.2 · Knowledge Spillovers (Romer 1990)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-14">Self-Assessment Bab 14</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

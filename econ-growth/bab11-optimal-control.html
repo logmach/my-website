@@ -1,0 +1,1475 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bab 11 — Optimal Control &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/bab11-optimal-control';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bab 12 — Neoclassical Growth (RCK)" href="bab12-rck.html" />
+    <link rel="prev" title="Bab 10 — Teori &amp; Pengukuran" href="bab10-teori-pengukuran.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sintesis.html">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/bab11-optimal-control.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/bab11-optimal-control.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bab 11 — Optimal Control</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-bab-11-dalam-kursus">Konsep 1 — Posisi Bab 11 dalam Kursus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-11-1-setup-optimal-control-problem">Konsep 2 — Section 11.1 — Setup Optimal Control Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-11-2-bellman-s-principle-of-optimality">Konsep 3 — Section 11.2 — Bellman’s Principle of Optimality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-section-11-3-hjb-equation-sufficient">Konsep 4 — Section 11.3 — HJB Equation (Sufficient)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-11-1-hjb-sufficiency">Theorem 11.1 — HJB Sufficiency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-section-11-4-necessary-conditions">Konsep 5 — Section 11.4 — Necessary Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-11-5-pontryagin-maximum-principle">Konsep 6 — Section 11.5 — Pontryagin Maximum Principle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-1-adjoint-equation-11-15">Kondisi 1 — Adjoint equation (11.15)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-2-transversality-11-16">Kondisi 2 — Transversality (11.16)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-3-maximality-11-17">Kondisi 3 — Maximality (11.17)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-4-maximized-hamiltonian-11-18-dan-envelope-11-19">Kondisi 4 — Maximized Hamiltonian (11.18) dan envelope (11.19)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-section-11-6-duality-dan-mangasarian-sufficiency">Konsep 7 — Section 11.6 — Duality dan Mangasarian Sufficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-11-7-infinite-horizon">Konsep 8 — Section 11.7 — Infinite Horizon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-9-exercise-11-1-linear-quadratic-regulator">Konsep 9 — Exercise 11.1 — Linear Quadratic Regulator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-10-exercise-11-3-finite-horizon-ramsey">Konsep 10 — Exercise 11.3 — Finite-Horizon Ramsey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-11">Self-Assessment Bab 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-1-lqr">Exercise 11.1 (LQR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-3-finite-ramsey">Exercise 11.3 (Finite Ramsey)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bab-11-optimal-control">
+<h1>Bab 11 — Optimal Control<a class="headerlink" href="#bab-11-optimal-control" title="Link to this heading">#</a></h1>
+<p>Bab 11 adalah Tools II — teori <em>optimal control</em>, fondasi teknis untuk RCK dan seluruh endogenous growth. Dua pendekatan besar dibahas tuntas: HJB (dynamic programming, kondisi cukup) dan PMP (Pontryagin, kondisi perlu), berikut hubungan keduanya, interpretasi ekonomi tiap suku, dan transversality condition. Format catatan: langkah demi langkah, derivasi lengkap, tanpa lompatan notasi.</p>
+<section id="konsep-1-posisi-bab-11-dalam-kursus">
+<h2>Konsep 1 — Posisi Bab 11 dalam Kursus<a class="headerlink" href="#konsep-1-posisi-bab-11-dalam-kursus" title="Link to this heading">#</a></h2>
+<p><em>Bab 11 adalah Tools II — analog dengan Tools I (Bab 3-8 untuk ODE), tapi untuk optimisasi dinamis.</em></p>
+<p><strong>Sifat Bab 11 vs Bab sebelumnya</strong> — Tools I (ODE). Setup ODE, solusi, steady state,</p>
+<p><strong>Bab 3-8</strong> — qualitative analysis.</p>
+<p><strong>Bab 9-10</strong> — Aplikasi Solow-Swan. Model deskriptif tanpa optimisasi household. s konstan.</p>
+<p><strong>Bab 11</strong> — Tools II (Optimal Control). Tools matematis untuk optimisasi atas path. Foundation untuk RCK.</p>
+<p><strong>Bab 12-15</strong> — Model dengan optimisasi. RCK, endogenous growth — semua pakai PMP/HJB dari Bab 11.</p>
+<p><strong>Tiga pertanyaan utama Bab 11</strong></p>
+<ol class="arabic simple">
+<li><p>Bagaimana memformulasikan OCP (Optimal Control Problem)?</p></li>
+<li><p>Bagaimana karakterisasi solusi optimal?</p></li>
+<li><p>Bagaimana kondisi yang harus dipenuhi?</p></li>
+</ol>
+<p><strong>Dua pendekatan utama</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Bab 11 menyajikan dua pendekatan untuk solve OCP:</p>
+<ol class="arabic simple">
+<li><p>HJB approach (BPO + sufficient): solve PDE untuk value function V</p></li>
+<li><p>PMP approach (necessary): solve ODE system dengan Hamiltonian</p></li>
+</ol>
+<p>Mereka adalah dual — analog dengan Welfare Theorems di general equilibrium. Kapan keduanya equivalen ditentukan oleh Mangasarian Sufficiency.</p>
+</div>
+<p><strong>Konteks sejarah</strong></p>
+<ul class="simple">
+<li><p>Calculus of variations (Euler, Lagrange, abad 18): asal mula, motivasi fluid mechanics</p></li>
+<li><p>Ramsey (1928): aplikasi pertama di ekonomi — paper original optimal saving</p></li>
+<li><p>Pontryagin et al. (1962): PMP, generalisasi calculus of variations, motivasi rocket science (Russia)</p></li>
+<li><p>Bellman (1957): BPO dan dynamic programming (Amerika)</p></li>
+</ul>
+<p>Keduanya adalah produk era Perang Dingin — lahir independen, awalnya untuk aplikasi militer, akhirnya menjadi tulang punggung ekonomi dinamis.</p>
+</section>
+<section id="konsep-2-section-11-1-setup-optimal-control-problem">
+<h2>Konsep 2 — Section 11.1 — Setup Optimal Control Problem<a class="headerlink" href="#konsep-2-section-11-1-setup-optimal-control-problem" title="Link to this heading">#</a></h2>
+<p><em>Setup formal masalah optimisasi dinamis.</em></p>
+<p><strong>Komponen OCP</strong></p>
+<p><strong>Persamaan (11.1) — Controllable dynamical system</strong> — ẋ(t) = f(t, x(t), u(t)),x(0) = x0,x(T) = xT</p>
+<ul class="simple">
+<li><p>x(t) — state variable</p></li>
+<li><p>u(t) — control variable</p></li>
+<li><p>f — transition map</p></li>
+<li><p>x0, xT — boundary values</p></li>
+</ul>
+<p><strong>Persamaan (11.2) — Total payoff</strong> — J(u) =t0Th(t, x(t), u(t)) dt∫</p>
+<p>J adalah functional — fungsi dari fungsi u. Inilah yang membuat masalah infinite- dimensional.</p>
+<p><strong>Persamaan (11.3) — Optimal Control Problem</strong></p>
+<div class="math notranslate nohighlight">
+\[
+V(t_{0},x_{0})=\max_{u\in\mathcal{U}}\;J(u)\quad\text{s.t. kendala ODE}
+\]</div>
+<p>V (t0, x0) — value function, indirect utility dari OCP.</p>
+<p><strong>State vs Control — Distinction Fundamental</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “apa beda state dan control secara konkret di model ekonomi?”</p>
+<p><strong>State <span class="math notranslate nohighlight">\(x\)</span></strong> — Punya ODE sendiri (<span class="math notranslate nohighlight">\(\dot{x}=f\)</span>), tidak dipilih langsung, <em>history-dependent</em>. Contoh: modal, aset, utang.</p>
+</div>
+<p><strong>Control <span class="math notranslate nohighlight">\(u\)</span></strong> — Dipilih bebas tiap saat, tidak punya ODE, bisa berubah seketika. Contoh: konsumsi, investasi, harga.</p>
+<p><strong>Tes diagnostik untuk identifikasi</strong></p>
+<ul class="simple">
+<li><p>Ada ODE (⋅˙)? → state</p></li>
+<li><p>Dipilih bebas? → control</p></li>
+<li><p>Punya history? → state</p></li>
+<li><p>Tidak ada constraint sebelumnya? → control</p></li>
+</ul>
+<p><strong>Contoh konkret di RCK</strong></p>
+<p><strong>State <span class="math notranslate nohighlight">\(k\)</span></strong> — Modal per pekerja. ODE: <span class="math notranslate nohighlight">\(\dot{k} = f(k) - \delta k - c\)</span>. Tidak bisa lompat — harus akumulasi seiring waktu.</p>
+<p><strong>Control <span class="math notranslate nohighlight">\(c\)</span></strong> — Konsumsi. Dipilih bebas tiap saat. Tidak ada ODE untuk <span class="math notranslate nohighlight">\(c\)</span> sendiri.</p>
+<p><strong>Mengapa OCP sulit</strong> — Satu peringatan penting:</p>
+<p>“This is an infinite-dimensional problem… there are uncountably and infinitely many such conditions.”</p>
+<p>Tidak bisa pakai Lagrangian biasa. Butuh trick matematis baru — itulah BPO, HJB, PMP.</p>
+</section>
+<section id="konsep-3-section-11-2-bellman-s-principle-of-optimality">
+<h2>Konsep 3 — Section 11.2 — Bellman’s Principle of Optimality<a class="headerlink" href="#konsep-3-section-11-2-bellman-s-principle-of-optimality" title="Link to this heading">#</a></h2>
+<p><em>Filosofi pemandu: optimal plan self-consistent di setiap titik.</em></p>
+<p><strong>Pernyataan BPO</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>BPO: Optimal plan punya properti bahwa continuation dari plan itu (sisa setelah titik manapun) juga plan optimal dari titik tersebut.</p>
+<p>Atau lebih pendek: optimal plan tetap optimal di setiap titik sepanjang path.</p>
+</div>
+<p><strong>Tiga analogi untuk grasp BPO</strong></p>
+<p><strong>Analogi 1.</strong> Perjalanan</p>
+<p>Kalau sudah berada di KL, rute optimal dari sana</p>
+<p><strong>Analogi 2.</strong> Lips and Hips</p>
+<p>Optimal diet: jangan makan kue. Setelah 10 hari berhasil, optimal plan untuk 20 hari sisa tetap: jangan makan kue.</p>
+<p><strong>Analogi 3.</strong> Catur</p>
+<p>Optimal strategy menang dalam T move. Setelah 5 move, continuation tetap optimal strategy dari posisi sekarang.</p>
+<p><strong>Bukti BPO via kontradiksi</strong> — Misalkan plan u∗ optimal dari (t0, x0). Andaikan continuation dari (t′, x(t′))bukan optimal — ada u′ lebih baik.</p>
+<p>Maka plan baru “u∗ sampai t′, lalu u′ setelah t′” memberi total payoff lebih besar dari u∗. Kontradiksi dengan u∗ optimal.</p>
+<p>Kesimpulan: continuation harus optimal. QED.</p>
+<p><strong>Persamaan Bellman</strong> — Untuk sembarang t′∈[t, T]:</p>
+<div class="math notranslate nohighlight">
+\[
+V(t,x)=\max_{u}\left\{\int_{t}^{t'}h\,d\tau+V\bigl(t',x(t')\bigr)\right\}
+\]</div>
+<p><strong>V(t, X)</strong> — Total value optimal dari (t, x)</p>
+<p><strong>Integral Pertama</strong> — Payoff dari segmen [t, t′]</p>
+<p><strong>V(t′, X(t′))</strong> — Value optimal sisa dari t′ (BPO menjamin ini optimal)</p>
+<p><strong>Tiga pelajaran BPO</strong></p>
+<p><strong>Pelajaran 1.</strong> Backward induction</p>
+<p>OCP bisa di-solve dari akhir ke awal:</p>
+<ol class="arabic simple">
+<li><p>V (T, x) = 0</p></li>
+<li><p>Mundur ke T−Δt, hitung V</p></li>
+<li><p>Lanjut mundur sampai V (t0, x0)</p></li>
+</ol>
+<p>Inilah dynamic programming.</p>
+<p><strong>Pelajaran 2.</strong> Markov property</p>
+<p>Decision optimal di t hanya tergantung pada (t, x(t)) — bukan history. State x(t) sudah encapsulate semua info relevan.</p>
+<p><strong>Pelajaran 3.</strong> State feedback rule</p>
+<p>Optimal control adalah fungsi dari state: u∗(t) = μ(t, x(t)). Bukan fungsi waktu saja.</p>
+<p><strong>Limit infinitesimal → HJB</strong> — Ambil t′= t + dt:</p>
+<div class="math notranslate nohighlight">
+\[
+V(t,x)\approx\max_{u}\bigl\{h\cdot dt+V(t+dt,\;x+dx)\bigr\}
+\]</div>
+<p>dengan dx = f⋅dt.</p>
+<p>Setelah manipulasi → HJB equation. Inilah continuous-time version BPO.</p>
+</section>
+<section id="konsep-4-section-11-3-hjb-equation-sufficient">
+<h2>Konsep 4 — Section 11.3 — HJB Equation (Sufficient)<a class="headerlink" href="#konsep-4-section-11-3-hjb-equation-sufficient" title="Link to this heading">#</a></h2>
+<p><em>Bagian paling teknis Bab 11. Derive HJB equation dari intuisi cost- benefit.</em></p>
+<p><strong>Intuisi cost-benefit</strong> — Analogi yang membantu — “lips and hips”:</p>
+<ul class="simple">
+<li><p>Optimal plan: jangan makan kue</p></li>
+<li><p>Marginal benefit deviasi: h (kepuasan instant)</p></li>
+<li><p>Marginal cost deviasi: −V ˙ (rate value hilang)</p></li>
+</ul>
+<p>Kondisi tidak ada incentive deviasi:</p>
+<div class="math notranslate nohighlight">
+\[
+h(t,x,u)\;\le\;-\dot{V}(t,x)\qquad(11.4)
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “mengapa h ≤−V ˙? Jika V ˙ positif itu berarti h negatif?”</p>
+<p>Jawaban: pada optimal path, V menurun karena horizon mengecil. Maka V ˙ ≤0, dan −V ˙ ≥0. Inequality konsisten dengan h ≥0. Untuk kontrol sub- optimal, inequality mungkin dilanggar — itu justru tanda kontrol bukan optimal.</p>
+</div>
+<p><strong>Chain rule untuk V ˙</strong></p>
+<p><strong>Step 1.</strong> V (t, x(t)) tergantung pada t lewat dua channel</p>
+<ul class="simple">
+<li><p>Langsung lewat t</p></li>
+<li><p>Lewat x(t)</p></li>
+</ul>
+<p><strong>Step 2.</strong> Chain rule multivariate</p>
+<p>dtdV= Vt + Vx ⋅ẋ</p>
+<p><strong>Step 3.</strong> Substitusi ODE constraint ẋ = f</p>
+<p>V ˙ = Vt + Vx ⋅f(t, x, u)</p>
+<p><strong>Dari (11.4) ke (11.5) ke (11.8)</strong></p>
+<p><strong>Step 1.</strong> Substitusi chain rule ke (11.4)</p>
+<p>h ≤−V ˙ = −Vt −Vxf. Pindahkan:</p>
+<p>h + Vt + ⟨Vx, f⟩≤0(11.5)</p>
+<p><strong>Step 2.</strong> Pada optimal, inequality binding</p>
+<p>Tidak ada deviasi yang menguntungkan → inequality binding sebagai equality:</p>
+<p>h(t, x, u∗) + Vt + ⟨Vx, f(t, x, u∗)⟩= 0</p>
+<p><strong>Step 3.</strong> Optimal u∗ adalah maximizer</p>
+<p>Karena (11.5) berlaku untuk semua u dan binding di u∗:</p>
+<div class="math notranslate nohighlight">
+\[
+-V_{t}=\max_{u}\bigl\{h(t,x,u)+\langle V_{x},\,f(t,x,u)\rangle\bigr\}\qquad(11.8)
+\]</div>
+<p>Inilah HJB equation.</p>
+<p><strong>Step 4.</strong> Optimal control rule</p>
+<div class="math notranslate nohighlight">
+\[
+\mu(t,x)\in\arg\max_{u}\bigl\{h+\langle V_{x},f\rangle\bigr\}\qquad(11.9)
+\]</div>
+<p><strong>Tanda Vt, Vx, Vxf</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “apakah Vt dan Vxf semuanya negatif?”</p>
+<p><strong><span class="math notranslate nohighlight">\(V_{t}\)</span></strong> — Negatif pada optimal path: <span class="math notranslate nohighlight">\(V\)</span> menurun karena horizon menyusut.</p>
+<p><strong><span class="math notranslate nohighlight">\(V_{x}\)</span></strong> — Positif biasanya: marginal value state — lebih banyak modal = welfare lebih.</p>
+<p><strong><span class="math notranslate nohighlight">\(f\)</span></strong> — Bervariasi: bisa positif (state tumbuh) atau negatif (menurun), tergantung <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(V_{x}f\)</span></strong> — Tidak punya tanda universal: bisa <span class="math notranslate nohighlight">\(+\)</span> atau <span class="math notranslate nohighlight">\(-\)</span>, tergantung tanda <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\dot{V}\)</span></strong> — Negatif pada optimal path: <span class="math notranslate nohighlight">\(V_{t}\)</span> negatif mendominasi <span class="math notranslate nohighlight">\(V_{x}f\)</span>.</p>
+</div>
+<p><strong>Interpretasi persamaan (11.7)</strong></p>
+<div class="math notranslate nohighlight">
+\[
+-V_{t}\ \ge\ h(t,x,u)+V_{x}f(t,x,u)
+\]</div>
+<p><strong><span class="math notranslate nohighlight">\(-V_{t}\)</span></strong> — Rate value hilang karena waktu berlalu. Independen dari <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(h\)</span></strong> — Direct effect kontrol <span class="math notranslate nohighlight">\(u\)</span> pada payoff.</p>
+<p><strong>VX F</strong> — Indirect effect kontrol u via state transition. Bukan inherent “marginal benefit” — bisa + atau −.</p>
+<div class="note admonition">
+<p class="admonition-title">Catatan</p>
+<p>Istilah untuk <span class="math notranslate nohighlight">\(V_{x}f\)</span>: “marginal lifetime benefit”</p>
+<p>Lebih akurat: “indirect effect via state transition”.</p>
+</div>
+<p><strong>HJB sebagai PDE</strong> — HJB equation adalah PDE (partial differential equation) karena V (t, x) punya dua argumen:</p>
+<ul class="simple">
+<li><p>Vt: turunan parsial terhadap t</p></li>
+<li><p>Vx: turunan parsial terhadap x</p></li>
+</ul>
+<p>Sifat PDE umumnya sulit di-solve. Closed-form hanya untuk kasus khusus (LQR).</p>
+<section id="theorem-11-1-hjb-sufficiency">
+<h3>Theorem 11.1 — HJB Sufficiency<a class="headerlink" href="#theorem-11-1-hjb-sufficiency" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Statement: kalau V memenuhi HJB equation dengan boundary V (T, x) = 0, maka μ(t, x) = arg max di kanan HJB adalah optimal</p>
+<p>control.</p>
+<p>Implikasi: solve HJB → optimal control gratis.</p>
+<p><strong>Jebakan Umum</strong></p>
+<p>Common mistake: lupa boundary V (T, x) = 0. Tanpa boundary, HJB punya banyak solusi. Boundary mem-pin-down solusi unique.</p>
+</div>
+</section>
+</section>
+<section id="konsep-5-section-11-4-necessary-conditions">
+<h2>Konsep 5 — Section 11.4 — Necessary Conditions<a class="headerlink" href="#konsep-5-section-11-4-necessary-conditions" title="Link to this heading">#</a></h2>
+<p><em>Mengapa kita butuh necessary conditions selain HJB? Karena PDE sulit.</em></p>
+<p><strong>Sufficient vs Necessary</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Sintesisnya: “Kalau sufficient, kita tahu V solve HJB lalu tentukan kontrol optimal. Kalau necessary, kita cari μ yang memenuhi 11.12 dan 11.13.”</p>
+<p>Sebagian tepat, tapi perlu klarifikasi.</p>
+<p><strong>Sufficient</strong> — V memenuhi HJB di semua (t, x) → optimal control. Strategy: solve PDE global.</p>
+<p><strong>Necessary</strong> — Vtetap memenuhi HJB, tapi tidak perlu solve PDE global. Cukup kondisi lokal sepanjang optimal path.</p>
+</div>
+<p><strong>Mengapa butuh necessary conditions</strong></p>
+<ol class="arabic simple">
+<li><p>PDE sulit — closed-form jarang ada</p></li>
+<li><p>Komputasi mahal — perlu V untuk semua (t, x), mahal untuk state multi-dimensi</p></li>
+<li><p>Local analysis cukup — kadang hanya butuh karakterisasi optimal path, bukan global V</p></li>
+</ol>
+<p><strong>Envelope Theorem sebagai trick</strong> — Statement informal: kalau V (x) = maxk F(x, k) dengan k∗(x) = arg max, maka:</p>
+<p>dxdV= Fx(x, k∗(x))</p>
+<p>Tidak perlu memperhitungkan dk∗/dx. Hanya turunan parsial F terhadap x. Mengapa: karena Fk(x, k∗) = 0 (FOC), suku Fk⋅dk∗/dx = 0 — hilang.</p>
+<p><strong>Derivation persamaan (11.12)</strong></p>
+<p><strong>Step 1.</strong> Turunkan HJB terhadap x</p>
+<p>Sisi kanan: maxk{h + Vxf}. Pakai Envelope Theorem.</p>
+<p><strong>Step 2.</strong> Hasilnya</p>
+<p>0 = hx + Vtx + Vxxf+ Vxfx</p>
+<p><strong>Step 3.</strong> Pakai chain rule untuk V ˙x</p>
+<p>V ˙x= Vtx + Vxxẋ = Vtx + Vxxf</p>
+<p><strong>Step 4.</strong> Substitusi → persamaan (11.12)</p>
+<p>0 = hx + V ˙x + Vxfx</p>
+<p><strong>Persamaan (11.13) — analog untuk waktu</strong> — Sama tapi turunkan terhadap t:</p>
+<div class="math notranslate nohighlight">
+\[
+0=h_{t}+\dot{V}_{t}+V_{x}f_{t}\qquad(11.13)
+\]</div>
+<p><em>Tabel suku-suku necessary conditions.</em></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Interpretasi tiap suku — satu per satu.</p>
+<p><strong><span class="math notranslate nohighlight">\(h_{t}\)</span></strong> — Direct effect of time on payoff: bagaimana payoff berubah saat waktu maju, holding <span class="math notranslate nohighlight">\(x, u\)</span> konstan. <strong><span class="math notranslate nohighlight">\(h_{x}\)</span></strong> — Direct effect of state on momentary payoff: bagaimana payoff berubah saat state naik, holding t, u konstan.</p>
+<p><strong><span class="math notranslate nohighlight">\(\dot{V}_{x}\)</span></strong> — Rate of marginal-value change: bagaimana <span class="math notranslate nohighlight">\(V_{x}\)</span> (shadow price state) berubah sepanjang optimal path.</p>
+</div>
+<p><strong><span class="math notranslate nohighlight">\(\dot{V}_{t}\)</span></strong> — Rate at which time-effects accumulate: bagaimana <span class="math notranslate nohighlight">\(V_{t}\)</span> (rate value hilang) berubah sepanjang optimal path.</p>
+<p><strong><span class="math notranslate nohighlight">\(V_{x}f_{x}\)</span></strong> — Continuation value melalui transition law of state: Efek tidak langsung state pada future value lewat dinamika.</p>
+<p><strong><span class="math notranslate nohighlight">\(V_{x}f_{t}\)</span></strong> — Indirect effect melalui time-variation in transition law, dinilai oleh <span class="math notranslate nohighlight">\(V_{x}\)</span>: Efek tidak langsung waktu pada future value lewat dinamika.</p>
+<p><strong>Tabel cost-benefit framework</strong></p>
+<p><strong>Tweak <span class="math notranslate nohighlight">\(x\)</span></strong> — Persamaan (11.12): <span class="math notranslate nohighlight">\(0=h_{x}+\dot{V}_{x}+V_{x}f_{x}\)</span></p>
+<p><strong>Tweak <span class="math notranslate nohighlight">\(t\)</span></strong> — Persamaan (11.13): <span class="math notranslate nohighlight">\(0=h_{t}+\dot{V}_{t}+V_{x}f_{t}\)</span></p>
+<p><strong>Direct effect pada <span class="math notranslate nohighlight">\(h\)</span></strong> — <span class="math notranslate nohighlight">\(h_{x}\)</span> (state) atau <span class="math notranslate nohighlight">\(h_{t}\)</span> (waktu)</p>
+<p><strong>Effect via dinamika</strong> — <span class="math notranslate nohighlight">\(V_{x}f_{x}\)</span> (state) atau <span class="math notranslate nohighlight">\(V_{x}f_{t}\)</span> (waktu)</p>
+<p><strong>Akumulasi rate</strong> — <span class="math notranslate nohighlight">\(\dot{V}_{x}\)</span> (state) atau <span class="math notranslate nohighlight">\(\dot{V}_{t}\)</span> (waktu)</p>
+<p><strong>Balance Optimal</strong> — Semua suku berjumlah nol</p>
+<p><strong>Hubungan BPO ↔ HJB ↔ Necessary conditions</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “apa hubungan BPO dengan necessary conditions?”</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Rantai logika:</p>
+<ol class="arabic simple">
+<li><p>BPO: optimal self-consistent di setiap titik</p></li>
+<li><p>→ HJB binding sebagai equality sepanjang optimal path</p></li>
+<li><p>→ Bisa turunkan HJB terhadap x atau t</p></li>
+<li><p>→ Necessary conditions (11.12) dan (11.13)</p></li>
+</ol>
+<p>BPO adalah filosofi. Necessary conditions adalah konsekuensi matematis local dari BPO.</p>
+</div>
+<p><strong>Kasus autonomous</strong></p>
+<p>Untuk growth models, h dan f biasanya tidak tergantung pada t explisit. Maka:</p>
+<ul class="simple">
+<li><p>ht= 0</p></li>
+<li><p>ft= 0</p></li>
+<li><p>Vxft= 0</p></li>
+<li><p>V ˙t= 0 (sebagai konsekuensi)</p></li>
+</ul>
+<p>Persamaan (11.13) trivial terpenuhi. Hanya (11.12) relevan.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Inilah mengapa di RCK kita hanya pakai satu adjoint equation (yang akan jadi ψ˙ = −Hk di PMP).</p>
+</div>
+<p><strong>Visualisasi mental — kapten kapal</strong></p>
+<ul class="simple">
+<li><p>(11.12): kalau kapal didorong ke kanan sedikit, apa optimal masih tunjuk arah yang sama?</p></li>
+<li><p>(11.13): kalau kita tunggu sebentar, apa optimal masih tunjuk arah yang sama?</p></li>
+<li><p>Balance ke nol: kalau iya, kita sedang di optimal path</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">⚠️ Jebakan umum</p>
+<p>Jangan paham tiap suku terpisah — itu sumber kebingungan. Paham sebagai paket cost-benefit: tweak variabel → tiga efek muncul → optimal saat balance ke nol.</p>
+</div>
+</section>
+<section id="konsep-6-section-11-5-pontryagin-maximum-principle">
+<h2>Konsep 6 — Section 11.5 — Pontryagin Maximum Principle<a class="headerlink" href="#konsep-6-section-11-5-pontryagin-maximum-principle" title="Link to this heading">#</a></h2>
+<p><em>Reformulasi necessary conditions sebagai Hamiltonian system. Workhorse ekonomi makro dinamis.</em></p>
+<p><strong>Adjoint variables</strong> — Diperkenalkan dua adjoint variables:</p>
+<p>ψ(t):= Vx(t, x∗(t)) — shadow price dari state x.</p>
+<p><strong><span class="math notranslate nohighlight">\(\psi(T)\)</span></strong></p>
+<p>Biasa dipakai.</p>
+<p>ψ0(t):= Vt(t, x∗(t)) — shadow price dari waktu.</p>
+<p><strong><span class="math notranslate nohighlight">\(\psi_{0}(T)\)</span></strong> — Jarang dibahas eksplisit.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “ψ0(t) ini apa?”</p>
+<p>ψ0 adalah notasi untuk Vt sepanjang optimal path. Untuk autonomous problems (kasus RCK), ψ0 tidak berperan aktif karena (11.13) trivial. Kebanyakan textbook hanya menulis ψ.</p>
+</div>
+<p><strong>Hamiltonian</strong> — Definisi (11.14):</p>
+<div class="math notranslate nohighlight">
+\[
+H(t,x,u,\psi):=h(t,x,u)+\langle\psi,\;f(t,x,u)\rangle\qquad(11.14)
+\]</div>
+<p><strong><span class="math notranslate nohighlight">\(h\)</span></strong> — Direct payoff dari <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\psi \cdot f\)</span></strong> — Indirect value lewat state evolution: shadow price × transition rate.</p>
+<p><strong>Empat kondisi PMP</strong></p>
+<section id="kondisi-1-adjoint-equation-11-15">
+<h3>Kondisi 1 — Adjoint equation (11.15)<a class="headerlink" href="#kondisi-1-adjoint-equation-11-15" title="Link to this heading">#</a></h3>
+<p>ψ˙ = −Hx= −[hx + ψfx]</p>
+<p>Konsekuensi dari (11.12) dengan substitusi Vx= ψ dan V ˙x= ψ˙.</p>
+</section>
+<section id="kondisi-2-transversality-11-16">
+<h3>Kondisi 2 — Transversality (11.16)<a class="headerlink" href="#kondisi-2-transversality-11-16" title="Link to this heading">#</a></h3>
+<p>ψ(T) = 0</p>
+<p>Boundary HJB V (T, x) = 0 → Vx(T, x) = 0 → ψ(T) = 0.</p>
+</section>
+<section id="kondisi-3-maximality-11-17">
+<h3>Kondisi 3 — Maximality (11.17)<a class="headerlink" href="#kondisi-3-maximality-11-17" title="Link to this heading">#</a></h3>
+<p>u∗(t) ∈arg umax H(t, x∗, u, ψ)</p>
+<p>Konsekuensi dari (11.9) — optimal control rule.</p>
+</section>
+<section id="kondisi-4-maximized-hamiltonian-11-18-dan-envelope-11-19">
+<h3>Kondisi 4 — Maximized Hamiltonian (11.18) dan envelope (11.19)<a class="headerlink" href="#kondisi-4-maximized-hamiltonian-11-18-dan-envelope-11-19" title="Link to this heading">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “darimana (11.18) dan (11.19)?”</p>
+<p>Persamaan (11.18): H∗= −Vt. Diturunkan dari HJB equation langsung dengan substitusi Vx= ψ.</p>
+</div>
+<p><strong>Step 1.</strong> Mulai dari HJB</p>
+<p>−Vt= kmax{h + Vxf}</p>
+<p><strong>Step 2.</strong> Substitusi Vx= ψ sepanjang optimal path</p>
+<p>−Vt= kmax{h + ψf} = kmax H</p>
+<p><strong>Step 3.</strong> Pada u∗ (maximizer)</p>
+<div class="math notranslate nohighlight">
+\[
+H^{*}(t):=H(t,x^{*},u^{*},\psi)=-V_{t}\qquad(11.18)
+\]</div>
+<p>Persamaan (11.19): $<span class="math notranslate nohighlight">\(
+\dot{H}^{*}=H_{t}\qquad(11.19)
+\)</span>$. Diturunkan dari (11.18) + (11.13).</p>
+<p><strong>Step 1.</strong> Turunkan (11.18) terhadap t</p>
+<p><span class="math notranslate nohighlight">\(\dot{H}^{*}=-\dot{V}_{t}\)</span></p>
+<p><strong>Step 2.</strong> Pakai (11.13) untuk solve V ˙t</p>
+<p><span class="math notranslate nohighlight">\(\dot{V}_{t}=-h_{t}-V_{x}f_{t}\)</span></p>
+<p><strong>Step 3.</strong> Substitusi → <span class="math notranslate nohighlight">\(\dot{H}^{*}=h_{t}+V_{x}f_{t}\)</span></p>
+<p><strong>Step 4.</strong> Kenali sebagai Ht (turunan parsial Hamiltonian)</p>
+<p>Ḣ∗= Ht</p>
+<p><strong>Lagrangian vs Hamiltonian — tabel paralel</strong></p>
+<p><strong>Statis</strong> — L = f+ λg (Lagrangian)</p>
+<p><strong>Dinamis</strong> — H= h + ψf (Hamiltonian)</p>
+<p><strong>Multiplier Statis</strong> — λ (konstanta)</p>
+<p><strong>Multiplier Dinamis</strong> — ψ(t) (fungsi waktu, “shadow price”)</p>
+<p><strong>FOC Statis</strong> — Lx= 0</p>
+<p><strong>FOC Dinamis</strong> — Hu= 0 (maximality)</p>
+<p><strong>KKT / complementary</strong> — kondisi complementary slackness pada constraint.</p>
+<p><strong>Adjoint sebagai shadow price</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>ψ(t) = nilai marginal punya satu unit state ekstra pada waktu t.</p>
+<p>Untuk RCK: ψ= marginal utility of capital.</p>
+<p>Untuk resource: ψ= marginal value of resource stock.</p>
+<p>Untuk pollution: ψ&lt; 0 = marginal cost of pollution.</p>
+</div>
+<p><strong>PMP sebagai ODE system</strong> — Dari Kondisi 1 dan 2:</p>
+<p>ẋ = f(state)ψ˙ = −Hx(adjoint)</p>
+<p>Dua ODE coupled. Plus maximality untuk eliminate u. Dengan boundary x(0) = x0 dan ψ(T) = 0.</p>
+<p>Inilah Hamiltonian system — workhorse ekonomi makro dinamis.</p>
+<p><strong>Mengapa lebih mudah dari HJB</strong></p>
+<p><strong>HJB</strong> — PDE untuk V (t, x) — fungsi 2 argumen</p>
+<p><strong>PMP</strong> — 2 ODE untuk x(t) dan ψ(t) — fungsi 1 argumen</p>
+<p>ODE jauh lebih mudah dari PDE. Inilah keuntungan PMP.</p>
+</section>
+</section>
+<section id="konsep-7-section-11-6-duality-dan-mangasarian-sufficiency">
+<h2>Konsep 7 — Section 11.6 — Duality dan Mangasarian Sufficiency<a class="headerlink" href="#konsep-7-section-11-6-duality-dan-mangasarian-sufficiency" title="Link to this heading">#</a></h2>
+<p><em>Hubungan PMP ↔ HJB sebagai analogi Welfare Theorems.</em></p>
+<p><strong>Walrasian Pricing Mechanism</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “apa yang dimaksud Walrasian pricing mechanism?”</p>
+<p>Walrasian pricing mechanism = mekanisme di mana harga menyeimbangkan supply dan demand di semua pasar secara simultan.</p>
+<p>Diberi nama dari Léon Walras — pendiri general equilibrium theory.</p>
+</div>
+<p><strong>Komponen</strong></p>
+<ul class="simple">
+<li><p>Banyak agen optimisasi sendiri</p></li>
+<li><p>Banyak pasar, masing-masing dengan harga sendiri</p></li>
+<li><p>Harga sebagai signal</p></li>
+<li><p>Market clearing simultan</p></li>
+</ul>
+<p><strong>Kontras dengan social planner</strong></p>
+<p><strong>Walrasian</strong> — Decentralized. Banyak agen, koordinasi lewat harga.</p>
+<p><strong>Planner</strong> — Centralized: satu pengambil keputusan, optimisasi langsung.</p>
+<p><strong>Welfare Theorems</strong></p>
+<p><strong>First Welfare</strong> — Competitive equilibrium → Pareto optimum.</p>
+<p><strong>Second Welfare</strong> — Pareto optimum → bisa diraih sebagai competitive equilibrium (butuh convexity).</p>
+<p><strong>Analogi PMP/HJB ↔ Welfare Theorems</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>PMP dan HJB adalah dual — dalam arti yang sama dengan Welfare Theorems:</p>
+<p><strong>HJB approach</strong> — ≈ Social planner / Pareto: centralized optimisasi.</p>
+<p><strong>PMP Approach</strong> — ≈ Competitive equilibrium. Decentralized via shadow prices.</p>
+<p><strong><span class="math notranslate nohighlight">\(\psi(t)\)</span> di PMP</strong> — ≈ Harga pasar (interest rate, asset price)</p>
+<p><strong>HJB → PMP Otomatis</strong> — ≈ First Welfare: Pareto otomatis equilibrium dengan harga yang tepat</p>
+<p><strong>PMP → HJB butuh convexity</strong> — ≈ Second Welfare: equilibrium → Pareto hanya dengan convexity</p>
+</div>
+<p><strong>Mangasarian Sufficiency Theorem</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Statement: Jika H(t, x, u, ψ)concave dalam (x, u), dan PMP</p>
+<p>conditions terpenuhi (adjoint, TVC, maximality), maka path (x(t), u(t)) adalah optimal state-control path.</p>
+<p>Strictly concave → path unique.</p>
+<p>Implikasi praktis: kalau h dan f concave dalam (x, u), H otomatis concave. Maka PMP saja cukup untuk optimal.</p>
+</div>
+<p><strong>Aplikasi ke Economic Growth</strong></p>
+<ul class="simple">
+<li><p>RCK (Bab 12): utility concave, technology concave → Mangasarian terpenuhi → PMP = HJB</p></li>
+<li><p>Endogenous growth (Bab 14-15): ada increasing returns → Mangasarian gagal → equilibrium tidak optimal → ada room untuk policy</p></li>
+</ul>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Pesan filosofis: equilibrium pasar tidak otomatis optimal. Convexity adalah jembatan. Kalau convexity gagal, intervensi kebijakan bisa improve welfare.</p>
+</div>
+</section>
+<section id="konsep-8-section-11-7-infinite-horizon">
+<h2>Konsep 8 — Section 11.7 — Infinite Horizon<a class="headerlink" href="#konsep-8-section-11-7-infinite-horizon" title="Link to this heading">#</a></h2>
+<p><em>Generalisasi ke T→∞. Pondasi untuk RCK dan endogenous growth.</em></p>
+<p><strong>Mengapa infinite horizon</strong></p>
+<p>Justifikasinya:</p>
+<p>“Taking T→∞ is our modeller’s metaphor for ongoing concern. It is not literally that one lives forever.”</p>
+<p>Finite horizon menghasilkan end-of-horizon effect aneh — misalnya: optimal fishing menghabiskan semua stok ikan di T. Tidak realistis.</p>
+<p><strong>Persamaan (11.24) — IH-OCP</strong> — V (x0) = umax {J(u)ẋ = f(x, u),x(0) = x0,u ∈Γ}</p>
+<p>dengan J(u) =0∞e−rth(x, u) dt.∫</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “darimana (11.24) diturunkan?”</p>
+<p>Bukan derivation matematis — ini definisi IH-OCP, generalisasi dari finite (11.3).</p>
+</div>
+<p><strong>Bedanya dengan finite horizon</strong></p>
+<p><strong>Horizon</strong> — Finite: T tertentu. Infinite: T→∞.</p>
+<p><strong>Boundary Terminal</strong> — Finite: x(T) = xT. Infinite: tidak ada.</p>
+<p><strong>Discount</strong> — Finite: tidak eksplisit. Infinite: e−rt.</p>
+<p><strong>Dependence <span class="math notranslate nohighlight">\(V\)</span> pada <span class="math notranslate nohighlight">\(t\)</span></strong> — Finite: ada. Infinite: hilang.</p>
+<p><strong>Mengapa <span class="math notranslate nohighlight">\(V\)</span> jadi <span class="math notranslate nohighlight">\(V(x)\)</span> saja</strong> — Untuk finite horizon: V (t, x) berbeda di tiap t karena horizon tersisa T−t berbeda.</p>
+<p>Untuk infinite horizon: horizon tersisa selalu infinite. V identik di tiap t — hanya tergantung x.</p>
+<p><strong>Derivation persamaan (11.25)</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “darimana (11.25) diturunkan?”</p>
+</div>
+<p><strong>Step 1.</strong> Mulai dari HJB finite (11.8) dengan discount</p>
+<div class="math notranslate nohighlight">
+\[
+-V_{t}=\max_{u}\bigl\{e^{-rt}h+V_{x}f\bigr\}
+\]</div>
+<p><strong>Step 2.</strong> Konversi ke current-value</p>
+<p>Definisikan <span class="math notranslate nohighlight">\(\tilde{V}:=e^{rt}V\)</span>. Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+V_{t}=e^{-rt}\bigl(-r\tilde{V}+\tilde{V}_{t}\bigr),\qquad V_{x}=e^{-rt}\tilde{V}_{x}
+\]</div>
+<p><strong>Step 3.</strong> Substitusi dan bagi dengan e−rt</p>
+<div class="math notranslate nohighlight">
+\[
+r\tilde{V}-\tilde{V}_{t}=\max_{u}\bigl\{h+\tilde{V}_{x}f\bigr\}
+\]</div>
+<p><strong>Step 4.</strong> Ambil limit T→∞ → V ~ time-invariant</p>
+<p><span class="math notranslate nohighlight">\(\tilde{V}_{t}=0\)</span></p>
+<p><strong>Step 5.</strong> Drop tilda → persamaan (11.25)</p>
+<div class="math notranslate nohighlight">
+\[
+rV(x)=\max_{u}\bigl\{h(x,u)+V_{x}f(x,u)\bigr\}\qquad(11.25)
+\]</div>
+<p><strong>Interpretasi (11.25) — Asset pricing</strong></p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Persamaan (11.25) adalah asset pricing equation:</p>
+<p>Required return (rV) = Dividend (h) + Capital gain (Vxf)</p>
+<p>Inilah mengapa HJB infinite-horizon sering disebut “Bellman equation as asset pricing”.</p>
+</div>
+<p><strong>Transversality Condition (TVC)</strong> — Dua varian utama:</p>
+<p><strong>Varian 1 — Natural TVC (11.26)</strong></p>
+<p>T→∞lim ψ(T) = 0</p>
+<p>Shadow price state menuju nol di masa jauh.</p>
+<p><strong>Varian 2 — Value TVC (11.27)</strong> — T→∞lim ψ(T) ⋅x(T) = 0</p>
+<p>Value of state menuju nol di masa jauh.</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Sintesisnya: “shadow price akan mendekati 0 di masa jauh, ga ada harganya lagi”. Tepat untuk (11.26).</p>
+<p>Untuk (11.27): yang mendekati nol adalah produk, bukan hanya x. Bisa terjadi via tiga skenario.</p>
+</div>
+<p><strong>Tiga skenario ψx →0</strong></p>
+<p><strong>Skenario A</strong> — <span class="math notranslate nohighlight">\(\psi(T)\to 0\)</span> dan <span class="math notranslate nohighlight">\(x(T)\)</span> terbatas → produk nol.</p>
+<p><strong>Skenario B</strong> — <span class="math notranslate nohighlight">\(\psi(T)\)</span> terbatas tapi <span class="math notranslate nohighlight">\(x(T)\to 0\)</span> → produk nol.</p>
+<p><strong>Skenario C</strong> — Keduanya tumbuh, tapi <span class="math notranslate nohighlight">\(\psi\)</span> turun lebih cepat → produk nol. Paling penting di RCK.</p>
+<p><strong>Bedanya finite vs infinite TVC</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “bukankah saat T finite juga ψ(T) = 0?”</p>
+<p><strong>Finite TVC</strong> — <span class="math notranslate nohighlight">\(\psi(T)=0\)</span> tepat di titik akhir <span class="math notranslate nohighlight">\(T\)</span>: plan berakhir.</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{T\to\infty}\psi(T)=0 \quad\text{atau}\quad \lim_{T\to\infty}\psi(T)\,x(T)=0
+\]</div>
+<p><strong>Infinite TVC</strong> — batas di atas berlaku sebagai limit: plan tidak pernah berakhir.</p>
+</div>
+<p><strong>Tidak ada “definitive” TVC</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “adakah definitive TVC?”</p>
+<p>Prinsipnya: “approach with brains on”.</p>
+<p>TVC tergantung problem:</p>
+<ul class="simple">
+<li><p>Steady state stabil: Varian 1 cukup</p></li>
+<li><p>Sustained growth (RCK, Romer): pakai Varian 2 atau 3</p></li>
+<li><p>Resource exhaustion (Hotelling): bentuk berbeda</p></li>
+</ul>
+<p>Pikirkan struktur problem, lalu pilih TVC yang tepat.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Untuk RCK (Bab 12), TVC standar: <span class="math notranslate nohighlight">\(\lim_{t\to\infty}e^{-\rho t}\hat{\psi}(t)\,k(t)=0\)</span></p>
+<p>dengan ψ^ current-value adjoint.</p>
+</div>
+</section>
+<section id="konsep-9-exercise-11-1-linear-quadratic-regulator">
+<h2>Konsep 9 — Exercise 11.1 — Linear Quadratic Regulator<a class="headerlink" href="#konsep-9-exercise-11-1-linear-quadratic-regulator" title="Link to this heading">#</a></h2>
+<p><em>Contoh closed-form OCP. State dynamics linear, payoff quadratic.</em></p>
+<p><strong>Setup</strong></p>
+<p>Linear controllable system:</p>
+<p>ẋ = αx + βu,x(t0) = x0,α &lt; 0,β \ne  0</p>
+<p>Discounted objective:</p>
+<p>e−rt0J(u) =t0Te−rt[−Rx2 −Su2]dt∫</p>
+<p>dengan R &gt; 0 dan S&gt; R(β/α)2.</p>
+<p><strong>Strategi solve</strong> — Linear-Quadratic structure → tebak quadratic value function → HJB jadi tractable.</p>
+<p><strong>Game plan</strong></p>
+<ol class="arabic simple">
+<li><p>Current-value HJB</p></li>
+<li><p>Quadratic guess V (t, x) = −Q(t)x2</p></li>
+<li><p>FOC → optimal control u∗= −(β/S)Q(t)x</p></li>
+<li><p>Substitusi balik → Riccati ODE untuk Q(t)</p></li>
+<li><p>Linearisasi pakai Q = Z/Y → linear system</p></li>
+<li><p>Eigenvalues → solve Q(t)</p></li>
+</ol>
+<p><strong>Part 1.</strong> Current-value HJB</p>
+<p>Konversi present-value ke current-value (dijelaskan di Section 11.7):</p>
+<p>rV−Vt= ymax{−Rx2 −Sy2 + Vx(αx + βy)}</p>
+<p><strong>Part 1.</strong> Quadratic guess</p>
+<p>Tebak V (t, x) = −Q(t)x2 dengan Q(t) ≥0.</p>
+<p>Boundary V (T, x) = 0 → Q(T) = 0.</p>
+<p>Turunan parsial:</p>
+<p>Vt= −Q̇(t)x2,Vx= −2Q(t)x</p>
+<p><strong>Part 3.</strong> FOC (sebelum Part 2)</p>
+<p>Turunkan sisi kanan HJB terhadap y:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial y}\left\{-Sy^{2}+V_{x}\beta y\right\}=-2Sy+V_{x}\beta=0\]</div>
+<p>Substitusi <span class="math notranslate nohighlight">\(V_{x}=-2Q(t)x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[-2Sy-2Q(t)\beta x=0 \;\Rightarrow\; y^{*}=-\frac{\beta Q(t)}{S}\,x\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Optimal control linear dalam state: <span class="math notranslate nohighlight">\(u^{*}=-K(t)\,x\)</span> dengan gain <span class="math notranslate nohighlight">\(K(t)=\dfrac{\beta}{S}\,Q(t)\)</span>.</p>
+<p>Inilah state feedback rule klasik di engineering control.</p>
+</div>
+<p><strong>Part 2.</strong> Riccati ODE</p>
+<p>Substitusi y∗ balik ke HJB, semua suku proporsional dengan x2:</p>
+<p>Q̇ + 2aQ + bQ2= −R,Q(T) = 0</p>
+<p>dengan:</p>
+<ul class="simple">
+<li><p>a:= α −r/2 &lt; 0</p></li>
+<li><p>b:= β2/S&gt; 0</p></li>
+</ul>
+<p>Ini nonlinear ODE (karena suku bQ2).</p>
+<p><strong>Part 2.</strong> Linearisasi via Q = Z/Y</p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Bagian ini paling sering membuat macet. Triknya:</p>
+</div>
+<p><strong>Mengapa trick Q = Z/Y bekerja</strong> — Riccati nonlinear sulit. Ganti satu variabel dengan rasio dua variabel — dapat kebebasan ekstra untuk pilih bagaimana Z dan Y berevolusi.</p>
+<p><strong>Step 1.</strong> Substitusi Q = Z/Y</p>
+<p>Q̇ = Y Ż −Y 2ZY ˙</p>
+<p><strong>Step 2.</strong> Substitusi ke Riccati</p>
+<p>Y Ż −Y 2ZY ˙ + 2a ⋅Y Z + b ⋅Y 2Z2= −R</p>
+<p><strong>Step 3.</strong> Kalikan dengan Y</p>
+<p>Ż −Y ZY ˙ + 2aZ + Y bZ2= −RY</p>
+<p><strong>Step 4.</strong> Pilih Y ˙ = aY+ bZ untuk cancel nonlinear terms</p>
+<p>Suku −Y ZY ˙ + Y bZ2= −aZ −Y bZ2 + Y bZ2= −aZ — nonlinear terms</p>
+<p>hilang!</p>
+<p><strong>Step 5.</strong> Sisa sistem linear</p>
+<p>Y ˙ = aY+ bZŻ = −RY−aZ</p>
+<p><strong>Sistem matriks</strong> — (Y ˙Ż) = (a−Rb−a) (Y Z)</p>
+<p>dengan boundary Y (T) = 1, Z(T) = 0 (sehingga Q(T) = Z/Y= 0).</p>
+<p><strong>Eigenvalue analysis</strong> — Characteristic equation: det(A −λI) = 0.</p>
+<p>λ2 −(a2 −Rb) = 0</p>
+<p>Solusi: λ1,2= ±a2 −Rb</p>
+<p>Kondisi S&gt; R(β/α)2 menjamin a2 −Rb &gt; 0 (real eigenvalues).</p>
+<p>Tulis λ:=a2 −Rb</p>
+<p><strong>Part 4.</strong> Optimal state trajectory</p>
+<p>Substitusi u∗= −(β/S)Q(t)x∗ ke ODE:</p>
+<p>ẋ∗= αx∗+ β ⋅[−(β/S)Q(t)x∗] = [α −(β2/S)Q(t)]x∗</p>
+<p>Definisikan a^(t):= α −(β2/S)Q(t) (time-varying coefficient).</p>
+<p>ODE linear time-varying ẋ∗= a^(t)x∗ punya solusi:</p>
+<p>x∗(t) = x0 exp {t0t a^(τ) dτ}x∗(t) = x0 exp {α(t −t0) −Sβ2t0t Q(τ) dτ}∫∫</p>
+<p><strong>Part 5.</strong> Optimal control path</p>
+<p>u∗(t) = −SβQ(t) ⋅x∗(t)</p>
+<p><strong>Contoh numerik — Kontrol inflasi</strong> — Parameter: a = 0.5, b = −1, q= 1, r= 1, qT= 5, T= 10, x0= 3. Steady state Riccati: P∗= (1 +5</p>
+<p>2 ≈1.618 (golden ratio!).</p>
+<p>Gain <span class="math notranslate nohighlight">\(K=(b/r)\,P\)</span>.</p>
+<p><strong>Sensitivitas parameter</strong></p>
+<p><strong><span class="math notranslate nohighlight">\(r\)</span> besar (control mahal)</strong> — <span class="math notranslate nohighlight">\(P^{*}\)</span> besar tapi <span class="math notranslate nohighlight">\(|K|=|b|P/r\)</span> kecil → control hemat → konvergensi lambat.</p>
+<p><strong><span class="math notranslate nohighlight">\(q\)</span> besar (penalty inflasi)</strong> — <span class="math notranslate nohighlight">\(P^{*}\)</span> besar dan <span class="math notranslate nohighlight">\(|K|\)</span> besar → control agresif → konvergensi cepat.</p>
+<p><strong><span class="math notranslate nohighlight">\(a\)</span> besar (inflasi persistent)</strong> — <span class="math notranslate nohighlight">\(P^{*}\)</span> besar → harus control sangat aktif.</p>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Insight kunci: bukan P yang menentukan magnitude control, tapi gain K= (b/r)P.</p>
+<p><strong>Summary logika</strong></p>
+<p>HJB + quadratic guess →FOC →linear feedback rule →Riccati ODE →Q = Z/Y→linear ODE →eigenvalues →Q(t) →x∗, u∗</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>LQR adalah workhorse macroeconomic policy:</p>
+<ul class="simple">
+<li><p>Inflation targeting</p></li>
+<li><p>Lucas-Stokey optimal taxation</p></li>
+<li><p>Linear-quadratic approximation di DSGE</p></li>
+<li><p>RCK lokal (linearisasi sekitar steady state)</p></li>
+</ul>
+</div>
+</section>
+<section id="konsep-10-exercise-11-3-finite-horizon-ramsey">
+<h2>Konsep 10 — Exercise 11.3 — Finite-Horizon Ramsey<a class="headerlink" href="#konsep-10-exercise-11-3-finite-horizon-ramsey" title="Link to this heading">#</a></h2>
+<p><em>Bridge ke Bab 12. Latihan paling penting di Bab 11.</em></p>
+<p><strong>Setup</strong></p>
+<p>Capital evolves:</p>
+<p>k̇ = φ(k) −d ⋅k −c</p>
+<p>Objective dengan discount:</p>
+<p>J(c) =0Te−ρth(c) dt∫</p>
+<p>Asumsi: <span class="math notranslate nohighlight">\(h_{c}&gt;0\)</span>, <span class="math notranslate nohighlight">\(h_{cc}&lt;0\)</span>, <span class="math notranslate nohighlight">\(f'&gt;0\)</span>, <span class="math notranslate nohighlight">\(f''&lt;0\)</span>, <span class="math notranslate nohighlight">\(f(0)=0\)</span>.</p>
+<p>Inada conditions: limk→∞φ′(k) &lt; ρ + d &lt; limk→0 φ′(k).</p>
+<p><strong>“f time-invariant”</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “mengapa di soal disebutkan f a time-invariant function?”</p>
+<p>f(k, c) = φ(k) −dk −c — secara formal punya argumen t, tapi sebenarnya tidak tergantung pada t explisit. Hanya tergantung pada k dan c.</p>
+<p>Konsekuensi: ft= 0. Maka persamaan (11.13) trivial terpenuhi.</p>
+<p>Ini petunjuk simplifikasi</p>
+</div>
+<p><strong>Part 1.</strong> OCP</p>
+<p>V (0, k0) = c≥0max {0Te−ρth(c(t))dtk̇ = φ(k) −dk −c,k(0) = k0}∫</p>
+<p><strong>Part 2.</strong> HJB-R (current-value)</p>
+<p>ρV (t, k) −Vt(t, k) = c≥0max{h(c) + Vk[φ(k) −dk −c]}</p>
+<p><strong>Part 3.</strong> Necessary Conditions (HJB approach)</p>
+<p><strong>FOC</strong></p>
+<p>Turunkan kanan terhadap c:</p>
+<div class="math notranslate nohighlight">
+\[h_{c}(c)-V_{k}=0 \;\Rightarrow\; h_{c}(c)=V_{k}\]</div>
+<div class="important admonition">
+<p class="admonition-title">Hasil kunci</p>
+<p>Marginal utility consumption = marginal value of capital.</p>
+</div>
+<p><strong>Envelope condition</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “bagaimana derive envelope condition?”</p>
+</div>
+<p><strong>Step 1.</strong> Turunkan HJB-R terhadap k</p>
+<p>ρVk−Vtk= ∂k∂[cmax{h(c) + Vk(φ(k) −dk −c)}]</p>
+<p><strong>Step 2</strong> — Pakai Envelope Theorem — suku ∂G/∂c ⋅dc∗/dk= 0 karena FOC.</p>
+<p>ρVk−Vtk= Vkk[φ(k) −dk −c] + Vk[φ′(k) −d]</p>
+<p><strong>Step 3.</strong> Pakai chain rule untuk V ˙k</p>
+<p>V ˙k= Vtk+ Vkk⋅k̇ = Vtk+ Vkk[φ(k) −dk −c]</p>
+<p><strong>Step 4.</strong> Substitusi</p>
+<p>ρVk= V ˙k+ Vk[φ′(k) −d]</p>
+<p><strong>Step 5.</strong> Solve untuk V ˙k — envelope condition</p>
+<p>V ˙k= −Vk[φ′(k) −d −ρ]</p>
+<p><strong>Euler equation</strong></p>
+<p><strong>Step 1.</strong> Turunkan FOC terhadap t</p>
+<div class="math notranslate nohighlight">
+\[ h_{cc}(c)\,\dot{c} = \dot{V}_{k} \]</div>
+<p><strong>Step 2.</strong> Substitusi envelope condition</p>
+<div class="math notranslate nohighlight">
+\[ h_{cc}(c)\,\dot{c} = -V_{k}\,\bigl[\,f'(k)-\delta-\rho\,\bigr] \]</div>
+<p><strong>Step 3.</strong> Substitusi Vk= hc</p>
+<div class="math notranslate nohighlight">
+\[ h_{cc}(c)\,\dot{c} = -h_{c}(c)\,\bigl[\,f'(k)-\delta-\rho\,\bigr] \]</div>
+<p><strong>Step 4.</strong> Bagi dengan hc ⋅c dan rearrange</p>
+<p>cċ = σ(c)1[φ′(k) −d −ρ]</p>
+<p>dengan <span class="math notranslate nohighlight">\(\sigma(c) := -\,h_{cc}(c)\,c/h_{c}(c) &gt; 0\)</span> (Arrow-Pratt).</p>
+<p><strong>Part 4.</strong> PMP approach</p>
+<p><strong>Hamiltonian (present-value)</strong> — H(c, k, ψ, t) = e−ρth(c) + ψ[φ(k) −dk −c]</p>
+<p><strong>PMP conditions</strong></p>
+<ol class="arabic simple">
+<li><p>Maximality (Hc= 0): e−ρthc(c) = ψ</p></li>
+<li><p>Adjoint (ψ˙ = −Hk): ψ˙ = −ψ[φ′(k) −d]</p></li>
+<li><p>State: k̇ = φ(k) −dk −c</p></li>
+<li><p>TVC: ψ(T) = 0 (karena kT freely chosen)</p></li>
+</ol>
+<p><strong>From PMP to Euler equation</strong></p>
+<p><strong>Step 1.</strong> Turunkan Maximality terhadap t</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\psi} = e^{-\rho t}\,\bigl[\,-\rho\,h_{c}(c) + h_{cc}(c)\,\dot{c}\,\bigr] \]</div>
+<p><strong>Step 2.</strong> Bagi dengan ψ= e−ρthc(c)</p>
+<div class="math notranslate nohighlight">
+\[ \dot{\psi}/\psi = -\rho + \dfrac{h_{cc}(c)}{h_{c}(c)}\,\dot{c} \]</div>
+<p><strong>Step 3.</strong> Dari Adjoint: <span class="math notranslate nohighlight">\(\dot{\psi}/\psi = -[\,f'(k)-\delta\,]\)</span></p>
+<p><strong>Step 4.</strong> Set kedua sama</p>
+<div class="math notranslate nohighlight">
+\[ -\bigl[\,f'(k)-\delta\,\bigr] = -\rho + \dfrac{h_{cc}(c)}{h_{c}(c)}\,\dot{c} \]</div>
+<p><strong>Step 5.</strong> Solve untuk ċ/c — sama dengan HJB approach</p>
+<p>cċ = σ(c)1[φ′(k) −d −ρ]</p>
+<p><strong>Part 5.</strong> HJB = PMP via Mangasarian</p>
+<p><span class="math notranslate nohighlight">\(H\)</span> jointly concave dalam <span class="math notranslate nohighlight">\((c,k)\)</span> karena <span class="math notranslate nohighlight">\(h_{cc}&lt;0\)</span> dan <span class="math notranslate nohighlight">\(f''&lt;0\)</span>. Mangasarian Sufficiency → PMP = HJB.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Inilah mengapa di Exercise 11.3, kedua approach (HJB dan PMP) memberi Euler equation yang sama. Bukan kebetulan — konsekuensi convexity.</p>
+</div>
+<p><em>Bedakan envelope condition (HJB) vs turunan FOC (PMP).</em></p>
+<div class="tip admonition">
+<p class="admonition-title">💡 Insight</p>
+<p>Pertanyaan yang sering muncul: “mengapa untuk envelope condition di PMP, persamaan ψ= e−ρth′ didiferensiasikan dengan t?”</p>
+<p><strong>HJB Approach</strong> — Pakai envelope condition: turunkan HJB-R terhadap k. Envelope Theorem cancel suku dc∗/ dk.</p>
+<p><strong>PMP Approach</strong> — Pakai turunan FOC terhadap t + adjoint equation. Tidak ada envelope theorem di sini.</p>
+<p>Keduanya berbeda tapi memberi hasil sama. Envelope condition di PMP (Ḣ∗= Ht) adalah persamaan lain, tidak dipakai untuk derive Euler.</p>
+</div>
+<p><strong>Arrow-Pratt, EIS, Euler — Tabel sintesis</strong></p>
+<p><strong>Arrow-Pratt</strong> — <span class="math notranslate nohighlight">\(\sigma(c) = -\,h_{cc}(c)\,c/h_{c}(c)\)</span>: curvature utility — risk aversion / aversi substitusi.</p>
+<p>1/σ(c). Kebalikan Arrow-Pratt. Sensitivitas</p>
+<p><strong>EIS</strong> — substitution antarwaktu.</p>
+<p><strong>Euler Equation</strong> — ċ/c = (1/σ)[r −ρ]. Growth rate konsumsi optimal.</p>
+<p><strong>Komponen Euler equation</strong></p>
+<p><strong>Ċ/c</strong> — Growth rate konsumsi (persen perubahan per waktu)</p>
+<p><strong><span class="math notranslate nohighlight">\(r(k)=f'(k)-\delta\)</span></strong> — Net marginal product of capital (return)</p>
+<p><strong><span class="math notranslate nohighlight">\(\rho\)</span></strong> — Discount rate (impatience)</p>
+<p><strong><span class="math notranslate nohighlight">\(r-\rho\)</span></strong> — Gap return vs impatience</p>
+<p><strong><span class="math notranslate nohighlight">\(1/\sigma\)</span></strong> — EIS sebagai sensitivitas</p>
+<p><strong>Part 6.</strong> Interpretasi Keynes-Ramsey</p>
+<div class="important admonition">
+<p class="admonition-title">Ringkasan besar</p>
+<p>Keynes-Ramsey rule: pertumbuhan konsumsi = (return - impatience) × EIS</p>
+<p>Planner menyeimbangkan benefit defer konsumsi (earn return r) dengan impatience (ρ), di-scale oleh willingness to substitute (1/σ).</p>
+</div>
+<p><strong>Cases</strong></p>
+<p><strong>R&gt;ρ</strong> — Return exceed impatience → ċ &gt; 0 (konsumsi tumbuh)</p>
+<p><strong><span class="math notranslate nohighlight">\(r&lt;\rho\)</span></strong> — Impatience dominates → ċ &lt; 0 (konsumsi turun)</p>
+<p><strong><span class="math notranslate nohighlight">\(r=\rho\)</span></strong> — Konsumsi konstan (steady state, modified golden rule)</p>
+<p><strong>EIS Tinggi</strong> — Konsumsi lebih responsif terhadap gap r −ρ</p>
+<p><strong>CRRA utility special case</strong> — h(c) = (c1−σ−1)/(1 −σ) → σ konstan.</p>
+<p>cċ = σ1[φ′(k) −d −ρ]</p>
+<p>Log utility (σ= 1): ċ/c = φ′(k) −d −ρ.</p>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Inilah persamaan kunci RCK. Bab 12 akan analisis lengkap dengan phase plane.</p>
+<p><strong>Checklist</strong></p>
+</div>
+</section>
+<section id="self-assessment-bab-11">
+<h2>Self-Assessment Bab 11<a class="headerlink" href="#self-assessment-bab-11" title="Link to this heading">#</a></h2>
+<p><em>Cek pemahaman.</em></p>
+<p><strong>Konsep dasar</strong></p>
+<ul class="simple">
+<li><p>☐ Bedakan state x vs control u — tes diagnostik</p></li>
+<li><p>☐ Setup OCP (persamaan 11.1, 11.2, 11.3)</p></li>
+<li><p>☐ Mengapa OCP infinite-dimensional</p></li>
+<li><p>☐ Mengapa Lagrangian tidak cukup</p></li>
+</ul>
+<p><strong>BPO</strong></p>
+<ul class="simple">
+<li><p>☐ Statement BPO: continuation optimal di setiap titik</p></li>
+<li><p>☐ Bukti via kontradiksi</p></li>
+<li><p>☐ Backward induction sebagai konsekuensi</p></li>
+<li><p>☐ Markov property</p></li>
+<li><p>☐ State feedback rule</p></li>
+</ul>
+<p><strong>HJB Sufficiency</strong></p>
+<ul class="simple">
+<li><p>☐ Intuisi cost-benefit (11.4)</p></li>
+<li><p>☐ Chain rule untuk V ˙</p></li>
+<li><p>☐ Derivation (11.5) → (11.8)</p></li>
+<li><p>☐ Theorem 11.1 dan boundary V (T, x) = 0</p></li>
+<li><p>☐ HJB sebagai PDE</p></li>
+</ul>
+<p><strong>Necessary Conditions</strong></p>
+<ul class="simple">
+<li><p>☐ Bedakan sufficient vs necessary</p></li>
+<li><p>☐ Envelope Theorem</p></li>
+<li><p>☐ Persamaan (11.12) dan (11.13)</p></li>
+<li><p>☐ Tabel 6 suku</p></li>
+<li><p>☐ Autonomous problems: (11.13) trivial</p></li>
+</ul>
+<p><strong>PMP</strong></p>
+<ul class="simple">
+<li><p>☐ Hamiltonian definition (11.14)</p></li>
+<li><p>☐ Adjoint variable ψ= Vx</p></li>
+<li><p>☐ Empat kondisi PMP</p></li>
+<li><p>☐ Derivation (11.18) dari HJB</p></li>
+<li><p>☐ Derivation (11.19) dari (11.18) + (11.13)</p></li>
+<li><p>☐ PMP sebagai ODE system</p></li>
+</ul>
+<p><strong>Duality dan Mangasarian</strong></p>
+<ul class="simple">
+<li><p>☐ Walrasian pricing mechanism</p></li>
+<li><p>☐ Welfare Theorems analogi</p></li>
+<li><p>☐ Mangasarian Sufficiency Theorem</p></li>
+<li><p>☐ Convexity sebagai jembatan</p></li>
+</ul>
+<p><strong>Infinite Horizon</strong></p>
+<ul class="simple">
+<li><p>☐ Setup IH-OCP (11.24)</p></li>
+<li><p>☐ Derivation (11.25) via current-value</p></li>
+<li><p>☐ Asset pricing interpretation</p></li>
+<li><p>☐ Dua varian TVC (11.26) dan (11.27)</p></li>
+<li><p>☐ Bedanya finite vs infinite TVC</p></li>
+</ul>
+<section id="exercise-11-1-lqr">
+<h3>Exercise 11.1 (LQR)<a class="headerlink" href="#exercise-11-1-lqr" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>☐ Quadratic guess V= −Q(t)x2</p></li>
+<li><p>☐ Optimal control linear (Part 3)</p></li>
+<li><p>☐ Riccati ODE (Part 2)</p></li>
+<li><p>☐ Trick Q = Z/Y</p></li>
+<li><p>☐ Linear system dengan eigenvalues</p></li>
+<li><p>☐ Optimal state trajectory (Part 4)</p></li>
+</ul>
+</section>
+<section id="exercise-11-3-finite-ramsey">
+<h3>Exercise 11.3 (Finite Ramsey)<a class="headerlink" href="#exercise-11-3-finite-ramsey" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>☐ Setup OCP</p></li>
+<li><p>☐ HJB-R current-value</p></li>
+<li><p>☐ FOC: hc= Vk</p></li>
+<li><p>☐ Envelope condition derivation</p></li>
+<li><p>☐ Hamiltonian PMP</p></li>
+<li><p>☐ Euler equation via HJB dan PMP</p></li>
+<li><p>☐ Arrow-Pratt σ dan EIS</p></li>
+<li><p>☐ Keynes-Ramsey interpretation</p></li>
+</ul>
+<p>✦ ✦ ✦</p>
+<p><strong>Review Bab 11 — Optimal Control Theory</strong> — Economic Growth Personal Study Notes · Tools II Foundation</p>
+<p>Bridge ke RCK (Bab 12) dan Endogenous Growth (Bab 14-15)</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bab10-teori-pengukuran.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 10 — Teori &amp; Pengukuran</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bab12-rck.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bab 12 — Neoclassical Growth (RCK)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-1-posisi-bab-11-dalam-kursus">Konsep 1 — Posisi Bab 11 dalam Kursus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-2-section-11-1-setup-optimal-control-problem">Konsep 2 — Section 11.1 — Setup Optimal Control Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-3-section-11-2-bellman-s-principle-of-optimality">Konsep 3 — Section 11.2 — Bellman’s Principle of Optimality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-4-section-11-3-hjb-equation-sufficient">Konsep 4 — Section 11.3 — HJB Equation (Sufficient)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-11-1-hjb-sufficiency">Theorem 11.1 — HJB Sufficiency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-5-section-11-4-necessary-conditions">Konsep 5 — Section 11.4 — Necessary Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-6-section-11-5-pontryagin-maximum-principle">Konsep 6 — Section 11.5 — Pontryagin Maximum Principle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-1-adjoint-equation-11-15">Kondisi 1 — Adjoint equation (11.15)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-2-transversality-11-16">Kondisi 2 — Transversality (11.16)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-3-maximality-11-17">Kondisi 3 — Maximality (11.17)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kondisi-4-maximized-hamiltonian-11-18-dan-envelope-11-19">Kondisi 4 — Maximized Hamiltonian (11.18) dan envelope (11.19)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-7-section-11-6-duality-dan-mangasarian-sufficiency">Konsep 7 — Section 11.6 — Duality dan Mangasarian Sufficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-8-section-11-7-infinite-horizon">Konsep 8 — Section 11.7 — Infinite Horizon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-9-exercise-11-1-linear-quadratic-regulator">Konsep 9 — Exercise 11.1 — Linear Quadratic Regulator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-10-exercise-11-3-finite-horizon-ramsey">Konsep 10 — Exercise 11.3 — Finite-Horizon Ramsey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-assessment-bab-11">Self-Assessment Bab 11</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-1-lqr">Exercise 11.1 (LQR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-3-finite-ramsey">Exercise 11.3 (Finite Ramsey)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

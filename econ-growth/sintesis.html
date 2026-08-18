@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sintesis Lintas Bab &#8212; Learning Note</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'econ-growth/sintesis';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/custom.js?v=85a66431"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Peta Konsep" href="mindmap.html" />
+    <link rel="prev" title="📈 Belajar Economic Growth" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Note</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Selamat Datang
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matematika.html">Matematika</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">📈 Belajar Economic Growth</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Sintesis Lintas Bab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindmap.html">Peta Konsep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab04-ode.html">Bab 4 — ODE: Apa itu Solusi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab05-steady-state.html">Bab 5 — Steady-State Equilibria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab06-solusi-analitis-1.html">Bab 6 — Solusi Analitis I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab07-solusi-analitis-2.html">Bab 7 — Solusi Analitis II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab08-analisis-kualitatif.html">Bab 8 — Analisis Kualitatif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab09-solow-swan.html">Bab 9 — Solow-Swan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab10-teori-pengukuran.html">Bab 10 — Teori &amp; Pengukuran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab11-optimal-control.html">Bab 11 — Optimal Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab12-rck.html">Bab 12 — Neoclassical Growth (RCK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab14-romer.html">Bab 14 — R&amp;D I (Romer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bab15-peters.html">Bab 15 — R&amp;D II (Peters)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference external" href="https://logmach.github.io/my-website/gmat-app/nol-ke-805.html">🎯 Belajar GMAT</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fecon-growth/sintesis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/econ-growth/sintesis.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sintesis Lintas Bab</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-halaman-ini-ada">Mengapa halaman ini ada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-1-busur-utama">Bagian 1 — Busur Utama</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-2-ketegangan-sentral">Bagian 2 — Ketegangan Sentral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tiap-model-menghadapinya">Bagaimana tiap model menghadapinya</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-3-delapan-benang-merah">Bagian 3 — Delapan Benang Merah</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-1-perlakuan-terhadap-teknologi">Benang 1 — Perlakuan terhadap Teknologi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-2-perlakuan-terhadap-saving-investasi">Benang 2 — Perlakuan terhadap Saving / Investasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-3-returns-to-scale">Benang 3 — Returns to Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-4-transition-dynamics">Benang 4 — Transition Dynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-5-welfare-peran-kebijakan">Benang 5 — Welfare &amp; Peran Kebijakan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-6-struktur-pasar">Benang 6 — Struktur Pasar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-7-tools-matematis">Benang 7 — Tools Matematis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-8-tiga-objek-nilai-yang-sering-membingungkan">Benang 8 — Tiga “Objek Nilai” yang Sering Membingungkan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-4-tabel-perbandingan-besar">Bagian 4 — Tabel Perbandingan Besar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-5-jembatan-konseptual">Bagian 5 — Jembatan Konseptual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-6-lingkaran-yang-tertutup">Bagian 6 — Lingkaran yang Tertutup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-7-cara-memakai-peta-ini">Bagian 7 — Cara Memakai Peta Ini</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiga-kalimat-yang-merangkum-semuanya">Tiga kalimat yang merangkum semuanya</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sintesis-lintas-bab">
+<h1>Sintesis Lintas Bab<a class="headerlink" href="#sintesis-lintas-bab" title="Link to this heading">#</a></h1>
+<p><em>Bagaimana satu pertanyaan tumbuh menjadi seluruh teori pertumbuhan.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sebagian notasi matematis pada halaman ini direkonstruksi dari konteks, karena berkas sumber tidak menyimpan lapisan teks untuk formula-formulanya.</p>
+</div>
+<section id="mengapa-halaman-ini-ada">
+<h2>Mengapa halaman ini ada<a class="headerlink" href="#mengapa-halaman-ini-ada" title="Link to this heading">#</a></h2>
+<p>Review per-bab menjawab “apa isi tiap bab”. Halaman ini menjawab pertanyaan yang lebih besar: bagaimana bab-bab saling terhubung dan berkembang.</p>
+<p>Materi ini bukan kumpulan topik terpisah. Ia adalah satu argumen panjang — satu pertanyaan yang dijawab makin dalam, bab demi bab. Tiap model baru lahir dari keterbatasan model sebelumnya.</p>
+<p>Karena itu halaman ini disusun bukan per-bab, tapi per-benang merah (<em>through-line</em>). Tiap benang dilacak perkembangannya: Solow → RCK → Romer → Peters. Tujuannya agar terlihat arsitekturnya, bukan sekadar potongan-potongan.</p>
+<p>Struktur: (1) Busur utama; (2) Ketegangan sentral — diminishing returns vs sustained growth; (3) Delapan benang merah; (4) Tabel perbandingan besar; (5) Jembatan konseptual; (6) Lingkaran yang tertutup; (7) Cara memakai peta ini.</p>
+</section>
+<hr class="docutils" />
+<section id="bagian-1-busur-utama">
+<h2>Bagian 1 — Busur Utama<a class="headerlink" href="#bagian-1-busur-utama" title="Link to this heading">#</a></h2>
+<p><em>Satu pertanyaan, dijawab makin dalam. Inilah tulang punggung naratifnya.</em></p>
+<div class="important admonition">
+<p class="admonition-title">Pertanyaan induk</p>
+<p>Mengapa sebagian negara jauh lebih kaya dari yang lain, dan apa yang membuat pertumbuhan standar hidup bisa berkelanjutan? Seluruh materi adalah upaya menjawab ini dengan presisi yang terus bertambah — tiap tahap menambahkan satu lapis jawaban.</p>
+</div>
+<p><strong>Tujuh tahap perkembangan:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Bab 1–2 · Motivation — menetapkan fakta &amp; pertanyaan.</strong> Ketimpangan pendapatan antar negara sangat besar. Fakta Kaldor (rate pertumbuhan &amp; rasio modal-output kira-kira stabil). <em>Menambahkan: pertanyaan yang harus dijawab.</em></p></li>
+<li><p><strong>Bab 3–8 · Tools I (ODE) — membangun bahasa dinamika.</strong> Pertumbuhan = bagaimana sesuatu berubah terhadap waktu → persamaan diferensial. Steady state, stabilitas, eigenvalue, phase diagram. <em>Menambahkan: tata bahasa sebelum kalimat.</em></p></li>
+<li><p><strong>Bab 9–10 · Solow-Swan — model pertama: akumulasi modal.</strong> Modal dengan diminishing returns. Temuan kunci: modal saja tak bisa menopang pertumbuhan (diminishing returns → konvergensi). Pertumbuhan harus dari teknologi <span class="math notranslate nohighlight">\(A\)</span> yang eksogen. Growth accounting: TFP adalah residual besar penjelas perbedaan antar negara — tapi <span class="math notranslate nohighlight">\(A\)</span> adalah kotak hitam.</p></li>
+<li><p><strong>Bab 11 · Tools II (Optimal Control) — alat baru: pilihan antarwaktu.</strong> Solow mengasumsikan saving konstan, padahal saving adalah pilihan. Untuk memodelkan pilihan sepanjang waktu, butuh optimal control (Hamiltonian, Pontryagin, adjoint, TVC). <em>Menambahkan: tata bahasa untuk model berikutnya.</em></p></li>
+<li><p><strong>Bab 12–13 · RCK — endogenkan saving.</strong> Saving dari optimisasi household (Euler equation). First Welfare Theorem berlaku → kompetitif = planner. Tapi pertumbuhan masih eksogen (<span class="math notranslate nohighlight">\(g\)</span> masih kotak hitam). Dinamika saddle path. <em>Menambahkan: fondasi mikro untuk saving, tapi belum membuka kotak hitam.</em></p></li>
+<li><p><strong>Bab 14 · Romer / Lab Equipment — membuka kotak hitam.</strong> Teknologi = <em>variety</em> <span class="math notranslate nohighlight">\(N\)</span>, diproduksi lewat R&amp;D yang disengaja. Kunci: ide non-rival → aggregate IRS → butuh monopoli untuk mendanai R&amp;D → First Welfare gagal. Pertumbuhan jadi endogen; kebijakan <em>matters</em>. <em>Menambahkan: asal-usul pertumbuhan itu sendiri.</em></p></li>
+<li><p><strong>Bab 15 · Peters / Schumpeterian — firm heterogen &amp; misallocation.</strong> Teknologi = kualitas <span class="math notranslate nohighlight">\(q\)</span>, tapi firm heterogen. Markup bervariasi → <em>wedge</em> misallocation. Aggregate TFP <span class="math notranslate nohighlight">\(=Q\times\mathcal{M}\)</span>. Ini menghubungkan kembali ke residual TFP Bab 10: sebagian perbedaan TFP adalah misallocation, yang endogen terhadap dinamika kompetisi. <em>Menambahkan: menutup lingkaran.</em></p></li>
+</ol>
+<div class="important admonition">
+<p class="admonition-title">Gambaran besar</p>
+<p>Bentuk besarnya adalah lingkaran yang tertutup: residual TFP (Bab 10) → kotak hitam → dibuka sebagai variety/quality endogen (Bab 14–15) → dengan misallocation sebagai komponen endogen (Bab 15) yang menjelaskan sebagian perbedaan TFP awal. Materi berakhir dengan menjawab pertanyaan yang ia angkat di tengah.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="bagian-2-ketegangan-sentral">
+<h2>Bagian 2 — Ketegangan Sentral<a class="headerlink" href="#bagian-2-ketegangan-sentral" title="Link to this heading">#</a></h2>
+<p><em>Satu ide menyatukan semuanya: diminishing returns adalah musuh pertumbuhan berkelanjutan.</em></p>
+<p>Kalau kamu hanya boleh membawa satu ide dari materi ini, bawalah ini. Hampir setiap model bergulat dengan satu masalah sama: <strong>bagaimana lolos dari diminishing returns?</strong></p>
+<p>Inti seluruh materi dalam satu gambar mental — plot output <span class="math notranslate nohighlight">\(y\)</span> terhadap modal/input terakumulasi <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kurva</p></th>
+<th class="head"><p>Bentuk</p></th>
+<th class="head"><p>Nasib pertumbuhan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Solow</strong>: <span class="math notranslate nohighlight">\(f(k)\)</span></p></td>
+<td><p>cekung (diminishing returns)</p></td>
+<td><p>pertumbuhan berhenti</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Endogen</strong>: <span class="math notranslate nohighlight">\(AK\)</span> / <span class="math notranslate nohighlight">\(AN\)</span></p></td>
+<td><p>garis lurus (linear)</p></td>
+<td><p>pertumbuhan langgeng</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Kurva cekung memaksa pertumbuhan berhenti; garis lurus — linearitas yang lahir dari ide non-rival — membuat pertumbuhan berkelanjutan.</p>
+<section id="bagaimana-tiap-model-menghadapinya">
+<h3>Bagaimana tiap model menghadapinya<a class="headerlink" href="#bagaimana-tiap-model-menghadapinya" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Solow / RCK</strong></p></th>
+<th class="head"><p><strong>Romer</strong></p></th>
+<th class="head"><p><strong>Peters</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>TAK BISA LOLOS</strong></p></td>
+<td><p><strong>LOLOS via VARIETY</strong></p></td>
+<td><p><strong>LOLOS via QUALITY</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Diminishing returns ke modal: marginal product <span class="math notranslate nohighlight">\(f'(k)\)</span> turun saat <span class="math notranslate nohighlight">\(k\)</span> naik → akumulasi modal mentok. Pertumbuhan jangka panjang harus “diimpor” dari <span class="math notranslate nohighlight">\(g\)</span> eksogen.</p></td>
+<td><p>Marginal product tidak menuju nol karena output tumbuh lewat varietas <em>baru</em> (<span class="math notranslate nohighlight">\(N\)</span> naik), bukan menumpuk varietas lama. Tiap varietas = dimensi baru. Linearitas dalam <span class="math notranslate nohighlight">\(N\)</span>.</p></td>
+<td><p>Kualitas <span class="math notranslate nohighlight">\(q\)</span> naik tanpa batas lewat quality ladder (<span class="math notranslate nohighlight">\(\times\,\lambda\)</span> tiap inovasi). Ide non-rival → tiap perbaikan kualitas dipakai selamanya. Linearitas dalam <span class="math notranslate nohighlight">\(Q\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Mengapa (formal)</p>
+<p>Diminishing returns berasal dari konkavitas fungsi produksi terhadap faktor yang dapat diakumulasi. Jika <span class="math notranslate nohighlight">\(f''&lt;0\)</span>, maka saat <span class="math notranslate nohighlight">\(k\)</span> membesar <span class="math notranslate nohighlight">\(f'(k)\)</span> jatuh → tidak ada insentif akumulasi lebih → steady state. Endogenous growth menghindari ini dengan membuat agregat <em>linear</em> dalam faktor yang tumbuh (efektif <span class="math notranslate nohighlight">\(Y \propto N\)</span> atau <span class="math notranslate nohighlight">\(Y \propto Q\)</span>), bersumber dari non-rivalry ide.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Bayangkan menambah pupuk ke sebidang tanah. Sendok pupuk ke-100 hampir tak menambah panen — itu diminishing returns (Solow). Tapi kalau alih-alih menumpuk pupuk, kamu menemukan jenis tanaman baru yang lebih produktif, dan resep itu bisa dipakai semua petani selamanya tanpa habis — itulah ide non-rival yang membuat pertumbuhan tak pernah mentok (endogenous growth).</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bagian-3-delapan-benang-merah">
+<h2>Bagian 3 — Delapan Benang Merah<a class="headerlink" href="#bagian-3-delapan-benang-merah" title="Link to this heading">#</a></h2>
+<p><em>Tiap benang adalah satu konsep yang dilacak perkembangannya melintasi keempat model.</em></p>
+<section id="benang-1-perlakuan-terhadap-teknologi">
+<h3>Benang 1 — Perlakuan terhadap Teknologi<a class="headerlink" href="#benang-1-perlakuan-terhadap-teknologi" title="Link to this heading">#</a></h3>
+<p><em>“Apa itu teknologi, dan dari mana asalnya?” — dari asumsi ke penjelasan.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow</p></th>
+<th class="head"><p>RCK</p></th>
+<th class="head"><p>Romer</p></th>
+<th class="head"><p>Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>EKSOGEN</strong> — <span class="math notranslate nohighlight">\(A\)</span> tumbuh rate <span class="math notranslate nohighlight">\(g\)</span> (diasumsikan). Kotak hitam.</p></td>
+<td><p><strong>EKSOGEN</strong> — <span class="math notranslate nohighlight">\(g\)</span> tetap eksogen, <span class="math notranslate nohighlight">\(A\)</span> sama. RCK mengubah saving, bukan teknologi.</p></td>
+<td><p><strong>ENDOGEN (variety)</strong> — pertumbuhan dari ekspansi varietas <span class="math notranslate nohighlight">\(N\)</span>.</p></td>
+<td><p><strong>ENDOGEN (quality)</strong> — <span class="math notranslate nohighlight">\(g\)</span> dari quality ladder, plus dispersi markup.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Ini benang paling penting. Solow &amp; RCK berkata “teknologi maju entah bagaimana, mari hitung konsekuensinya”. Romer &amp; Peters berkata “mari jelaskan <em>mengapa</em> teknologi maju” — dengan memodelkan keputusan R&amp;D yang disengaja. Dari deskripsi ke penjelasan.</p>
+</div>
+</section>
+<section id="benang-2-perlakuan-terhadap-saving-investasi">
+<h3>Benang 2 — Perlakuan terhadap Saving / Investasi<a class="headerlink" href="#benang-2-perlakuan-terhadap-saving-investasi" title="Link to this heading">#</a></h3>
+<p><em>Dari aturan mekanis → pilihan optimal antarwaktu → pilihan R&amp;D.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow</p></th>
+<th class="head"><p>RCK</p></th>
+<th class="head"><p>Romer / Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>KONSTAN</strong> — saving rate <span class="math notranslate nohighlight">\(s\)</span> eksogen, tetap. Mekanis: tidak ada yang “memilih”.</p></td>
+<td><p><strong>OPTIMAL (konsumsi)</strong> — household pilih <span class="math notranslate nohighlight">\(c(t)\)</span> via OCP; Euler equation. Saving endogen.</p></td>
+<td><p><strong>OPTIMAL (R&amp;D)</strong> — pilih investasi R&amp;D (<span class="math notranslate nohighlight">\(\dot{N}\)</span> atau intensitas inovasi). Free entry condition menentukan rate inovasi.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Bab 11 (Optimal Control) ada justru karena benang ini. Untuk pindah dari “saving konstan” (Solow) ke “saving optimal” (RCK), kita butuh alat baru untuk optimisasi sepanjang waktu. Tools mendahului model.</p>
+</div>
+</section>
+<section id="benang-3-returns-to-scale">
+<h3>Benang 3 — Returns to Scale<a class="headerlink" href="#benang-3-returns-to-scale" title="Link to this heading">#</a></h3>
+<p><em>Dari CRS neoklasik murni → private CRS tapi aggregate IRS (sumber: ide non-rival).</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow / RCK</p></th>
+<th class="head"><p>Romer</p></th>
+<th class="head"><p>Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>CRS neoklasik</strong> — CRS dalam <span class="math notranslate nohighlight">\((K,L)\)</span>; diminishing returns ke <span class="math notranslate nohighlight">\(K\)</span> saja. Konveksitas terjaga.</p></td>
+<td><p><strong>CRS privat, IRS agregat</strong> — firm: CRS dalam <span class="math notranslate nohighlight">\((K,L)\)</span> dengan <span class="math notranslate nohighlight">\(N\)</span> <em>given</em>. Ekonomi: IRS dalam <span class="math notranslate nohighlight">\((K,L,N)\)</span> karena <span class="math notranslate nohighlight">\(N\)</span> non-rival. Sumber: variety.</p></td>
+<td><p><strong>CRS privat, IRS agregat</strong> — struktur SAMA. Firm: linear dalam labor (CRS). Ekonomi: IRS berkat stok kualitas <span class="math notranslate nohighlight">\(Q\)</span> non-rival. Sumber: quality.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Mengapa (formal)</p>
+<p>Pergeseran ini adalah poros teknis yang menyebabkan dua konsekuensi besar (lihat Benang 5): aggregate IRS melanggar konveksitas → First Welfare Theorem gagal; dan linearitas agregat → pertumbuhan berkelanjutan tanpa transition dynamics (Benang 4). Satu perubahan struktural, banyak akibat.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Kunci pemahamannya: ini bukan “satu varietas vs semua varietas”, tapi <span class="math notranslate nohighlight">\(N\)</span> <em>given</em> (sudut pandang firm) vs <span class="math notranslate nohighlight">\(N\)</span> <em>endogen</em> (sudut pandang ekonomi). Firm berperilaku biasa (CRS); tapi ketika ekonomi tumbuh, stok ide ikut tumbuh dan dipakai semua orang — itulah bonus non-rival yang menghasilkan IRS agregat.</p>
+</div>
+</section>
+<section id="benang-4-transition-dynamics">
+<h3>Benang 4 — Transition Dynamics<a class="headerlink" href="#benang-4-transition-dynamics" title="Link to this heading">#</a></h3>
+<p><em>Dari konvergensi bertahap → saddle path → tak ada transisi (langsung BGP).</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow</p></th>
+<th class="head"><p>RCK</p></th>
+<th class="head"><p>Romer / Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>KONVERGENSI</strong> — dari <span class="math notranslate nohighlight">\(k_0\)</span>, konvergen bertahap ke <span class="math notranslate nohighlight">\(\bar{k}\)</span>. Digerakkan diminishing returns.</p></td>
+<td><p><strong>SADDLE PATH</strong> — dari <span class="math notranslate nohighlight">\(k_0\)</span>, ekonomi bergerak sepanjang stable arm ke <span class="math notranslate nohighlight">\((\bar{k},\bar{c})\)</span>. <span class="math notranslate nohighlight">\(c\)</span> <em>jump</em> ke saddle path.</p></td>
+<td><p><strong>TANPA TRANSISI</strong> — <span class="math notranslate nohighlight">\(g\)</span> konstan dari <span class="math notranslate nohighlight">\(t=0\)</span>, langsung di BGP. Struktur linear (AK-style), tak ada konvergensi.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Benang ini adalah akibat langsung dari Benang 3. Diminishing returns (Solow/RCK) menciptakan transisi — konvergensi bertahap saat marginal product berubah. Linearitas (endogenous) menghapus transisi: tidak ada “tempat istirahat” yang didekati, ekonomi langsung tumbuh seimbang. Kelemahannya: model endogen tak menangkap konvergensi empiris (negara miskin <em>catch-up</em>).</p>
+</div>
+</section>
+<section id="benang-5-welfare-peran-kebijakan">
+<h3>Benang 5 — Welfare &amp; Peran Kebijakan<a class="headerlink" href="#benang-5-welfare-peran-kebijakan" title="Link to this heading">#</a></h3>
+<p><em>Dari deskriptif → First Welfare berlaku → First Welfare gagal → ruang kebijakan.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow</p></th>
+<th class="head"><p>RCK</p></th>
+<th class="head"><p>Romer</p></th>
+<th class="head"><p>Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>DESKRIPTIF</strong> — tidak ada optimisasi; tak ada pernyataan welfare.</p></td>
+<td><p><strong>EFISIEN</strong> — First Welfare berlaku. Kompetitif = planner. Tak ada ruang kebijakan (pada growth).</p></td>
+<td><p><strong>GAGAL → 2 instrumen</strong> — First Welfare gagal (aggregate IRS + monopoli + appropriability). Dua distorsi (intensive/extensive) → dua subsidi (Tinbergen).</p></td>
+<td><p><strong>MISALLOCATION</strong> — <em>wedge</em> dari markup heterogen; inefisiensi alokasi. Kebijakan bisa kurangi dispersi markup.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Mengapa (formal)</p>
+<p>First Welfare Theorem butuh: pasar lengkap, kompetitif, konveksitas. RCK memenuhi semua → efisien. Romer melanggar konveksitas (aggregate IRS) DAN kompetitif (monopoli) → gagal. Inilah mengapa kebijakan tiba-tiba “matters” mulai Bab 14 — bukan karena selera, tapi karena teorema fundamental tak lagi berlaku.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Di RCK, “tangan tak terlihat” bekerja sempurna — pasar sudah optimal, pemerintah tak bisa memperbaiki. Mulai Romer, tangan tak terlihat pincang: inovator tak menangkap seluruh manfaat sosial inovasinya (appropriability), dan monopoli menetapkan harga terlalu tinggi. Maka ada pekerjaan untuk kebijakan — subsidi R&amp;D dan subsidi input.</p>
+</div>
+</section>
+<section id="benang-6-struktur-pasar">
+<h3>Benang 6 — Struktur Pasar<a class="headerlink" href="#benang-6-struktur-pasar" title="Link to this heading">#</a></h3>
+<p><em>Dari kompetisi sempurna → kompetisi monopolistik (markup konstan) → Bertrand (markup heterogen).</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Solow / RCK</p></th>
+<th class="head"><p>Romer</p></th>
+<th class="head"><p>Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>KOMPETISI SEMPURNA</strong> — harga <span class="math notranslate nohighlight">\(=\)</span> MC. Zero profit. Tak ada market power.</p></td>
+<td><p><strong>MONOPOLISTIK</strong> — tiap firm intermediate monopoli atas varietasnya. Markup konstan <span class="math notranslate nohighlight">\(1/\alpha\)</span> (dari CES).</p></td>
+<td><p><strong>BERTRAND / limit pricing</strong> — markup heterogen <span class="math notranslate nohighlight">\(\lambda^{\Delta}\)</span> (gap kualitas). Distribusi markup Pareto.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Mengapa struktur pasar harus berubah? Karena Benang 1 menuntutnya. Untuk mendanai fixed cost R&amp;D (teknologi endogen), firm butuh profit — mustahil di kompetisi sempurna (zero profit). Maka market power (monopoli/Bertrand) bukan tambahan kosmetik, melainkan syarat logis agar inovasi berbayar. Inilah insight ketiga Romer.</p>
+</div>
+</section>
+<section id="benang-7-tools-matematis">
+<h3>Benang 7 — Tools Matematis<a class="headerlink" href="#benang-7-tools-matematis" title="Link to this heading">#</a></h3>
+<p><em>Tiga lapis alat, masing-masing untuk jenis pertanyaan berbeda.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bab 3–8 (ODE)</p></th>
+<th class="head"><p>Bab 11 (Optimal Control)</p></th>
+<th class="head"><p>Bab 14–15 (HJB / Asset Pricing)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>BAHASA DINAMIKA</strong> — persamaan diferensial: steady state, stabilitas, eigenvalue, phase diagram. Mendeskripsikan bagaimana sistem bergerak.</p></td>
+<td><p><strong>PILIHAN ANTARWAKTU</strong> — Hamiltonian, Pontryagin, adjoint <span class="math notranslate nohighlight">\(\psi\)</span>, TVC. Untuk memilih jalur optimal sepanjang waktu (household).</p></td>
+<td><p><strong>VALUASI</strong> — nilai firm sebagai PV aliran profit (asset pricing). Peters: HJB dengan banyak Poisson jumps.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Pola yang berulang: tools selalu mendahului model yang membutuhkannya. ODE (Bab 3–8) sebelum Solow. Optimal control (Bab 11) sebelum RCK. Ini bukan kebetulan kurikulum — tiap model baru menuntut alat baru, jadi alat diajarkan tepat sebelum dipakai.</p>
+</div>
+</section>
+<section id="benang-8-tiga-objek-nilai-yang-sering-membingungkan">
+<h3>Benang 8 — Tiga “Objek Nilai” yang Sering Membingungkan<a class="headerlink" href="#benang-8-tiga-objek-nilai-yang-sering-membingungkan" title="Link to this heading">#</a></h3>
+<p><em>Lagrangian statis vs Hamiltonian dinamis vs HJB — kapan pakai yang mana.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Lagrangian (statis)</p></th>
+<th class="head"><p>Hamiltonian (dinamis)</p></th>
+<th class="head"><p>HJB / Asset Pricing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>ALOKASI SATU PERIODE</strong> — konsumen memilih antar barang; firm cost-min. Multiplier = shadow price dalam periode. Tak ada state berevolusi. <em>Contoh: Romer 14.4, Peters 15.5 (sales).</em></p></td>
+<td><p><strong>OCP HOUSEHOLD</strong> — household pilih <span class="math notranslate nohighlight">\(c(t)\)</span>. Adjoint <span class="math notranslate nohighlight">\(\psi\)</span> = shadow price state (assets). Discount <span class="math notranslate nohighlight">\(\rho\)</span> (subjektif). State berevolusi: <span class="math notranslate nohighlight">\(\dot{a}\)</span>. <em>Contoh: RCK 12.4, Romer 14.1.</em></p></td>
+<td><p><strong>VALUASI FIRM</strong> — nilai firm. Discount <span class="math notranslate nohighlight">\(r\)</span> (pasar). Tak ada adjoint — value langsung. <em>Contoh: Romer 14.7, Peters 15.14 (HJB).</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Mengapa (formal)</p>
+<p>Aturan praktis memilih: ada state yang berevolusi sepanjang waktu DAN trade-off antarwaktu? → Hamiltonian/HJB (dinamis). Hanya alokasi pada satu titik waktu (antar barang/input)? → Lagrangian statis. Firm yang dinilai sebagai aset (problem pricing-nya statis per-periode)? → HJB asset pricing dengan discount pasar <span class="math notranslate nohighlight">\(r\)</span>, bukan <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Kebingungan umum: ketiganya pakai “multiplier” dan FOC, jadi terlihat mirip. Bedanya: Lagrangian menjawab “bagaimana membagi anggaran sekarang”; Hamiltonian menjawab “bagaimana menyeimbangkan sekarang vs nanti”; HJB menjawab “berapa nilai aset yang menghasilkan aliran kas”. Household menabung lintas waktu (Hamiltonian, pakai <span class="math notranslate nohighlight">\(\rho\)</span>); firm dihargai pasar (HJB, pakai <span class="math notranslate nohighlight">\(r\)</span>).</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bagian-4-tabel-perbandingan-besar">
+<h2>Bagian 4 — Tabel Perbandingan Besar<a class="headerlink" href="#bagian-4-tabel-perbandingan-besar" title="Link to this heading">#</a></h2>
+<p><em>Keempat model berdampingan di banyak dimensi. Lembar rujukan cepat.</em></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dimensi</p></th>
+<th class="head"><p>Solow</p></th>
+<th class="head"><p>RCK</p></th>
+<th class="head"><p>Romer</p></th>
+<th class="head"><p>Peters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bab</p></td>
+<td><p>9–10</p></td>
+<td><p>12–13</p></td>
+<td><p>14</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Saving</p></td>
+<td><p>Konstan</p></td>
+<td><p>Optimal (Euler)</p></td>
+<td><p>Optimal + R&amp;D</p></td>
+<td><p>Optimal + R&amp;D</p></td>
+</tr>
+<tr class="row-even"><td><p>Teknologi</p></td>
+<td><p>Eksogen</p></td>
+<td><p>Eksogen</p></td>
+<td><p>Endogen (variety)</p></td>
+<td><p>Endogen (quality)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Growth</p></td>
+<td><p>Eksogen</p></td>
+<td><p>Eksogen</p></td>
+<td><p>Endogen</p></td>
+<td><p>Endogen</p></td>
+</tr>
+<tr class="row-even"><td><p>Returns</p></td>
+<td><p>CRS</p></td>
+<td><p>CRS</p></td>
+<td><p>Privat CRS, agregat IRS</p></td>
+<td><p>Privat CRS, agregat IRS</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pasar</p></td>
+<td><p>Komp. sempurna</p></td>
+<td><p>Komp. sempurna</p></td>
+<td><p>Monopolistik</p></td>
+<td><p>Bertrand</p></td>
+</tr>
+<tr class="row-even"><td><p>Markup</p></td>
+<td><p>1 (=MC)</p></td>
+<td><p>1 (=MC)</p></td>
+<td><p>Konstan <span class="math notranslate nohighlight">\(1/\alpha\)</span></p></td>
+<td><p>Heterogen <span class="math notranslate nohighlight">\(\lambda^{\Delta}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Transisi</p></td>
+<td><p>Konvergensi</p></td>
+<td><p>Saddle path</p></td>
+<td><p>Tak ada</p></td>
+<td><p>Tak ada</p></td>
+</tr>
+<tr class="row-even"><td><p>First Welfare</p></td>
+<td><p>—</p></td>
+<td><p>Berlaku</p></td>
+<td><p>Gagal</p></td>
+<td><p>Gagal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Policy → growth</p></td>
+<td><p>Tidak</p></td>
+<td><p>Tidak</p></td>
+<td><p>Ya</p></td>
+<td><p>Ya</p></td>
+</tr>
+<tr class="row-even"><td><p>Misallocation</p></td>
+<td><p>—</p></td>
+<td><p>—</p></td>
+<td><p>Tidak ada</p></td>
+<td><p>Ya (endogen)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tools utama</p></td>
+<td><p>ODE</p></td>
+<td><p>Hamiltonian</p></td>
+<td><p>HJB asset pricing</p></td>
+<td><p>HJB multi-jump</p></td>
+</tr>
+<tr class="row-even"><td><p>Growth rate</p></td>
+<td><p><span class="math notranslate nohighlight">\(g\)</span> (given)</p></td>
+<td><p><span class="math notranslate nohighlight">\(g\)</span> (given)</p></td>
+<td><p>endogen (free entry)</p></td>
+<td><p>endogen (inovasi)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Mengapa (intuitif)</p>
+<p>Baca tabel ini secara <strong>kolom</strong> (satu model) untuk mengingat profil tiap model; baca secara <strong>baris</strong> (satu dimensi) untuk melihat perkembangan suatu konsep — itulah benang merah. Kemampuan membaca baris adalah inti dari berpikir sintesis.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="bagian-5-jembatan-konseptual">
+<h2>Bagian 5 — Jembatan Konseptual<a class="headerlink" href="#bagian-5-jembatan-konseptual" title="Link to this heading">#</a></h2>
+<p><em>Tiap model baru lahir untuk mengatasi keterbatasan pendahulunya. Lima jembatan yang menggerakkan seluruh alur.</em></p>
+<div class="seealso admonition">
+<p class="admonition-title">Jembatan 1 · Dari Solow</p>
+<p><strong>“Modal saja tak cukup.”</strong> Solow menunjukkan diminishing returns ke modal → pertumbuhan jangka panjang harus dari teknologi <span class="math notranslate nohighlight">\(A\)</span>. Tapi <span class="math notranslate nohighlight">\(A\)</span> eksogen — tak dijelaskan. Ini menanam dua benih: (a) saving sebaiknya pilihan, bukan konstan → RCK; (b) <span class="math notranslate nohighlight">\(A\)</span> sebaiknya dijelaskan → endogenous growth.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Jembatan 2 · Solow → RCK</p>
+<p><strong>“Saving adalah pilihan, bukan parameter.”</strong> Solow mengasumsikan <span class="math notranslate nohighlight">\(s\)</span> konstan secara ad-hoc. Tapi rumah tangga sungguhan memilih berapa menabung dengan menimbang konsumsi sekarang vs nanti. Untuk memodelkan ini, butuh optimal control (Bab 11) → RCK dengan Euler equation. Hasil mengejutkan: meski saving kini optimal, pertumbuhan jangka panjang tetap eksogen.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Jembatan 3 · RCK → Romer</p>
+<p><strong>“Buka kotak hitam <span class="math notranslate nohighlight">\(A\)</span>.”</strong> RCK menyempurnakan saving, tapi <span class="math notranslate nohighlight">\(g\)</span> masih misterius. Romer bertanya: dari mana teknologi? Jawab: dari R&amp;D yang disengaja, menghasilkan ide non-rival. Ini memaksa tiga perubahan terkait — IRS agregat, market power, kegagalan First Welfare. Pertumbuhan akhirnya endogen.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Jembatan 4 · Romer → Peters</p>
+<p><strong>“Firm sungguhan heterogen.”</strong> Romer mengasumsikan firm identik dengan markup konstan. Tapi data menunjukkan markup sangat bervariasi antar firm. Peters memodelkan heterogenitas ini lewat Bertrand + own-innovation → distribusi markup endogen → dan ini melahirkan konsep baru: misallocation.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Jembatan 5 · Peters → kembali ke Bab 10</p>
+<p><strong>“Misallocation menjelaskan residual TFP.”</strong> Bab 10 menemukan TFP sebagai residual besar tapi tak terjelaskan. Peters menunjukkan sebagian residual itu adalah misallocation (<span class="math notranslate nohighlight">\(\mathcal{M}\)</span>), yang endogen terhadap dinamika kompetisi. Pertanyaan dari tengah materi dijawab di akhir. Lingkaran tertutup.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="bagian-6-lingkaran-yang-tertutup">
+<h2>Bagian 6 — Lingkaran yang Tertutup<a class="headerlink" href="#bagian-6-lingkaran-yang-tertutup" title="Link to this heading">#</a></h2>
+<p><em>Bagaimana bagian akhir menjawab pertanyaan dari tengahnya.</em></p>
+<p>Alurnya: <strong>residual TFP</strong> (Bab 10: besar, tak terjelaskan — kotak hitam <span class="math notranslate nohighlight">\(A\)</span> “entah bagaimana”) → <strong>dibuka</strong> menjadi pertumbuhan endogen — variety <span class="math notranslate nohighlight">\(N\)</span>, quality <span class="math notranslate nohighlight">\(Q\)</span> (Bab 14–15) → yang <strong>mengungkap misallocation</strong> <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> sebagai komponen endogen TFP (Bab 15) → <strong>menjelaskan kembali</strong> residual awal.</p>
+<div class="important admonition">
+<p class="admonition-title">Gambaran besar</p>
+<p>Inilah keindahan arsitekturnya: ia tidak berakhir di sembarang tempat — ia kembali ke awal dengan jawaban. Pertanyaan “mengapa TFP berbeda?” yang diangkat saat growth accounting (Bab 10) akhirnya dijawab: sebagian karena teknologi (<span class="math notranslate nohighlight">\(Q\)</span>), sebagian karena seberapa efisien teknologi itu dialokasikan (<span class="math notranslate nohighlight">\(\mathcal{M}\)</span>) — dan keduanya kini punya penjelasan endogen, bukan asumsi.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="bagian-7-cara-memakai-peta-ini">
+<h2>Bagian 7 — Cara Memakai Peta Ini<a class="headerlink" href="#bagian-7-cara-memakai-peta-ini" title="Link to this heading">#</a></h2>
+<p><em>Pertanyaan sintesis menguji baris, bukan kolom.</em></p>
+<p>Contoh pertanyaan sintesis yang layak dipakai menguji diri:</p>
+<ul class="simple">
+<li><p>Bandingkan BGP di Solow, RCK, dan endogenous → pakai Benang 2, 4 + tabel besar.</p></li>
+<li><p>Mengapa First Welfare gagal di Bab 14 tapi berlaku di Bab 12? → Benang 5 (konveksitas + monopoli).</p></li>
+<li><p>Mengapa endogenous growth butuh market power? → Benang 6 + Jembatan 3 (fixed cost R&amp;D butuh profit).</p></li>
+<li><p>Apa peran ide non-rival? → Benang 3 (sumber IRS agregat) + Ketegangan Sentral (lolos diminishing returns).</p></li>
+<li><p>Kapan pakai Hamiltonian vs Lagrangian vs HJB? → Benang 8.</p></li>
+<li><p>Bagaimana misallocation berhubungan dengan TFP? → Bagian 6 (lingkaran tertutup).</p></li>
+</ul>
+<div class="important admonition">
+<p class="admonition-title">Koneksi</p>
+<p>Strategi menjawab pertanyaan sintesis apa pun: (1) identifikasi benang merah mana yang ditanya; (2) lacak perkembangannya dari model awal ke akhir; (3) jelaskan <em>mengapa</em> ia berkembang demikian — keterbatasan apa yang diatasi (pakai jembatan konseptual). Jawaban yang bagus tidak hanya menyebut perbedaan, tapi menjelaskan logika perkembangannya.</p>
+</div>
+<section id="tiga-kalimat-yang-merangkum-semuanya">
+<h3>Tiga kalimat yang merangkum semuanya<a class="headerlink" href="#tiga-kalimat-yang-merangkum-semuanya" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Modal saja tak bisa menopang pertumbuhan</strong> karena diminishing returns (Solow); pertumbuhan berkelanjutan butuh sesuatu yang lolos dari konkavitas.</p></li>
+<li><p><strong>Ide bersifat non-rival</strong> → menghasilkan returns to scale meningkat di tingkat agregat → memungkinkan pertumbuhan endogen, tapi mengharuskan market power dan membuat pasar tak lagi efisien (Romer).</p></li>
+<li><p><strong>Ketika firm heterogen, dispersi markup menciptakan misallocation</strong> — sebuah komponen endogen dari TFP yang menjelaskan sebagian perbedaan kemakmuran antar negara (Peters), menjawab teka-teki yang diangkat growth accounting.</p></li>
+</ol>
+<p><em>✦ Lihat hutan, bukan hanya pohon ✦</em></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./econ-growth"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">📈 Belajar Economic Growth</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mindmap.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Peta Konsep</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengapa-halaman-ini-ada">Mengapa halaman ini ada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-1-busur-utama">Bagian 1 — Busur Utama</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-2-ketegangan-sentral">Bagian 2 — Ketegangan Sentral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tiap-model-menghadapinya">Bagaimana tiap model menghadapinya</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-3-delapan-benang-merah">Bagian 3 — Delapan Benang Merah</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-1-perlakuan-terhadap-teknologi">Benang 1 — Perlakuan terhadap Teknologi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-2-perlakuan-terhadap-saving-investasi">Benang 2 — Perlakuan terhadap Saving / Investasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-3-returns-to-scale">Benang 3 — Returns to Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-4-transition-dynamics">Benang 4 — Transition Dynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-5-welfare-peran-kebijakan">Benang 5 — Welfare &amp; Peran Kebijakan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-6-struktur-pasar">Benang 6 — Struktur Pasar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-7-tools-matematis">Benang 7 — Tools Matematis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benang-8-tiga-objek-nilai-yang-sering-membingungkan">Benang 8 — Tiga “Objek Nilai” yang Sering Membingungkan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-4-tabel-perbandingan-besar">Bagian 4 — Tabel Perbandingan Besar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-5-jembatan-konseptual">Bagian 5 — Jembatan Konseptual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-6-lingkaran-yang-tertutup">Bagian 6 — Lingkaran yang Tertutup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagian-7-cara-memakai-peta-ini">Bagian 7 — Cara Memakai Peta Ini</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiga-kalimat-yang-merangkum-semuanya">Tiga kalimat yang merangkum semuanya</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Tiofan Bagus Wicaksono Situngkir
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
