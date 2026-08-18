@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -456,12 +456,12 @@
 <section id="konsep-1-6-1-1-integrating-factor-untuk-ode-konstan">
 <h2>Konsep 1 — 6.1.1 — Integrating Factor untuk ODE Konstan<a class="headerlink" href="#konsep-1-6-1-1-integrating-factor-untuk-ode-konstan" title="Link to this heading">#</a></h2>
 <p><em>Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.</em></p>
-<p><strong>ODE asli</strong> — <span class="math notranslate nohighlight">\(\dot{x}+ax = b(Equation 6.1, a, b konstan)\)</span></p>
+<p><strong>ODE asli</strong> — <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span> (Persamaan 6.1; <span class="math notranslate nohighlight">\(a, b\)</span> konstan)</p>
 <p><strong>Trik integrating factor</strong> — Kalikan kedua sisi dengan <span class="math notranslate nohighlight">\(e^{at}\)</span> — disebut integrating factor:</p>
-<p><span class="math notranslate nohighlight">\([+\dot{x}ax]e^{at}=be^{at}(Equation 6.2)\)</span></p>
+<p><span class="math notranslate nohighlight">\([\dot{x}+ax]e^{at}=be^{at}\)</span> (Persamaan 6.2)</p>
 <p>Mengapa <span class="math notranslate nohighlight">\(e^{at}\)</span>? Karena sisi kiri sekarang adalah turunan dari <span class="math notranslate nohighlight">\(xe^{at}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ d(xe)dt^{at}=\dot{x}e^{at}+x \cdot ae^{at}=e[+^{at}\dot{x}ax]✓ \]</div>
+\[ \frac{d(xe^{at})}{dt}=\dot{x}e^{at}+x \cdot ae^{at}=e^{at}[\dot{x}+ax]\;\checkmark \]</div>
 <p>Persamaan 6.2 jadi:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -533,7 +533,7 @@
 <p>ODE: <span class="math notranslate nohighlight">\(\dot{x}+ax = 0\)</span> (Equation 6.7)</p>
 <p>Solusi langsung: <span class="math notranslate nohighlight">\(b/a= 0\)</span>, jadi anchor hilang. Tersisa movement saja:</p>
 <div class="math notranslate nohighlight">
-\[ x(t) =^{*}Ce^{-at} \]</div>
+\[ x(t) = Ce^{-at} \]</div>
 <p><strong>Aplikasi: pertumbuhan/decay murni</strong></p>
 <div class="important admonition">
 <p class="admonition-title">Koneksi</p>
@@ -557,12 +557,12 @@
 <section id="konsep-4-6-1-3-time-varying-parameters">
 <h2>Konsep 4 — 6.1.3 — Time-Varying Parameters<a class="headerlink" href="#konsep-4-6-1-3-time-varying-parameters" title="Link to this heading">#</a></h2>
 <p><em>Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. <span class="math notranslate nohighlight">\(ab\)</span>.</em></p>
-<p><strong>ODE bentuk umum</strong> — <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)(Equation 6.8)\)</span></p>
+<p><strong>ODE bentuk umum</strong> — <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)\)</span> (Persamaan 6.8)</p>
 <p><strong>Integrating factor (Exercise 6.3)</strong></p>
 <div class="math notranslate nohighlight">
-\[ I(t) = e^{\inta(t)dt} \]</div>
+\[ I(t) = e^{\int a(t)\,dt} \]</div>
 <p>Verifikasi: multiply ODE</p>
-<p><strong>General solution (Exercise 6.4)</strong> — <span class="math notranslate nohighlight">\(x(t) =*\int I(t)b(t) dt +C(Equation 6.9)\)</span></p>
+<p><strong>General solution (Exercise 6.4)</strong> — <span class="math notranslate nohighlight">\(x(t) = \dfrac{1}{I(t)}\left[\int I(t)\,b(t)\,dt +C\right]\)</span> (Persamaan 6.9)</p>
 <div class="math notranslate nohighlight">
 \[ I(t)I(t) \]</div>
 <p>Derivasinya:</p>
@@ -686,7 +686,7 @@
 <p><em>Daftar latihan inti Bab 6.</em></p>
 <p><strong>Exercise 6.1</strong> — Steady state &amp; stability untuk <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span>. Tidak dikerjakan formal, tapi konsepnya sudah masuk lewat Bab 5.</p>
 <p><strong>Exercise 6.2</strong> — Verify general solution homog. Konsep “kelipatan solusi juga solusi” sudah dibahas.</p>
-<p><strong>Exercise 6.3</strong> — Show integrating factor <span class="math notranslate nohighlight">\(I(t) = e^{\inta(t)dt}\)</span>. ✓ Dikerjakan dengan verify-based approach.</p>
+<p><strong>Exercise 6.3</strong> — Show integrating factor <span class="math notranslate nohighlight">\(I(t) = e^{\int a(t)\,dt}\)</span>. ✓ Dikerjakan dengan verify-based approach.</p>
 <p><strong>Exercise 6.4</strong> — Derive general solution (6.9). ✓ Dikerjakan dengan multiply <span class="math notranslate nohighlight">\(I(t)\)</span>, integrasi, bagi.</p>
 <p><strong>Exercise 6.5</strong> — Prove Proposition 6.1. ✓ Dibahas konseptual lewat linearitas turunan dan multiplikasi matriks.</p>
 <p><strong>Exercise 6.6</strong> — General homog + particular = general non-homog. ✓ Dibahas dengan parafrase intuitif.</p>
@@ -702,7 +702,7 @@
 <p><strong>Mekanik solving</strong></p>
 <ul class="simple">
 <li><p>☐ Bisa menyelesaikan <span class="math notranslate nohighlight">\(\dot{x}+ax = b\)</span> dengan integrating factor</p></li>
-<li><p>☐ Bisa menyelesaikan <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)\)</span> dengan <span class="math notranslate nohighlight">\(I(t) = e^{\inta(t)dt}\)</span></p></li>
+<li><p>☐ Bisa menyelesaikan <span class="math notranslate nohighlight">\(\dot{x}+a(t)x = b(t)\)</span> dengan <span class="math notranslate nohighlight">\(I(t) = e^{\int a(t)\,dt}\)</span></p></li>
 <li><p>☐ Bisa mengaplikasikan kondisi awal untuk dapat <span class="math notranslate nohighlight">\(C\)</span></p></li>
 <li><p>☐ Bisa identifikasi steady state <span class="math notranslate nohighlight">\(\bar{x}=b/a\)</span> dari ODE konstan</p></li>
 <li><p>☐ Bisa pakai trik <span class="math notranslate nohighlight">\(I(t)x(t) = C\)</span> untuk ODE homogen (jalur cepat)</p></li>

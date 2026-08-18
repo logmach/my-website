@@ -56,17 +56,16 @@ Ini akan dipakai berulang di kursus: di Bellman equation (guess and verify value
 
 Sistem dua variabel ($K, A$) masing-masing orde-2:
 
-$$ K^{¨}=-K,A^{¨}=-4A $$
+$$ \ddot{K}=-K, \qquad \ddot{A}=-4A $$
 
 Total konstanta: $m \times k = 2 \times 2 = 4$.
 
 General solution:
 
 $$
-```
 \begin{aligned}
-K(t) &= C_{1} cos(t) +C_{2} sin(t) \\
-A(t) &= C_{3} cos(2t) +C_{4} sin(2t)
+K(t) &= C_{1}\cos(t) + C_{2}\sin(t) \\
+A(t) &= C_{3}\cos(2t) + C_{4}\sin(2t)
 \end{aligned}
 $$
 
@@ -75,7 +74,7 @@ Butuh 4 initial conditions untuk pin down semuanya.
 ```{admonition} 💡 Insight
 :class: tip
 
-Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk $\dot{y}=2t$, langsung integrasikan → $y(t) = t^{2}+C$. Lalu pakai $y(0) = 0$ →
+Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk $\dot{y}=2t$, langsung integrasikan → $y(t) = t^{2}+C$. Lalu pakai $y(0) = 0$ → $C = 0$.
 
 Inilah pola dasar: general → tambah kondisi → particular.
 ```
@@ -199,7 +198,7 @@ Ini bukan dua solusi yang istimewa — ini keluarga solusi parametrized oleh "ka
 **Mengapa** — Tiga alasan struktural:
 
 1. Fungsi produksi smooth. Cobb-Douglas $f(k) = k^{\alpha }$ continuously differentiable di $k > 0$. Inada conditions menjamin smoothness di wilayah ekonomi yang masuk akal.
-2. Inada sebagai asuransi. Asumsi $f(0) =^{'}\infty$ dan $f(\infty) =^{'}0$ memastikan dinamika "tertahan" di wilayah hingga.
+2. Inada sebagai asuransi. Asumsi $f'(0) =\infty$ dan $f'(\infty) =0$ memastikan dinamika "tertahan" di wilayah hingga.
 3. Ekonomi tidak mulai dari nol. $k_{0} >0$ selalu diasumsikan. Kita kerja di wilayah $k > 0$ di mana fungsi-fungsi well-behaved.
 
 ```{admonition} 💡 Insight

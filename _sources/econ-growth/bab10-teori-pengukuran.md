@@ -44,7 +44,7 @@ Bab ini mempertemukan model dengan data: growth accounting, persamaan konvergens
 
 $Y$ tergantung pada lewat tiga channel ($tA, K, L$). Chain rule memberi:
 
-$$ \dot{Y}=F_{A} \cdot \dot{A}+F_{K} \cdot \dot{K}+F_{L}^{\dot{L}} \cdot $$
+$$ \dot{Y}=F_{A} \cdot \dot{A}+F_{K} \cdot \dot{K}+F_{L} \cdot \dot{L} $$
 
 **Step 2.** Bagi kedua sisi dengan $Y$
 
@@ -74,14 +74,14 @@ Inilah persamaan (10.1).
 
 **Mengapa $\alpha _{K}, \alpha _{L}$ disebut "income shares"?** Di competitive equilibrium: $R= F_{K}, W=F_{L}$. Maka:
 
-$F_{K}^{K=R\cdotK=} \cdot$ total capital income $F_{L}^{L=W\cdotL=} \cdot$ total labor income
+$F_{K}\cdot K=R\cdot K$ (total capital income) dan $F_{L}\cdot L=W\cdot L$ (total labor income)
 
 Fraksi dari $Y$ yang ke modal = $\alpha _{K}$. Inilah interpretation "income share".
 
 ```{admonition} Catatan
 :class: note
 
-*Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, $R= \ne F_{K}$, dan formula bisa misleading. Plus dengan Euler's Theorem (Exercise 9.2): $\alpha _{K} +\alpha _{L} =1$.*
+*Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, $R \ne F_{K}$, dan formula bisa misleading. Plus dengan Euler's Theorem (Exercise 9.2): $\alpha _{K} +\alpha _{L} =1$.*
 ```
 **Solow residual — TFP measurement** — Rearrange untuk solve $x(t)$:
 
@@ -98,7 +98,7 @@ Catatan Moses Abramovitz: Solow residual adalah "measure of our ignorance". Yang
 ```
 **Exercise 10.1 — TFP growth untuk Cobb-Douglas**
 
-Setup: $Y= K(AL)^{\alpha1-\alpha }$.
+Setup: $Y= K^{\alpha}(AL)^{1-\alpha}$.
 
 **Step 1.** Ambil log kedua sisi
 
@@ -200,7 +200,7 @@ Implikasi: tech "dapat credit" untuk labor quality improvement yang tersembunyi.
 ```{admonition} Catatan
 :class: note
 
-Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective $\cdot ^{~}$
+Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective worker.
 
 *worker (model). Bedanya: $\tilde{y} =A \cdot y$. Saat $A$ tumbuh, tumbuh meskipun konstan. $\tilde{y}y$*
 ```
@@ -264,7 +264,7 @@ $$ dkd[f(k)]k=f(k)k -f(k)^{'}k^{2} $$
 
 **Step 2.** Faktorkan $f(k)$ di pembilang
 
-$$ f(k)k -^{'}f(k) = f(k)[f(k)f(k)k^{'} -1]=f(k)[\varepsilon _{f}(k) -1] $$
+$$ f'(k)k - f(k) = f(k)\left[\frac{f'(k)k}{f(k)} - 1\right]=f(k)\,[\varepsilon_{f}(k) - 1] $$
 
 **Step 3.** Substitusi
 
@@ -272,7 +272,7 @@ $$ dkd[f(k)]k=f(k)[\varepsilon ^{f}k^{2}(k) -1] $$
 
 ### Exercise 10.6 — Differentiation trick
 
-Tunjukkan $\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}$. Bukti via chain rule: misalkan $u = ln x$, jadi $x = e^{u}$. Maka $dx/du = e=^{u}x$. Pakai chain rule:
+Tunjukkan $\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}$. Bukti via chain rule: misalkan $u = \ln x$, jadi $x = e^{u}$. Maka $dx/du = e^{u}=x$. Pakai chain rule:
 
 $$ dy=dy \cdot dx=x \cdot dy $$
 
@@ -324,7 +324,7 @@ $$ \dot{k}\approx (\varepsilon _{f}(k) -_{*}1)(\delta + g + n)(ln k -ln k)_{*} $
 
 Substitusi (10.6) dan konversi ke $ln\tilde{y}$: Pakai Exercise 10.6 untuk hubungkan $ln k -ln k^{*}$ ke $ln\tilde{y}-lny^{~*}$:
 
-$$ ln\tilde{y} -lny^{~*}\approx \varepsilon _{f}(k)(ln k -^{*}ln k)^{*} $$
+$$ \ln\tilde{y} - \ln\tilde{y}^{*}\approx \varepsilon_{f}(k^{*})\,(\ln k - \ln k^{*}) $$
 
 Substitusi balik dan sederhanakan:
 
@@ -338,7 +338,7 @@ Definisikan deviation $D(t):= ln\tilde{y} -lny^{~*}$. Turunkan $D$: $\dot{D}=y^{
 
 $$ \dot{D}=-\beta D $$
 
-dengan $\beta = (1 -\varepsilon _{f}(k))(\delta +^{*}g + n)$.
+dengan $\beta = (1 -\varepsilon_{f}(k^{*}))(\delta + g + n)$.
 
 Solusi: $D(t) = D(0)e^{-\beta t}$. Convergence rate. $\beta$
 
@@ -389,7 +389,7 @@ Untuk menjelaskan variasi cross-country growth, peran 1 ($\tilde{y}^{*}$) dan po
 
 **Reduced-form regression** — Dari (10.8), motivasi regresi:
 
-$$ g_{i,t,t-1} =b+^{0}bln^{1}\tilde{y}_{i,t-1} +\varepsilon _{i,t} $$
+$$ g_{i,t,t-1} =b_{0}+b_{1}\ln\tilde{y}_{i,t-1} +\varepsilon_{i,t} $$
 
 Prediksi: $b<^{1}0$ (convergence).
 
@@ -491,7 +491,7 @@ $$
 \frac{s_{h}}{s_{k}}=\frac{(\delta_{h}+g+n)\,h^{*}}{(\delta_{k}+g+n)\,k^{*}}
 $$
 
-Definisikan $\Lambda _{k} =s_{k}/(\delta _{k} +g + n), \Lambda _{h} =s_{h}/(\delta _{h} +g + n)$. Solve: $h=^{*}(\Lambda _{h}/\Lambda _{k})k^{*}$.
+Definisikan $\Lambda _{k} =s_{k}/(\delta _{k} +g + n), \Lambda _{h} =s_{h}/(\delta _{h} +g + n)$. Solve: $h^{*}=(\Lambda_{h}/\Lambda_{k})\,k^{*}$.
 
 **Step 3** Substitusi $h^{*}$ ke persamaan pertama dan solve $k^{*}$
 
@@ -501,11 +501,11 @@ $$
 k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)},\qquad h^{*}=\left[\Lambda_{k}^{\alpha}\Lambda_{h}^{1-\alpha}\right]^{1/(1-\alpha-\beta)}
 $$
 
-**Step 4** Hitung $y=^{*}(k)(h)^{*\beta*\alpha }$
+**Step 4** Hitung $y^{*}=(k^{*})^{\alpha}(h^{*})^{\beta}$
 
 Setelah aljabar eksponen:
 
-$$ y= \Lambda ^{*\alpha/(1-\alpha-\beta)}_{h} \cdot \Lambda ^{\beta/(1-\alpha-\beta)}_{k} $$
+$$ y^{*}= \Lambda_{k}^{\alpha/(1-\alpha-\beta)} \cdot \Lambda_{h}^{\beta/(1-\alpha-\beta)} $$
 
 **Comparative statics**
 
@@ -540,7 +540,7 @@ $$
 \end{aligned}
 $$
 
-Notasi vector: $x = (k, h), T (x) =^{T}(T_{k}, T_{h}^{T})$, sistem $\dot{x}=T (x)$.
+Notasi vector: $x = (k, h)$, $T(x) = (T_{k}, T_{h})^{T}$, sistem $\dot{x}=T(x)$.
 
 **Definisi nullcline**
 
@@ -554,33 +554,33 @@ Set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker ($h = 
 
 **Step 1** Mulai dari $T_{k} =0$
 
-$$ s_{k}kh-^{\beta\alpha }(\delta _{k} +g + n)k = 0 $$
+$$ s_{k}\,k^{\alpha}h^{\beta}-(\delta_{k} +g + n)\,k = 0 $$
 
 **Step 2.** Pindahkan suku
 
-$$ s_{k}kh=^{\beta\alpha }(\delta _{k} +g + n)k $$
+$$ s_{k}\,k^{\alpha}h^{\beta}=(\delta_{k} +g + n)\,k $$
 
 **Step 3.** Bagi kedua sisi dengan (asumsi $kk > 0$)
 
-Sebelah kiri: $s_{k}kh/k =^{\beta\alpha }s_{k}k^{\beta-1}h^{\alpha }$.
+Sebelah kiri: $s_{k}\,k^{\alpha}h^{\beta}/k = s_{k}\,k^{\alpha-1}h^{\beta}$.
 
 Sebelah kanan: $(\delta _{k} +g + n)$.
 
-$$ s_{k}k^{\beta-1}h=^{\alpha }\delta _{k} +g + n $$
+$$ s_{k}\,k^{\alpha-1}h^{\beta}=\delta_{k} +g + n $$
 
 **Step 4.** Solve untuk $h^{\alpha }$
 
-$$ h=^{\alpha }\delta ^{k} + g + ns_{k}k_{\beta-1}=\delta ^{k} + g + ns_{k} \cdot k^{1-\beta } $$
+$$ h^{\beta}=\frac{\delta_{k} + g + n}{s_{k}\,k^{\alpha-1}}=\frac{\delta_{k} + g + n}{s_{k}}\cdot k^{1-\alpha} $$
 
 **Step 5** Pangkat $1/\alpha$
 
-$$ h_{Nk}(k) =(\delta ^{k} + g + ns_{k})^{1/\alpha }\cdot k^{(1-\beta)/\alpha } $$
+$$ h_{Nk}(k) =\left(\frac{\delta_{k} + g + n}{s_{k}}\right)^{1/\beta}\cdot k^{(1-\alpha)/\beta} $$
 
 *Cara derive $N_{h}$ — step-by-step.*
 
 **Step 1** Mulai dari $T_{h} =0$
 
-$$ s_{h}kh-^{\beta\alpha }(\delta _{h} +g + n)h = 0 $$
+$$ s_{h}\,k^{\alpha}h^{\beta}-(\delta_{h} +g + n)\,h = 0 $$
 
 **Step 2.** Pindahkan dan bagi dengan $h$
 
@@ -590,7 +590,7 @@ $$ s_{h}kh^{\beta\alpha-1}=\delta _{h} +g + n $$
 
 Catatan: $\alpha -1 < 0$, jadi $h^{\alpha-1}$ menurun dalam. $h$
 
-$$ h^{\alpha-1}=\delta ^{h} + g + ns_{h}k_{\beta } $$
+$$ h^{\beta-1}=\frac{\delta_{h} + g + n}{s_{h}\,k^{\alpha}} $$
 
 **Step 4** Pangkat $1/(\alpha -1)$, balik fraksi
 
@@ -722,9 +722,9 @@ $y_{j} =(k_{j}^{*\beta })(h^{*\alpha }_{j})$ di steady state.
 
 Dari Exercise 10.13.
 
-Setelah aljabar eksponen (cek: eksponen $\Lambda _{k,j}$ jadi $\beta /(1 -\alpha -\beta)$, eksponen $\Lambda _{h,j}$ jadi $\alpha /(1 -\alpha -$ $\beta)$):
+Setelah aljabar eksponen (cek: eksponen $\Lambda_{k,j}$ jadi $\alpha/(1-\alpha-\beta)$, eksponen $\Lambda_{h,j}$ jadi $\beta/(1-\alpha-\beta)$):
 
-$$ y=_{j}^{*}\Lambda ^{\beta/(1-\alpha-\beta)}\Lambda _{k,j} \cdot ^{\alpha/(1-\alpha-\beta)}_{h,j} $$
+$$ y_{j}^{*}=\Lambda_{k,j}^{\alpha/(1-\alpha-\beta)} \cdot \Lambda_{h,j}^{\beta/(1-\alpha-\beta)} $$
 
 **Step 3.** Kembali ke per-capita income
 
@@ -738,7 +738,7 @@ $$
 
 **Take log**
 
-$$ ln\tilde{y}_{j}^{*}(t) =ln\bar{A}_{j} +gt +1 -\alpha -\beta \beta ln(n_{j} + g + \delta s^{k,j}_{k})+1 -\alpha -\beta \alpha ln(n_{j} + g + \delta s^{h,j}_{h}) $$
+$$ \ln\tilde{y}_{j}^{*}(t) =\ln\bar{A}_{j} +gt +\frac{\alpha}{1-\alpha-\beta}\ln\!\left(\frac{s_{k,j}}{n_{j}+g+\delta_{k}}\right)+\frac{\beta}{1-\alpha-\beta}\ln\!\left(\frac{s_{h,j}}{n_{j}+g+\delta_{h}}\right) $$
 
 **Sumber data untuk regresi MRW**
 
@@ -784,7 +784,7 @@ MRW asumsi: $\bar{A}_{j} =A \cdot \varepsilon _{j}$ dengan $\varepsilon _{j}$ or
 ```{admonition} Hasil kunci
 :class: important
 
-Tanpa human capital (Solow standar): $R\approx ^{2}0.59$. Dengan human capital: $R=^{2}0.78$.
+Tanpa human capital (Solow standar): $R^{2}\approx 0.59$. Dengan human capital: $R^{2}=0.78$.
 
 *Penambahan human capital menambah ~20 percentage points explanatory power.*
 
@@ -917,7 +917,7 @@ Bab 14-15: Endogenous growth — buka black box tech
 - ☐ Sumber data tiap variabel (PWT, UNESCO, World Bank)
 - ☐ Asumsi tech growth seragam ($A_{j} =\bar{A}_{j}^{gt}e$)
 - ☐ Endogeneity problem dan asumsi $\bar{A}_{j} =A\varepsilon _{j}$
-- ☐ Hasil estimasi: $R=^{2}0.78\beta = 0.30, \alpha = 0.28$,
+- ☐ Hasil estimasi: $R^{2}=0.78$, $\beta = 0.30$, $\alpha = 0.28$
 - ☐ Interpretasi: human capital reduce TFP residual dari 41% ke 22%
 
 **Section 10.5 + big picture**

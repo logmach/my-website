@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -488,21 +488,22 @@
 <p><strong>Contoh konkret</strong></p>
 <p>Sistem dua variabel (<span class="math notranslate nohighlight">\(K, A\)</span>) masing-masing orde-2:</p>
 <div class="math notranslate nohighlight">
-\[ K^{¨}=-K,A^{¨}=-4A \]</div>
+\[ \ddot{K}=-K, \qquad \ddot{A}=-4A \]</div>
 <p>Total konstanta: <span class="math notranslate nohighlight">\(m \times k = 2 \times 2 = 4\)</span>.</p>
 <p>General solution:</p>
-<p>$$</p>
-</div>
-<p>\begin{aligned}
-K(t) &amp;= C_{1} cos(t) +C_{2} sin(t) \
-A(t) &amp;= C_{3} cos(2t) +C_{4} sin(2t)
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+K(t) &amp;= C_{1}\cos(t) + C_{2}\sin(t) \\
+A(t) &amp;= C_{3}\cos(2t) + C_{4}\sin(2t)
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <p>Butuh 4 initial conditions untuk pin down semuanya.</p>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
-<p>Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk <span class="math notranslate nohighlight">\(\dot{y}=2t\)</span>, langsung integrasikan → <span class="math notranslate nohighlight">\(y(t) = t^{2}+C\)</span>. Lalu pakai <span class="math notranslate nohighlight">\(y(0) = 0\)</span> →</p>
+<p>Pola general solution bisa ditemukan tanpa diajari rumusnya: untuk <span class="math notranslate nohighlight">\(\dot{y}=2t\)</span>, langsung integrasikan → <span class="math notranslate nohighlight">\(y(t) = t^{2}+C\)</span>. Lalu pakai <span class="math notranslate nohighlight">\(y(0) = 0\)</span> → <span class="math notranslate nohighlight">\(C = 0\)</span>.</p>
 <p>Inilah pola dasar: general → tambah kondisi → particular.</p>
+</div>
 </div>
 </section>
 <section id="konsep-3-ivp-vs-bvp-beda-yang-penting-untuk-rck">
@@ -616,7 +617,7 @@ x_{\tau}(t)=\begin{cases} 0 &amp; \text{kalau } 0 \le t \le \tau \\[4pt] \dfrac{
 <p><strong>Mengapa</strong> — Tiga alasan struktural:</p>
 <ol class="arabic simple">
 <li><p>Fungsi produksi smooth. Cobb-Douglas <span class="math notranslate nohighlight">\(f(k) = k^{\alpha }\)</span> continuously differentiable di <span class="math notranslate nohighlight">\(k &gt; 0\)</span>. Inada conditions menjamin smoothness di wilayah ekonomi yang masuk akal.</p></li>
-<li><p>Inada sebagai asuransi. Asumsi <span class="math notranslate nohighlight">\(f(0) =^{'}\infty\)</span> dan <span class="math notranslate nohighlight">\(f(\infty) =^{'}0\)</span> memastikan dinamika “tertahan” di wilayah hingga.</p></li>
+<li><p>Inada sebagai asuransi. Asumsi <span class="math notranslate nohighlight">\(f'(0) =\infty\)</span> dan <span class="math notranslate nohighlight">\(f'(\infty) =0\)</span> memastikan dinamika “tertahan” di wilayah hingga.</p></li>
 <li><p>Ekonomi tidak mulai dari nol. <span class="math notranslate nohighlight">\(k_{0} &gt;0\)</span> selalu diasumsikan. Kita kerja di wilayah <span class="math notranslate nohighlight">\(k &gt; 0\)</span> di mana fungsi-fungsi well-behaved.</p></li>
 </ol>
 <div class="tip admonition">

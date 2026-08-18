@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -484,23 +484,23 @@
 <p>Eigenvalue: skalar yang membuat persamaan di atas berlaku <span class="math notranslate nohighlight">\(\lambda\)</span></p>
 <p>Intuisi geometris: <span class="math notranslate nohighlight">\(A\)</span> “memetakan” ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. <span class="math notranslate nohighlight">\(v\)</span></p>
 <p><strong>Cara mencari eigenvalue</strong> — Dari <span class="math notranslate nohighlight">\(Av= \lambda v\)</span>, rearrange: <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span>.</p>
-<p>Untuk solusi non-trivial (<span class="math notranslate nohighlight">\(v= \ne 0\)</span>), matriks <span class="math notranslate nohighlight">\((A -\lambda I)\)</span> harus singular:</p>
+<p>Untuk solusi non-trivial (<span class="math notranslate nohighlight">\(v \ne 0\)</span>), matriks <span class="math notranslate nohighlight">\((A -\lambda I)\)</span> harus singular:</p>
 <div class="math notranslate nohighlight">
-\[ det(A -\lambda I) = 0 \]</div>
+\[ \det(A -\lambda I) = 0 \]</div>
 <p>Ini disebut persamaan karakteristik.</p>
 <p><strong>Formula 2D yang sering dipakai</strong></p>
 <div class="important admonition">
 <p class="admonition-title">Hasil kunci</p>
 <p><strong>Untuk matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span></strong></p>
 <div class="math notranslate nohighlight">
-\[ \lambda^{2} - tr(A)\,\lambda + \det(A) = 0 \]</div>
+\[ \lambda^{2} - \mathrm{tr}(A)\,\lambda + \det(A) = 0 \]</div>
 </div>
 <p>di mana:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(tr(A)= a_{11} +a_{22}\)</span> (jumlah diagonal)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathrm{tr}(A)= a_{11} +a_{22}\)</span> (jumlah diagonal)</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[ det(A)= a_{11}a_{22} -a_{12}a_{21} \]</div>
+\[ \det(A)= a_{11}a_{22} -a_{12}a_{21} \]</div>
 <div class="warning admonition">
 <p class="admonition-title">⚠️ Jebakan umum</p>
 <p>Jebakan umum: salah menghitung trace untuk matriks:</p>
@@ -510,8 +510,11 @@
 <p><strong>Mengapa “real part” penting</strong> — Pertanyaan yang menggantung sejak Bab 5: mengapa stability tergantung</p>
 <p>Untuk <span class="math notranslate nohighlight">\(\lambda = \alpha + i\beta\)</span> (kompleks):</p>
 <div class="math notranslate nohighlight">
-\[ e\lambda t=e\alpha t[cos(\beta t) + i sin(\beta t)]\cdot \]</div>
-<p><span class="math notranslate nohighlight">\(e^{\alpha t}\)</span>: magnitude — eksponensial growth/decay <span class="math notranslate nohighlight">\(cos(\beta t) + i sin(\beta t)\)</span>: rotation — osilasi periodik dengan amplitudo 1</p>
+\[ e^{\lambda t}=e^{\alpha t}[\cos(\beta t) + i\,\sin(\beta t)] \]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e^{\alpha t}\)</span>: magnitude — eksponensial growth/decay</p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos(\beta t) + i\,\sin(\beta t)\)</span>: rotation — osilasi periodik dengan amplitudo 1</p></li>
+</ul>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
 <p>Hanya <span class="math notranslate nohighlight">\(\alpha\)</span> yang menentukan apakah magnitude tumbuh atau mengecil. hanya memberi oscillation. Maka <span class="math notranslate nohighlight">\(\beta\)</span> stability tergantung tanda <span class="math notranslate nohighlight">\(\alpha\)</span> (real part), bukan eigenvalue penuh.</p>
@@ -563,7 +566,7 @@
 <p><em>Berdasarkan jenis eigenvalues, ada tiga “wajah” yang berbeda untuk sistem 2D.</em></p>
 <p><strong>Cara membedakan</strong> — Diskriminan persamaan karakteristik 2D:</p>
 <div class="math notranslate nohighlight">
-\[ \Delta = tr(A)-^{2}4 det(A) \]</div>
+\[ \Delta = \mathrm{tr}(A)^{2} - 4\det(A) \]</div>
 <p>Distinct real eigenvalues (Section 7.1.2). Solusi: kombinasi linear</p>
 <div class="math notranslate nohighlight">
 \[ \Delta &gt;0 \]</div>
@@ -582,15 +585,19 @@
 <p class="admonition-title">Hasil kunci</p>
 <p><strong>General solution (Equation 7.11)</strong></p>
 <div class="math notranslate nohighlight">
-\[ x(t)= c_{1}e^{\lambda1t}v_{1} +c_{2}e^{\lambda2t}v_{2} \]</div>
-<p>Interpretasi: kombinasi linear dari “straight-line solutions”. Setiap suku <span class="math notranslate nohighlight">\(c_{i}^{\lambda }ei^{t}v_{i}\)</span> adalah lintasan sepanjang arah eigenvektor <span class="math notranslate nohighlight">\(v_{i}\)</span> dengan magnitude tumbuh/decay secara eksponensial.</p>
+\[ x(t)= c_{1}e^{\lambda_{1}t}v_{1} +c_{2}e^{\lambda_{2}t}v_{2} \]</div>
+<p>Interpretasi: kombinasi linear dari “straight-line solutions”. Setiap suku <span class="math notranslate nohighlight">\(c_{i}e^{\lambda_{i}t}v_{i}\)</span> adalah lintasan sepanjang arah eigenvektor <span class="math notranslate nohighlight">\(v_{i}\)</span> dengan magnitude tumbuh/decay secara eksponensial.</p>
 </div>
 <p><strong>Kasus 2 — Complex (Section 7.1.3)</strong></p>
 <p>Untuk eigenvalues <span class="math notranslate nohighlight">\(\lambda = \alpha \pm i\beta\)</span>:</p>
 <div class="important admonition">
 <p class="admonition-title">Hasil kunci</p>
-<p>Solusi melibatkan <span class="math notranslate nohighlight">\(e^{\alpha t}\)</span> (magnitude) dan <span class="math notranslate nohighlight">\(cos(\beta t), sin(\beta t)\)</span> (rotation). Hasilnya:</p>
-<p><em><span class="math notranslate nohighlight">\(\alpha &lt; 0, \beta = \ne 0\)</span>: stable spiral (focus) <span class="math notranslate nohighlight">\(\alpha &gt; 0, \beta = \ne 0\)</span>: unstable spiral <span class="math notranslate nohighlight">\(\alpha = 0, \beta = \ne 0\)</span>: center (orbit periodic)</em></p>
+<p>Solusi melibatkan <span class="math notranslate nohighlight">\(e^{\alpha t}\)</span> (magnitude) dan <span class="math notranslate nohighlight">\(\cos(\beta t), \sin(\beta t)\)</span> (rotation). Hasilnya:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha &lt; 0,\ \beta \ne 0\)</span>: stable spiral (focus)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha &gt; 0,\ \beta \ne 0\)</span>: unstable spiral</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha = 0,\ \beta \ne 0\)</span>: center (orbit periodik)</p></li>
+</ul>
 <p>Visualisasi: lintasan spiral di phase plane — bukan garis lurus.</p>
 </div>
 <p><strong>Kasus 3 — Repeated (Section 7.1.4)</strong></p>
@@ -613,7 +620,7 @@
 <p><strong>Setup</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">1</span> <span class="pre">3</span> <span class="pre">]</span></code></p>
 <p><strong>Step 1.</strong> Eigenvalues</p>
-<p><span class="math notranslate nohighlight">\(tr(A) = 5, det(A) = 4\)</span>. Persamaan: <span class="math notranslate nohighlight">\(\lambda -^{2}5\lambda + 4 = 0\)</span> → <span class="math notranslate nohighlight">\((\lambda -4)(\lambda -1) = 0\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{tr}(A) = 5, \det(A) = 4\)</span>. Persamaan: <span class="math notranslate nohighlight">\(\lambda^{2} - 5\lambda + 4 = 0\)</span> → <span class="math notranslate nohighlight">\((\lambda -4)(\lambda -1) = 0\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\lambda _{1} =4, \lambda _{2} =1\)</span>. Distinct dan real ✓</p>
 <p><strong>Step 2</strong> Eigenvektor untuk <span class="math notranslate nohighlight">\(\lambda _{1} =4\)</span></p>
 <p><span class="math notranslate nohighlight">\((A -4I)v_{1} =0\)</span> menghasilkan <span class="math notranslate nohighlight">\(v_{2} =v_{1}\)</span>. Pilih <span class="math notranslate nohighlight">\(v_{1} =(1, 1)\)</span>.</p>
@@ -621,7 +628,7 @@
 <p><span class="math notranslate nohighlight">\((A -I)v_{2} =0\)</span> menghasilkan <span class="math notranslate nohighlight">\(v_{1} =-2v_{2}\)</span>. Pilih <span class="math notranslate nohighlight">\(v_{2} =(-2, 1)\)</span>.</p>
 <p><strong>Step 4.</strong> General solution</p>
 <div class="math notranslate nohighlight">
-\[ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} \]</div>
+\[\begin{split} x(t) = c_{1}e^{4t}\begin{pmatrix}1\\1\end{pmatrix}+c_{2}e^{t}\begin{pmatrix}-2\\1\end{pmatrix} \end{split}\]</div>
 <p><strong>Step 5</strong> Apply kondisi awal <span class="math notranslate nohighlight">\(x_{0} =(0.1, 0.1)\)</span></p>
 <p>Sistem: <span class="math notranslate nohighlight">\(c_{1} -2c_{2} =0.1\)</span> dan <span class="math notranslate nohighlight">\(c_{1} +c_{2} =0.1\)</span>. Solve: <span class="math notranslate nohighlight">\(c_{2} =0, c_{1} =0.1\)</span>.</p>
 <p>Particular solution: <span class="math notranslate nohighlight">\(x(t) = 0.1e(1, 1)^{4t}\)</span>. Sepanjang arah <span class="math notranslate nohighlight">\(v_{1}\)</span> — straight-line solution.</p>
@@ -636,9 +643,9 @@
 <p><strong>Setup</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">-1</span> <span class="pre">2</span> <span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">-2</span> <span class="pre">-1</span> <span class="pre">]</span></code></p>
 <p><strong>Step 1.</strong> Trace dan determinant</p>
-<p><span class="math notranslate nohighlight">\(tr(A) = -1 + (-1) = -2\)</span> (hati-hati: bukan) <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathrm{tr}(A) = -1 + (-1) = -2\)</span> (hati-hati: bukan) <span class="math notranslate nohighlight">\(0\)</span></p>
 <div class="math notranslate nohighlight">
-\[ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 \]</div>
+\[ \det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 \]</div>
 <p><strong>Step 2.</strong> Diskriminan</p>
 <p><span class="math notranslate nohighlight">\(\Delta = 4 -20 = -16 &lt; 0\)</span> → complex eigenvalues ✓</p>
 <p><strong>Step 3.</strong> Eigenvalues</p>
@@ -646,7 +653,7 @@
 \[
 \lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
 \]</div>
-<p>Tunggu — periksa lagi. Persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span> menjadi <span class="math notranslate nohighlight">\(\lambda +^{2}2\lambda +\)</span> <span class="math notranslate nohighlight">\(5 = 0\)</span>.</p>
+<p>Tunggu — periksa lagi. Persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0\)</span> menjadi <span class="math notranslate nohighlight">\(\lambda^{2} + 2\lambda + 5 = 0\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 \lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
@@ -654,7 +661,7 @@
 <p><strong>Step 4.</strong> Identifikasi</p>
 <p><span class="math notranslate nohighlight">\(\alpha = -1\)</span> (real part), <span class="math notranslate nohighlight">\(\beta = 2\)</span> (imaginary part)</p>
 <p><strong>Step 5.</strong> Klasifikasi</p>
-<p><span class="math notranslate nohighlight">\(\alpha &lt; 0\)</span> dan <span class="math notranslate nohighlight">\(\beta = \ne 0\)</span> → stable spiral</p>
+<p><span class="math notranslate nohighlight">\(\alpha &lt; 0\)</span> dan <span class="math notranslate nohighlight">\(\beta \ne 0\)</span> → stable spiral</p>
 <p><strong>Interpretasi qualitative</strong> — Lintasan spiral inward ke origin Magnitude decay dengan rate <span class="math notranslate nohighlight">\(∣\alpha ∣= 1\)</span> Periode rotasi <span class="math notranslate nohighlight">\(T= 2\pi /\beta = \pi \approx 3.14\)</span></p>
 <p>Decay rate (1) vs rotation rate (2) → ~1-2 putaran sebelum mendekati origin</p>
 </section>
@@ -699,8 +706,11 @@
 <p class="admonition-title">Hasil kunci</p>
 <p><em>Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan <span class="math notranslate nohighlight">\(C\)</span>. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.</em></p>
 </div>
-<p><strong>Picard-Lindelöf menjamin eksistensi</strong> — Untuk Solow-Swan <span class="math notranslate nohighlight">\(\dot{k}=sk-^{\alpha }\delta k\)</span> dengan <span class="math notranslate nohighlight">\(k &gt; 0\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(G(k) = sk-^{\alpha }\delta k\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓ <span class="math notranslate nohighlight">\(\partial G/\partial k = \alpha sk^{\alpha-1}-\delta\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓</p>
+<p><strong>Picard-Lindelöf menjamin eksistensi</strong> — Untuk Solow-Swan <span class="math notranslate nohighlight">\(\dot{k}=sk^{\alpha} - \delta k\)</span> dengan <span class="math notranslate nohighlight">\(k &gt; 0\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(G(k) = sk^{\alpha} - \delta k\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial G/\partial k = \alpha sk^{\alpha-1}-\delta\)</span> kontinu untuk <span class="math notranslate nohighlight">\(k &gt; 0\)</span> ✓</p></li>
+</ul>
 <p>Picard-Lindelöf menjamin: untuk sembarang <span class="math notranslate nohighlight">\(k_{0} &gt;0\)</span>, ada solusi <span class="math notranslate nohighlight">\(k(t)\)</span> yang eksis dan unik untuk <span class="math notranslate nohighlight">\(t\ge t_{0}\)</span>.</p>
 <p><strong>Tapi solusi tidak bisa ditulis</strong> — Walaupun solusi eksis, untuk ODE nonlinear generic (RCK, Solow dengan tech progress, Romer), tidak ada formula closed-form dalam fungsi elementer.</p>
 <p><strong>Tiga jenis “tidak bisa di-solve”</strong></p>
@@ -729,7 +739,7 @@
 <p><strong>Mekanik</strong></p>
 <ul class="simple">
 <li><p>☐ Bisa hitung trace dan det matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span> dengan benar (hati-hati entri)</p></li>
-<li><p>☐ Bisa solve persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span></p></li>
+<li><p>☐ Bisa solve persamaan karakteristik <span class="math notranslate nohighlight">\(\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0\)</span></p></li>
 <li><p>☐ Bisa hitung eigenvektor dengan solve <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span> eksplisit</p></li>
 <li><p>☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)</p></li>
 <li><p>☐ Bisa identifikasi <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> untuk complex eigenvalues</p></li>

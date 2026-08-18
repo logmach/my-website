@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -488,7 +488,7 @@
 <p><em>Foundation ekonomi Solow-Swan.</em></p>
 <p><strong>Tiga properti yang harus dipegang</strong> — Property 9.1 — Linear homogeneity (CRS):</p>
 <div class="math notranslate nohighlight">
-\[ F (A, \lambda K, \lambda L) = \lambda F (A, K, L)untuk semua \lambda &gt; 0 \]</div>
+\[ F(A, \lambda K, \lambda L) = \lambda F(A, K, L) \quad \text{untuk semua } \lambda &gt; 0 \]</div>
 <p>Interpretasi: gandakan semua input → output digandakan. Constant Returns to Scale.</p>
 <p>Property 9.2 — Sifat tambahan:</p>
 <p>Twice continuously differentiable Increasing: <span class="math notranslate nohighlight">\(F_{K}, F_{L} &gt;0\)</span> (marginal products positif) Strictly concave: <span class="math notranslate nohighlight">\(F_{KK}, F_{LL} &lt;0\)</span> (diminishing returns)</p>
@@ -501,7 +501,7 @@
 <p>Inada menjamin interior solutions — modal selalu berguna, tapi diminishing returns cukup kuat untuk menghentikan akumulasi.</p>
 <p><strong>Cobb-Douglas sebagai contoh utama</strong></p>
 <div class="math notranslate nohighlight">
-\[ F (A, K, L) = K(AL)^{\alpha1-\alpha },0 &lt;\alpha &lt; 1 \]</div>
+\[ F(A, K, L) = K^{\alpha}(AL)^{1-\alpha}, \qquad 0 &lt; \alpha &lt; 1 \]</div>
 <p>Bentuk “labor-augmenting” (Harrod-neutral) — <span class="math notranslate nohighlight">\(A\)</span> menggandakan <span class="math notranslate nohighlight">\(L\)</span>.</p>
 <div class="important admonition">
 <p class="admonition-title">Hasil kunci</p>
@@ -546,7 +546,7 @@
 <p><strong>Exercise 9.2 — Euler’s Theorem</strong></p>
 <p>Statement: kalau homogeneous of degree <span class="math notranslate nohighlight">\(gm\)</span> dalam <span class="math notranslate nohighlight">\(x, y\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ m \cdot g(x, y) = g_{x}^{x+g} \cdot _{y}^{y} \cdot \]</div>
+\[ m \cdot g(x, y) = g_{x}\cdot x + g_{y}\cdot y \]</div>
 <p><strong>Bukti</strong></p>
 <p><strong>Step 1.</strong> Mulai dari definisi homogeneity</p>
 <div class="math notranslate nohighlight">
@@ -562,8 +562,8 @@
 <div class="math notranslate nohighlight">
 \[ g_{x}(x, y) \cdot x + g_{y}(x, y) \cdot y= mg(x, y) \]</div>
 <p>QED.</p>
-<p><strong>Aplikasi Cobb-Douglas</strong> — Verifikasi untuk <span class="math notranslate nohighlight">\(F= K(AL)^{\alpha1-\alpha }\)</span> dengan <span class="math notranslate nohighlight">\(m= 1\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(F_{K} =\alpha K^{\alpha-1}(AL)^{1-\alpha }\)</span>, jadi <span class="math notranslate nohighlight">\(F_{K}^{K=\alpha K(AL)} \cdot ^{\alpha1-\alpha }=\alpha F\)</span>. <span class="math notranslate nohighlight">\(F_{L} =(1 -\alpha)KA^{\alpha1-\alpha }L^{-\alpha }\)</span>, jadi <span class="math notranslate nohighlight">\(F_{L}^{L= (1 -\alpha)K(AL)} \cdot ^{\alpha1-\alpha }=(1 -\alpha)F\)</span>.</p>
+<p><strong>Aplikasi Cobb-Douglas</strong> — Verifikasi untuk <span class="math notranslate nohighlight">\(F= K^{\alpha}(AL)^{1-\alpha}\)</span> dengan <span class="math notranslate nohighlight">\(m= 1\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(F_{K} =\alpha K^{\alpha-1}(AL)^{1-\alpha}\)</span>, jadi <span class="math notranslate nohighlight">\(F_{K}\cdot K=\alpha K^{\alpha}(AL)^{1-\alpha}=\alpha F\)</span>. <span class="math notranslate nohighlight">\(F_{L} =(1-\alpha)K^{\alpha}A^{1-\alpha}L^{-\alpha}\)</span>, jadi <span class="math notranslate nohighlight">\(F_{L}\cdot L= (1-\alpha)K^{\alpha}(AL)^{1-\alpha}=(1-\alpha)F\)</span>.</p>
 <p>Jumlah: <span class="math notranslate nohighlight">\(F_{K}K +F_{L}L =\alpha F+ (1 -\alpha)F= F\)</span> ✓</p>
 <div class="important admonition">
 <p class="admonition-title">Koneksi</p>
@@ -793,7 +793,7 @@ t_{1/2}=\frac{\ln 2}{\left|G\'(\bar{k})\right|}=\frac{\ln 2}{(1-\alpha)(n+\delta
 <p><strong>Exercise 9.11 — AK model</strong></p>
 <p>Set <span class="math notranslate nohighlight">\(\alpha = 1\)</span> di Cobb-Douglas:</p>
 <div class="math notranslate nohighlight">
-\[ F (K, L, A) = \dot{K}(AL)=^{0}K \]</div>
+\[ F(K, L, A) = K^{1}(AL)^{0} = K \]</div>
 <p>Output hanya tergantung modal. ODE per worker:</p>
 <div class="math notranslate nohighlight">
 \[ \dot{k}=sAk -(n + \delta)k = [sA -(n + \delta)]k \]</div>
@@ -867,7 +867,7 @@ t_{1/2}=\frac{\ln 2}{\left|G\'(\bar{k})\right|}=\frac{\ln 2}{(1-\alpha)(n+\delta
 <p>Rule untuk produk: <span class="math notranslate nohighlight">\(g_{ALL} =g_{AL}+g_{L} =g_{AL} +n\)</span>.</p>
 <p>Set sama dengan <span class="math notranslate nohighlight">\(g_{Y}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ g_{AL} +n = g_{Y}⟹g_{AL} =g_{Y} -n \]</div>
+\[ g_{AL} +n = g_{Y} \implies g_{AL} =g_{Y} -n \]</div>
 <p>Tech labor-augmenting tumbuh dengan rate <span class="math notranslate nohighlight">\(g_{Y} -n\)</span>. (Klaim 2-3 Uzawa).</p>
 <p><strong>Mengapa hanya <span class="math notranslate nohighlight">\(A_{L}\)</span>?</strong></p>
 <div class="important admonition">
@@ -882,17 +882,17 @@ t_{1/2}=\frac{\ln 2}{\left|G\'(\bar{k})\right|}=\frac{\ln 2}{(1-\alpha)(n+\delta
 <p><em>Cek tiga jenis tech untuk CES production function.</em></p>
 <p><strong>Setup CES</strong></p>
 <div class="math notranslate nohighlight">
-\[ Y= A_{H}^{[}\gamma (A_{K}K)+ (1 -\gamma)(A^{\sigma }_{L}L)^{\sigma }]^{1/\sigma } \]</div>
-<p>Dengan <span class="math notranslate nohighlight">\(\sigma \in (-\infty, 1), \sigma = \ne 0\)</span>. Elasticity of substitution <span class="math notranslate nohighlight">\(= 1/(1 -\sigma)\)</span>. Untuk <span class="math notranslate nohighlight">\(\sigma \to 0\)</span> (Cobb-Douglas), elasticity = 1.</p>
+\[ Y= A_{H}\left[\gamma (A_{K}K)^{\sigma}+ (1-\gamma)(A_{L}L)^{\sigma}\right]^{1/\sigma} \]</div>
+<p>Dengan <span class="math notranslate nohighlight">\(\sigma \in (-\infty, 1), \sigma \ne 0\)</span>. Elasticity of substitution <span class="math notranslate nohighlight">\(= 1/(1 -\sigma)\)</span>. Untuk <span class="math notranslate nohighlight">\(\sigma \to 0\)</span> (Cobb-Douglas), elasticity = 1.</p>
 <p><strong>Skenario 1 — Hicks-neutral</strong> — <span class="math notranslate nohighlight">\(A_{K} =A_{L} =1\)</span>, hanya <span class="math notranslate nohighlight">\(A_{H}\)</span> tumbuh.</p>
 <p><strong>Hitung capital share</strong></p>
 <p><strong>Step 1</strong> Hitung <span class="math notranslate nohighlight">\(F_{K}\)</span></p>
-<p>Misal <span class="math notranslate nohighlight">\(u:= \gamma K+^{\sigma }(1 -\gamma)L^{\sigma }\)</span>. Chain rule:</p>
+<p>Misal <span class="math notranslate nohighlight">\(u:= \gamma K^{\sigma}+(1-\gamma)L^{\sigma}\)</span>. Chain rule:</p>
 <div class="math notranslate nohighlight">
 \[
 F_{K}=A_{H}\,\gamma\,K^{\sigma-1}\,u^{(1-\sigma)/\sigma}
 \]</div>
-<p><strong>Step 2</strong> Hitung <span class="math notranslate nohighlight">\(F_{K}^{K/Y} \cdot\)</span></p>
+<p><strong>Step 2</strong> Hitung <span class="math notranslate nohighlight">\(F_{K}\cdot K/Y\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \frac{F_{K}K}{Y}=\frac{A_{H}\gamma K^{\sigma}u^{(1-\sigma)/\sigma}}{A_{H}u^{1/\sigma}}=\frac{\gamma K^{\sigma}}{u}
@@ -956,16 +956,21 @@ F_{K}=A_{H}\,\gamma\,K^{\sigma-1}\,u^{(1-\sigma)/\sigma}
 <section id="konsep-11-exercise-9-15-cobb-douglas-equivalence">
 <h2>Konsep 11 — Exercise 9.15 — Cobb-Douglas Equivalence<a class="headerlink" href="#konsep-11-exercise-9-15-cobb-douglas-equivalence" title="Link to this heading">#</a></h2>
 <p><em>Mengapa Cobb-Douglas “menyembunyikan” distinction antara Hicks/Solow/Harrod.</em></p>
-<p><strong>Tiga versi Cobb-Douglas dengan tech</strong> — Hicks-neutral: <span class="math notranslate nohighlight">\(Y= A_{H} \cdot KL^{\alpha1-\alpha }\)</span> Solow-neutral: <span class="math notranslate nohighlight">\(Y= (A_{K}K)L^{\alpha1-\alpha }\)</span> Harrod-neutral: <span class="math notranslate nohighlight">\(Y= K(A^{\alpha }_{L}L)^{1-\alpha }\)</span></p>
+<p><strong>Tiga versi Cobb-Douglas dengan tech</strong></p>
+<ul class="simple">
+<li><p>Hicks-neutral: <span class="math notranslate nohighlight">\(Y= A_{H}\cdot K^{\alpha}L^{1-\alpha}\)</span></p></li>
+<li><p>Solow-neutral: <span class="math notranslate nohighlight">\(Y= (A_{K}K)^{\alpha}L^{1-\alpha}\)</span></p></li>
+<li><p>Harrod-neutral: <span class="math notranslate nohighlight">\(Y= K^{\alpha}(A_{L}L)^{1-\alpha}\)</span></p></li>
+</ul>
 <p><strong>Tunjukkan equivalence Versi A ≡ Versi B</strong></p>
 <p><strong>Step 1.</strong> Expand Solow-neutral</p>
 <div class="math notranslate nohighlight">
-\[ (A_{K}K)=^{\alpha }A^{\alpha }_{K} \cdot K^{\alpha } \]</div>
+\[ (A_{K}K)^{\alpha}=A_{K}^{\alpha} \cdot K^{\alpha} \]</div>
 <p>Maka:</p>
 <div class="math notranslate nohighlight">
-\[ Y_{B} =AKL^{\alpha }_{K}^{\alpha1-\alpha } \]</div>
+\[ Y_{B} =A_{K}^{\alpha}K^{\alpha}L^{1-\alpha} \]</div>
 <p><strong>Step 2.</strong> Bandingkan dengan Hicks</p>
-<p><span class="math notranslate nohighlight">\(Y_{A} =A_{H}KL^{\alpha1-\alpha }\)</span>. Identik jika:</p>
+<p><span class="math notranslate nohighlight">\(Y_{A} =A_{H}K^{\alpha}L^{1-\alpha}\)</span>. Identik jika:</p>
 <div class="math notranslate nohighlight">
 \[ A_{H} =A^{\alpha }_{K}\Leftrightarrow A_{K} =A^{1/\alpha }_{H} \]</div>
 <p><strong>Tunjukkan equivalence Versi A ≡ Versi C</strong></p>
@@ -974,16 +979,16 @@ F_{K}=A_{H}\,\gamma\,K^{\sigma-1}\,u^{(1-\sigma)/\sigma}
 \[ (A_{L}L)^{1-\alpha }=A^{1-\alpha }_{L}L^{1-\alpha } \]</div>
 <p>Maka:</p>
 <div class="math notranslate nohighlight">
-\[ Y_{C} =A^{1-\alpha }_{L}KL^{\alpha1-\alpha } \]</div>
+\[ Y_{C} =A_{L}^{1-\alpha}K^{\alpha}L^{1-\alpha} \]</div>
 <p><strong>Step 2.</strong> Identifikasi</p>
-<p><span class="math notranslate nohighlight">\(Y_{A} =A_{H}KL^{\alpha1-\alpha }\)</span>. Identik jika:</p>
+<p><span class="math notranslate nohighlight">\(Y_{A} =A_{H}K^{\alpha}L^{1-\alpha}\)</span>. Identik jika:</p>
 <div class="math notranslate nohighlight">
 \[ A_{H} =A^{1-\alpha }_{L}\Leftrightarrow A_{L} =A^{1/(1-\alpha)}_{H} \]</div>
 <p><strong>Mengapa equivalence?</strong> Aljabra: Cobb-Douglas multiplicatively separable. Tech apa pun yang masuk hanya menambah faktor konstan yang bisa “diabsorpsi” lewat aturan eksponen.</p>
 <p>Elasticity: Cobb-Douglas punya elasticity of substitution = 1 (unit elasticity). Tidak ada bias terhadap input mana yang “diperkuat”. Maka ketiga tech equivalent.</p>
 <div class="note admonition">
 <p class="admonition-title">Catatan</p>
-<p><em>Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk <span class="math notranslate nohighlight">\(\sigma = \ne 0\)</span> generic, ketiga jenis tech tidak equivalent.</em></p>
+<p><em>Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk <span class="math notranslate nohighlight">\(\sigma \ne 0\)</span> generic, ketiga jenis tech tidak equivalent.</em></p>
 </div>
 </section>
 <section id="konsep-12-tension-uzawa-vs-cobb-douglas-vs-data">
@@ -1127,11 +1132,7 @@ F_{K}=A_{H}\,\gamma\,K^{\sigma-1}\,u^{(1-\sigma)/\sigma}
 <p><strong>Step 4.</strong> Efek pada per capita income <span class="math notranslate nohighlight">\(\tilde{y}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\tilde{y} =Af(k)\)</span>. Selama transisi: <span class="math notranslate nohighlight">\(f(k)\)</span> turun (karena turun), tapi <span class="math notranslate nohighlight">\(kA\)</span> tumbuh dengan rate <span class="math notranslate nohighlight">\(g^{'}\)</span> baru (lebih cepat).</p>
 <p>Di BGP baru: per capita income tumbuh dengan rate <span class="math notranslate nohighlight">\(g^{'}\)</span> — lebih cepat dari sebelumnya.</p>
-<p>k̇/k</p>
-<p>n+g’+δ (baru)</p>
-<p>n+g+δ (lama)</p>
-<p>k k̄’k̄</p>
-<p>Shock naik: garis horizontal naik dari <span class="math notranslate nohighlight">\(gn + g + \delta\)</span> ke <span class="math notranslate nohighlight">\(n + g+^{'}\delta\)</span>. Steady state bergeser dari ke <span class="math notranslate nohighlight">\(\bar{k}\)</span> <span class="math notranslate nohighlight">\(\bar{k}^{'}&lt;\bar{k}\)</span>.</p>
+<p>Shock naik: garis horizontal naik dari <span class="math notranslate nohighlight">\(n + g + \delta\)</span> ke <span class="math notranslate nohighlight">\(n + g' + \delta\)</span>. Steady state bergeser dari <span class="math notranslate nohighlight">\(\bar{k}\)</span> ke <span class="math notranslate nohighlight">\(\bar{k}' &lt; \bar{k}\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Catatan</p>
 <p>Hasil paradoksal Shock 1: <span class="math notranslate nohighlight">\(g\)</span> naik → <span class="math notranslate nohighlight">\(\bar{k}\)</span> turun, tapi growth rate per capita income naik. Pelajaran: <span class="math notranslate nohighlight">\(\bar{k}\)</span> rendah bukan berarti ekonomi buruk. Yang penting adalah growth rate, <span class="math notranslate nohighlight">\(\bar{k}\tilde{y}\)</span></p>

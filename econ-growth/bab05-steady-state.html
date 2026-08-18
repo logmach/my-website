@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -536,20 +536,20 @@
 </div>
 <p><strong>Mengapa eigenvalues?</strong> Solusi sistem linear bisa ditulis sebagai kombinasi “mode”:</p>
 <div class="math notranslate nohighlight">
-\[ x(t) = C_{1}e^{\lambda1t}v_{1} +C_{2}e^{\lambda2t}v_{2} +⋯ \]</div>
-<p>Setiap mode <span class="math notranslate nohighlight">\(e^{\lambda }i^{t}\)</span>:</p>
+\[ x(t) = C_{1}e^{\lambda_{1}t}v_{1} + C_{2}e^{\lambda_{2}t}v_{2} + \cdots \]</div>
+<p>Setiap mode <span class="math notranslate nohighlight">\(e^{\lambda_{i}t}\)</span>:</p>
 <p>Mengecil ke 0 kalau <span class="math notranslate nohighlight">\(Re(\lambda _{i}) &lt;0\)</span> Membesar tak hingga kalau <span class="math notranslate nohighlight">\(Re(\lambda _{i}) &gt;0\)</span></p>
 <p>Untuk konvergensi: semua mode harus mengecil → semua eigenvalue real part negatif.</p>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
 <p>Mengapa “real part”? Karena eigenvalues bisa kompleks: <span class="math notranslate nohighlight">\(\lambda = a + bi\)</span>. Maka:</p>
 <div class="math notranslate nohighlight">
-\[ e\lambda t=eat[cos(bt) + i sin(bt)]\cdot \]</div>
+\[ e^{\lambda t}=e^{at}[\cos(bt) + i\,\sin(bt)] \]</div>
 <p>Bagian <span class="math notranslate nohighlight">\(cos +i sin\)</span> memberi oscillation (spiral). Bagian <span class="math notranslate nohighlight">\(e^{at}\)</span> memberi magnitude growth/decay. Hanya real part yang menentukan apakah lintasan mengecil atau membesar. <span class="math notranslate nohighlight">\(a\)</span></p>
 </div>
 <p><strong>Peran <span class="math notranslate nohighlight">\(b\)</span></strong> — Pertanyaan yang sering muncul: “Apakah <span class="math notranslate nohighlight">\(b\)</span> matriks <span class="math notranslate nohighlight">\(k \times 1\)</span>?”</p>
 <p>Ya, <span class="math notranslate nohighlight">\(b\)</span> adalah vektor kolom <span class="math notranslate nohighlight">\(k \times 1\)</span>. Perannya: Menentukan lokasi steady state: <span class="math notranslate nohighlight">\(\bar{x}=-A^{-1}b\)</span> Tidak mempengaruhi stabilitas — stabilitas hanya tergantung eigenvalues <span class="math notranslate nohighlight">\(A\)</span></p>
-<p>Kalau <span class="math notranslate nohighlight">\(b= 0\)</span>, steady state di origin. Kalau <span class="math notranslate nohighlight">\(b= \ne 0\)</span>, steady state pindah, tapi sifat stabilitasnya sama.</p>
+<p>Kalau <span class="math notranslate nohighlight">\(b= 0\)</span>, steady state di origin. Kalau <span class="math notranslate nohighlight">\(b \ne 0\)</span>, steady state pindah, tapi sifat stabilitasnya sama.</p>
 </section>
 <section id="konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi">
 <h2>Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi<a class="headerlink" href="#konsep-5-teorema-5-2-nonlinear-stability-via-linearisasi" title="Link to this heading">#</a></h2>
@@ -560,7 +560,11 @@
 <div class="important admonition">
 <p class="admonition-title">Koneksi</p>
 <p><strong>Hampir semua fungsi di growth theory adalah nonlinear</strong></p>
-<p><em>Cobb-Douglas <span class="math notranslate nohighlight">\(f(k)= k^{\alpha }\)</span> — nonlinear (pangkat <span class="math notranslate nohighlight">\(\alpha = \ne 1\)</span>) CRRA <span class="math notranslate nohighlight">\(u(c)= c^{1-\sigma }/(1 -\sigma)\)</span> — nonlinear Solow-Swan ODE <span class="math notranslate nohighlight">\(\dot{k}=sk-^{\alpha }(n + \delta)k\)</span> — nonlinear karena <span class="math notranslate nohighlight">\(k^{\alpha }\)</span></em></p>
+<ul class="simple">
+<li><p>Cobb-Douglas <span class="math notranslate nohighlight">\(f(k)= k^{\alpha}\)</span> — nonlinear (pangkat <span class="math notranslate nohighlight">\(\alpha \ne 1\)</span>)</p></li>
+<li><p>CRRA <span class="math notranslate nohighlight">\(u(c)= c^{1-\sigma}/(1-\sigma)\)</span> — nonlinear</p></li>
+<li><p>Solow-Swan ODE <span class="math notranslate nohighlight">\(\dot{k}=sk^{\alpha}-(n+\delta)k\)</span> — nonlinear karena <span class="math notranslate nohighlight">\(k^{\alpha}\)</span></p></li>
+</ul>
 </div>
 <p><em>Itulah mengapa Teorema 5.2 yang paling sering dipakai.</em></p>
 <p><strong>Statement</strong> — Untuk sistem <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> dengan steady state, definisikan Jacobian di: <span class="math notranslate nohighlight">\(\bar{x}\bar{x}\)</span></p>
@@ -592,8 +596,7 @@ G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
 <p><strong>Hartman-Grobman: justifikasi formal</strong></p>
 <div class="note admonition">
 <p class="admonition-title">Catatan</p>
-<p><em>Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue real part</em></p>
-<p><span class="math notranslate nohighlight">\(= \ne 0\)</span>), maka dinamika nonlinear di sekitar <span class="math notranslate nohighlight">\(\bar{x}\)</span> secara topologis ekuivalen dengan dinamika linearisasinya.</p>
+<p><em>Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue punya real part <span class="math notranslate nohighlight">\(\ne 0\)</span>), maka dinamika nonlinear di sekitar <span class="math notranslate nohighlight">\(\bar{x}\)</span> secara topologis ekuivalen dengan dinamika linearisasinya.</em></p>
 <p><em>Yaitu, dekat <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem nonlinear “kelihatan seperti” <span class="math notranslate nohighlight">\(\dot{y}=J(\bar{x})\,y\)</span>. Inilah justifikasi Teorema 5.2.</em></p>
 <p><em>Untuk steady state non-hyperbolic (ada eigenvalue real part = 0), linearisasi tidak konklusif — butuh metode lain.</em></p>
 </div>
@@ -611,7 +614,7 @@ G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
 <li><p>Eigenvalue matriks <span class="math notranslate nohighlight">\(1 \times 1\)</span>: entri matriks itu sendiri:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
-\[ det((a) -\lambda) = a -\lambda = 0⟹\lambda = a \]</div>
+\[ \det\bigl((a) -\lambda\bigr) = a -\lambda = 0 \implies \lambda = a \]</div>
 <p>Maka eigenvalue Jacobian 1D = <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span>.</p>
 <ol class="arabic simple" start="3">
 <li><p>Aturan stabilitas Teorema 5.2: semua eigenvalue real part negatif. Di 1D, hanya ada satu eigenvalue: <span class="math notranslate nohighlight">\(G'(\bar{x})\)</span>.</p></li>
@@ -623,8 +626,8 @@ G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
 <p><strong>Kasus borderline</strong></p>
 <p>Untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}=0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ G (x) =^{'}-3x^{2} \]</div>
-<p><span class="math notranslate nohighlight">\(G (0) =^{'}0\)</span> — kasus borderline!</p>
+\[ G'(x) =-3x^{2} \]</div>
+<p><span class="math notranslate nohighlight">\(G'(0) =0\)</span> — kasus borderline!</p>
 <p>Linearisasi tidak konklusif. Tapi analisis sign langsung menunjukkan <span class="math notranslate nohighlight">\(\bar{x}=0\)</span> stable:</p>
 <p><span class="math notranslate nohighlight">\(x&gt;0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}&lt;0\)</span> → <span class="math notranslate nohighlight">\(x\)</span> turun. <span class="math notranslate nohighlight">\(x&lt;0\)</span>: <span class="math notranslate nohighlight">\(\dot{x}=-x^{3}&gt;0\)</span> → <span class="math notranslate nohighlight">\(x\)</span> naik. Dari kedua sisi mengarah ke 0 → stable. Tapi konvergensi lambat (polynomial, bukan eksponensial) karena <span class="math notranslate nohighlight">\(G'(\bar{x})=0\)</span>.</p>
 <div class="warning admonition">
@@ -645,7 +648,7 @@ G(x) \approx \underbrace{G(\bar{x})}_{=0} + G\'(\bar{x})\,(x-\bar{x})
 <p><strong>Setup</strong></p>
 <p>ODE Solow-Swan:</p>
 <div class="math notranslate nohighlight">
-\[ \dot{k}=G(k) = sk-^{\alpha }(n + g + \delta)k \]</div>
+\[ \dot{k}=G(k) = sk^{\alpha}-(n + g + \delta)k \]</div>
 <p><strong>Pengerjaanmu — step by step</strong></p>
 <p><strong>Step 1</strong> Cari steady state.</p>
 <p>Solve <span class="math notranslate nohighlight">\(G(\bar{k})=0\)</span>:</p>
@@ -673,7 +676,7 @@ s\bar{k}^{\alpha}=(n+g+\delta)\bar{k} \quad\Longrightarrow\quad s\bar{k}^{\alpha
 <p>AK model: <span class="math notranslate nohighlight">\(f(k) = Ak\)</span> (pangkat 1, no diminishing returns):</p>
 <div class="math notranslate nohighlight">
 \[ G(k) = sAk -(n + g + \delta)k = [sA -(n + g + \delta)]k \]</div>
-<p><span class="math notranslate nohighlight">\(G (k) =^{'}sA -(n + g + \delta)\)</span> — konstan, tidak tergantung <span class="math notranslate nohighlight">\(k\)</span> Kalau <span class="math notranslate nohighlight">\(sA&gt; (n + g + \delta)\)</span>: pertumbuhan eksponensial, tidak konvergen</p>
+<p><span class="math notranslate nohighlight">\(G'(k) =sA -(n + g + \delta)\)</span> — konstan, tidak tergantung <span class="math notranslate nohighlight">\(k\)</span>. Kalau <span class="math notranslate nohighlight">\(sA&gt; (n + g + \delta)\)</span>: pertumbuhan eksponensial, tidak konvergen</p>
 </div>
 <div class="important admonition">
 <p class="admonition-title">Koneksi</p>
@@ -743,7 +746,7 @@ s\bar{k}^{\alpha}=(n+g+\delta)\bar{k} \quad\Longrightarrow\quad s\bar{k}^{\alpha
 </ul>
 <p><strong>Konsep konseptual</strong></p>
 <ul class="simple">
-<li><p>☐ Bisa menjelaskan mengapa steady state <span class="math notranslate nohighlight">\(= \ne \)</span> otomatis stable</p></li>
+<li><p>☐ Bisa menjelaskan mengapa steady state tidak otomatis stable</p></li>
 <li><p>☐ Bisa menjelaskan analogi “bola di permukaan”</p></li>
 <li><p>☐ Memahami kasus borderline (<span class="math notranslate nohighlight">\(G'(\bar{x})=0\)</span>) dan apa yang harus dilakukan</p></li>
 <li><p>☐ Memahami saddle point dan signifikansinya untuk RCK</p></li>

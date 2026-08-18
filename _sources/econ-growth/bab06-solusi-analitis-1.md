@@ -6,15 +6,15 @@ Bab ini membahas dua teknik inti untuk menyelesaikan ODE linear secara eksplisit
 
 *Trik aljabar yang mengubah ODE menjadi turunan dari sesuatu yang bisa diintegrasi.*
 
-**ODE asli** — $\dot{x}+ax = b(Equation 6.1, a, b konstan)$
+**ODE asli** — $\dot{x}+ax = b$ (Persamaan 6.1; $a, b$ konstan)
 
 **Trik integrating factor** — Kalikan kedua sisi dengan $e^{at}$ — disebut integrating factor:
 
-$[+\dot{x}ax]e^{at}=be^{at}(Equation 6.2)$
+$[\dot{x}+ax]e^{at}=be^{at}$ (Persamaan 6.2)
 
 Mengapa $e^{at}$? Karena sisi kiri sekarang adalah turunan dari $xe^{at}$:
 
-$$ d(xe)dt^{at}=\dot{x}e^{at}+x \cdot ae^{at}=e[+^{at}\dot{x}ax]✓ $$
+$$ \frac{d(xe^{at})}{dt}=\dot{x}e^{at}+x \cdot ae^{at}=e^{at}[\dot{x}+ax]\;\checkmark $$
 
 Persamaan 6.2 jadi:
 
@@ -122,7 +122,7 @@ ODE: $\dot{x}+ax = 0$ (Equation 6.7)
 
 Solusi langsung: $b/a= 0$, jadi anchor hilang. Tersisa movement saja:
 
-$$ x(t) =^{*}Ce^{-at} $$
+$$ x(t) = Ce^{-at} $$
 
 **Aplikasi: pertumbuhan/decay murni**
 
@@ -156,15 +156,15 @@ Inilah jalur paling cepat untuk ODE homogen linear orde-1 (skalar maupun time-va
 
 *Generalisasi 6.1.1 — sekarang dan adalah fungsi waktu. $ab$.*
 
-**ODE bentuk umum** — $\dot{x}+a(t)x = b(t)(Equation 6.8)$
+**ODE bentuk umum** — $\dot{x}+a(t)x = b(t)$ (Persamaan 6.8)
 
 **Integrating factor (Exercise 6.3)**
 
-$$ I(t) = e^{\inta(t)dt} $$
+$$ I(t) = e^{\int a(t)\,dt} $$
 
 Verifikasi: multiply ODE
 
-**General solution (Exercise 6.4)** — $x(t) =*\int I(t)b(t) dt +C(Equation 6.9)$
+**General solution (Exercise 6.4)** — $x(t) = \dfrac{1}{I(t)}\left[\int I(t)\,b(t)\,dt +C\right]$ (Persamaan 6.9)
 
 $$ I(t)I(t) $$
 
@@ -349,7 +349,7 @@ Ini koneksi langsung ke verify-based thinking dari Bab 4: dulu untuk mengecek va
 
 **Exercise 6.2** — Verify general solution homog. Konsep "kelipatan solusi juga solusi" sudah dibahas.
 
-**Exercise 6.3** — Show integrating factor $I(t) = e^{\inta(t)dt}$. ✓ Dikerjakan dengan verify-based approach.
+**Exercise 6.3** — Show integrating factor $I(t) = e^{\int a(t)\,dt}$. ✓ Dikerjakan dengan verify-based approach.
 
 **Exercise 6.4** — Derive general solution (6.9). ✓ Dikerjakan dengan multiply $I(t)$, integrasi, bagi.
 
@@ -370,7 +370,7 @@ $\dot{x}=3x$ — solusi $Ce^{3t}$ (unstable) $\dot{x}=-5x$ — solusi $Ce^{-5t}$
 
 **Mekanik solving**
 - ☐ Bisa menyelesaikan $\dot{x}+ax = b$ dengan integrating factor
-- ☐ Bisa menyelesaikan $\dot{x}+a(t)x = b(t)$ dengan $I(t) = e^{\inta(t)dt}$
+- ☐ Bisa menyelesaikan $\dot{x}+a(t)x = b(t)$ dengan $I(t) = e^{\int a(t)\,dt}$
 - ☐ Bisa mengaplikasikan kondisi awal untuk dapat $C$
 - ☐ Bisa identifikasi steady state $\bar{x}=b/a$ dari ODE konstan
 - ☐ Bisa pakai trik $I(t)x(t) = C$ untuk ODE homogen (jalur cepat)

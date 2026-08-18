@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -483,7 +483,7 @@
 <p><strong>Step 1.</strong> Turunkan <span class="math notranslate nohighlight">\(Y\)</span> terhadap pakai chain rule <span class="math notranslate nohighlight">\(t\)</span></p>
 <p><span class="math notranslate nohighlight">\(Y\)</span> tergantung pada lewat tiga channel (<span class="math notranslate nohighlight">\(tA, K, L\)</span>). Chain rule memberi:</p>
 <div class="math notranslate nohighlight">
-\[ \dot{Y}=F_{A} \cdot \dot{A}+F_{K} \cdot \dot{K}+F_{L}^{\dot{L}} \cdot \]</div>
+\[ \dot{Y}=F_{A} \cdot \dot{A}+F_{K} \cdot \dot{K}+F_{L} \cdot \dot{L} \]</div>
 <p><strong>Step 2.</strong> Bagi kedua sisi dengan <span class="math notranslate nohighlight">\(Y\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -504,11 +504,11 @@
 \]</div>
 <p>Inilah persamaan (10.1).</p>
 <p><strong>Mengapa <span class="math notranslate nohighlight">\(\alpha _{K}, \alpha _{L}\)</span> disebut “income shares”?</strong> Di competitive equilibrium: <span class="math notranslate nohighlight">\(R= F_{K}, W=F_{L}\)</span>. Maka:</p>
-<p><span class="math notranslate nohighlight">\(F_{K}^{K=R\cdotK=} \cdot\)</span> total capital income <span class="math notranslate nohighlight">\(F_{L}^{L=W\cdotL=} \cdot\)</span> total labor income</p>
+<p><span class="math notranslate nohighlight">\(F_{K}\cdot K=R\cdot K\)</span> (total capital income) dan <span class="math notranslate nohighlight">\(F_{L}\cdot L=W\cdot L\)</span> (total labor income)</p>
 <p>Fraksi dari <span class="math notranslate nohighlight">\(Y\)</span> yang ke modal = <span class="math notranslate nohighlight">\(\alpha _{K}\)</span>. Inilah interpretation “income share”.</p>
 <div class="note admonition">
 <p class="admonition-title">Catatan</p>
-<p><em>Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, <span class="math notranslate nohighlight">\(R= \ne F_{K}\)</span>, dan formula bisa misleading. Plus dengan Euler’s Theorem (Exercise 9.2): <span class="math notranslate nohighlight">\(\alpha _{K} +\alpha _{L} =1\)</span>.</em></p>
+<p><em>Interpretasi income share hanya valid di competitive equilibrium. Di pasar dengan markup atau distortion, <span class="math notranslate nohighlight">\(R \ne F_{K}\)</span>, dan formula bisa misleading. Plus dengan Euler’s Theorem (Exercise 9.2): <span class="math notranslate nohighlight">\(\alpha _{K} +\alpha _{L} =1\)</span>.</em></p>
 </div>
 <p><strong>Solow residual — TFP measurement</strong> — Rearrange untuk solve <span class="math notranslate nohighlight">\(x(t)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -520,7 +520,7 @@
 <p>Catatan Moses Abramovitz: Solow residual adalah “measure of our ignorance”. Yang kita sebut “tech” sebenarnya bisa apa saja yang tidak masuk hitungan modal dan labor: innovation real, efficiency gains, mismeasurement, externalities, institutional change.</p>
 </div>
 <p><strong>Exercise 10.1 — TFP growth untuk Cobb-Douglas</strong></p>
-<p>Setup: <span class="math notranslate nohighlight">\(Y= K(AL)^{\alpha1-\alpha }\)</span>.</p>
+<p>Setup: <span class="math notranslate nohighlight">\(Y= K^{\alpha}(AL)^{1-\alpha}\)</span>.</p>
 <p><strong>Step 1.</strong> Ambil log kedua sisi</p>
 <div class="math notranslate nohighlight">
 \[ ln Y= \alpha ln K + (1 -\alpha)(ln A + ln L) \]</div>
@@ -586,7 +586,7 @@
 <p><strong><span class="math notranslate nohighlight">\(\tilde{y}\)</span> (per physical worker)</strong> — <span class="math notranslate nohighlight">\(\tilde{y}:=Y /L = A \cdot f(k) = A \cdot y\)</span>. Per physical worker. Tumbuh dengan rate di BGP. Observable (GDP per capita). <span class="math notranslate nohighlight">\(g\)</span></p>
 <div class="note admonition">
 <p class="admonition-title">Catatan</p>
-<p>Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective <span class="math notranslate nohighlight">\(\cdot ^{~}\)</span></p>
+<p>Notasi: tanda tilda untuk variabel per physical worker (data). Tanpa tilda, per effective worker.</p>
 <p><em>worker (model). Bedanya: <span class="math notranslate nohighlight">\(\tilde{y} =A \cdot y\)</span>. Saat <span class="math notranslate nohighlight">\(A\)</span> tumbuh, tumbuh meskipun konstan. <span class="math notranslate nohighlight">\(\tilde{y}y\)</span></em></p>
 </div>
 <p><strong>Step 1.</strong> Hubungkan growth ke growth <span class="math notranslate nohighlight">\(\tilde{y}k\)</span></p>
@@ -633,14 +633,14 @@
 \[ dkd[f(k)]k=f(k)k -f(k)^{'}k^{2} \]</div>
 <p><strong>Step 2.</strong> Faktorkan <span class="math notranslate nohighlight">\(f(k)\)</span> di pembilang</p>
 <div class="math notranslate nohighlight">
-\[ f(k)k -^{'}f(k) = f(k)[f(k)f(k)k^{'} -1]=f(k)[\varepsilon _{f}(k) -1] \]</div>
+\[ f'(k)k - f(k) = f(k)\left[\frac{f'(k)k}{f(k)} - 1\right]=f(k)\,[\varepsilon_{f}(k) - 1] \]</div>
 <p><strong>Step 3.</strong> Substitusi</p>
 <div class="math notranslate nohighlight">
 \[ dkd[f(k)]k=f(k)[\varepsilon ^{f}k^{2}(k) -1] \]</div>
 </section>
 <section id="exercise-10-6-differentiation-trick">
 <h3>Exercise 10.6 — Differentiation trick<a class="headerlink" href="#exercise-10-6-differentiation-trick" title="Link to this heading">#</a></h3>
-<p>Tunjukkan <span class="math notranslate nohighlight">\(\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}\)</span>. Bukti via chain rule: misalkan <span class="math notranslate nohighlight">\(u = ln x\)</span>, jadi <span class="math notranslate nohighlight">\(x = e^{u}\)</span>. Maka <span class="math notranslate nohighlight">\(dx/du = e=^{u}x\)</span>. Pakai chain rule:</p>
+<p>Tunjukkan <span class="math notranslate nohighlight">\(\frac{dy}{d\ln x}=x \cdot \frac{dy}{dx}\)</span>. Bukti via chain rule: misalkan <span class="math notranslate nohighlight">\(u = \ln x\)</span>, jadi <span class="math notranslate nohighlight">\(x = e^{u}\)</span>. Maka <span class="math notranslate nohighlight">\(dx/du = e^{u}=x\)</span>. Pakai chain rule:</p>
 <div class="math notranslate nohighlight">
 \[ dy=dy \cdot dx=x \cdot dy \]</div>
 <p><span class="math notranslate nohighlight">\(dudxdudx\)</span></p>
@@ -679,7 +679,7 @@ G(\ln k)\approx G(\ln k^{*})+\left.\frac{\partial G}{\partial \ln k}\right|_{k^{
 <p><strong>Step 4.</strong> Convergence equation (bentuk akhir)</p>
 <p>Substitusi (10.6) dan konversi ke <span class="math notranslate nohighlight">\(ln\tilde{y}\)</span>: Pakai Exercise 10.6 untuk hubungkan <span class="math notranslate nohighlight">\(ln k -ln k^{*}\)</span> ke <span class="math notranslate nohighlight">\(ln\tilde{y}-lny^{~*}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ ln\tilde{y} -lny^{~*}\approx \varepsilon _{f}(k)(ln k -^{*}ln k)^{*} \]</div>
+\[ \ln\tilde{y} - \ln\tilde{y}^{*}\approx \varepsilon_{f}(k^{*})\,(\ln k - \ln k^{*}) \]</div>
 <p>Substitusi balik dan sederhanakan:</p>
 <div class="math notranslate nohighlight">
 \[ y^{~˙}\tilde{y}\approx g -(1 -\varepsilon _{f}(k))(\delta + g + n)(ln^{*}\tilde{y}-lny^{~*}) \]</div>
@@ -688,7 +688,7 @@ G(\ln k)\approx G(\ln k^{*})+\left.\frac{\partial G}{\partial \ln k}\right|_{k^{
 <p>Definisikan deviation <span class="math notranslate nohighlight">\(D(t):= ln\tilde{y} -lny^{~*}\)</span>. Turunkan <span class="math notranslate nohighlight">\(D\)</span>: <span class="math notranslate nohighlight">\(\dot{D}=y^{~˙}\tilde{y}/ -g\)</span>. Substitusi (10.8):</p>
 <div class="math notranslate nohighlight">
 \[ \dot{D}=-\beta D \]</div>
-<p>dengan <span class="math notranslate nohighlight">\(\beta = (1 -\varepsilon _{f}(k))(\delta +^{*}g + n)\)</span>.</p>
+<p>dengan <span class="math notranslate nohighlight">\(\beta = (1 -\varepsilon_{f}(k^{*}))(\delta + g + n)\)</span>.</p>
 <p>Solusi: <span class="math notranslate nohighlight">\(D(t) = D(0)e^{-\beta t}\)</span>. Convergence rate. <span class="math notranslate nohighlight">\(\beta\)</span></p>
 <p><strong>Partial derivatives</strong> — <span class="math notranslate nohighlight">\(\partial \beta /\partial (\delta + g + n) = (1 -\varepsilon _{f}) &gt;0\)</span>: kalau <span class="math notranslate nohighlight">\(\delta + g + n\)</span> naik, konvergensi cepat <span class="math notranslate nohighlight">\(\partial \beta /\partial \varepsilon _{f} =-(\delta + g + n) &lt; 0\)</span>: kalau <span class="math notranslate nohighlight">\(\varepsilon _{f}\)</span> naik, konvergensi lambat</p>
 <p><strong>Limit cases</strong></p>
@@ -718,7 +718,7 @@ G(\ln k)\approx G(\ln k^{*})+\left.\frac{\partial G}{\partial \ln k}\right|_{k^{
 </div>
 <p><strong>Reduced-form regression</strong> — Dari (10.8), motivasi regresi:</p>
 <div class="math notranslate nohighlight">
-\[ g_{i,t,t-1} =b+^{0}bln^{1}\tilde{y}_{i,t-1} +\varepsilon _{i,t} \]</div>
+\[ g_{i,t,t-1} =b_{0}+b_{1}\ln\tilde{y}_{i,t-1} +\varepsilon_{i,t} \]</div>
 <p>Prediksi: <span class="math notranslate nohighlight">\(b&lt;^{1}0\)</span> (convergence).</p>
 <p><strong>Hasil empiris</strong> — OECD: <span class="math notranslate nohighlight">\(b^{1}\)</span> negatif signifikan. Konvergensi terbukti. Seluruh dunia: <span class="math notranslate nohighlight">\(b^{1}\)</span> tidak signifikan. Karena negara berbeda steady state.</p>
 <p><strong>Conditional convergence</strong> — Solusi: bebaskan intercept antar negara:</p>
@@ -791,17 +791,17 @@ s_{h}(k^{*})^{\alpha}(h^{*})^{\beta}&amp;=(\delta_{h}+g+n)\,h^{*}
 \[
 \frac{s_{h}}{s_{k}}=\frac{(\delta_{h}+g+n)\,h^{*}}{(\delta_{k}+g+n)\,k^{*}}
 \]</div>
-<p>Definisikan <span class="math notranslate nohighlight">\(\Lambda _{k} =s_{k}/(\delta _{k} +g + n), \Lambda _{h} =s_{h}/(\delta _{h} +g + n)\)</span>. Solve: <span class="math notranslate nohighlight">\(h=^{*}(\Lambda _{h}/\Lambda _{k})k^{*}\)</span>.</p>
+<p>Definisikan <span class="math notranslate nohighlight">\(\Lambda _{k} =s_{k}/(\delta _{k} +g + n), \Lambda _{h} =s_{h}/(\delta _{h} +g + n)\)</span>. Solve: <span class="math notranslate nohighlight">\(h^{*}=(\Lambda_{h}/\Lambda_{k})\,k^{*}\)</span>.</p>
 <p><strong>Step 3</strong> Substitusi <span class="math notranslate nohighlight">\(h^{*}\)</span> ke persamaan pertama dan solve <span class="math notranslate nohighlight">\(k^{*}\)</span></p>
 <p>Hasil:</p>
 <div class="math notranslate nohighlight">
 \[
 k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)},\qquad h^{*}=\left[\Lambda_{k}^{\alpha}\Lambda_{h}^{1-\alpha}\right]^{1/(1-\alpha-\beta)}
 \]</div>
-<p><strong>Step 4</strong> Hitung <span class="math notranslate nohighlight">\(y=^{*}(k)(h)^{*\beta*\alpha }\)</span></p>
+<p><strong>Step 4</strong> Hitung <span class="math notranslate nohighlight">\(y^{*}=(k^{*})^{\alpha}(h^{*})^{\beta}\)</span></p>
 <p>Setelah aljabar eksponen:</p>
 <div class="math notranslate nohighlight">
-\[ y= \Lambda ^{*\alpha/(1-\alpha-\beta)}_{h} \cdot \Lambda ^{\beta/(1-\alpha-\beta)}_{k} \]</div>
+\[ y^{*}= \Lambda_{k}^{\alpha/(1-\alpha-\beta)} \cdot \Lambda_{h}^{\beta/(1-\alpha-\beta)} \]</div>
 <p><strong>Comparative statics</strong></p>
 <ul class="simple">
 <li><p><strong><span class="math notranslate nohighlight">\(s_{h}\)</span> naik</strong> — <span class="math notranslate nohighlight">\(y^{*}\)</span> naik: lebih banyak akumulasi human capital.</p></li>
@@ -829,7 +829,7 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 \dot{h}&amp;=s_{h}k^{\alpha}h^{\beta}-(\delta_{h}+g+n)h=:T_{h}(k,h)
 \end{aligned}
 \end{split}\]</div>
-<p>Notasi vector: <span class="math notranslate nohighlight">\(x = (k, h), T (x) =^{T}(T_{k}, T_{h}^{T})\)</span>, sistem <span class="math notranslate nohighlight">\(\dot{x}=T (x)\)</span>.</p>
+<p>Notasi vector: <span class="math notranslate nohighlight">\(x = (k, h)\)</span>, <span class="math notranslate nohighlight">\(T(x) = (T_{k}, T_{h})^{T}\)</span>, sistem <span class="math notranslate nohighlight">\(\dot{x}=T(x)\)</span>.</p>
 <p><strong>Definisi nullcline</strong></p>
 <p><strong><span class="math notranslate nohighlight">\(\dot{k}\)</span>-nullcline <span class="math notranslate nohighlight">\(N_{k}\)</span></strong> — Set titik <span class="math notranslate nohighlight">\((k,h)\)</span> di mana <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> (modal per effective worker tidak berubah). <span class="math notranslate nohighlight">\(N_{k} ={(k,h): T_{k}(k,h) =0}\)</span>.</p>
 <p>Set titik <span class="math notranslate nohighlight">\((k,h)\)</span> di mana <span class="math notranslate nohighlight">\(\dot{h}=0\)</span> (human capital per effective worker (<span class="math notranslate nohighlight">\(h = H/AL\)</span>) (<span class="math notranslate nohighlight">\(\dot{h}\)</span>-nullcline <span class="math notranslate nohighlight">\(N_{h}\)</span>) tidak berubah). <span class="math notranslate nohighlight">\(N_{h} ={(k,h): T_{h}(k,h) =0}\)</span>.</p>
@@ -837,32 +837,32 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 <p><em>Cara derive <span class="math notranslate nohighlight">\(N_{k}\)</span> — step-by-step.</em></p>
 <p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(T_{k} =0\)</span></p>
 <div class="math notranslate nohighlight">
-\[ s_{k}kh-^{\beta\alpha }(\delta _{k} +g + n)k = 0 \]</div>
+\[ s_{k}\,k^{\alpha}h^{\beta}-(\delta_{k} +g + n)\,k = 0 \]</div>
 <p><strong>Step 2.</strong> Pindahkan suku</p>
 <div class="math notranslate nohighlight">
-\[ s_{k}kh=^{\beta\alpha }(\delta _{k} +g + n)k \]</div>
+\[ s_{k}\,k^{\alpha}h^{\beta}=(\delta_{k} +g + n)\,k \]</div>
 <p><strong>Step 3.</strong> Bagi kedua sisi dengan (asumsi <span class="math notranslate nohighlight">\(kk &gt; 0\)</span>)</p>
-<p>Sebelah kiri: <span class="math notranslate nohighlight">\(s_{k}kh/k =^{\beta\alpha }s_{k}k^{\beta-1}h^{\alpha }\)</span>.</p>
+<p>Sebelah kiri: <span class="math notranslate nohighlight">\(s_{k}\,k^{\alpha}h^{\beta}/k = s_{k}\,k^{\alpha-1}h^{\beta}\)</span>.</p>
 <p>Sebelah kanan: <span class="math notranslate nohighlight">\((\delta _{k} +g + n)\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[ s_{k}k^{\beta-1}h=^{\alpha }\delta _{k} +g + n \]</div>
+\[ s_{k}\,k^{\alpha-1}h^{\beta}=\delta_{k} +g + n \]</div>
 <p><strong>Step 4.</strong> Solve untuk <span class="math notranslate nohighlight">\(h^{\alpha }\)</span></p>
 <div class="math notranslate nohighlight">
-\[ h=^{\alpha }\delta ^{k} + g + ns_{k}k_{\beta-1}=\delta ^{k} + g + ns_{k} \cdot k^{1-\beta } \]</div>
+\[ h^{\beta}=\frac{\delta_{k} + g + n}{s_{k}\,k^{\alpha-1}}=\frac{\delta_{k} + g + n}{s_{k}}\cdot k^{1-\alpha} \]</div>
 <p><strong>Step 5</strong> Pangkat <span class="math notranslate nohighlight">\(1/\alpha\)</span></p>
 <div class="math notranslate nohighlight">
-\[ h_{Nk}(k) =(\delta ^{k} + g + ns_{k})^{1/\alpha }\cdot k^{(1-\beta)/\alpha } \]</div>
+\[ h_{Nk}(k) =\left(\frac{\delta_{k} + g + n}{s_{k}}\right)^{1/\beta}\cdot k^{(1-\alpha)/\beta} \]</div>
 <p><em>Cara derive <span class="math notranslate nohighlight">\(N_{h}\)</span> — step-by-step.</em></p>
 <p><strong>Step 1</strong> Mulai dari <span class="math notranslate nohighlight">\(T_{h} =0\)</span></p>
 <div class="math notranslate nohighlight">
-\[ s_{h}kh-^{\beta\alpha }(\delta _{h} +g + n)h = 0 \]</div>
+\[ s_{h}\,k^{\alpha}h^{\beta}-(\delta_{h} +g + n)\,h = 0 \]</div>
 <p><strong>Step 2.</strong> Pindahkan dan bagi dengan <span class="math notranslate nohighlight">\(h\)</span></p>
 <div class="math notranslate nohighlight">
 \[ s_{h}kh^{\beta\alpha-1}=\delta _{h} +g + n \]</div>
 <p><strong>Step 3</strong> Solve untuk <span class="math notranslate nohighlight">\(h^{\alpha-1}\)</span></p>
 <p>Catatan: <span class="math notranslate nohighlight">\(\alpha -1 &lt; 0\)</span>, jadi <span class="math notranslate nohighlight">\(h^{\alpha-1}\)</span> menurun dalam. <span class="math notranslate nohighlight">\(h\)</span></p>
 <div class="math notranslate nohighlight">
-\[ h^{\alpha-1}=\delta ^{h} + g + ns_{h}k_{\beta } \]</div>
+\[ h^{\beta-1}=\frac{\delta_{h} + g + n}{s_{h}\,k^{\alpha}} \]</div>
 <p><strong>Step 4</strong> Pangkat <span class="math notranslate nohighlight">\(1/(\alpha -1)\)</span>, balik fraksi</p>
 <div class="math notranslate nohighlight">
 \[ h_{Nh}(k) =(\delta _{h} + g + ns^{h})^{1/(1-\alpha)}\cdot k^{\beta/(1-\alpha)} \]</div>
@@ -943,9 +943,9 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 <p><span class="math notranslate nohighlight">\(y_{j} =(k_{j}^{*\beta })(h^{*\alpha }_{j})\)</span> di steady state.</p>
 <p><strong>Step 2</strong> Substitusi formula <span class="math notranslate nohighlight">\(k_{j}^{*}\)</span> dan <span class="math notranslate nohighlight">\(h_{j}^{*}\)</span></p>
 <p>Dari Exercise 10.13.</p>
-<p>Setelah aljabar eksponen (cek: eksponen <span class="math notranslate nohighlight">\(\Lambda _{k,j}\)</span> jadi <span class="math notranslate nohighlight">\(\beta /(1 -\alpha -\beta)\)</span>, eksponen <span class="math notranslate nohighlight">\(\Lambda _{h,j}\)</span> jadi <span class="math notranslate nohighlight">\(\alpha /(1 -\alpha -\)</span> <span class="math notranslate nohighlight">\(\beta)\)</span>):</p>
+<p>Setelah aljabar eksponen (cek: eksponen <span class="math notranslate nohighlight">\(\Lambda_{k,j}\)</span> jadi <span class="math notranslate nohighlight">\(\alpha/(1-\alpha-\beta)\)</span>, eksponen <span class="math notranslate nohighlight">\(\Lambda_{h,j}\)</span> jadi <span class="math notranslate nohighlight">\(\beta/(1-\alpha-\beta)\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[ y=_{j}^{*}\Lambda ^{\beta/(1-\alpha-\beta)}\Lambda _{k,j} \cdot ^{\alpha/(1-\alpha-\beta)}_{h,j} \]</div>
+\[ y_{j}^{*}=\Lambda_{k,j}^{\alpha/(1-\alpha-\beta)} \cdot \Lambda_{h,j}^{\beta/(1-\alpha-\beta)} \]</div>
 <p><strong>Step 3.</strong> Kembali ke per-capita income</p>
 <div class="math notranslate nohighlight">
 \[
@@ -955,7 +955,7 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 <p><strong>Asumsi tech growth seragam</strong> — MRW asumsikan <span class="math notranslate nohighlight">\(A_{j}(t) =\bar{A}_{j} \cdot e^{gt}\)</span> — rate sama untuk semua negara, level <span class="math notranslate nohighlight">\(g\bar{A}_{j}\)</span> berbeda.</p>
 <p><strong>Take log</strong></p>
 <div class="math notranslate nohighlight">
-\[ ln\tilde{y}_{j}^{*}(t) =ln\bar{A}_{j} +gt +1 -\alpha -\beta \beta ln(n_{j} + g + \delta s^{k,j}_{k})+1 -\alpha -\beta \alpha ln(n_{j} + g + \delta s^{h,j}_{h}) \]</div>
+\[ \ln\tilde{y}_{j}^{*}(t) =\ln\bar{A}_{j} +gt +\frac{\alpha}{1-\alpha-\beta}\ln\!\left(\frac{s_{k,j}}{n_{j}+g+\delta_{k}}\right)+\frac{\beta}{1-\alpha-\beta}\ln\!\left(\frac{s_{h,j}}{n_{j}+g+\delta_{h}}\right) \]</div>
 <p><strong>Sumber data untuk regresi MRW</strong></p>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
@@ -981,7 +981,7 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 <p><strong>Implied <span class="math notranslate nohighlight">\(\alpha_{h} \approx 0{,}28\)</span></strong> — human capital share di income.</p>
 <div class="important admonition">
 <p class="admonition-title">Hasil kunci</p>
-<p>Tanpa human capital (Solow standar): <span class="math notranslate nohighlight">\(R\approx ^{2}0.59\)</span>. Dengan human capital: <span class="math notranslate nohighlight">\(R=^{2}0.78\)</span>.</p>
+<p>Tanpa human capital (Solow standar): <span class="math notranslate nohighlight">\(R^{2}\approx 0.59\)</span>. Dengan human capital: <span class="math notranslate nohighlight">\(R^{2}=0.78\)</span>.</p>
 <p><em>Penambahan human capital menambah ~20 percentage points explanatory power.</em></p>
 <p><em>Implikasi: TFP residual yang sebelumnya 41% berkurang ke 22%. Banyak “tech” sebelumnya ternyata adalah human capital tersembunyi.</em></p>
 </div>
@@ -1090,7 +1090,7 @@ k^{*}=\left[\Lambda_{k}^{1-\beta}\Lambda_{h}^{\beta}\right]^{1/(1-\alpha-\beta)}
 <li><p>☐ Sumber data tiap variabel (PWT, UNESCO, World Bank)</p></li>
 <li><p>☐ Asumsi tech growth seragam (<span class="math notranslate nohighlight">\(A_{j} =\bar{A}_{j}^{gt}e\)</span>)</p></li>
 <li><p>☐ Endogeneity problem dan asumsi <span class="math notranslate nohighlight">\(\bar{A}_{j} =A\varepsilon _{j}\)</span></p></li>
-<li><p>☐ Hasil estimasi: <span class="math notranslate nohighlight">\(R=^{2}0.78\beta = 0.30, \alpha = 0.28\)</span>,</p></li>
+<li><p>☐ Hasil estimasi: <span class="math notranslate nohighlight">\(R^{2}=0.78\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.30\)</span>, <span class="math notranslate nohighlight">\(\alpha = 0.28\)</span></p></li>
 <li><p>☐ Interpretasi: human capital reduce TFP residual dari 41% ke 22%</p></li>
 </ul>
 <p><strong>Section 10.5 + big picture</strong></p>

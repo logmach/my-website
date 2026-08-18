@@ -127,9 +127,9 @@ Kedua-duanya adalah steady state — tapi perilakunya sangat berbeda saat ada ga
 ```
 **Mengapa eigenvalues?** Solusi sistem linear bisa ditulis sebagai kombinasi "mode":
 
-$$ x(t) = C_{1}e^{\lambda1t}v_{1} +C_{2}e^{\lambda2t}v_{2} +⋯ $$
+$$ x(t) = C_{1}e^{\lambda_{1}t}v_{1} + C_{2}e^{\lambda_{2}t}v_{2} + \cdots $$
 
-Setiap mode $e^{\lambda }i^{t}$:
+Setiap mode $e^{\lambda_{i}t}$:
 
 Mengecil ke 0 kalau $Re(\lambda _{i}) <0$ Membesar tak hingga kalau $Re(\lambda _{i}) >0$
 
@@ -140,7 +140,7 @@ Untuk konvergensi: semua mode harus mengecil → semua eigenvalue real part nega
 
 Mengapa "real part"? Karena eigenvalues bisa kompleks: $\lambda = a + bi$. Maka:
 
-$$ e\lambda t=eat[cos(bt) + i sin(bt)]\cdot $$
+$$ e^{\lambda t}=e^{at}[\cos(bt) + i\,\sin(bt)] $$
 
 Bagian $cos +i sin$ memberi oscillation (spiral). Bagian $e^{at}$ memberi magnitude growth/decay. Hanya real part yang menentukan apakah lintasan mengecil atau membesar. $a$
 ```
@@ -148,7 +148,7 @@ Bagian $cos +i sin$ memberi oscillation (spiral). Bagian $e^{at}$ memberi magnit
 
 Ya, $b$ adalah vektor kolom $k \times 1$. Perannya: Menentukan lokasi steady state: $\bar{x}=-A^{-1}b$ Tidak mempengaruhi stabilitas — stabilitas hanya tergantung eigenvalues $A$
 
-Kalau $b= 0$, steady state di origin. Kalau $b= \ne 0$, steady state pindah, tapi sifat stabilitasnya sama.
+Kalau $b= 0$, steady state di origin. Kalau $b \ne 0$, steady state pindah, tapi sifat stabilitasnya sama.
 
 ## Konsep 5 — Teorema 5.2 — Nonlinear Stability via Linearisasi
 
@@ -165,7 +165,9 @@ Pangkat ≠ 1: $x^{2}$, $x^{\alpha}$. Fungsi transendental: $e^{x}$, $\ln x$, $\
 
 **Hampir semua fungsi di growth theory adalah nonlinear**
 
-*Cobb-Douglas $f(k)= k^{\alpha }$ — nonlinear (pangkat $\alpha = \ne 1$) CRRA $u(c)= c^{1-\sigma }/(1 -\sigma)$ — nonlinear Solow-Swan ODE $\dot{k}=sk-^{\alpha }(n + \delta)k$ — nonlinear karena $k^{\alpha }$*
+- Cobb-Douglas $f(k)= k^{\alpha}$ — nonlinear (pangkat $\alpha \ne 1$)
+- CRRA $u(c)= c^{1-\sigma}/(1-\sigma)$ — nonlinear
+- Solow-Swan ODE $\dot{k}=sk^{\alpha}-(n+\delta)k$ — nonlinear karena $k^{\alpha}$
 ```
 *Itulah mengapa Teorema 5.2 yang paling sering dipakai.*
 
@@ -212,9 +214,7 @@ Teorema 5.2 (nonlinear via linearisasi): local asymptotic stable
 ```{admonition} Catatan
 :class: note
 
-*Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue real part*
-
-$= \ne 0$), maka dinamika nonlinear di sekitar $\bar{x}$ secara topologis ekuivalen dengan dinamika linearisasinya.
+*Hartman-Grobman Theorem: Kalau steady state hyperbolic (semua eigenvalue punya real part $\ne 0$), maka dinamika nonlinear di sekitar $\bar{x}$ secara topologis ekuivalen dengan dinamika linearisasinya.*
 
 *Yaitu, dekat $\bar{x}$, sistem nonlinear "kelihatan seperti" $\dot{y}=J(\bar{x})\,y$. Inilah justifikasi Teorema 5.2.*
 
@@ -232,7 +232,7 @@ $$ J(\bar{x}) = \left(\frac{\partial G}{\partial x}(\bar{x})\right) = \big(G'(\b
 
 2. Eigenvalue matriks $1 \times 1$: entri matriks itu sendiri:
 
-$$ det((a) -\lambda) = a -\lambda = 0⟹\lambda = a $$
+$$ \det\bigl((a) -\lambda\bigr) = a -\lambda = 0 \implies \lambda = a $$
 
 Maka eigenvalue Jacobian 1D = $G'(\bar{x})$.
 
@@ -247,9 +247,9 @@ $G'(\bar{x})<0$ → stable (asymptotic) · $G'(\bar{x})>0$ → unstable · $G'(\
 
 Untuk ODE $\dot{x}=-x^{3}$ dengan steady state $\bar{x}=0$:
 
-$$ G (x) =^{'}-3x^{2} $$
+$$ G'(x) =-3x^{2} $$
 
-$G (0) =^{'}0$ — kasus borderline!
+$G'(0) =0$ — kasus borderline!
 
 Linearisasi tidak konklusif. Tapi analisis sign langsung menunjukkan $\bar{x}=0$ stable:
 
@@ -282,7 +282,7 @@ Pola yang sama, tapi lebih kaya:
 
 ODE Solow-Swan:
 
-$$ \dot{k}=G(k) = sk-^{\alpha }(n + g + \delta)k $$
+$$ \dot{k}=G(k) = sk^{\alpha}-(n + g + \delta)k $$
 
 **Pengerjaanmu — step by step**
 
@@ -325,7 +325,7 @@ AK model: $f(k) = Ak$ (pangkat 1, no diminishing returns):
 
 $$ G(k) = sAk -(n + g + \delta)k = [sA -(n + g + \delta)]k $$
 
-$G (k) =^{'}sA -(n + g + \delta)$ — konstan, tidak tergantung $k$ Kalau $sA> (n + g + \delta)$: pertumbuhan eksponensial, tidak konvergen
+$G'(k) =sA -(n + g + \delta)$ — konstan, tidak tergantung $k$. Kalau $sA> (n + g + \delta)$: pertumbuhan eksponensial, tidak konvergen
 ```
 ```{admonition} Koneksi
 :class: important
@@ -406,7 +406,7 @@ $$
 - ☐ Bisa derive $G'(\bar{k}) =(\alpha -1)(n + g + \delta)$ untuk Solow-Swan
 
 **Konsep konseptual**
-- ☐ Bisa menjelaskan mengapa steady state $= \ne $ otomatis stable
+- ☐ Bisa menjelaskan mengapa steady state tidak otomatis stable
 - ☐ Bisa menjelaskan analogi "bola di permukaan"
 - ☐ Memahami kasus borderline ($G'(\bar{x})=0$) dan apa yang harus dilakukan
 - ☐ Memahami saddle point dan signifikansinya untuk RCK

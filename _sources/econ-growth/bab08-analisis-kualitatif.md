@@ -51,7 +51,7 @@ Sumbu horizontal: $x_{1}$ (beberapa referensi menomori dari $x_{0}$). Sumbu vert
 
 **Vector field** — Di tiap titik $(x_{1}, x_{2})$ di phase plane, ODE memberi vektor:
 
-$$ \dot{x}=(\dot{x}^{1}\dot{x}_{2}^{)}=G((^{x}x_{2}^{))1} $$
+$$ \dot{x}=\begin{pmatrix}\dot{x}_{1}\\ \dot{x}_{2}\end{pmatrix}=G\!\left(\begin{pmatrix}x_{1}\\ x_{2}\end{pmatrix}\right) $$
 
 Vektor ini punya:
 
@@ -143,13 +143,13 @@ Lintasan generik: datang dari arah stable manifold, curve dekat origin, terbang 
 
 **x₁** — Saddle point: stable manifold (hijau, menuju origin) dan unstable manifold (merah, menjauh). Lintasan biru: datang dari stable, terbang sepanjang unstable.
 
-**Klasifikasi 4 — Stable Spiral (Focus)** — Eigenvalues: complex conjugate dengan real part negatif ($\lambda = \alpha \pm i\beta \alpha < 0$,).
+**Klasifikasi 4 — Stable Spiral (Focus)** — Eigenvalues: complex conjugate dengan real part negatif ($\lambda = \alpha \pm i\beta$ dengan $\alpha < 0$).
 
 Cara baca: lintasan spiral inward ke origin.
 
 **x₁** — Stable spiral: lintasan spiral inward ke origin.
 
-**Klasifikasi 5 — Center** — Eigenvalues: pure imaginary ($\lambda = \pm i\beta \alpha = 0$,).
+**Klasifikasi 5 — Center** — Eigenvalues: pure imaginary ($\lambda = \pm i\beta$ dengan $\alpha = 0$).
 
 Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Marginal stable (Lyapunov stable tapi tidak asymptotic stable).
 
@@ -161,11 +161,11 @@ Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Ma
 
 **Step 1.** Hitung eigenvalues
 
-Pakai formula 2D: $\lambda -^{2}tr(A)\lambda + det(A) = 0$. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).
+Pakai formula 2D: $\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0$. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).
 
 **Step 2.** Klasifikasi dari eigenvalues
 
-Trick cepat: kalau $det(A) < 0$ → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.
+Trick cepat: kalau $\det(A) < 0$ → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.
 
 **Step 3.** Cari eigenvektor (kalau real eigenvalues)
 
@@ -203,9 +203,9 @@ Di $(1, 0)\dot{x}$: = kolom pertama $A$ Di $(0, 1)\dot{x}$: = kolom kedua $A$
 
 Panah di tiap titik harus konsisten dengan klasifikasi.
 
-**Tabel klasifikasi dari $det$ dan $tr$** — Saddle point (tidak peduli trace) — langsung jelas, $det(A) =$
+**Tabel klasifikasi dari $\det$ dan $\mathrm{tr}$** — Saddle point (tidak peduli trace) — langsung jelas kalau:
 
-$$ DET<0 $$
+$$ \det(A) < 0 $$
 
 $\lambda _{1}\lambda _{2} <0$ berarti tanda berlawanan
 
@@ -227,7 +227,9 @@ $$
 \begin{aligned}\dot{k}&=f(k)-(n+\delta)k-c \\ \dot{c}&=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
 $$
 
-**Nullcline RCK** — $\dot{k}=0$ nullcline: $c = f(k) -(n + \delta)k$ — kurva concav (karena concav) $f$ $\dot{c}=0$ nullcline: $f(k) =^{'}\rho + n$ — garis vertikal di $k = \bar{k}$ (independent dari) $c$
+**Nullcline RCK**
+- $\dot{k}=0$ nullcline: $c = f(k) -(n + \delta)k$ — kurva concave (karena $f$ concave)
+- $\dot{c}=0$ nullcline: $f'(k) =\rho + n$ — garis vertikal di $k = \bar{k}$ (independent dari $c$)
 
 *Sketsa (PDF): phase diagram RCK di bidang $(k,c)$ — nullcline $\dot{c}=0$ vertikal dan $\dot{k}=0$ melengkung berpotongan di $(\bar{k},\bar{c})$; saddle path mengarah tepat ke titik itu.*
 

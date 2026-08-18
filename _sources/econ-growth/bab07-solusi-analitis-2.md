@@ -52,9 +52,9 @@ Intuisi geometris: $A$ "memetakan" ke kelipatannya sendiri — yaitu, tidak rota
 
 **Cara mencari eigenvalue** — Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
 
-Untuk solusi non-trivial ($v= \ne 0$), matriks $(A -\lambda I)$ harus singular:
+Untuk solusi non-trivial ($v \ne 0$), matriks $(A -\lambda I)$ harus singular:
 
-$$ det(A -\lambda I) = 0 $$
+$$ \det(A -\lambda I) = 0 $$
 
 Ini disebut persamaan karakteristik.
 
@@ -65,13 +65,13 @@ Ini disebut persamaan karakteristik.
 
 **Untuk matriks $2 \times 2$**
 
-$$ \lambda^{2} - tr(A)\,\lambda + \det(A) = 0 $$
+$$ \lambda^{2} - \mathrm{tr}(A)\,\lambda + \det(A) = 0 $$
 ```
 di mana:
 
-- $tr(A)= a_{11} +a_{22}$ (jumlah diagonal)
+- $\mathrm{tr}(A)= a_{11} +a_{22}$ (jumlah diagonal)
 
-$$ det(A)= a_{11}a_{22} -a_{12}a_{21} $$
+$$ \det(A)= a_{11}a_{22} -a_{12}a_{21} $$
 
 ```{admonition} ⚠️ Jebakan umum
 :class: warning
@@ -86,9 +86,10 @@ Habit yang harus dibangun: sebelum lanjut, double-check entri diagonal. Trace = 
 
 Untuk $\lambda = \alpha + i\beta$ (kompleks):
 
-$$ e\lambda t=e\alpha t[cos(\beta t) + i sin(\beta t)]\cdot $$
+$$ e^{\lambda t}=e^{\alpha t}[\cos(\beta t) + i\,\sin(\beta t)] $$
 
-$e^{\alpha t}$: magnitude — eksponensial growth/decay $cos(\beta t) + i sin(\beta t)$: rotation — osilasi periodik dengan amplitudo 1
+- $e^{\alpha t}$: magnitude — eksponensial growth/decay
+- $\cos(\beta t) + i\,\sin(\beta t)$: rotation — osilasi periodik dengan amplitudo 1
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -171,7 +172,7 @@ Karena untuk $\lambda = 4$, AM ≠ GM → tidak diagonalisasi-able.
 
 **Cara membedakan** — Diskriminan persamaan karakteristik 2D:
 
-$$ \Delta = tr(A)-^{2}4 det(A) $$
+$$ \Delta = \mathrm{tr}(A)^{2} - 4\det(A) $$
 
 Distinct real eigenvalues (Section 7.1.2). Solusi: kombinasi linear
 
@@ -200,9 +201,9 @@ Untuk eigenvalues $\lambda _{1}, \lambda _{2}$ dengan eigenvektor $v_{1}, v_{2}$
 
 **General solution (Equation 7.11)**
 
-$$ x(t)= c_{1}e^{\lambda1t}v_{1} +c_{2}e^{\lambda2t}v_{2} $$
+$$ x(t)= c_{1}e^{\lambda_{1}t}v_{1} +c_{2}e^{\lambda_{2}t}v_{2} $$
 
-Interpretasi: kombinasi linear dari "straight-line solutions". Setiap suku $c_{i}^{\lambda }ei^{t}v_{i}$ adalah lintasan sepanjang arah eigenvektor $v_{i}$ dengan magnitude tumbuh/decay secara eksponensial.
+Interpretasi: kombinasi linear dari "straight-line solutions". Setiap suku $c_{i}e^{\lambda_{i}t}v_{i}$ adalah lintasan sepanjang arah eigenvektor $v_{i}$ dengan magnitude tumbuh/decay secara eksponensial.
 ```
 **Kasus 2 — Complex (Section 7.1.3)**
 
@@ -211,9 +212,11 @@ Untuk eigenvalues $\lambda = \alpha \pm i\beta$:
 ```{admonition} Hasil kunci
 :class: important
 
-Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $cos(\beta t), sin(\beta t)$ (rotation). Hasilnya:
+Solusi melibatkan $e^{\alpha t}$ (magnitude) dan $\cos(\beta t), \sin(\beta t)$ (rotation). Hasilnya:
 
-*$\alpha < 0, \beta = \ne 0$: stable spiral (focus) $\alpha > 0, \beta = \ne 0$: unstable spiral $\alpha = 0, \beta = \ne 0$: center (orbit periodic)*
+- $\alpha < 0,\ \beta \ne 0$: stable spiral (focus)
+- $\alpha > 0,\ \beta \ne 0$: unstable spiral
+- $\alpha = 0,\ \beta \ne 0$: center (orbit periodik)
 
 Visualisasi: lintasan spiral di phase plane — bukan garis lurus.
 ```
@@ -250,7 +253,7 @@ Stabilitas tetap dari tanda: untuk $\lambda \lambda < 0$, exponensial decay mena
 
 **Step 1.** Eigenvalues
 
-$tr(A) = 5, det(A) = 4$. Persamaan: $\lambda -^{2}5\lambda + 4 = 0$ → $(\lambda -4)(\lambda -1) = 0$.
+$\mathrm{tr}(A) = 5, \det(A) = 4$. Persamaan: $\lambda^{2} - 5\lambda + 4 = 0$ → $(\lambda -4)(\lambda -1) = 0$.
 
 $\lambda _{1} =4, \lambda _{2} =1$. Distinct dan real ✓
 
@@ -264,7 +267,7 @@ $(A -I)v_{2} =0$ menghasilkan $v_{1} =-2v_{2}$. Pilih $v_{2} =(-2, 1)$.
 
 **Step 4.** General solution
 
-$$ x(t) = c1e^{4t} (^{1}1^{)}+c2e^{t} (^{-2}1^{)} $$
+$$ x(t) = c_{1}e^{4t}\begin{pmatrix}1\\1\end{pmatrix}+c_{2}e^{t}\begin{pmatrix}-2\\1\end{pmatrix} $$
 
 **Step 5** Apply kondisi awal $x_{0} =(0.1, 0.1)$
 
@@ -292,9 +295,9 @@ Particular solution: $x(t) = 0.1e(1, 1)^{4t}$. Sepanjang arah $v_{1}$ — straig
 
 **Step 1.** Trace dan determinant
 
-$tr(A) = -1 + (-1) = -2$ (hati-hati: bukan) $0$
+$\mathrm{tr}(A) = -1 + (-1) = -2$ (hati-hati: bukan) $0$
 
-$$ det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 $$
+$$ \det(A) = (-1)(-1) -(2)(-2) = 1 + 4 = 5 $$
 
 **Step 2.** Diskriminan
 
@@ -306,7 +309,7 @@ $$
 \lambda=\frac{-(-2)\pm\sqrt{-16}}{2}=\frac{2\pm 4i}{2}=1\pm 2i
 $$
 
-Tunggu — periksa lagi. Persamaan karakteristik $\lambda -^{2}tr(A)\lambda + det(A) = 0$ menjadi $\lambda +^{2}2\lambda +$ $5 = 0$.
+Tunggu — periksa lagi. Persamaan karakteristik $\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0$ menjadi $\lambda^{2} + 2\lambda + 5 = 0$.
 
 $$
 \lambda=\frac{-2\pm\sqrt{4-20}}{2}=\frac{-2\pm 4i}{2}=-1\pm 2i
@@ -318,7 +321,7 @@ $\alpha = -1$ (real part), $\beta = 2$ (imaginary part)
 
 **Step 5.** Klasifikasi
 
-$\alpha < 0$ dan $\beta = \ne 0$ → stable spiral
+$\alpha < 0$ dan $\beta \ne 0$ → stable spiral
 
 **Interpretasi qualitative** — Lintasan spiral inward ke origin Magnitude decay dengan rate $∣\alpha ∣= 1$ Periode rotasi $T= 2\pi /\beta = \pi \approx 3.14$
 
@@ -388,9 +391,10 @@ Implikasi mendalam:
 
 *Untuk ODE nonlinear seperti RCK, masalahnya bukan menemukan $C$. Masalahnya: tidak ada formula umum dalam fungsi elementer (eksponensial, polinomial, trigonometri, log) yang bisa mengekspresikan solusi.*
 ```
-**Picard-Lindelöf menjamin eksistensi** — Untuk Solow-Swan $\dot{k}=sk-^{\alpha }\delta k$ dengan $k > 0$:
+**Picard-Lindelöf menjamin eksistensi** — Untuk Solow-Swan $\dot{k}=sk^{\alpha} - \delta k$ dengan $k > 0$:
 
-$G(k) = sk-^{\alpha }\delta k$ kontinu untuk $k > 0$ ✓ $\partial G/\partial k = \alpha sk^{\alpha-1}-\delta$ kontinu untuk $k > 0$ ✓
+- $G(k) = sk^{\alpha} - \delta k$ kontinu untuk $k > 0$ ✓
+- $\partial G/\partial k = \alpha sk^{\alpha-1}-\delta$ kontinu untuk $k > 0$ ✓
 
 Picard-Lindelöf menjamin: untuk sembarang $k_{0} >0$, ada solusi $k(t)$ yang eksis dan unik untuk $t\ge t_{0}$.
 
@@ -435,7 +439,7 @@ Picard-Lindelöf menjamin eksistensi. Ekspresibilitas adalah pertanyaan terpisah
 
 **Mekanik**
 - ☐ Bisa hitung trace dan det matriks $2 \times 2$ dengan benar (hati-hati entri)
-- ☐ Bisa solve persamaan karakteristik $\lambda -^{2}tr(A)\lambda + det(A) = 0$
+- ☐ Bisa solve persamaan karakteristik $\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0$
 - ☐ Bisa hitung eigenvektor dengan solve $(A -\lambda I)v= 0$ eksplisit
 - ☐ Bisa tulis general solution untuk distinct real eigenvalues (Equation 7.11)
 - ☐ Bisa identifikasi $\alpha, \beta$ untuk complex eigenvalues

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
@@ -484,7 +484,7 @@
 <p>Sumbu horizontal: <span class="math notranslate nohighlight">\(x_{1}\)</span> (beberapa referensi menomori dari <span class="math notranslate nohighlight">\(x_{0}\)</span>). Sumbu vertikal: <span class="math notranslate nohighlight">\(x_{2}\)</span>. Phase plane = <span class="math notranslate nohighlight">\(R^{2}\)</span>, semua kemungkinan <span class="math notranslate nohighlight">\((x_{1}, x_{2})\)</span>.</p>
 <p><strong>Vector field</strong> — Di tiap titik <span class="math notranslate nohighlight">\((x_{1}, x_{2})\)</span> di phase plane, ODE memberi vektor:</p>
 <div class="math notranslate nohighlight">
-\[ \dot{x}=(\dot{x}^{1}\dot{x}_{2}^{)}=G((^{x}x_{2}^{))1} \]</div>
+\[\begin{split} \dot{x}=\begin{pmatrix}\dot{x}_{1}\\ \dot{x}_{2}\end{pmatrix}=G\!\left(\begin{pmatrix}x_{1}\\ x_{2}\end{pmatrix}\right) \end{split}\]</div>
 <p>Vektor ini punya:</p>
 <p>Arah: kemana sistem bergerak dari titik itu</p>
 <p>Magnitude: seberapa cepat</p>
@@ -543,10 +543,10 @@
 <p>Cara baca: dua “manifold” istimewa lewat origin. Stable manifold (sepanjang eigenvektor dengan <span class="math notranslate nohighlight">\(\lambda &lt; 0\)</span>) → lintasan menuju origin. Unstable manifold (sepanjang eigenvektor dengan <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span>) → lintasan menjauh.</p>
 <p>Lintasan generik: datang dari arah stable manifold, curve dekat origin, terbang sepanjang unstable manifold.</p>
 <p><strong>x₁</strong> — Saddle point: stable manifold (hijau, menuju origin) dan unstable manifold (merah, menjauh). Lintasan biru: datang dari stable, terbang sepanjang unstable.</p>
-<p><strong>Klasifikasi 4 — Stable Spiral (Focus)</strong> — Eigenvalues: complex conjugate dengan real part negatif (<span class="math notranslate nohighlight">\(\lambda = \alpha \pm i\beta \alpha &lt; 0\)</span>,).</p>
+<p><strong>Klasifikasi 4 — Stable Spiral (Focus)</strong> — Eigenvalues: complex conjugate dengan real part negatif (<span class="math notranslate nohighlight">\(\lambda = \alpha \pm i\beta\)</span> dengan <span class="math notranslate nohighlight">\(\alpha &lt; 0\)</span>).</p>
 <p>Cara baca: lintasan spiral inward ke origin.</p>
 <p><strong>x₁</strong> — Stable spiral: lintasan spiral inward ke origin.</p>
-<p><strong>Klasifikasi 5 — Center</strong> — Eigenvalues: pure imaginary (<span class="math notranslate nohighlight">\(\lambda = \pm i\beta \alpha = 0\)</span>,).</p>
+<p><strong>Klasifikasi 5 — Center</strong> — Eigenvalues: pure imaginary (<span class="math notranslate nohighlight">\(\lambda = \pm i\beta\)</span> dengan <span class="math notranslate nohighlight">\(\alpha = 0\)</span>).</p>
 <p>Cara baca: lintasan adalah orbit periodik — tidak konvergen, tidak diverge. Marginal stable (Lyapunov stable tapi tidak asymptotic stable).</p>
 <p><strong>x₁</strong> — Center: lintasan adalah orbit konsentris di sekitar origin. Tidak konvergen, tidak diverge.</p>
 </section>
@@ -554,9 +554,9 @@
 <h2>Konsep 6 — Algoritma 7-Langkah Menggambar Phase Diagram<a class="headerlink" href="#konsep-6-algoritma-7-langkah-menggambar-phase-diagram" title="Link to this heading">#</a></h2>
 <p><em>Prosedur konkret yang dipakai berulang. Hafalkan urutannya.</em></p>
 <p><strong>Step 1.</strong> Hitung eigenvalues</p>
-<p>Pakai formula 2D: <span class="math notranslate nohighlight">\(\lambda -^{2}tr(A)\lambda + det(A) = 0\)</span>. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).</p>
+<p>Pakai formula 2D: <span class="math notranslate nohighlight">\(\lambda^{2} - \mathrm{tr}(A)\lambda + \det(A) = 0\)</span>. Hati-hati hitung trace (jumlah diagonal, bukan off- diagonal).</p>
 <p><strong>Step 2.</strong> Klasifikasi dari eigenvalues</p>
-<p>Trick cepat: kalau <span class="math notranslate nohighlight">\(det(A) &lt; 0\)</span> → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.</p>
+<p>Trick cepat: kalau <span class="math notranslate nohighlight">\(\det(A) &lt; 0\)</span> → otomatis saddle point. Untuk klasifikasi lain, lihat tanda kedua eigenvalue.</p>
 <p><strong>Step 3.</strong> Cari eigenvektor (kalau real eigenvalues)</p>
 <p>Solve <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span> untuk tiap eigenvalue. Identifikasi stable (eigenvalue negatif) dan unstable (eigenvalue positif) directions.</p>
 <p><strong>Step 4.</strong> Plot sumbu dan steady state</p>
@@ -575,9 +575,9 @@
 <p>Evaluasi <span class="math notranslate nohighlight">\(\dot{x}=Ax\)</span> di beberapa titik untuk verifikasi:</p>
 <p>Di <span class="math notranslate nohighlight">\((1, 0)\dot{x}\)</span>: = kolom pertama <span class="math notranslate nohighlight">\(A\)</span> Di <span class="math notranslate nohighlight">\((0, 1)\dot{x}\)</span>: = kolom kedua <span class="math notranslate nohighlight">\(A\)</span></p>
 <p>Panah di tiap titik harus konsisten dengan klasifikasi.</p>
-<p><strong>Tabel klasifikasi dari <span class="math notranslate nohighlight">\(det\)</span> dan <span class="math notranslate nohighlight">\(tr\)</span></strong> — Saddle point (tidak peduli trace) — langsung jelas, <span class="math notranslate nohighlight">\(det(A) =\)</span></p>
+<p><strong>Tabel klasifikasi dari <span class="math notranslate nohighlight">\(\det\)</span> dan <span class="math notranslate nohighlight">\(\mathrm{tr}\)</span></strong> — Saddle point (tidak peduli trace) — langsung jelas kalau:</p>
 <div class="math notranslate nohighlight">
-\[ DET&lt;0 \]</div>
+\[ \det(A) &lt; 0 \]</div>
 <p><span class="math notranslate nohighlight">\(\lambda _{1}\lambda _{2} &lt;0\)</span> berarti tanda berlawanan</p>
 <p><span class="math notranslate nohighlight">\(DET&gt;0, TR&lt;0\)</span> Stable (node atau spiral, tergantung diskriminan)</p>
 <p><span class="math notranslate nohighlight">\(DET&gt;0, TR&gt;0\)</span> Unstable (node atau spiral)</p>
@@ -592,7 +592,11 @@
 \[\begin{split}
 \begin{aligned}\dot{k}&amp;=f(k)-(n+\delta)k-c \\ \dot{c}&amp;=\frac{c\left[f\'(k)-\rho-n\right]}{\sigma}\end{aligned}
 \end{split}\]</div>
-<p><strong>Nullcline RCK</strong> — <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(c = f(k) -(n + \delta)k\)</span> — kurva concav (karena concav) <span class="math notranslate nohighlight">\(f\)</span> <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(f(k) =^{'}\rho + n\)</span> — garis vertikal di <span class="math notranslate nohighlight">\(k = \bar{k}\)</span> (independent dari) <span class="math notranslate nohighlight">\(c\)</span></p>
+<p><strong>Nullcline RCK</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\dot{k}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(c = f(k) -(n + \delta)k\)</span> — kurva concave (karena <span class="math notranslate nohighlight">\(f\)</span> concave)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{c}=0\)</span> nullcline: <span class="math notranslate nohighlight">\(f'(k) =\rho + n\)</span> — garis vertikal di <span class="math notranslate nohighlight">\(k = \bar{k}\)</span> (independent dari <span class="math notranslate nohighlight">\(c\)</span>)</p></li>
+</ul>
 <p><em>Sketsa (PDF): phase diagram RCK di bidang <span class="math notranslate nohighlight">\((k,c)\)</span> — nullcline <span class="math notranslate nohighlight">\(\dot{c}=0\)</span> vertikal dan <span class="math notranslate nohighlight">\(\dot{k}=0\)</span> melengkung berpotongan di <span class="math notranslate nohighlight">\((\bar{k},\bar{c})\)</span>; saddle path mengarah tepat ke titik itu.</em></p>
 <p><em>Phase diagram RCK. Saddle path (biru) = stable manifold. Lintasan lain (merah putus-putus) terbang menjauh.</em></p>
 <p><strong>Implikasi ekonomi</strong></p>
