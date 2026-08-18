@@ -29,7 +29,7 @@ Production function untuk barang akhir: $Y= F (A, K, L)$ Capital accumulation te
 
 **Tiga properti yang harus dipegang** — Property 9.1 — Linear homogeneity (CRS):
 
-$$ F (A, \lambda K, \lambda L) = \lambda F (A, K, L)untuk semua \lambda > 0 $$
+$$ F(A, \lambda K, \lambda L) = \lambda F(A, K, L) \quad \text{untuk semua } \lambda > 0 $$
 
 Interpretasi: gandakan semua input → output digandakan. Constant Returns to Scale.
 
@@ -49,7 +49,7 @@ Inada menjamin interior solutions — modal selalu berguna, tapi diminishing ret
 
 **Cobb-Douglas sebagai contoh utama**
 
-$$ F (A, K, L) = K(AL)^{\alpha1-\alpha },0 <\alpha < 1 $$
+$$ F(A, K, L) = K^{\alpha}(AL)^{1-\alpha}, \qquad 0 < \alpha < 1 $$
 
 Bentuk "labor-augmenting" (Harrod-neutral) — $A$ menggandakan $L$.
 
@@ -121,7 +121,7 @@ Inilah definisi weak concavity. QED.
 
 Statement: kalau homogeneous of degree $gm$ dalam $x, y$:
 
-$$ m \cdot g(x, y) = g_{x}^{x+g} \cdot _{y}^{y} \cdot $$
+$$ m \cdot g(x, y) = g_{x}\cdot x + g_{y}\cdot y $$
 
 **Bukti**
 
@@ -146,9 +146,9 @@ $$ g_{x}(x, y) \cdot x + g_{y}(x, y) \cdot y= mg(x, y) $$
 
 QED.
 
-**Aplikasi Cobb-Douglas** — Verifikasi untuk $F= K(AL)^{\alpha1-\alpha }$ dengan $m= 1$:
+**Aplikasi Cobb-Douglas** — Verifikasi untuk $F= K^{\alpha}(AL)^{1-\alpha}$ dengan $m= 1$:
 
-$F_{K} =\alpha K^{\alpha-1}(AL)^{1-\alpha }$, jadi $F_{K}^{K=\alpha K(AL)} \cdot ^{\alpha1-\alpha }=\alpha F$. $F_{L} =(1 -\alpha)KA^{\alpha1-\alpha }L^{-\alpha }$, jadi $F_{L}^{L= (1 -\alpha)K(AL)} \cdot ^{\alpha1-\alpha }=(1 -\alpha)F$.
+$F_{K} =\alpha K^{\alpha-1}(AL)^{1-\alpha}$, jadi $F_{K}\cdot K=\alpha K^{\alpha}(AL)^{1-\alpha}=\alpha F$. $F_{L} =(1-\alpha)K^{\alpha}A^{1-\alpha}L^{-\alpha}$, jadi $F_{L}\cdot L= (1-\alpha)K^{\alpha}(AL)^{1-\alpha}=(1-\alpha)F$.
 
 Jumlah: $F_{K}K +F_{L}L =\alpha F+ (1 -\alpha)F= F$ ✓
 
@@ -475,7 +475,7 @@ Titik bingung yang umum: perhitungan rate of convergence. Kuncinya: $\tilde{k}$ 
 
 Set $\alpha = 1$ di Cobb-Douglas:
 
-$$ F (K, L, A) = \dot{K}(AL)=^{0}K $$
+$$ F(K, L, A) = K^{1}(AL)^{0} = K $$
 
 Output hanya tergantung modal. ODE per worker:
 
@@ -593,7 +593,7 @@ Rule untuk produk: $g_{ALL} =g_{AL}+g_{L} =g_{AL} +n$.
 
 Set sama dengan $g_{Y}$:
 
-$$ g_{AL} +n = g_{Y}⟹g_{AL} =g_{Y} -n $$
+$$ g_{AL} +n = g_{Y} \implies g_{AL} =g_{Y} -n $$
 
 Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
@@ -614,9 +614,9 @@ Tech labor-augmenting tumbuh dengan rate $g_{Y} -n$. (Klaim 2-3 Uzawa).
 
 **Setup CES**
 
-$$ Y= A_{H}^{[}\gamma (A_{K}K)+ (1 -\gamma)(A^{\sigma }_{L}L)^{\sigma }]^{1/\sigma } $$
+$$ Y= A_{H}\left[\gamma (A_{K}K)^{\sigma}+ (1-\gamma)(A_{L}L)^{\sigma}\right]^{1/\sigma} $$
 
-Dengan $\sigma \in (-\infty, 1), \sigma = \ne 0$. Elasticity of substitution $= 1/(1 -\sigma)$. Untuk $\sigma \to 0$ (Cobb-Douglas), elasticity = 1.
+Dengan $\sigma \in (-\infty, 1), \sigma \ne 0$. Elasticity of substitution $= 1/(1 -\sigma)$. Untuk $\sigma \to 0$ (Cobb-Douglas), elasticity = 1.
 
 **Skenario 1 — Hicks-neutral** — $A_{K} =A_{L} =1$, hanya $A_{H}$ tumbuh.
 
@@ -624,13 +624,13 @@ Dengan $\sigma \in (-\infty, 1), \sigma = \ne 0$. Elasticity of substitution $= 
 
 **Step 1** Hitung $F_{K}$
 
-Misal $u:= \gamma K+^{\sigma }(1 -\gamma)L^{\sigma }$. Chain rule:
+Misal $u:= \gamma K^{\sigma}+(1-\gamma)L^{\sigma}$. Chain rule:
 
 $$
 F_{K}=A_{H}\,\gamma\,K^{\sigma-1}\,u^{(1-\sigma)/\sigma}
 $$
 
-**Step 2** Hitung $F_{K}^{K/Y} \cdot$
+**Step 2** Hitung $F_{K}\cdot K/Y$
 
 $$
 \frac{F_{K}K}{Y}=\frac{A_{H}\gamma K^{\sigma}u^{(1-\sigma)/\sigma}}{A_{H}u^{1/\sigma}}=\frac{\gamma K^{\sigma}}{u}
@@ -727,21 +727,24 @@ Capital share = $\gamma /[\gamma + (1 -\gamma)(A_{L}L/K)]^{\sigma }$. Karena $A_
 
 *Mengapa Cobb-Douglas "menyembunyikan" distinction antara Hicks/Solow/Harrod.*
 
-**Tiga versi Cobb-Douglas dengan tech** — Hicks-neutral: $Y= A_{H} \cdot KL^{\alpha1-\alpha }$ Solow-neutral: $Y= (A_{K}K)L^{\alpha1-\alpha }$ Harrod-neutral: $Y= K(A^{\alpha }_{L}L)^{1-\alpha }$
+**Tiga versi Cobb-Douglas dengan tech**
+- Hicks-neutral: $Y= A_{H}\cdot K^{\alpha}L^{1-\alpha}$
+- Solow-neutral: $Y= (A_{K}K)^{\alpha}L^{1-\alpha}$
+- Harrod-neutral: $Y= K^{\alpha}(A_{L}L)^{1-\alpha}$
 
 **Tunjukkan equivalence Versi A ≡ Versi B**
 
 **Step 1.** Expand Solow-neutral
 
-$$ (A_{K}K)=^{\alpha }A^{\alpha }_{K} \cdot K^{\alpha } $$
+$$ (A_{K}K)^{\alpha}=A_{K}^{\alpha} \cdot K^{\alpha} $$
 
 Maka:
 
-$$ Y_{B} =AKL^{\alpha }_{K}^{\alpha1-\alpha } $$
+$$ Y_{B} =A_{K}^{\alpha}K^{\alpha}L^{1-\alpha} $$
 
 **Step 2.** Bandingkan dengan Hicks
 
-$Y_{A} =A_{H}KL^{\alpha1-\alpha }$. Identik jika:
+$Y_{A} =A_{H}K^{\alpha}L^{1-\alpha}$. Identik jika:
 
 $$ A_{H} =A^{\alpha }_{K}\Leftrightarrow A_{K} =A^{1/\alpha }_{H} $$
 
@@ -753,11 +756,11 @@ $$ (A_{L}L)^{1-\alpha }=A^{1-\alpha }_{L}L^{1-\alpha } $$
 
 Maka:
 
-$$ Y_{C} =A^{1-\alpha }_{L}KL^{\alpha1-\alpha } $$
+$$ Y_{C} =A_{L}^{1-\alpha}K^{\alpha}L^{1-\alpha} $$
 
 **Step 2.** Identifikasi
 
-$Y_{A} =A_{H}KL^{\alpha1-\alpha }$. Identik jika:
+$Y_{A} =A_{H}K^{\alpha}L^{1-\alpha}$. Identik jika:
 
 $$ A_{H} =A^{1-\alpha }_{L}\Leftrightarrow A_{L} =A^{1/(1-\alpha)}_{H} $$
 
@@ -768,7 +771,7 @@ Elasticity: Cobb-Douglas punya elasticity of substitution = 1 (unit elasticity).
 ```{admonition} Catatan
 :class: note
 
-*Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk $\sigma = \ne 0$ generic, ketiga jenis tech tidak equivalent.*
+*Cobb-Douglas adalah kasus knife-edge di antara semua CES. Untuk $\sigma \ne 0$ generic, ketiga jenis tech tidak equivalent.*
 ```
 ## Konsep 12 — Tension: Uzawa vs Cobb-Douglas vs Data
 
@@ -984,15 +987,7 @@ $\tilde{y} =Af(k)$. Selama transisi: $f(k)$ turun (karena turun), tapi $kA$ tumb
 
 Di BGP baru: per capita income tumbuh dengan rate $g^{'}$ — lebih cepat dari sebelumnya.
 
-k̇/k
-
-n+g'+δ (baru)
-
-n+g+δ (lama)
-
-k k̄'k̄
-
-Shock naik: garis horizontal naik dari $gn + g + \delta$ ke $n + g+^{'}\delta$. Steady state bergeser dari ke $\bar{k}$ $\bar{k}^{'}<\bar{k}$.
+Shock naik: garis horizontal naik dari $n + g + \delta$ ke $n + g' + \delta$. Steady state bergeser dari $\bar{k}$ ke $\bar{k}' < \bar{k}$.
 
 ```{admonition} Catatan
 :class: note
