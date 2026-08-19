@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f6beff2c" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -456,14 +456,16 @@
 <section id="konsep-1-apa-itu-steady-state">
 <h2>Konsep 1 — Apa Itu Steady State?<a class="headerlink" href="#konsep-1-apa-itu-steady-state" title="Link to this heading">#</a></h2>
 <p><em>Konsep yang intuisinya sudah muncul di akhir Bab 4 — sekarang diformalkan.</em></p>
-<p><strong>Definisi 5.1</strong></p>
-<p>Steady state (atau equilibrium) untuk ODE autonomous <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> adalah titik yang memenuhi: <span class="math notranslate nohighlight">\(\bar{x}\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Definisi 5.1 — Steady State</p>
+<p>Steady state (atau equilibrium) untuk ODE autonomous <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> adalah titik <span class="math notranslate nohighlight">\(\bar{x}\)</span> yang memenuhi:</p>
 <div class="math notranslate nohighlight">
 \[ 0 = G(\bar{x}) \]</div>
 <p>Yaitu, titik di mana sistem tidak berubah: sekali berada di <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem tinggal di sana selamanya.</p>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
-<p>Intuisinya sudah muncul di akhir Bab 4: untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=x-x^{2}\)</span>, <span class="math notranslate nohighlight">\(x = 0\)</span> adalah solusi karena <span class="math notranslate nohighlight">\(G(0) = 0\)</span>, dan kemudian ditemukan $x =</p>
+<p>Intuisinya sudah muncul di akhir Bab 4: untuk ODE <span class="math notranslate nohighlight">\(\dot{x}=x-x^{2}\)</span>, <span class="math notranslate nohighlight">\(x = 0\)</span> adalah solusi karena <span class="math notranslate nohighlight">\(G(0) = 0\)</span>, dan kemudian ditemukan <span class="math notranslate nohighlight">\(x = 1\)</span> dari <span class="math notranslate nohighlight">\(G(1) = 0\)</span>.</p>
 <p>Catatan terminologi: di matematika “equilibrium”, di ekonomi “steady state” — keduanya lazim dipakai bergantian, sebuah “happy halfway house”.</p>
 </div>
 </section>
@@ -476,28 +478,33 @@
 <p><strong>Global asymptotic stable</strong> — Bola di mangkuk tanpa pinggiran. Tidak peduli seberapa keras goyangkan, akhirnya bola kembali ke dasar. Konvergen dari MANAPUN.</p>
 <p>Bola di puncak bukit. Dorong sedikit, bola menggelinding jauh.</p>
 <p><strong>Unstable</strong> — Tidak tetap dekat — terbang keluar.</p>
-<p><strong>Definisi formal dan visualisasinya</strong></p>
-<p>Definisi 5.2 (Stable / Lyapunov Stable):</p>
-<p>Untuk setiap <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, ada <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> sehingga kalau <span class="math notranslate nohighlight">\(∥x_{0} -\bar{x}∥&lt;\delta\)</span>, maka <span class="math notranslate nohighlight">\(∥\varphi (t) -\bar{x}∥&lt;\varepsilon\)</span> untuk semua <span class="math notranslate nohighlight">\(t\ge t_{0}\)</span>.</p>
-<p>Visualisasi: dua lingkaran konsentrik di sekitar — lingkaran (kecil, starting points) di dalam lingkaran (besar, <span class="math notranslate nohighlight">\(\bar{x}\delta \varepsilon\)</span> batas yang tidak boleh dilewati). Lintasan boleh orbit, tapi harus tetap di dalam. <span class="math notranslate nohighlight">\(\varepsilon\)</span></p>
-<p>Definisi 5.3 (Asymptotic Stable):</p>
-<p>Stable DAN <span class="math notranslate nohighlight">\(lim\varphi (t) =\bar{x}\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[ t\to \infty \]</div>
-<p>Visualisasi: lintasan spiral inward menuju — radius putaran mengecil seiring waktu. <span class="math notranslate nohighlight">\(\bar{x}\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Definisi 5.2 — Stable (Lyapunov Stable)</p>
+<p>Untuk setiap <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, ada <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> sehingga kalau <span class="math notranslate nohighlight">\(\lVert x_{0} -\bar{x}\rVert&lt;\delta\)</span>, maka <span class="math notranslate nohighlight">\(\lVert\varphi (t) -\bar{x}\rVert&lt;\varepsilon\)</span> untuk semua <span class="math notranslate nohighlight">\(t\ge t_{0}\)</span>.</p>
+<p>Visualisasi: dua lingkaran konsentrik di sekitar <span class="math notranslate nohighlight">\(\bar{x}\)</span> — lingkaran <span class="math notranslate nohighlight">\(\delta\)</span> (kecil, starting points) di dalam lingkaran <span class="math notranslate nohighlight">\(\varepsilon\)</span> (besar, batas yang tidak boleh dilewati). Lintasan boleh orbit, tapi harus tetap di dalam.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Definisi 5.3 — Asymptotic Stable</p>
+<p>Stable DAN <span class="math notranslate nohighlight">\(\lim_{t\to \infty}\varphi (t) =\bar{x}\)</span>.</p>
+<p>Visualisasi: lintasan spiral inward menuju <span class="math notranslate nohighlight">\(\bar{x}\)</span> — radius putaran mengecil seiring waktu.</p>
+</div>
 <div class="warning admonition">
 <p class="admonition-title">⚠️ Jebakan umum</p>
 <p>Awas notasi pada Definisi 5.3: yang benar adalah limit menuju <span class="math notranslate nohighlight">\(\bar{x}\)</span> (dengan bar), bukan <span class="math notranslate nohighlight">\(x\)</span> polos. Konteks ekonomi dan konsistensi dengan definisi lain menegaskannya.</p>
 <p>Kebiasaan yang baik: baca persis apa yang tertulis, lalu cek konsistensi dengan definisi lain. Kalau ada inkonsistensi, kemungkinan typo.</p>
-<p>Definisi 5.4 (Global Asymptotic Stable):</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Definisi 5.4 — Global Asymptotic Stable</p>
 <p>Asymptotic stable DAN konvergensi dari manapun di <span class="math notranslate nohighlight">\(R^{k}\)</span>.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
 <p>Rumusan yang tepat: yang membedakan 5.4 dari 5.3 adalah titik awalnya — 5.3 mengharuskan mulai dari neighborhood, sedangkan 5.4 boleh mulai dari mana saja.</p>
 <p>Tepat. Bedanya hanya pada scope starting points — neighborhood kecil <span class="math notranslate nohighlight">\(N\)</span> (5.3) vs seluruh <span class="math notranslate nohighlight">\(R^{k}\)</span> (5.4).</p>
-<p>Definisi 5.5 (Unstable):</p>
-<p>Bukan stable. Yaitu: untuk kecil apapun, ada <span class="math notranslate nohighlight">\(\delta x_{0}\)</span> di dalam lingkaran yang lintasannya keluar dari lingkaran <span class="math notranslate nohighlight">\(\delta \varepsilon\)</span> apapun.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Definisi 5.5 — Unstable</p>
+<p>Bukan stable. Yaitu: ada <span class="math notranslate nohighlight">\(\varepsilon\)</span> sehingga untuk <span class="math notranslate nohighlight">\(\delta\)</span> kecil apapun, selalu ada <span class="math notranslate nohighlight">\(x_{0}\)</span> di dalam lingkaran <span class="math notranslate nohighlight">\(\delta\)</span> yang lintasannya keluar dari lingkaran <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
 <p>Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari <span class="math notranslate nohighlight">\(\bar{x}\)</span>.</p>
 </div>
 <div class="important admonition">
@@ -529,10 +536,9 @@
 <section id="konsep-4-teorema-5-1-linear-stability-via-eigenvalues">
 <h2>Konsep 4 — Teorema 5.1 — Linear Stability via Eigenvalues<a class="headerlink" href="#konsep-4-teorema-5-1-linear-stability-via-eigenvalues" title="Link to this heading">#</a></h2>
 <p><em>Alat utama untuk mengecek stabilitas sistem linear. Mengubah pertanyaan dinamika menjadi pertanyaan aljabar.</em></p>
-<p><strong>Statement</strong> — Untuk sistem linear <span class="math notranslate nohighlight">\(\dot{x}=Ax + b\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}=-A^{-1}b\)</span>:</p>
 <div class="important admonition">
-<p class="admonition-title">Hasil kunci</p>
-<p><em>Jika semua eigenvalue <span class="math notranslate nohighlight">\(A\)</span> memiliki real part negatif, maka adalah globally <span class="math notranslate nohighlight">\(\bar{x}\)</span> asymptotically stable.</em></p>
+<p class="admonition-title">Teorema 5.1</p>
+<p>Untuk sistem linear <span class="math notranslate nohighlight">\(\dot{x}=Ax + b\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}=-A^{-1}b\)</span>: jika semua eigenvalue <span class="math notranslate nohighlight">\(A\)</span> memiliki real part negatif, maka <span class="math notranslate nohighlight">\(\bar{x}\)</span> globally asymptotically stable.</p>
 </div>
 <p><strong>Mengapa eigenvalues?</strong> Solusi sistem linear bisa ditulis sebagai kombinasi “mode”:</p>
 <div class="math notranslate nohighlight">
@@ -567,14 +573,14 @@
 </ul>
 </div>
 <p><em>Itulah mengapa Teorema 5.2 yang paling sering dipakai.</em></p>
-<p><strong>Statement</strong> — Untuk sistem <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> dengan steady state, definisikan Jacobian di: <span class="math notranslate nohighlight">\(\bar{x}\bar{x}\)</span></p>
+<p>Untuk sistem <span class="math notranslate nohighlight">\(\dot{x}=G(x)\)</span> dengan steady state <span class="math notranslate nohighlight">\(\bar{x}\)</span>, definisikan Jacobian di <span class="math notranslate nohighlight">\(\bar{x}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 J(\bar{x}) = \begin{pmatrix} \dfrac{\partial G_{1}(\bar{x})}{\partial x_{1}} &amp; \cdots &amp; \dfrac{\partial G_{1}(\bar{x})}{\partial x_{k}} \\ \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial G_{k}(\bar{x})}{\partial x_{1}} &amp; \cdots &amp; \dfrac{\partial G_{k}(\bar{x})}{\partial x_{k}} \end{pmatrix}
 \end{split}\]</div>
 <div class="important admonition">
-<p class="admonition-title">Hasil kunci</p>
-<p><em>Jika semua eigenvalue <span class="math notranslate nohighlight">\(J(\bar{x})\)</span> memiliki real part negatif, maka <span class="math notranslate nohighlight">\(\bar{x}\)</span> locally asymptotically stable.</em></p>
+<p class="admonition-title">Teorema 5.2</p>
+<p>Jika semua eigenvalue <span class="math notranslate nohighlight">\(J(\bar{x})\)</span> memiliki real part negatif, maka <span class="math notranslate nohighlight">\(\bar{x}\)</span> locally asymptotically stable.</p>
 </div>
 <p><strong>Idenya: linearisasi</strong> — Dekat <span class="math notranslate nohighlight">\(\bar{x}\)</span>, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks <span class="math notranslate nohighlight">\(J(\bar{x})\)</span>.</p>
 <p>Generalisasi Taylor expansion (di 1D):</p>

@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f6beff2c" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -478,11 +478,15 @@
 <section id="konsep-2-eigenvalue-dan-eigenvektor">
 <h2>Konsep 2 — Eigenvalue dan Eigenvektor<a class="headerlink" href="#konsep-2-eigenvalue-dan-eigenvektor" title="Link to this heading">#</a></h2>
 <p><em>Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.</em></p>
-<p><strong>Definisi</strong></p>
+<div class="note admonition">
+<p class="admonition-title">Definisi — Eigenvalue &amp; Eigenvektor</p>
 <p>Untuk matriks <span class="math notranslate nohighlight">\(A\)</span> ukuran <span class="math notranslate nohighlight">\(k \times k\)</span>:</p>
-<p>Eigenvektor: vektor non-zero yang memenuhi <span class="math notranslate nohighlight">\(vAv= \lambda v\)</span></p>
-<p>Eigenvalue: skalar yang membuat persamaan di atas berlaku <span class="math notranslate nohighlight">\(\lambda\)</span></p>
-<p>Intuisi geometris: <span class="math notranslate nohighlight">\(A\)</span> “memetakan” ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. <span class="math notranslate nohighlight">\(v\)</span></p>
+<ul class="simple">
+<li><p><strong>Eigenvektor</strong>: vektor non-zero <span class="math notranslate nohighlight">\(v\)</span> yang memenuhi <span class="math notranslate nohighlight">\(Av= \lambda v\)</span></p></li>
+<li><p><strong>Eigenvalue</strong>: skalar <span class="math notranslate nohighlight">\(\lambda\)</span> yang membuat persamaan di atas berlaku</p></li>
+</ul>
+<p>Intuisi geometris: <span class="math notranslate nohighlight">\(A\)</span> “memetakan” <span class="math notranslate nohighlight">\(v\)</span> ke kelipatannya sendiri — tidak rotasi, hanya stretch.</p>
+</div>
 <p><strong>Cara mencari eigenvalue</strong> — Dari <span class="math notranslate nohighlight">\(Av= \lambda v\)</span>, rearrange: <span class="math notranslate nohighlight">\((A -\lambda I)v= 0\)</span>.</p>
 <p>Untuk solusi non-trivial (<span class="math notranslate nohighlight">\(v \ne 0\)</span>), matriks <span class="math notranslate nohighlight">\((A -\lambda I)\)</span> harus singular:</p>
 <div class="math notranslate nohighlight">

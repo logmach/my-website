@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fef70144" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f6beff2c" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -454,12 +454,14 @@
 <section id="konsep-1-apa-itu-solusi-ode">
 <h2>Konsep 1 — Apa Itu “Solusi” ODE?<a class="headerlink" href="#konsep-1-apa-itu-solusi-ode" title="Link to this heading">#</a></h2>
 <p><em>Pertanyaan yang kelihatannya remeh, tapi punya konsekuensi besar untuk seluruh kursus.</em></p>
-<p><strong>Definisi formal</strong></p>
-<p>Sebuah solusi <span class="math notranslate nohighlight">\(y^{*}\)</span> untuk ODE adalah satu fungsi <span class="math notranslate nohighlight">\(y:^{*}T\to R^{k}\)</span> yang memenuhi dua syarat:</p>
+<div class="note admonition">
+<p class="admonition-title">Definisi — Solusi ODE</p>
+<p>Sebuah solusi <span class="math notranslate nohighlight">\(y^{*}\)</span> untuk ODE adalah satu fungsi <span class="math notranslate nohighlight">\(y^{*}: T\to R^{k}\)</span> yang memenuhi dua syarat:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(y^{*}\)</span> differentiable cukup (sampai orde <span class="math notranslate nohighlight">\(m\)</span>)</p></li>
 <li><p>Ketika kita substitusi <span class="math notranslate nohighlight">\(y^{*}\)</span> dan turunan-turunannya ke ODE, persamaannya benar untuk semua <span class="math notranslate nohighlight">\(t\in T\)</span></p></li>
 </ol>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">💡 Insight</p>
 <p>Jebakan umum: mengira solusi adalah “set fungsi” karena notasi <span class="math notranslate nohighlight">\(C^{m}\)</span>. Yang tepat:</p>
@@ -513,22 +515,24 @@ A(t) &amp;= C_{3}\cos(2t) + C_{4}\sin(2t)
 <p><strong>BVP — Boundary Value</strong> — Kondisi diberikan di titik-titik waktu yang berbeda. Contoh: <span class="math notranslate nohighlight">\(y(0)=1\)</span>, <span class="math notranslate nohighlight">\(y(2)=5\)</span>. Lebih sulit — butuh metode khusus (shooting, Bab 13).</p>
 <div class="warning admonition">
 <p class="admonition-title">⚠️ Jebakan umum</p>
-<p>Hati-hati: BVP bukan sekadar “kondisi pada interval waktu” — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah <em>di mana</em> kondisi diberikan dalam</p>
+<p>Hati-hati: BVP bukan sekadar “kondisi pada interval waktu” — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah <em>di mana</em> kondisi diberikan dalam interval waktu tersebut.</p>
 <p>Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP. Lebih dari satu = BVP.</p>
 </div>
 <div class="important admonition">
 <p class="admonition-title">Koneksi</p>
 <p><strong>Di RCK (Bab 12) akan muncul BVP yang tidak biasa</strong></p>
-<p><em>Capital: initial condition di <span class="math notranslate nohighlight">\(kt = 0\)</span> — <span class="math notranslate nohighlight">\(k(0)= k_{0}\)</span> Consumption: transversality condition di <span class="math notranslate nohighlight">\(ct \to \infty\)</span></em></p>
+<ul class="simple">
+<li><p>Capital: initial condition di <span class="math notranslate nohighlight">\(t = 0\)</span> — <span class="math notranslate nohighlight">\(k(0)= k_{0}\)</span></p></li>
+<li><p>Consumption: transversality condition di <span class="math notranslate nohighlight">\(t \to \infty\)</span></p></li>
+</ul>
 <p><em>Kondisi di dua titik waktu berbeda → BVP. Inilah mengapa Bab 13 mengajarkan shooting method — algoritma khusus untuk mengubah BVP menjadi IVP yang bisa diselesaikan komputer.</em></p>
 </div>
 </section>
 <section id="konsep-4-existence-and-uniqueness-picard-lindelof">
 <h2>Konsep 4 — Existence and Uniqueness (Picard-Lindelöf)<a class="headerlink" href="#konsep-4-existence-and-uniqueness-picard-lindelof" title="Link to this heading">#</a></h2>
 <p><em>Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.</em></p>
-<p><strong>Statement Teorema 4.1 (versi intuitif)</strong></p>
 <div class="important admonition">
-<p class="admonition-title">Hasil kunci</p>
+<p class="admonition-title">Teorema 4.1 — Picard–Lindelöf (versi intuitif)</p>
 <p><strong>Untuk IVP <span class="math notranslate nohighlight">\(\dot{x}=G(x, t)\)</span> dengan <span class="math notranslate nohighlight">\(x(t_{0})=x_{0}\)</span></strong></p>
 <p>Jika (1) <span class="math notranslate nohighlight">\(G\)</span> kontinu di compact cube <span class="math notranslate nohighlight">\(D\)</span> yang memuat <span class="math notranslate nohighlight">\((x_{0}, t_{0})\)</span>, dan (2) <span class="math notranslate nohighlight">\(G\)</span> Lipschitz dalam <span class="math notranslate nohighlight">\(x\)</span> (bisa dijamin lewat continuously differentiable) — maka ada <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> sehingga IVP punya solusi unik di interval <span class="math notranslate nohighlight">\([t_{0} -\varepsilon, t_{0} +\varepsilon ]\)</span>.</p>
 </div>

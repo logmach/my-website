@@ -6,18 +6,20 @@ Bab ini memformalkan dua konsep yang menjadi bahasa sehari-hari seluruh teori pe
 
 *Konsep yang intuisinya sudah muncul di akhir Bab 4 — sekarang diformalkan.*
 
-**Definisi 5.1**
+```{admonition} Definisi 5.1 — Steady State
+:class: note
 
-Steady state (atau equilibrium) untuk ODE autonomous $\dot{x}=G(x)$ adalah titik yang memenuhi: $\bar{x}$
+Steady state (atau equilibrium) untuk ODE autonomous $\dot{x}=G(x)$ adalah titik $\bar{x}$ yang memenuhi:
 
 $$ 0 = G(\bar{x}) $$
 
 Yaitu, titik di mana sistem tidak berubah: sekali berada di $\bar{x}$, sistem tinggal di sana selamanya.
+```
 
 ```{admonition} 💡 Insight
 :class: tip
 
-Intuisinya sudah muncul di akhir Bab 4: untuk ODE $\dot{x}=x-x^{2}$, $x = 0$ adalah solusi karena $G(0) = 0$, dan kemudian ditemukan $x =
+Intuisinya sudah muncul di akhir Bab 4: untuk ODE $\dot{x}=x-x^{2}$, $x = 0$ adalah solusi karena $G(0) = 0$, dan kemudian ditemukan $x = 1$ dari $G(1) = 0$.
 
 Catatan terminologi: di matematika "equilibrium", di ekonomi "steady state" — keduanya lazim dipakai bergantian, sebuah "happy halfway house".
 ```
@@ -37,21 +39,21 @@ Bola di puncak bukit. Dorong sedikit, bola menggelinding jauh.
 
 **Unstable** — Tidak tetap dekat — terbang keluar.
 
-**Definisi formal dan visualisasinya**
+```{admonition} Definisi 5.2 — Stable (Lyapunov Stable)
+:class: note
 
-Definisi 5.2 (Stable / Lyapunov Stable):
+Untuk setiap $\varepsilon > 0$, ada $\delta > 0$ sehingga kalau $\lVert x_{0} -\bar{x}\rVert<\delta$, maka $\lVert\varphi (t) -\bar{x}\rVert<\varepsilon$ untuk semua $t\ge t_{0}$.
 
-Untuk setiap $\varepsilon > 0$, ada $\delta > 0$ sehingga kalau $∥x_{0} -\bar{x}∥<\delta$, maka $∥\varphi (t) -\bar{x}∥<\varepsilon$ untuk semua $t\ge t_{0}$.
+Visualisasi: dua lingkaran konsentrik di sekitar $\bar{x}$ — lingkaran $\delta$ (kecil, starting points) di dalam lingkaran $\varepsilon$ (besar, batas yang tidak boleh dilewati). Lintasan boleh orbit, tapi harus tetap di dalam.
+```
 
-Visualisasi: dua lingkaran konsentrik di sekitar — lingkaran (kecil, starting points) di dalam lingkaran (besar, $\bar{x}\delta \varepsilon$ batas yang tidak boleh dilewati). Lintasan boleh orbit, tapi harus tetap di dalam. $\varepsilon$
+```{admonition} Definisi 5.3 — Asymptotic Stable
+:class: note
 
-Definisi 5.3 (Asymptotic Stable):
+Stable DAN $\lim_{t\to \infty}\varphi (t) =\bar{x}$.
 
-Stable DAN $lim\varphi (t) =\bar{x}$.
-
-$$ t\to \infty $$
-
-Visualisasi: lintasan spiral inward menuju — radius putaran mengecil seiring waktu. $\bar{x}$
+Visualisasi: lintasan spiral inward menuju $\bar{x}$ — radius putaran mengecil seiring waktu.
+```
 
 ```{admonition} ⚠️ Jebakan umum
 :class: warning
@@ -59,21 +61,26 @@ Visualisasi: lintasan spiral inward menuju — radius putaran mengecil seiring w
 Awas notasi pada Definisi 5.3: yang benar adalah limit menuju $\bar{x}$ (dengan bar), bukan $x$ polos. Konteks ekonomi dan konsistensi dengan definisi lain menegaskannya.
 
 Kebiasaan yang baik: baca persis apa yang tertulis, lalu cek konsistensi dengan definisi lain. Kalau ada inkonsistensi, kemungkinan typo.
+```
 
-Definisi 5.4 (Global Asymptotic Stable):
+```{admonition} Definisi 5.4 — Global Asymptotic Stable
+:class: note
 
 Asymptotic stable DAN konvergensi dari manapun di $R^{k}$.
 ```
+
 ```{admonition} 💡 Insight
 :class: tip
 
 Rumusan yang tepat: yang membedakan 5.4 dari 5.3 adalah titik awalnya — 5.3 mengharuskan mulai dari neighborhood, sedangkan 5.4 boleh mulai dari mana saja.
 
 Tepat. Bedanya hanya pada scope starting points — neighborhood kecil $N$ (5.3) vs seluruh $R^{k}$ (5.4).
+```
 
-Definisi 5.5 (Unstable):
+```{admonition} Definisi 5.5 — Unstable
+:class: note
 
-Bukan stable. Yaitu: untuk kecil apapun, ada $\delta x_{0}$ di dalam lingkaran yang lintasannya keluar dari lingkaran $\delta \varepsilon$ apapun.
+Bukan stable. Yaitu: ada $\varepsilon$ sehingga untuk $\delta$ kecil apapun, selalu ada $x_{0}$ di dalam lingkaran $\delta$ yang lintasannya keluar dari lingkaran $\varepsilon$.
 
 Visualisasi: lintasan spiral outward, atau garis lurus menjauh dari $\bar{x}$.
 ```
@@ -118,12 +125,10 @@ Kedua-duanya adalah steady state — tapi perilakunya sangat berbeda saat ada ga
 
 *Alat utama untuk mengecek stabilitas sistem linear. Mengubah pertanyaan dinamika menjadi pertanyaan aljabar.*
 
-**Statement** — Untuk sistem linear $\dot{x}=Ax + b$ dengan steady state $\bar{x}=-A^{-1}b$:
-
-```{admonition} Hasil kunci
+```{admonition} Teorema 5.1
 :class: important
 
-*Jika semua eigenvalue $A$ memiliki real part negatif, maka adalah globally $\bar{x}$ asymptotically stable.*
+Untuk sistem linear $\dot{x}=Ax + b$ dengan steady state $\bar{x}=-A^{-1}b$: jika semua eigenvalue $A$ memiliki real part negatif, maka $\bar{x}$ globally asymptotically stable.
 ```
 **Mengapa eigenvalues?** Solusi sistem linear bisa ditulis sebagai kombinasi "mode":
 
@@ -171,16 +176,16 @@ Pangkat ≠ 1: $x^{2}$, $x^{\alpha}$. Fungsi transendental: $e^{x}$, $\ln x$, $\
 ```
 *Itulah mengapa Teorema 5.2 yang paling sering dipakai.*
 
-**Statement** — Untuk sistem $\dot{x}=G(x)$ dengan steady state, definisikan Jacobian di: $\bar{x}\bar{x}$
+Untuk sistem $\dot{x}=G(x)$ dengan steady state $\bar{x}$, definisikan Jacobian di $\bar{x}$:
 
 $$
 J(\bar{x}) = \begin{pmatrix} \dfrac{\partial G_{1}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{1}(\bar{x})}{\partial x_{k}} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial G_{k}(\bar{x})}{\partial x_{1}} & \cdots & \dfrac{\partial G_{k}(\bar{x})}{\partial x_{k}} \end{pmatrix}
 $$
 
-```{admonition} Hasil kunci
+```{admonition} Teorema 5.2
 :class: important
 
-*Jika semua eigenvalue $J(\bar{x})$ memiliki real part negatif, maka $\bar{x}$ locally asymptotically stable.*
+Jika semua eigenvalue $J(\bar{x})$ memiliki real part negatif, maka $\bar{x}$ locally asymptotically stable.
 ```
 **Idenya: linearisasi** — Dekat $\bar{x}$, sistem nonlinear berperilaku kira-kira seperti sistem linear dengan matriks $J(\bar{x})$.
 

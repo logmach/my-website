@@ -74,16 +74,17 @@ Kumpulan semua vektor di seluruh phase plane = vector field.
 
 *Konsep yang dipakai berulang dari Bab 9 sampai akhir.*
 
-**Definisi**
+```{admonition} Definisi — Nullcline
+:class: note
 
-```{admonition} Hasil kunci
-:class: important
+Nullcline = kurva di phase plane di mana salah satu $\dot{x}_{i} =0$.
 
-*Nullcline = kurva di phase plane di mana salah satu $\dot{x}_{i} =0$.*
-
-*$\dot{x}_{1}$ -nullcline = kurva di mana $\dot{x}_{1} =0$ $\dot{x}_{2}$ -nullcline = kurva di mana $\dot{x}_{2} =0$*
+- $\dot{x}_{1}$-nullcline = kurva di mana $\dot{x}_{1} =0$
+- $\dot{x}_{2}$-nullcline = kurva di mana $\dot{x}_{2} =0$
 ```
-**Apa artinya geometris** — Di $\dot{x}_{1}$ -nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak → lintasan vertikal Di $\dot{x}_{2}$ -nullcline: $x_{2}$ tidak berubah, tapi $x_{1}$ bergerak → lintasan horizontal
+**Apa artinya geometris**
+- Di $\dot{x}_{1}$-nullcline: $x_{1}$ tidak berubah, tapi $x_{2}$ masih bergerak → lintasan vertikal
+- Di $\dot{x}_{2}$-nullcline: $x_{2}$ tidak berubah, tapi $x_{1}$ bergerak → lintasan horizontal
 
 **Steady state = perpotongan KEDUA nullcline** — Steady state adalah titik di mana kedua $\dot{x}_{1} =0$ dan $\dot{x}_{2} =0$. Yaitu, titik yang simultaneously ada di kedua nullcline.
 

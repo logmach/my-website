@@ -542,13 +542,13 @@ $$
 
 Notasi vector: $x = (k, h)$, $T(x) = (T_{k}, T_{h})^{T}$, sistem $\dot{x}=T(x)$.
 
-**Definisi nullcline**
+```{admonition} Definisi — Nullcline sistem k–h
+:class: note
 
-**$\dot{k}$-nullcline $N_{k}$** — Set titik $(k,h)$ di mana $\dot{k}=0$ (modal per effective worker tidak berubah). $N_{k} ={(k,h): T_{k}(k,h) =0}$.
-
-Set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker ($h = H/AL$) ($\dot{h}$-nullcline $N_{h}$) tidak berubah). $N_{h} ={(k,h): T_{h}(k,h) =0}$.
-
-**Steady State** — Perpotongan dua nullcline. Di mana $\dot{k}=\dot{h}=0$ simultan.
+- **$\dot{k}$-nullcline $N_{k}$** — set titik $(k,h)$ di mana $\dot{k}=0$ (modal per effective worker tidak berubah). $N_{k} =\{(k,h): T_{k}(k,h) =0\}$.
+- **$\dot{h}$-nullcline $N_{h}$** — set titik $(k,h)$ di mana $\dot{h}=0$ (human capital per effective worker, $h = H/AL$, tidak berubah). $N_{h} =\{(k,h): T_{h}(k,h) =0\}$.
+- **Steady state** — perpotongan dua nullcline: $\dot{k}=\dot{h}=0$ simultan.
+```
 
 *Cara derive $N_{k}$ — step-by-step.*
 
