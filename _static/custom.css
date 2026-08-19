@@ -1,19 +1,45 @@
-/* ── Tipografi buku ── */
-article h1 { font-size: 1.8rem; }
-article h2 { font-size: 1.3rem; margin-top: 2.1rem; padding: .4rem .75rem;
-  background: linear-gradient(90deg, #e9f0fa 0%, rgba(233,240,250,0) 85%);
-  border-left: 4px solid #3b6ea5; border-radius: 6px; border-bottom: none; }
-article h3 { font-size: 1.1rem; margin-top: 1.5rem; padding: .2rem .6rem;
-  background: linear-gradient(90deg, #f3f6fb 0%, rgba(243,246,251,0) 80%);
-  border-left: 3px solid #9db8d9; border-radius: 5px; }
-/* ── Label mini (bold berdiri sendiri / run-in) jadi pil lembut ── */
+/* ══ Tipografi buku: hierarki menurun ══ */
+/* Bab (H1) paling besar */
+article h1 { font-size: 1.85rem; }
+/* Subbab (H2) lebih kecil dari bab + blok biru ringan agak gelap */
+article h2 { font-size: 1.32rem; margin-top: 2.2rem; padding: .5rem .8rem;
+  background: #d2e2f5; color: #143a63;
+  border-left: 5px solid #2f6bad; border-radius: 8px; border-bottom: none; }
+html[data-theme="dark"] article h2 { background: #1e3a5c; color: #dbe9fa; border-left-color: #6ba3e0; }
+/* Judul sub-subbab (H3/H4) = sebesar teks biasa, cukup dibedakan lewat tebal */
+article h3, article h4 { font-size: 1rem; font-weight: 700; margin-top: 1.5rem;
+  background: none; border: none; padding: 0; }
+
+/* ── Label mini (bold berdiri sendiri) jadi pil lembut ── */
 article p > strong:only-child { display: inline-block; background: #eef3fb; color: #1c3d6e;
   padding: .12rem .6rem; border-radius: .55rem; font-size: .95rem; }
+html[data-theme="dark"] article p > strong:only-child { background: #24344d; color: #cfe0f5; }
 article table strong, article .admonition-title strong { all: unset; font-weight: 700; }
-/* ── Kotak & tabel ── */
-article .admonition { margin: 1rem 0; }
-article .admonition > .admonition-title { font-size: .92rem; }
+
+/* ══ Kotak Definisi / Konsep / Teorema: label chip kiri-atas, isi polos ══ */
+article .admonition { position: relative; overflow: visible;
+  background: var(--pst-color-background, #fff) !important;
+  border: 1.6px solid var(--adm-c, #3b6ea5); border-radius: 10px;
+  box-shadow: none; margin: 1.7rem 0 1.2rem; padding: 1.1rem .95rem .55rem; }
+article .admonition > .admonition-title { position: absolute; top: -.8rem; left: .8rem;
+  display: inline-block; width: auto; margin: 0; line-height: 1.4;
+  background: var(--adm-c, #3b6ea5); color: #fff;
+  padding: .08rem .7rem .12rem; border-radius: .5rem;
+  font-size: .85rem; font-weight: 700; }
+article .admonition > .admonition-title::before,
+article .admonition > .admonition-title::after { display: none !important; content: none !important; }
+article .admonition > *:nth-child(2) { margin-top: .25rem; }
+/* Warna chip & bingkai per jenis */
+article .admonition.note      { --adm-c: #2f6bad; }
+article .admonition.tip, article .admonition.hint       { --adm-c: #2e7d32; }
+article .admonition.important { --adm-c: #c05f21; }
+article .admonition.warning, article .admonition.attention { --adm-c: #a8770a; }
+article .admonition.seealso   { --adm-c: #6a4fa3; }
+article .admonition.caution, article .admonition.danger, article .admonition.error { --adm-c: #b3423a; }
+
+/* ── Tabel ── */
 article table { font-size: .93rem; }
+
 /* ── Checklist interaktif ── */
 article li.cek { list-style: none; cursor: pointer; position: relative; padding-left: 1.5em; margin-left: -1.2em; }
 article li.cek::before { content: "☐"; position: absolute; left: 0; color: #93a1b5; font-weight: 700; }

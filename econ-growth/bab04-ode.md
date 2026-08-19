@@ -6,12 +6,14 @@ Bab ini meletakkan fondasi paling dasar dari seluruh perangkat matematis teori p
 
 *Pertanyaan yang kelihatannya remeh, tapi punya konsekuensi besar untuk seluruh kursus.*
 
-**Definisi formal**
+```{admonition} Definisi — Solusi ODE
+:class: note
 
-Sebuah solusi $y^{*}$ untuk ODE adalah satu fungsi $y:^{*}T\to R^{k}$ yang memenuhi dua syarat:
+Sebuah solusi $y^{*}$ untuk ODE adalah satu fungsi $y^{*}: T\to R^{k}$ yang memenuhi dua syarat:
 
 1. $y^{*}$ differentiable cukup (sampai orde $m$)
 2. Ketika kita substitusi $y^{*}$ dan turunan-turunannya ke ODE, persamaannya benar untuk semua $t\in T$
+```
 
 ```{admonition} 💡 Insight
 :class: tip
@@ -89,7 +91,7 @@ Inilah pola dasar: general → tambah kondisi → particular.
 ```{admonition} ⚠️ Jebakan umum
 :class: warning
 
-Hati-hati: BVP bukan sekadar "kondisi pada interval waktu" — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah *di mana* kondisi diberikan dalam
+Hati-hati: BVP bukan sekadar "kondisi pada interval waktu" — IVP dan BVP sama-sama bekerja di interval. Yang membedakan adalah *di mana* kondisi diberikan dalam interval waktu tersebut.
 
 Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP. Lebih dari satu = BVP.
 ```
@@ -98,7 +100,8 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 **Di RCK (Bab 12) akan muncul BVP yang tidak biasa**
 
-*Capital: initial condition di $kt = 0$ — $k(0)= k_{0}$ Consumption: transversality condition di $ct \to \infty$*
+- Capital: initial condition di $t = 0$ — $k(0)= k_{0}$
+- Consumption: transversality condition di $t \to \infty$
 
 *Kondisi di dua titik waktu berbeda → BVP. Inilah mengapa Bab 13 mengajarkan shooting method — algoritma khusus untuk mengubah BVP menjadi IVP yang bisa diselesaikan komputer.*
 ```
@@ -106,9 +109,7 @@ Cara mudah membedakan: hitung jumlah titik waktu yang disebut. Satu titik = IVP.
 
 *Inti Bab 4. Tidak semua ODE punya solusi unik — teorema ini memberi syarat kapan kita dijamin.*
 
-**Statement Teorema 4.1 (versi intuitif)**
-
-```{admonition} Hasil kunci
+```{admonition} Teorema 4.1 — Picard–Lindelöf (versi intuitif)
 :class: important
 
 **Untuk IVP $\dot{x}=G(x, t)$ dengan $x(t_{0})=x_{0}$**

@@ -40,15 +40,16 @@ $\dot{x}_{1}$ tergantung $x_{2}$, $\dot{x}_{2}$ tergantung $x_{1}$. Tidak bisa s
 
 *Refresher konsep yang sudah muncul di Bab 5, sekarang dipakai untuk solve.*
 
-**Definisi**
+```{admonition} Definisi — Eigenvalue & Eigenvektor
+:class: note
 
 Untuk matriks $A$ ukuran $k \times k$:
 
-Eigenvektor: vektor non-zero yang memenuhi $vAv= \lambda v$
+- **Eigenvektor**: vektor non-zero $v$ yang memenuhi $Av= \lambda v$
+- **Eigenvalue**: skalar $\lambda$ yang membuat persamaan di atas berlaku
 
-Eigenvalue: skalar yang membuat persamaan di atas berlaku $\lambda$
-
-Intuisi geometris: $A$ "memetakan" ke kelipatannya sendiri — yaitu, tidak rotasi, hanya stretch. $v$
+Intuisi geometris: $A$ "memetakan" $v$ ke kelipatannya sendiri — tidak rotasi, hanya stretch.
+```
 
 **Cara mencari eigenvalue** — Dari $Av= \lambda v$, rearrange: $(A -\lambda I)v= 0$.
 
